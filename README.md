@@ -1,4 +1,4 @@
-# [Junxin Memo](https://junxinzhang.github.io/)
+# [Junxin's Memo](https://junxinzhang.github.io/)
 
 Junxin's memo.
 俊欣的备忘录。
