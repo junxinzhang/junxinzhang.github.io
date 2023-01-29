@@ -1,12 +1,12 @@
 # Site
-name: 'Micropaper'
-description: 'Learn a paper in a minute.'
+name: 'Junxin's memo'
+description: 'Junxin's memo'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon/favicon.ico'
-domain: 'unbug.github.io'
+domain: 'junxinzhang.github.io'
 baseurl: ''
 disqus: 'demowebsite'
-email: 'tidelgl@gmail.com'
+email: 'junxinzhang@outlook.com'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
@@ -20,13 +20,13 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    unbug:
-      name:           Unbug
-      site:           https://unbug.github.io
+    junxinzhang:
+      name:           junxinzhang
+      site:           https://junxinzhang.github.io
       avatar:         assets/images/avatar1.jpg
-      bio:            "「一分钟读论文」用学术打造你的思维。有收获请赏☕️🥤:）"
-      email:          tidelgl@gmail.com
-      twitter:        https://twitter.com/unbug
+      bio:            "Junxin's Memo. 俊欣的备忘录"
+      email:          junxinzhang@outlook.com
+      twitter:        https://twitter.com/junxinzhang
  
 # Defaults
 defaults:
@@ -36,7 +36,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: unbug
+      author: junxinzhang
       avatar: /assets/images/avatar1.jpg
       
   # all pages
