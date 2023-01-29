@@ -16,3 +16,4 @@ Junxin's memo.俊欣的备忘录。
 
 <!-- donate -->
 {% assign author = site.authors[page.author] %}
+{% include donate.html %}
