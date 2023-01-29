@@ -1,6 +1,6 @@
 # Site
-name: 'Junxin's memo'
-description: 'Junxin's memo'
+name: "Junxin's memo"
+description: "Junxin's memo"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon/favicon.ico'
 domain: 'junxinzhang.github.io'
