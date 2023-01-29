@@ -2,18 +2,17 @@
 title: "About"
 layout: page
 permalink: "/about.html"
-author: unbug
+author: junxinzhang
 comments: true
 ---
-Learn a paper in a minute. 一分钟读懂一篇论文。
+Junxin's memo.俊欣的备忘录。
 
 - [RSS Feed]({{site.baseurl}}/feed.xml)
-- [GitHub@unbug](https://github.com/unbug)
-- [Twitter@unbug](https://twitter.com/unbug)
-- [微博@听奏](https://weibo.com/u/1241231982)
+- [GitHub@junxinzhang](https://github.com/junxinzhang)
+- [Twitter@junxinzhang](https://twitter.com/junxin1616)
 
 ## 2023 年目标：
-- 「一分钟读论文」完成50篇。
+- 构生产10篇内容
 
 <!-- donate -->
 {% assign author = site.authors[page.author] %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "一分钟读论文：《重新思考移动客⼾端的网页缓存》"
-author: unbug
+author: junxinzhang
 categories: [ Performance, MobileWeb ]
 image: assets/images/screenshot-20230112-185611.jpg
 ---

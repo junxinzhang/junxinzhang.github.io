@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "一分钟读论文：《关于（未）采用 JavaScript 前端框架的研究》"
-author: unbug
+author: junxinzhang
 categories: [ JS, Framework ]
 image: assets/images/Screenshot 2023-01-09 at 00.17.08.jpeg
 tags: [featured]

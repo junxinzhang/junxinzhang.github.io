@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "一分钟读论文：《要不要上 TypeScript？GitHub 上 JS 和 TS 应用软件质量的系统比较》"
-author: unbug
+author: junxinzhang
 categories: [ TypeScript, JS ]
 image: assets/images/screenshot-20230109-113530.jpeg
 tags: [featured]

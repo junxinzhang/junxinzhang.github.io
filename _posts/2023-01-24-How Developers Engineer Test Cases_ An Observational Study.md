@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "一分钟读论文：《工程师如何设计测试用例：深入观察性研究》"
-author: unbug
+author: junxinzhang
 categories: [Test]
 image: assets/images/screenshot-20230117-191039.jpg
 tags: [featured]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "一分钟读论文：《现代 Code Review 的系统文献综述》"
-author: unbug
+author: junxinzhang
 categories: [CodeReview, Agile]
 image: assets/images/screenshot-20230127-184311.jpg
 tags: [featured]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "一分钟读论文：《30年软件重构研究：系统性文献综述》"
-author: unbug
+author: junxinzhang
 categories: [ Refactor ]
 image: assets/images/screenshot-20230113-232834.jpg
 tags: [sticky]

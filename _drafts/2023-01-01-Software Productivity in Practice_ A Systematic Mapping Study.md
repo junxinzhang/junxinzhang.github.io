@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "一分钟读论文：《》"
-author: unbug
+author: junxinzhang
 categories: [ Productivity ]
 image: assets/images/
 tags: [featured]

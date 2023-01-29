@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "一分钟读论文：《Montage：基于神经网络语言模型 (NNLM) 实现 JS 引擎模糊测试器》"
-author: unbug
+author: junxinzhang
 categories: [ NNLM, Security, JS ]
 image: assets/images/screenshot-20230109-110011.jpeg
 ---

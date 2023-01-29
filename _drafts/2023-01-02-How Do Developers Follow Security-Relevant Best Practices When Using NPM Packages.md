@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "一分钟读论文：《工程师如何遵循 NPM 包安全最佳实践？》"
-author: unbug
+author: junxinzhang
 categories: [Security, NPM]
 image: assets/images/screenshot-20230124-230804.jpg
 ---
