@@ -9,6 +9,9 @@
     {% seo %}
 
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/{{site.favicon}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/images/favicon/favicon-16x16.png">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -38,7 +41,10 @@
     <!-- Navbar -->
     <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ site.baseurl }}/index.html"><strong>{{site.name}}</strong></a>
+        <a href="//{{ site.domain }}{{ site.baseurl }}">
+            <img src="{{site.baseurl}}/assets/images/favicon/apple-touch-icon.png" style="width: 1.75rem; margin-right: 0.55rem;"/>
+        </a>
+        <a class="navbar-brand" href="//{{ site.domain }}{{ site.baseurl }}"><strong>{{site.name}}</strong></a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -77,11 +83,11 @@
         <div class="container">
         <div class="row align-items-center justify-content-between">
             <div>
-                <span class="navbar-brand mr-2 mb-0"><strong>Mundana</strong></span>
+                <span><strong>Micropaper</strong></span>
                 <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
 
                 <!--  Github Repo Star Btn-->
-                <a class="text-dark ml-1" target="_blank" href="https://github.com/wowthemesnet/mundana-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                <a class="text-dark ml-1" target="_blank" href="https://github.com/unbug/unbug.github.io/discussions"><i class="fab fa-github"></i> Discussions on Github</a>
 
             </div>
             <div>

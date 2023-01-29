@@ -1,9 +1,9 @@
 ---
-title: "Mundana Free Jekyll Theme"
+title: "Learn a paper in a minute"
 layout: default
 pagination:
     enabled: true
-description: "A great Jekyll theme developed by Sal @wowthemesnet."
+description: "Learn a paper in a minute, 一分钟读懂一篇论文, 一分钟读论文, Micropaper"
 ---
 
 
@@ -52,13 +52,13 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
         {%- assign second_post = site.posts[1] -%}        
         <div class="mb-3 d-flex align-items-center">                
                 {% if second_post.image %}
-                <div class="col-md-4">
+                <div class="col-md-4" style="padding-left: 0;">
                 <a href="{{site.baseurl}}{{second_post.url}}">
                  <img class="w-100" src="{% if second_post.image contains "://" %}{{ second_post.image }}{% else %}{{ second_post.image | absolute_url }}{% endif %}" alt="{{ second_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
-                <div>
+                <div class="col-md-8" style="padding: 0;">
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{second_post.url}}">{{ second_post.title }}</a>
                     </h2>
@@ -79,13 +79,13 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
         {%- assign third_post = site.posts[2] -%}        
         <div class="mb-3 d-flex align-items-center">                
                 {% if third_post.image %}
-                <div class="col-md-4">
+                <div class="col-md-4" style="padding-left: 0;">
                 <a href="{{site.baseurl}}{{third_post.url}}">
                  <img class="w-100" src="{% if third_post.image contains "://" %}{{ third_post.image }}{% else %}{{site.baseurl}}/{{ third_post.image }}{% endif %}" alt="{{ third_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
-                <div>
+                <div class="col-md-8" style="padding: 0;">
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{third_post.url}}">{{ third_post.title }}</a>
                     </h2>
@@ -106,13 +106,13 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
         {%- assign fourth_post = site.posts[3] -%}        
         <div class="mb-3 d-flex align-items-center">                
                 {% if fourth_post.image %}
-                <div class="col-md-4">
+                <div class="col-md-4" style="padding-left: 0;">
                 <a href="{{site.baseurl}}{{fourth_post.url}}">
                 <img class="w-100" src="{% if fourth_post.image contains "://" %}{{ fourth_post.image }}{% else %}{{site.baseurl}}/{{ fourth_post.image }}{% endif %}" alt="{{ fourth_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
-                <div>
+                <div class="col-md-8" style="padding: 0;">
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{fourth_post.url}}">{{ fourth_post.title }}</a>
                     </h2>
@@ -168,7 +168,12 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
    
     <div class="col-md-8 main-loop">
         
-        <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
+        <h3 class="font-weight-bold spanborder">
+            <span>All</span>
+            {% if page.url != "/" %}
+            <sup class="text-muted">{{ site.posts | size }}</sup> 
+            {% endif %} 
+        </h3>
         
 
         {% for post in paginator.posts %}
