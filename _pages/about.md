@@ -12,7 +12,7 @@ Junxin's memo.俊欣的备忘录。
 - [Twitter@junxin1616](https://twitter.com/junxin1616)
 
 ## 2023 年目标：
-- 构生产10篇内容
+- 生产10篇内容
 
 <!-- donate -->
 {% assign author = site.authors[page.author] %}
