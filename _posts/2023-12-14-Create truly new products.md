@@ -39,4 +39,4 @@ tags: [featured]
 
 
 [links-1]: https://juejin.cn/post/7311949952455082035
-[links-2]: https://github.com/junxinzhang/text2class/blob/master/assets/books/打造真正的新产品_丹尼斯J_哈普特利_Z_Library.epub
+[links-2]: https://github.com/junxinzhang/text2class/blob/main/assets/books/打造真正的新产品_丹尼斯J_哈普特利_Z_Library.epub
