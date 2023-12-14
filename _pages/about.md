@@ -8,7 +8,7 @@ comments: true
 Junxin's memo.俊欣的备忘录。
 
 - [RSS Feed]({{site.baseurl}}/feed.xml)
-- [GitHub@Jason Zhang](https://github.com/Jason Zhang)
+- [GitHub@junxinzhang](https://github.com/junxinzhang)
 - [Twitter@junxin1616](https://twitter.com/junxin1616)
 
 ## 2023 年目标：
