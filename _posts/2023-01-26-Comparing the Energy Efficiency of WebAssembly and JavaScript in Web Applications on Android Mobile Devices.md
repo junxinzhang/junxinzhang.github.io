@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《WebAssembly 与 JS 在移动设备上的能耗对比》"
-author: junxinzhang
+title:  "一分钟阅读：《WebAssembly 与 JS 在移动设备上的能耗对比》"
+author: Jason Zhang
 categories: [WebAssembly, Performance]
 image: assets/images/screenshot-20230126-220033.jpg
 ---

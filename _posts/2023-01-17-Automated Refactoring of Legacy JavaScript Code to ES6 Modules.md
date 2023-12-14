@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《自动将 Legacy 项目重构为 ES6》"
-author: junxinzhang
+title:  "一分钟阅读：《自动将 Legacy 项目重构为 ES6》"
+author: Jason Zhang
 categories: [ Refactor, JS ]
 image: assets/images/screenshot-20230117-121828.jpg
 ---

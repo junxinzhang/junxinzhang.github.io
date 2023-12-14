@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《评估消除 JS 死代码对移动网页性能的影响》"
-author: junxinzhang
+title:  "一分钟阅读：《评估消除 JS 死代码对移动网页性能的影响》"
+author: Jason Zhang
 categories: [ Performance, JS ]
 image: assets/images/screenshot-20230113-155913.jpg
 tags: [featured]

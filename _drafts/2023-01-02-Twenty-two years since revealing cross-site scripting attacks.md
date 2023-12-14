@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《跨站脚本攻击22年：全面调查及系统映射》"
-author: junxinzhang
+title:  "一分钟阅读：《跨站脚本攻击22年：全面调查及系统映射》"
+author: Jason Zhang
 categories: [XSS, Security]
 image: assets/images/screenshot-20230122-215140.jpg
 tags: [sticky, featured]

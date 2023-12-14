@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《SMASH：通过 JavaScript 触发同步多边 Rowhammer 攻击》"
-author: junxinzhang
+title:  "一分钟阅读：《SMASH：通过 JavaScript 触发同步多边 Rowhammer 攻击》"
+author: Jason Zhang
 categories: [ Rowhammer, Security, JS ]
 image: assets/images/screenshot-20230109-165401.jpg
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《Low-code 开发的特点与挑战：从业者视角》"
-author: junxinzhang
+title:  "一分钟阅读：《Low-code 开发的特点与挑战：从业者视角》"
+author: Jason Zhang
 categories: [LCNC]
 image: assets/images/screenshot-20230127-174230.jpg
 ---

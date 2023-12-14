@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《》"
-author: junxinzhang
+title:  "一分钟阅读：《》"
+author: Jason Zhang
 categories: [, JS]
 image: 
 tags: [featured]

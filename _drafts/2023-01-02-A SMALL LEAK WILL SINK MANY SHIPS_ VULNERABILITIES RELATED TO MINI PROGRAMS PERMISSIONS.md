@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《细孔沉千帆：小程序权限漏洞研究》"
-author: junxinzhang
+title:  "一分钟阅读：《细孔沉千帆：小程序权限漏洞研究》"
+author: Jason Zhang
 categories: [ Mini Program, Security]
 image: assets/images/screenshot-20230118-152042.jpg
 tags: [featured]

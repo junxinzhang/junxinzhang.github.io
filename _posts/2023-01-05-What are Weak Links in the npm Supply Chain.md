@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《NPM 供应链的软肋是什么?》"
-author: junxinzhang
+title:  "一分钟阅读：《NPM 供应链的软肋是什么?》"
+author: Jason Zhang
 categories: [ npm, Security ]
 image: assets/images/Screenshot-2023-01-07-at-22.02.33.jpeg
 tags: [featured]

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《Bug 的秘密生命周期：大规模实证研究》"
-author: junxinzhang
+title:  "一分钟阅读：《Bug 的秘密生命周期：大规模实证研究》"
+author: Jason Zhang
 categories: [ Security ]
 image: assets/images/screenshot-20230117-173044.jpg
 tags: [featured]

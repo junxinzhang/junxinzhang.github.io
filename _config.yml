@@ -6,7 +6,7 @@ favicon: 'assets/images/favicon/favicon.ico'
 domain: 'junxinzhang.github.io'
 baseurl: ''
 disqus: 'demowebsite'
-email: 'junxinzhang@outlook.com'
+email: 'jason2023zhang@gmail.com'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
@@ -20,12 +20,12 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    junxinzhang:
-      name:           junxinzhang
-      site:           https://junxinzhang.github.io
+    Jason Zhang:
+      name:           Jason Zhang
+      site:           https://Jason Zhang.github.io
       avatar:         assets/images/avatar1.jpg
       bio:            "Junxin's Memo. 俊欣的备忘录"
-      email:          junxinzhang@outlook.com
+      email:          jason2023zhang@gmail.com
       twitter:        https://twitter.com/junxin1616
  
 # Defaults
@@ -36,7 +36,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: junxinzhang
+      author: Jason Zhang
       avatar: /assets/images/avatar1.jpg
       
   # all pages

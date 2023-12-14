@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《技术债的普遍性、原因和影响：业界调查》"
-author: junxinzhang
+title:  "一分钟阅读：《技术债的普遍性、原因和影响：业界调查》"
+author: Jason Zhang
 categories: [Productivity, Aglie, Refactor]
 image: assets/images/screenshot-20230129-010822.jpg
 tags: [featured]

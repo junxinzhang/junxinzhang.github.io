@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《StackOverflow 上 JS 代码片段规则违规的挖掘》"
-author: junxinzhang
+title:  "一分钟阅读：《StackOverflow 上 JS 代码片段规则违规的挖掘》"
+author: Jason Zhang
 categories: [ Lint, JS ]
 image: assets/images/screenshot-20230110-165809.jpeg
 ---

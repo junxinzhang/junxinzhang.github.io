@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《通过 JS 分类即时加速移动网页》"
-author: junxinzhang
+title:  "一分钟阅读：《通过 JS 分类即时加速移动网页》"
+author: Jason Zhang
 categories: [ Performance, ML, MobileWeb ]
 image: assets/images/screenshot-20230111-155305.jpeg
 ---

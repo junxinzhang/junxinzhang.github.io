@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《关于临时裁员的七个事实》"
-author: junxinzhang
+title:  "一分钟阅读：《关于临时裁员的七个事实》"
+author: Jason Zhang
 categories: [Layoff, HR]
 image: assets/images/screenshot-20230129-105323.jpg
 tags: [featured]

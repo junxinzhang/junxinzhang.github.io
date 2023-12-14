@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-author: junxinzhang
+author: Jason Zhang
 categories: [ Jekyll ]
 image: assets/images/demo1.jpg
 ---

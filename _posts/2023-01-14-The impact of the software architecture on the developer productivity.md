@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《软件架构对研发⽣产⼒的影响》"
-author: junxinzhang
+title:  "一分钟阅读：《软件架构对研发⽣产⼒的影响》"
+author: Jason Zhang
 categories: [ Productivity ]
 image: assets/images/screenshot-20230113-191938.jpg
 ---

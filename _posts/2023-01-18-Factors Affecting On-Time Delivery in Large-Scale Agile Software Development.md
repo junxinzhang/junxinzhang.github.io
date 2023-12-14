@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《影响大规模敏捷软件开发按时交付的因素》"
-author: junxinzhang
+title:  "一分钟阅读：《影响大规模敏捷软件开发按时交付的因素》"
+author: Jason Zhang
 categories: [ Agile, Productivity ]
 image: assets/images/screenshot-20230117-142032.jpg
 ---

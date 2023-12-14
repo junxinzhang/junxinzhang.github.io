@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "一分钟读论文：《工作良好的一天：软件工程师的日常》"
-author: junxinzhang
+title:  "一分钟阅读：《工作良好的一天：软件工程师的日常》"
+author: Jason Zhang
 categories: [ Agile, Productivity ]
 image: assets/images/screenshot-20230116-001006.jpg
 tags: [featured]
