@@ -35,6 +35,8 @@ tags: [featured]
 
 ## References
 - [on juejin][links-1]
+- [on book][links-2]
 
 
 [links-1]: https://juejin.cn/post/7311949952455082035
+[links-2]: https://github.com/junxinzhang/text2class/blob/master/assets/books/打造真正的新产品_丹尼斯J_哈普特利_Z_Library.epub
