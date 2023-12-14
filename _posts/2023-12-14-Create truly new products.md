@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "一分钟阅读：《关于临时裁员的七个事实》"
+title:  "一分钟阅读：《打造真正的新产品》"
 author: Jason Zhang
 categories: [Layoff, HR]
 image: assets/images/screenshot-20231214-打造真正的产品.png
