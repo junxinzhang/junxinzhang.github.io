@@ -2,7 +2,7 @@
 layout: post
 title:  "一分钟阅读：《打造真正的新产品》"
 author: Jason Zhang
-categories: [Layoff, HR]
+categories: [product, innovation, marketing]
 image: assets/images/screenshot-20231214-打造真正的产品.png
 tags: [featured]
 ---
