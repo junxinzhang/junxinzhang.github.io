@@ -22,6 +22,11 @@ tags: [featured]
 ### 🤝 我们的承诺：智能、高效、可靠
 在寻绎科技，我们承诺为您提供最智能、最高效、最可靠的服务。我们的团队由行业顶尖的专家组成，致力于不断创新和完善我们的产品和服务。
 
+### 💼 客户案例
+
+- **案例A**：了解我们如何帮助客户A实现营销转型，帮助客户快速建站（**建站易**）。点击这里阅读更多：[案例A][links-caseA]
+- **案例B**：探索我们为客户B提供的创新解决方案。详细内容请访问：[案例B][links-caseB]
+
 🌈 **现在就加入寻绎科技，一起构筑您的营销成功故事！** 🚀
 
 在这个快速变化的市场环境中，选择寻绎科技，就是选择未来。我们不仅是您的服务提供商，更是您成长道路上的伙伴。一起，我们可以创造无限可能！
@@ -37,3 +42,5 @@ tags: [featured]
 
 [links-pc]: https://www.xunyiyun.cn
 [links-miniprogram]: https://github.com/junxinzhang/junxinzhang.github.io/blob/master/assets/images/screenshot-20231215-xunyi-miniprogram.png
+[links-caseA]: https://demo.xunyiyun.cn/pc/home
+[links-caseB]: https://digitalexpo.com/pc/home
