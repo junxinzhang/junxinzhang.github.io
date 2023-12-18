@@ -8,6 +8,7 @@ tags: [featured]
 ---
 上海电信网络架构转变历程
 
+
 - ## 早期的电话网络
     - 传统电话线路系统
     - 公共交换电话网络（PSTN）
@@ -49,3 +50,4 @@ tags: [featured]
     - 致力于成为科技型企业
     - 推动上海成为云网融合战略的试验田
 
+![]({{ site.baseurl }}/assets/images/screenshot-20231218-shanghai-telecom-architecture-transformation-02.jpg)
