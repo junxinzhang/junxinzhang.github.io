@@ -4,7 +4,7 @@ title:  "一分钟阅读：《上海电信网络架构转变历程》"
 author: Jason Zhang
 categories: [Technology]
 image: assets/images/screenshot-20231218-shanghai-telecom-architecture-transformation.png
-tags: [featured, technology]
+tags: [featured]
 ---
 上海电信网络架构转变历程
 
