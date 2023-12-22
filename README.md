@@ -1,7 +1,6 @@
 # [Just Jason](https://junxinzhang.github.io/)
 
 Just Jason
-。
 
 - [Home](https://junxinzhang.github.io/)
 - [RSS Feed](https://junxinzhang.github.io/feed.xml)
