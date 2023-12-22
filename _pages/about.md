@@ -5,14 +5,14 @@ permalink: "/about.html"
 author: Jason Zhang
 comments: true
 ---
-Junxin's memo.俊欣的备忘录。
+Just Jason
 
 - [RSS Feed]({{site.baseurl}}/feed.xml)
 - [GitHub@junxinzhang](https://github.com/junxinzhang)
 - [Twitter@junxin1616](https://twitter.com/junxin1616)
 
 ## 2023 年目标：
-- 生产10篇内容
+- 生产15篇内容
 
 <!-- donate -->
 {% assign author = site.authors[page.author] %}

@@ -1,7 +1,7 @@
-# [Junxin's Memo](https://junxinzhang.github.io/)
+# [Just Jason](https://junxinzhang.github.io/)
 
-Junxin's memo.
-俊欣的备忘录。
+Just Jason
+。
 
 - [Home](https://junxinzhang.github.io/)
 - [RSS Feed](https://junxinzhang.github.io/feed.xml)

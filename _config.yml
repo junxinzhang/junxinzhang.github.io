@@ -1,6 +1,6 @@
 # Site
-name: "Junxin's memo"
-description: "Junxin's memo"
+name: "Just Jason"
+description: "Just Jason"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon/favicon.ico'
 domain: 'junxinzhang.github.io'
@@ -24,7 +24,7 @@ authors:
       name:           Jason Zhang
       site:           https://Jason Zhang.github.io
       avatar:         assets/images/avatar1.jpg
-      bio:            "Junxin's Memo. 俊欣的备忘录"
+      bio:            "Just Jason "
       email:          jason2023zhang@gmail.com
       twitter:        https://twitter.com/junxin1616
  
