@@ -25,7 +25,7 @@ tags: [featured, career, efficiency, personal development]
 - **把握机遇**：讨论如何成为行业风口的赢家，以及如何转变为T型人才。
 - **战略性思维**：分享如何通过战略思考和头脑风暴来预演可能性，并找到合适的发展路径。
 
-### 五、赚钱的三级理论[links-1]:
+### [五、赚钱的三级理论][links-1]
 - **逐步积累**：从小钱的勤劳致富到大钱的迭代认知，再到特大金额的资源获取。
 - **理财策略**：探讨如何结合国家政策和市场趋势来增加财富。
 
@@ -41,4 +41,4 @@ tags: [featured, career, efficiency, personal development]
 ## References
 - [财富积累的艺术：赚小钱到赚超大的钱][links-1]
 
-[links-1]: ![]({{ site.baseurl }}/The-secret-to-making-money/
+[links-1]: https://junxinzhang.github.io/The-secret-to-making-money/
