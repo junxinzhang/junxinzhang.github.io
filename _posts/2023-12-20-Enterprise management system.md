@@ -40,4 +40,7 @@ ERP及其各关联模块共同构建了一个综合性的企业管理系统，�
 ![]({{ site.baseurl }}/assets/images/screenshot-20231220-erp-02.jpg)
 
 
+## References
+- [制造型企业管理系统核心模块之：物料需求规划（MRP）][mrp]
+
 [mrp]: https://junxinzhang.github.io/mrp/
