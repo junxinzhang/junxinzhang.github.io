@@ -42,5 +42,7 @@ ERP及其各关联模块共同构建了一个综合性的企业管理系统，�
 
 ## References
 - [制造型企业管理系统核心模块之：物料需求规划（MRP）][mrp]
+- [制造型企业管理系统核心模块之：高级计划与排程（APS）][aps]
 
 [mrp]: https://junxinzhang.github.io/mrp/
+[aps]: https://junxinzhang.github.io/aps/
