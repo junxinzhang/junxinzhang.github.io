@@ -10,7 +10,7 @@ tags: [featured, Technology]
 
 ### 核心组件
 
-#### 客户关系管理（CRM）
+#### [客户关系管理（CRM）][crm]
 CRM部分集中于培养和保持客户联系，旨在通过深入洞察客户需求和提供量身定制的服务来建立牢固的客户基础。结合ERP系统，它使全体员工能够全面理解客户的历史背景和需求，为营造卓越的客户体验打下基础。
 
 #### [物料需求规划（MRP）][mrp]
@@ -44,7 +44,9 @@ ERP及其各关联模块共同构建了一个综合性的企业管理系统，�
 - [制造型企业管理系统核心模块之：物料需求规划（MRP）][mrp]
 - [制造型企业管理系统核心模块之：高级计划与排程（APS）][aps]
 - [制造型企业管理系统核心模块之：质量管理系统（QMS）][qms]
+- [制造型企业管理系统核心模块之：客户管理系统（CRM）][crm]
 
 [mrp]: https://junxinzhang.github.io/mrp/
 [aps]: https://junxinzhang.github.io/aps/
 [qms]: https://junxinzhang.github.io/qms/
+[crm]: https://junxinzhang.github.io/crm/
