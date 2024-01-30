@@ -57,3 +57,4 @@ AWS CodeDeploy 是一种自动化部署服务，它可以与 CodePipeline 结合
 
 ## References
 - [统一DevOps流程：供应商协作的关键](https://junxinzhang.github.io/devops/)
+- [实现 GitLab 与 AWS CodeCommit 的流畅集成](https://junxinzhang.github.io/gitlab-codecommit-integration/)
