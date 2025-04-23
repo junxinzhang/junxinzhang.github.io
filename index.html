@@ -14,7 +14,7 @@ description: "Just Jason"
 <div class="row mt-4 mb-5">
     <div class="col-12">
         <h2 class="font-weight-bold spanborder mb-4">
-            <span>AI 解决方案</span>
+            <span>AI 解决方案库</span>
         </h2>
     </div>
     
@@ -49,7 +49,7 @@ description: "Just Jason"
 <div class="row mb-5">
     <div class="col-12">
         <h2 class="font-weight-bold spanborder mb-4">
-            <span>最新内容</span>
+            <span>最新文章</span>
         </h2>
         
         <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
@@ -91,7 +91,7 @@ description: "Just Jason"
 <div class="row mb-5">
     <div class="col-12">
         <h2 class="font-weight-bold spanborder mb-4">
-            <span>近期文章</span>
+            <span>热门文章</span>
         </h2>
     </div>
     
@@ -129,26 +129,73 @@ description: "Just Jason"
     
     <div class="col-md-8">
         <div class="row">
-            {% for post in paginator.posts %}
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 border-0 rounded shadow-sm hover-effect">
-                    {% if post.image %}
-                    <a href="{{site.baseurl}}{{post.url}}">
-                        <div class="card-img-top" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 140px; background-size: cover; background-position: center;"></div>
-                    </a>
-                    {% endif %}
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">
-                            <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
-                        </h5>
-                        <p class="card-text small">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}</p>
-                        <div class="mt-auto">
-                            <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
+            {% if paginator.page == 1 %}
+                <!-- 首页显示博客文章 -->
+                {% for post in paginator.posts %}
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 rounded shadow-sm hover-effect">
+                        {% if post.image %}
+                        <a href="{{site.baseurl}}{{post.url}}">
+                            <div class="card-img-top" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 140px; background-size: cover; background-position: center;"></div>
+                        </a>
+                        {% endif %}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+                            </h5>
+                            <p class="card-text small">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}</p>
+                            <div class="mt-auto">
+                                <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            {% endfor %}
+                {% endfor %}
+            {% else %}
+                <!-- 第二页显示HTML页面和剩余博客文章 -->
+                {% for page in site.data.html_pages %}
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 rounded shadow-sm hover-effect">
+                        {% if page.image %}
+                        <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" target="_blank">
+                            <div class="card-img-top" style="background-image: url({{site.baseurl}}/assets/images/{{ page.image }}); height: 140px; background-size: cover; background-position: center;"></div>
+                        </a>
+                        {% endif %}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                <a class="text-dark" href="{{site.baseurl}}/_html_pages/{{ page.path }}" target="_blank">{{ page.title }}</a>
+                            </h5>
+                            <p class="card-text small">{{ page.description }}</p>
+                            <div class="mt-auto">
+                                <small class="text-muted">{{ page.date }}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                <!-- 显示剩余的博客文章 -->
+                {% for post in paginator.posts %}
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 rounded shadow-sm hover-effect">
+                        {% if post.image %}
+                        <a href="{{site.baseurl}}{{post.url}}">
+                            <div class="card-img-top" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 140px; background-size: cover; background-position: center;"></div>
+                        </a>
+                        {% endif %}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+                            </h5>
+                            <p class="card-text small">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}</p>
+                            <div class="mt-auto">
+                                <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
         </div>
         
         <!-- Pagination -->
