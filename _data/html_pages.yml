@@ -1,0 +1,15 @@
+# HTML页面数据文件
+# 格式说明:
+# - title: 页面标题
+#   path: 文件路径（相对于_html_pages目录）
+#   description: 页面简短描述
+#   date: 创建或更新日期
+#   image: 缩略图路径（可选，相对于assets/images目录）
+
+- title: 供应商PRD环境访问控制方案
+  path: vendor_prd_access_control.html
+  description: 加强生产环境安全性与稳定性的综合解决方案
+  date: 2025-04-23
+  image: html_thumbnails/20250423_vendor_access.jpg
+
+# 添加更多HTML页面，格式如上

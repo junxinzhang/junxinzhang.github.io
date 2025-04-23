@@ -2,223 +2,311 @@
 title: "Just Jason"
 layout: default
 pagination:
-enabled: true
+    enabled: true
 description: "Just Jason"
 ---
-
 
 <div class="container">
     
 {% if page.url == "/" %}
+
+<!-- AI Solutions Section -->
+<div class="row mt-4 mb-5">
+    <div class="col-12">
+        <h2 class="font-weight-bold spanborder mb-4">
+            <span>AI 解决方案</span>
+        </h2>
+    </div>
     
-    
-    
-<!-- Begin post excerpts, let's highlight the first 4 posts on top -->
-<div class="row remove-site-content-margin">
-    
-    <!-- latest post -->
-    {% assign latest_post = site.posts[0] %}
-    <div class="col-md-6">
-    <div class="card border-0 mb-4 box-shadow">   
-    <a href="{{site.baseurl}}{{latest_post.url}}">
-    <div class="topfirstimage" style="background-image: url({% if latest_post.image contains "://" %}{{ latest_post.image }}{% else %} {{site.baseurl}}/{{ latest_post.image}}{% endif %}); height: 200px;    background-size: cover;    background-repeat: no-repeat;"></div>     
-    </a>
-    <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
-    <h2 class="h4 font-weight-bold">
-    <a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ latest_post.title }}</a>
-    </h2>
-    <p class="excerpt">
-        {{ latest_post.excerpt | strip_html | strip_newlines | truncate: 136 }}
-    </p>
-    <div>
-        <small class="d-block text-muted">
-            In <span class="catlist">
-                {% for category in latest_post.categories %}
-                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+    <div class="col-12">
+        <div class="card-deck-wrapper">
+            <div class="card-deck">
+                {% for page in site.data.html_pages %}
+                <div class="card border-0 rounded shadow-sm hover-effect">
+                    {% if page.image %}
+                    <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" target="_blank">
+                        <div class="card-img-top" style="background-image: url({{site.baseurl}}/assets/images/{{ page.image }}); height: 160px; background-size: cover; background-position: center;"></div>
+                    </a>
+                    {% endif %}
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">
+                            <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" class="text-dark" target="_blank">{{ page.title }}</a>
+                        </h4>
+                        <p class="card-text flex-grow-1">{{ page.description }}</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">{{ page.date }}</small>
+                            <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" class="btn btn-sm btn-outline-primary" target="_blank">查看方案</a>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
-                </span>                   
-        </small>
-        <small class="text-muted">
-            {{ latest_post.date | date: '%b %d, %Y' }}
-        </small>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-    <div class="col-md-6">
-        
-        <!-- second latest post -->
-        {%- assign second_post = site.posts[1] -%}        
-        <div class="mb-3 d-flex align-items-center">                
-                {% if second_post.image %}
-                <div class="col-md-4" style="padding-left: 0;">
-                <a href="{{site.baseurl}}{{second_post.url}}">
-                 <img class="w-100" src="{% if second_post.image contains "://" %}{{ second_post.image }}{% else %}{{ second_post.image | absolute_url }}{% endif %}" alt="{{ second_post.title }}">
-                </a>
-                </div>
-                {% endif %}                
-                <div class="col-md-8" style="padding: 0;">
-                    <h2 class="mb-2 h6 font-weight-bold">
-                    <a class="text-dark" href="{{site.baseurl}}{{second_post.url}}">{{ second_post.title }}</a>
-                    </h2>
-                    <small class="d-block text-muted">
-                        In <span class="catlist">
-                        {% for category in second_post.categories %}
-                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-                        {% endfor %}
-                        </span>                   
-                    </small>
-                    <small class="text-muted">
-                        {{ second_post.date | date: '%b %d, %Y' }}
-                    </small>
-                </div>
-            </div>
-        
-        <!-- third latest post -->
-        {%- assign third_post = site.posts[2] -%}        
-        <div class="mb-3 d-flex align-items-center">                
-                {% if third_post.image %}
-                <div class="col-md-4" style="padding-left: 0;">
-                <a href="{{site.baseurl}}{{third_post.url}}">
-                 <img class="w-100" src="{% if third_post.image contains "://" %}{{ third_post.image }}{% else %}{{site.baseurl}}/{{ third_post.image }}{% endif %}" alt="{{ third_post.title }}">
-                </a>
-                </div>
-                {% endif %}                
-                <div class="col-md-8" style="padding: 0;">
-                    <h2 class="mb-2 h6 font-weight-bold">
-                    <a class="text-dark" href="{{site.baseurl}}{{third_post.url}}">{{ third_post.title }}</a>
-                    </h2>
-                    <small class="d-block text-muted">
-                        In <span class="catlist">
-                        {% for category in third_post.categories %}
-                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-                        {% endfor %}
-                        </span>                   
-                    </small>
-                    <small class="text-muted">
-                        {{ third_post.date | date: '%b %d, %Y' }}
-                    </small>
-                </div>
-            </div>
-        
-        <!-- fourth latest post -->
-        {%- assign fourth_post = site.posts[3] -%}        
-        <div class="mb-3 d-flex align-items-center">                
-                {% if fourth_post.image %}
-                <div class="col-md-4" style="padding-left: 0;">
-                <a href="{{site.baseurl}}{{fourth_post.url}}">
-                <img class="w-100" src="{% if fourth_post.image contains "://" %}{{ fourth_post.image }}{% else %}{{site.baseurl}}/{{ fourth_post.image }}{% endif %}" alt="{{ fourth_post.title }}">
-                </a>
-                </div>
-                {% endif %}                
-                <div class="col-md-8" style="padding: 0;">
-                    <h2 class="mb-2 h6 font-weight-bold">
-                    <a class="text-dark" href="{{site.baseurl}}{{fourth_post.url}}">{{ fourth_post.title }}</a>
-                    </h2>
-                    <small class="d-block text-muted">
-                        In <span class="catlist">
-                        {% for category in fourth_post.categories %}
-                        <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-                        {% endfor %}
-                        </span>                   
-                    </small>
-                    <small class="text-muted">
-                        {{ fourth_post.date | date: '%b %d, %Y' }}
-                    </small>
-                </div>
-            </div>
-        
-    </div>
-    
-</div>
-    
-<!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
-{% for post in site.posts %} 
-{% if post.tags contains "sticky" %}
-<div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
-    <div class="pl-4 pr-0 h-100 tofront">
-        <div class="row justify-content-between">
-            <div class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
-                <h1 class="mb-3">{{post.title}}</h1>
-                <p class="mb-3 lead">
-                    {{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}
-                </p>
-                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Read More</a>
-            </div>
-            <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">	
             </div>
         </div>
     </div>
-</div> 
-{% endif %}
-{% endfor %}
-
-
+</div>
     
+<!-- Featured Posts Carousel Section -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="font-weight-bold spanborder mb-4">
+            <span>最新内容</span>
+        </h2>
+        
+        <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                {% for post in site.posts limit:5 %}
+                <li data-target="#featuredCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></li>
+                {% endfor %}
+            </ol>
+            
+            <div class="carousel-inner rounded shadow">
+                {% for post in site.posts limit:5 %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="carousel-background" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 350px; background-size: cover; background-position: center;"></div>
+                    <div class="carousel-caption text-left">
+                        <h3 class="carousel-title">
+                            <a href="{{site.baseurl}}{{post.url}}" class="text-white">{{ post.title }}</a>
+                        </h3>
+                        <p class="d-none d-md-block">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+                        <div class="carousel-date">{{ post.date | date: '%Y年%m月%d日' }}</div>
+                        <a href="{{site.baseurl}}{{post.url}}" class="btn btn-sm btn-primary mt-2">阅读全文</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
 
-
-{% endif %} <!--endif page url is / -->
+<!-- Recent Posts Grid -->
+<div class="row mb-5">
+    <div class="col-12">
+        <h2 class="font-weight-bold spanborder mb-4">
+            <span>近期文章</span>
+        </h2>
+    </div>
     
+    {% for post in site.posts offset:5 limit:6 %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 rounded shadow-sm hover-effect">
+            <a href="{{site.baseurl}}{{post.url}}">
+                <div class="card-img-top" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 180px; background-size: cover; background-position: center;"></div>
+            </a>
+            <div class="card-body d-flex flex-column">
+                <h4 class="card-title">
+                    <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+                </h4>
+                <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
-
-<!-- Now the rest of the posts with the usual loop but with an offset:4 on the first page so we can skeep the first 4 posts displayed above -->
+<!-- All Posts Section -->
+<div class="row">
+    <div class="col-12">
+        <h2 class="font-weight-bold spanborder mb-4">
+            <span>所有文章</span>
+            {% assign total_count = site.posts | size %}
+            {% assign html_pages_count = site.data.html_pages | size %}
+            {% assign combined_count = total_count | plus: html_pages_count %}
+            <sup class="text-muted ml-2">{{ combined_count }}</sup>
+        </h2>
+    </div>
     
-<div class="row mt-3">
-   
-    <div class="col-md-8 main-loop">
+    <div class="col-md-8">
+        <div class="row">
+            {% for post in paginator.posts %}
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-0 rounded shadow-sm hover-effect">
+                    {% if post.image %}
+                    <a href="{{site.baseurl}}{{post.url}}">
+                        <div class="card-img-top" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 140px; background-size: cover; background-position: center;"></div>
+                    </a>
+                    {% endif %}
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">
+                            <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+                        </h5>
+                        <p class="card-text small">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}</p>
+                        <div class="mt-auto">
+                            <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
         
-        <h3 class="font-weight-bold spanborder">
-            <span>All</span>
-            {% if page.url != "/" %}
-            <sup class="text-muted">{{ site.posts | size }}</sup> 
-            {% endif %} 
-        </h3>
-        
-
-        {% for post in paginator.posts %}
-        
-            {% include main-loop-card.html %}
-        
-        {% endfor %}
-        
-        <div class="mt-5">
-         <!-- Pagination links -->
+        <!-- Pagination -->
+        <div class="mt-4 mb-5">
             {% if paginator.total_pages > 1 %}
-            <ul class="pagination"> 
-              {% if paginator.previous_page %}
-                <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
-              {% else %}
-                <li class="page-item disabled"><span class="prev page-link">&laquo;</span></li>
-              {% endif %}
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center"> 
+                    {% if paginator.previous_page %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; 上一页</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">&laquo;</span>
+                    </li>
+                    {% endif %}
 
-              {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-                <li class="page-item disabled"><span class="webjeda page-link">{{ page }}</span></li>
-                {% elsif page == 1 %}
-                <li class="page-item"><a class="page-link" href="{{site.baseurl}}/">{{ page }}</a></li>
-                {% else %}
-                <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-                {% endif %}
-              {% endfor %}
+                    {% for page in (1..paginator.total_pages) %}
+                    {% if page == paginator.page %}
+                    <li class="page-item active">
+                        <span class="page-link">{{ page }}</span>
+                    </li>
+                    {% elsif page == 1 %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{site.baseurl}}/">{{ page }}</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
 
-              {% if paginator.next_page %}
-                <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
-              {% else %}
-                <li class="page-item disabled"><span class="next page-link">&raquo;</span></li>
-              {% endif %}
-            </ul>
-            {% endif %}      
+                    {% if paginator.next_page %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &raquo;</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">&raquo;</span>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
         </div>
-        
     </div>
     
+    <!-- Sidebar -->
     <div class="col-md-4">
-        {% include sidebar-featured.html %}    
+        <div class="sticky-top" style="top: 80px;">
+            {% include sidebar-featured.html %}
+        </div>
     </div>
-    
 </div>
 
-
+{% endif %} <!-- endif page url is / -->
 
 </div>
+
+<style>
+/* Custom styles for modern look */
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+.card {
+    overflow: hidden;
+    border-radius: 8px !important;
+    margin-bottom: 20px;
+}
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+.spanborder {
+    border-bottom: 1px solid #e8f3ec;
+    margin-bottom: 2rem;
+}
+.spanborder span {
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: -1px;
+}
+
+/* Carousel styles */
+.carousel {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.carousel-background {
+    position: relative;
+}
+.carousel-background:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+}
+.carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    text-align: left;
+}
+.carousel-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+.carousel-date {
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.carousel-indicators {
+    bottom: 10px;
+}
+
+/* Card deck for AI solutions */
+.card-deck .card {
+    min-width: 300px;
+    flex: 1 0 0%;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.card-deck-wrapper {
+    overflow-x: auto;
+    padding-bottom: 15px;
+}
+.card-deck {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        padding: 15px;
+    }
+    .carousel-title {
+        font-size: 1.5rem;
+    }
+}
+</style>

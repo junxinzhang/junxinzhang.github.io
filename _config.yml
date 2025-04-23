@@ -9,7 +9,7 @@ disqus: 'demowebsite'
 email: 'jason2023zhang@gmail.com'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
-include: ["_pages"]
+include: ["_pages", "_html_pages"]
 permalink: /:title/
 
 # Plugins
@@ -18,11 +18,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-gist
   
 authors:
     Jason Zhang:
       name:           Jason Zhang
-      site:           https://Jason Zhang.github.io
+      site:           https://junxinzhang.github.io
       avatar:         assets/images/avatar1.jpg
       bio:            "Just Jason "
       email:          jason2023zhang@gmail.com

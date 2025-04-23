@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="供应商PRD环境访问控制方案 - 加强生产环境安全性与稳定性">
+    <title>供应商PRD环境访问控制方案</title>
+    <!-- 引入字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 引入图标 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Mermaid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a73e8; /* 蓝色 */
+            --primary-dark: #0d47a1; /* 深蓝 */
+            --secondary-color: #4285f4; /* 浅蓝 */
+            --accent-color: #f4b400; /* 黄色 */
+            --success-color: #0f9d58; /* 绿色 */
+            --warning-color: #f4511e; /* 橙色 */
+            --danger-color: #db4437; /* 红色 */
+            --light-color: #f8f9fa; /* 浅灰 */
+            --dark-color: #202124; /* 深灰 */
+            --text-primary: #202124; /* 主要文本 */
+            --text-secondary: #5f6368; /* 次要文本 */
+            --border-radius: 8px;
+            --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: #f9fafb;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .container {
+            padding: 0 24px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><path fill="rgba(255,255,255,0.05)" d="M30,10L80,90M40,10L90,90M50,10L100,90M60,10L110,90M70,10L120,90M80,10L130,90M90,10L140,90M0,10L50,90M10,10L60,90M20,10L70,90"/></svg>');
+            opacity: 0.3;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+        
+        .header-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 1rem;
+            font-weight: 300;
+        }
+        
+        .last-updated {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        h3 {
+            color: var(--dark-color);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+            font-weight: 500;
+        }
+        
+        h4 {
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .card.highlight {
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .card.warning {
+            border-left: 4px solid var(--warning-color);
+        }
+        
+        .card.success {
+            border-left: 4px solid var(--success-color);
+        }
+        
+        .card.danger {
+            border-left: 4px solid var(--danger-color);
+        }
+        
+        ul, ol {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.35rem 0.7rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-right: 0.75rem;
+            margin-bottom: 0.5rem;
+            gap: 0.3rem;
+        }
+        
+        .badge i {
+            font-size: 0.9rem;
+        }
+        
+        .badge.primary {
+            background-color: rgba(26, 115, 232, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .badge.secondary {
+            background-color: rgba(66, 133, 244, 0.1);
+            color: var(--secondary-color);
+        }
+        
+        .badge.accent {
+            background-color: rgba(244, 180, 0, 0.1);
+            color: var(--accent-color);
+        }
+        
+        .badge.success {
+            background-color: rgba(15, 157, 88, 0.1);
+            color: var(--success-color);
+        }
+        
+        .badge.warning {
+            background-color: rgba(244, 81, 30, 0.1);
+            color: var(--warning-color);
+        }
+        
+        .flowchart-container {
+            margin: 2rem 0;
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .flowchart-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        thead {
+            background-color: rgba(26, 115, 232, 0.05);
+        }
+        
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        th {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            background-color: var(--light-color);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+        
+        /* 折叠面板 */
+        .collapsible {
+            background-color: rgba(26, 115, 232, 0.05);
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 1rem;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            margin-bottom: 0.5rem;
+        }
+        
+        .collapsible:hover, .collapsible.active {
+            background-color: rgba(26, 115, 232, 0.1);
+        }
+        
+        .collapsible:after {
+            content: '\002B';
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .collapsible.active:after {
+            content: "\2212";
+        }
+        
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            margin-bottom: 1rem;
+        }
+        
+        .collapsible-inner {
+            padding: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-top: none;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+        }
+        
+        /* 标签页 */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .tab-label {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            background-color: rgba(26, 115, 232, 0.05);
+            color: var(--text-secondary);
+            transition: var(--transition);
+            font-weight: 500;
+            text-align: center;
+            flex-grow: 1;
+        }
+        
+        .tab-label:hover {
+            background-color: rgba(26, 115, 232, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 1.5rem;
+            background-color: white;
+            width: 100%;
+            order: 1;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .tab-input {
+            display: none;
+        }
+        
+        .tab-input:checked + .tab-label {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .tab-input:checked + .tab-label + .tab-content {
+            display: block;
+        }
+        
+        /* 进度条 */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: rgba(26, 115, 232, 0.2);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .timeline-left {
+            left: 0;
+        }
+        
+        .timeline-right {
+            left: 50%;
+        }
+        
+        .timeline-left::after {
+            right: -10px;
+        }
+        
+        .timeline-right::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            padding: 1rem;
+            background-color: white;
+            position: relative;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .timeline-date {
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-left::after, .timeline-right::after {
+                left: 21px;
+            }
+            
+            .timeline-right {
+                left: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            
+            header {
+                padding: 2rem 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab-label {
+                width: 100%;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        section {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+        section:nth-child(5) { animation-delay: 0.4s; }
+        section:nth-child(6) { animation-delay: 0.5s; }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+                font-size: 12pt;
+            }
+            
+            header {
+                background: none;
+                color: black;
+                padding: 1rem;
+                box-shadow: none;
+            }
+            
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+            
+            .badge {
+                border: 1px solid #ddd;
+                color: black !important;
+                background: none !important;
+            }
+            
+            footer {
+                background: none;
+                border-top: 1px solid #ddd;
+            }
+            
+            .collapsible-content {
+                max-height: none !important;
+            }
+            
+            .tab-content {
+                display: block !important;
+            }
+            
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>供应商PRD环境访问控制方案</h1>
+            <p class="header-subtitle">加强生产环境安全性与稳定性的综合解决方案</p>
+            <p class="last-updated"><i class="bi bi-clock"></i> 最后更新: 2025年4月23日</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="overview">
+            <h2><i class="bi bi-info-circle"></i> 方案概述</h2>
+            <div class="card highlight">
+                <p>本方案旨在加强对供应商在PRD环境的访问控制，确保生产环境的稳定性和安全性。通过实施严格的权限管控和临时授权机制，平衡安全需求与运维灵活性，同时确保所有代码部署通过标准化流程执行。</p>
+                
+                <div class="tabs">
+                    <input type="radio" name="tabs" id="tab1" class="tab-input" checked>
+                    <label for="tab1" class="tab-label">核心目标</label>
+                    <div class="tab-content">
+                        <ul>
+                            <li>提高系统安全性，减少未授权访问风险</li>
+                            <li>确保所有代码部署按照标准流程执行</li>
+                            <li>建立明确的临时授权机制，满足紧急需求</li>
+                            <li>保持系统稳定性，减少人为操作错误</li>
+                        </ul>
+                    </div>
+                    
+                    <input type="radio" name="tabs" id="tab2" class="tab-input">
+                    <label for="tab2" class="tab-label">预期收益</label>
+                    <div class="tab-content">
+                        <ul>
+                            <li>降低生产环境安全风险</li>
+                            <li>提高代码部署质量和可追溯性</li>
+                            <li>减少意外操作导致的系统故障</li>
+                            <li>建立更规范的开发与运维流程</li>
+                        </ul>
+                    </div>
+                    
+                    <input type="radio" name="tabs" id="tab3" class="tab-input">
+                    <label for="tab3" class="tab-label">实施范围</label>
+                    <div class="tab-content">
+                        <ul>
+                            <li>所有供应商团队</li>
+                            <li>所有生产环境服务器</li>
+                            <li>所有代码部署流程</li>
+                            <li>所有系统配置修改操作</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="architecture">
+            <h2><i class="bi bi-diagram-3"></i> 当前架构</h2>
+            <div class="card">
+                <h3>环境部署</h3>
+                <div class="badge primary"><i class="bi bi-cloud"></i> AWS</div>
+                <div class="badge secondary"><i class="bi bi-check2-circle"></i> UAT</div>
+                <div class="badge accent"><i class="bi bi-shield-check"></i> PRD</div>
+                
+                <h3>部署模式</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4><i class="bi bi-hdd-rack"></i> EC2</h4>
+                        <p>基于Amazon EC2的虚拟机部署</p>
+                        <p class="badge success">主要应用服务器</p>
+                    </div>
+                    <div class="card">
+                        <h4><i class="bi bi-boxes"></i> ECS</h4>
+                        <p>Amazon Elastic Container Service</p>
+                        <p class="badge success">容器化应用</p>
+                    </div>
+                    <div class="card">
+                        <h4><i class="bi bi-diagram-2"></i> EKS</h4>
+                        <p>Amazon Elastic Kubernetes Service</p>
+                        <p class="badge success">微服务架构</p>
+                    </div>
+                </div>
+                
+                <button class="collapsible">查看当前访问控制架构</button>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner">
+                        <p>当前供应商团队拥有以下访问权限：</p>
+                        <ul>
+                            <li>直接通过Jumpserver访问生产服务器</li>
+                            <li> UAT/PRD环境全部的访问权限</li>
+                            <li>代码部署权限</li>
+                            <li>系统配置修改权限</li>
+                        </ul>
+                        <p>这种访问模式存在以下风险：</p>
+                        <ul>
+                            <li>缺乏及时的操作审计和追踪（目前Jumpserver有录屏）</li>
+                            <li>可能导致未经授权的配置更改</li>
+                            <li>代码部署可能会绕开我们DevOps标准化流程</li>
+                            <li>系统安全性和稳定性受到威胁</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="access-control">
+            <h2><i class="bi bi-shield-lock"></i> 权限管控方案</h2>
+            
+            <div class="card warning">
+                <h3><i class="bi bi-exclamation-triangle"></i> PRD环境权限调整</h3>
+                <ul>
+                    <li><strong>永久禁用：</strong>供应商在PRD环境的发布和部署权限</li>
+                    <li><strong>保留权限：</strong>只读权限用于监控和日志查看</li>
+                    <li><strong>访问通道：</strong>通过JumpServer作为唯一访问入口, 严格控制 PRD EC2 的直接访问权限</li>
+                    <li><strong>AWS权限：</strong>供应商不直接拥有AWS控制台权限</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><i class="bi bi-clock-history"></i> 临时授权流程</h3>
+                <ol>
+                    <li><strong>需求申请：</strong>供应商通过工单系统提交访问需求</li>
+                    <li><strong>审批流程：</strong>Cloud Hosting和ITBP&LPO 多重审批</li>
+                    <li><strong>权限授予：</strong>通过JumpServer临时开通必要权限</li>
+                    <li><strong>时间限制：</strong>权限默认4小时有效，可延长</li>
+                    <li><strong>操作审计：</strong>所有操作记录完整日志，以及屏幕录屏</li>
+                    <li><strong>权限回收：</strong>任务完成后立即禁用权限</li>
+                </ol>
+
+                <div class="flowchart-container">
+                    <h4 class="flowchart-title">临时授权流程图</h4>
+                    <div class="mermaid">
+                        flowchart TD
+                        A[供应商提交申请] --> B{Cloud Hosting 团队审批}
+                        B -->|通过| C{ITBP and LPO 审批}
+                        B -->|拒绝| D[通知供应商]
+                        C -->|通过| E[开通临时权限]
+                        C -->|拒绝| D
+                        E --> F[4小时有效期]
+                        F --> G{任务完成?}
+                        G -->|是| H[立即禁用权限]
+                        G -->|否| I[申请延长]
+                        I --> B
+                        H --> J[记录审计日志]
+                        
+                        style A fill:#d0e8ff,stroke:#1a73e8,stroke-width:2px
+                        style B fill:#fff8e1,stroke:#f4b400,stroke-width:2px
+                        style C fill:#fff8e1,stroke:#f4b400,stroke-width:2px
+                        style E fill:#e8f5e9,stroke:#0f9d58,stroke-width:2px
+                        style H fill:#e8f5e9,stroke:#0f9d58,stroke-width:2px
+                        style J fill:#e8f5e9,stroke:#0f9d58,stroke-width:2px
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="bi bi-diagram-3"></i> 权限管控架构</h3>
+                <div class="flowchart-container">
+                    <div class="mermaid">
+                        flowchart LR
+                        A[供应商] --> B[JumpServer]
+                        B --> C[PRD环境]
+                        C --> D[EC2/ECS/EKS]
+                        
+                        style A fill:#d0e8ff,stroke:#1a73e8,stroke-width:2px
+                        style B fill:#fff8e1,stroke:#f4b400,stroke-width:2px
+                        style C fill:#ffebee,stroke:#db4437,stroke-width:2px
+                        style D fill:#e8f5e9,stroke:#0f9d58,stroke-width:2px
+                    </div>
+                </div>
+                
+                <button class="collapsible">查看详细权限矩阵</button>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>权限类型</th>
+                                    <th>供应商（常规）</th>
+                                    <th>供应商（临时授权）</th>
+                                    <th>内部运维</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>服务器登录</td>
+                                    <td><i class="bi bi-x-circle" style="color:var(--danger-color)"></i> 禁止</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 允许</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 允许</td>
+                                </tr>
+                                <tr>
+                                    <td>代码部署</td>
+                                    <td><i class="bi bi-x-circle" style="color:var(--danger-color)"></i> 禁止</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 有限允许</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 允许</td>
+                                </tr>
+                                <tr>
+                                    <td>配置修改</td>
+                                    <td><i class="bi bi-x-circle" style="color:var(--danger-color)"></i> 禁止</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 有限允许</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 允许</td>
+                                </tr>
+                                <tr>
+                                    <td>日志查看</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 允许</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 允许</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 允许</td>
+                                </tr>
+                                <tr>
+                                    <td>监控访问</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 允许</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 允许</td>
+                                    <td><i class="bi bi-check-circle" style="color:var(--success-color)"></i> 允许</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="scenarios">
+            <h2><i class="bi bi-list-check"></i> 适用场景</h2>
+            <div class="grid">
+                <div class="card success">
+                    <h3><i class="bi bi-patch-check"></i> 补丁更新</h3>
+                    <p>安全补丁或关键功能更新</p>
+                    <ul>
+                        <li>系统安全漏洞修复</li>
+                        <li>关键功能Bug修复</li>
+                        <li>性能优化更新</li>
+                    </ul>
+                </div>
+                <div class="card success">
+                    <h3><i class="bi bi-shield"></i> 安全升级</h3>
+                    <p>紧急安全漏洞修复</p>
+                    <ul>
+                        <li>零日漏洞应急响应</li>
+                        <li>安全框架升级</li>
+                        <li>加密算法更新</li>
+                    </ul>
+                </div>
+                <div class="card success">
+                    <h3><i class="bi bi-tools"></i> 故障修复</h3>
+                    <p>生产环境问题诊断和修复</p>
+                    <ul>
+                        <li>系统崩溃恢复</li>
+                        <li>性能瓶颈排查</li>
+                        <li>数据异常修复</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><i class="bi bi-kanban"></i> DevOps流程</h3>
+                <p>所有代码部署将通过DevOps平台进行，确保每次部署都经过审批和审核：</p>
+                
+                <div class="flowchart-container">
+                    <h4 class="flowchart-title">代码部署流程</h4>
+                    <div class="mermaid">
+                        flowchart LR
+                        A[供应商提交代码] --> B[代码审核]
+                        B --> C[自动化测试]
+                        C --> D{审批}
+                        D -->|通过| E[DevOps部署]
+                        D -->|拒绝| F[返回修改]
+                        E --> G[部署完成]
+                        F --> A
+                        
+                        style A fill:#d0e8ff,stroke:#1a73e8,stroke-width:2px
+                        style B fill:#fff8e1,stroke:#f4b400,stroke-width:2px
+                        style C fill:#fff8e1,stroke:#f4b400,stroke-width:2px
+                        style D fill:#fff8e1,stroke:#f4b400,stroke-width:2px
+                        style E fill:#e8f5e9,stroke:#0f9d58,stroke-width:2px
+                        style G fill:#e8f5e9,stroke:#0f9d58,stroke-width:2px
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="communication">
+            <h2><i class="bi bi-chat-dots"></i> 沟通计划</h2>
+            <div class="card">
+                <div class="tabs">
+                    <input type="radio" name="comm-tabs" id="comm-tab1" class="tab-input" checked>
+                    <label for="comm-tab1" class="tab-label">内部沟通</label>
+                    <div class="tab-content">
+                        <h3>内部团队沟通</h3>
+                        <ul>
+                            <li><strong>通知方式：</strong>向所有相关团队发送变更通知邮件</li>
+                            <li><strong>培训会议：</strong>组织内部培训会议说明新流程</li>
+                            <li><strong>文档更新：</strong>更新内部文档和操作手册</li>
+                            <li><strong>反馈渠道：</strong>建立内部反馈渠道，收集优化建议</li>
+                        </ul>
+                        
+                        <h4>邮件模板：内部团队通知</h4>
+                        <div class="card">
+                            <p><strong>主题：</strong>【重要】供应商PRD环境访问控制方案实施通知</p>
+                            <p><strong>收件人：</strong>所有内部团队</p>
+                            <p><strong>正文：</strong></p>
+                            <p>各位同事：</p>
+                            <p>为提高系统安全性并确保所有代码部署按照标准流程执行，我们将于2025年5月1日起实施供应商PRD环境访问控制方案。主要变更包括：</p>
+                            <ol>
+                                <li>回收供应商在PRD环境的直接访问权限</li>
+                                <li>所有代码部署将通过DevOps流程完成</li>
+                                <li>建立临时授权机制处理紧急需求</li>
+                            </ol>
+                            <p>详细方案请查看附件或访问内部文档中心。我们将于4月30日14:00在会议室A举行培训会议，请相关人员务必参加。</p>
+                            <p>如有任何疑问，请联系安全团队或运维团队。</p>
+                        </div>
+                    </div>
+                    
+                    <input type="radio" name="comm-tabs" id="comm-tab2" class="tab-input">
+                    <label for="comm-tab2" class="tab-label">供应商沟通</label>
+                    <div class="tab-content">
+                        <h3>供应商沟通计划</h3>
+                        <ul>
+                            <li><strong>正式通知：</strong>发送正式邮件通知权限变更</li>
+                            <li><strong>操作指南：</strong>提供详细的临时权限申请指南</li>
+                            <li><strong>紧急渠道：</strong>设立专用沟通渠道处理紧急请求</li>
+                            <li><strong>定期反馈：</strong>定期收集供应商反馈优化流程</li>
+                        </ul>
+                        
+                        <h4>邮件模板：供应商通知</h4>
+                        <div class="card">
+                            <p><strong>主题：</strong>【重要】关于PRD环境访问权限变更的通知</p>
+                            <p><strong>收件人：</strong>所有供应商</p>
+                            <p><strong>正文：</strong></p>
+                            <p>尊敬的合作伙伴：</p>
+                            <p>为提高系统安全性并确保所有代码部署按照标准流程执行，我们将于2025年5月1日起调整PRD环境的访问控制策略。主要变更包括：</p>
+                            <ol>
+                                <li>停止供应商对生产环境服务器的直接访问权限</li>
+                                <li>所有代码部署将通过DevOps自动化流程进行</li>
+                                <li>建立临时授权机制处理紧急需求</li>
+                            </ol>
+                            <p>我们已准备了详细的操作指南（见附件），并将于4月28日举行在线培训会议，请贵司相关技术人员务必参加。</p>
+                            <p>如有任何疑问，请随时联系您的项目经理或发送邮件至support@example.com。</p>
+                        </div>
+                    </div>
+                    
+                    <input type="radio" name="comm-tabs" id="comm-tab3" class="tab-input">
+                    <label for="comm-tab3" class="tab-label">反馈机制</label>
+                    <div class="tab-content">
+                        <h3>反馈收集与优化</h3>
+                        <ul>
+                            <li><strong>定期会议：</strong>每月与供应商举行反馈会议</li>
+                            <li><strong>问题跟踪：</strong>建立问题跟踪系统记录所有反馈</li>
+                            <li><strong>流程优化：</strong>根据反馈定期优化授权流程</li>
+                            <li><strong>满意度调查：</strong>每季度进行一次满意度调查</li>
+                        </ul>
+                        
+                        <div class="card">
+                            <h4>反馈表单示例</h4>
+                            <table>
+                                <tr>
+                                    <th>问题类型</th>
+                                    <th>描述</th>
+                                    <th>优先级</th>
+                                    <th>状态</th>
+                                </tr>
+                                <tr>
+                                    <td>流程问题</td>
+                                    <td>临时授权申请流程耗时过长</td>
+                                    <td>高</td>
+                                    <td>处理中</td>
+                                </tr>
+                                <tr>
+                                    <td>技术问题</td>
+                                    <td>JumpServer连接不稳定</td>
+                                    <td>中</td>
+                                    <td>已解决</td>
+                                </tr>
+                                <tr>
+                                    <td>建议</td>
+                                    <td>增加批量授权功能</td>
+                                    <td>低</td>
+                                    <td>计划中</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="timeline">
+            <h2><i class="bi bi-calendar-check"></i> 实施时间表</h2>
+            <div class="card">
+                <div class="timeline">
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025/4/25</div>
+                            <h4>方案评审</h4>
+                            <p>安全团队完成方案最终评审</p>
+                            <p class="badge primary">负责人: 安全团队</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025/4/28</div>
+                            <h4>权限调整</h4>
+                            <p>运维团队完成系统权限配置</p>
+                            <p class="badge primary">负责人: 运维团队</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025/4/30</div>
+                            <h4>流程培训</h4>
+                            <p>对内部团队和供应商进行培训</p>
+                            <p class="badge primary">负责人: 所有团队</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025/5/1</div>
+                            <h4>全面实施</h4>
+                            <p>方案正式生效并开始执行</p>
+                            <p class="badge primary">负责人: 所有团队</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="collapsible">查看详细实施计划</button>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>阶段</th>
+                                    <th>时间</th>
+                                    <th>任务</th>
+                                    <th>负责人</th>
+                                    <th>状态</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>准备阶段</td>
+                                    <td>2025/4/23-24</td>
+                                    <td>完成方案文档</td>
+                                    <td>安全团队</td>
+                                    <td><span class="badge success">已完成</span></td>
+                                </tr>
+                                <tr>
+                                    <td>准备阶段</td>
+                                    <td>2025/4/25</td>
+                                    <td>方案评审会议</td>
+                                    <td>安全团队</td>
+                                    <td><span class="badge warning">进行中</span></td>
+                                </tr>
+                                <tr>
+                                    <td>技术实施</td>
+                                    <td>2025/4/26-27</td>
+                                    <td>JumpServer配置</td>
+                                    <td>运维团队</td>
+                                    <td><span class="badge accent">计划中</span></td>
+                                </tr>
+                                <tr>
+                                    <td>技术实施</td>
+                                    <td>2025/4/28-29</td>
+                                    <td>权限调整与测试</td>
+                                    <td>运维团队</td>
+                                    <td><span class="badge accent">计划中</span></td>
+                                </tr>
+                                <tr>
+                                    <td>沟通培训</td>
+                                    <td>2025/4/28</td>
+                                    <td>供应商通知</td>
+                                    <td>项目管理</td>
+                                    <td><span class="badge accent">计划中</span></td>
+                                </tr>
+                                <tr>
+                                    <td>沟通培训</td>
+                                    <td>2025/4/30</td>
+                                    <td>内部培训</td>
+                                    <td>安全团队</td>
+                                    <td><span class="badge accent">计划中</span></td>
+                                </tr>
+                                <tr>
+                                    <td>沟通培训</td>
+                                    <td>2025/4/30</td>
+                                    <td>供应商培训</td>
+                                    <td>运维团队</td>
+                                    <td><span class="badge accent">计划中</span></td>
+                                </tr>
+                                <tr>
+                                    <td>正式实施</td>
+                                    <td>2025/5/1</td>
+                                    <td>方案生效</td>
+                                    <td>所有团队</td>
+                                    <td><span class="badge accent">计划中</span></td>
+                                </tr>
+                                <tr>
+                                    <td>后续跟踪</td>
+                                    <td>2025/5/15</td>
+                                    <td>第一次评估</td>
+                                    <td>安全团队</td>
+                                    <td><span class="badge accent">计划中</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="risk-management">
+            <h2><i class="bi bi-exclamation-diamond"></i> 风险管理</h2>
+            <div class="card danger">
+                <h3>潜在风险与应对策略</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4><i class="bi bi-clock-history"></i> 响应时间延长</h4>
+                        <p><strong>风险：</strong>临时授权流程可能导致紧急问题响应时间延长</p>
+                        <p><strong>应对：</strong>建立快速审批通道，为紧急情况设置绿色通道</p>
+                    </div>
+                    <div class="card">
+                        <h4><i class="bi bi-person-x"></i> 供应商抵触</h4>
+                        <p><strong>风险：</strong>供应商可能对新流程产生抵触情绪</p>
+                        <p><strong>应对：</strong>充分沟通解释，提供详细培训，收集反馈并及时优化</p>
+                    </div>
+                    <div class="card">
+                        <h4><i class="bi bi-hourglass-split"></i> 工作效率下降</h4>
+                        <p><strong>风险：</strong>新流程可能导致短期内工作效率下降</p>
+                        <p><strong>应对：</strong>逐步实施，优化审批流程，加强自动化工具支持</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Just Jason. 保留所有权利.</p>
+            <div class="footer-links">
+                <a href="#overview">方案概述</a>
+                <a href="#architecture">当前架构</a>
+                <a href="#access-control">权限管控</a>
+                <a href="#scenarios">适用场景</a>
+                <a href="#communication">沟通计划</a>
+            </div>
+            <p>机密文件 - 仅限内部使用</p>
+        </div>
+    </footer>
+
+    <script>
+        // 初始化Mermaid
+        document.addEventListener('DOMContentLoaded', function() {
+            // 确保mermaid已定义
+            if (typeof mermaid !== 'undefined') {
+                mermaid.initialize({
+                    startOnLoad: true,
+                    theme: 'default',
+                    flowchart: {
+                        useMaxWidth: true,
+                        htmlLabels: true,
+                        curve: 'basis'
+                    }
+                });
+            } else {
+                console.error('Mermaid library not loaded properly');
+                // 尝试重新加载mermaid
+                var script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js';
+                script.onload = function() {
+                    mermaid.initialize({
+                        startOnLoad: true,
+                        theme: 'default'
+                    });
+                    // 手动渲染所有图表
+                    document.querySelectorAll('.mermaid').forEach(function(el) {
+                        mermaid.init(undefined, el);
+                    });
+                };
+                document.head.appendChild(script);
+            }
+        });
+        
+        // 折叠面板功能
+        document.addEventListener('DOMContentLoaded', function() {
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // 添加打印按钮
+            var printBtn = document.createElement('button');
+            printBtn.innerHTML = '<i class="bi bi-printer"></i> 打印文档';
+            printBtn.style.position = 'fixed';
+            printBtn.style.bottom = '20px';
+            printBtn.style.right = '20px';
+            printBtn.style.padding = '10px 15px';
+            printBtn.style.backgroundColor = 'var(--primary-color)';
+            printBtn.style.color = 'white';
+            printBtn.style.border = 'none';
+            printBtn.style.borderRadius = 'var(--border-radius)';
+            printBtn.style.cursor = 'pointer';
+            printBtn.style.boxShadow = 'var(--box-shadow)';
+            printBtn.style.zIndex = '1000';
+            printBtn.className = 'no-print';
+            
+            printBtn.addEventListener('click', function() {
+                window.print();
+            });
+            
+            document.body.appendChild(printBtn);
+        });
+    </script>
+</body>
+</html>
