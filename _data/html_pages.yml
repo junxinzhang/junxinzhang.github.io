@@ -19,3 +19,9 @@
   image: html_thumbnails/20250423_gpu_aws_cost.jpg
 
 # 添加更多HTML页面，格式如上
+
+- title: 增强网络报告
+  path: enhanced_network_report.html
+  description: 网络健康状况汇报
+  date: 2025-04-30
+  image: html_thumbnails/20250430_enhance_network_report.jpg

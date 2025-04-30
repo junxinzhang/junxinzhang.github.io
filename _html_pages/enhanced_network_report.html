@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络健康情况汇报 | 高管版</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0a2d4d; /* 更深邃的蓝色，彰显专业感 */
+            --secondary-color: #2980b9; /* 沉稳的蓝色 */
+            --accent-color: #16a085; /* 高端的绿色 */
+            --light-bg: #f8f9fa;
+            --dark-text: #1a202c;
+            --light-text: #ffffff;
+            --card-bg: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --border-radius: 14px;
+            --gradient-start: #eef5ff;
+            --gradient-end: #f0f9ff;
+            --danger-color: #e53e3e;
+            --warning-color: #dd6b20;
+            --success-color: #2f855a;
+            --info-color: #3182ce;
+            --highlight-bg: rgba(49, 130, 206, 0.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(49, 130, 206, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(49, 130, 206, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(49, 130, 206, 0); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            background-attachment: fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-wrapper {
+            margin-bottom: 70px;
+            perspective: 1000px; /* 3D效果的视角 */
+        }
+
+        header {
+            text-align: center;
+            color: var(--light-text);
+            padding: 90px 30px 70px;
+            margin-bottom: 70px;
+            background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px var(--shadow-color);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1.2s ease-in-out;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDQiIGhlaWdodD0iMTQ0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIwLjA4IiBkPSJNNzIgMEMzMi4yNCAwIDAgMzIuMjQgMCA3MnMzMi4yNCA3MiA3MiA3MiA3Mi0zMi4yNCA3Mi03MlMxMTEuNzYgMCA3MiAwem0wIDEyNmMtMjkuNyAwLTU0LTI0LjMtNTQtNTRzMjQuMy01NCA1NC01NCA1NCAyNC4zIDU0IDU0LTI0LjMgNTQtNTQgNTR6Ii8+PC9zdmc+') repeat;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        header > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 标志设计 */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        
+        .company-logo {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .company-logo i {
+            font-size: 36px;
+            color: var(--light-text);
+        }
+
+        h1 {
+            font-size: 3.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1px;
+        }
+
+        .header-info {
+            font-size: 1.3em;
+            color: var(--light-text);
+            margin: 8px 0;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .report-meta {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 24px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .meta-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        /* 导航栏设计 */
+        .nav-container {
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+
+        .nav-bar {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .nav-item {
+            padding: 10px 20px;
+            color: var(--dark-text);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: var(--primary-color);
+            color: var(--light-text);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            font-weight: 600;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 15px;
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2 i {
+            color: var(--accent-color);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #718096;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .slide {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 45px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px var(--shadow-color);
+            transition: all 0.5s ease;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 0.8s ease-out;
+            animation-fill-mode: both;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+        
+        .slide:nth-child(1) { animation-delay: 0.1s; }
+        .slide:nth-child(2) { animation-delay: 0.2s; }
+        .slide:nth-child(3) { animation-delay: 0.3s; }
+        .slide:nth-child(4) { animation-delay: 0.4s; }
+        .slide:nth-child(5) { animation-delay: 0.5s; }
+        
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+        }
+
+        .slide:hover {
+            transform: translateY(-10px) rotateX(2deg);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        /* 指标卡片区域强化 */
+        .metric-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .metric-card {
+            flex: 1 1 220px;
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.4s ease;
+            border-top: 5px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card:nth-child(1) { border-color: var(--info-color); }
+        .metric-card:nth-child(2) { border-color: var(--success-color); }
+        .metric-card:nth-child(3) { border-color: var(--warning-color); }
+        .metric-card:nth-child(4) { border-color: var(--danger-color); }
+
+        .metric-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metric-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(45deg);
+            transition: all 0.8s;
+        }
+        
+        .metric-card:hover::after {
+            transform: rotate(45deg) translate(100%, 100%);
+        }
+
+        .metric-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 24px;
+            color: var(--light-text);
+            background: var(--primary-color);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metric-card:nth-child(1) .metric-icon { background: var(--info-color); }
+        .metric-card:nth-child(2) .metric-icon { background: var(--success-color); }
+        .metric-card:nth-child(3) .metric-icon { background: var(--warning-color); }
+        .metric-card:nth-child(4) .metric-icon { background: var(--danger-color); }
+
+        .metric-value {
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 15px 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        .metric-card:nth-child(1) .metric-value { color: var(--info-color); }
+        .metric-card:nth-child(2) .metric-value { color: var(--success-color); }
+        .metric-card:nth-child(3) .metric-value { color: var(--warning-color); }
+        .metric-card:nth-child(4) .metric-value { color: var(--danger-color); }
+
+        .metric-label {
+            font-size: 1.15em;
+            color: #4a5568;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .metric-trend {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 15px;
+            font-size: 1em;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-flex;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .trend-up { color: var(--success-color); }
+        .trend-down-good { color: var(--success-color); }
+        .trend-down-bad { color: var(--danger-color); }
+
+        /* 图表容器增强 */
+        .chart-container {
+            position: relative;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+            max-width: 92%;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            transition: all 0.4s ease;
+        }
+        
+        .chart-container:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+        }
+        
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        
+        .chart-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .chart-controls {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .chart-control-btn {
+            background: #f1f5f9;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 12px;
+            cursor: pointer;
+            color: #64748b;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        
+        .chart-control-btn:hover {
+            background: #e2e8f0;
+            color: var(--primary-color);
+        }
+        
+        .chart-control-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .chart-container canvas {
+            width: 100% !important;
+            height: 380px !important;
+        }
+
+        /* 洞察容器增强 */
+        .insight-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .insight-card {
+            flex: 1 1 300px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+            border-left: 5px solid var(--accent-color);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .insight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+        
+        .insight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.2) 0%, 
+                rgba(255, 255, 255, 0) 80%);
+        }
+
+        .insight-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 1.3em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .insight-content {
+            color: var(--dark-text);
+            font-size: 1.1em;
+            line-height: 1.7;
+            position: relative;
+        }
+
+        /* 洞察框增强 */
+        .polished {
+            color: var(--dark-text);
+            margin-top: 40px;
+            padding: 30px 35px;
+            border-left: 6px solid var(--accent-color);
+            background-color: rgba(245, 247, 250, 0.9);
+            border-radius: 16px;
+            font-size: 1.2em;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            line-height: 1.8;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .polished::before {
+            content: '\f0eb';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 30px;
+            bottom: 20px;
+            font-size: 5em;
+            color: rgba(0, 0, 0, 0.03);
+            z-index: 0;
+        }
+        
+        .polished p {
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 行动项目设计增强 */
+        .action-items {
+            margin-top: 50px;
+        }
+
+        .action-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            background: #fff;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+            border-color: var(--accent-color);
+        }
+        
+        .action-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            background: var(--accent-color);
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+        }
+
+        .action-icon {
+            background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+        }
+
+        .action-content h4 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+            font-size: 1.25em;
+        }
+
+        .action-content p {
+            margin: 0;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        .action-bar {
+            height: 5px;
+            background: #e2e8f0;
+            border-radius: 3px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+        
+        .action-progress {
+            height: 100%;
+            background: var(--accent-color);
+            border-radius: 3px;
+        }
+
+        /* 页脚增强 */
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            padding: 50px 30px;
+            color: var(--light-text);
+            font-size: 1em;
+            background: linear-gradient(to right, var(--primary-color), #1a365d);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 -15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-weight: 700;
+            font-size: 1.4em;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-logo i {
+            font-size: 1.2em;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .footer-links a {
+            color: var(--light-text);
+            opacity: 0.8;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+
+        /* 工具提示样式增强 */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 220px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            font-size: 0.9em;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transform-origin: bottom center;
+            transform: translateX(-50%) scale(0.9);
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -8px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: var(--primary-color) transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+
+        /* 打印样式优化 */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            header, .slide, .chart-container, .insight-card, .metric-card, .action-item {
+                box-shadow: none !important;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+            
+            footer, .nav-container {
+                display: none;
+            }
+            
+            .chart-container canvas {
+                height: 250px !important;
+            }
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 992px) {
+            .container {
+                padding: 25px;
+            }
+            h1 { font-size: 3em; }
+            h2 { font-size: 1.9em; }
+            .slide { padding: 35px; }
+            .report-meta { gap: 20px; flex-wrap: wrap; justify-content: center; }
+            .metric-row { gap: 20px; }
+            .nav-bar { overflow-x: auto; justify-content: flex-start; padding: 8px; }
+            .nav-item { padding: 8px 15px; font-size: 0.85rem; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0 auto;
+                padding: 15px;
+            }
+            header {
+                padding: 60px 20px;
+                margin-bottom: 50px;
+            }
+            h1 { font-size: 2.5em; }
+            .header-info { font-size: 1.1em; }
+            .slide { padding: 30px; margin-bottom: 40px; }
+            h2 { font-size: 1.7em; padding-bottom: 12px; margin-bottom: 25px;}
+            .chart-container { max-width: 100%; padding: 20px; }
+            .chart-container canvas { height: 300px !important; }
+            .polished { padding: 25px; font-size: 1.1em; }
+            .insight-card { padding: 25px; }
+            .metric-card { padding: 25px; }
+            .metric-value { font-size: 2.5em; }
+            footer { padding: 40px 20px; }
+            .footer-content { flex-direction: column; text-align: center; }
+            .footer-links { justify-content: center; flex-wrap: wrap; }
+            .company-logo { width: 70px; height: 70px; }
+            .company-logo i { font-size: 30px; }
+            .section-title { font-size: 2em; }
+        }
+
+         @media (max-width: 576px) {
+            h1 { font-size: 2em; }
+            .chart-container canvas { height: 280px !important; }
+            .insight-container { flex-direction: column; }
+            .metric-row { flex-direction: column; gap: 20px; }
+            .action-item { flex-direction: column; align-items: center; text-align: center; }
+            .action-icon { margin-bottom: 15px; }
+            .company-logo { width: 60px; height: 60px; }
+            .company-logo i { font-size: 26px; }
+            .section-subtitle { font-size: 1em; }
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="company-logo">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+            </div>
+            
+            <h1>网络健康状况汇报</h1>
+            <p class="header-info">2025财年第一季度执行总结</p>
+            
+            <div class="report-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2025年4月</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-user-tie"></i>
+                    <span>IT基础设施部</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>高管版本</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>季度回顾</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="nav-container">
+            <div class="nav-bar">
+                <a href="#overview" class="nav-item active">
+                    <i class="fas fa-chart-pie"></i> 概览
+                </a>
+                <a href="#performance" class="nav-item">
+                    <i class="fas fa-tachometer-alt"></i> 性能
+                </a>
+                <a href="#stability" class="nav-item">
+                    <i class="fas fa-shield-alt"></i> 稳定性
+                </a>
+                <a href="#security" class="nav-item">
+                    <i class="fas fa-lock"></i> 安全
+                </a>
+                <a href="#improvement" class="nav-item">
+                    <i class="fas fa-rocket"></i> 规划
+                </a>
+            </div>
+        </div>
+
+        <div class="section-wrapper">
+            <section class="slide" id="overview">
+                <div class="section-header">
+                    <div class="section-title">整体状况概览</div>
+                    <div class="section-subtitle">全面展示公司网络基础设施的健康状态和关键性能指标</div>
+                </div>
+                
+                <div class="metric-row">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="metric-label">整体网络评分</div>
+                        <div class="metric-value">90<span style="font-size: 0.5em;">/100</span></div>
+                        <div class="metric-trend trend-up">
+                            <i class="fas fa-arrow-up"></i> 上升 3.5%
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="metric-label">可用性</div>
+                        <div class="metric-value">99.8<span style="font-size: 0.5em;">%</span></div>
+                        <div class="metric-trend trend-up">
+                            <i class="fas fa-arrow-up"></i> 上升 0.2%
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="metric-label">平均响应时间</div>
+                        <div class="metric-value">30<span style="font-size: 0.5em;">ms</span></div>
+                        <div class="metric-trend trend-down-good">
+                            <i class="fas fa-arrow-down"></i> 下降 3ms
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="metric-label">安全事件</div>
+                        <div class="metric-value">0</div>
+                        <div class="metric-trend trend-down-good">
+                            <i class="fas fa-arrow-down"></i> 无变化
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            <i class="fas fa-chart-pie"></i> 网络健康指标概览
+                        </div>
+                        <div class="chart-controls">
+                            <button class="chart-control-btn active">季度视图</button>
+                            <button class="chart-control-btn">年度趋势</button>
+                        </div>
+                    </div>
+                    <canvas id="overviewChart"></canvas>
+                </div>
+                
+                <div class="insight-container">
+                    <div class="insight-card">
+                        <div class="insight-title">
+                            <i class="fas fa-lightbulb" style="color: #f39c12;"></i>
+                            核心洞察
+                        </div>
+                        <div class="insight-content">
+                            网络健康状况整体表现优异，各项关键指标均保持在最佳运行区间，为业务增长提供了坚实的技术支撑。持续的网络优化策略取得显著成效，有效支撑了公司数字化转型进程。
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-title">
+                            <i class="fas fa-exclamation-triangle" style="color: #e74c3c;"></i>
+                            关注点
+                        </div>
+                        <div class="insight-content">
+                            随着业务快速扩展，当前带宽利用率已达78%，接近预警线。建议提前规划扩容，避免成为业务瓶颈。同时应密切监控用户增长对网络基础设施的影响，确保架构可持续扩展。
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="section-wrapper">
+            <section class="slide" id="performance">
+                <div class="section-header">
+                    <div class="section-title">网络性能指标</div>
+                    <div class="section-subtitle">深入分析公司网络性能表现，确保各项业务运行流畅高效</div>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            <i class="fas fa-tachometer-alt"></i> 网络性能趋势
+                        </div>
+                        <div class="chart-controls">
+                            <button class="chart-control-btn active">延迟</button>
+                            <button class="chart-control-btn">带宽</button>
+                            <button class="chart-control-btn">综合</button>
+                        </div>
+                    </div>
+                    <canvas id="performanceChart"></canvas>
+                </div>
+                
+                <div class="insight-container">
+                    <div class="insight-card">
+                        <div class="insight-title">
+                            <i class="fas fa-bolt" style="color: #3498db;"></i>
+                            延迟表现
+                        </div>
+                        <div class="insight-content">
+                            网络延迟持续保持在约30ms的较低水平，较上季度又有3ms的优化，已达到行业领先水平，有效支撑各项业务高效运行。核心业务应用响应时间提升15%，显著改善用户体验。
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-title">
+                            <i class="fas fa-exchange-alt" style="color: #2ecc71;"></i>
+                            带宽利用
+                        </div>
+                        <div class="insight-content">
+                            带宽利用率整体保持在78%左右，即使在业务高峰期也未超过85%的安全阈值，确保了系统的流畅运行和良好体验。流量智能调度机制有效平衡了各系统资源分配，提高整体效率。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="polished">
+                    <p>通过硬件升级和网络优化，我们成功将网络延迟降低至30ms，并将带宽利用率控制在合理范围内。这些改进直接提升了系统响应速度，为用户提供了更流畅的操作体验，同时为未来业务增长预留了充足的扩展空间。持续的性能优化也为公司降低了约15%的网络运营成本。</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="section-wrapper">
+            <section class="slide" id="stability">
+                <div class="section-header">
+                    <div class="section-title">网络稳定性评估</div>
+                    <div class="section-subtitle">全面评估网络可靠性和连续性，确保业务持续稳定运行</div>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            <i class="fas fa-shield-alt"></i> 网络中断情况趋势
+                        </div>
+                        <div class="chart-controls">
+                            <button class="chart-control-btn active">季度视图</button>
+                            <button class="chart-control-btn">按区域</button>
+                        </div>
+                    </div>
+                    <canvas id="stabilityChart"></canvas>
+                </div>
+                
+                <div class="insight-container">
+                    <div class="insight-card">
+                        <div class="insight-title">
+                            <i class="fas fa-history" style="color: #3498db;"></i>
+                            中断趋势
+                        </div>
+                        <div class="insight-content">
+                            近一个季度网络中断事件持续减少，本月仅发生3次短暂中断，平均恢复时长已缩短至10分钟以内，远低于行业平均水平。自动恢复机制成功处理了85%的潜在中断，大幅提升了系统韧性。
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-title">
+                            <i class="fas fa-chart-line" style="color: #2ecc71;"></i>
+                            可靠性提升
+                        </div>
+                        <div class="insight-content">
+                            通过冗余架构优化和预警系统升级，网络可用性已提升至99.8%，有效保障了关键业务的连续性和稳定运行。重要节点的硬件冗余配置和灾备方案全面完成，保障业务不中断。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="polished">
+                    <p>我们实施的故障自动切换机制和24/7监控系统显著提高了网络稳定性，中断事件数量较上季度减少25%。同时，平均故障恢复时间缩短40%，大幅降低了业务中断风险，提升了整体服务质量。这些改进为企业避免了约200万元的潜在损失，同时提升了员工工作效率和客户满意度。</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="section-wrapper">
+            <section class="slide" id="security">
+                <div class="section-header">
+                    <div class="section-title">网络安全态势</div>
+                    <div class="section-subtitle">全面评估网络防护能力，确保企业数据和系统安全</div>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            <i class="fas fa-lock"></i> 安全评估雷达图
+                        </div>
+                        <div class="chart-controls">
+                            <button class="chart-control-btn active">当前</button>
+                            <button class="chart-control-btn">对比分析</button>
+                        </div>
+                    </div>
+                    <canvas id="securityChart"></canvas>
+                </div>
+                
+                <div class="insight-container">
+                    <div class="insight-card">
+                        <div class="insight-title">
+                            <i class="fas fa-shield-alt" style="color: #e74c3c;"></i>
+                            安全评估
+                        </div>
+                        <div class="insight-content">
+                            核心安全系统评分保持在90分以上，所有发现的安全漏洞均已及时修复，整体安全体系运行稳健，未发生任何安全事故。安全审计机制确保了100%的系统漏洞在48小时内得到修复。
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-title">
+                            <i class="fas fa-user-shield" style="color: #f39c12;"></i>
+                            防护措施
+                        </div>
+                        <div class="insight-content">
+                            新部署的AI安全分析系统已成功检测并阻止了多起潜在威胁，大幅增强了网络安全防御能力和风险预警能力。基于行为分析的异常检测系统准确率达95%，有效防范了高级持续性威胁。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="polished">
+                    <p>本季度安全体系全面升级，包括部署高级威胁检测系统、强化权限控制和加密机制。我们的网络安全评分已达95分，同比提升5%，所有发现的漏洞均在24小时内完成修复，确保企业数据和系统安全。这些措施有效防范了潜在的数据泄露风险，保障了公司的商业信誉和客户信任。</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="section-wrapper">
+            <section class="slide" id="improvement">
+                <div class="section-header">
+                    <div class="section-title">战略优化与发展规划</div>
+                    <div class="section-subtitle">基于前瞻性视角，规划未来网络架构升级路径</div>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            <i class="fas fa-rocket"></i> 改进计划时间表与进度
+                        </div>
+                        <div class="chart-controls">
+                            <button class="chart-control-btn active">2025规划</button>
+                            <button class="chart-control-btn">长期策略</button>
+                        </div>
+                    </div>
+                    <canvas id="improvementChart"></canvas>
+                </div>
+                
+                <div class="action-items">
+                    <div class="action-item">
+                        <div class="action-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <div class="action-content">
+                            <h4>带宽扩容计划</h4>
+                            <p>计划在Q2增加50%带宽容量，提前应对业务增长需求，确保网络性能始终处于最佳状态。采用软件定义网络技术，实现资源动态分配，提高整体网络灵活性。</p>
+                            <div class="action-bar">
+                                <div class="action-progress" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="action-content">
+                            <h4>智能监控系统升级</h4>
+                            <p>将在Q3完成基于AI的智能监控系统部署，实现问题自动预测和智能修复，降低人工干预需求。利用机器学习算法分析历史数据，提前识别潜在风险，实现主动式运维。</p>
+                            <div class="action-bar">
+                                <div class="action-progress" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="action-content">
+                            <h4>混合云架构优化</h4>
+                            <p>Q4将完成混合云架构优化，提升资源弹性和可扩展性，同时降低运维成本和复杂度。统一的云管理平台将简化多云环境下的资源调度和安全管控，提升IT资源利用率。</p>
+                            <div class="action-bar">
+                                <div class="action-progress" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="polished">
+                    <p>基于当前业务增长趋势和技术发展方向，我们制定了分阶段的网络优化路线图。这一战略规划将持续提升网络性能、可靠性和安全性，同时降低总体拥有成本，为公司数字化转型和业务创新提供坚实的技术基础。预计完成全部规划后，将提升30%的运维效率并降低20%的IT基础设施成本。</p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-network-wired"></i> 企业网络
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-file-alt"></i> 完整报告</a>
+                    <a href="#"><i class="fas fa-history"></i> 历史数据</a>
+                    <a href="#"><i class="fas fa-download"></i> 导出PDF</a>
+                    <a href="#"><i class="fas fa-print"></i> 打印报告</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2025  | IT基础设施部
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script>
+        // 激活导航菜单
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.slide');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            // 滚动监听
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if(pageYOffset >= (sectionTop - 300)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if(item.getAttribute('href').substring(1) === current) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+            
+            // 平滑滚动
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+        
+        // 定义高端配色方案
+        const chartColors = {
+            primary: '#0a2d4d',
+            secondary: '#2980b9',
+            accent: '#16a085',
+            info: '#3182ce',
+            success: '#2f855a',
+            warning: '#dd6b20',
+            danger: '#e53e3e',
+            light: '#f8f9fa',
+            dark: '#1a202c',
+            gridColor: 'rgba(226, 232, 240, 0.5)',
+            tooltipBackground: 'rgba(10, 45, 77, 0.9)'
+        };
+        
+        // 图表全局配置
+        Chart.defaults.font.family = "'Noto Sans SC', 'Microsoft YaHei', Arial, sans-serif";
+        Chart.defaults.color = chartColors.dark;
+        Chart.defaults.plugins.tooltip.backgroundColor = chartColors.tooltipBackground;
+        Chart.defaults.plugins.tooltip.titleFont = { size: 15, weight: '600' };
+        Chart.defaults.plugins.tooltip.bodyFont = { size: 14 };
+        Chart.defaults.plugins.tooltip.padding = 12;
+        Chart.defaults.plugins.tooltip.cornerRadius = 8;
+        Chart.defaults.plugins.tooltip.displayColors = false;
+        
+        // 概览图表
+        const overviewCtx = document.getElementById('overviewChart').getContext('2d');
+        const overviewChart = new Chart(overviewCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['性能', '稳定性', '安全性'],
+                datasets: [{
+                    data: [90, 85, 95],
+                    backgroundColor: [
+                        chartColors.info,
+                        chartColors.success,
+                        chartColors.accent
+                    ],
+                    borderColor: 'rgba(255, 255, 255, 0.9)',
+                    borderWidth: 2,
+                    hoverOffset: 10,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                animation: {
+                    animateScale: true,
+                    animateRotate: true,
+                    duration: 1800,
+                    easing: 'easeOutQuart'
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 25,
+                            boxWidth: 16,
+                            font: { size: 15, weight: '500' },
+                            color: chartColors.dark
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                return label + ': ' + context.raw + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // 性能图表
+        const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+        const performanceChart = new Chart(performanceCtx, {
+            type: 'line',
+            data: {
+                labels: ['1月', '2月', '3月', '4月'],
+                datasets: [
+                    {
+                        label: '网络延迟(ms)',
+                        data: [35, 33, 32, 30],
+                        borderColor: chartColors.info,
+                        backgroundColor: 'rgba(49, 130, 206, 0.15)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true,
+                        pointBackgroundColor: chartColors.info,
+                        pointRadius: 6,
+                        pointHoverRadius: 9,
+                        pointBorderWidth: 3,
+                        pointBorderColor: 'rgba(255, 255, 255, 0.8)'
+                    },
+                    {
+                        label: '带宽利用率(%)',
+                        data: [75, 78, 79, 78],
+                        borderColor: chartColors.success,
+                        backgroundColor: 'rgba(47, 133, 90, 0.15)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true,
+                        pointBackgroundColor: chartColors.success,
+                        pointRadius: 6,
+                        pointHoverRadius: 9,
+                        pointBorderWidth: 3,
+                        pointBorderColor: 'rgba(255, 255, 255, 0.8)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 1500,
+                    easing: 'easeOutQuart'
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { 
+                            boxWidth: 15, 
+                            font: { size: 14, weight: '500' }, 
+                            color: chartColors.dark 
+                        }
+                    },
+                    tooltip: { 
+                        mode: 'index', 
+                        intersect: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: chartColors.gridColor },
+                        ticks: { 
+                            padding: 10, 
+                            color: chartColors.dark,
+                            font: { size: 12 }
+                        }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { 
+                            padding: 10, 
+                            color: chartColors.dark,
+                            font: { size: 13, weight: '500' }
+                        }
+                    }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    axis: 'x',
+                    intersect: false
+                }
+            }
+        });
+
+        // 稳定性图表
+        const stabilityCtx = document.getElementById('stabilityChart').getContext('2d');
+        const stabilityChart = new Chart(stabilityCtx, {
+            type: 'bar',
+            data: {
+                labels: ['1月', '2月', '3月', '4月'],
+                datasets: [{
+                    label: '网络中断次数',
+                    data: [5, 4, 3, 3],
+                    backgroundColor: 'rgba(49, 130, 206, 0.85)',
+                    borderColor: chartColors.info,
+                    borderWidth: 2,
+                    borderRadius: 8,
+                    borderSkipped: false,
+                    barThickness: 'flex',
+                    maxBarThickness: 60
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 1500,
+                    easing: 'easeOutQuart'
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return '中断次数: ' + context.raw;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: chartColors.gridColor },
+                        ticks: { 
+                            padding: 10, 
+                            stepSize: 1, 
+                            color: chartColors.dark,
+                            font: { size: 12 }
+                        },
+                        title: {
+                            display: true,
+                            text: '中断次数',
+                            color: chartColors.dark,
+                            font: { size: 14, weight: '500' }
+                        }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { 
+                            padding: 10, 
+                            color: chartColors.dark,
+                            font: { size: 13, weight: '500' }
+                        }
+                    }
+                }
+            }
+        });
+
+        // 安全图表
+        const securityCtx = document.getElementById('securityChart').getContext('2d');
+        const securityChart = new Chart(securityCtx, {
+            type: 'radar',
+            data: {
+                labels: ['防火墙', '入侵检测', '漏洞修复', '访问控制', '日志审计'],
+                datasets: [{
+                    label: '安全指标评分',
+                    data: [95, 90, 88, 92, 85],
+                    backgroundColor: 'rgba(47, 133, 90, 0.2)',
+                    borderColor: chartColors.accent,
+                    borderWidth: 3,
+                    pointBackgroundColor: chartColors.accent,
+                    pointRadius: 6,
+                    pointHoverRadius: 9,
+                    pointBorderWidth: 3,
+                    pointBorderColor: '#fff',
+                    lineTension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart'
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { 
+                            boxWidth: 15, 
+                            font: { size: 14, weight: '500' }, 
+                            color: chartColors.dark 
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.raw + '/100';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: chartColors.gridColor },
+                        grid: { color: chartColors.gridColor },
+                        pointLabels: { 
+                            font: { size: 14, weight: '500' }, 
+                            color: chartColors.dark 
+                        },
+                        ticks: {
+                            backdropColor: 'transparent',
+                            stepSize: 20,
+                            color: chartColors.dark,
+                            font: { size: 11 }
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+
+        // 改进计划图表
+        const improvementCtx = document.getElementById('improvementChart').getContext('2d');
+        const improvementChart = new Chart(improvementCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Q2', 'Q3', 'Q4'],
+                datasets: [
+                    {
+                        label: '带宽扩容计划',
+                        data: [30, 50, 20],
+                        backgroundColor: 'rgba(49, 130, 206, 0.85)',
+                        borderColor: chartColors.info,
+                        borderWidth: 2,
+                        borderRadius: 8,
+                        borderSkipped: false
+                    },
+                    {
+                        label: '智能监控系统升级',
+                        data: [20, 40, 40],
+                        backgroundColor: 'rgba(47, 133, 90, 0.85)',
+                        borderColor: chartColors.success,
+                        borderWidth: 2,
+                        borderRadius: 8,
+                        borderSkipped: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart'
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { 
+                            boxWidth: 15, 
+                            font: { size: 14, weight: '500' }, 
+                            color: chartColors.dark 
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.raw + '%';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        stacked: true,
+                        grid: { color: chartColors.gridColor },
+                        ticks: { 
+                            padding: 10, 
+                            callback: function(value) { return value + '%' }, 
+                            color: chartColors.dark,
+                            font: { size: 12 }
+                        },
+                        title: {
+                            display: true,
+                            text: '完成百分比',
+                            font: { size: 14, weight: '500' },
+                            color: chartColors.dark
+                        }
+                    },
+                    x: {
+                        stacked: true,
+                        grid: { display: false },
+                        ticks: { 
+                            padding: 10, 
+                            color: chartColors.dark,
+                            font: { size: 13, weight: '500' }
+                        }
+                    }
+                }
+            }
+        });
+        
+        // 打印功能
+        document.querySelector('.footer-links a:nth-child(4)').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.print();
+        });
+    </script>
+</body>
+</html>
