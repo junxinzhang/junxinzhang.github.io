@@ -19,6 +19,11 @@ var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or p
     "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
     "title": "{{ page.title }}",
     "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+    }, {% endfor %}{% for page in site.data.html_pages %}{
+    "id": {{ counter }},
+    "url": "{{ site.url }}{{site.baseurl}}/_html_pages/{{ page.path }}",
+    "title": "{{ page.title }}",
+    "body": "{{ page.description }}"{% assign counter = counter | plus: 1 %}
     }, {% endfor %}{% for page in site.posts %}{
     "id": {{ counter }},
     "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
@@ -28,8 +33,9 @@ var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or p
 
 var idx = lunr(function () {
     this.ref('id')
-    this.field('title')
-    this.field('body')
+    this.field('title', { boost: 10 })
+    this.field('body', { boost: 5 })
+    this.field('description', { boost: 8 })
 
     documents.forEach(function (doc) {
         this.add(doc)
@@ -39,6 +45,8 @@ var idx = lunr(function () {
 
     
 function lunr_search(term) {
+    console.log("Search term:", term);
+    console.log("Documents index:", documents);
     $('#lunrsearchresults').show( 1000 );
     $( "body" ).addClass( "modal-open" );
     
@@ -46,7 +54,12 @@ function lunr_search(term) {
     if(term) {
         document.getElementById('modtit').innerHTML = "<h5 class='modal-title'>Search results for '" + term + "'</h5>" + document.getElementById('modtit').innerHTML;
         //put results on the screen.
-        var results = idx.search(term);
+        // Add wildcard support and split Chinese characters
+        var searchTerm = term + '*';
+        if (/[\u4e00-\u9fa5]/.test(term)) {
+            searchTerm = term.split('').join('* ') + '*';
+        }
+        var results = idx.search(searchTerm);
         if(results.length>0){
             //console.log(idx.search(term));
             //if results
