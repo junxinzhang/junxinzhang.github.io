@@ -11,6 +11,7 @@ description: "Just Jason"
 {% if page.url == "/" %}
 
 <!-- AI Solutions Section -->
+<!-- AI Solutions Section -->
 <div class="row mt-4 mb-5">
     <div class="col-12">
         <h2 class="font-weight-bold spanborder mb-4">
@@ -21,7 +22,8 @@ description: "Just Jason"
     <div class="col-12">
         <div class="card-deck-wrapper">
             <div class="card-deck">
-                {% for page in site.data.html_pages %}
+                {% assign sorted_pages = site.data.html_pages | sort: 'date' | reverse %}
+                {% for page in sorted_pages %}
                 <div class="card border-0 rounded shadow-sm hover-effect">
                     {% if page.image %}
                     <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" target="_blank">
@@ -356,4 +358,41 @@ description: "Just Jason"
         font-size: 1.5rem;
     }
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
 </style>
+<script>
+    $(document).ready(function(){
+        // Initialize the carousel with options
+        $('#featuredCarousel').carousel({
+            interval: 5000,  // Change slide every 5 seconds
+            wrap: true,      // Continuous loop
+            keyboard: true   // Allow keyboard navigation
+        });
+        
+        // Add manual control for the next and previous buttons
+        $('.carousel-control-prev').click(function(){
+            $('#featuredCarousel').carousel('prev');
+        });
+        
+        $('.carousel-control-next').click(function(){
+            $('#featuredCarousel').carousel('next');
+        });
+    });
+</script>
