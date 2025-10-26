@@ -5,6 +5,7 @@ author: Jason Zhang
 categories: [大语言模型, AI安全, 机器学习理论, LLM幻觉问题]
 image: assets/images/screenshot-20251026-llm-hallucination.png
 tags: [LLM幻觉, 大语言模型, 信息论, 神经网络, AI可靠性, 事实准确性]
+slug: why-language-models-hallucinate
 ---
 
 您是否曾经遇到过以下情况？
