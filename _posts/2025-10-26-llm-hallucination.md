@@ -3,7 +3,7 @@ layout: post
 title: "【语言模型深度研究】为什么大模型会产生幻觉？从信息论角度揭示生成式AI的根本矛盾"
 author: Jason Zhang
 categories: [大语言模型, AI安全, 机器学习理论, LLM幻觉问题]
-image: assets/images/screenshot-20251026-llm-hallucination.jpg
+image: assets/images/screenshot-20251026-llm-hallucination.png
 tags: [LLM幻觉, 大语言模型, 信息论, 神经网络, AI可靠性, 事实准确性]
 ---
 
