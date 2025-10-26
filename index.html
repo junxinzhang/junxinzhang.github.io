@@ -66,11 +66,11 @@ description: "Just Jason"
                     <div class="carousel-background" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 350px; background-size: cover; background-position: center;"></div>
                     <div class="carousel-caption text-left">
                         <h3 class="carousel-title">
-                            <a href="{{site.baseurl}}{{post.url}}" class="text-white">{{ post.title }}</a>
+                            <a href="{{site.baseurl}}{{post.url}}" class="text-white" onclick="window.location.href=this.href; return false;">{{ post.title }}</a>
                         </h3>
                         <p class="d-none d-md-block">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
                         <div class="carousel-date">{{ post.date | date: '%Y年%m月%d日' }}</div>
-                        <a href="{{site.baseurl}}{{post.url}}" class="btn btn-sm btn-primary mt-2">阅读全文</a>
+                        <a href="{{site.baseurl}}{{post.url}}" class="btn btn-sm btn-primary mt-2" onclick="window.location.href=this.href; return false;">阅读全文</a>
                     </div>
                 </div>
                 {% endfor %}
