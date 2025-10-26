@@ -7,9 +7,8 @@ description: "Just Jason"
 ---
 
 <div class="container">
-    
-{% if page.url == "/" %}
 
+{% if paginator.page == 1 %}
 <!-- AI Solutions Section -->
 <!-- AI Solutions Section -->
 <div class="row mt-4 mb-5">
@@ -18,7 +17,7 @@ description: "Just Jason"
             <span>AI 解决方案库</span>
         </h2>
     </div>
-    
+
     <div class="col-12">
         <div class="card-deck-wrapper">
             <div class="card-deck">
@@ -46,21 +45,21 @@ description: "Just Jason"
         </div>
     </div>
 </div>
-    
+
 <!-- Featured Posts Carousel Section -->
 <div class="row mb-5">
     <div class="col-12">
         <h2 class="font-weight-bold spanborder mb-4">
             <span>最新文章</span>
         </h2>
-        
+
         <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 {% for post in site.posts limit:5 %}
                 <li data-target="#featuredCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></li>
                 {% endfor %}
             </ol>
-            
+
             <div class="carousel-inner rounded shadow">
                 {% for post in site.posts limit:5 %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
@@ -76,7 +75,7 @@ description: "Just Jason"
                 </div>
                 {% endfor %}
             </div>
-            
+
             <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -96,7 +95,7 @@ description: "Just Jason"
             <span>热门文章</span>
         </h2>
     </div>
-    
+
     {% for post in site.posts offset:5 limit:6 %}
     <div class="col-md-4 mb-4">
         <div class="card h-100 border-0 rounded shadow-sm hover-effect">
@@ -116,6 +115,7 @@ description: "Just Jason"
     </div>
     {% endfor %}
 </div>
+{% endif %}
 
 <!-- All Posts Section -->
 <div class="row">
@@ -253,8 +253,6 @@ description: "Just Jason"
         </div>
     </div>
 </div>
-
-{% endif %} <!-- endif page url is / -->
 
 </div>
 
