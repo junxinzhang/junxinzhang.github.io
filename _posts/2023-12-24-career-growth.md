@@ -4,7 +4,7 @@ title: "理解人生目标与职场成长：专注效率，迈向财务自由"
 author: Jason Zhang
 categories: [Career]
 image: assets/images/screenshot-20231224-career-growth.png
-tags: [featured, career, efficiency, personal development]
+tags: [career, efficiency, personal development]
 ---
 
 在快节奏的现代生活中，理解和设定个人的生活与职场目标至关重要。本文将探讨如何通过追求效率、提升认知、职场成长策略、以及个人成长方法来实现这些目标。

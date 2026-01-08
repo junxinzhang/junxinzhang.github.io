@@ -4,7 +4,7 @@ title: "写作：最重要的元能力"
 author: Jason Zhang
 categories: [Career]
 image: assets/images/screenshot-20231225-writing-skills.png
-tags: [featured, writing, personal development, creativity]
+tags: [writing, personal development, creativity]
 ---
 
 写作，被广泛认为是人类最重要的元能力之一，不仅是沟通和表达自己的手段，更是一种深刻影响我们思考和认知方式的工具。本文将探讨写作中的阅历、深度思考能力、结构化思维的重要性，以及如何通过练习写作来促进个人成长。

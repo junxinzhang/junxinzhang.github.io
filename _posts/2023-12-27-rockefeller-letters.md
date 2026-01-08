@@ -4,7 +4,7 @@ title: "一生的财富：洛克菲勒写给儿子的38封信息"
 author: Jason Zhang
 categories: [Business]
 image: assets/images/screenshot-20231227-rockefeller-letters.jpg
-tags: [featured, leadership, wealth building]
+tags: [leadership, wealth building]
 ---
 
 《一生的财富：洛克菲勒写给儿子的38封信息》是一系列洛克菲勒向其儿子传授人生智慧和商业经验的信件。每封信都蕴含了深刻的生活和商业智慧，为读者提供了宝贵的指导。

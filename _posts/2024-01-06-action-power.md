@@ -4,7 +4,7 @@ title: "凡事预则立，不预则废：把握行动的力量"
 author: Jason Zhang
 categories: [Career]
 image: assets/images/screenshot-20240106-action-power.jpg
-tags: [featured, self-improvement, motivation, success]
+tags: [self-improvement, motivation, success]
 ---
 
 在这个充满挑战和机遇的世界中，我们每个人都有着无限的潜能和可能性。但是，这些潜能如果不通过实际行动来实现，就永远只是空想。这篇文章将探讨“凡事预则立，不预则废”的重要性，以及如何通过行动改变自己的生活。

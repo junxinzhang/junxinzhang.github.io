@@ -4,7 +4,7 @@ title: "关键的少数：不确定时代的核心圈法则"
 author: Jason Zhang
 categories: [Business]
 image: assets/images/screenshot-20231226-critical-few.png
-tags: [featured, business, corporate culture, leadership]
+tags: [business, corporate culture, leadership]
 ---
 
 《关键的少数：不确定时代的核心圈法则》是一本深入探讨企业文化与领导的书籍，旨在帮助读者理解并应对不确定时代的挑战。本文将探讨书中的核心概念，包括文化一致性、关键少数特征、行为、非正式领导，以及如何通过这些要素推动企业转型和个人成长。

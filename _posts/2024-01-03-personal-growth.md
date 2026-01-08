@@ -4,7 +4,7 @@ title: "年纪成熟，拼的是破圈与重塑的智慧"
 author: Jason Zhang
 categories: [Career]
 image: assets/images/screenshot-20240103-personal-growth.jpg
-tags: [featured, growth, self-improvement, career development]
+tags: [growth, self-improvement, career development]
 ---
 
 在这个充满竞争的时代，当我们达到一定的年纪，挑战和机遇并存。面对这种情况，我们的拼搏不再只是为了成绩的累积，而更多的是对于“破圈”与“重塑”能力的考验。这不仅是个人成长的标志，也是职业发展的关键。

@@ -4,7 +4,7 @@ title:  "深入解析软件著作权：企业转型升级的法律盾牌"
 author: [Jason Zhang]
 categories: [Technology]
 image: assets/images/screenshot-20231221-copyright-deep-dive.png
-tags: [featured, Software Development, Technology]
+tags: [Software Development, Technology]
 ---
 在数字化浪潮席卷的今天，软件著作权变得日益重要。它不仅是企业技术创新的法律保障，也是软件开发者权益的坚强盾牌。本文将深入探讨软件著作权的核心要素、申请流程、及其对企业转型升级的重要性。
 

@@ -4,7 +4,7 @@ title:  "一分钟阅读：《东方甄选风波：职场剧中的权力、认�
 author: Jason Zhang
 categories: [Business]
 image: assets/images/screenshot-20231217-eastern-selection.jpg
-tags: [featured, business, culture, eastern selection]
+tags: [business, culture, eastern selection]
 ---
 东方甄选近期的内部动态引起了广泛的关注。本文通过分析孙总、东方甄选小编、董宇辉和老俞在这场职场剧中的角色扮演，揭示了背后的权力动态、认可的斗争以及企业文化的变革。
 

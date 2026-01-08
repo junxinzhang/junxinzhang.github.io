@@ -4,7 +4,7 @@ title:  "一分钟阅读：《上海电信网络架构转变历程》"
 author: Jason Zhang
 categories: [Technology]
 image: assets/images/screenshot-20231218-shanghai-telecom-architecture-transformation.png
-tags: [featured]
+tags: []
 ---
 上海电信的网络架构经历了从传统电话网络到云宽带的显著演变。初期基于PSTN系统，后引入DSL技术，进一步发展到光纤网络（FTTH）。近期，上海电信推出云宽带，作为其智云网络战略的核心部分，旨在提供更快、更稳定的网络服务，并支持大型内网应用。此举标志着其向数字化和技术创新型企业的转型。
 

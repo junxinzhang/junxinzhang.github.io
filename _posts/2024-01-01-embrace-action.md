@@ -4,7 +4,7 @@ title: "拥抱行动，成就非凡：一步一脚印的力量"
 author: Jason Zhang
 categories: [Career]
 image: assets/images/screenshot-20240101-embrace-action.jpg
-tags: [featured, self-improvement, education, life journey]
+tags: [self-improvement, education, life journey]
 ---
 在现代社会，有一个普遍的现象：很多人喜欢谋划所谓的“大局”，他们经常会花费数月甚至数年时间去策划和思考，却迟迟不愿意迈出实际行动的第一步。这种犹豫和徘徊，往往让许多美好的机遇和可能性就此流逝。 但事实上，对于大部分情况而言，“大致正确的事情，快速拼全力做”往往是更为明智的选择。这不仅仅是对机遇的及时把握，更是一种行动力和执行力的体现。在这个过程中，我们可以通过深度思考、复盘迭代优化，不断提升自己的行动效率和质量，进而达到意想不到的效果。
 

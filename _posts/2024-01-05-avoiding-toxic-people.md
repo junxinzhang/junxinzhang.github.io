@@ -4,7 +4,7 @@ title: "如何远离消耗你的人：维护个人界限的艺术"
 author: Jason Zhang
 categories: [Career]
 image: assets/images/screenshot-20240105-avoiding-toxic-people.jpg
-tags: [featured, self-improvement, relationship, mental health]
+tags: [self-improvement, relationship, mental health]
 ---
 
 在这个纷繁复杂的社会中，我们每天都在与不同的人打交道。然而，并不是所有的人际关系都对我们有益。有些人会消耗我们的能量，影响我们的心情和生活质量。如何识别并远离这些消耗你的人呢？这篇文章将教你如何维护个人界限，保护自己免受消极影响。

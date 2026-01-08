@@ -4,7 +4,7 @@ title: "解读麦当劳涨价：社会学与管理学的视角"
 author: Jason Zhang
 categories: [Business]
 image: assets/images/screenshot-20231228-mcdonalds-deep-analysis-mindmap.png
-tags: [featured, sociology, management, consumer behavior]
+tags: [sociology, management, consumer behavior]
 ---
 
 最近，麦当劳在中国市场的价格调整触发了我的深入思考。作为一个日常消费者，我发现早餐套餐从9.6元上涨到了10.2元。这个微妙的变动不仅是商业决策的反映，更是社会文化动态和管理策略的缩影。本文旨在从社会学和管理学的角度分析麦当劳涨价的深层含义。

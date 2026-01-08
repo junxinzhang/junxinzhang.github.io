@@ -4,7 +4,7 @@ title:  "制造型企业管理系统（ERP）全面解析：核心模块与功�
 author: [Jason Zhang]
 categories: [Technology]
 image: assets/images/screenshot-20231220-erp.png
-tags: [featured, Technology]
+tags: [Technology]
 ---
 在现代的商业竞争格局中，充满挑战和复杂性，企业管理系统（ERP）扮演了至关重要的角色。它通过整合关键多功能模块，有效提升了企业的生产效率、客户满意度以及整体市场竞争力，成为一种全方位的解决策略。
 

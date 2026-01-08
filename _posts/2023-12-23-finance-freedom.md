@@ -4,7 +4,7 @@ title:  "搞懂财务自由：其实就是活得轻松！"
 author: Jason Zhang
 categories: [Career]
 image: assets/images/screenshot-20231223-finance-freedom.png
-tags: [featured, finance, lifestyle, wealth building]
+tags: [finance, lifestyle, wealth building]
 ---
 说起财务自由，听着好像挺高大上的，但其实它离咱们挺近的。别以为财务自由就是要成为亿万富翁，其实它更像是一种过日子的小技巧。简单点说，就是你挣的钱比花的多，能让你不用老为钱发愁，想干啥就干啥。
 
