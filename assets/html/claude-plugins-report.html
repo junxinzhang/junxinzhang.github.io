@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 官方插件全解析 - 24款工具助你成为10倍效率开发者</title>
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--card-bg);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            background: var(--primary-color);
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        section h2 .icon {
+            font-size: 2rem;
+        }
+
+        /* Plugin Cards Grid */
+        .plugin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .plugin-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .plugin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .plugin-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plugin-card .badge {
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .plugin-card .description {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .plugin-card .features {
+            margin-bottom: 15px;
+        }
+
+        .plugin-card .features li {
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .plugin-card .features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        .plugin-card .install-cmd {
+            background: #0d1117;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .plugin-card .command {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* LSP Table */
+        .lsp-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .lsp-table th,
+        .lsp-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .lsp-table th {
+            background: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .lsp-table tr:hover {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .lsp-table code {
+            background: #0d1117;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .complexity-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .complexity-easy {
+            background: var(--secondary-color);
+        }
+
+        .complexity-medium {
+            background: var(--warning-color);
+            color: #000;
+        }
+
+        .complexity-hard {
+            background: var(--danger-color);
+        }
+
+        /* Workflow Section */
+        .workflow-container {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .workflow-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .workflow-step {
+            background: var(--bg-color);
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 150px;
+            position: relative;
+        }
+
+        .workflow-step::after {
+            content: "→";
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .workflow-step:last-child::after {
+            display: none;
+        }
+
+        .workflow-step .number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .workflow-step .name {
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Selection Guide */
+        .selection-guide {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .guide-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .guide-card h4 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .guide-card ul {
+            list-style: none;
+        }
+
+        .guide-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        .guide-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid var(--warning-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .warning-box h4 {
+            color: var(--warning-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .warning-box ul {
+            margin-left: 20px;
+        }
+
+        .warning-box li {
+            margin-bottom: 8px;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: #0d1117;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-block .comment {
+            color: #6a737d;
+        }
+
+        .code-block .keyword {
+            color: #ff7b72;
+        }
+
+        .code-block .string {
+            color: #a5d6ff;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card-bg);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .stats-bar {
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .plugin-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-step::after {
+                display: none;
+            }
+
+            nav ul {
+                gap: 5px;
+            }
+
+            nav a {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Claude Code 官方插件全解析</h1>
+            <p>24款工具助你成为10倍效率开发者 - 从代码智能到工作流自动化的完整解决方案</p>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">官方插件</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">语言支持</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">效率提升</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5%</div>
+                    <div class="stat-label">误报率</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#lsp">LSP语言服务器</a></li>
+            <li><a href="#dev-tools">开发工具</a></li>
+            <li><a href="#output-style">输出风格</a></li>
+            <li><a href="#automation">工作流自动化</a></li>
+            <li><a href="#guide">选型指南</a></li>
+            <li><a href="#security">安全提示</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Installation -->
+        <section id="install">
+            <h2><span class="icon">📦</span> 快速安装</h2>
+            <div class="code-block">
+                <pre><span class="comment"># 命令行安装</span>
+<span class="keyword">/plugin</span> install {plugin-name}@claude-plugin-directory
+
+<span class="comment"># GUI安装</span>
+<span class="comment"># 导航至 /plugin > Discover 浏览和安装</span></pre>
+            </div>
+        </section>
+
+        <!-- LSP Section -->
+        <section id="lsp">
+            <h2><span class="icon">🔧</span> LSP 语言服务器插件 (12个)</h2>
+            <p style="margin-bottom: 25px; color: var(--text-muted);">为Claude Code提供专业级代码智能支持：Go-to-definition、Find references、Error checking、Code completion</p>
+
+            <table class="lsp-table">
+                <thead>
+                    <tr>
+                        <th>插件</th>
+                        <th>语言</th>
+                        <th>支持文件</th>
+                        <th>安装命令</th>
+                        <th>复杂度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>typescript-lsp</strong></td>
+                        <td>TypeScript/JavaScript</td>
+                        <td><code>.ts .tsx .js .jsx .mts .mjs</code></td>
+                        <td><code>npm i -g typescript-language-server typescript</code></td>
+                        <td><span class="complexity-badge complexity-easy">简单</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>pyright-lsp</strong></td>
+                        <td>Python</td>
+                        <td><code>.py .pyi</code></td>
+                        <td><code>pipx install pyright</code></td>
+                        <td><span class="complexity-badge complexity-easy">简单</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>rust-analyzer-lsp</strong></td>
+                        <td>Rust</td>
+                        <td><code>.rs</code></td>
+                        <td><code>rustup component add rust-analyzer</code></td>
+                        <td><span class="complexity-badge complexity-medium">中等</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>gopls-lsp</strong></td>
+                        <td>Go</td>
+                        <td><code>.go</code></td>
+                        <td><code>go install golang.org/x/tools/gopls@latest</code></td>
+                        <td><span class="complexity-badge complexity-easy">简单</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>clangd-lsp</strong></td>
+                        <td>C/C++</td>
+                        <td><code>.c .cpp .h .hpp</code></td>
+                        <td><code>brew install llvm</code> / <code>apt install clangd</code></td>
+                        <td><span class="complexity-badge complexity-medium">中等</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>jdtls-lsp</strong></td>
+                        <td>Java</td>
+                        <td><code>.java</code></td>
+                        <td><code>brew install jdtls</code></td>
+                        <td><span class="complexity-badge complexity-hard">复杂</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>kotlin-lsp</strong></td>
+                        <td>Kotlin</td>
+                        <td><code>.kt .kts</code></td>
+                        <td><code>brew install JetBrains/utils/kotlin-lsp</code></td>
+                        <td><span class="complexity-badge complexity-medium">中等</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>csharp-lsp</strong></td>
+                        <td>C#</td>
+                        <td><code>.cs</code></td>
+                        <td><code>dotnet tool install --global csharp-ls</code></td>
+                        <td><span class="complexity-badge complexity-medium">中等</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>swift-lsp</strong></td>
+                        <td>Swift</td>
+                        <td><code>.swift</code></td>
+                        <td>Xcode自带 / <code>brew install swift</code></td>
+                        <td><span class="complexity-badge complexity-medium">中等</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>lua-lsp</strong></td>
+                        <td>Lua</td>
+                        <td><code>.lua</code></td>
+                        <td><code>brew install lua-language-server</code></td>
+                        <td><span class="complexity-badge complexity-easy">简单</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>php-lsp</strong></td>
+                        <td>PHP</td>
+                        <td><code>.php</code></td>
+                        <td><code>npm install -g intelephense</code></td>
+                        <td><span class="complexity-badge complexity-easy">简单</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Dev Tools Section -->
+        <section id="dev-tools">
+            <h2><span class="icon">🛠️</span> 开发工具插件 (7个)</h2>
+
+            <div class="plugin-grid">
+                <!-- Code Review -->
+                <div class="plugin-card">
+                    <h3>code-review <span class="badge">代码审查</span></h3>
+                    <p class="description">自动化代码审查工具，使用4个并行代理进行置信度评分，过滤误报</p>
+                    <ul class="features">
+                        <li>2个CLAUDE.md合规代理</li>
+                        <li>1个Bug检测器</li>
+                        <li>1个历史分析器</li>
+                        <li>置信度≥80才展示</li>
+                        <li>自动跳过Draft/已关闭PR</li>
+                    </ul>
+                    <div class="install-cmd">
+                        <span class="command">/code-review</span>
+                    </div>
+                </div>
+
+                <!-- Feature Dev -->
+                <div class="plugin-card">
+                    <h3>feature-dev <span class="badge">功能开发</span></h3>
+                    <p class="description">结构化功能开发工具，7阶段工作流确保高质量交付</p>
+                    <ul class="features">
+                        <li>Discovery → 明确需求</li>
+                        <li>Codebase Exploration → 代码分析</li>
+                        <li>Architecture Design → 2-3方案</li>
+                        <li>Implementation → 批准后编码</li>
+                        <li>Quality Review → 并行审查</li>
+                    </ul>
+                    <div class="install-cmd">
+                        <span class="command">/feature-dev</span> [描述]
+                    </div>
+                </div>
+
+                <!-- Commit Commands -->
+                <div class="plugin-card">
+                    <h3>commit-commands <span class="badge">Git工作流</span></h3>
+                    <p class="description">Git工作流自动化，一键提交、推送和创建PR</p>
+                    <ul class="features">
+                        <li>/commit - 智能提交消息</li>
+                        <li>/commit-push-pr - 完整PR流程</li>
+                        <li>/clean_gone - 清理过期分支</li>
+                        <li>自动匹配仓库风格</li>
+                        <li>GitHub CLI集成</li>
+                    </ul>
+                    <div class="install-cmd">
+                        <span class="command">/commit</span> | <span class="command">/commit-push-pr</span>
+                    </div>
+                </div>
+
+                <!-- PR Review Toolkit -->
+                <div class="plugin-card">
+                    <h3>pr-review-toolkit <span class="badge">PR审查</span></h3>
+                    <p class="description">6个专业代理的PR审查工具包，全方位代码质量检查</p>
+                    <ul class="features">
+                        <li>comment-analyzer - 注释准确性</li>
+                        <li>pr-test-analyzer - 测试覆盖率</li>
+                        <li>silent-failure-hunter - 错误处理</li>
+                        <li>type-design-analyzer - 类型设计</li>
+                        <li>code-simplifier - 代码简化</li>
+                    </ul>
+                    <div class="install-cmd">
+                        自动触发或明确请求
+                    </div>
+                </div>
+
+                <!-- Agent SDK Dev -->
+                <div class="plugin-card">
+                    <h3>agent-sdk-dev <span class="badge">SDK开发</span></h3>
+                    <p class="description">Claude Agent SDK应用开发工具，支持Python和TypeScript</p>
+                    <ul class="features">
+                        <li>交互式项目创建</li>
+                        <li>自动SDK安装验证</li>
+                        <li>类型安全检查（TS）</li>
+                        <li>环境配置模板</li>
+                        <li>最佳实践验证</li>
+                    </ul>
+                    <div class="install-cmd">
+                        <span class="command">/new-sdk-app</span> [项目名]
+                    </div>
+                </div>
+
+                <!-- Plugin Dev -->
+                <div class="plugin-card">
+                    <h3>plugin-dev <span class="badge">插件开发</span></h3>
+                    <p class="description">插件开发工具包，7个核心技能+8阶段创建流程</p>
+                    <ul class="features">
+                        <li>Hook Development</li>
+                        <li>MCP Integration</li>
+                        <li>Command Development</li>
+                        <li>Agent Development</li>
+                        <li>~11,000字文档+12+示例</li>
+                    </ul>
+                    <div class="install-cmd">
+                        <span class="command">/plugin-dev:create-plugin</span> [描述]
+                    </div>
+                </div>
+
+                <!-- Frontend Design -->
+                <div class="plugin-card">
+                    <h3>frontend-design <span class="badge">前端设计</span></h3>
+                    <p class="description">生成独特、生产级前端界面，避免AI通用美学</p>
+                    <ul class="features">
+                        <li>大胆的美学选择</li>
+                        <li>独特字体和配色</li>
+                        <li>高影响力动画</li>
+                        <li>生产级代码输出</li>
+                        <li>自动激活无需命令</li>
+                    </ul>
+                    <div class="install-cmd">
+                        描述需求即可自动使用
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Output Style Section -->
+        <section id="output-style">
+            <h2><span class="icon">📝</span> 输出风格插件 (2个)</h2>
+
+            <div class="plugin-grid">
+                <div class="plugin-card">
+                    <h3>explanatory-output-style <span class="badge">解释性</span></h3>
+                    <p class="description">每次响应添加教育性见解，帮助理解实现选择</p>
+                    <ul class="features">
+                        <li>SessionStart hook自动注入</li>
+                        <li>代码库特定模式解释</li>
+                        <li>权衡和设计决策说明</li>
+                        <li>★ Insight 格式化输出</li>
+                    </ul>
+                    <div class="install-cmd">
+                        自动激活 | ⚠️ 额外token成本
+                    </div>
+                </div>
+
+                <div class="plugin-card">
+                    <h3>learning-output-style <span class="badge">交互学习</span></h3>
+                    <p class="description">交互式学习模式，在决策点请求你编写代码</p>
+                    <ul class="features">
+                        <li>请求5-10行有意义代码</li>
+                        <li>业务逻辑选择</li>
+                        <li>算法实现决策</li>
+                        <li>跳过样板代码</li>
+                        <li>Learning by doing</li>
+                    </ul>
+                    <div class="install-cmd">
+                        自动激活 | ⚠️ 额外token成本
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Automation Section -->
+        <section id="automation">
+            <h2><span class="icon">⚡</span> 工作流自动化插件 (2个)</h2>
+
+            <div class="plugin-grid">
+                <div class="plugin-card">
+                    <h3>hookify <span class="badge">规则创建</span></h3>
+                    <p class="description">可视化创建Hook规则，无需编辑复杂的hooks.json</p>
+                    <ul class="features">
+                        <li>/hookify [描述] - 创建规则</li>
+                        <li>/hookify:list - 列出规则</li>
+                        <li>/hookify:configure - 管理规则</li>
+                        <li>支持warn/block动作</li>
+                        <li>正则模式匹配</li>
+                    </ul>
+                    <div class="install-cmd">
+                        <span class="command">/hookify</span> 警告rm -rf命令
+                    </div>
+                </div>
+
+                <div class="plugin-card">
+                    <h3>ralph-loop <span class="badge">迭代循环</span></h3>
+                    <p class="description">自引用反馈循环，实现持续迭代开发直到完成</p>
+                    <ul class="features">
+                        <li>Stop hook阻止退出</li>
+                        <li>同一提示持续反馈</li>
+                        <li>查看之前工作成果</li>
+                        <li>自动重复直到完成</li>
+                        <li>$50k合同→$297成本</li>
+                    </ul>
+                    <div class="install-cmd">
+                        <span class="command">/ralph-loop</span> "任务" --max-iterations 50
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ralph Loop Workflow -->
+            <div class="workflow-container" style="margin-top: 30px;">
+                <h4 style="margin-bottom: 20px;">Ralph Loop 工作原理</h4>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="number">1</div>
+                        <div class="name">Claude工作</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="number">2</div>
+                        <div class="name">尝试退出</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="number">3</div>
+                        <div class="name">Hook阻止</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="number">4</div>
+                        <div class="name">提示反馈</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="number">5</div>
+                        <div class="name">看到成果</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="number">6</div>
+                        <div class="name">重复/完成</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selection Guide -->
+        <section id="guide">
+            <h2><span class="icon">📋</span> 选型指南</h2>
+
+            <div class="selection-guide">
+                <div class="guide-card">
+                    <h4>🔰 必装插件</h4>
+                    <ul>
+                        <li>对应语言的LSP插件</li>
+                        <li>commit-commands</li>
+                    </ul>
+                </div>
+
+                <div class="guide-card">
+                    <h4>⭐ 推荐插件</h4>
+                    <ul>
+                        <li>code-review</li>
+                        <li>feature-dev</li>
+                    </ul>
+                </div>
+
+                <div class="guide-card">
+                    <h4>🚀 进阶插件</h4>
+                    <ul>
+                        <li>hookify</li>
+                        <li>ralph-loop</li>
+                        <li>pr-review-toolkit</li>
+                    </ul>
+                </div>
+
+                <div class="guide-card">
+                    <h4>👨‍💻 全栈开发者</h4>
+                    <ul>
+                        <li>typescript-lsp</li>
+                        <li>pyright-lsp</li>
+                        <li>feature-dev</li>
+                        <li>commit-commands</li>
+                    </ul>
+                </div>
+
+                <div class="guide-card">
+                    <h4>🎨 前端开发者</h4>
+                    <ul>
+                        <li>typescript-lsp</li>
+                        <li>frontend-design</li>
+                        <li>code-review</li>
+                    </ul>
+                </div>
+
+                <div class="guide-card">
+                    <h4>⚙️ 后端开发者</h4>
+                    <ul>
+                        <li>gopls/rust-analyzer-lsp</li>
+                        <li>feature-dev</li>
+                        <li>pr-review-toolkit</li>
+                    </ul>
+                </div>
+
+                <div class="guide-card">
+                    <h4>🤖 AI/ML工程师</h4>
+                    <ul>
+                        <li>pyright-lsp</li>
+                        <li>agent-sdk-dev</li>
+                        <li>ralph-loop</li>
+                    </ul>
+                </div>
+
+                <div class="guide-card">
+                    <h4>🔧 DevOps工程师</h4>
+                    <ul>
+                        <li>hookify</li>
+                        <li>commit-commands</li>
+                        <li>security-guidance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section id="security">
+            <h2><span class="icon">🔐</span> 安全提示</h2>
+
+            <div class="warning-box">
+                <h4>⚠️ 重要安全提醒</h4>
+                <ul>
+                    <li><strong>验证信任</strong> - 安装前验证你信任该插件</li>
+                    <li><strong>MCP服务器</strong> - Anthropic不控制插件包含的MCP服务器、文件或软件</li>
+                    <li><strong>敏感文件</strong> - 使用hookify阻止敏感文件操作</li>
+                    <li><strong>API密钥</strong> - 永远不要在插件配置中硬编码密钥</li>
+                </ul>
+            </div>
+
+            <div class="code-block">
+                <pre><span class="comment"># 推荐的hookify安全规则</span>
+---
+name: warn-sensitive-files
+enabled: true
+event: file
+conditions:
+  - field: file_path
+    operator: regex_match
+    pattern: <span class="string">\.env$|credentials|secrets</span>
+action: warn
+---
+
+<span class="string">🔐 **检测到敏感文件编辑！**</span>
+确保凭证未硬编码且文件在.gitignore中。</pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Claude Code 官方插件仓库: <a href="https://github.com/anthropics/claude-plugins-official" target="_blank">github.com/anthropics/claude-plugins-official</a></p>
+            <p>报告生成时间: 2026年1月8日 | 作者: Jason Zhang</p>
+            <p style="margin-top: 20px;">
+                📧 jason2023zhang@gmail.com |
+                💬 微信: winnielove2020 |
+                🌐 <a href="https://junxinzhang.github.io">junxinzhang.github.io</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

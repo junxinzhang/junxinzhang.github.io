@@ -5,3 +5,5 @@ node_modules
 Gemfile.lock
 /.idea/
 .DS_Store
+.claude/
+article-image-processor-skill/
