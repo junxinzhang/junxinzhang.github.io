@@ -2,7 +2,7 @@
 layout: post
 title:  "深入解析软件著作权：企业转型升级的法律盾牌"
 author: [Jason Zhang]
-categories: [Business, Technology, Legal]
+categories: [Technology]
 image: assets/images/screenshot-20231221-copyright-deep-dive.png
 tags: [featured, Software Development, Technology]
 ---

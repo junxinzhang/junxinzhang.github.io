@@ -2,7 +2,7 @@
 layout: post
 title:  "财富积累的艺术：赚小钱到赚超大的钱"
 author: Jason Zhang
-categories: [Finance, Wealth Management]
+categories: [Career]
 image: assets/images/screenshot-20231219-wealth-accumulation.jpg
 tags: [featured, finance, wealth building]
 ---

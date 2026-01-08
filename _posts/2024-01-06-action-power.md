@@ -2,7 +2,7 @@
 layout: post
 title: "凡事预则立，不预则废：把握行动的力量"
 author: Jason Zhang
-categories: [Personal Development, Motivation]
+categories: [Career]
 image: assets/images/screenshot-20240106-action-power.jpg
 tags: [featured, self-improvement, motivation, success]
 ---

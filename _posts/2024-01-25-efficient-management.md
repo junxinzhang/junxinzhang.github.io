@@ -2,7 +2,7 @@
 layout: post
 title: "如何在快节奏环境中高效管理紧急项目任务的策略"
 author: Jason Zhang
-categories: [Project Management, Efficiency]
+categories: [Business]
 image: assets/images/screenshot-20240125-efficient-management.jpg
 tags: [Emergency Handling, Task Management, Communication, Strategy, Teamwork]
 ---

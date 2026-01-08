@@ -2,7 +2,7 @@
 layout: post
 title: "一个人两个月开发计量轮换管理系统"
 author: Jason Zhang
-categories: [项目实战, 系统开发, 电力行业, 数字化改造]
+categories: [Technology]
 image: assets/images/screenshot-20250724-meterinfoapp.jpg
 tags: [计量轮换, 管理系统, React Native, Spring Boot, MongoDB, 离线作业]
 ---

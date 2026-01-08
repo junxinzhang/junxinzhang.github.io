@@ -2,7 +2,7 @@
 layout: post
 title: "长期主义者的智慧：如何平衡利用资源而不浪费"
 author: Jason Zhang
-categories: [Personal Development, Resource Management]
+categories: [Career]
 image: assets/images/screenshot-20240107-balance-resources.jpg
 tags: [featured, self-improvement, sustainability, success]
 ---

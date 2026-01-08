@@ -2,7 +2,7 @@
 layout: post  
 title: "从小镇做题家到出题家的转变：一段深刻的人生感悟"  
 author: Jason Zhang
-categories: [Personal Development, Education]  
+categories: [Career]
 image: assets/images/screenshot-20231229-town-to-questioner.jpg  
 tags: [inspiration, self-improvement, education, life journey]
 ---

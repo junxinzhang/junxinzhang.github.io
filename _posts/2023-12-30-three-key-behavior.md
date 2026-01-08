@@ -2,7 +2,7 @@
 layout: post  
 title: "改变人生的三个关键行为特点"  
 author: Jason Zhang
-categories: [Personal Development, Education]  
+categories: [Career]
 image: assets/images/screenshot-2023-12-30-three-key-behavior.jpg  
 tags: [inspiration, self-improvement, education, life journey]
 ---

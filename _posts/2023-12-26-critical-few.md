@@ -2,7 +2,7 @@
 layout: post
 title: "关键的少数：不确定时代的核心圈法则"
 author: Jason Zhang
-categories: [Business, Culture]
+categories: [Business]
 image: assets/images/screenshot-20231226-critical-few.png
 tags: [featured, business, corporate culture, leadership]
 ---

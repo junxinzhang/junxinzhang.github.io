@@ -2,7 +2,7 @@
 layout: post
 title: "英伟达突破5万亿美元市值：从芯片制造商到算力基础设施之王的蜕变"
 author: Jason Zhang
-categories: [AI产业分析, 硬件生态, 市场观察, 技术战略]
+categories: [AI]
 image: assets/images/screenshot-20251030-nvidia-5-trillion-milestone.png
 tags: [英伟达, GPU, 生成式AI, 芯片, 市场分析, Blackwell, CUDA]
 slug: nvidia-5-trillion-milestone

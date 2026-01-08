@@ -2,7 +2,7 @@
 layout: post  
 title: "职场汇报的艺术：如何高效地向上级和同事汇报项目进展"  
 author: Jason Zhang
-categories: [Business, Communication]  
+categories: [Business]
 image: assets/images/screenshot-20240122-effective-reporting.jpg  
 tags: [Business Communication, Project Management, Email Reporting]
 ---

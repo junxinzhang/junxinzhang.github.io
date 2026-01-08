@@ -2,7 +2,7 @@
 layout: post
 title: "AWS DevOps CodePipeline体系建设：构建高效、自动化的部署流程"
 author: Jason Zhang
-categories: [DevOps, Cloud Computing, AWS]
+categories: [DevOps]
 image: assets/images/screenshot-20240128-devops-aws-codepipeline-banner.jpg
 tags: [AWS, CodePipeline, CodeBuild, CodeDeploy, CI/CD, Automation, DevOps]
 ---

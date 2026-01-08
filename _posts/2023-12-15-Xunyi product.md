@@ -2,7 +2,7 @@
 layout: post
 title:  "🚀 寻绎科技：引领智慧营销的未来 🌟"
 author: Jason Zhang
-categories: [product, innovation, marketing]
+categories: [Business]
 image: assets/images/screenshot-20231215-xunyi-products.jpg
 tags: [featured]
 ---

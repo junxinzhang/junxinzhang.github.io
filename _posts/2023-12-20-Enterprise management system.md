@@ -2,7 +2,7 @@
 layout: post
 title:  "制造型企业管理系统（ERP）全面解析：核心模块与功能"
 author: [Jason Zhang]
-categories: [Business, Technology]
+categories: [Technology]
 image: assets/images/screenshot-20231220-erp.png
 tags: [featured, Technology]
 ---

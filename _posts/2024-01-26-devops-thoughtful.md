@@ -2,7 +2,7 @@
 layout: post  
 title: "DevOps实践中的深思熟虑：利用Jenkins和AWS CodeDeploy的策略性应用"  
 author: Jason Zhang  
-categories: [DevOps, AWS, Jenkins, CodeDeploy, Strategic Thinking]  
+categories: [DevOps]
 image: assets/images/screenshot-20240126-devops-thoughtful.jpg  
 tags: [DevOps, Strategic Thinking, Jenkins, AWS CodeDeploy, Project Management]
 ---

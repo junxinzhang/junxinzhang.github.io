@@ -2,7 +2,7 @@
 layout: post
 title: "如何打破平庸，实现卓越：8条职场与人生的实用心得"
 author: Jason Zhang
-categories: [Career Development, Personal Growth, Success Strategies, Life Lessons]
+categories: [Career]
 image: assets/images/screenshot-20240229-success-path.jpg
 tags: [Career, Personal Growth, Success, Life Tips, Motivation]
 ---

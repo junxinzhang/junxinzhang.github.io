@@ -2,7 +2,7 @@
 layout: post
 title: "实现 GitLab 与 AWS CodeCommit 的流畅集成"
 author: Jason Zhang
-categories: [DevOps, Cloud Computing, Version Control]
+categories: [DevOps]
 image: assets/images/screenshot-20240130-gitlab-codecommit-integration.jpg
 tags: [GitLab, AWS, CodeCommit, CI/CD, Repository Mirroring, Version Control, Automation]
 ---

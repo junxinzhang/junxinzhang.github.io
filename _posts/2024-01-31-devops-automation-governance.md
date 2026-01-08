@@ -2,7 +2,7 @@
 layout: post  
 title: "探索DevOps之旅：自动化运维、治理与运营的协调融合"  
 author: Jason Zhang
-categories: [DevOps, Automation, Governance, Operations]  
+categories: [DevOps]
 image: assets/images/screenshot-20240131-devops-automation-governance.jpg  
 tags: [DevOps, Automation, CI/CD, Policy as Code, Resilience, Chaos Engineering, Monitoring, Logging]
 ---

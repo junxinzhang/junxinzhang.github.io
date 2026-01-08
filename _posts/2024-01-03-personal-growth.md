@@ -2,7 +2,7 @@
 layout: post
 title: "年纪成熟，拼的是破圈与重塑的智慧"
 author: Jason Zhang
-categories: [Personal Development, Career Growth]
+categories: [Career]
 image: assets/images/screenshot-20240103-personal-growth.jpg
 tags: [featured, growth, self-improvement, career development]
 ---

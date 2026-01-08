@@ -2,7 +2,7 @@
 layout: post
 title: "理解人生目标与职场成长：专注效率，迈向财务自由"
 author: Jason Zhang
-categories: [Career Development, Personal Growth]
+categories: [Career]
 image: assets/images/screenshot-20231224-career-growth.png
 tags: [featured, career, efficiency, personal development]
 ---

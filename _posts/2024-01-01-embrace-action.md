@@ -2,7 +2,7 @@
 layout: post
 title: "拥抱行动，成就非凡：一步一脚印的力量"
 author: Jason Zhang
-categories: [Personal Development, Education]
+categories: [Career]
 image: assets/images/screenshot-20240101-embrace-action.jpg
 tags: [featured, self-improvement, education, life journey]
 ---

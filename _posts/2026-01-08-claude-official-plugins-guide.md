@@ -2,7 +2,7 @@
 layout: post
 title: "Claude Code 官方插件全解析：24款工具助你成为10倍效率开发者"
 author: Jason Zhang
-categories: [AI技术分析, 开发工具, 技术指南]
+categories: [AI]
 image: assets/images/screenshot-20260108-claude-plugins.png
 tags: [Claude Code, 插件, 开发工具, LSP, 代码审查, AI编程]
 slug: claude-official-plugins-guide

@@ -2,7 +2,7 @@
 layout: post
 title:  "Google的机器学习工具：Bard、Gemini 和 Vertex AI 的区别"
 author: Jason Zhang
-categories: [AI, Machine Learning]
+categories: [AI]
 image: assets/images/screenshot-20231216-ai-google.jpg
 tags: [featured, google, AI, machine learning]
 ---

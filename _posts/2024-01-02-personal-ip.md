@@ -2,7 +2,7 @@
 layout: post
 title: "个人IP发展之路：权衡未来与现实的抉择"
 author: Jason Zhang
-categories: [Personal Branding, Career Development]
+categories: [Career]
 image: assets/images/screenshot-20240102-personal-ip.jpg
 tags: [featured, branding, decision-making, career growth]
 ---

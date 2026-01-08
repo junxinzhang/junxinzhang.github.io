@@ -2,7 +2,7 @@
 layout: post
 title: "为客户提供有效的解决方案蓝图：一种全面的方法"
 author: Jason Zhang
-categories: [Business, Strategy]
+categories: [Business]
 image: assets/images/screenshot-20240121-solution-blueprint.jpg
 tags: [Solution, Business Strategy, Client Management]
 ---

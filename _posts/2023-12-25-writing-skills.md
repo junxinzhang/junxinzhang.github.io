@@ -2,7 +2,7 @@
 layout: post
 title: "写作：最重要的元能力"
 author: Jason Zhang
-categories: [Personal Development, Skills]
+categories: [Career]
 image: assets/images/screenshot-20231225-writing-skills.png
 tags: [featured, writing, personal development, creativity]
 ---

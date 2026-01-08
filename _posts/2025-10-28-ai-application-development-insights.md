@@ -2,7 +2,7 @@
 layout: post
 title: "2025年企业级AI应用的5大洞察：从模型竞争到应用价值的转变"
 author: Jason Zhang
-categories: [AI应用开发, 企业AI, 生成式AI, DevOps, 技术实践]
+categories: [AI]
 image: assets/images/ai-application-development-insights.png
 tags: [Claude Sonnet, Claude, AI Agent, 生成式AI, Serverless, 企业应用, DeepSeek]
 slug: ai-application-development-insights

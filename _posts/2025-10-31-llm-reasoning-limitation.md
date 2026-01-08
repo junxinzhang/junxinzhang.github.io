@@ -2,7 +2,7 @@
 layout: post
 title: "一道小学三年级数学题，揭开了大模型'智能'的遮羞布"
 author: Jason Zhang
-categories: [AI技术分析, 深度洞察, 技术批判]
+categories: [AI]
 image: assets/images/screenshot-20251031-llm-reasoning-limitation.png
 tags: [大模型, 逻辑推理, AI局限性, GPT-5, Claude, Gemini, 技术分析]
 slug: llm-reasoning-limitation

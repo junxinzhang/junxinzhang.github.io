@@ -2,7 +2,7 @@
 layout: post
 title: "外企生存指南：平衡领导预期与维护良好人际关系"
 author: Jason Zhang
-categories: [Career, Leadership, Communication, Corporate Culture]
+categories: [Career]
 image: assets/images/screenshot-20240201-leadership-communication.jpg
 tags: [Career Development, Leadership, Interpersonal Skills, Conflict Resolution, Communication, Corporate Culture]
 ---

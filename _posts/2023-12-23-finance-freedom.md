@@ -2,7 +2,7 @@
 layout: post
 title:  "搞懂财务自由：其实就是活得轻松！"
 author: Jason Zhang
-categories: [Finance, Wealth Management]
+categories: [Career]
 image: assets/images/screenshot-20231223-finance-freedom.png
 tags: [featured, finance, lifestyle, wealth building]
 ---

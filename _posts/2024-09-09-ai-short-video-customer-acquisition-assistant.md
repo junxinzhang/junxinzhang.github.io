@@ -2,7 +2,7 @@
 layout: post
 title: "地方债务危机 -> 危机应对 -> 经济发展｜“砸锅卖铁”：地方政府的债务应急策略解析"
 author: Jason Zhang
-categories: [Economic Crisis, Government Policy, Debt Solutions, Financial Analysis]
+categories: [Business]
 image: assets/images/screenshot-20240916-debt-crisis-response.jpg
 tags: [Debt Crisis, Government Finance, Economic Policy, Local Government, Debt Management]
 ---

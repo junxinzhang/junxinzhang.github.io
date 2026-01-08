@@ -2,7 +2,7 @@
 layout: post
 title: "解读麦当劳涨价：社会学与管理学的视角"
 author: Jason Zhang
-categories: [Business, Sociology]
+categories: [Business]
 image: assets/images/screenshot-20231228-mcdonalds-deep-analysis-mindmap.png
 tags: [featured, sociology, management, consumer behavior]
 ---

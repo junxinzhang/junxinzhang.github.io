@@ -2,7 +2,7 @@
 layout: post
 title: "如何做好一次DevOps的汇报"
 author: Jason Zhang
-categories: [DevOps, Software Development, IT Operations, Technology]
+categories: [DevOps]
 image: assets/images/screenshot-20240229-devops-report.jpg
 tags: [DevOps, Continuous Integration, Continuous Delivery, Software Quality, Agile Methodology]
 ---

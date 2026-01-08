@@ -2,7 +2,7 @@
 layout: post
 title:  "一分钟阅读：《东方甄选风波：职场剧中的权力、认可与变革》"
 author: Jason Zhang
-categories: [Business, Culture]
+categories: [Business]
 image: assets/images/screenshot-20231217-eastern-selection.jpg
 tags: [featured, business, culture, eastern selection]
 ---
