@@ -9,9 +9,50 @@ description: "Just Jason"
 <div class="container">
 
 {% if paginator.page == 1 %}
-<!-- AI Solutions Section -->
-<!-- AI Solutions Section -->
+<!-- Featured Posts Carousel Section -->
 <div class="row mt-4 mb-5">
+    <div class="col-12">
+        <h2 class="font-weight-bold spanborder mb-4">
+            <span>最新文章</span>
+        </h2>
+
+        <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                {% for post in site.posts limit:5 %}
+                <li data-target="#featuredCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></li>
+                {% endfor %}
+            </ol>
+
+            <div class="carousel-inner rounded shadow">
+                {% for post in site.posts limit:5 %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="carousel-background" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 350px; background-size: cover; background-position: center;"></div>
+                    <div class="carousel-caption text-left">
+                        <h3 class="carousel-title">
+                            <a href="{{site.baseurl}}{{post.url}}" class="text-white">{{ post.title }}</a>
+                        </h3>
+                        <p class="d-none d-md-block">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+                        <div class="carousel-date">{{ post.date | date: '%Y年%m月%d日' }}</div>
+                        <a href="{{site.baseurl}}{{post.url}}" class="btn btn-sm btn-primary mt-2">阅读全文</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- AI Solutions Section -->
+<div class="row mb-5">
     <div class="col-12">
         <h2 class="font-weight-bold spanborder mb-4">
             <span>AI 解决方案库</span>
@@ -42,48 +83,6 @@ description: "Just Jason"
                 </div>
                 {% endfor %}
             </div>
-        </div>
-    </div>
-</div>
-
-<!-- Featured Posts Carousel Section -->
-<div class="row mb-5">
-    <div class="col-12">
-        <h2 class="font-weight-bold spanborder mb-4">
-            <span>最新文章</span>
-        </h2>
-
-        <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                {% for post in site.posts limit:5 %}
-                <li data-target="#featuredCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></li>
-                {% endfor %}
-            </ol>
-
-            <div class="carousel-inner rounded shadow">
-                {% for post in site.posts limit:5 %}
-                <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <div class="carousel-background" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 350px; background-size: cover; background-position: center;"></div>
-                    <div class="carousel-caption text-left">
-                        <h3 class="carousel-title">
-                            <a href="{{site.baseurl}}{{post.url}}" class="text-white" onclick="window.location.href=this.href; return false;">{{ post.title }}</a>
-                        </h3>
-                        <p class="d-none d-md-block">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
-                        <div class="carousel-date">{{ post.date | date: '%Y年%m月%d日' }}</div>
-                        <a href="{{site.baseurl}}{{post.url}}" class="btn btn-sm btn-primary mt-2" onclick="window.location.href=this.href; return false;">阅读全文</a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-
-            <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </div>
 </div>
@@ -315,6 +314,11 @@ description: "Just Jason"
     padding: 20px 30px;
     background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
     text-align: left;
+    z-index: 15;
+}
+.carousel-caption a {
+    position: relative;
+    z-index: 16;
 }
 .carousel-title {
     font-weight: bold;
@@ -361,6 +365,7 @@ description: "Just Jason"
 .carousel-control-next {
     width: 10%;
     opacity: 0.8;
+    pointer-events: none;
 }
 
 .carousel-control-prev-icon,
@@ -368,6 +373,8 @@ description: "Just Jason"
     background-color: rgba(0,0,0,0.3);
     padding: 15px;
     border-radius: 50%;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .carousel-control-prev:hover,
