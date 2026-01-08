@@ -1,0 +1,91 @@
+# Traduzione italiana
+site:
+  title: "Just Jason"
+  tagline: "Tecnologia IA | DevOps | Crescita professionale"
+  description: "Un blog tech incentrato sulla tecnologia IA, pratiche DevOps e crescita professionale. Condivisione di approfondimenti su deployment LLM, architettura cloud native e sviluppo personale."
+
+nav:
+  home: "Home"
+  posts: "Articoli"
+  categories: "Categorie"
+  tags: "Tag"
+  about: "Chi sono"
+  search: "Cerca"
+  search_placeholder: "Digita e premi Invio..."
+
+post:
+  read_more: "Leggi di più"
+  continue_reading: "Continua a leggere"
+  written_by: "Scritto da"
+  posted_in: "Pubblicato in"
+  on_date: "il"
+  min_read: "min di lettura"
+  share: "Condividi"
+  tags: "Tag"
+  related_posts: "Articoli correlati"
+  previous: "Precedente"
+  next: "Successivo"
+  no_posts: "Nessun articolo trovato"
+  all_posts: "Tutti gli articoli"
+  featured: "In evidenza"
+  latest: "Ultimi"
+
+categories:
+  all: "Tutti"
+  technology: "Tecnologia"
+  ai: "Intelligenza Artificiale"
+  devops: "DevOps"
+  career: "Carriera"
+  business: "Business"
+  life: "Vita"
+  uncategorized: "Non categorizzato"
+
+pagination:
+  previous: "Precedente"
+  next: "Successivo"
+  page: "Pagina"
+  of: "di"
+
+comments:
+  title: "Commenti"
+  leave_comment: "Lascia un commento"
+  loading: "Caricamento commenti..."
+
+footer:
+  copyright: "Tutti i diritti riservati"
+  powered_by: "Powered by"
+
+misc:
+  table_of_contents: "Indice"
+  back_to_top: "Torna su"
+  loading: "Caricamento..."
+  error: "Errore"
+  close: "Chiudi"
+  open: "Apri"
+  yes: "Sì"
+  no: "No"
+
+date:
+  format: "%d %B %Y"
+  format_short: "%d %b %Y"
+
+home:
+  latest_posts: "Ultimi articoli"
+  ai_solutions: "Soluzioni IA"
+  view_solution: "Vedi soluzione"
+  popular_posts: "Articoli popolari"
+  all_posts: "Tutti gli articoli"
+  min_read: "min di lettura"
+  minutes: "min"
+  read_full: "Leggi di più"
+
+sidebar:
+  bio: "Specializzato in tecnologia IA, DevOps e crescita personale"
+  featured_posts: "Articoli in evidenza"
+  subscribe: "Iscriviti"
+  get_latest: "Ricevi gli ultimi articoli"
+  rss_subscribe: "Iscrizione RSS"
+
+language:
+  select: "Lingua"
+  current: "Italiano"

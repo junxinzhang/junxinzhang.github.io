@@ -1,0 +1,91 @@
+# Deutsche Übersetzung
+site:
+  title: "Just Jason"
+  tagline: "KI-Technologie | DevOps | Karriereentwicklung"
+  description: "Ein Tech-Blog mit Fokus auf KI-Technologie, DevOps-Praktiken und Karriereentwicklung. Teilen von Einblicken in LLM-Deployment, Cloud-Native-Architektur und persönliche Entwicklung."
+
+nav:
+  home: "Startseite"
+  posts: "Beiträge"
+  categories: "Kategorien"
+  tags: "Tags"
+  about: "Über"
+  search: "Suche"
+  search_placeholder: "Eingeben und Enter drücken..."
+
+post:
+  read_more: "Weiterlesen"
+  continue_reading: "Weiterlesen"
+  written_by: "Geschrieben von"
+  posted_in: "Veröffentlicht in"
+  on_date: "am"
+  min_read: "Min. Lesezeit"
+  share: "Teilen"
+  tags: "Tags"
+  related_posts: "Ähnliche Beiträge"
+  previous: "Vorheriger"
+  next: "Nächster"
+  no_posts: "Keine Beiträge gefunden"
+  all_posts: "Alle Beiträge"
+  featured: "Empfohlen"
+  latest: "Neueste"
+
+categories:
+  all: "Alle"
+  technology: "Technologie"
+  ai: "Künstliche Intelligenz"
+  devops: "DevOps"
+  career: "Karriere"
+  business: "Business"
+  life: "Leben"
+  uncategorized: "Nicht kategorisiert"
+
+pagination:
+  previous: "Zurück"
+  next: "Weiter"
+  page: "Seite"
+  of: "von"
+
+comments:
+  title: "Kommentare"
+  leave_comment: "Kommentar hinterlassen"
+  loading: "Kommentare werden geladen..."
+
+footer:
+  copyright: "Alle Rechte vorbehalten"
+  powered_by: "Unterstützt von"
+
+misc:
+  table_of_contents: "Inhaltsverzeichnis"
+  back_to_top: "Nach oben"
+  loading: "Laden..."
+  error: "Fehler"
+  close: "Schließen"
+  open: "Öffnen"
+  yes: "Ja"
+  no: "Nein"
+
+date:
+  format: "%d. %B %Y"
+  format_short: "%d. %b %Y"
+
+home:
+  latest_posts: "Neueste Beiträge"
+  ai_solutions: "KI-Lösungen"
+  view_solution: "Lösung ansehen"
+  popular_posts: "Beliebte Beiträge"
+  all_posts: "Alle Beiträge"
+  min_read: "Min. Lesezeit"
+  minutes: "Min."
+  read_full: "Weiterlesen"
+
+sidebar:
+  bio: "Fokus auf KI-Technologie, DevOps und persönliche Entwicklung"
+  featured_posts: "Empfohlene Beiträge"
+  subscribe: "Abonnieren"
+  get_latest: "Neueste Beiträge erhalten"
+  rss_subscribe: "RSS abonnieren"
+
+language:
+  select: "Sprache"
+  current: "Deutsch"

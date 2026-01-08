@@ -1,0 +1,91 @@
+# 日本語翻訳
+site:
+  title: "Just Jason"
+  tagline: "AI技術 | DevOps | キャリア成長"
+  description: "AI技術、DevOps実践、キャリア成長に焦点を当てた技術ブログ。LLMデプロイメント、クラウドネイティブアーキテクチャ、個人の成長についての洞察を共有。"
+
+nav:
+  home: "ホーム"
+  posts: "記事"
+  categories: "カテゴリー"
+  tags: "タグ"
+  about: "概要"
+  search: "検索"
+  search_placeholder: "キーワードを入力してEnterを押す..."
+
+post:
+  read_more: "続きを読む"
+  continue_reading: "続きを読む"
+  written_by: "著者"
+  posted_in: "投稿先"
+  on_date: ""
+  min_read: "分で読めます"
+  share: "シェア"
+  tags: "タグ"
+  related_posts: "関連記事"
+  previous: "前の記事"
+  next: "次の記事"
+  no_posts: "記事がありません"
+  all_posts: "すべての記事"
+  featured: "注目"
+  latest: "最新"
+
+categories:
+  all: "すべて"
+  technology: "テクノロジー"
+  ai: "人工知能"
+  devops: "DevOps"
+  career: "キャリア"
+  business: "ビジネス"
+  life: "ライフ"
+  uncategorized: "未分類"
+
+pagination:
+  previous: "前へ"
+  next: "次へ"
+  page: "ページ"
+  of: "/"
+
+comments:
+  title: "コメント"
+  leave_comment: "コメントを残す"
+  loading: "コメントを読み込み中..."
+
+footer:
+  copyright: "All rights reserved"
+  powered_by: "Powered by"
+
+misc:
+  table_of_contents: "目次"
+  back_to_top: "トップに戻る"
+  loading: "読み込み中..."
+  error: "エラー"
+  close: "閉じる"
+  open: "開く"
+  yes: "はい"
+  no: "いいえ"
+
+date:
+  format: "%Y年%m月%d日"
+  format_short: "%m月%d日"
+
+home:
+  latest_posts: "最新記事"
+  ai_solutions: "AIソリューション"
+  view_solution: "詳細を見る"
+  popular_posts: "人気記事"
+  all_posts: "すべての記事"
+  min_read: "分で読めます"
+  minutes: "分"
+  read_full: "続きを読む"
+
+sidebar:
+  bio: "AI技術、DevOps、個人の成長に注力"
+  featured_posts: "注目の記事"
+  subscribe: "購読する"
+  get_latest: "最新記事をお届け"
+  rss_subscribe: "RSS購読"
+
+language:
+  select: "言語"
+  current: "日本語"

@@ -1,15 +1,15 @@
-<!--  Replace menu links here -->
+<!--  Menu links with i18n support / 支持国际化的菜单链接 -->
 <li class="nav-item">
     {% assign total_count = site.posts | size %}
     {% assign html_pages_count = site.data.html_pages | size %}
     {% assign combined_count = total_count | plus: html_pages_count %}
-    <a class="nav-link" href="{{site.baseurl}}/page2/">{{ combined_count }}</a>
+    <a class="nav-link" href="{{site.baseurl}}/page2/" data-i18n-title="nav.posts">{{ combined_count }}</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="{{site.baseurl}}/categories">Categories</a>
+    <a class="nav-link" href="{{site.baseurl}}/categories"><span data-i18n="nav.categories">Categories</span></a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="{{site.baseurl}}/about">About</a>
+    <a class="nav-link" href="{{site.baseurl}}/about"><span data-i18n="nav.about">About</span></a>
 </li>
 <li class="nav-item">
     <a class="nav-link" target="_blank" href="{{site.baseurl}}/feed.xml"><i class="fas fa-rss"></i></a>

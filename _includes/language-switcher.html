@@ -1,0 +1,152 @@
+<!-- Language Switcher / 语言切换器 (UI-only i18n) -->
+{% assign current_lang = page.lang | default: site.default_lang %}
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-globe"></i>
+        <span class="d-none d-md-inline ml-1" id="currentLangLabel">{{ site.data.languages[current_lang].label }}</span>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right language-dropdown" aria-labelledby="languageDropdown">
+        {% for lang in site.data.languages %}
+        {% assign lang_code = lang[0] %}
+        {% assign lang_info = lang[1] %}
+        <a class="dropdown-item lang-option" href="#" data-lang="{{ lang_code }}">
+            <span class="lang-icon">{{ lang_info.icon }}</span>
+            <span class="lang-label">{{ lang_info.label }}</span>
+            <i class="fas fa-check ml-2 lang-check" style="display: none;"></i>
+        </a>
+        {% endfor %}
+    </div>
+</li>
+
+<style>
+.language-dropdown {
+    max-height: 400px;
+    overflow-y: auto;
+    min-width: 160px;
+}
+.language-dropdown .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+.language-dropdown .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+.language-dropdown .dropdown-item.active {
+    background-color: #e9ecef;
+    color: #212529;
+}
+.language-dropdown .lang-icon {
+    margin-right: 0.5rem;
+    font-size: 1.1em;
+}
+.language-dropdown .lang-label {
+    flex: 1;
+}
+</style>
+
+<script>
+// All translations data embedded from Jekyll
+var i18nTranslations = {
+{% for lang in site.data.translations %}
+    "{{ lang[0] }}": {{ lang[1] | jsonify }}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+};
+
+// Language labels
+var i18nLanguages = {
+{% for lang in site.data.languages %}
+    "{{ lang[0] }}": {{ lang[1] | jsonify }}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+};
+
+// Default language from config
+var defaultLang = "{{ site.default_lang }}";
+
+// Get nested translation value
+function getTranslation(obj, path) {
+    var parts = path.split('.');
+    var current = obj;
+    for (var i = 0; i < parts.length; i++) {
+        if (current && current[parts[i]] !== undefined) {
+            current = current[parts[i]];
+        } else {
+            return null;
+        }
+    }
+    return current;
+}
+
+// Apply translations to all elements with data-i18n attribute
+function applyTranslations(langCode) {
+    var translations = i18nTranslations[langCode] || i18nTranslations[defaultLang];
+    if (!translations) return;
+
+    // Update elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        var value = getTranslation(translations, key);
+        if (value) {
+            if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+                el.placeholder = value;
+            } else {
+                el.textContent = value;
+            }
+        }
+    });
+
+    // Update elements with data-i18n-title attribute
+    document.querySelectorAll('[data-i18n-title]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-title');
+        var value = getTranslation(translations, key);
+        if (value) {
+            el.title = value;
+        }
+    });
+
+    // Update current language label in dropdown
+    var langLabel = document.getElementById('currentLangLabel');
+    if (langLabel && i18nLanguages[langCode]) {
+        langLabel.textContent = i18nLanguages[langCode].label;
+    }
+
+    // Update active state in dropdown
+    document.querySelectorAll('.lang-option').forEach(function(el) {
+        var itemLang = el.getAttribute('data-lang');
+        var checkIcon = el.querySelector('.lang-check');
+        if (itemLang === langCode) {
+            el.classList.add('active');
+            if (checkIcon) checkIcon.style.display = 'inline';
+        } else {
+            el.classList.remove('active');
+            if (checkIcon) checkIcon.style.display = 'none';
+        }
+    });
+}
+
+// Switch language function
+function switchLanguage(langCode) {
+    localStorage.setItem('preferred_language', langCode);
+    applyTranslations(langCode);
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Get saved language or use default
+    var savedLang = localStorage.getItem('preferred_language') || defaultLang;
+
+    // Apply translations
+    applyTranslations(savedLang);
+
+    // Add click handlers to language options
+    document.querySelectorAll('.lang-option').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            e.preventDefault();
+            var langCode = this.getAttribute('data-lang');
+            switchLanguage(langCode);
+        });
+    });
+});
+</script>

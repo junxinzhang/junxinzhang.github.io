@@ -1,0 +1,91 @@
+# Traducción al español
+site:
+  title: "Just Jason"
+  tagline: "Tecnología IA | DevOps | Crecimiento profesional"
+  description: "Un blog tech enfocado en tecnología IA, prácticas DevOps y crecimiento profesional. Compartiendo insights sobre despliegue de LLM, arquitectura cloud native y desarrollo personal."
+
+nav:
+  home: "Inicio"
+  posts: "Artículos"
+  categories: "Categorías"
+  tags: "Etiquetas"
+  about: "Acerca de"
+  search: "Buscar"
+  search_placeholder: "Escribe y presiona Enter..."
+
+post:
+  read_more: "Leer más"
+  continue_reading: "Continuar leyendo"
+  written_by: "Escrito por"
+  posted_in: "Publicado en"
+  on_date: "el"
+  min_read: "min de lectura"
+  share: "Compartir"
+  tags: "Etiquetas"
+  related_posts: "Artículos relacionados"
+  previous: "Anterior"
+  next: "Siguiente"
+  no_posts: "No se encontraron artículos"
+  all_posts: "Todos los artículos"
+  featured: "Destacado"
+  latest: "Últimos"
+
+categories:
+  all: "Todos"
+  technology: "Tecnología"
+  ai: "Inteligencia Artificial"
+  devops: "DevOps"
+  career: "Carrera"
+  business: "Negocios"
+  life: "Vida"
+  uncategorized: "Sin categoría"
+
+pagination:
+  previous: "Anterior"
+  next: "Siguiente"
+  page: "Página"
+  of: "de"
+
+comments:
+  title: "Comentarios"
+  leave_comment: "Dejar un comentario"
+  loading: "Cargando comentarios..."
+
+footer:
+  copyright: "Todos los derechos reservados"
+  powered_by: "Desarrollado con"
+
+misc:
+  table_of_contents: "Tabla de contenidos"
+  back_to_top: "Volver arriba"
+  loading: "Cargando..."
+  error: "Error"
+  close: "Cerrar"
+  open: "Abrir"
+  yes: "Sí"
+  no: "No"
+
+date:
+  format: "%d de %B de %Y"
+  format_short: "%d %b %Y"
+
+home:
+  latest_posts: "Últimos artículos"
+  ai_solutions: "Soluciones IA"
+  view_solution: "Ver solución"
+  popular_posts: "Artículos populares"
+  all_posts: "Todos los artículos"
+  min_read: "min de lectura"
+  minutes: "min"
+  read_full: "Leer más"
+
+sidebar:
+  bio: "Enfocado en tecnología IA, DevOps y crecimiento personal"
+  featured_posts: "Artículos destacados"
+  subscribe: "Suscribirse"
+  get_latest: "Recibe los últimos artículos"
+  rss_subscribe: "Suscripción RSS"
+
+language:
+  select: "Idioma"
+  current: "Español"

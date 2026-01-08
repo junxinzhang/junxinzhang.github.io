@@ -1,0 +1,57 @@
+# 支持的语言列表
+# Supported languages list
+
+en:
+  label: "English"
+  icon: "🇺🇸"
+  dir: "ltr"
+
+zh-hans:
+  label: "简体中文"
+  icon: "🇨🇳"
+  dir: "ltr"
+
+zh-hant:
+  label: "繁體中文"
+  icon: "🇹🇼"
+  dir: "ltr"
+
+ja:
+  label: "日本語"
+  icon: "🇯🇵"
+  dir: "ltr"
+
+ko:
+  label: "한국어"
+  icon: "🇰🇷"
+  dir: "ltr"
+
+de:
+  label: "Deutsch"
+  icon: "🇩🇪"
+  dir: "ltr"
+
+fr:
+  label: "Français"
+  icon: "🇫🇷"
+  dir: "ltr"
+
+it:
+  label: "Italiano"
+  icon: "🇮🇹"
+  dir: "ltr"
+
+es:
+  label: "Español"
+  icon: "🇪🇸"
+  dir: "ltr"
+
+pt:
+  label: "Português"
+  icon: "🇧🇷"
+  dir: "ltr"
+
+hi:
+  label: "हिन्दी"
+  icon: "🇮🇳"
+  dir: "ltr"

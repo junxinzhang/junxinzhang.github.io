@@ -1,13 +1,31 @@
 # Site
 name: "Just Jason"
-description: "Just Jason"
+title: "Just Jason - AI与技术博客"
+tagline: "AI技术 | DevOps | 职业成长"
+description: "专注于 AI 技术、DevOps 实践、职业成长的技术博客。分享 LLM 私有化部署、云原生架构、个人成长等深度内容。"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon/favicon.ico'
 domain: 'junxinzhang.github.io'
+url: 'https://junxinzhang.github.io'
 baseurl: ''
 disqus: 'demowebsite'
 email: 'jason2023zhang@gmail.com'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+
+# i18n - Internationalization / 国际化配置
+default_lang: "en"
+languages: ["en", "zh-hans", "zh-hant", "ja", "ko", "de", "fr", "it", "es", "pt", "hi"]
+
+# SEO & Social
+twitter:
+  username: junxin1616
+  card: summary_large_image
+social:
+  name: Jason Zhang
+  links:
+    - https://twitter.com/junxin1616
+    - https://github.com/junxinzhang
+locale: zh_CN
 
 include: ["_pages", "_html_pages"]
 permalink: /:title/
@@ -25,9 +43,17 @@ authors:
       name:           Jason Zhang
       site:           https://junxinzhang.github.io
       avatar:         assets/images/avatar1.jpg
-      bio:            "Just Jason "
+      bio:            "10年+ 企业级软件架构师，专注 AI 私有化部署、DevOps、云原生架构。曾主导多个知名企业的大模型落地项目。"
+      job_title:      "AI 技术专家 & DevOps 架构师"
+      credentials:    "AWS Solutions Architect | 云原生技术专家"
+      expertise:
+        - "大语言模型私有化部署"
+        - "DevOps 与 CI/CD 流水线"
+        - "云原生架构设计"
+        - "微服务与分布式系统"
       email:          jason2023zhang@gmail.com
       twitter:        https://twitter.com/junxin1616
+      github:         https://github.com/junxinzhang
  
 # Defaults
 defaults:
@@ -39,7 +65,7 @@ defaults:
       layout: post
       author: Jason Zhang
       avatar: /assets/images/avatar1.jpg
-      
+
   # all pages
   - scope:
       path: "_pages"

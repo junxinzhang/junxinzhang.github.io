@@ -1,0 +1,91 @@
+# Traduction française
+site:
+  title: "Just Jason"
+  tagline: "Technologie IA | DevOps | Développement de carrière"
+  description: "Un blog tech axé sur la technologie IA, les pratiques DevOps et le développement de carrière. Partage d'insights sur le déploiement LLM, l'architecture cloud native et le développement personnel."
+
+nav:
+  home: "Accueil"
+  posts: "Articles"
+  categories: "Catégories"
+  tags: "Tags"
+  about: "À propos"
+  search: "Recherche"
+  search_placeholder: "Tapez et appuyez sur Entrée..."
+
+post:
+  read_more: "Lire la suite"
+  continue_reading: "Continuer la lecture"
+  written_by: "Écrit par"
+  posted_in: "Publié dans"
+  on_date: "le"
+  min_read: "min de lecture"
+  share: "Partager"
+  tags: "Tags"
+  related_posts: "Articles connexes"
+  previous: "Précédent"
+  next: "Suivant"
+  no_posts: "Aucun article trouvé"
+  all_posts: "Tous les articles"
+  featured: "À la une"
+  latest: "Récents"
+
+categories:
+  all: "Tous"
+  technology: "Technologie"
+  ai: "Intelligence Artificielle"
+  devops: "DevOps"
+  career: "Carrière"
+  business: "Business"
+  life: "Vie"
+  uncategorized: "Non classé"
+
+pagination:
+  previous: "Précédent"
+  next: "Suivant"
+  page: "Page"
+  of: "sur"
+
+comments:
+  title: "Commentaires"
+  leave_comment: "Laisser un commentaire"
+  loading: "Chargement des commentaires..."
+
+footer:
+  copyright: "Tous droits réservés"
+  powered_by: "Propulsé par"
+
+misc:
+  table_of_contents: "Table des matières"
+  back_to_top: "Retour en haut"
+  loading: "Chargement..."
+  error: "Erreur"
+  close: "Fermer"
+  open: "Ouvrir"
+  yes: "Oui"
+  no: "Non"
+
+date:
+  format: "%d %B %Y"
+  format_short: "%d %b %Y"
+
+home:
+  latest_posts: "Derniers articles"
+  ai_solutions: "Solutions IA"
+  view_solution: "Voir la solution"
+  popular_posts: "Articles populaires"
+  all_posts: "Tous les articles"
+  min_read: "min de lecture"
+  minutes: "min"
+  read_full: "Lire la suite"
+
+sidebar:
+  bio: "Spécialisé dans la technologie IA, DevOps et le développement personnel"
+  featured_posts: "Articles à la une"
+  subscribe: "S'abonner"
+  get_latest: "Recevoir les derniers articles"
+  rss_subscribe: "Abonnement RSS"
+
+language:
+  select: "Langue"
+  current: "Français"

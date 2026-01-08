@@ -1,0 +1,91 @@
+# 繁體中文翻譯
+site:
+  title: "Just Jason"
+  tagline: "AI技術 | DevOps | 職業成長"
+  description: "專注於 AI 技術、DevOps 實踐、職業成長的技術博客。分享 LLM 私有化部署、雲原生架構、個人成長等深度內容。"
+
+nav:
+  home: "首頁"
+  posts: "文章"
+  categories: "分類"
+  tags: "標籤"
+  about: "關於"
+  search: "搜尋"
+  search_placeholder: "輸入關鍵詞，按 Enter 搜尋..."
+
+post:
+  read_more: "閱讀更多"
+  continue_reading: "繼續閱讀"
+  written_by: "作者"
+  posted_in: "發佈於"
+  on_date: ""
+  min_read: "分鐘閱讀"
+  share: "分享"
+  tags: "標籤"
+  related_posts: "相關文章"
+  previous: "上一篇"
+  next: "下一篇"
+  no_posts: "暫無文章"
+  all_posts: "所有文章"
+  featured: "精選"
+  latest: "最新"
+
+categories:
+  all: "全部"
+  technology: "技術"
+  ai: "人工智慧"
+  devops: "運維"
+  career: "職業"
+  business: "商業"
+  life: "生活"
+  uncategorized: "未分類"
+
+pagination:
+  previous: "上一頁"
+  next: "下一頁"
+  page: "第"
+  of: "頁，共"
+
+comments:
+  title: "評論"
+  leave_comment: "發表評論"
+  loading: "載入評論中..."
+
+footer:
+  copyright: "版權所有"
+  powered_by: "技術支援"
+
+misc:
+  table_of_contents: "目錄"
+  back_to_top: "返回頂部"
+  loading: "載入中..."
+  error: "錯誤"
+  close: "關閉"
+  open: "開啟"
+  yes: "是"
+  no: "否"
+
+date:
+  format: "%Y年%m月%d日"
+  format_short: "%m月%d日"
+
+home:
+  latest_posts: "最新文章"
+  ai_solutions: "AI 解決方案庫"
+  view_solution: "查看方案"
+  popular_posts: "熱門文章"
+  all_posts: "所有文章"
+  min_read: "分鐘閱讀"
+  minutes: "分鐘"
+  read_full: "閱讀全文"
+
+sidebar:
+  bio: "專注於 AI 技術、DevOps 和個人成長"
+  featured_posts: "精選文章"
+  subscribe: "訂閱更新"
+  get_latest: "獲取最新文章推送"
+  rss_subscribe: "RSS 訂閱"
+
+language:
+  select: "語言"
+  current: "繁體中文"

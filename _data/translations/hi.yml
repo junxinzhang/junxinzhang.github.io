@@ -1,0 +1,91 @@
+# हिन्दी अनुवाद
+site:
+  title: "Just Jason"
+  tagline: "AI तकनीक | DevOps | करियर विकास"
+  description: "AI तकनीक, DevOps प्रथाओं और करियर विकास पर केंद्रित एक टेक ब्लॉग। LLM डिप्लॉयमेंट, क्लाउड नेटिव आर्किटेक्चर और व्यक्तिगत विकास पर अंतर्दृष्टि साझा करना।"
+
+nav:
+  home: "होम"
+  posts: "लेख"
+  categories: "श्रेणियाँ"
+  tags: "टैग"
+  about: "परिचय"
+  search: "खोज"
+  search_placeholder: "टाइप करें और Enter दबाएं..."
+
+post:
+  read_more: "और पढ़ें"
+  continue_reading: "पढ़ना जारी रखें"
+  written_by: "लेखक"
+  posted_in: "में पोस्ट किया गया"
+  on_date: ""
+  min_read: "मिनट पढ़ने का समय"
+  share: "शेयर करें"
+  tags: "टैग"
+  related_posts: "संबंधित लेख"
+  previous: "पिछला"
+  next: "अगला"
+  no_posts: "कोई लेख नहीं मिला"
+  all_posts: "सभी लेख"
+  featured: "विशेष"
+  latest: "नवीनतम"
+
+categories:
+  all: "सभी"
+  technology: "तकनीक"
+  ai: "कृत्रिम बुद्धिमत्ता"
+  devops: "DevOps"
+  career: "करियर"
+  business: "व्यापार"
+  life: "जीवन"
+  uncategorized: "अवर्गीकृत"
+
+pagination:
+  previous: "पिछला"
+  next: "अगला"
+  page: "पृष्ठ"
+  of: "का"
+
+comments:
+  title: "टिप्पणियाँ"
+  leave_comment: "टिप्पणी छोड़ें"
+  loading: "टिप्पणियाँ लोड हो रही हैं..."
+
+footer:
+  copyright: "सर्वाधिकार सुरक्षित"
+  powered_by: "द्वारा संचालित"
+
+misc:
+  table_of_contents: "विषय सूची"
+  back_to_top: "ऊपर जाएं"
+  loading: "लोड हो रहा है..."
+  error: "त्रुटि"
+  close: "बंद करें"
+  open: "खोलें"
+  yes: "हाँ"
+  no: "नहीं"
+
+date:
+  format: "%d %B %Y"
+  format_short: "%d %b %Y"
+
+home:
+  latest_posts: "नवीनतम लेख"
+  ai_solutions: "AI समाधान"
+  view_solution: "समाधान देखें"
+  popular_posts: "लोकप्रिय लेख"
+  all_posts: "सभी लेख"
+  min_read: "मिनट पढ़ने का समय"
+  minutes: "मिनट"
+  read_full: "और पढ़ें"
+
+sidebar:
+  bio: "AI तकनीक, DevOps और व्यक्तिगत विकास पर केंद्रित"
+  featured_posts: "विशेष लेख"
+  subscribe: "सदस्यता लें"
+  get_latest: "नवीनतम लेख प्राप्त करें"
+  rss_subscribe: "RSS सदस्यता"
+
+language:
+  select: "भाषा"
+  current: "हिन्दी"

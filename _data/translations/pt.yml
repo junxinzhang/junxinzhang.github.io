@@ -1,0 +1,91 @@
+# Tradução em português
+site:
+  title: "Just Jason"
+  tagline: "Tecnologia IA | DevOps | Crescimento profissional"
+  description: "Um blog tech focado em tecnologia IA, práticas DevOps e crescimento profissional. Compartilhando insights sobre implantação de LLM, arquitetura cloud native e desenvolvimento pessoal."
+
+nav:
+  home: "Início"
+  posts: "Artigos"
+  categories: "Categorias"
+  tags: "Tags"
+  about: "Sobre"
+  search: "Buscar"
+  search_placeholder: "Digite e pressione Enter..."
+
+post:
+  read_more: "Leia mais"
+  continue_reading: "Continue lendo"
+  written_by: "Escrito por"
+  posted_in: "Publicado em"
+  on_date: "em"
+  min_read: "min de leitura"
+  share: "Compartilhar"
+  tags: "Tags"
+  related_posts: "Artigos relacionados"
+  previous: "Anterior"
+  next: "Próximo"
+  no_posts: "Nenhum artigo encontrado"
+  all_posts: "Todos os artigos"
+  featured: "Destaque"
+  latest: "Últimos"
+
+categories:
+  all: "Todos"
+  technology: "Tecnologia"
+  ai: "Inteligência Artificial"
+  devops: "DevOps"
+  career: "Carreira"
+  business: "Negócios"
+  life: "Vida"
+  uncategorized: "Sem categoria"
+
+pagination:
+  previous: "Anterior"
+  next: "Próximo"
+  page: "Página"
+  of: "de"
+
+comments:
+  title: "Comentários"
+  leave_comment: "Deixar um comentário"
+  loading: "Carregando comentários..."
+
+footer:
+  copyright: "Todos os direitos reservados"
+  powered_by: "Desenvolvido com"
+
+misc:
+  table_of_contents: "Índice"
+  back_to_top: "Voltar ao topo"
+  loading: "Carregando..."
+  error: "Erro"
+  close: "Fechar"
+  open: "Abrir"
+  yes: "Sim"
+  no: "Não"
+
+date:
+  format: "%d de %B de %Y"
+  format_short: "%d %b %Y"
+
+home:
+  latest_posts: "Últimos artigos"
+  ai_solutions: "Soluções IA"
+  view_solution: "Ver solução"
+  popular_posts: "Artigos populares"
+  all_posts: "Todos os artigos"
+  min_read: "min de leitura"
+  minutes: "min"
+  read_full: "Leia mais"
+
+sidebar:
+  bio: "Focado em tecnologia IA, DevOps e crescimento pessoal"
+  featured_posts: "Artigos em destaque"
+  subscribe: "Inscreva-se"
+  get_latest: "Receba os últimos artigos"
+  rss_subscribe: "Assinatura RSS"
+
+language:
+  select: "Idioma"
+  current: "Português"

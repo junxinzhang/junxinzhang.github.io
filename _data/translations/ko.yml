@@ -1,0 +1,91 @@
+# 한국어 번역
+site:
+  title: "Just Jason"
+  tagline: "AI 기술 | DevOps | 커리어 성장"
+  description: "AI 기술, DevOps 실천, 커리어 성장에 초점을 맞춘 기술 블로그. LLM 배포, 클라우드 네이티브 아키텍처, 개인 성장에 대한 인사이트를 공유합니다."
+
+nav:
+  home: "홈"
+  posts: "글"
+  categories: "카테고리"
+  tags: "태그"
+  about: "소개"
+  search: "검색"
+  search_placeholder: "검색어 입력 후 Enter..."
+
+post:
+  read_more: "더 읽기"
+  continue_reading: "계속 읽기"
+  written_by: "작성자"
+  posted_in: "게시 위치"
+  on_date: ""
+  min_read: "분 소요"
+  share: "공유"
+  tags: "태그"
+  related_posts: "관련 글"
+  previous: "이전 글"
+  next: "다음 글"
+  no_posts: "게시물이 없습니다"
+  all_posts: "모든 글"
+  featured: "추천"
+  latest: "최신"
+
+categories:
+  all: "전체"
+  technology: "기술"
+  ai: "인공지능"
+  devops: "DevOps"
+  career: "커리어"
+  business: "비즈니스"
+  life: "라이프"
+  uncategorized: "미분류"
+
+pagination:
+  previous: "이전"
+  next: "다음"
+  page: "페이지"
+  of: "/"
+
+comments:
+  title: "댓글"
+  leave_comment: "댓글 남기기"
+  loading: "댓글 로딩 중..."
+
+footer:
+  copyright: "All rights reserved"
+  powered_by: "Powered by"
+
+misc:
+  table_of_contents: "목차"
+  back_to_top: "맨 위로"
+  loading: "로딩 중..."
+  error: "오류"
+  close: "닫기"
+  open: "열기"
+  yes: "예"
+  no: "아니요"
+
+date:
+  format: "%Y년 %m월 %d일"
+  format_short: "%m월 %d일"
+
+home:
+  latest_posts: "최신 글"
+  ai_solutions: "AI 솔루션"
+  view_solution: "자세히 보기"
+  popular_posts: "인기 글"
+  all_posts: "모든 글"
+  min_read: "분 소요"
+  minutes: "분"
+  read_full: "더 읽기"
+
+sidebar:
+  bio: "AI 기술, DevOps, 개인 성장에 집중"
+  featured_posts: "추천 글"
+  subscribe: "구독하기"
+  get_latest: "최신 글을 받아보세요"
+  rss_subscribe: "RSS 구독"
+
+language:
+  select: "언어"
+  current: "한국어"

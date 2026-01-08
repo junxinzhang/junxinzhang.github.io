@@ -1,0 +1,20 @@
+{% comment %}
+  i18n Helper - Include this to get the translation object
+  Usage:
+    {% include i18n.html %}
+    Then use: {{ t.nav.home }}
+
+  This sets up:
+    - current_lang: the current language code
+    - t: the translation object for the current language
+{% endcomment %}
+
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.translations[current_lang] %}
+
+{% comment %}
+  Helper to get a translation with fallback to default language
+{% endcomment %}
+{% unless t %}
+    {% assign t = site.data.translations[site.default_lang] %}
+{% endunless %}

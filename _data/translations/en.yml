@@ -1,0 +1,91 @@
+# English translations
+site:
+  title: "Just Jason"
+  tagline: "AI Technology | DevOps | Career Growth"
+  description: "A tech blog focusing on AI technology, DevOps practices, and career growth. Sharing insights on LLM deployment, cloud-native architecture, and personal development."
+
+nav:
+  home: "Home"
+  posts: "Posts"
+  categories: "Categories"
+  tags: "Tags"
+  about: "About"
+  search: "Search"
+  search_placeholder: "Type and hit enter..."
+
+post:
+  read_more: "Read More"
+  continue_reading: "Continue Reading"
+  written_by: "Written by"
+  posted_in: "Posted in"
+  on_date: "on"
+  min_read: "min read"
+  share: "Share"
+  tags: "Tags"
+  related_posts: "Related Posts"
+  previous: "Previous"
+  next: "Next"
+  no_posts: "No posts found"
+  all_posts: "All Posts"
+  featured: "Featured"
+  latest: "Latest"
+
+categories:
+  all: "All"
+  technology: "Technology"
+  ai: "AI"
+  devops: "DevOps"
+  career: "Career"
+  business: "Business"
+  life: "Life"
+  uncategorized: "Uncategorized"
+
+pagination:
+  previous: "Previous"
+  next: "Next"
+  page: "Page"
+  of: "of"
+
+comments:
+  title: "Comments"
+  leave_comment: "Leave a Comment"
+  loading: "Loading comments..."
+
+footer:
+  copyright: "All rights reserved"
+  powered_by: "Powered by"
+
+misc:
+  table_of_contents: "Table of Contents"
+  back_to_top: "Back to Top"
+  loading: "Loading..."
+  error: "Error"
+  close: "Close"
+  open: "Open"
+  yes: "Yes"
+  no: "No"
+
+date:
+  format: "%B %d, %Y"
+  format_short: "%b %d, %Y"
+
+home:
+  latest_posts: "Latest Posts"
+  ai_solutions: "AI Solutions"
+  view_solution: "View Solution"
+  popular_posts: "Popular Posts"
+  all_posts: "All Posts"
+  min_read: "min read"
+  minutes: "min"
+  read_full: "Read More"
+
+sidebar:
+  bio: "Focused on AI technology, DevOps and personal growth"
+  featured_posts: "Featured Posts"
+  subscribe: "Subscribe"
+  get_latest: "Get latest posts"
+  rss_subscribe: "RSS Subscribe"
+
+language:
+  select: "Language"
+  current: "English"
