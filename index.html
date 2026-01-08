@@ -154,7 +154,8 @@ description: "Just Jason"
                 {% endfor %}
             {% else %}
                 <!-- 第二页显示HTML页面和剩余博客文章 -->
-                {% for page in site.data.html_pages %}
+                {% assign sorted_html_pages = site.data.html_pages | sort: 'date' | reverse %}
+                {% for page in sorted_html_pages %}
                 <div class="col-md-6 mb-4">
                     <div class="card h-100 border-0 rounded shadow-sm hover-effect">
                         {% if page.image %}
