@@ -1,9 +1,7 @@
 <span class="reading-time">
+  <i class="far fa-clock"></i>
   {% assign words = content | number_of_words %}
-  {% if words < 360 %}
-    1 min read
-  {% else %}
-    {{ words | divided_by:180 }} mins read
-  {% endif %}
+  {% assign read_time = words | divided_by: 300 | at_least: 1 %}
+  {{ read_time }} 分钟阅读
 </span>
     

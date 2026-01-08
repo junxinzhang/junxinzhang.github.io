@@ -1,9 +1,10 @@
 ---
-title: "Just Jason"
+title: "首页"
 layout: default
 pagination:
     enabled: true
-description: "Just Jason"
+description: "专注于 AI 技术、DevOps 实践、职业成长的技术博客。分享 LLM 私有化部署、云原生架构、个人成长等深度内容。"
+image: assets/images/logo.png
 ---
 
 <div class="container">
@@ -13,7 +14,7 @@ description: "Just Jason"
 <div class="row mt-4 mb-5">
     <div class="col-12">
         <h2 class="font-weight-bold spanborder mb-4">
-            <span>最新文章</span>
+            <span data-i18n="home.latest_posts">最新文章</span>
         </h2>
 
         <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
@@ -32,8 +33,10 @@ description: "Just Jason"
                             <a href="{{site.baseurl}}{{post.url}}" class="text-white">{{ post.title }}</a>
                         </h3>
                         <p class="d-none d-md-block">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
-                        <div class="carousel-date">{{ post.date | date: '%Y年%m月%d日' }}</div>
-                        <a href="{{site.baseurl}}{{post.url}}" class="btn btn-sm btn-primary mt-2">阅读全文</a>
+                        {% assign words = post.content | strip_html | number_of_words %}
+                        {% assign read_time = words | divided_by: 300 | at_least: 1 %}
+                        <div class="carousel-date">{{ post.date | date: '%Y年%m月%d日' }} · {{ read_time }} <span data-i18n="home.min_read">分钟阅读</span></div>
+                        <a href="{{site.baseurl}}{{post.url}}" class="btn btn-sm btn-primary mt-2" data-i18n="home.read_full">阅读全文</a>
                     </div>
                 </div>
                 {% endfor %}
@@ -55,7 +58,7 @@ description: "Just Jason"
 <div class="row mb-5">
     <div class="col-12">
         <h2 class="font-weight-bold spanborder mb-4">
-            <span>AI 解决方案库</span>
+            <span data-i18n="home.ai_solutions">AI 解决方案库</span>
         </h2>
     </div>
 
@@ -77,7 +80,7 @@ description: "Just Jason"
                         <p class="card-text flex-grow-1">{{ page.description }}</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <small class="text-muted">{{ page.date }}</small>
-                            <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" class="btn btn-sm btn-outline-primary" target="_blank">查看方案</a>
+                            <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" class="btn btn-sm btn-outline-primary" target="_blank" data-i18n="home.view_solution">查看方案</a>
                         </div>
                     </div>
                 </div>
@@ -91,7 +94,7 @@ description: "Just Jason"
 <div class="row mb-5">
     <div class="col-12">
         <h2 class="font-weight-bold spanborder mb-4">
-            <span>热门文章</span>
+            <span data-i18n="home.popular_posts">热门文章</span>
         </h2>
     </div>
 
@@ -99,15 +102,18 @@ description: "Just Jason"
     <div class="col-md-4 mb-4">
         <div class="card h-100 border-0 rounded shadow-sm hover-effect">
             <a href="{{site.baseurl}}{{post.url}}">
-                <div class="card-img-top" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 180px; background-size: cover; background-position: center;"></div>
+                <div class="card-img-top lazy-bg" data-bg="{% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}" style="height: 180px; background-size: cover; background-position: center;"></div>
             </a>
             <div class="card-body d-flex flex-column">
                 <h4 class="card-title">
                     <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
                 </h4>
                 <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+                {% assign words = post.content | strip_html | number_of_words %}
+                {% assign read_time = words | divided_by: 300 | at_least: 1 %}
                 <div class="mt-auto d-flex justify-content-between align-items-center">
                     <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
+                    <small class="text-muted"><i class="far fa-clock"></i> {{ read_time }} <span data-i18n="home.minutes">分钟</span></small>
                 </div>
             </div>
         </div>
@@ -120,7 +126,7 @@ description: "Just Jason"
 <div class="row">
     <div class="col-12">
         <h2 class="font-weight-bold spanborder mb-4">
-            <span>所有文章</span>
+            <span data-i18n="home.all_posts">所有文章</span>
             {% assign total_count = site.posts | size %}
             {% assign html_pages_count = site.data.html_pages | size %}
             {% assign combined_count = total_count | plus: html_pages_count %}
@@ -137,7 +143,7 @@ description: "Just Jason"
                     <div class="card h-100 border-0 rounded shadow-sm hover-effect">
                         {% if post.image %}
                         <a href="{{site.baseurl}}{{post.url}}">
-                            <div class="card-img-top" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 140px; background-size: cover; background-position: center;"></div>
+                            <div class="card-img-top lazy-bg" data-bg="{% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}" style="height: 140px; background-size: cover; background-position: center;"></div>
                         </a>
                         {% endif %}
                         <div class="card-body d-flex flex-column">
@@ -145,8 +151,11 @@ description: "Just Jason"
                                 <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
                             </h5>
                             <p class="card-text small">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}</p>
-                            <div class="mt-auto">
+                            {% assign words = post.content | strip_html | number_of_words %}
+                            {% assign read_time = words | divided_by: 300 | at_least: 1 %}
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
                                 <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
+                                <small class="text-muted"><i class="far fa-clock"></i> {{ read_time }} <span data-i18n="home.minutes">分钟</span></small>
                             </div>
                         </div>
                     </div>
@@ -160,7 +169,7 @@ description: "Just Jason"
                     <div class="card h-100 border-0 rounded shadow-sm hover-effect">
                         {% if page.image %}
                         <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" target="_blank">
-                            <div class="card-img-top" style="background-image: url({{site.baseurl}}/assets/images/{{ page.image }}); height: 140px; background-size: cover; background-position: center;"></div>
+                            <div class="card-img-top lazy-bg" data-bg="{{site.baseurl}}/assets/images/{{ page.image }}" style="height: 140px; background-size: cover; background-position: center;"></div>
                         </a>
                         {% endif %}
                         <div class="card-body d-flex flex-column">
@@ -182,7 +191,7 @@ description: "Just Jason"
                     <div class="card h-100 border-0 rounded shadow-sm hover-effect">
                         {% if post.image %}
                         <a href="{{site.baseurl}}{{post.url}}">
-                            <div class="card-img-top" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 140px; background-size: cover; background-position: center;"></div>
+                            <div class="card-img-top lazy-bg" data-bg="{% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}" style="height: 140px; background-size: cover; background-position: center;"></div>
                         </a>
                         {% endif %}
                         <div class="card-body d-flex flex-column">
@@ -190,8 +199,11 @@ description: "Just Jason"
                                 <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
                             </h5>
                             <p class="card-text small">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}</p>
-                            <div class="mt-auto">
+                            {% assign words = post.content | strip_html | number_of_words %}
+                            {% assign read_time = words | divided_by: 300 | at_least: 1 %}
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
                                 <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
+                                <small class="text-muted"><i class="far fa-clock"></i> {{ read_time }} <span data-i18n="home.minutes">分钟</span></small>
                             </div>
                         </div>
                     </div>
@@ -207,7 +219,7 @@ description: "Just Jason"
                 <ul class="pagination justify-content-center"> 
                     {% if paginator.previous_page %}
                     <li class="page-item">
-                        <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; 上一页</a>
+                        <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; <span data-i18n="pagination.previous">上一页</span></a>
                     </li>
                     {% else %}
                     <li class="page-item disabled">
@@ -233,7 +245,7 @@ description: "Just Jason"
 
                     {% if paginator.next_page %}
                     <li class="page-item">
-                        <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &raquo;</a>
+                        <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span data-i18n="pagination.next">下一页</span> &raquo;</a>
                     </li>
                     {% else %}
                     <li class="page-item disabled">
