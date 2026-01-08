@@ -9,10 +9,7 @@ Just Jason
 
 - [RSS Feed]({{site.baseurl}}/feed.xml)
 - [GitHub@junxinzhang](https://github.com/junxinzhang)
-- [Twitter@junxin1616](https://twitter.com/junxin1616)
-
-## 2023 年目标：
-- 生产15篇内容
+- [Twitter@junxin1616](https://x.com/Jasonz9788)
 
 <!-- donate -->
 {% assign author = site.authors[page.author] %}
