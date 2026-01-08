@@ -25,3 +25,9 @@
   description: 网络健康状况汇报
   date: 2025-04-30
   image: html_thumbnails/20250430_enhance_network_report.jpg
+
+- title: Claude Code 官方插件全解析
+  path: claude-plugins-report.html
+  description: 24款官方插件工具助你成为10倍效率开发者
+  date: 2026-01-08
+  image: screenshot-20260108-claude-plugins.png
