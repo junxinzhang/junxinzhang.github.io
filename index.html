@@ -24,10 +24,15 @@ image: assets/images/logo.png
                 {% endfor %}
             </ol>
 
-            <div class="carousel-inner rounded shadow">
+            <div class="carousel-inner rounded shadow" style="min-height: 350px;">
                 {% for post in site.posts limit:5 %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <!-- LCP optimization: First carousel image loads immediately, others lazy load -->
+                    {% if forloop.first %}
                     <div class="carousel-background" style="background-image: url({% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}); height: 350px; background-size: cover; background-position: center;"></div>
+                    {% else %}
+                    <div class="carousel-background lazy-bg" data-bg="{% if post.image contains '://' %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image}}{% endif %}" style="height: 350px; background-size: cover; background-position: center;"></div>
+                    {% endif %}
                     <div class="carousel-caption text-left">
                         <h3 class="carousel-title">
                             <a href="{{site.baseurl}}{{post.url}}" class="text-white">{{ post.title }}</a>
@@ -284,12 +289,22 @@ image: assets/images/logo.png
     overflow: hidden;
     border-radius: 8px !important;
     margin-bottom: 20px;
+    /* CLS fix: ensure card has predictable height */
+    contain: layout;
 }
 .card-img-top {
     transition: transform 0.5s ease;
+    /* CLS fix: aspect ratio for consistent image container height */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background-color: #f0f0f0;
 }
 .card:hover .card-img-top {
     transform: scale(1.05);
+}
+/* CLS fix: Reserve space for lazy-loaded background images */
+.lazy-bg {
+    background-color: #f0f0f0;
 }
 .spanborder {
     border-bottom: 1px solid #e8f3ec;
