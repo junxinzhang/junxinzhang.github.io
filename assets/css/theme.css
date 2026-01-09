@@ -2,9 +2,17 @@
  * Mundana Jekyll Theme (https://www.wowthemes.net/mundana-jekyll-theme/)
  */
 
+/* Font display optimization - prevent FOIT (Flash of Invisible Text) */
+@font-face {
+    font-family: 'Lora';
+    font-display: swap;
+}
+
 body {
 	overflow-x:hidden;
 	padding-top:69.75px;
+	/* Font fallback stack for faster text rendering */
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .site-content {
 	margin-top:35px;
