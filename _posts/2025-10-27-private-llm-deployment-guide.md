@@ -3,7 +3,7 @@ layout: post
 title: "【国内企业必读】私有化大模型落地完全指南：从预算估算到参数选型的权威解析"
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20251027-private-llm-deployment-guide.png
+image: assets/images/screenshot-20251027-private-llm-deployment-guide.webp
 tags: [私有化部署, 大模型成本, GPU配置, 模型选型, 企业AI, DeepSeek, 预算规划]
 slug: private-llm-deployment-guide
 ---

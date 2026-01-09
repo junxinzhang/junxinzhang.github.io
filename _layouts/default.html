@@ -156,23 +156,38 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/images/favicon/favicon-16x16.png">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Critical CSS inline for faster FCP -->
+    <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;margin:0}
+    .navbar{background:#fff}
+    .container{max-width:1140px;margin:0 auto;padding:0 15px}
+    </style>
 
-    <!-- Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
-
-    <!-- Bootstrap Modified -->
+    <!-- Bootstrap Modified - Critical -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
 
-    <!-- Theme Stylesheet -->
+    <!-- Theme Stylesheet - Critical -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
 
-    <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <!-- Font Awesome Icons - Async load -->
+    <link rel="preload" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"></noscript>
+
+    <!-- Google Fonts with font-display swap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Preload LCP image for faster load -->
+    {% if page.url == "/" %}
+    {% assign first_post = site.posts | first %}
+    {% if first_post.image %}
+    <link rel="preload" as="image" href="{% if first_post.image contains '://' %}{{ first_post.image }}{% else %}{{site.baseurl}}/{{ first_post.image }}{% endif %}">
+    {% endif %}
+    {% endif %}
+
+    <!-- Jquery - defer loading -->
+    <script defer src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     {% include tracking-header.html %}
 
@@ -184,8 +199,8 @@
     <!-- Navbar -->
     <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
-        <a href="{{site.baseurl}}/">
-            <img src="{{site.baseurl}}/assets/images/favicon/apple-touch-icon.png" style="width: 1.75rem; margin-right: 0.55rem;"/>
+        <a href="{{site.baseurl}}/" aria-label="Home">
+            <img src="{{site.baseurl}}/assets/images/favicon/apple-touch-icon.png" alt="{{site.name}} Logo" width="28" height="28" style="margin-right: 0.55rem;">
         </a>
         <a class="navbar-brand" href="{{site.baseurl}}/"><strong>{{site.name}}</strong></a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -214,12 +229,12 @@
     </main>
 
 
-    <!-- Scripts: popper, bootstrap, theme, lunr -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <!-- Scripts: popper, bootstrap, theme, lunr - defer for non-blocking -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-    <script src="{{site.baseurl}}/assets/js/theme.js"></script>
+    <script defer src="{{site.baseurl}}/assets/js/theme.js"></script>
 
 
     <!-- Footer -->

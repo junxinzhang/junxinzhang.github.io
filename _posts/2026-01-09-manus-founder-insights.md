@@ -3,7 +3,7 @@ layout: post
 title: "Manus创始人肖弘：从微信生态到AI Agent，一位90后连续创业者的深度洞察"
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260109-manus-founder.png
+image: assets/images/screenshot-20260109-manus-founder.webp
 tags: [Manus, AI Agent, 创业, 肖弘, Monica, 产品思维]
 slug: manus-founder-insights
 ---
