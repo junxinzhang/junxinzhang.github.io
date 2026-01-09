@@ -393,7 +393,7 @@ image: assets/images/logo.png
 .carousel-control-next {
     width: 10%;
     opacity: 0.8;
-    pointer-events: none;
+    cursor: pointer;
 }
 
 .carousel-control-prev-icon,
@@ -401,8 +401,6 @@ image: assets/images/logo.png
     background-color: rgba(0,0,0,0.3);
     padding: 15px;
     border-radius: 50%;
-    pointer-events: auto;
-    cursor: pointer;
 }
 
 .carousel-control-prev:hover,
@@ -411,30 +409,96 @@ image: assets/images/logo.png
 }
 </style>
 <script>
-// Wait for jQuery and Bootstrap to load (they use defer)
-(function initCarousel() {
-    // Check if jQuery and Bootstrap carousel are available
-    if (typeof $ !== 'undefined' && typeof $.fn.carousel !== 'undefined') {
-        // Initialize the carousel with options
-        $('#featuredCarousel').carousel({
-            interval: 5000,  // Change slide every 5 seconds
-            wrap: true,      // Continuous loop
-            keyboard: true   // Allow keyboard navigation
-        });
+// Pure Vanilla JS Carousel (no jQuery/Bootstrap dependency)
+(function() {
+    var carousel = document.getElementById('featuredCarousel');
+    if (!carousel) return;
 
-        // Add manual control for the next and previous buttons
-        $('.carousel-control-prev').click(function(e){
-            e.preventDefault();
-            $('#featuredCarousel').carousel('prev');
-        });
+    var items = carousel.querySelectorAll('.carousel-item');
+    var indicators = carousel.querySelectorAll('.carousel-indicators li');
+    var prevBtn = carousel.querySelector('.carousel-control-prev');
+    var nextBtn = carousel.querySelector('.carousel-control-next');
+    var currentIndex = 0;
+    var intervalId = null;
+    var interval = 5000; // Auto-slide every 5 seconds
 
-        $('.carousel-control-next').click(function(e){
-            e.preventDefault();
-            $('#featuredCarousel').carousel('next');
-        });
-    } else {
-        // Retry after 50ms if jQuery/Bootstrap not ready
-        setTimeout(initCarousel, 50);
+    function showSlide(index) {
+        // Handle wrap-around
+        if (index >= items.length) index = 0;
+        if (index < 0) index = items.length - 1;
+
+        // Remove active class from all items and indicators
+        items.forEach(function(item) { item.classList.remove('active'); });
+        indicators.forEach(function(ind) { ind.classList.remove('active'); });
+
+        // Add active class to current item and indicator
+        items[index].classList.add('active');
+        if (indicators[index]) indicators[index].classList.add('active');
+
+        currentIndex = index;
     }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    function startAutoSlide() {
+        stopAutoSlide();
+        intervalId = setInterval(nextSlide, interval);
+    }
+
+    function stopAutoSlide() {
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+    }
+
+    // Event listeners for prev/next buttons
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            prevSlide();
+            startAutoSlide(); // Reset timer after manual navigation
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            nextSlide();
+            startAutoSlide(); // Reset timer after manual navigation
+        });
+    }
+
+    // Event listeners for indicators
+    indicators.forEach(function(indicator, index) {
+        indicator.addEventListener('click', function() {
+            showSlide(index);
+            startAutoSlide(); // Reset timer after manual navigation
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+            startAutoSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+            startAutoSlide();
+        }
+    });
+
+    // Pause on hover
+    carousel.addEventListener('mouseenter', stopAutoSlide);
+    carousel.addEventListener('mouseleave', startAutoSlide);
+
+    // Start auto-sliding
+    startAutoSlide();
 })();
 </script>
