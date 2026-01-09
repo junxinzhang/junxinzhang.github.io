@@ -1,25 +1,57 @@
 <!-- All this area goes before </body> closing tag -->
-
-<!-- Google Adsense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8212494466876521"
-        crossorigin="anonymous"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R8TYFJ6Q2Y"></script>
+<!-- Third-party scripts delayed until after page load for better performance -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+// Delay non-critical third-party scripts until after page is interactive
+// This significantly improves FCP, LCP, and TBT scores
+(function() {
+    'use strict';
 
-  gtag('config', 'G-R8TYFJ6Q2Y');
-</script>
-<script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?f85eaac20b336682b488801911c259b6";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
+    // Load scripts after window load or after 3 seconds (whichever comes first)
+    var scriptsLoaded = false;
+
+    function loadThirdPartyScripts() {
+        if (scriptsLoaded) return;
+        scriptsLoaded = true;
+
+        // Google Analytics (gtag.js)
+        var gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-R8TYFJ6Q2Y';
+        document.head.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-R8TYFJ6Q2Y');
+
+        // Baidu Analytics
+        var _hmt = window._hmt || [];
+        var hmScript = document.createElement('script');
+        hmScript.async = true;
+        hmScript.src = 'https://hm.baidu.com/hm.js?f85eaac20b336682b488801911c259b6';
+        document.head.appendChild(hmScript);
+
+        // Google AdSense - load last since it's least critical for UX
+        setTimeout(function() {
+            var adsenseScript = document.createElement('script');
+            adsenseScript.async = true;
+            adsenseScript.crossOrigin = 'anonymous';
+            adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8212494466876521';
+            document.head.appendChild(adsenseScript);
+        }, 1000);
+    }
+
+    // Load after window load event
+    if (document.readyState === 'complete') {
+        setTimeout(loadThirdPartyScripts, 100);
+    } else {
+        window.addEventListener('load', function() {
+            setTimeout(loadThirdPartyScripts, 100);
+        });
+    }
+
+    // Fallback: Load after 4 seconds regardless
+    setTimeout(loadThirdPartyScripts, 4000);
+})();
 </script>
   
