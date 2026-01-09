@@ -2,11 +2,7 @@
  * Mundana Jekyll Theme (https://www.wowthemes.net/mundana-jekyll-theme/)
  */
 
-/* Font display optimization - prevent FOIT (Flash of Invisible Text) */
-@font-face {
-    font-family: 'Lora';
-    font-display: swap;
-}
+/* System font stack for optimal performance */
 
 body {
 	overflow-x:hidden;
@@ -661,7 +657,7 @@ footer {
 article {
 	font-size:20px;
 	line-height:1.86;
-    font-family:Lora;
+	font-family:Georgia,"Times New Roman",serif;
 }
 .article-headline {
     font-family: Georgia,Times,"Times New Roman",serif;

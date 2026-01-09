@@ -35,7 +35,7 @@ layout: default
 				</div>
                 {% if page.image %}
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded w-100" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title | escape }}" width="600" height="400" fetchpriority="high">
+					{% include responsive-image.html src=page.image alt=page.title class="rounded w-100" width="600" height="400" fetchpriority="high" %}
 				</div>
                 {% endif %}
 			</div>
@@ -211,31 +211,40 @@ layout: default
 }
 </style>
 
-<!-- Reading Progress Bar Script -->
+<!-- Reading Progress Bar Script - Optimized with RAF -->
 <script>
 $(document).ready(function() {
-    var progressBar = $('#readingProgress');
-    var article = $('article.article-post');
+    var progressBar = document.getElementById('readingProgress');
+    var article = document.querySelector('article.article-post');
 
-    if (article.length) {
-        $(window).scroll(function() {
-            var scrollTop = $(window).scrollTop();
-            var articleTop = article.offset().top;
-            var articleHeight = article.outerHeight();
-            var windowHeight = $(window).height();
+    if (article && progressBar) {
+        var ticking = false;
+        var articleTop = article.offsetTop;
+        var articleHeight = article.offsetHeight;
+        var windowHeight = window.innerHeight;
+        var scrollStart = articleTop - windowHeight / 2;
+        var scrollEnd = articleTop + articleHeight - windowHeight / 2;
 
-            var scrollStart = articleTop - windowHeight / 2;
-            var scrollEnd = articleTop + articleHeight - windowHeight / 2;
-
+        function updateProgress() {
+            var scrollTop = window.pageYOffset;
+            var progress;
             if (scrollTop < scrollStart) {
-                progressBar.css('width', '0%');
+                progress = 0;
             } else if (scrollTop > scrollEnd) {
-                progressBar.css('width', '100%');
+                progress = 100;
             } else {
-                var progress = ((scrollTop - scrollStart) / (scrollEnd - scrollStart)) * 100;
-                progressBar.css('width', progress + '%');
+                progress = ((scrollTop - scrollStart) / (scrollEnd - scrollStart)) * 100;
             }
-        });
+            progressBar.style.width = progress + '%';
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(updateProgress);
+                ticking = true;
+            }
+        }, {passive: true});
     }
 });
 </script>

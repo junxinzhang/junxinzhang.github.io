@@ -20,7 +20,7 @@
 	{% if post.image %}
 	<div class="col-md-4 pr-0 text-right" style="padding: 0;">
 		<a href="{{site.baseurl}}{{post.url}}">
-			<img class="w-100" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title | escape }}" width="300" height="200" loading="lazy">
+			{% include responsive-image.html src=post.image alt=post.title class="w-100" width="300" height="200" loading="lazy" %}
 		</a>
 	</div>
 	{% endif %}
