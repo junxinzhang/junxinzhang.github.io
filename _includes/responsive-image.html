@@ -1,0 +1,48 @@
+{% comment %}
+响应式图片组件 - 支持 WebP 格式降级
+参数:
+  src - 图片路径
+  alt - 替代文本
+  class - CSS 类名
+  width - 宽度
+  height - 高度
+  loading - 加载策略 (lazy/eager)
+  fetchpriority - 加载优先级 (high/low/auto)
+{% endcomment %}
+
+{% assign img_src = include.src %}
+{% if img_src contains "://" %}
+  {% assign is_external = true %}
+{% else %}
+  {% assign is_external = false %}
+  {% assign full_src = site.baseurl | append: "/" | append: img_src %}
+{% endif %}
+
+{% if is_external %}
+<img
+  class="{{ include.class }}"
+  src="{{ img_src }}"
+  alt="{{ include.alt | escape }}"
+  {% if include.width %}width="{{ include.width }}"{% endif %}
+  {% if include.height %}height="{{ include.height }}"{% endif %}
+  {% if include.loading %}loading="{{ include.loading }}"{% endif %}
+  {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
+>
+{% else %}
+{% assign ext = img_src | split: "." | last | downcase %}
+{% assign base_path = img_src | split: "." | pop | join: "." %}
+{% assign webp_src = base_path | append: ".webp" %}
+
+<picture>
+  <source srcset="{{ site.baseurl }}/{{ webp_src }}" type="image/webp">
+  <img
+    class="{{ include.class }}"
+    src="{{ full_src }}"
+    alt="{{ include.alt | escape }}"
+    {% if include.width %}width="{{ include.width }}"{% endif %}
+    {% if include.height %}height="{{ include.height }}"{% endif %}
+    {% if include.loading %}loading="{{ include.loading }}"{% endif %}
+    {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
+  >
+</picture>
+{% endif %}
