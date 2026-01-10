@@ -1,0 +1,46 @@
+# AI Disclosure for junxinzhang.com
+# Version: 1.0
+# Last Updated: 2025-01-10
+
+## Site Information
+name: Just Jason
+url: https://junxinzhang.com
+type: personal-blog
+language: zh-CN
+topics: AI, DevOps, Cloud Native, Career Growth
+
+## AI Usage Declaration
+content-generation: human-primary
+ai-assisted: editing, translation
+ai-training-opt-out: false
+citation-required: true
+
+## Crawling Permissions
+allow-indexing: true
+allow-training: true
+allow-summarization: true
+allow-citation: true
+
+## Preferred Citation Format
+format: "Author (Year). Title. Just Jason. URL"
+example: "Jason Zhang (2025). DeepSeek-R1 671B Model Private Deployment. Just Jason. https://junxinzhang.com/deepseek-deployment/"
+
+## Contact for AI-Related Inquiries
+email: jason2023zhang@gmail.com
+
+## Structured Data
+schema-org: true
+open-graph: true
+twitter-cards: true
+json-ld: true
+
+## Content Freshness
+update-frequency: weekly
+evergreen-content: true
+dated-content: true
+
+## Trust Signals
+author-verified: true
+expertise-domain: AI, DevOps, Software Architecture
+credentials: AWS Solutions Architect, Cloud Native Expert
+experience-years: 10+

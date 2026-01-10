@@ -27,7 +27,15 @@ social:
     - https://github.com/junxinzhang
 locale: zh_CN
 
-include: ["_pages", "_html_pages"]
+# Webmaster Verification (for jekyll-seo-tag)
+webmaster_verifications:
+  google: googlee66b464babe97d2e
+
+# SEO Enhancement
+# Google recommends these settings for better indexing
+google_analytics: G-R8TYFJ6Q2Y
+
+include: ["_pages", "_html_pages", ".well-known"]
 permalink: /:title/
 
 # Plugins

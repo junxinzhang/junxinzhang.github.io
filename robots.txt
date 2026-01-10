@@ -1,0 +1,59 @@
+# Robots.txt for junxinzhang.com
+# Last updated: 2025
+
+User-agent: *
+Allow: /
+
+# Disallow development and system files
+Disallow: /assets/css/*.map
+Disallow: /node_modules/
+Disallow: /Gruntfile.js
+Disallow: /package.json
+
+# Allow important resources for rendering
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# AI Search Engines (GEO - Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemap location
+Sitemap: https://junxinzhang.com/sitemap.xml

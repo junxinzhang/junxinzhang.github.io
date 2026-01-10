@@ -17,6 +17,86 @@
 
     {% seo %}
 
+    <!-- Additional meta tags for enhanced SEO & GEO -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- GEO: AI Search Engine Optimization -->
+    <meta name="ai-content-declaration" content="This content is authored by a human expert with AI assistance for editing">
+
+    <!-- hreflang for international SEO -->
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}">
+    <link rel="alternate" hreflang="zh-CN" href="{{ site.url }}{{ page.url }}">
+    {% for lang in site.languages %}
+    {% assign lang_hreflang = lang %}
+    {% if lang == "zh-hans" %}{% assign lang_hreflang = "zh-CN" %}{% endif %}
+    {% if lang == "zh-hant" %}{% assign lang_hreflang = "zh-TW" %}{% endif %}
+    <link rel="alternate" hreflang="{{ lang_hreflang }}" href="{{ site.url }}{{ page.url }}{% if lang != site.default_lang %}?lang={{ lang }}{% endif %}">
+    {% endfor %}
+
+    <!-- Organization Schema for brand identity -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "{{ site.name }}",
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/{{ site.logo }}",
+        "width": 180,
+        "height": 180
+      },
+      "image": "{{ site.url }}/{{ site.logo }}",
+      "description": "{{ site.description | escape }}",
+      "sameAs": [
+        "https://twitter.com/{{ site.twitter.username }}",
+        "https://github.com/junxinzhang"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Jason Zhang",
+        "url": "{{ site.url }}/about.html"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "{{ site.email }}",
+        "contactType": "customer support"
+      }
+    }
+    </script>
+
+    <!-- Person Schema for author credibility (E-E-A-T) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "{{ site.url }}/about.html#person",
+      "name": "Jason Zhang",
+      "url": "{{ site.url }}/about.html",
+      "image": "{{ site.url }}/assets/images/avatar1.jpg",
+      "jobTitle": "AI 技术专家 & DevOps 架构师",
+      "description": "10年+ 企业级软件架构师，专注 AI 私有化部署、DevOps、云原生架构。",
+      "sameAs": [
+        "https://twitter.com/junxin1616",
+        "https://github.com/junxinzhang"
+      ],
+      "knowsAbout": [
+        "Large Language Models",
+        "AI Private Deployment",
+        "DevOps",
+        "Cloud Native Architecture",
+        "Microservices"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "{{ site.url }}/#organization"
+      }
+    }
+    </script>
+
     <!-- Schema.org structured data for SEO & GEO -->
     <script type="application/ld+json">
     {
@@ -49,7 +129,17 @@
       {% endif %}
       "description": "{% if page.description %}{{ page.description | escape }}{% else %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}{% endif %}",
       "keywords": "{{ page.tags | join: ', ' }}",
-      "articleSection": "{{ page.categories | first }}"
+      "articleSection": "{{ page.categories | first }}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".article-post h1", ".article-post h2", ".article-post p:first-of-type", ".article-post .lead"]
+      },
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by/4.0/"
       {% else %}
       "description": "{{ site.description | escape }}",
       "author": {

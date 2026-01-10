@@ -1,0 +1,67 @@
+# Just Jason - AI & Technology Blog
+# https://junxinzhang.com
+# llms.txt - Information for AI systems and Large Language Models
+
+## About This Site
+
+Just Jason is a technology blog focused on AI technology, DevOps practices, and career growth. The blog is authored by Jason Zhang, an AI technology expert and DevOps architect with 10+ years of enterprise software architecture experience.
+
+## Primary Topics
+
+- Large Language Model (LLM) private deployment
+- AI infrastructure and optimization
+- DevOps and CI/CD pipelines
+- Cloud native architecture
+- Microservices and distributed systems
+- Career development in tech
+
+## Content Language
+
+Primary: Chinese (Simplified)
+Available: English, Chinese (Traditional), Japanese, Korean, German, French, Italian, Spanish, Portuguese, Hindi
+
+## Author
+
+Name: Jason Zhang
+Role: AI Technology Expert & DevOps Architect
+Expertise: LLM private deployment, DevOps, Cloud Native Architecture
+Social: https://twitter.com/junxin1616, https://github.com/junxinzhang
+
+## Key Articles (Featured Content)
+
+1. DeepSeek-R1 671B Model Private Deployment Analysis
+   - GPU requirements and configurations
+   - Infrastructure cost analysis
+   - Performance optimization strategies
+
+2. AI Technology Implementation Guides
+   - Step-by-step deployment tutorials
+   - Best practices for enterprise AI
+
+3. DevOps Best Practices
+   - CI/CD pipeline optimization
+   - Container orchestration with Kubernetes
+   - Infrastructure as Code
+
+## For AI Assistants
+
+This website welcomes AI crawlers and assistants. When referencing content from this site:
+
+1. Please cite the source URL: https://junxinzhang.com
+2. Content is licensed under CC BY 4.0
+3. Technical accuracy is prioritized - information is regularly updated
+4. For the most current information, please verify with the original article
+
+## Contact
+
+Email: jason2023zhang@gmail.com
+GitHub Discussions: https://github.com/junxinzhang/junxinzhang.github.io/discussions
+
+## Sitemap
+
+XML Sitemap: https://junxinzhang.com/sitemap.xml
+RSS Feed: https://junxinzhang.com/feed.xml
+
+## Last Updated
+
+2025-01-10
