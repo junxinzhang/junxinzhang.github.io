@@ -1,0 +1,412 @@
+---
+layout: default
+---
+
+<style>
+/* About Page Styles - Matching site theme */
+.about-hero {
+  background: #fff;
+  padding: 3rem 0 2rem;
+  text-align: center;
+  border-bottom: 1px solid #e8f3ec;
+}
+
+.about-hero .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #03a87c;
+  margin: 0 auto 1.5rem;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #03a87c;
+}
+
+.about-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 0.75rem;
+}
+
+.about-hero .tagline {
+  font-size: 1.1rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.6;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Skill Tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skill-tag {
+  background: #e8f3ec;
+  color: #03a87c;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Section Styles */
+.about-section {
+  margin-bottom: 2.5rem;
+}
+
+.about-section h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #03a87c;
+  display: inline-block;
+}
+
+.about-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 1.25rem 0 0.75rem;
+}
+
+/* Credentials Grid */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.credential-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.25rem;
+  border-left: 3px solid #03a87c;
+  transition: box-shadow 0.2s ease;
+}
+
+.credential-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.credential-item .icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #03a87c;
+}
+
+.credential-item h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.25rem;
+}
+
+.credential-item p {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Expertise Areas */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.expertise-card {
+  background: #fff;
+  border: 1px solid #e8f3ec;
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.expertise-card:hover {
+  border-color: #03a87c;
+  box-shadow: 0 2px 8px rgba(3, 168, 124, 0.1);
+}
+
+.expertise-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.expertise-card h4 .card-icon {
+  color: #03a87c;
+  font-size: 1.25rem;
+}
+
+.expertise-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expertise-card li {
+  padding: 0.3rem 0;
+  padding-left: 1rem;
+  position: relative;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.expertise-card li:before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: #03a87c;
+  font-weight: bold;
+}
+
+/* Project Table */
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.project-table thead th {
+  background: #f8f9fa;
+  color: #212529;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #03a87c;
+}
+
+.project-table tbody td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e8f3ec;
+  color: #555;
+}
+
+.project-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+/* Blog Topics */
+.blog-topics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.blog-topic {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.blog-topic:hover {
+  transform: translateY(-2px);
+}
+
+.blog-topic .topic-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #03a87c;
+}
+
+.blog-topic h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.35rem;
+}
+
+.blog-topic p {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Contact Links */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #212529;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.contact-item:hover {
+  background: #e8f3ec;
+  border-color: #03a87c;
+  color: #03a87c;
+  text-decoration: none;
+}
+
+.contact-item .contact-icon {
+  color: #03a87c;
+  display: flex;
+  align-items: center;
+}
+
+.contact-item span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* FAQ Section */
+.faq-item {
+  border: 1px solid #e8f3ec;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  background: #f8f9fa;
+  padding: 0.875rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #212529;
+}
+
+.faq-answer {
+  padding: 0.875rem 1rem;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  .about-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-hero .tagline {
+    font-size: 1rem;
+  }
+
+  .about-hero .avatar {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+  }
+
+  .about-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .credentials-grid,
+  .expertise-grid,
+  .blog-topics {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-table {
+    font-size: 0.8rem;
+  }
+
+  .project-table thead th,
+  .project-table tbody td {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .about-hero .avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 1.75rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-tags {
+    gap: 0.4rem;
+  }
+
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+  }
+}
+</style>
+
+<!-- Hero Section -->
+<div class="about-hero">
+  <div class="container">
+    <div class="avatar">
+      JZ
+    </div>
+    <h1>{{ page.name | default: "Jason Zhang" }}</h1>
+    <p class="tagline">{{ page.tagline | default: "10年+ 企业级软件架构师，专注于 AI 私有化部署、DevOps 实践和云原生架构设计" }}</p>
+
+    {% if page.skills %}
+    <div class="skill-tags">
+      {% for skill in page.skills %}
+      <span class="skill-tag">{{ skill }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="about-content">
+  {{ content }}
+</div>
+
+<!-- Comments -->
+{% if page.comments == true %}
+<div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+{% include comments.html %}
+</div>
+{% endif %}
