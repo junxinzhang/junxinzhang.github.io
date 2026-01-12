@@ -2,7 +2,7 @@
     <!-- 作者简介卡片 -->
     <div class="author-card mb-4 p-4 bg-light rounded text-center">
         <a href="{{site.baseurl}}/about.html">
-            <img src="{{site.baseurl}}/assets/images/avatar1.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Jason Zhang">
+            {% include responsive-image.html src="assets/images/avatar1.jpg" alt="Jason Zhang" class="rounded-circle mb-3" width="80" height="80" loading="lazy" %}
         </a>
         <h5 class="mb-2"><a href="{{site.baseurl}}/about.html" class="text-dark">Jason Zhang</a></h5>
         <p class="small text-muted mb-3" data-i18n="sidebar.bio">专注于 AI 技术、DevOps 和个人成长</p>

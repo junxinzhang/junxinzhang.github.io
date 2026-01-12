@@ -1,0 +1,57 @@
+{% comment %}
+优化的图片组件 - 替代 background-image，支持 WebP 和懒加载
+参数:
+  src - 图片路径
+  alt - 替代文本 (可选)
+  class - 容器 CSS 类名 (可选)
+  img-class - 图片 CSS 类名 (可选)
+  height - 容器高度 (默认 350px)
+  loading - 加载策略 (lazy/eager, 默认 lazy)
+  fetchpriority - 加载优先级 (high/low/auto)
+{% endcomment %}
+
+{% assign img_src = include.src %}
+{% assign img_height = include.height | default: "350px" %}
+{% assign img_loading = include.loading | default: "lazy" %}
+{% assign img_alt = include.alt | default: "" %}
+
+{% if img_src contains "://" %}
+  {% assign is_external = true %}
+{% else %}
+  {% assign is_external = false %}
+  {% assign full_src = site.baseurl | append: "/" | append: img_src %}
+  {% assign ext = img_src | split: "." | last | downcase %}
+  {% assign base_path = img_src | split: "." | pop | join: "." %}
+  {% assign webp_src = site.baseurl | append: "/" | append: base_path | append: ".webp" %}
+{% endif %}
+
+<div class="optimized-img-container {{ include.class }}" style="height: {{ img_height }}; position: relative; overflow: hidden;">
+  {% if is_external %}
+  <img
+    class="optimized-img {{ include.img-class }}"
+    src="{{ img_src }}"
+    alt="{{ img_alt | escape }}"
+    width="800"
+    height="450"
+    loading="{{ img_loading }}"
+    decoding="async"
+    {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+  >
+  {% else %}
+  <picture>
+    <source srcset="{{ webp_src }}" type="image/webp">
+    <img
+      class="optimized-img {{ include.img-class }}"
+      src="{{ full_src }}"
+      alt="{{ img_alt | escape }}"
+      width="800"
+      height="450"
+      loading="{{ img_loading }}"
+      decoding="async"
+      {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+    >
+  </picture>
+  {% endif %}
+</div>
