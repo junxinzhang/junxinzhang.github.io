@@ -52,6 +52,50 @@ permalink: "/categories.html"
 .category-section.hidden {
     display: none;
 }
+
+/* 移动端响应式布局 */
+@media (max-width: 767px) {
+    /* 文章卡片在移动端垂直堆叠 */
+    .main-loop-card {
+        flex-direction: column-reverse !important;
+    }
+
+    /* 图片容器移动端全宽显示 */
+    .main-loop-card > .col-md-4 {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 15px;
+        text-align: left !important;
+    }
+
+    /* 图片移动端样式 */
+    .main-loop-card > .col-md-4 img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* 文字内容区域移动端全宽 */
+    .main-loop-card > .pr-3 {
+        width: 100% !important;
+        padding-right: 0 !important;
+    }
+
+    /* 标题移动端字号调整 */
+    .main-loop-card h2 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    /* 摘要文字移动端优化 */
+    .main-loop-card .excerpt {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
 </style>
 
 <div class="container">
