@@ -5,6 +5,46 @@
     .lunrsearchresult a {display: block; color: #777;}
     .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
     .lunrsearchresult a:hover .title {text-decoration: underline;}
+    /* No results styling */
+    .lunrsearchresult.no-results {
+        text-align: center;
+        padding: 30px 20px;
+        color: var(--text-color, #333);
+    }
+    .no-results-icon {
+        color: var(--text-muted, #6c757d);
+        margin-bottom: 15px;
+    }
+    .no-results h5 {
+        margin-bottom: 10px;
+        color: var(--text-color, #333);
+    }
+    .no-results .suggestions {
+        text-align: left;
+        display: inline-block;
+        margin: 15px 0;
+        padding-left: 20px;
+        color: var(--text-muted, #666);
+    }
+    .no-results .suggestions li {
+        margin-bottom: 5px;
+    }
+    .no-results .badge {
+        padding: 5px 10px;
+        margin: 2px;
+        border-radius: 15px;
+        background-color: var(--light, #f8f9fa);
+        color: var(--text-color, #333);
+        text-decoration: none;
+        transition: background-color var(--transition-duration, 0.3s);
+    }
+    .no-results .badge:hover {
+        background-color: var(--primary, #03a87c);
+        color: #fff;
+    }
+    [data-theme="dark"] .no-results .badge {
+        background-color: var(--card-bg, #16213e);
+    }
 </style>
 
 <form class="bd-search hidden-sm-down" onSubmit="return initSearchAndRun(document.getElementById('lunrsearch').value);">
@@ -114,7 +154,28 @@ function lunr_search(term) {
                 document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML += "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><small><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></small></a></li>";
             }
         } else {
-            document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>Sorry, no results found. Close & try a different search!</li>";
+            document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult no-results'>" +
+                "<div class='no-results-icon'>" +
+                    "<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='currentColor' viewBox='0 0 16 16'>" +
+                        "<path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/>" +
+                    "</svg>" +
+                "</div>" +
+                "<h5>未找到 \"" + term + "\" 的相关结果</h5>" +
+                "<p class='text-muted'>试试以下建议：</p>" +
+                "<ul class='suggestions'>" +
+                    "<li>检查拼写是否正确</li>" +
+                    "<li>尝试使用更通用的关键词</li>" +
+                    "<li>减少关键词数量</li>" +
+                    "<li>尝试使用同义词或相关词</li>" +
+                "</ul>" +
+                "<div class='popular-tags mt-3'>" +
+                    "<span class='text-muted'>热门标签：</span>" +
+                    "<a href='/tags.html#AI' class='badge badge-light'>AI</a> " +
+                    "<a href='/tags.html#DevOps' class='badge badge-light'>DevOps</a> " +
+                    "<a href='/tags.html#LLM' class='badge badge-light'>LLM</a> " +
+                    "<a href='/categories.html' class='badge badge-light'>浏览分类</a>" +
+                "</div>" +
+            "</li>";
         }
     }
     return false;

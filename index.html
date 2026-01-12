@@ -253,11 +253,11 @@ image: assets/images/logo.png
 <style>
 /* Custom styles for modern look */
 .hover-effect {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-duration, 0.3s) ease, box-shadow var(--transition-duration, 0.3s) ease;
 }
 .hover-effect:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 10px 20px var(--shadow-color, rgba(0,0,0,0.1)) !important;
 }
 .shadow-sm {
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
@@ -270,11 +270,11 @@ image: assets/images/logo.png
     contain: layout;
 }
 .card-img-top {
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
     /* CLS fix: aspect ratio for consistent image container height */
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    background-color: #f0f0f0;
+    background-color: var(--card-bg, #f0f0f0);
 }
 .card:hover .card-img-top {
     transform: scale(1.05);
@@ -384,6 +384,111 @@ image: assets/images/logo.png
 .carousel-control-next:hover {
     opacity: 1;
 }
+
+/* Focus indicators for carousel controls */
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    outline: 2px solid var(--primary, #03a87c);
+    outline-offset: 2px;
+}
+
+.carousel-indicators li:focus {
+    outline: 2px solid var(--primary, #03a87c);
+    outline-offset: 2px;
+}
+
+/* Dark mode support for cards and carousel */
+[data-theme="dark"] .card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .card-title a,
+[data-theme="dark"] .carousel-title a {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .card-text {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .spanborder {
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .spanborder span {
+    border-bottom-color: #58a6ff;
+}
+
+[data-theme="dark"] .lazy-bg {
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .btn-outline-primary {
+    color: #58a6ff;
+    border-color: #58a6ff;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: #58a6ff;
+    color: var(--card-bg);
+}
+
+[data-theme="dark"] .btn-primary {
+    background-color: #238636;
+    border-color: #238636;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background-color: #2ea043;
+    border-color: #2ea043;
+}
+
+/* Dark mode - Carousel */
+[data-theme="dark"] .carousel {
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .carousel-background {
+    opacity: 0.9;
+}
+
+/* Dark mode - Pagination */
+[data-theme="dark"] .page-link {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .page-link:hover {
+    background-color: #21262d;
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+[data-theme="dark"] .page-item.active .page-link {
+    background-color: #238636;
+    border-color: #238636;
+}
+
+[data-theme="dark"] .page-item.disabled .page-link {
+    background-color: var(--card-bg);
+    color: var(--text-muted);
+}
+
+/* Dark mode - Section headers */
+[data-theme="dark"] h2.font-weight-bold {
+    color: var(--text-color);
+}
+
+/* Dark mode - Card deck for AI solutions */
+[data-theme="dark"] .card-deck .card {
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .card-deck .card h4 a {
+    color: var(--text-color);
+}
 </style>
 <script>
 // Pure Vanilla JS Carousel (no jQuery/Bootstrap dependency)
@@ -474,6 +579,42 @@ image: assets/images/logo.png
     // Pause on hover
     carousel.addEventListener('mouseenter', stopAutoSlide);
     carousel.addEventListener('mouseleave', startAutoSlide);
+
+    // Touch/Swipe support for mobile
+    var touchStartX = 0;
+    var touchEndX = 0;
+    var touchStartY = 0;
+    var touchEndY = 0;
+    var minSwipeDistance = 50;
+
+    carousel.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+        stopAutoSlide();
+    }, {passive: true});
+
+    carousel.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        handleSwipe();
+        startAutoSlide();
+    }, {passive: true});
+
+    function handleSwipe() {
+        var deltaX = touchEndX - touchStartX;
+        var deltaY = touchEndY - touchStartY;
+
+        // Only trigger if horizontal swipe is greater than vertical (to avoid conflicts with scrolling)
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+            if (deltaX > 0) {
+                // Swiped right - go to previous slide
+                prevSlide();
+            } else {
+                // Swiped left - go to next slide
+                nextSlide();
+            }
+        }
+    }
 
     // Start auto-sliding
     startAutoSlide();

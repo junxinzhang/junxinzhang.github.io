@@ -379,15 +379,156 @@ layout: default
     padding: 0.3rem 0.7rem;
   }
 }
+
+/* Dark Mode Styles for About Page */
+[data-theme="dark"] .about-hero {
+  background: var(--card-bg, #161b22);
+  border-bottom-color: var(--border-color, #30363d);
+}
+
+[data-theme="dark"] .about-hero h1 {
+  color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .about-hero .tagline {
+  color: var(--text-muted, #8b949e);
+}
+
+[data-theme="dark"] .about-hero .avatar {
+  background: var(--card-bg, #161b22);
+  border-color: #58a6ff;
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .skill-tag {
+  background: #21262d;
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .about-content {
+  background: var(--bg-color, #0d1117);
+}
+
+[data-theme="dark"] .about-section h2 {
+  color: var(--text-color, #e6edf3);
+  border-bottom-color: #58a6ff;
+}
+
+[data-theme="dark"] .about-section h3 {
+  color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .credential-item {
+  background: var(--card-bg, #161b22);
+  border-left-color: #58a6ff;
+}
+
+[data-theme="dark"] .credential-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .credential-item .icon {
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .credential-item h4 {
+  color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .credential-item p {
+  color: var(--text-muted, #8b949e);
+}
+
+[data-theme="dark"] .expertise-card {
+  background: var(--card-bg, #161b22);
+  border-color: var(--border-color, #30363d);
+}
+
+[data-theme="dark"] .expertise-card:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 2px 8px rgba(88, 166, 255, 0.15);
+}
+
+[data-theme="dark"] .expertise-card h4 {
+  color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .expertise-card h4 .card-icon {
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .expertise-card li {
+  color: var(--text-muted, #8b949e);
+}
+
+[data-theme="dark"] .expertise-card li:before {
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .project-table thead th {
+  background: var(--card-bg, #161b22);
+  color: var(--text-color, #e6edf3);
+  border-bottom-color: #58a6ff;
+}
+
+[data-theme="dark"] .project-table tbody td {
+  border-bottom-color: var(--border-color, #30363d);
+  color: var(--text-muted, #8b949e);
+}
+
+[data-theme="dark"] .project-table tbody tr:hover {
+  background: #21262d;
+}
+
+[data-theme="dark"] .blog-topic {
+  background: var(--card-bg, #161b22);
+}
+
+[data-theme="dark"] .blog-topic .topic-icon {
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .blog-topic h4 {
+  color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .blog-topic p {
+  color: var(--text-muted, #8b949e);
+}
+
+[data-theme="dark"] .contact-item {
+  background: var(--card-bg, #161b22);
+  color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .contact-item:hover {
+  background: #21262d;
+  border-color: #58a6ff;
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .contact-item .contact-icon {
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .faq-item {
+  border-color: var(--border-color, #30363d);
+}
+
+[data-theme="dark"] .faq-question {
+  background: var(--card-bg, #161b22);
+  color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .faq-answer {
+  color: var(--text-muted, #8b949e);
+  background: var(--bg-color, #0d1117);
+}
 </style>
 
 <!-- Hero Section -->
 <div class="about-hero">
   <div class="container">
-    <div class="avatar">
-      JZ
-    </div>
-    <h1>{{ page.name | default: "Jason Zhang" }}</h1>
     <p class="tagline">{{ page.tagline | default: "10年+ 企业级软件架构师，专注于 AI 私有化部署、DevOps 实践和云原生架构设计" }}</p>
 
     {% if page.skills %}
