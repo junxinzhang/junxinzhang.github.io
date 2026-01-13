@@ -55,6 +55,15 @@
     background-color: var(--card-bg) !important;
 }
 
+[data-theme="dark"] .bg-lightblue {
+    background-color: var(--card-bg) !important;
+}
+
+[data-theme="dark"] .bg-lightblue h5,
+[data-theme="dark"] .bg-lightblue p {
+    color: var(--text-color) !important;
+}
+
 /* Borders */
 [data-theme="dark"] .border-top {
     border-color: var(--border-color) !important;

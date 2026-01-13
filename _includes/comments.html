@@ -1,20 +1,47 @@
 <!--  Don't edit anything here. Set your disqus id in _config.yml -->
 
 <div id="comments" class="mt-5">
-    <script src="https://giscus.app/client.js"
-            data-repo="junxinzhang/junxinzhang.github.io"
-            data-repo-id="MDEwOlJlcG9zaXRvcnk4MzAyMTUxOA=="
-            data-category="Announcements"
-            data-category-id="DIC_kwDOBPLOzs4CT3fr"
-            data-mapping="og:title"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="1"
-            data-input-position="top"
-            data-theme="light"
-            data-lang="en"
-            data-loading="lazy"
-            crossorigin="anonymous"
-            async>
+    <script>
+    (function() {
+        // Get current theme
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        var giscusTheme = isDark ? 'dark' : 'light';
+
+        // Create and insert giscus script
+        var script = document.createElement('script');
+        script.src = 'https://giscus.app/client.js';
+        script.setAttribute('data-repo', 'junxinzhang/junxinzhang.github.io');
+        script.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnk4MzAyMTUxOA==');
+        script.setAttribute('data-category', 'Announcements');
+        script.setAttribute('data-category-id', 'DIC_kwDOBPLOzs4CT3fr');
+        script.setAttribute('data-mapping', 'og:title');
+        script.setAttribute('data-strict', '0');
+        script.setAttribute('data-reactions-enabled', '1');
+        script.setAttribute('data-emit-metadata', '1');
+        script.setAttribute('data-input-position', 'top');
+        script.setAttribute('data-theme', giscusTheme);
+        script.setAttribute('data-lang', 'en');
+        script.setAttribute('data-loading', 'lazy');
+        script.setAttribute('crossorigin', 'anonymous');
+        script.async = true;
+        document.getElementById('comments').appendChild(script);
+
+        // Listen for theme changes
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.attributeName === 'data-theme') {
+                    var newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                    var iframe = document.querySelector('iframe.giscus-frame');
+                    if (iframe) {
+                        iframe.contentWindow.postMessage(
+                            { giscus: { setConfig: { theme: newTheme } } },
+                            'https://giscus.app'
+                        );
+                    }
+                }
+            });
+        });
+        observer.observe(document.documentElement, { attributes: true });
+    })();
     </script>
 </div>
