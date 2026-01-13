@@ -18,12 +18,12 @@ languages: ["en", "zh-hans", "zh-hant", "ja", "ko", "de", "fr", "it", "es", "pt"
 
 # SEO & Social
 twitter:
-  username: junxin1616
+  username: Jasonz9788
   card: summary_large_image
 social:
   name: Jason Zhang
   links:
-    - https://twitter.com/junxin1616
+    - https://x.com/Jasonz9788
     - https://github.com/junxinzhang
 locale: zh_CN
 
@@ -60,7 +60,7 @@ authors:
         - "云原生架构设计"
         - "微服务与分布式系统"
       email:          jason2023zhang@gmail.com
-      twitter:        https://twitter.com/junxin1616
+      twitter:        https://x.com/Jasonz9788
       github:         https://github.com/junxinzhang
  
 # Defaults

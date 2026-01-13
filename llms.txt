@@ -25,7 +25,7 @@ Available: English, Chinese (Traditional), Japanese, Korean, German, French, Ita
 Name: Jason Zhang
 Role: AI Technology Expert & DevOps Architect
 Expertise: LLM private deployment, DevOps, Cloud Native Architecture
-Social: https://twitter.com/junxin1616, https://github.com/junxinzhang
+Social: https://x.com/Jasonz9788, https://github.com/junxinzhang
 
 ## Key Articles (Featured Content)
 
