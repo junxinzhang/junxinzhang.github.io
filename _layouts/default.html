@@ -15,6 +15,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{page.title}} | {{site.name}}</title>
 
+    <!-- PWA Support -->
+    <link rel="manifest" href="{{site.baseurl}}/manifest.json">
+    <meta name="theme-color" content="#03a87c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Just Jason">
+
     {% seo %}
 
     <!-- Additional meta tags for enhanced SEO & GEO -->
@@ -246,9 +253,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/images/favicon/favicon-16x16.png">
 
-    <!-- DNS Prefetch for third-party resources -->
+    <!-- DNS Prefetch and Preconnect for third-party resources -->
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 
     <!-- Critical CSS inline for faster FCP/LCP -->
     <style>
@@ -333,9 +343,13 @@
     <link rel="preload" href="{{site.baseurl}}/assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css"></noscript>
 
-    <!-- Theme Stylesheet - Async load -->
-    <link rel="preload" href="{{site.baseurl}}/assets/css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css"></noscript>
+    <!-- Theme Stylesheet - Async load (minified) -->
+    <link rel="preload" href="{{site.baseurl}}/assets/css/theme.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.min.css"></noscript>
+
+    <!-- Dark Mode Stylesheet - Async load -->
+    <link rel="preload" href="{{site.baseurl}}/assets/css/dark-mode.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{site.baseurl}}/assets/css/dark-mode.css"></noscript>
 
     <!-- Font Awesome - Defer load until after page interactive -->
     <!-- Google Fonts removed - using system fonts for better performance -->
@@ -413,8 +427,21 @@
     </main>
 
 
-    <!-- Bootstrap JS removed - using vanilla JS navbar toggle for better performance -->
-    <script defer src="{{site.baseurl}}/assets/js/theme.js"></script>
+    <!-- Theme JS (minified) -->
+    <script defer src="{{site.baseurl}}/assets/js/theme.min.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(reg) {
+                console.log('SW registered:', reg.scope);
+            }).catch(function(err) {
+                console.log('SW registration failed:', err);
+            });
+        });
+    }
+    </script>
 
 
     <!-- Footer -->
@@ -603,127 +630,16 @@
     </script>
 
     <style>
-    /* Navbar collapse transition */
+    /* Navbar collapse transition - Critical for FOUC prevention */
     .navbar-collapse{display:none}
     .navbar-collapse.show{display:block}
     @media(min-width:992px){.navbar-collapse{display:flex!important}}
-    .lazy-bg {
-        background-color: #f0f0f0;
-        transition: opacity var(--transition-duration) ease;
-    }
-    .lazy-bg.lazy-loaded {
-        opacity: 1;
-    }
-    /* Dark mode styles - Comprehensive */
-    [data-theme="dark"]{color-scheme:dark}
+    .lazy-bg{background-color:#f0f0f0;transition:opacity var(--transition-duration) ease}
+    .lazy-bg.lazy-loaded{opacity:1}
+    /* Critical dark mode variables - prevents flash */
+    [data-theme="dark"]{--bg-color:#0d1117;--text-color:#e6edf3;--card-bg:#161b22;color-scheme:dark}
     [data-theme="dark"] body{background-color:var(--bg-color);color:var(--text-color)}
     [data-theme="dark"] .navbar-light{background-color:var(--card-bg)!important}
-    [data-theme="dark"] .navbar-light .navbar-brand,[data-theme="dark"] .navbar-light .nav-link{color:var(--text-color)!important}
-    [data-theme="dark"] .bg-white{background-color:var(--card-bg)!important}
-    [data-theme="dark"] .border-top{border-color:var(--border-color)!important}
-    [data-theme="dark"] .shadow,[data-theme="dark"] .shadow-sm{box-shadow:0 .5rem 1rem var(--shadow-color)!important}
-    [data-theme="dark"] .spanborder{border-bottom-color:var(--border-color)}
-    [data-theme="dark"] code{background-color:var(--code-bg);color:#e4e4e7}
-    [data-theme="dark"] .form-control{background-color:var(--card-bg);border-color:var(--border-color);color:var(--text-color)}
-    [data-theme="dark"] .back-to-top{background-color:#4f46e5}
-    [data-theme="dark"] .back-to-top:hover{background-color:#6366f1}
-    /* Dark mode - Content areas */
-    [data-theme="dark"] .site-content{background-color:var(--bg-color)}
-    [data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3,[data-theme="dark"] h4,[data-theme="dark"] h5,[data-theme="dark"] h6{color:var(--text-color)}
-    [data-theme="dark"] p{color:var(--text-color)}
-    [data-theme="dark"] .text-dark{color:var(--text-color)!important}
-    [data-theme="dark"] a.text-dark:hover{color:#58a6ff!important}
-    /* Dark mode - Cards and containers */
-    [data-theme="dark"] .card{background-color:var(--card-bg);border-color:var(--border-color)}
-    [data-theme="dark"] .card-body{background-color:var(--card-bg)}
-    [data-theme="dark"] .card-title a{color:var(--text-color)}
-    [data-theme="dark"] .card-text{color:var(--text-muted)}
-    /* Dark mode - About page specific */
-    [data-theme="dark"] .about-hero{background-color:var(--card-bg);border-bottom-color:var(--border-color)}
-    [data-theme="dark"] .about-hero h1{color:var(--text-color)}
-    [data-theme="dark"] .about-hero .tagline{color:var(--text-muted)}
-    [data-theme="dark"] .skill-tag{background-color:#21262d;color:#58a6ff}
-    [data-theme="dark"] .about-section h2{color:var(--text-color)}
-    [data-theme="dark"] .about-section h3{color:var(--text-color)}
-    [data-theme="dark"] .credential-item{background-color:var(--card-bg);border-left-color:#58a6ff}
-    [data-theme="dark"] .credential-item h4{color:var(--text-color)}
-    [data-theme="dark"] .credential-item p{color:var(--text-muted)}
-    [data-theme="dark"] .expertise-card{background-color:var(--card-bg);border-color:var(--border-color)}
-    [data-theme="dark"] .expertise-card h4{color:var(--text-color)}
-    [data-theme="dark"] .expertise-card li{color:var(--text-muted)}
-    [data-theme="dark"] .expertise-card:hover{border-color:#58a6ff}
-    /* Dark mode - Tables */
-    [data-theme="dark"] .project-table thead th{background-color:var(--card-bg);color:var(--text-color);border-bottom-color:#58a6ff}
-    [data-theme="dark"] .project-table tbody td{color:var(--text-muted);border-bottom-color:var(--border-color)}
-    [data-theme="dark"] .project-table tbody tr:hover{background-color:#21262d}
-    /* Dark mode - Blog topics and contact */
-    [data-theme="dark"] .blog-topic{background-color:var(--card-bg)}
-    [data-theme="dark"] .blog-topic h4{color:var(--text-color)}
-    [data-theme="dark"] .blog-topic p{color:var(--text-muted)}
-    [data-theme="dark"] .contact-item{background-color:var(--card-bg);color:var(--text-color)}
-    [data-theme="dark"] .contact-item:hover{background-color:#21262d;border-color:#58a6ff}
-    /* Dark mode - FAQ */
-    [data-theme="dark"] .faq-item{border-color:var(--border-color)}
-    [data-theme="dark"] .faq-question{background-color:var(--card-bg);color:var(--text-color)}
-    [data-theme="dark"] .faq-answer{color:var(--text-muted)}
-    /* Dark mode - Article and post content */
-    [data-theme="dark"] article{color:var(--text-color)}
-    [data-theme="dark"] .article-headline{color:var(--text-color)}
-    [data-theme="dark"] .excerpt{color:var(--text-muted)}
-    [data-theme="dark"] blockquote{color:var(--text-muted);border-left-color:#58a6ff}
-    /* Dark mode - Footer */
-    [data-theme="dark"] footer{background-color:var(--card-bg)!important}
-    [data-theme="dark"] footer a{color:var(--text-muted)}
-    /* Dark mode - Sidebar */
-    [data-theme="dark"] .sticky-top{background-color:var(--bg-color)}
-    /* Dark mode - Alertbar */
-    [data-theme="dark"] .alertbar{background-color:var(--card-bg)}
-    /* Dark mode - Dropdown */
-    [data-theme="dark"] .dropdown-menu{background-color:var(--card-bg);border-color:var(--border-color)}
-    [data-theme="dark"] .dropdown-item{color:var(--text-color)}
-    [data-theme="dark"] .dropdown-item:hover{background-color:#21262d}
-    /* Dark mode - Sidebar */
-    [data-theme="dark"] .bg-light{background-color:var(--card-bg)!important}
-    [data-theme="dark"] .author-card{background-color:var(--card-bg)!important}
-    [data-theme="dark"] .author-card h5 a{color:var(--text-color)}
-    [data-theme="dark"] .list-featured li h6 a{color:var(--text-color)}
-    [data-theme="dark"] .list-featured li:before{color:var(--text-muted)}
-    [data-theme="dark"] .subscribe-card{background-color:#238636!important}
-    /* Dark mode - Links and buttons */
-    [data-theme="dark"] a{color:#58a6ff}
-    [data-theme="dark"] a:hover{color:#79c0ff}
-    [data-theme="dark"] .text-primary{color:#58a6ff!important}
-    [data-theme="dark"] .btn-primary{background-color:#238636;border-color:#238636}
-    [data-theme="dark"] .btn-primary:hover{background-color:#2ea043;border-color:#2ea043}
-    /* Dark mode - Images and icons */
-    [data-theme="dark"] .social-links a{color:var(--text-muted)}
-    [data-theme="dark"] .social-links a:hover{color:#58a6ff}
-    /* Dark mode - Modal for search */
-    [data-theme="dark"] .modal-content{background-color:var(--card-bg);border-color:var(--border-color)}
-    [data-theme="dark"] .modal-header{border-bottom-color:var(--border-color)}
-    [data-theme="dark"] .modal-footer{border-top-color:var(--border-color)}
-    [data-theme="dark"] .modal-title{color:var(--text-color)}
-    [data-theme="dark"] .close{color:var(--text-color)}
-    /* Dark mode - Lists */
-    [data-theme="dark"] ul li,[data-theme="dark"] ol li{color:var(--text-color)}
-    /* Dark mode - Misc elements */
-    [data-theme="dark"] hr{border-color:var(--border-color)}
-    [data-theme="dark"] .jumbotron{background-color:var(--bg-color)}
-    [data-theme="dark"] .container{background-color:transparent}
-    [data-theme="dark"] ::selection{background-color:#58a6ff;color:#0d1117}
-    [data-theme="dark"] ::-moz-selection{background-color:#58a6ff;color:#0d1117}
-    [data-theme="dark"] input,[data-theme="dark"] textarea,[data-theme="dark"] select{background-color:var(--card-bg);border-color:var(--border-color);color:var(--text-color)}
-    [data-theme="dark"] input::placeholder,[data-theme="dark"] textarea::placeholder{color:var(--text-muted)}
-    [data-theme="dark"] .badge{background-color:var(--card-bg);color:var(--text-color)}
-    [data-theme="dark"] .badge-light{background-color:#21262d}
-    [data-theme="dark"] .alert{background-color:var(--card-bg);border-color:var(--border-color);color:var(--text-color)}
-    #themeToggle{border:none;background:transparent;cursor:pointer;color:var(--text-color);transition:transform var(--transition-duration)}
-    #themeToggle:hover{transform:rotate(15deg)}
-    #themeToggle:focus{outline:2px solid var(--primary);outline-offset:2px;border-radius:4px}
-    /* Focus indicator enhancement */
-    a:focus,button:focus,.btn:focus,.form-control:focus,.nav-link:focus{outline:2px solid var(--primary);outline-offset:2px}
-    a:focus:not(:focus-visible),button:focus:not(:focus-visible){outline:none}
-    a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--primary);outline-offset:2px;border-radius:2px}
     </style>
 
     {% include tracking-footer.html %}

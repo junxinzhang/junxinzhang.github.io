@@ -1,0 +1,133 @@
+---
+layout: null
+permalink: /offline.html
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>离线 - Just Jason</title>
+    <style>
+        :root {
+            --bg-color: #fff;
+            --text-color: #212529;
+            --text-muted: #6c757d;
+            --primary: #03a87c;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0d1117;
+                --text-color: #e6edf3;
+                --text-muted: #8b949e;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .offline-icon {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 30px;
+            color: var(--text-muted);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 400px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .retry-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .retry-btn:hover {
+            background-color: #028a66;
+        }
+        .tips {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(128, 128, 128, 0.1);
+            border-radius: 8px;
+            max-width: 400px;
+        }
+        .tips h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
+        .tips ul {
+            text-align: left;
+            list-style: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .tips li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .tips li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <svg class="offline-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"/>
+    </svg>
+
+    <h1>您当前处于离线状态</h1>
+    <p>看起来您的网络连接出现了问题。请检查您的网络设置后重试。</p>
+
+    <button class="retry-btn" onclick="window.location.reload()">重新加载</button>
+
+    <div class="tips">
+        <h3>您可以尝试：</h3>
+        <ul>
+            <li>检查 WiFi 或移动数据连接</li>
+            <li>关闭飞行模式</li>
+            <li>稍后再试</li>
+            <li>已访问的页面可能仍可离线查看</li>
+        </ul>
+    </div>
+
+    <script>
+        // 监听网络状态变化
+        window.addEventListener('online', function() {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>

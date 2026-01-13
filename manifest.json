@@ -1,0 +1,65 @@
+{
+  "name": "Just Jason - AI与技术博客",
+  "short_name": "Just Jason",
+  "description": "专注于 AI 技术、DevOps 实践、职业成长的技术博客",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#03a87c",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "zh-CN",
+  "categories": ["blog", "technology", "education"],
+  "icons": [
+    {
+      "src": "/assets/images/favicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/favicon/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "所有文章",
+      "short_name": "文章",
+      "description": "浏览所有博客文章",
+      "url": "/",
+      "icons": [{ "src": "/assets/images/favicon/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "分类",
+      "short_name": "分类",
+      "description": "按分类浏览文章",
+      "url": "/categories.html",
+      "icons": [{ "src": "/assets/images/favicon/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "关于",
+      "short_name": "关于",
+      "description": "关于作者",
+      "url": "/about.html",
+      "icons": [{ "src": "/assets/images/favicon/favicon-32x32.png", "sizes": "32x32" }]
+    }
+  ]
+}
