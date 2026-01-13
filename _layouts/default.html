@@ -15,6 +15,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{page.title}} | {{site.name}}</title>
 
+    <!-- PWA Support -->
+    <link rel="manifest" href="{{site.baseurl}}/manifest.json">
+    <meta name="theme-color" content="#03a87c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Just Jason">
+
     {% seo %}
 
     <!-- Additional meta tags for enhanced SEO & GEO -->
@@ -246,9 +253,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/images/favicon/favicon-16x16.png">
 
-    <!-- DNS Prefetch for third-party resources -->
+    <!-- DNS Prefetch and Preconnect for third-party resources -->
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 
     <!-- Critical CSS inline for faster FCP/LCP -->
     <style>
@@ -333,9 +343,9 @@
     <link rel="preload" href="{{site.baseurl}}/assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css"></noscript>
 
-    <!-- Theme Stylesheet - Async load -->
-    <link rel="preload" href="{{site.baseurl}}/assets/css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css"></noscript>
+    <!-- Theme Stylesheet - Async load (minified) -->
+    <link rel="preload" href="{{site.baseurl}}/assets/css/theme.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.min.css"></noscript>
 
     <!-- Dark Mode Stylesheet - Async load -->
     <link rel="preload" href="{{site.baseurl}}/assets/css/dark-mode.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -417,8 +427,21 @@
     </main>
 
 
-    <!-- Bootstrap JS removed - using vanilla JS navbar toggle for better performance -->
-    <script defer src="{{site.baseurl}}/assets/js/theme.js"></script>
+    <!-- Theme JS (minified) -->
+    <script defer src="{{site.baseurl}}/assets/js/theme.min.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(reg) {
+                console.log('SW registered:', reg.scope);
+            }).catch(function(err) {
+                console.log('SW registration failed:', err);
+            });
+        });
+    }
+    </script>
 
 
     <!-- Footer -->
