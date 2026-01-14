@@ -303,8 +303,11 @@ image: assets/images/logo.png
     overflow: hidden;
     margin-bottom: 30px;
 }
-.carousel-background {
-    position: relative;
+.carousel-background,
+.carousel-background *,
+.carousel-background picture,
+.carousel-background img {
+    pointer-events: none;
 }
 .carousel-background:after {
     content: '';
@@ -369,6 +372,10 @@ image: assets/images/logo.png
     .carousel-title {
         font-size: 1.5rem;
     }
+    .carousel-control-prev,
+    .carousel-control-next {
+        bottom: 120px;
+    }
 }
 
 .carousel-control-prev,
@@ -376,6 +383,8 @@ image: assets/images/logo.png
     width: 10%;
     opacity: 0.8;
     cursor: pointer;
+    z-index: 10;
+    bottom: 140px;
 }
 
 .carousel-control-prev-icon,
