@@ -3,55 +3,66 @@
 
 en:
   label: "English"
+  code: "EN"
   icon: "🇺🇸"
   dir: "ltr"
 
 zh-hans:
   label: "简体中文"
+  code: "简"
   icon: "🇨🇳"
   dir: "ltr"
 
 zh-hant:
   label: "繁體中文"
+  code: "繁"
   icon: "🇹🇼"
   dir: "ltr"
 
 ja:
   label: "日本語"
+  code: "日"
   icon: "🇯🇵"
   dir: "ltr"
 
 ko:
   label: "한국어"
+  code: "한"
   icon: "🇰🇷"
   dir: "ltr"
 
 de:
   label: "Deutsch"
+  code: "DE"
   icon: "🇩🇪"
   dir: "ltr"
 
 fr:
   label: "Français"
+  code: "FR"
   icon: "🇫🇷"
   dir: "ltr"
 
 it:
   label: "Italiano"
+  code: "IT"
   icon: "🇮🇹"
   dir: "ltr"
 
 es:
   label: "Español"
+  code: "ES"
   icon: "🇪🇸"
   dir: "ltr"
 
 pt:
   label: "Português"
+  code: "PT"
   icon: "🇧🇷"
   dir: "ltr"
 
 hi:
   label: "हिन्दी"
+  code: "हि"
   icon: "🇮🇳"
   dir: "ltr"
