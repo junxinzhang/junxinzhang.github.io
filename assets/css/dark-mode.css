@@ -73,6 +73,19 @@
     color: var(--text-color) !important;
 }
 
+/* Author box text in bg-lightblue - fix for dark mode visibility */
+[data-theme="dark"] .bg-lightblue {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .bg-lightblue h5 a {
+    color: #58a6ff !important;
+}
+
+[data-theme="dark"] .bg-lightblue .col-md-10 {
+    color: var(--text-muted) !important;
+}
+
 /* Borders */
 [data-theme="dark"] .border-top {
     border-color: var(--border-color) !important;
