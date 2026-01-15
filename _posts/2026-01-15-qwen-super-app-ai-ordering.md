@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "一句话点40杯奶茶：阿里千问如何抢先Google实现AI办事时代"
+title: "一句话点40杯伯牙绝弦：阿里千问如何抢先Google实现AI办事时代"
 author: Jason Zhang
 categories: [AI]
 image: assets/images/screenshot-20260115-qwen-super-app-cover.webp
@@ -14,9 +14,9 @@ slug: qwen-super-app-ai-ordering
 
 阿里巴巴集团副总裁吴嘉站在发布会舞台上，对着千问App说了一句话：
 
-> **"帮我点40杯奶茶。"**
+> **"帮我点40杯霸王茶姬的伯牙绝弦。"**
 
-几秒钟后，千问自动调用淘宝闪购，选择了附近的奶茶店，完成了下单——**全程无需任何跳转，无需打开其他App**。
+几秒钟后，千问自动调用淘宝闪购，找到附近的霸王茶姬门店，完成了下单——**全程无需任何跳转，无需打开其他App**。
 
 这一幕，让我想起了2024年5月Google I/O大会上的一个演示：Project Astra展示了AI助手帮用户选酒配餐、查看菜谱的场景。当时，全球科技媒体惊呼"AI助手的未来来了"。
 
