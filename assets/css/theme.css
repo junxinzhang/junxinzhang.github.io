@@ -676,7 +676,7 @@ article blockquote {
 	position:relative;
 }
 article blockquote:before {
-	content:"“";
+	content:"\201C";
 	font-family:Georgia;
 	font-size:8rem;
 	margin:-1rem 2rem 0 -3.9rem;
