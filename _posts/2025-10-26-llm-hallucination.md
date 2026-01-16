@@ -18,7 +18,7 @@ slug: why-language-models-hallucinate
 
 近期，Adam Tauman Kalai 等顶级研究者发表了一篇突破性论文《Why Language Models Hallucinate》，从信息论和理论计算机科学的角度，深刻揭示了语言模型幻觉的根本成因。今天，我将与大家分享这项研究的核心洞见，帮助您理解为什么幻觉是当前 AI 技术框架下的"必然之恶"，以及这对 AI 系统设计和应用的深刻启示。
 
-![大语言模型的幻觉之谜]({{ site.baseurl }}/assets/images/screenshot-20251026-llm-hallucination-image2.png)
+![大语言模型的幻觉之谜]({{ site.baseurl }}/assets/images/screenshot-20251026-llm-hallucination-image2.webp)
 
 ---
 

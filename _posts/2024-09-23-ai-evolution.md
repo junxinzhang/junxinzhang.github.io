@@ -3,7 +3,7 @@ layout: post
 title: "AI的进化之路：从图灵测试到OpenAI的O1革命"
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20240923-ai-evolution.jpg
+image: assets/images/screenshot-20240923-ai-evolution.webp
 tags: [AI, Machine Learning, Deep Learning, Transformer, OpenAI, O1]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "AWS DevOps CodePipeline体系建设：构建高效、自动化的部署流程"
 author: Jason Zhang
 categories: [DevOps]
-image: assets/images/screenshot-20240128-devops-aws-codepipeline-banner.jpg
+image: assets/images/screenshot-20240128-devops-aws-codepipeline-banner.webp
 tags: [AWS, CodePipeline, CodeBuild, CodeDeploy, CI/CD, Automation, DevOps]
 ---
 
@@ -49,7 +49,7 @@ AWS CodeDeploy 是一种自动化部署服务，它可以与 CodePipeline 结合
 通过集成审批流程，我们不仅提升了部署流程的可控性和安全性，还加强了团队间的协作和沟通。
 
 ### **四、总结**
-![walking]({{ site.baseurl }}/assets/images/screenshot-20240128-devops-aws-codepipeline-example.jpg)
+![walking]({{ site.baseurl }}/assets/images/screenshot-20240128-devops-aws-codepipeline-example.webp)
 
 通过集成 CodePipeline、CodeBuild、CodeDeploy 以及审批流程，我们构建了一个全面、高效且安全的自动化部署流程。这套体系不仅加速了我们的软件交付速度，还提高了交付质量和安全性。AWS 的 DevOps 解决方案为我们提供了在数字时代中保持竞争力所需的敏捷性和灵活性。
 

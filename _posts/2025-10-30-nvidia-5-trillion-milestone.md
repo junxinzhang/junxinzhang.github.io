@@ -141,7 +141,7 @@ PEG = P/E比率 ÷ 盈利增长率
 
 ## 四、为什么现在？三个核心驱动力
 
-![英伟达战略分析与市场驱动力]({{ site.baseurl }}/assets/images/screenshot-20251030-nvidia-5-trillion-milestone-2.png)
+![英伟达战略分析与市场驱动力]({{ site.baseurl }}/assets/images/screenshot-20251030-nvidia-5-trillion-milestone-2.webp)
 
 ### 驱动力1：Blackwell/Rubin的超预期指引
 

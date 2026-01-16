@@ -3,7 +3,7 @@ layout: post
 title: "外企中如何安排一版好计划：实用策略与技巧"
 author: Jason Zhang
 categories: [Business]
-image: assets/images/screenshot-20240124-effective-planning.jpg
+image: assets/images/screenshot-20240124-effective-planning.webp
 tags: [Project Management, Effective Planning, Business Strategy, Corporate Culture, Task Prioritization]
 ---
 

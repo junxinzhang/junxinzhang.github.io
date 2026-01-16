@@ -49,4 +49,4 @@ tags: []
     - 致力于成为科技型企业
     - 推动上海成为云网融合战略的试验田
 
-![]({{ site.baseurl }}/assets/images/screenshot-20231218-shanghai-telecom-architecture-transformation-02.jpg)
+![]({{ site.baseurl }}/assets/images/screenshot-20231218-shanghai-telecom-architecture-transformation-02.webp)

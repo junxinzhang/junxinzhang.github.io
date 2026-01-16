@@ -34,4 +34,4 @@ tags: [sociology, management, consumer behavior]
 - **涨价的社会学和管理学意义**：理解涨价背后的深层社会和管理动因。
 - **个人反应的重要性**：个人如何在这样的变化中理解自己的角色和选择。
 
-![]({{ site.baseurl }}/assets/images/screenshot-20231228-mcdonalds-deep-analysis-2.jpg)
+![]({{ site.baseurl }}/assets/images/screenshot-20231228-mcdonalds-deep-analysis-2.webp)

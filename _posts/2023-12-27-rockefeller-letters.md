@@ -3,7 +3,7 @@ layout: post
 title: "一生的财富：洛克菲勒写给儿子的38封信息"
 author: Jason Zhang
 categories: [Business]
-image: assets/images/screenshot-20231227-rockefeller-letters.jpg
+image: assets/images/screenshot-20231227-rockefeller-letters.webp
 tags: [leadership, wealth building]
 ---
 

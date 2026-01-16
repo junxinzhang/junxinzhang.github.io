@@ -34,4 +34,4 @@ tags: [finance, lifestyle, wealth building]
 ### 总结
 财务自由，并不只是关于钱的事情，更多的是一种生活选择。只要咱们聪明地管好自己的钱，控制下欲望，这个看似遥不可及的目标，其实就在咱们手边。
 
-![]({{ site.baseurl }}/assets/images/screenshot-20231223-finance-freedom-2.jpg)
+![]({{ site.baseurl }}/assets/images/screenshot-20231223-finance-freedom-2.webp)

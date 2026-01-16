@@ -3,7 +3,7 @@ layout: post
 title: "探索自动化和SSO集成：提升效率和安全性"
 author: Jason Zhang
 categories: [DevOps]
-image: assets/images/screenshot-20240129-automation-sso-integration.jpg
+image: assets/images/screenshot-20240129-automation-sso-integration.webp
 tags: [Automation, SSO, Integration, Project Management, Security, Efficiency]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "实现 GitLab 与 AWS CodeCommit 的流畅集成"
 author: Jason Zhang
 categories: [DevOps]
-image: assets/images/screenshot-20240130-gitlab-codecommit-integration.jpg
+image: assets/images/screenshot-20240130-gitlab-codecommit-integration.webp
 tags: [GitLab, AWS, CodeCommit, CI/CD, Repository Mirroring, Version Control, Automation]
 ---
 
@@ -32,7 +32,7 @@ tags: [GitLab, AWS, CodeCommit, CI/CD, Repository Mirroring, Version Control, Au
    • 在 GitLab 存储库的“设置” > “存储库”中，找到“镜像存储库”部分。
    • 填写 Git 存储库 URL，格式为 https://git-codecommit.<aws-region>.amazonaws.com/v1/repos/<your_codecommit_repo>。
    • 使用之前生成的特殊 HTTPS Git 用户 ID 和密码作为用户名和密码。
-   ![walking]({{ site.baseurl }}/assets/images/screenshot-20240130-gitlab-codecommit-integration2.png)
+   ![walking]({{ site.baseurl }}/assets/images/screenshot-20240130-gitlab-codecommit-integration2.webp)
 6. 保护分支：
    • 选择“仅镜像受保护的分支”选项。
 7. 测试镜像：

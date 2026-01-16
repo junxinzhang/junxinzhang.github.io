@@ -3,7 +3,7 @@ layout: post
 title:  "财富积累的艺术：赚小钱到赚超大的钱"
 author: Jason Zhang
 categories: [Career]
-image: assets/images/screenshot-20231219-wealth-accumulation.jpg
+image: assets/images/screenshot-20231219-wealth-accumulation.webp
 tags: [finance, wealth building]
 ---
 赚钱的艺术，就像攀登一座逐渐陡峭的山峰，每个阶段都有其特殊的挑战和机会。这个过程可以分为三个主要阶段：赚小钱、赚大钱和赚超大的钱。理解这些阶段的核心特点和所需策略，是财富积累的关键。
@@ -20,5 +20,5 @@ tags: [finance, wealth building]
 ### 结论
 从小规模的财富积累到大规模的财富增长，是一个多维度的过程。它不仅仅是个人努力的结果，更是智慧、策略、时机的结合体。在这个过程中，我们需要不断学习、适应和创新，以便在不断变化的世界中保持领先。
 
-![]({{ site.baseurl }}/assets/images/screenshot-20231219-wealth-accumulation-2.jpg)
+![]({{ site.baseurl }}/assets/images/screenshot-20231219-wealth-accumulation-2.webp)
 

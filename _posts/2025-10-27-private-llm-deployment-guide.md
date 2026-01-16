@@ -83,7 +83,7 @@ slug: private-llm-deployment-guide
 - 671B FP16 满血部署：总成本 = 硬件（¥193万） + 年度运维（¥100万+）= **≥¥293 万元/年**
 - 70B FP16 中等部署：总成本 = 硬件（¥50万） + 年度运维（¥50万） = **≥¥100 万元/年**
 
-![私有化大模型部署成本对标]({{ site.baseurl }}/assets/images/screenshot-20251027-private-llm-deployment-2.png)
+![私有化大模型部署成本对标]({{ site.baseurl }}/assets/images/screenshot-20251027-private-llm-deployment-2.webp)
 
 *图 1：国内主流供应商私有化大模型部署成本对标分析*
 

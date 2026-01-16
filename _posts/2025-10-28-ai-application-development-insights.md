@@ -126,12 +126,12 @@ slug: ai-application-development-insights
 - 备选：DeepSeek R1（成本更低）
 - 成本结果：对标成本 -30% 相比 2024 年
 
-![DeepSeek Model Integration Methods]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova2.png)
+![DeepSeek Model Integration Methods]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova2.webp)
 *图：使用 DeepSeek 相关模型方式小结 - 展示通过 Bedrock API、Marketplace 等方式集成 DeepSeek 模型*
 
 ### 模型选择的决策矩阵
 
-![Model Selection for Different Scenarios]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova1.png)
+![Model Selection for Different Scenarios]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova1.webp)
 *图：不同场景需要用到不同的模型 - 展示模型组合和成本/性能的权衡*
 
 ```
@@ -172,13 +172,13 @@ slug: ai-application-development-insights
 用户输入 → 任务分解 → 多 Agent 协作 → 任务编排 → 输出结果
 ```
 
-![AI Native Application Architecture]({{ site.baseurl }}/assets/images/screenshot-20251028-alibaba-1.png)
+![AI Native Application Architecture]({{ site.baseurl }}/assets/images/screenshot-20251028-alibaba-1.webp)
 *图：AI原生应用架构 - 展示 RAG、Agent、Workflow 等应用模式的整体设计*
 
-![Bedrock Agents Development Tools]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova3.png)
+![Bedrock Agents Development Tools]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova3.webp)
 *图：Bedrock Agents 助力开发人员快速构建和扩展 - 展示 Agent 编排框架、工具和能力集成*
 
-![Bedrock Agents Multi-Agent Orchestration]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova7.png)
+![Bedrock Agents Multi-Agent Orchestration]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova7.webp)
 *图：Bedrock Agents - 多 Agent 协作 - 展示多个专业 Agent（市场分析、策略、内容、创意等）的协调工作流程*
 
 ### 三大应用场景
@@ -213,7 +213,7 @@ slug: ai-application-development-insights
 - 代码缺陷发现率提升 35%
 - 人工审核时间减少 40%
 
-![AI-assisted Coding Productivity]({{ site.baseurl }}/assets/images/screenshot-20251028-alibaba-2.png)
+![AI-assisted Coding Productivity]({{ site.baseurl }}/assets/images/screenshot-20251028-alibaba-2.webp)
 *图：AI辅助编码对程序员工作效率的提升 - 展示代码生成、审核、测试等环节的自动化效果*
 
 #### 场景 3：AIGC 内容创作
@@ -244,7 +244,7 @@ slug: ai-application-development-insights
 - **51%** 的受访者表示已在生产中使用 Agent
 - **78%** 的企业积极计划在快将 Agent 投入生产
 
-![Agent Adoption Survey]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova4.png)
+![Agent Adoption Survey]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova4.webp)
 *图：Agent 使用调查 - 显示企业对 AI Agent 的采纳率和使用计划*
 
 ### 关键成功因素
@@ -262,7 +262,7 @@ slug: ai-application-development-insights
 
 ### Amazon Nova Pro 成本优势
 
-![Amazon Nova Pro Cost Performance]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova5.png)
+![Amazon Nova Pro Cost Performance]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova5.webp)
 *图：成本专题 - Amazon Nova Pro 在关键领域的成本优势和性能对比（质量提升 26%，成本降低 40%）*
 
 ### 成本对比
@@ -355,7 +355,7 @@ Serverless：
 
 ## 行动清单：从洞察到实践
 
-![End-to-End Generative AI Application Building]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova6.png)
+![End-to-End Generative AI Application Building]({{ site.baseurl }}/assets/images/screenshot-20251028-amazon-nova6.webp)
 *图：端到端构建生成式 AI 应用的关键措施 - 从应用开发、相似度计算、模型选择到应用与模型的生产化*
 
 ### 第一步：评估你的 AI 应用现状（第 1-2 周）

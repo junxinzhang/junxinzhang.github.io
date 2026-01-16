@@ -3,7 +3,7 @@ layout: post
 title: "主播们的“翻车”事件 -> 内卷互撕 -> 监管介入｜直播带货的“春晚”：头部主播的危机与应对"  
 author: Jason Zhang  
 categories: [Business]
-image: assets/images/screenshot-20240920-streamer-flip.jpg  
+image: assets/images/screenshot-20240920-streamer-flip.webp  
 tags: [Live Streaming, E-commerce, Online Shopping, Influencers, Social Media, Regulation]
 ---
 
