@@ -3,7 +3,7 @@ layout: post
 title: "如何像ChatGPT一样自然地学习英语：中年人的实用指南"
 author: Jason Zhang
 categories: [Career]
-image: assets/images/screenshot-20240119-english-learning.jpg
+image: assets/images/screenshot-20240119-english-learning.webp
 tags: [featured, Language Learning, English, AI]
 ---
 

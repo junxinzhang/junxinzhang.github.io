@@ -3,7 +3,7 @@ layout: post
 title:  "Powerful things you can do with the Markdown editor"
 author: sal
 categories: [Jekyll]
-image: assets/images/4.jpg
+image: assets/images/4.webp
 tags: []
 ---
 There are lots of powerful things you can do with the Markdown editor
@@ -35,7 +35,7 @@ There are two types of code elements which can be inserted in Markdown, the firs
 If you want to get really fancy, you can even add syntax highlighting using Rouge.
 
 
-![walking]({{ site.baseurl }}/assets/images/3.jpg)
+![walking]({{ site.baseurl }}/assets/images/3.webp)
 
 ## Reference lists
 

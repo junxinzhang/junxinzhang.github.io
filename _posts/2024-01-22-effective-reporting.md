@@ -3,7 +3,7 @@ layout: post
 title: "职场汇报的艺术：如何高效地向上级和同事汇报项目进展"  
 author: Jason Zhang
 categories: [Business]
-image: assets/images/screenshot-20240122-effective-reporting.jpg  
+image: assets/images/screenshot-20240122-effective-reporting.webp  
 tags: [Business Communication, Project Management, Email Reporting]
 ---
 
@@ -31,7 +31,7 @@ tags: [Business Communication, Project Management, Email Reporting]
 
 **具体案例**  
 例如，在一个软件开发项目中，项目经理张伟需要向他的上级和同事汇报最新进展。他撰写了一封邮件，标题为“软件项目进展更新 - 2024年1月22日”。邮件中，张伟使用了表格来清楚地展示每个任务的当前状态、开始时间、预计完成时间、下一步行动以及优先级。他还特别强调了正在等待审批的任务，并请求了上级的注意和支持。这样的汇报不仅清楚明了，而且通过明确的行动要求，加快了项目的进展。
-![]({{ site.baseurl }}/assets/images/screenshot-20240122-effective-reporting-2.jpg)
+![]({{ site.baseurl }}/assets/images/screenshot-20240122-effective-reporting-2.webp)
 
 **结语**  
 有效的职场汇报不仅是工作效率的体现，也是职业发展中不可或缺的一环。通过精心准备的邮件汇报，您不仅能有效传递信息，还能展示您的专业能力和对工作的认真态度。

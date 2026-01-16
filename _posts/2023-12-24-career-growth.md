@@ -36,7 +36,7 @@ tags: [career, efficiency, personal development]
 ### 七、总结：智慧的应用与生活的选择
 财务自由和职业成功并非一蹴而就，而是需要通过持续的学习、策略规划和智慧应用来实现。通过聚焦效率、认知提升和职业发展，我们能够更好地掌握自己的人生方向。
 
-![]({{ site.baseurl }}/assets/images/screenshot-20231224-career-growth-2.jpg)
+![]({{ site.baseurl }}/assets/images/screenshot-20231224-career-growth-2.webp)
 
 ## References
 - [财富积累的艺术：赚小钱到赚超大的钱][links-1]

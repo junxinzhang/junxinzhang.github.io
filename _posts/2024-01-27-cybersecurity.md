@@ -3,7 +3,7 @@ layout: post
 title: "网络安全新视角：综合静态与动态扫描，WAF防护及DDoS与MJJ攻击的应对策略"  
 author: Jason Zhang  
 categories: [Technology]
-image: assets/images/screenshot-20240127-cybersecurity.jpg
+image: assets/images/screenshot-20240127-cybersecurity.webp
 tags: [网络安全, Web服务, 静态扫描, 动态扫描, WAF, DDoS, MJJ, 安全策略]
 ---
 

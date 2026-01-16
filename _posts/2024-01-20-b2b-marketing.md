@@ -3,7 +3,7 @@ layout: post
 title: "2024初创公司B2B营销策略深度解析：打造差异化竞争优势"
 author: Jason Zhang
 categories: [Business]
-image: assets/images/screenshot-20240120-b2b-marketing.jpg
+image: assets/images/screenshot-20240120-b2b-marketing.webp
 tags: [featured, B2B Marketing, Strategy, Innovation]
 ---
 

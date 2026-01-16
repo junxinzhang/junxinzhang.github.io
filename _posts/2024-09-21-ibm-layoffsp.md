@@ -3,7 +3,7 @@ layout: post
 title: "IBM裁员 -> 降本增效 -> 职场生存｜裁员潮中的企业和个人出路解析"
 author: Jason Zhang
 categories: [Business]
-image: assets/images/screenshot-20240921-ibm-layoffs.jpg
+image: assets/images/screenshot-20240921-ibm-layoffs.webp
 tags: [Job Market, Corporate Layoffs, Economic Strategy, Cost Efficiency, Crisis Management]
 ---
 

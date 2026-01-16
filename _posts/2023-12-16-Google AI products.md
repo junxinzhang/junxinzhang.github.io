@@ -3,7 +3,7 @@ layout: post
 title:  "Google的机器学习工具：Bard、Gemini 和 Vertex AI 的区别"
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20231216-ai-google.jpg
+image: assets/images/screenshot-20231216-ai-google.webp
 tags: [featured, google, AI, machine learning]
 ---
 随着人工智能领域的快速发展，Google 推出了多个重要的机器学习工具，引领了该领域的创新。本文旨在提供一个关于 Google 三大产品——Bard、Gemini 和 Vertex AI——的扫盲指南，解释它们的功能、区别以及它们如何协同工作。
@@ -28,7 +28,7 @@ Gemini 也是 Google 开发的另一个 LLM，但其专注于生成代码。它�
 
 Bard、Gemini 和 Vertex AI 是 Google 机器学习工具生态系统中的重要组成部分。它们在文本生成、代码生成和机器学习模型管理方面各有优势，通过这些工具的结合使用，开发人员可以更加高效地构建和管理复杂的机器学习应用程序。随着这些工具的不断发展和改进，未来的机器学习和人工智能应用无疑将变得更加智能和高效。
 
-![]({{ site.baseurl }}/assets/images/screenshot-20231216-ai-google-2.jpg)
+![]({{ site.baseurl }}/assets/images/screenshot-20231216-ai-google-2.webp)
 
 ## References
 - [Google AI Blog][links-1]

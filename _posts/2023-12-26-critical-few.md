@@ -39,7 +39,7 @@ tags: [business, corporate culture, leadership]
 - **推动企业变革**：通过识别和培养关键的文化特征和行为。
 - **促进企业和个人成长**：应用知识来应对不确定时代的挑战。
 
-![]({{ site.baseurl }}/assets/images/screenshot-20231226-critical-few-2.jpg)
+![]({{ site.baseurl }}/assets/images/screenshot-20231226-critical-few-2.webp)
 
 
 ## References

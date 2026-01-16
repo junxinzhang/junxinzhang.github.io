@@ -37,7 +37,7 @@ QMS专注于确保产品和服务的质量符合预定的标准和要求。它�
 ### 总结
 ERP及其各关联模块共同构建了一个综合性的企业管理系统，包含从客户关系管理到生产计划，再到供应链管理等多个方面。这种集成为企业提供了全方位、一体化的管理策略，有助于企业更好地面对市场挑战，提升竞争优势。
 
-![]({{ site.baseurl }}/assets/images/screenshot-20231220-erp-02.jpg)
+![]({{ site.baseurl }}/assets/images/screenshot-20231220-erp-02.webp)
 
 
 ## References

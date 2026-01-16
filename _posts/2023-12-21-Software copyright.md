@@ -55,4 +55,4 @@ tags: [Software Development, Technology]
 
 在企业数字化转型升级的大潮中，软件著作权是不可或缺的法律工具。它不仅保护了创新成果，还为企业带来了更多发展机遇。因此，企业和软件开发者应高度重视软件著作权的申请和管理。
 
-![]({{ site.baseurl }}/assets/images/screenshot-20231221-copyright-deep-dive-02.jpg)
+![]({{ site.baseurl }}/assets/images/screenshot-20231221-copyright-deep-dive-02.webp)

@@ -3,7 +3,7 @@ layout: post
 title:  "🚀 寻绎科技：引领智慧营销的未来 🌟"
 author: Jason Zhang
 categories: [Business]
-image: assets/images/screenshot-20231215-xunyi-products.jpg
+image: assets/images/screenshot-20231215-xunyi-products.webp
 tags: []
 ---
 在数字化浪潮中乘风破浪，寻绎科技以其先进的B2B营销科技，助力企业捕捉每一个商机！我们的SaaS平台不仅简化了复杂的营销流程，更是企业从公域获取客户到管理私域客户线索的强大助手。🚀
@@ -41,6 +41,6 @@ tags: []
 
 
 [links-pc]: https://www.xunyiyun.cn
-[links-miniprogram]: https://github.com/junxinzhang/junxinzhang.github.io/blob/master/assets/images/screenshot-20231215-xunyi-miniprogram.png
+[links-miniprogram]: https://github.com/junxinzhang/junxinzhang.github.io/blob/master/assets/images/screenshot-20231215-xunyi-miniprogram.webp
 [links-caseA]: https://demo.xunyiyun.cn/pc/home
 [links-caseB]: https://digitalexpo.com/pc/home

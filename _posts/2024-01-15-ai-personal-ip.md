@@ -3,7 +3,7 @@ layout: post
 title: "2024视野：AI革命与个人IP兴起的时代"
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20240115-ai-personal-ip.jpg
+image: assets/images/screenshot-20240115-ai-personal-ip.webp
 tags: [人工智能, RPA, 个人IP, 身心灵, 商业趋势]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "人工智能与自然智能：从3岁女儿的“为什么”看神经网络算法的启示"
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20240112-neural-networks-child-brain.jpg
+image: assets/images/screenshot-20240112-neural-networks-child-brain.webp
 tags: [神经网络, 儿童发育, 人工智能, 育儿]
 ---
 
