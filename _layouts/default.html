@@ -337,6 +337,8 @@
     .carousel-indicators li{box-sizing:content-box;flex:0 1 auto;width:30px;height:3px;margin-right:3px;margin-left:3px;text-indent:-999px;cursor:pointer;background-color:#fff;background-clip:padding-box;border-top:10px solid transparent;border-bottom:10px solid transparent;opacity:.5;transition:opacity .6s ease}
     .carousel-indicators .active{opacity:1}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .skip-link{position:absolute;top:-40px;left:0;background:#03a87c;color:#fff;padding:8px 16px;z-index:9999;transition:top 0.3s;text-decoration:none;font-weight:600;border-radius:0 0 4px 0}
+    .skip-link:focus{top:0;outline:2px solid #fff;outline-offset:2px}
     </style>
 
     <!-- Main CSS - Async load for non-blocking -->
@@ -383,6 +385,9 @@
 
 <body class="{% if page.url == "/" %} homefirstpage {% endif %}">
 
+    <!-- Skip to Main Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link" data-i18n="accessibility.skip_to_content">Skip to main content</a>
+
     <!-- Navbar -->
     <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
@@ -422,7 +427,7 @@
     </div>
 
     <!-- Content -->
-    <main role="main" class="site-content">
+    <main id="main-content" role="main" class="site-content">
         {{ content }}
     </main>
 
@@ -514,8 +519,8 @@
     var yearEl = document.getElementById('copyright-year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Back to Top Button - Pure vanilla JS (no jQuery dependency)
-    (function() {
+    // Back to Top Button - Deferred initialization to reduce TBT
+    function initBackToTop() {
         var backToTop = document.getElementById('backToTop');
         if (!backToTop) return;
 
@@ -537,10 +542,16 @@
             e.preventDefault();
             window.scrollTo({top: 0, behavior: 'smooth'});
         });
-    })();
+    }
+    // Defer back-to-top init to reduce main thread blocking
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(initBackToTop, {timeout: 2000});
+    } else {
+        setTimeout(initBackToTop, 100);
+    }
 
-    // Lazy Loading for Images with background-image - Pure vanilla JS
-    (function() {
+    // Lazy Loading for Images with background-image - Deferred to reduce TBT
+    function initLazyLoading() {
         if ('IntersectionObserver' in window) {
             var lazyImageObserver = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
@@ -564,7 +575,13 @@
                 if (bgImage) img.style.backgroundImage = 'url(' + bgImage + ')';
             });
         }
-    })();
+    }
+    // Defer lazy loading init
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(initLazyLoading, {timeout: 1000});
+    } else {
+        setTimeout(initLazyLoading, 50);
+    }
 
     // Navbar Toggle - Pure vanilla JS (replaces Bootstrap JS)
     (function() {
