@@ -10,13 +10,13 @@
   path: vendor_prd_access_control.html
   description: 加强生产环境安全性与稳定性的综合解决方案
   date: 2025-04-23
-  image: html_thumbnails/20250423_vendor_access.jpg
+  image: html_thumbnails/20250423_vendor_access.webp
 
 - title: 本地GPU接入AWS成本对比
   path: gpu_aws_cost_comparison.html
   description: 详细分析Direct Connect与VPN两种连接方案的成本与性能对比
   date: 2025-04-23
-  image: html_thumbnails/20250423_gpu_aws_cost.jpg
+  image: html_thumbnails/20250423_gpu_aws_cost.webp
 
 # 添加更多HTML页面，格式如上
 
@@ -24,10 +24,10 @@
   path: enhanced_network_report.html
   description: 网络健康状况汇报
   date: 2025-04-30
-  image: html_thumbnails/20250430_enhance_network_report.jpg
+  image: html_thumbnails/20250430_enhance_network_report.webp
 
 - title: Claude Code 官方插件全解析
   path: claude-plugins-report.html
   description: 24款官方插件工具助你成为10倍效率开发者
   date: 2026-01-08
-  image: screenshot-20260108-claude-plugins.png
+  image: screenshot-20260108-claude-plugins.webp
