@@ -47,14 +47,14 @@ image: assets/images/logo.png
                 {% endfor %}
             </div>
 
-            <a class="carousel-control-prev" href="javascript:void(0)" role="button">
+            <button class="carousel-control-prev" type="button" aria-label="Previous">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="javascript:void(0)" role="button">
+            </button>
+            <button class="carousel-control-next" type="button" aria-label="Next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
-            </a>
+            </button>
         </div>
     </div>
 </div>
@@ -385,6 +385,9 @@ image: assets/images/logo.png
     cursor: pointer;
     z-index: 10;
     bottom: 140px;
+    background: none;
+    border: 0;
+    padding: 0;
 }
 
 .carousel-control-prev-icon,
@@ -504,133 +507,3 @@ image: assets/images/logo.png
     color: var(--text-color);
 }
 </style>
-<script>
-// Pure Vanilla JS Carousel (no jQuery/Bootstrap dependency)
-(function() {
-    var carousel = document.getElementById('featuredCarousel');
-    if (!carousel) return;
-
-    var items = carousel.querySelectorAll('.carousel-item');
-    var indicators = carousel.querySelectorAll('.carousel-indicators li');
-    var prevBtn = carousel.querySelector('.carousel-control-prev');
-    var nextBtn = carousel.querySelector('.carousel-control-next');
-    var currentIndex = 0;
-    var intervalId = null;
-    var interval = 5000; // Auto-slide every 5 seconds
-
-    function showSlide(index) {
-        // Handle wrap-around
-        if (index >= items.length) index = 0;
-        if (index < 0) index = items.length - 1;
-
-        // Remove active class from all items and indicators
-        items.forEach(function(item) { item.classList.remove('active'); });
-        indicators.forEach(function(ind) { ind.classList.remove('active'); });
-
-        // Add active class to current item and indicator
-        items[index].classList.add('active');
-        if (indicators[index]) indicators[index].classList.add('active');
-
-        currentIndex = index;
-    }
-
-    function nextSlide() {
-        showSlide(currentIndex + 1);
-    }
-
-    function prevSlide() {
-        showSlide(currentIndex - 1);
-    }
-
-    function startAutoSlide() {
-        stopAutoSlide();
-        intervalId = setInterval(nextSlide, interval);
-    }
-
-    function stopAutoSlide() {
-        if (intervalId) {
-            clearInterval(intervalId);
-            intervalId = null;
-        }
-    }
-
-    // Event listeners for prev/next buttons
-    if (prevBtn) {
-        prevBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            prevSlide();
-            startAutoSlide(); // Reset timer after manual navigation
-        });
-    }
-
-    if (nextBtn) {
-        nextBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            nextSlide();
-            startAutoSlide(); // Reset timer after manual navigation
-        });
-    }
-
-    // Event listeners for indicators
-    indicators.forEach(function(indicator, index) {
-        indicator.addEventListener('click', function() {
-            showSlide(index);
-            startAutoSlide(); // Reset timer after manual navigation
-        });
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') {
-            prevSlide();
-            startAutoSlide();
-        } else if (e.key === 'ArrowRight') {
-            nextSlide();
-            startAutoSlide();
-        }
-    });
-
-    // Pause on hover
-    carousel.addEventListener('mouseenter', stopAutoSlide);
-    carousel.addEventListener('mouseleave', startAutoSlide);
-
-    // Touch/Swipe support for mobile
-    var touchStartX = 0;
-    var touchEndX = 0;
-    var touchStartY = 0;
-    var touchEndY = 0;
-    var minSwipeDistance = 50;
-
-    carousel.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].screenX;
-        touchStartY = e.changedTouches[0].screenY;
-        stopAutoSlide();
-    }, {passive: true});
-
-    carousel.addEventListener('touchend', function(e) {
-        touchEndX = e.changedTouches[0].screenX;
-        touchEndY = e.changedTouches[0].screenY;
-        handleSwipe();
-        startAutoSlide();
-    }, {passive: true});
-
-    function handleSwipe() {
-        var deltaX = touchEndX - touchStartX;
-        var deltaY = touchEndY - touchStartY;
-
-        // Only trigger if horizontal swipe is greater than vertical (to avoid conflicts with scrolling)
-        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
-            if (deltaX > 0) {
-                // Swiped right - go to previous slide
-                prevSlide();
-            } else {
-                // Swiped left - go to next slide
-                nextSlide();
-            }
-        }
-    }
-
-    // Start auto-sliding
-    startAutoSlide();
-})();
-</script>
