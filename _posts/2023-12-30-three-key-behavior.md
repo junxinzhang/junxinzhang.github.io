@@ -3,7 +3,7 @@ layout: post
 title: "改变人生的三个关键行为特点"  
 author: Jason Zhang
 categories: [Career]
-image: assets/images/screenshot-2023-12-30-three-key-behavior.webp  
+image: assets/images/screenshot-2023-12-30-three-key-behavior.webp
 tags: [inspiration, self-improvement, education, life journey]
 ---
 亲爱的读者朋友们，大家好！今天，我们来聊一聊关于人生的话题。你是否曾经想过，有哪些行为特点能够深刻改变你的人生呢？也许你已经在某些方面做得很好，但总感觉还差那么一点火花。那么，今天这篇文章可能会给你带来一些新的启发！

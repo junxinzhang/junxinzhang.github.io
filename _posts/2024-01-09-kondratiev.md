@@ -3,7 +3,7 @@ layout: post
 title: "康波周期：驾驭经济大浪潮"  
 author: Jason Zhang  
 categories: [Business]
-image: assets/images/screenshot-20240109-kondratiev.jpg  
+image: assets/images/screenshot-20240109-kondratiev.jpg
 tags: [featured, Economics, Business Cycle, Kondratiev Wave]
 ---
 
