@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate inline images for the AI Agent Security & Commerce article."""
+"""Generate inline images for the AI Agent Security & Commerce article - English version."""
 
 from PIL import Image, ImageDraw, ImageFont
 import os
@@ -34,20 +34,20 @@ def create_attack_chain_image():
     img = Image.new('RGB', (width, height), (15, 23, 42))
     draw = ImageDraw.Draw(img)
 
-    font_title = get_font(24)
-    font_text = get_font_regular(16)
-    font_small = get_font_regular(14)
+    font_title = get_font(22)
+    font_text = get_font_regular(14)
+    font_small = get_font_regular(12)
 
     # Title
-    draw.text((width // 2 - 180, 20), "BodySnatcher 攻击链示意图", font=font_title, fill=(241, 245, 249))
+    draw.text((width // 2 - 180, 20), "BodySnatcher Attack Chain Diagram", font=font_title, fill=(241, 245, 249))
 
     # Attack steps - boxes
     steps = [
-        ("1. 发送请求", "使用硬编码凭证\nservicenowexternalagent", (239, 68, 68)),
-        ("2. 绕过认证", "声明任意用户身份\n无需MFA/SSO", (249, 115, 22)),
-        ("3. 冒充管理员", "请求中声明\n管理员身份", (234, 179, 8)),
-        ("4. Agent执行", "AI Agent创建\n新管理员账户", (168, 85, 247)),
-        ("5. 完全控制", "获得ServiceNow\n实例完全访问权", (239, 68, 68)),
+        ("1. Send Request", "Use hardcoded cred:\nservicenowexternalagent", (239, 68, 68)),
+        ("2. Bypass Auth", "Claim any user identity\nNo MFA/SSO needed", (249, 115, 22)),
+        ("3. Impersonate", "Declare admin\nidentity in request", (234, 179, 8)),
+        ("4. Agent Exec", "AI Agent creates\nnew admin account", (168, 85, 247)),
+        ("5. Full Control", "Complete access to\nServiceNow instance", (239, 68, 68)),
     ]
 
     box_width = 140
@@ -80,12 +80,12 @@ def create_attack_chain_image():
     # Warning box at bottom
     warning_y = 320
     draw_rounded_rect(draw, [50, warning_y, width - 50, warning_y + 100], 10, (55, 17, 17))
-    draw.text((70, warning_y + 15), "⚠ 影响范围", font=font_title, fill=(239, 68, 68))
-    draw.text((70, warning_y + 50), "• 85% 财富500强企业使用ServiceNow", font=font_text, fill=(252, 165, 165))
-    draw.text((70, warning_y + 75), "• 整个过程无需实际登录，完全绕过现有安全机制", font=font_text, fill=(252, 165, 165))
+    draw.text((70, warning_y + 15), "! IMPACT", font=font_title, fill=(239, 68, 68))
+    draw.text((70, warning_y + 50), "* 85% of Fortune 500 companies use ServiceNow", font=font_text, fill=(252, 165, 165))
+    draw.text((70, warning_y + 75), "* No actual login required - completely bypasses existing security", font=font_text, fill=(252, 165, 165))
 
     # Footer
-    draw.text((width - 200, height - 30), "来源：AppOmni Security Research", font=font_small, fill=(100, 116, 139))
+    draw.text((width - 250, height - 30), "Source: AppOmni Security Research", font=font_small, fill=(100, 116, 139))
 
     return img
 
@@ -95,13 +95,12 @@ def create_crowdstrike_acquisition_image():
     img = Image.new('RGB', (width, height), (15, 23, 42))
     draw = ImageDraw.Draw(img)
 
-    font_title = get_font(24)
+    font_title = get_font(22)
     font_text = get_font_regular(16)
     font_small = get_font_regular(14)
-    font_large = get_font(32)
 
     # Title
-    draw.text((width // 2 - 180, 20), "CrowdStrike AI Agent 安全战略", font=font_title, fill=(241, 245, 249))
+    draw.text((width // 2 - 180, 20), "CrowdStrike AI Agent Security Strategy", font=font_title, fill=(241, 245, 249))
 
     # Center: CrowdStrike
     cx, cy = width // 2, height // 2
@@ -113,9 +112,9 @@ def create_crowdstrike_acquisition_image():
     sgnl_x, sgnl_y = 150, cy
     draw_rounded_rect(draw, [sgnl_x - 80, sgnl_y - 60, sgnl_x + 80, sgnl_y + 60], 10, (30, 58, 138))
     draw.text((sgnl_x - 30, sgnl_y - 45), "SGNL", font=font_title, fill=(96, 165, 250))
-    draw.text((sgnl_x - 55, sgnl_y - 15), "$7.4亿", font=font_text, fill=(191, 219, 254))
-    draw.text((sgnl_x - 60, sgnl_y + 10), "持续身份授权", font=font_small, fill=(148, 163, 184))
-    draw.text((sgnl_x - 60, sgnl_y + 30), "实时风险评估", font=font_small, fill=(148, 163, 184))
+    draw.text((sgnl_x - 40, sgnl_y - 15), "$740M", font=font_text, fill=(191, 219, 254))
+    draw.text((sgnl_x - 70, sgnl_y + 10), "Continuous Identity", font=font_small, fill=(148, 163, 184))
+    draw.text((sgnl_x - 70, sgnl_y + 30), "Real-time Risk Eval", font=font_small, fill=(148, 163, 184))
     # Arrow
     draw.line([(sgnl_x + 80, sgnl_y), (cx - 80, cy)], fill=(96, 165, 250), width=2)
 
@@ -123,23 +122,23 @@ def create_crowdstrike_acquisition_image():
     ser_x, ser_y = width - 150, cy
     draw_rounded_rect(draw, [ser_x - 80, ser_y - 60, ser_x + 80, ser_y + 60], 10, (22, 78, 99))
     draw.text((ser_x - 45, ser_y - 45), "Seraphic", font=font_title, fill=(34, 211, 238))
-    draw.text((ser_x - 35, ser_y - 15), "$4亿", font=font_text, fill=(165, 243, 252))
-    draw.text((ser_x - 65, ser_y + 10), "浏览器运行时安全", font=font_small, fill=(148, 163, 184))
-    draw.text((ser_x - 45, ser_y + 30), "企业浏览器", font=font_small, fill=(148, 163, 184))
+    draw.text((ser_x - 40, ser_y - 15), "$400M", font=font_text, fill=(165, 243, 252))
+    draw.text((ser_x - 70, ser_y + 10), "Browser Runtime Sec", font=font_small, fill=(148, 163, 184))
+    draw.text((ser_x - 65, ser_y + 30), "Enterprise Browser", font=font_small, fill=(148, 163, 184))
     # Arrow
     draw.line([(ser_x - 80, ser_y), (cx + 80, cy)], fill=(34, 211, 238), width=2)
 
     # Total at top
     draw_rounded_rect(draw, [cx - 100, 70, cx + 100, 120], 10, (55, 65, 81))
-    draw.text((cx - 80, 80), "总投资: $11.4亿", font=font_text, fill=(241, 245, 249))
+    draw.text((cx - 80, 80), "Total: $1.14 Billion", font=font_text, fill=(241, 245, 249))
     draw.line([(cx, 120), (cx, cy - 80)], fill=(100, 116, 139), width=2)
 
     # Strategic goal at bottom
-    draw_rounded_rect(draw, [200, height - 120, width - 200, height - 40], 10, (30, 41, 59))
-    draw.text((220, height - 105), "战略目标：", font=font_text, fill=(249, 115, 22))
-    draw.text((320, height - 105), "保护每一个AI Agent身份", font=font_text, fill=(241, 245, 249))
-    draw.text((220, height - 75), '"AI Agent以超人速度运行，每个Agent都是特权身份"', font=font_small, fill=(148, 163, 184))
-    draw.text((570, height - 55), "— George Kurtz, CEO", font=font_small, fill=(100, 116, 139))
+    draw_rounded_rect(draw, [150, height - 120, width - 150, height - 40], 10, (30, 41, 59))
+    draw.text((170, height - 105), "Strategic Goal:", font=font_text, fill=(249, 115, 22))
+    draw.text((320, height - 105), "Protect Every AI Agent Identity", font=font_text, fill=(241, 245, 249))
+    draw.text((170, height - 75), '"AI agents operate at superhuman speed - every agent is a privileged identity"', font=font_small, fill=(148, 163, 184))
+    draw.text((570, height - 55), "- George Kurtz, CEO", font=font_small, fill=(100, 116, 139))
 
     return img
 
@@ -149,7 +148,7 @@ def create_ucp_architecture_image():
     img = Image.new('RGB', (width, height), (15, 23, 42))
     draw = ImageDraw.Draw(img)
 
-    font_title = get_font(24)
+    font_title = get_font(22)
     font_text = get_font_regular(16)
     font_small = get_font_regular(14)
 
@@ -159,13 +158,13 @@ def create_ucp_architecture_image():
     # User at top
     user_x, user_y = width // 2, 90
     draw.ellipse([user_x - 25, user_y - 25, user_x + 25, user_y + 25], fill=(34, 197, 94))
-    draw.text((user_x - 20, user_y + 30), "用户", font=font_small, fill=(134, 239, 172))
+    draw.text((user_x - 20, user_y + 30), "User", font=font_small, fill=(134, 239, 172))
 
     # AI Agent layer
     agent_y = 170
     draw_rounded_rect(draw, [width // 2 - 100, agent_y, width // 2 + 100, agent_y + 50], 10, (88, 28, 135))
     draw.text((width // 2 - 45, agent_y + 12), "AI Agent", font=font_text, fill=(232, 121, 249))
-    draw.text((width // 2 - 85, agent_y + 32), "(Gemini / 第三方)", font=font_small, fill=(216, 180, 254))
+    draw.text((width // 2 - 70, agent_y + 32), "(Gemini / 3rd Party)", font=font_small, fill=(216, 180, 254))
 
     # Arrow from user to agent
     draw.line([(user_x, user_y + 25), (user_x, agent_y)], fill=(100, 116, 139), width=2)
@@ -173,8 +172,8 @@ def create_ucp_architecture_image():
     # UCP Protocol layer
     ucp_y = 260
     draw_rounded_rect(draw, [100, ucp_y, width - 100, ucp_y + 60], 10, (30, 64, 175))
-    draw.text((width // 2 - 150, ucp_y + 8), "Universal Commerce Protocol (UCP)", font=font_title, fill=(96, 165, 250))
-    draw.text((width // 2 - 120, ucp_y + 35), "标准化 AI 购物接口协议", font=font_small, fill=(191, 219, 254))
+    draw.text((width // 2 - 180, ucp_y + 8), "Universal Commerce Protocol (UCP)", font=font_title, fill=(96, 165, 250))
+    draw.text((width // 2 - 130, ucp_y + 35), "Standardized AI Shopping Interface", font=font_small, fill=(191, 219, 254))
 
     # Arrow
     draw.line([(width // 2, agent_y + 50), (width // 2, ucp_y)], fill=(100, 116, 139), width=2)
@@ -212,10 +211,10 @@ def create_ucp_architecture_image():
         draw.text((x + 60 - len(name) * 4, pay_y + 8), name, font=font_small, fill=(148, 163, 184))
 
     # AP2 label
-    draw.text((120, pay_y + 10), "AP2 →", font=font_small, fill=(34, 197, 94))
+    draw.text((120, pay_y + 10), "AP2 ->", font=font_small, fill=(34, 197, 94))
 
     # Market size note
-    draw.text((width - 220, height - 30), "市场规模: $3-5万亿 (2030)", font=font_small, fill=(34, 197, 94))
+    draw.text((width - 250, height - 30), "Market Size: $3-5 Trillion (2030)", font=font_small, fill=(34, 197, 94))
 
     return img
 
@@ -225,26 +224,26 @@ def create_security_vs_commerce_image():
     img = Image.new('RGB', (width, height), (15, 23, 42))
     draw = ImageDraw.Draw(img)
 
-    font_title = get_font(28)
-    font_text = get_font_regular(16)
-    font_small = get_font_regular(14)
+    font_title = get_font(24)
+    font_text = get_font_regular(15)
+    font_small = get_font_regular(13)
 
     # Title
-    draw.text((width // 2 - 180, 20), "AI Agent: 安全与商业的博弈", font=font_title, fill=(241, 245, 249))
+    draw.text((width // 2 - 180, 20), "AI Agent: Security vs Commerce", font=font_title, fill=(241, 245, 249))
 
     # Dividing line
     draw.line([(width // 2, 70), (width // 2, height - 50)], fill=(55, 65, 81), width=2)
 
     # Left side - Security (Red)
     left_x = width // 4
-    draw.text((left_x - 60, 80), "🔴 安全风险", font=font_title, fill=(239, 68, 68))
+    draw.text((left_x - 80, 80), "SECURITY RISKS", font=font_title, fill=(239, 68, 68))
 
     security_items = [
-        "• ServiceNow漏洞影响85%财富500强",
-        "• Agent权限绕过IAM控制",
-        "• 提示注入攻击难以防范",
-        "• Agent身份难以追踪审计",
-        "• 94%企业担忧AI安全",
+        "* ServiceNow CVE affects 85% Fortune 500",
+        "* Agent permissions bypass IAM controls",
+        "* Prompt injection attacks hard to prevent",
+        "* Agent identity difficult to audit",
+        "* 94% enterprises worry about AI security",
     ]
 
     for i, item in enumerate(security_items):
@@ -252,19 +251,19 @@ def create_security_vs_commerce_image():
 
     # CrowdStrike response
     draw_rounded_rect(draw, [50, 350, width // 2 - 30, 420], 10, (55, 17, 17))
-    draw.text((70, 360), "应对策略：", font=font_text, fill=(239, 68, 68))
-    draw.text((70, 385), "CrowdStrike $11.4亿布局Agent安全", font=font_small, fill=(252, 165, 165))
+    draw.text((70, 360), "Response:", font=font_text, fill=(239, 68, 68))
+    draw.text((70, 385), "CrowdStrike $1.14B Agent Security Push", font=font_small, fill=(252, 165, 165))
 
     # Right side - Commerce (Blue)
     right_x = 3 * width // 4
-    draw.text((right_x - 60, 80), "🔵 商业机遇", font=font_title, fill=(59, 130, 246))
+    draw.text((right_x - 100, 80), "BUSINESS OPPORTUNITY", font=font_title, fill=(59, 130, 246))
 
     commerce_items = [
-        "• Google UCP开放标准发布",
-        "• 3-5万亿美元市场规模",
-        "• Meta $20亿收购Manus",
-        "• 企业AI投资翻倍",
-        "• 90%高管期待Agent回报",
+        "* Google UCP open standard launched",
+        "* $3-5 Trillion market potential",
+        "* Meta acquires Manus for $2B",
+        "* Enterprise AI spending doubles",
+        "* 90% execs expect Agent ROI",
     ]
 
     for i, item in enumerate(commerce_items):
@@ -272,8 +271,8 @@ def create_security_vs_commerce_image():
 
     # Opportunity highlight
     draw_rounded_rect(draw, [width // 2 + 30, 350, width - 50, 420], 10, (23, 37, 84))
-    draw.text((width // 2 + 50, 360), "市场信号：", font=font_text, fill=(59, 130, 246))
-    draw.text((width // 2 + 50, 385), "2026年是AI Agent从Demo到落地的关键年", font=font_small, fill=(191, 219, 254))
+    draw.text((width // 2 + 50, 360), "Market Signal:", font=font_text, fill=(59, 130, 246))
+    draw.text((width // 2 + 50, 385), "2026: AI Agents move from demo to production", font=font_small, fill=(191, 219, 254))
 
     return img
 
