@@ -30,19 +30,26 @@
 >
 {% else %}
 {% assign ext = img_src | split: "." | last | downcase %}
-{% assign base_path = img_src | split: "." | pop | join: "." %}
-{% assign webp_src = base_path | append: ".webp" %}
-
-<picture>
-  <source srcset="{{ site.baseurl }}/{{ webp_src }}" type="image/webp">
-  <img
-    class="{{ include.class }}"
-    src="{{ full_src }}"
-    alt="{{ include.alt | escape }}"
-    {% if include.width %}width="{{ include.width }}"{% endif %}
-    {% if include.height %}height="{{ include.height }}"{% endif %}
-    {% if include.loading %}loading="{{ include.loading }}"{% endif %}
-    {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
-  >
-</picture>
+{% comment %} 只有原图已经是 webp 格式时才使用 picture 元素，否则直接使用 img 避免 404 {% endcomment %}
+{% if ext == "webp" %}
+<img
+  class="{{ include.class }}"
+  src="{{ full_src }}"
+  alt="{{ include.alt | escape }}"
+  {% if include.width %}width="{{ include.width }}"{% endif %}
+  {% if include.height %}height="{{ include.height }}"{% endif %}
+  {% if include.loading %}loading="{{ include.loading }}"{% endif %}
+  {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
+>
+{% else %}
+<img
+  class="{{ include.class }}"
+  src="{{ full_src }}"
+  alt="{{ include.alt | escape }}"
+  {% if include.width %}width="{{ include.width }}"{% endif %}
+  {% if include.height %}height="{{ include.height }}"{% endif %}
+  {% if include.loading %}loading="{{ include.loading }}"{% endif %}
+  {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
+>
+{% endif %}
 {% endif %}
