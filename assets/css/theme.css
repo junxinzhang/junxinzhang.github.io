@@ -697,6 +697,26 @@ article h1,article h2,article h3,article h4,article h5,article h6,article .h1,ar
 	margin-top:2rem;
 	font-weight:600;
 }
+article table {
+	width:100%;
+	margin-bottom:2rem;
+	border-collapse:collapse;
+	font-size:0.9em;
+}
+article table th,
+article table td {
+	padding:0.75rem;
+	border:1px solid #dee2e6;
+	text-align:left;
+}
+article table th {
+	background-color:#f8f9fa;
+	font-weight:600;
+	border-bottom:2px solid #dee2e6;
+}
+article table tr:nth-child(even) {
+	background-color:#f8f9fa;
+}
 .alertbar {
 	box-shadow:0 -3px 10px 0 rgba(0,0,0,.0785);
 	position:sticky;

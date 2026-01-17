@@ -272,6 +272,25 @@
     border-left-color: #58a6ff;
 }
 
+/* Tables */
+[data-theme="dark"] article table th,
+[data-theme="dark"] article table td {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] article table th {
+    background-color: #21262d;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] article table tr:nth-child(even) {
+    background-color: #161b22;
+}
+
+[data-theme="dark"] article table tr:nth-child(odd) {
+    background-color: #0d1117;
+}
+
 /* Lists */
 [data-theme="dark"] ul li,
 [data-theme="dark"] ol li {
