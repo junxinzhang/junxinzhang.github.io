@@ -100,6 +100,15 @@ var i18nLanguages = {
 
 // Default language from config
 var defaultLang = "{{ site.default_lang }}";
+var htmlLangMap = {
+    "zh-hans": "zh-CN",
+    "zh-hant": "zh-TW"
+};
+
+function updateDocumentLang(langCode) {
+    var htmlLang = htmlLangMap[langCode] || langCode;
+    document.documentElement.lang = htmlLang;
+}
 
 // Get nested translation value
 function getTranslation(obj, path) {
@@ -119,6 +128,8 @@ function getTranslation(obj, path) {
 function applyTranslations(langCode) {
     var translations = i18nTranslations[langCode] || i18nTranslations[defaultLang];
     if (!translations) return;
+
+    updateDocumentLang(langCode);
 
     // Update elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(function(el) {

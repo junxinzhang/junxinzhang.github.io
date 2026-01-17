@@ -13,7 +13,7 @@ email: 'jason2023zhang@gmail.com'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 # i18n - Internationalization / 国际化配置
-default_lang: "en"
+default_lang: "zh-hans"
 languages: ["en", "zh-hans", "zh-hant", "ja", "ko", "de", "fr", "it", "es", "pt", "hi"]
 
 # SEO & Social
