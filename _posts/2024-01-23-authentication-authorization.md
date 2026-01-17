@@ -3,7 +3,7 @@ layout: post
 title: "网络安全基石：深入理解认证与鉴权"  
 author: Jason Zhang
 categories: [Technology]
-image: assets/images/screenshot-20240123-authentication-authorization.webp  
+image: assets/images/screenshot-20240123-authentication-authorization.webp
 tags: [Cybersecurity, Authentication, Authorization, Digital Identity, Access Management]
 ---
 
