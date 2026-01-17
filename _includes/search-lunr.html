@@ -47,8 +47,9 @@
     }
 </style>
 
-<form class="bd-search hidden-sm-down" onSubmit="return initSearchAndRun(document.getElementById('lunrsearch').value);">
-    <input type="text" class="form-control text-small" id="lunrsearch" name="q" value="" placeholder="Type and hit enter..." data-i18n="nav.search_placeholder">
+<form class="bd-search hidden-sm-down" role="search" onSubmit="return initSearchAndRun(document.getElementById('lunrsearch').value);">
+    <label for="lunrsearch" class="sr-only">Search</label>
+    <input type="search" class="form-control text-small" id="lunrsearch" name="q" value="" placeholder="Type and hit enter..." data-i18n="nav.search_placeholder" aria-label="Search site content" autocomplete="off">
 </form>
 
 <script>
@@ -96,50 +97,86 @@ var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or p
     "id": {{ counter }},
     "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
     "title": "{{ page.title }}",
-    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' | truncate: 500 }}"{% assign counter = counter | plus: 1 %}
     }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{
     "id": {{ counter }},
     "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
     "title": "{{ page.title }}",
-    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' | truncate: 500 }}"{% assign counter = counter | plus: 1 %}
     }, {% endfor %}{% for page in site.data.html_pages %}{
     "id": {{ counter }},
     "url": "{{ site.url }}{{site.baseurl}}/_html_pages/{{ page.path }}",
     "title": "{{ page.title }}",
-    "body": "{{ page.description }}"{% assign counter = counter | plus: 1 %}
+    "body": "{{ page.description | truncate: 300 }}"{% assign counter = counter | plus: 1 %}
     }, {% endfor %}{% for page in site.posts %}{
     "id": {{ counter }},
     "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
     "title": "{{ page.title }}",
-    "body": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+    "body": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' | truncate: 500 }}"{% assign counter = counter | plus: 1 %}
     }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
 
 var idx = null;
+var indexInitialized = false;
 
+// Initialize search index with chunked processing to reduce TBT
 function initSearchIndex() {
-    idx = lunr(function () {
-        this.ref('id')
-        this.field('title', { boost: 10 })
-        this.field('body', { boost: 5 })
-        this.field('description', { boost: 8 })
+    if (indexInitialized) return;
+    indexInitialized = true;
 
-        documents.forEach(function (doc) {
-            this.add(doc)
-        }, this)
-    });
+    var builder = new lunr.Builder();
+    builder.ref('id');
+    builder.field('title', { boost: 10 });
+    builder.field('body', { boost: 5 });
+    builder.field('description', { boost: 8 });
+
+    // Process documents in chunks to avoid blocking main thread
+    var chunkSize = 20;
+    var currentIndex = 0;
+
+    function processChunk() {
+        var endIndex = Math.min(currentIndex + chunkSize, documents.length);
+        for (var i = currentIndex; i < endIndex; i++) {
+            builder.add(documents[i]);
+        }
+        currentIndex = endIndex;
+
+        if (currentIndex < documents.length) {
+            // Process next chunk in next idle period or with setTimeout
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(processChunk, {timeout: 100});
+            } else {
+                setTimeout(processChunk, 0);
+            }
+        } else {
+            // Build the index
+            idx = builder.build();
+            // If there's a pending search, execute it now
+            if (pendingSearch) {
+                lunr_search(pendingSearch);
+                pendingSearch = null;
+            }
+        }
+    }
+
+    // Start processing
+    processChunk();
 }
 
 function lunr_search(term) {
-    if (!idx) return false;
+    if (!idx) {
+        // Index not ready yet, store as pending
+        pendingSearch = term;
+        return false;
+    }
 
     var resultsEl = document.getElementById('lunrsearchresults');
     resultsEl.style.display = 'block';
     document.body.classList.add('modal-open');
 
-    resultsEl.innerHTML = '<div id="resultsmodal" class="modal fade show d-block" tabindex="-1" role="dialog" aria-labelledby="resultsmodal"><div class="modal-dialog shadow-lg" role="document"><div class="modal-content"><div class="modal-header" id="modtit"><button type="button" class="close" id="btnx" data-dismiss="modal" aria-label="Close">&times;</button></div><div class="modal-body"><ul class="mb-0"></ul></div><div class="modal-footer"><button id="btnx" type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button></div></div></div></div>';
+    resultsEl.innerHTML = '<div id="resultsmodal" class="modal fade show d-block" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="searchResultsTitle"><div class="modal-dialog shadow-lg" role="document"><div class="modal-content"><div class="modal-header" id="modtit"><button type="button" class="close" id="btnx" data-dismiss="modal" aria-label="Close search results">&times;</button></div><div class="modal-body"><ul class="mb-0" role="list" aria-live="polite"></ul></div><div class="modal-footer"><button id="btnx-footer" type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button></div></div></div></div>';
 
     if(term) {
-        document.getElementById('modtit').innerHTML = "<h5 class='modal-title'>Search results for '" + term + "'</h5>" + document.getElementById('modtit').innerHTML;
+        document.getElementById('modtit').innerHTML = "<h5 class='modal-title' id='searchResultsTitle'>Search results for '" + term + "'</h5>" + document.getElementById('modtit').innerHTML;
         var searchTerm = term + '*';
         if (/[\u4e00-\u9fa5]/.test(term)) {
             searchTerm = term.split('').join('* ') + '*';
@@ -181,11 +218,27 @@ function lunr_search(term) {
     return false;
 }
 
-// Handle modal close - Pure vanilla JS
+// Handle modal close - Pure vanilla JS with keyboard support
 document.addEventListener('click', function(e) {
-    if (e.target && e.target.id === 'btnx') {
-        document.getElementById('lunrsearchresults').style.display = 'none';
-        document.body.classList.remove('modal-open');
+    if (e.target && (e.target.id === 'btnx' || e.target.id === 'btnx-footer')) {
+        closeSearchModal();
     }
 });
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        var resultsEl = document.getElementById('lunrsearchresults');
+        if (resultsEl && resultsEl.style.display === 'block') {
+            closeSearchModal();
+        }
+    }
+});
+
+function closeSearchModal() {
+    document.getElementById('lunrsearchresults').style.display = 'none';
+    document.body.classList.remove('modal-open');
+    // Return focus to search input
+    document.getElementById('lunrsearch').focus();
+}
 </script>

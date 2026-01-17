@@ -2,20 +2,20 @@
 {% assign current_lang = page.lang | default: site.default_lang %}
 
 <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle language-toggle" href="#" id="languageDropdown" role="button"
-       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="nav-link dropdown-toggle language-toggle" id="languageDropdown" type="button"
+       aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
         <span class="current-lang-code" id="currentLangCode">{{ site.data.languages[current_lang].code | default: "EN" }}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 16 16" class="dropdown-arrow"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right language-dropdown" aria-labelledby="languageDropdown">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 16 16" class="dropdown-arrow" aria-hidden="true"><path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+    </button>
+    <div class="dropdown-menu dropdown-menu-right language-dropdown" role="listbox" aria-labelledby="languageDropdown">
         {% for lang in site.data.languages %}
         {% assign lang_code = lang[0] %}
         {% assign lang_info = lang[1] %}
-        <a class="dropdown-item lang-option" href="#" data-lang="{{ lang_code }}">
-            <span class="lang-icon">{{ lang_info.icon }}</span>
+        <button class="dropdown-item lang-option" type="button" role="option" data-lang="{{ lang_code }}" tabindex="-1">
+            <span class="lang-icon" aria-hidden="true">{{ lang_info.icon }}</span>
             <span class="lang-label">{{ lang_info.label }}</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="ml-2 lang-check" style="display: none;"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
-        </a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" class="ml-2 lang-check" style="display: none;" aria-hidden="true"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+        </button>
         {% endfor %}
     </div>
 </li>
@@ -28,6 +28,13 @@
     padding: 6px 10px !important;
     border-radius: 6px;
     transition: background-color 0.2s;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.language-toggle:focus {
+    outline: 2px solid #03a87c;
+    outline-offset: 2px;
 }
 .language-toggle:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -49,6 +56,16 @@
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+}
+.language-dropdown .dropdown-item:focus {
+    outline: 2px solid #03a87c;
+    outline-offset: -2px;
+    background-color: #e9ecef;
 }
 .language-dropdown .dropdown-item:hover {
     background-color: #f8f9fa;
@@ -151,8 +168,8 @@ function switchLanguage(langCode) {
     applyTranslations(langCode);
 }
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize language switcher - deferred to reduce TBT
+function initLanguageSwitcher() {
     // Get saved language or use default
     var savedLang = localStorage.getItem('preferred_language') || defaultLang;
 
@@ -162,28 +179,100 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dropdown toggle (replaces Bootstrap dropdown)
     var dropdown = document.getElementById('languageDropdown');
     var dropdownMenu = dropdown ? dropdown.nextElementSibling : null;
+    var langOptions = dropdownMenu ? dropdownMenu.querySelectorAll('.lang-option') : [];
+    var currentFocusIndex = -1;
+
+    function openDropdown() {
+        dropdownMenu.classList.add('show');
+        dropdown.setAttribute('aria-expanded', 'true');
+        currentFocusIndex = 0;
+        if (langOptions.length > 0) {
+            langOptions[0].focus();
+        }
+    }
+
+    function closeDropdown() {
+        dropdownMenu.classList.remove('show');
+        dropdown.setAttribute('aria-expanded', 'false');
+        currentFocusIndex = -1;
+    }
+
     if (dropdown && dropdownMenu) {
         dropdown.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            dropdownMenu.classList.toggle('show');
+            var isOpen = dropdownMenu.classList.contains('show');
+            if (isOpen) {
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
         });
+
+        // Keyboard navigation for dropdown button
+        dropdown.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openDropdown();
+            } else if (e.key === 'Escape') {
+                closeDropdown();
+                dropdown.focus();
+            }
+        });
+
+        // Keyboard navigation within dropdown menu
+        dropdownMenu.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                currentFocusIndex = Math.min(currentFocusIndex + 1, langOptions.length - 1);
+                langOptions[currentFocusIndex].focus();
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                currentFocusIndex = Math.max(currentFocusIndex - 1, 0);
+                langOptions[currentFocusIndex].focus();
+            } else if (e.key === 'Escape') {
+                closeDropdown();
+                dropdown.focus();
+            } else if (e.key === 'Tab') {
+                closeDropdown();
+            }
+        });
+
         // Close dropdown when clicking outside
         document.addEventListener('click', function(e) {
             if (!dropdown.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                dropdownMenu.classList.remove('show');
+                closeDropdown();
             }
         });
     }
 
     // Add click handlers to language options
-    document.querySelectorAll('.lang-option').forEach(function(el) {
+    langOptions.forEach(function(el, index) {
         el.addEventListener('click', function(e) {
             e.preventDefault();
             var langCode = this.getAttribute('data-lang');
             switchLanguage(langCode);
-            if (dropdownMenu) dropdownMenu.classList.remove('show');
+            closeDropdown();
+            dropdown.focus();
+        });
+        el.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                var langCode = this.getAttribute('data-lang');
+                switchLanguage(langCode);
+                closeDropdown();
+                dropdown.focus();
+            }
         });
     });
+}
+
+// Defer initialization to reduce main thread blocking
+document.addEventListener('DOMContentLoaded', function() {
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(initLanguageSwitcher, {timeout: 1500});
+    } else {
+        setTimeout(initLanguageSwitcher, 100);
+    }
 });
 </script>
