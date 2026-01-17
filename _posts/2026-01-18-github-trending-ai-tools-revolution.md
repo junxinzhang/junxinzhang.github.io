@@ -24,7 +24,7 @@ slug: github-trending-ai-tools-revolution
 
 ---
 
-## 一、Superpowers：让AI Agent"按计划行事"的方法论
+## 一、Superpowers：让AI Agent[^fn-agent]"按计划行事"的方法论
 
 ### 1.1 今日数据
 
@@ -120,7 +120,7 @@ Superpowers给出的答案是：**用流程约束自由度**。
 
 ### 2.3 技术架构
 
-Eigent建立在CAMEL-AI框架之上，提供了完整的多智能体协作能力：
+Eigent建立在CAMEL-AI[^fn-camel]框架之上，提供了完整的多智能体协作能力：
 
 | 组件 | 功能 |
 |-----|------|
@@ -274,7 +274,7 @@ results = extractor.extract(
 
 **几秒钟，处理完所有文档。**
 
-### 4.4 关键创新：源定位（Source Grounding）
+### 4.4 关键创新：源定位（Source Grounding）[^fn-grounding]
 
 LangExtract最独特的能力是**源定位**：
 
@@ -569,6 +569,12 @@ Star一个项目、提一个Issue、贡献一行代码——你也可以成为�
 
 ---
 
+[^fn-agent]: **AI Agent（智能代理）** 是能够感知环境、做出决策并自主执行任务的 AI 系统。与传统的被动响应式 AI 不同，Agent 具有目标导向性，能够规划多步骤任务并持续执行直到完成。
+
 [^fn-mcp]: **MCP (Model Context Protocol)** 是 Anthropic 推出的开放标准协议，让 AI 模型能够以统一的方式连接各种工具、数据库和 API，类似于 AI 世界的 "USB-C" 接口。2025年12月已捐赠给 Linux 基金会。
+
+[^fn-camel]: **CAMEL-AI** 是一个开源的多智能体通信框架，专注于研究 AI Agent 之间的协作与交互。其名称来源于 "Communicative Agents for Mind Exploration of Large Language Model Society"。
+
+[^fn-grounding]: **源定位 (Source Grounding)** 是一种将 AI 输出与原始数据源关联的技术，确保每个生成的结果都能追溯到具体的来源位置，是解决 AI 幻觉问题的关键方法之一。
 
 [^fn-hallucination]: **AI幻觉 (Hallucination)** 指 AI 模型生成看似合理但实际上不准确或完全虚构的信息。这是当前大语言模型的主要挑战之一，也是 LangExtract 等工具强调"源定位"的原因。
