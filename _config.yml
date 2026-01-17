@@ -3,7 +3,7 @@ name: "Just Jason"
 title: "Just Jason - AI与技术博客"
 tagline: "AI技术 | DevOps | 职业成长"
 description: "专注于 AI 技术、DevOps 实践、职业成长的技术博客。分享 LLM 私有化部署、云原生架构、个人成长等深度内容。"
-logo: 'assets/images/logo.png'
+logo: 'assets/images/logo.webp'
 favicon: 'assets/images/favicon/favicon.ico'
 domain: 'junxinzhang.com'
 url: 'https://junxinzhang.com'
