@@ -94,6 +94,9 @@ Superpowers给出的答案是：**用流程约束自由度**。
 
 这不仅是一个工具，更是一套思维方式。对于任何想要在工作中大规模使用AI Agent的人来说，这种方法论值得学习。
 
+![Superpowers工作流程：设计→计划→执行](/assets/images/screenshot-20260118-superpowers-flow.webp)
+*Superpowers 的核心工作流：通过设计、计划、执行三阶段，让 AI Agent 按计划行事*
+
 ---
 
 ## 二、Eigent：每个人都能拥有的AI员工团队
@@ -162,6 +165,9 @@ Eigent内置了MCP（Model Context Protocol）工具支持：
 现在，通过开源和本地部署，每个开发者都能拥有自己的AI协作团队。
 
 这是从"使用AI工具"到"管理AI团队"的转变。
+
+![Eigent多Agent协作架构](/assets/images/screenshot-20260118-eigent-agents.webp)
+*Eigent 的多 Agent 协作架构：Developer、Browser、Document、Multi-Modal 四大 Agent 并行工作*
 
 ---
 
@@ -290,6 +296,9 @@ LangExtract的答案是：**让你能够追溯每个结果到原文**。
 
 这是可解释性AI（Explainable AI）在实际应用中的体现。
 
+![LangExtract源定位功能](/assets/images/screenshot-20260118-langextract-grounding.webp)
+*LangExtract 的源定位能力：从文档提取信息时，自动映射到原文位置，杜绝 AI 幻觉*
+
 ### 4.5 技术架构
 
 | 组件 | 说明 |
@@ -378,6 +387,9 @@ AionUi正在成为这个聚合层的开源选择。
 ## 六、五大项目的共同趋势
 
 回顾今天的五个热门项目，我们能看到几个清晰的趋势：
+
+![2026年AI工具四大趋势](/assets/images/screenshot-20260118-ai-trends-summary.webp)
+*2026年 AI 开发工具的四大趋势：本地优先、Agent化、开发者体验、可解释性*
 
 ### 6.1 本地优先（Local First）
 
