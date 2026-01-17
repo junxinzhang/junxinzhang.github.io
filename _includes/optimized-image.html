@@ -20,9 +20,6 @@
 {% else %}
   {% assign is_external = false %}
   {% assign full_src = site.baseurl | append: "/" | append: img_src %}
-  {% assign ext = img_src | split: "." | last | downcase %}
-  {% assign base_path = img_src | split: "." | pop | join: "." %}
-  {% assign webp_src = site.baseurl | append: "/" | append: base_path | append: ".webp" %}
 {% endif %}
 
 <div class="optimized-img-container {{ include.class }}" style="height: {{ img_height }}; position: relative; overflow: hidden;">
@@ -39,19 +36,17 @@
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
   >
   {% else %}
-  <picture>
-    <source srcset="{{ webp_src }}" type="image/webp">
-    <img
-      class="optimized-img {{ include.img-class }}"
-      src="{{ full_src }}"
-      alt="{{ img_alt | escape }}"
-      width="800"
-      height="450"
-      loading="{{ img_loading }}"
-      decoding="async"
-      {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-    >
-  </picture>
+  {% comment %} 直接使用原图，不再尝试加载可能不存在的 WebP 版本，避免 404 错误 {% endcomment %}
+  <img
+    class="optimized-img {{ include.img-class }}"
+    src="{{ full_src }}"
+    alt="{{ img_alt | escape }}"
+    width="800"
+    height="450"
+    loading="{{ img_loading }}"
+    decoding="async"
+    {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+  >
   {% endif %}
 </div>
