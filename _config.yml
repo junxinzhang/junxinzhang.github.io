@@ -87,6 +87,9 @@ highlighter: rouge
 # Paginate
 paginate: 10
 
+# 允许显示"未来"日期的文章 (解决 UTC 时区差异问题)
+future: true
+
 # Feed
 feed:
   posts_limit: 10
