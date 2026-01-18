@@ -95,3 +95,23 @@
     - AMI系统
   date: 2026-01-17
   featured: true
+
+- title: AI Security Guard
+  repo: ai-security-guard-landing-page
+  demo_url: https://aisecguard.junxinzhang.com
+  description: 企业级 AI 安全防护平台，为 AI 应用构建全方位安全防线，支持中英双语、PWA、无障碍访问
+  category: Security
+  tech_stack:
+    - HTML5
+    - Tailwind CSS
+    - PWA
+  keywords:
+    - AI Security
+    - AI安全
+    - 安全防护
+    - AI应用安全
+    - 企业安全
+    - Security Platform
+    - 人工智能安全
+  date: 2026-01-18
+  featured: true
