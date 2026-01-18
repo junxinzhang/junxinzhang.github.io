@@ -54,7 +54,7 @@
 
 - title: 蓝鲸CMDB定制方案
   repo: bk-cmdb-landing-page
-  demo_url: https://junxinzhang.github.io/bk-cmdb-landing-page/
+  demo_url: https://cmdb.junxinzhang.com
   description: 蓝鲸智云 CMDB 精细化权限与用户管理定制方案展示
   category: CMDB
   tech_stack:
