@@ -1,0 +1,60 @@
+# 落地页项目数据文件
+# Landing Pages Portfolio
+#
+# 格式说明:
+# - title: 项目标题
+# - repo: GitHub仓库名
+# - demo_url: 在线演示链接
+# - description: 项目简短描述
+# - category: 分类 (Network/DevOps/CMDB/App)
+# - tech_stack: 技术栈
+# - date: 创建或更新日期
+# - featured: 是否精选展示
+
+- title: FortiGate SD-WAN Monitor
+  repo: fortigate-sdwan-monitor
+  demo_url: https://network-monitor.junxinzhang.com
+  description: 企业级 FortiGate SD-WAN 网络健康监控解决方案，支持实时监控、智能告警、趋势分析
+  category: Network
+  tech_stack:
+    - HTML5
+    - Tailwind CSS
+    - AOS
+  date: 2026-01-17
+  featured: true
+
+- title: DevOps Dashboard
+  repo: devops-dash-landing-page
+  demo_url: https://devops-dash.junxinzhang.com
+  description: 企业级 DevOps 仪表盘产品展示页，支持双语、PWA、无障碍访问
+  category: DevOps
+  tech_stack:
+    - HTML5
+    - Tailwind CSS
+    - PWA
+  date: 2026-01-17
+  featured: true
+
+- title: 蓝鲸CMDB定制方案
+  repo: bk-cmdb-landing-page
+  demo_url: https://junxinzhang.github.io/bk-cmdb-landing-page/
+  description: 蓝鲸智云 CMDB 精细化权限与用户管理定制方案展示
+  category: CMDB
+  tech_stack:
+    - HTML5
+    - Tailwind CSS
+    - AOS
+  date: 2026-01-17
+  featured: true
+
+- title: Meterinfo App
+  repo: meterinfoapp-landing-page
+  demo_url: https://meterinfoapp.junxinzhang.com
+  description: Meterinfo App 产品介绍与用户转化引导页
+  category: App
+  tech_stack:
+    - HTML5
+    - CSS3
+    - JavaScript
+  date: 2026-01-17
+  featured: false
