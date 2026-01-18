@@ -216,10 +216,14 @@
 
         if (location.pathname.replace(/^\//, '') === link.pathname.replace(/^\//, '') &&
             location.hostname === link.hostname) {
-            var target = document.querySelector(link.hash);
+            // Escape special characters in CSS selectors (colons in footnote IDs like #fn:fn-agent)
+            var escapedHash = link.hash.replace(/:/g, '\\:');
+            var target = document.querySelector(escapedHash);
             if (target) {
                 e.preventDefault();
                 smoothScrollTo(target);
+                // Update URL hash for bookmarking
+                history.pushState(null, null, link.hash);
             }
         }
     });
