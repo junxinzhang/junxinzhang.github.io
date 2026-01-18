@@ -22,6 +22,7 @@
     var progressInterval = null;
     var voices = [];
     var playStartTime = null;  // Track play start time for duration calculation
+    var isChangingSpeed = false;  // Flag to prevent onend from resetting during speed change
 
     // Analytics helper function
     function trackTTSEvent(action, params) {
@@ -347,6 +348,9 @@
         };
 
         utterance.onend = function() {
+            // Skip if we're in the middle of changing speed
+            if (isChangingSpeed) return;
+
             isPlaying = false;
             isPaused = false;
 
@@ -468,9 +472,11 @@
             var savedCharIndex = currentCharIndex;
             var wasPlaying = isPlaying && !isPaused;
 
-            // Cancel current speech without resetting progress
+            // Set flag to prevent onend from resetting state
+            isChangingSpeed = true;
+
+            // Cancel current speech
             synth.cancel();
-            stopProgressTracking();
 
             // Calculate start position based on saved progress
             var startIndex = Math.floor(savedCharIndex);
@@ -479,6 +485,15 @@
 
             // Restore the saved progress
             currentCharIndex = savedCharIndex;
+
+            // Immediately update progress bar to show current position
+            var progress = (currentCharIndex / totalChars) * 100;
+            progressBar.style.width = progress + '%';
+
+            // Update time display with new rate
+            var elapsedSeconds = Math.floor(currentCharIndex / (5 * currentRate));
+            var totalSeconds = Math.floor(totalChars / (5 * currentRate));
+            timeDisplay.textContent = formatTime(elapsedSeconds) + ' / ' + formatTime(totalSeconds);
 
             utterance = new SpeechSynthesisUtterance(remainingText);
             utterance.rate = currentRate;
@@ -490,6 +505,7 @@
             }
 
             utterance.onstart = function() {
+                isChangingSpeed = false;
                 isPlaying = true;
                 isPaused = false;
                 updateUI();
@@ -497,6 +513,9 @@
             };
 
             utterance.onend = function() {
+                // Skip if we're in the middle of changing speed
+                if (isChangingSpeed) return;
+
                 isPlaying = false;
                 isPaused = false;
 
@@ -518,6 +537,9 @@
             };
 
             utterance.onerror = function(event) {
+                isChangingSpeed = false;
+                // Ignore 'interrupted' error which happens during speed change
+                if (event.error === 'interrupted') return;
                 console.error('TTS Error:', event.error);
                 isPlaying = false;
                 isPaused = false;
@@ -532,19 +554,31 @@
                 }
             };
 
-            // Auto-resume playing if was playing before
+            // Keep UI in playing state
+            isPlaying = true;
+            isPaused = false;
+            updateUI();
+
+            // Auto-resume playing
             if (wasPlaying) {
                 synth.speak(utterance);
+                startProgressTracking();
             } else {
-                // Was paused, keep it paused state but ready to resume
-                isPlaying = true;
+                // Was paused, keep it paused state
                 isPaused = true;
+                updateUI();
                 synth.speak(utterance);
-                synth.pause();
+                // Use timeout to ensure speak is called before pause
+                setTimeout(function() {
+                    if (isPaused) {
+                        synth.pause();
+                    }
+                    isChangingSpeed = false;
+                }, 50);
             }
+        } else {
+            updateEstimatedTime();
         }
-
-        updateEstimatedTime();
     }
 
     function updateUI() {
