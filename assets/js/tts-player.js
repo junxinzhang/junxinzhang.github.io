@@ -462,13 +462,23 @@
             is_playing: isPlaying
         });
 
-        // If currently playing, restart with new speed
-        if (isPlaying) {
-            var progress = currentCharIndex / totalChars;
-            stop();
-            // Restart from approximate position
-            var startIndex = Math.floor(progress * articleText.length);
+        // If currently playing or paused, restart with new speed from current position
+        if (isPlaying || isPaused) {
+            // Save current progress before canceling
+            var savedCharIndex = currentCharIndex;
+            var wasPlaying = isPlaying && !isPaused;
+
+            // Cancel current speech without resetting progress
+            synth.cancel();
+            stopProgressTracking();
+
+            // Calculate start position based on saved progress
+            var startIndex = Math.floor(savedCharIndex);
+            if (startIndex >= articleText.length) startIndex = 0;
             var remainingText = articleText.substring(startIndex);
+
+            // Restore the saved progress
+            currentCharIndex = savedCharIndex;
 
             utterance = new SpeechSynthesisUtterance(remainingText);
             utterance.rate = currentRate;
@@ -489,13 +499,49 @@
             utterance.onend = function() {
                 isPlaying = false;
                 isPaused = false;
+
+                // Calculate actual listening duration
+                var listenDuration = playStartTime ? Math.floor((Date.now() - playStartTime) / 1000) : 0;
+
+                // Track completion event
+                trackTTSEvent('tts_complete', {
+                    listen_duration: listenDuration,
+                    completion_rate: 100,
+                    speed: currentRate
+                });
+
                 currentCharIndex = 0;
+                playStartTime = null;
                 updateUI();
                 stopProgressTracking();
                 resetProgress();
             };
 
-            synth.speak(utterance);
+            utterance.onerror = function(event) {
+                console.error('TTS Error:', event.error);
+                isPlaying = false;
+                isPaused = false;
+                updateUI();
+                stopProgressTracking();
+            };
+
+            utterance.onboundary = function(event) {
+                if (event.name === 'word' || event.name === 'sentence') {
+                    // Adjust charIndex based on where we started
+                    currentCharIndex = startIndex + event.charIndex;
+                }
+            };
+
+            // Auto-resume playing if was playing before
+            if (wasPlaying) {
+                synth.speak(utterance);
+            } else {
+                // Was paused, keep it paused state but ready to resume
+                isPlaying = true;
+                isPaused = true;
+                synth.speak(utterance);
+                synth.pause();
+            }
         }
 
         updateEstimatedTime();
