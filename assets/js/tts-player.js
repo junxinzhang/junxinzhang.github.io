@@ -21,6 +21,42 @@
     var totalChars = 0;
     var progressInterval = null;
     var voices = [];
+    var playStartTime = null;  // Track play start time for duration calculation
+
+    // Analytics helper function
+    function trackTTSEvent(action, params) {
+        params = params || {};
+
+        // Get article info for context
+        var articleTitle = document.title || '';
+        var articlePath = window.location.pathname || '';
+
+        // Merge default params
+        var eventParams = {
+            event_category: 'TTS_Player',
+            article_title: articleTitle,
+            article_path: articlePath,
+            article_length: totalChars,
+            language: document.documentElement.lang || 'zh-hans'
+        };
+
+        // Add custom params
+        for (var key in params) {
+            if (params.hasOwnProperty(key)) {
+                eventParams[key] = params[key];
+            }
+        }
+
+        // Send to Google Analytics 4
+        if (typeof gtag === 'function') {
+            gtag('event', action, eventParams);
+        }
+
+        // Also log to console in development
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            console.log('TTS Analytics:', action, eventParams);
+        }
+    }
 
     // DOM Elements
     var player = null;
@@ -298,14 +334,35 @@
         utterance.onstart = function() {
             isPlaying = true;
             isPaused = false;
+            playStartTime = Date.now();
             updateUI();
             startProgressTracking();
+
+            // Track play start event
+            trackTTSEvent('tts_play', {
+                speed: currentRate,
+                voice_name: voice ? voice.name : 'default',
+                estimated_duration: Math.floor(totalChars / (5 * currentRate))
+            });
         };
 
         utterance.onend = function() {
             isPlaying = false;
             isPaused = false;
+
+            // Calculate actual listening duration
+            var listenDuration = playStartTime ? Math.floor((Date.now() - playStartTime) / 1000) : 0;
+            var completionRate = Math.round((currentCharIndex / totalChars) * 100);
+
+            // Track completion event
+            trackTTSEvent('tts_complete', {
+                listen_duration: listenDuration,
+                completion_rate: completionRate,
+                speed: currentRate
+            });
+
             currentCharIndex = 0;
+            playStartTime = null;
             updateUI();
             stopProgressTracking();
             resetProgress();
@@ -343,6 +400,13 @@
             synth.pause();
             isPaused = true;
             updateUI();
+
+            // Track pause event
+            var progressPercent = Math.round((currentCharIndex / totalChars) * 100);
+            trackTTSEvent('tts_pause', {
+                progress_percent: progressPercent,
+                speed: currentRate
+            });
         }
     }
 
@@ -351,31 +415,70 @@
             synth.resume();
             isPaused = false;
             updateUI();
+
+            // Track resume event
+            var progressPercent = Math.round((currentCharIndex / totalChars) * 100);
+            trackTTSEvent('tts_resume', {
+                progress_percent: progressPercent,
+                speed: currentRate
+            });
         }
     }
 
     function stop() {
+        // Calculate listening stats before resetting
+        var listenDuration = playStartTime ? Math.floor((Date.now() - playStartTime) / 1000) : 0;
+        var progressPercent = Math.round((currentCharIndex / totalChars) * 100);
+
+        // Track stop event (only if was actually playing)
+        if (isPlaying || isPaused) {
+            trackTTSEvent('tts_stop', {
+                listen_duration: listenDuration,
+                progress_percent: progressPercent,
+                speed: currentRate
+            });
+        }
+
         synth.cancel();
         isPlaying = false;
         isPaused = false;
         currentCharIndex = 0;
+        playStartTime = null;
         updateUI();
         stopProgressTracking();
         resetProgress();
     }
 
     function cycleSpeed() {
+        var oldRate = currentRate;
         currentSpeedIndex = (currentSpeedIndex + 1) % speeds.length;
         currentRate = speeds[currentSpeedIndex];
         speedBtn.querySelector('span').textContent = speedLabels[currentSpeedIndex];
 
-        // If currently playing, restart with new speed
-        if (isPlaying) {
-            var progress = currentCharIndex / totalChars;
-            stop();
-            // Restart from approximate position
-            var startIndex = Math.floor(progress * articleText.length);
+        // Track speed change event
+        trackTTSEvent('tts_speed_change', {
+            old_speed: oldRate,
+            new_speed: currentRate,
+            is_playing: isPlaying
+        });
+
+        // If currently playing or paused, restart with new speed from current position
+        if (isPlaying || isPaused) {
+            // Save current progress before canceling
+            var savedCharIndex = currentCharIndex;
+            var wasPlaying = isPlaying && !isPaused;
+
+            // Cancel current speech without resetting progress
+            synth.cancel();
+            stopProgressTracking();
+
+            // Calculate start position based on saved progress
+            var startIndex = Math.floor(savedCharIndex);
+            if (startIndex >= articleText.length) startIndex = 0;
             var remainingText = articleText.substring(startIndex);
+
+            // Restore the saved progress
+            currentCharIndex = savedCharIndex;
 
             utterance = new SpeechSynthesisUtterance(remainingText);
             utterance.rate = currentRate;
@@ -396,13 +499,49 @@
             utterance.onend = function() {
                 isPlaying = false;
                 isPaused = false;
+
+                // Calculate actual listening duration
+                var listenDuration = playStartTime ? Math.floor((Date.now() - playStartTime) / 1000) : 0;
+
+                // Track completion event
+                trackTTSEvent('tts_complete', {
+                    listen_duration: listenDuration,
+                    completion_rate: 100,
+                    speed: currentRate
+                });
+
                 currentCharIndex = 0;
+                playStartTime = null;
                 updateUI();
                 stopProgressTracking();
                 resetProgress();
             };
 
-            synth.speak(utterance);
+            utterance.onerror = function(event) {
+                console.error('TTS Error:', event.error);
+                isPlaying = false;
+                isPaused = false;
+                updateUI();
+                stopProgressTracking();
+            };
+
+            utterance.onboundary = function(event) {
+                if (event.name === 'word' || event.name === 'sentence') {
+                    // Adjust charIndex based on where we started
+                    currentCharIndex = startIndex + event.charIndex;
+                }
+            };
+
+            // Auto-resume playing if was playing before
+            if (wasPlaying) {
+                synth.speak(utterance);
+            } else {
+                // Was paused, keep it paused state but ready to resume
+                isPlaying = true;
+                isPaused = true;
+                synth.speak(utterance);
+                synth.pause();
+            }
         }
 
         updateEstimatedTime();
