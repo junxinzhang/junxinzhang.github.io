@@ -1,0 +1,363 @@
+/**
+ * TTS Player Styles - WeChat-like audio player
+ */
+
+.tts-player {
+    margin: 1rem 0 1.5rem 0;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #f8fdf9 0%, #e8f5e9 100%);
+    border-radius: 12px;
+    border: 1px solid #c8e6c9;
+    box-shadow: 0 2px 8px rgba(3, 168, 124, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tts-player:hover {
+    box-shadow: 0 4px 12px rgba(3, 168, 124, 0.15);
+}
+
+.tts-player-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Microphone icon */
+.tts-player .tts-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #03a87c 0%, #02c58d 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    animation: none;
+}
+
+.tts-player .tts-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.tts-player.tts-playing .tts-icon {
+    animation: tts-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes tts-pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(3, 168, 124, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(3, 168, 124, 0);
+    }
+}
+
+/* Content area */
+.tts-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.tts-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.tts-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d32;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.tts-status {
+    font-size: 12px;
+    color: #66bb6a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Progress bar */
+.tts-progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tts-progress-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(3, 168, 124, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tts-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #03a87c 0%, #4caf50 100%);
+    border-radius: 2px;
+    transition: width 0.1s linear;
+}
+
+.tts-time {
+    font-size: 12px;
+    color: #689f38;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+    white-space: nowrap;
+    min-width: 70px;
+    text-align: right;
+}
+
+/* Control buttons */
+.tts-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.tts-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: #03a87c;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tts-btn:hover {
+    background: #03a87c;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.tts-btn:active {
+    transform: scale(0.95);
+}
+
+.tts-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.tts-play-btn {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #03a87c 0%, #02c58d 100%);
+    color: #fff;
+}
+
+.tts-play-btn:hover {
+    background: linear-gradient(135deg, #028a66 0%, #01a677 100%);
+    color: #fff;
+}
+
+.tts-play-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.tts-speed-btn {
+    width: auto;
+    padding: 0 10px;
+    border-radius: 18px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.tts-speed-btn span {
+    pointer-events: none;
+}
+
+/* Playing state */
+.tts-player.tts-playing {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-color: #81c784;
+}
+
+/* Paused state */
+.tts-player.tts-paused {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-color: #ffca28;
+}
+
+.tts-player.tts-paused .tts-icon {
+    background: linear-gradient(135deg, #ffa726 0%, #ffb74d 100%);
+}
+
+.tts-player.tts-paused .tts-title {
+    color: #ef6c00;
+}
+
+.tts-player.tts-paused .tts-status {
+    color: #ffa726;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .tts-player {
+        padding: 10px 12px;
+    }
+
+    .tts-player-inner {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .tts-player .tts-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .tts-player .tts-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .tts-content {
+        flex: 1 1 calc(100% - 100px);
+        min-width: 120px;
+    }
+
+    .tts-title {
+        font-size: 13px;
+    }
+
+    .tts-controls {
+        gap: 4px;
+    }
+
+    .tts-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .tts-play-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .tts-speed-btn {
+        padding: 0 8px;
+        font-size: 11px;
+    }
+
+    .tts-time {
+        font-size: 11px;
+        min-width: 60px;
+    }
+}
+
+/* Dark mode support */
+[data-theme="dark"] .tts-player {
+    background: linear-gradient(135deg, #1e3a2f 0%, #1a2e25 100%);
+    border-color: #2d5a47;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .tts-player:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .tts-title {
+    color: #4ade80;
+}
+
+[data-theme="dark"] .tts-status {
+    color: #86efac;
+}
+
+[data-theme="dark"] .tts-progress-bar {
+    background: rgba(74, 222, 128, 0.2);
+}
+
+[data-theme="dark"] .tts-progress-fill {
+    background: linear-gradient(90deg, #4ade80 0%, #22c55e 100%);
+}
+
+[data-theme="dark"] .tts-time {
+    color: #86efac;
+}
+
+[data-theme="dark"] .tts-btn {
+    background: #16213e;
+    color: #4ade80;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .tts-btn:hover {
+    background: #4ade80;
+    color: #1a1a2e;
+}
+
+[data-theme="dark"] .tts-play-btn {
+    background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+    color: #0f1a12;
+}
+
+[data-theme="dark"] .tts-play-btn:hover {
+    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+}
+
+[data-theme="dark"] .tts-player.tts-playing {
+    background: linear-gradient(135deg, #1a3d2d 0%, #15302a 100%);
+    border-color: #4ade80;
+}
+
+[data-theme="dark"] .tts-player.tts-paused {
+    background: linear-gradient(135deg, #3d3520 0%, #302a15 100%);
+    border-color: #fbbf24;
+}
+
+[data-theme="dark"] .tts-player.tts-paused .tts-icon {
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+}
+
+[data-theme="dark"] .tts-player.tts-paused .tts-title {
+    color: #fbbf24;
+}
+
+[data-theme="dark"] .tts-player.tts-paused .tts-status {
+    color: #fcd34d;
+}
+
+/* Hide on unsupported browsers - JS will show it */
+.tts-player {
+    display: block;
+}
+
+/* Smooth wave animation for playing state */
+.tts-player.tts-playing .tts-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(3, 168, 124, 0.5);
+    animation: tts-wave 1.5s ease-out infinite;
+}
+
+@keyframes tts-wave {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
