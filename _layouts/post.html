@@ -3,6 +3,9 @@ layout: default
 ---
 {% assign author = site.authors[page.author] %}
 
+<!-- TTS Player CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tts-player.css">
+
 <!-- Reading Progress Bar -->
 <div class="reading-progress-bar" id="readingProgress"></div>
 
@@ -329,3 +332,6 @@ layout: default
     }
 })();
 </script>
+
+<!-- TTS Player Script -->
+<script src="{{ site.baseurl }}/assets/js/tts-player.js"></script>
