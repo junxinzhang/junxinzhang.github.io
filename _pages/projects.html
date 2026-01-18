@@ -1,7 +1,26 @@
 ---
-title: "Projects"
+title: "Projects Portfolio - 开源项目与落地页作品集"
 layout: default
 permalink: "/projects.html"
+description: "Jason Zhang 的开源项目作品集，包含企业级 DevOps 仪表盘、SD-WAN 网络监控、蓝鲸 CMDB 定制方案等落地页项目。专注 AI 技术、DevOps、云原生架构。"
+image: /assets/images/projects-og.jpg
+keywords:
+  - 落地页设计
+  - Landing Page
+  - DevOps Dashboard
+  - SD-WAN Monitor
+  - 蓝鲸CMDB
+  - 开源项目
+  - GitHub Portfolio
+  - 企业级解决方案
+  - Tailwind CSS
+  - 前端开发
+seo:
+  type: CollectionPage
+  name: Projects Portfolio
+sitemap:
+  priority: 0.9
+  changefreq: weekly
 ---
 
 <style>
@@ -229,6 +248,45 @@ permalink: "/projects.html"
 }
 </style>
 
+<!-- JSON-LD 结构化数据 - 帮助搜索引擎理解页面内容 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Projects Portfolio - 开源项目与落地页作品集",
+  "description": "Jason Zhang 的开源项目作品集，包含企业级 DevOps 仪表盘、SD-WAN 网络监控、蓝鲸 CMDB 定制方案等落地页项目。",
+  "url": "{{ site.url }}/projects.html",
+  "author": {
+    "@type": "Person",
+    "name": "Jason Zhang",
+    "url": "{{ site.url }}/about"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {% for project in site.data.landing_pages %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "{{ project.title }}",
+          "description": "{{ project.description }}",
+          "url": "{{ project.demo_url }}",
+          "codeRepository": "https://github.com/junxinzhang/{{ project.repo }}",
+          "programmingLanguage": ["HTML", "CSS", "JavaScript"],
+          "author": {
+            "@type": "Person",
+            "name": "Jason Zhang"
+          }
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+}
+</script>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
@@ -268,6 +326,13 @@ permalink: "/projects.html"
                             <span class="tech-tag">{{ tech }}</span>
                             {% endfor %}
                         </div>
+                        {% if project.keywords %}
+                        <div class="seo-keywords" style="margin-top:10px;">
+                            {% for keyword in project.keywords %}
+                            <span class="keyword-tag" style="display:inline-block;padding:2px 6px;background:#f0f4ff;border-radius:3px;font-size:10px;color:#667eea;margin:2px;">{{ keyword }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
                     </div>
                     <div class="project-card-footer">
                         <a href="{{ project.demo_url }}" target="_blank" class="project-link demo">

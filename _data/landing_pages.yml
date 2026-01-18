@@ -8,6 +8,7 @@
 # - description: 项目简短描述
 # - category: 分类 (Network/DevOps/CMDB/App)
 # - tech_stack: 技术栈
+# - keywords: SEO关键词（用于搜索引擎优化）
 # - date: 创建或更新日期
 # - featured: 是否精选展示
 
@@ -20,6 +21,14 @@
     - HTML5
     - Tailwind CSS
     - AOS
+  keywords:
+    - FortiGate
+    - SD-WAN
+    - 网络监控
+    - Network Monitor
+    - 实时告警
+    - 企业网络
+    - 健康检测
   date: 2026-01-17
   featured: true
 
@@ -32,6 +41,14 @@
     - HTML5
     - Tailwind CSS
     - PWA
+  keywords:
+    - DevOps
+    - Dashboard
+    - CI/CD
+    - 持续集成
+    - 持续部署
+    - 运维监控
+    - 自动化运维
   date: 2026-01-17
   featured: true
 
@@ -44,6 +61,14 @@
     - HTML5
     - Tailwind CSS
     - AOS
+  keywords:
+    - 蓝鲸
+    - BlueKing
+    - CMDB
+    - 配置管理
+    - 资产管理
+    - 权限管理
+    - 运维平台
   date: 2026-01-17
   featured: true
 
@@ -56,5 +81,11 @@
     - HTML5
     - CSS3
     - JavaScript
+  keywords:
+    - Meterinfo
+    - 电表管理
+    - 能源监控
+    - App Landing Page
+    - 产品展示
   date: 2026-01-17
   featured: false
