@@ -8,6 +8,7 @@
 # - description: 项目简短描述
 # - category: 分类 (Network/DevOps/CMDB/App)
 # - tech_stack: 技术栈
+# - keywords: SEO关键词（用于搜索引擎优化）
 # - date: 创建或更新日期
 # - featured: 是否精选展示
 
@@ -20,6 +21,14 @@
     - HTML5
     - Tailwind CSS
     - AOS
+  keywords:
+    - FortiGate
+    - SD-WAN
+    - 网络监控
+    - Network Monitor
+    - 实时告警
+    - 企业网络
+    - 健康检测
   date: 2026-01-17
   featured: true
 
@@ -32,29 +41,57 @@
     - HTML5
     - Tailwind CSS
     - PWA
+  keywords:
+    - DevOps
+    - Dashboard
+    - CI/CD
+    - 持续集成
+    - 持续部署
+    - 运维监控
+    - 自动化运维
   date: 2026-01-17
   featured: true
 
 - title: 蓝鲸CMDB定制方案
   repo: bk-cmdb-landing-page
-  demo_url: https://junxinzhang.github.io/bk-cmdb-landing-page/
+  demo_url: https://cmdb.junxinzhang.com
   description: 蓝鲸智云 CMDB 精细化权限与用户管理定制方案展示
   category: CMDB
   tech_stack:
     - HTML5
     - Tailwind CSS
     - AOS
+  keywords:
+    - 蓝鲸
+    - BlueKing
+    - CMDB
+    - 配置管理
+    - 资产管理
+    - 权限管理
+    - 运维平台
   date: 2026-01-17
   featured: true
 
-- title: Meterinfo App
+- title: Meterinfo 电表轮换管理系统
   repo: meterinfoapp-landing-page
   demo_url: https://meterinfoapp.junxinzhang.com
-  description: Meterinfo App 产品介绍与用户转化引导页
+  description: 电表轮换全生命周期管理系统，支持电表资产登记、轮换计划制定、到期预警提醒、更换记录追踪，助力电力公司实现电表资产精细化管理
   category: App
   tech_stack:
     - HTML5
     - CSS3
     - JavaScript
+    - PWA
+  keywords:
+    - 电表轮换
+    - 电表管理系统
+    - 电力资产管理
+    - 电表生命周期
+    - 轮换计划
+    - 到期预警
+    - 电力公司
+    - 智能电表
+    - 计量资产
+    - AMI系统
   date: 2026-01-17
-  featured: false
+  featured: true

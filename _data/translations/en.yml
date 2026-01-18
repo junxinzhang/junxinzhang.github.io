@@ -8,6 +8,7 @@ nav:
   home: "Home"
   posts: "Posts"
   categories: "Categories"
+  projects: "Projects"
   tags: "Tags"
   about: "About"
   search: "Search"

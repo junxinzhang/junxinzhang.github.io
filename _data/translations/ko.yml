@@ -8,6 +8,7 @@ nav:
   home: "홈"
   posts: "글"
   categories: "카테고리"
+  projects: "프로젝트"
   tags: "태그"
   about: "소개"
   search: "검색"
