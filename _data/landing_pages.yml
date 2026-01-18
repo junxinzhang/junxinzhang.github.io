@@ -72,20 +72,26 @@
   date: 2026-01-17
   featured: true
 
-- title: Meterinfo App
+- title: Meterinfo 电表轮换管理系统
   repo: meterinfoapp-landing-page
   demo_url: https://meterinfoapp.junxinzhang.com
-  description: Meterinfo App 产品介绍与用户转化引导页
+  description: 电表轮换全生命周期管理系统，支持电表资产登记、轮换计划制定、到期预警提醒、更换记录追踪，助力电力公司实现电表资产精细化管理
   category: App
   tech_stack:
     - HTML5
     - CSS3
     - JavaScript
+    - PWA
   keywords:
-    - Meterinfo
-    - 电表管理
-    - 能源监控
-    - App Landing Page
-    - 产品展示
+    - 电表轮换
+    - 电表管理系统
+    - 电力资产管理
+    - 电表生命周期
+    - 轮换计划
+    - 到期预警
+    - 电力公司
+    - 智能电表
+    - 计量资产
+    - AMI系统
   date: 2026-01-17
-  featured: false
+  featured: true
