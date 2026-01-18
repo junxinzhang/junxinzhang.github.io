@@ -84,6 +84,11 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 
+# Kramdown settings (for footnotes)
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  footnote_nr: 1
+
 # Paginate
 paginate: 10
 
