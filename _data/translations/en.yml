@@ -98,3 +98,14 @@ cta:
   follow_twitter: "Follow on X"
   follow_github: "Follow on GitHub"
   share_prompt: "Found this helpful? Share it with others who might benefit!"
+
+series:
+  part_of_series: "Series"
+  articles: "articles"
+  previous: "Previous"
+  next: "Next"
+
+share:
+  share: "Share"
+  scan_wechat: "Scan to share on WeChat"
+  wechat_tip: "Open WeChat and scan"

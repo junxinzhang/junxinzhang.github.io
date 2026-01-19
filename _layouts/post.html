@@ -9,6 +9,9 @@ layout: default
 <!-- Reading Progress Bar -->
 <div class="reading-progress-bar" id="readingProgress"></div>
 
+<!-- Social Share Floating Buttons -->
+{% include social-share-floating.html %}
+
 <div class="container">
 
 <!-- Breadcrumb Navigation -->
@@ -75,9 +78,12 @@ layout: default
         
         
 		<div class="col-md-12 col-lg-8">
-            
+
+            <!-- Series Navigation (if article is part of a series) -->
+            {% include series-nav.html %}
+
             <!-- Article -->
-			<article class="article-post">                
+			<article class="article-post">
 			{{ content }}                
 			</article>
 			

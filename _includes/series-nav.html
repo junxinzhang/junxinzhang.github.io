@@ -1,0 +1,141 @@
+{% comment %}
+Article Series Navigation Component
+
+Usage: Add 'series: "Series Name"' to your post's front matter
+Example:
+---
+title: "Part 1: Getting Started"
+series: "Complete Guide to AI Development"
+series_order: 1
+---
+
+This will automatically show a navigation box with all articles in the same series.
+{% endcomment %}
+
+{% if page.series %}
+{% assign series_posts = site.posts | where: "series", page.series | sort: "series_order" %}
+{% if series_posts.size > 1 %}
+
+<div class="series-nav-box mb-4 p-4 rounded" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); border-left: 4px solid #0284c7;">
+    <div class="series-header mb-3">
+        <span class="series-badge" style="background: #0284c7; color: #fff; padding: 2px 10px; border-radius: 4px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: -1px; margin-right: 4px;">
+                <path d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"/>
+                <path d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z"/>
+            </svg>
+            <span data-i18n="series.part_of_series">Series</span>
+        </span>
+        <h5 class="series-title font-weight-bold mb-0 mt-2">{{ page.series }}</h5>
+        <small class="text-muted">{{ series_posts.size }} <span data-i18n="series.articles">articles</span></small>
+    </div>
+
+    <div class="series-list">
+        {% for post in series_posts %}
+        <a href="{{ post.url | prepend: site.baseurl }}"
+           class="series-item d-flex align-items-center p-2 mb-1 rounded text-decoration-none {% if post.url == page.url %}series-item-current{% endif %}"
+           {% if post.url == page.url %}aria-current="page"{% endif %}>
+            <span class="series-number mr-2" style="min-width: 24px; height: 24px; background: {% if post.url == page.url %}#0284c7{% else %}#94a3b8{% endif %}; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">
+                {{ post.series_order | default: forloop.index }}
+            </span>
+            <span class="series-item-title {% if post.url == page.url %}font-weight-bold{% endif %}" style="color: {% if post.url == page.url %}#0284c7{% else %}#334155{% endif %}; font-size: 14px;">
+                {{ post.title | truncate: 50 }}
+            </span>
+            {% if post.url == page.url %}
+            <span class="ml-auto" style="color: #0284c7;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                </svg>
+            </span>
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+
+    {% assign current_index = 0 %}
+    {% for post in series_posts %}
+        {% if post.url == page.url %}
+            {% assign current_index = forloop.index %}
+        {% endif %}
+    {% endfor %}
+
+    {% if series_posts.size > 1 %}
+    <div class="series-nav-buttons d-flex justify-content-between mt-3 pt-3" style="border-top: 1px solid rgba(0,0,0,0.1);">
+        {% assign prev_index = current_index | minus: 2 %}
+        {% assign next_index = current_index %}
+
+        {% if prev_index >= 0 %}
+        <a href="{{ series_posts[prev_index].url | prepend: site.baseurl }}" class="btn btn-sm btn-outline-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: -2px;">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+            <span data-i18n="series.previous">Previous</span>
+        </a>
+        {% else %}
+        <span></span>
+        {% endif %}
+
+        {% if next_index < series_posts.size %}
+        <a href="{{ series_posts[next_index].url | prepend: site.baseurl }}" class="btn btn-sm btn-primary">
+            <span data-i18n="series.next">Next</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: -2px;">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </a>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+
+<style>
+/* Series Navigation Styles */
+.series-item {
+    transition: background-color 0.2s ease;
+}
+
+.series-item:hover {
+    background-color: rgba(2, 132, 199, 0.1);
+    text-decoration: none !important;
+}
+
+.series-item-current {
+    background-color: rgba(2, 132, 199, 0.15);
+}
+
+/* Dark mode support */
+[data-theme="dark"] .series-nav-box {
+    background: linear-gradient(135deg, #1e3a5f 0%, #0c4a6e 100%) !important;
+    border-left-color: #38bdf8 !important;
+}
+
+[data-theme="dark"] .series-badge {
+    background: #38bdf8 !important;
+    color: #0c4a6e !important;
+}
+
+[data-theme="dark"] .series-title {
+    color: #e0f2fe !important;
+}
+
+[data-theme="dark"] .series-item-title {
+    color: #bae6fd !important;
+}
+
+[data-theme="dark"] .series-item-current .series-item-title {
+    color: #38bdf8 !important;
+}
+
+[data-theme="dark"] .series-item:hover {
+    background-color: rgba(56, 189, 248, 0.15);
+}
+
+[data-theme="dark"] .series-item-current {
+    background-color: rgba(56, 189, 248, 0.2);
+}
+
+[data-theme="dark"] .series-nav-buttons {
+    border-top-color: rgba(255,255,255,0.1) !important;
+}
+</style>
+
+{% endif %}
+{% endif %}
