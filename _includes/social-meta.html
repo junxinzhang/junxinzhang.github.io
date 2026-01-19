@@ -1,0 +1,80 @@
+<!-- Enhanced Social Media Meta Tags for Better Sharing -->
+
+{% comment %}
+This component enhances the default jekyll-seo-tag with additional
+social media optimizations for better engagement when shared.
+{% endcomment %}
+
+{% assign page_image = page.image | default: site.logo %}
+{% unless page_image contains '://' %}
+    {% assign page_image = page_image | prepend: site.url | prepend: '/' %}
+{% endunless %}
+
+{% assign page_description = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 200 %}
+
+<!-- Open Graph Enhanced -->
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+
+{% if page.layout == 'post' %}
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:modified_time" content="{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}">
+<meta property="article:author" content="{{ site.url }}/about.html">
+<meta property="article:section" content="{{ page.categories | first | default: 'Technology' }}">
+{% for tag in page.tags limit:5 %}
+<meta property="article:tag" content="{{ tag }}">
+{% endfor %}
+{% else %}
+<meta property="og:type" content="website">
+{% endif %}
+
+<!-- Twitter Card Enhanced -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{ site.twitter.username }}">
+<meta name="twitter:creator" content="@{{ site.twitter.username }}">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ page_description | escape }}">
+<meta name="twitter:image" content="{{ page_image }}">
+<meta name="twitter:image:alt" content="{{ page.title | escape }}">
+
+<!-- LinkedIn Specific -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Pinterest -->
+<meta name="pinterest-rich-pin" content="true">
+
+<!-- WeChat/QQ -->
+<meta itemprop="name" content="{{ page.title | escape }}">
+<meta itemprop="description" content="{{ page_description | escape }}">
+<meta itemprop="image" content="{{ page_image }}">
+
+<!-- Mobile App Deep Linking -->
+<meta property="al:ios:app_name" content="{{ site.name }}">
+<meta property="al:android:app_name" content="{{ site.name }}">
+
+<!-- Additional SEO Hints -->
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords }}">
+{% elsif page.tags %}
+<meta name="keywords" content="{{ page.tags | join: ', ' }}">
+{% endif %}
+
+{% if page.author %}
+<meta name="author" content="{{ site.authors[page.author].name | default: page.author }}">
+{% else %}
+<meta name="author" content="Jason Zhang">
+{% endif %}
+
+<!-- Canonical URL (important for SEO) -->
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- Article specific meta for news aggregators -->
+{% if page.layout == 'post' %}
+<meta name="news_keywords" content="{{ page.tags | join: ', ' }}">
+<meta name="syndication-source" content="{{ page.url | absolute_url }}">
+<meta name="original-source" content="{{ page.url | absolute_url }}">
+{% endif %}

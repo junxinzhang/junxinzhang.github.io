@@ -98,3 +98,14 @@ cta:
   follow_twitter: "关注 X"
   follow_github: "关注 GitHub"
   share_prompt: "觉得有帮助？分享给可能受益的朋友吧！"
+
+series:
+  part_of_series: "系列文章"
+  articles: "篇文章"
+  previous: "上一篇"
+  next: "下一篇"
+
+share:
+  share: "分享"
+  scan_wechat: "扫码分享到微信"
+  wechat_tip: "打开微信扫一扫"

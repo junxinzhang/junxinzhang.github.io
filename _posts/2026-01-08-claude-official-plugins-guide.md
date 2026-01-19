@@ -6,6 +6,8 @@ categories: [AI]
 image: assets/images/screenshot-20260108-claude-plugins.webp
 tags: [Claude Code, 插件, 开发工具, LSP, 代码审查, AI编程]
 slug: claude-official-plugins-guide
+description: "深度解析Anthropic Claude Code官方24款插件，涵盖LSP语言服务器、代码审查、功能开发、工作流自动化等五大类别。附完整安装指南和使用场景，助你提升60%开发效率。"
+keywords: "Claude Code插件, Anthropic官方插件, AI编程工具, LSP语言服务器, 代码审查插件, feature-dev, ralph-loop"
 ---
 
 ## 前言：从工具到生产力的跃迁

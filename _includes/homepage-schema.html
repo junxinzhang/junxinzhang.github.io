@@ -1,0 +1,188 @@
+{% comment %}
+Enhanced Schema.org Structured Data for Homepage
+Helps Google understand the blog structure and display rich results
+{% endcomment %}
+
+<!-- ItemList Schema for Recent Posts (helps with rich search results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "{{ site.name }} - Latest Articles",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "numberOfItems": {% if paginator %}{{ paginator.posts.size }}{% else %}10{% endif %},
+  "itemListElement": [
+    {% assign posts_to_show = site.posts | limit: 10 %}
+    {% for post in site.posts limit: 10 %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "BlogPosting",
+        "@id": "{{ post.url | absolute_url }}",
+        "url": "{{ post.url | absolute_url }}",
+        "name": "{{ post.title | escape }}",
+        "headline": "{{ post.title | escape }}",
+        "description": "{% if post.description %}{{ post.description | escape }}{% else %}{{ post.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}{% endif %}",
+        "datePublished": "{{ post.date | date_to_xmlschema }}",
+        "dateModified": "{% if post.last_modified_at %}{{ post.last_modified_at | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}",
+        {% if post.image %}
+        "image": "{% if post.image contains '://' %}{{ post.image }}{% else %}{{ site.url }}/{{ post.image }}{% endif %}",
+        {% endif %}
+        "author": {
+          "@type": "Person",
+          "name": "{{ site.authors[post.author].name | default: 'Jason Zhang' }}",
+          "url": "{{ site.url }}/about.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ site.name }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}/{{ site.logo }}"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "{{ post.url | absolute_url }}"
+        }
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<!-- Blog Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "{{ site.url }}/#blog",
+  "name": "{{ site.name }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "inLanguage": ["zh-CN", "en"],
+  "publisher": {
+    "@type": "Organization",
+    "@id": "{{ site.url }}/#organization",
+    "name": "{{ site.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/{{ site.logo }}"
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "{{ site.url }}/about.html#person",
+    "name": "Jason Zhang"
+  },
+  "blogPost": [
+    {% for post in site.posts limit: 5 %}
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ post.url | absolute_url }}",
+      "headline": "{{ post.title | escape }}",
+      "url": "{{ post.url | absolute_url }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<!-- CollectionPage Schema for Category/List Pages -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "{{ site.url }}/#collection",
+  "name": "{{ site.name }} - Tech Blog",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "{{ site.url }}/#website"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Artificial Intelligence",
+      "sameAs": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+    },
+    {
+      "@type": "Thing",
+      "name": "DevOps",
+      "sameAs": "https://en.wikipedia.org/wiki/DevOps"
+    },
+    {
+      "@type": "Thing",
+      "name": "Cloud Computing",
+      "sameAs": "https://en.wikipedia.org/wiki/Cloud_computing"
+    }
+  ],
+  "specialty": [
+    "Large Language Models",
+    "AI Private Deployment",
+    "Cloud Native Architecture",
+    "Career Development"
+  ]
+}
+</script>
+
+<!-- Professional Service Schema (for consulting visibility) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "{{ site.url }}/#service",
+  "name": "Jason Zhang - AI & DevOps Consulting",
+  "description": "Expert consulting services for AI private deployment, DevOps implementation, and cloud-native architecture design.",
+  "url": "{{ site.url }}",
+  "image": "{{ site.url }}/assets/images/avatar1.jpg",
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.2304,
+      "longitude": 121.4737
+    },
+    "geoRadius": "5000"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Consulting Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AI Private Deployment",
+          "description": "Enterprise LLM deployment and optimization"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "DevOps Implementation",
+          "description": "CI/CD pipeline design and implementation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cloud Architecture",
+          "description": "Cloud-native architecture design and migration"
+        }
+      }
+    ]
+  },
+  "founder": {
+    "@type": "Person",
+    "@id": "{{ site.url }}/about.html#person"
+  }
+}
+</script>
