@@ -3,7 +3,7 @@ layout: post
 title: "SaaS的黄昏：当通用AGI工具引发市场大地震"
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260119-claude-code-agi-cover.webp
+image: assets/images/screenshot-20260119-salesforce-crm-stock.jpg
 tags: [AGI, AI Agent, SaaS, 股市, Claude Code, Anthropic, 软件行业, 市场分析]
 slug: agi-market-disruption-saas-crash
 ---
