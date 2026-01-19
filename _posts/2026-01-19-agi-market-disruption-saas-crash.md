@@ -60,6 +60,9 @@ slug: agi-market-disruption-saas-crash
 ![Monday.com股价走势](/assets/images/screenshot-20260119-monday-mndy-stock.jpg)
 *Monday.com（MNDY）5日股价走势：当前126.70，5日跌幅-14.41%*
 
+![Accenture股价走势](/assets/images/screenshot-20260119-accenture-acn-stock.jpg)
+*Accenture（ACN）1年股价走势：从高点约385跌至286.21，年跌幅-18.36%*
+
 ### 1.2 触发点：Adobe降级引发的连锁反应
 
 1月13日的崩盘有一个明确的触发点：
