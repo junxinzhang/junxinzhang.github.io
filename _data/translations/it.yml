@@ -90,3 +90,11 @@ sidebar:
 language:
   select: "Lingua"
   current: "Italiano"
+
+cta:
+  enjoyed_reading: "Ti è piaciuto questo articolo?"
+  stay_updated_desc: "Rimani aggiornato sulle ultime novità riguardo IA, DevOps e architettura cloud. Iscriviti per ricevere notifiche sui nuovi articoli."
+  subscribe_rss: "Iscriviti via RSS"
+  follow_twitter: "Segui su X"
+  follow_github: "Segui su GitHub"
+  share_prompt: "L'hai trovato utile? Condividilo con altri che potrebbero trarne beneficio!"

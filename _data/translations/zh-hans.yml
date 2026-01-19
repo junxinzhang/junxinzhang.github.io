@@ -90,3 +90,11 @@ sidebar:
 language:
   select: "语言"
   current: "简体中文"
+
+cta:
+  enjoyed_reading: "喜欢这篇文章吗？"
+  stay_updated_desc: "订阅获取最新的 AI、DevOps 和云架构技术洞察，第一时间收到新文章通知。"
+  subscribe_rss: "RSS 订阅"
+  follow_twitter: "关注 X"
+  follow_github: "关注 GitHub"
+  share_prompt: "觉得有帮助？分享给可能受益的朋友吧！"

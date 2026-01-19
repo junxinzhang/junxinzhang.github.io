@@ -90,3 +90,11 @@ sidebar:
 language:
   select: "言語"
   current: "日本語"
+
+cta:
+  enjoyed_reading: "この記事はいかがでしたか？"
+  stay_updated_desc: "AI、DevOps、クラウドアーキテクチャに関する最新の洞察をお届けします。購読して新着記事の通知を受け取りましょう。"
+  subscribe_rss: "RSSで購読"
+  follow_twitter: "Xでフォロー"
+  follow_github: "GitHubでフォロー"
+  share_prompt: "参考になりましたか？他の方にもシェアしてください！"

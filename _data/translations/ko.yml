@@ -90,3 +90,11 @@ sidebar:
 language:
   select: "언어"
   current: "한국어"
+
+cta:
+  enjoyed_reading: "이 글이 도움이 되셨나요?"
+  stay_updated_desc: "AI, DevOps, 클라우드 아키텍처에 관한 최신 인사이트를 받아보세요. 구독하시면 새 글이 게시될 때 알림을 받으실 수 있습니다."
+  subscribe_rss: "RSS 구독"
+  follow_twitter: "X 팔로우"
+  follow_github: "GitHub 팔로우"
+  share_prompt: "도움이 되셨다면 다른 분들께도 공유해 주세요!"
