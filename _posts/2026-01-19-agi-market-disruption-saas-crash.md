@@ -3,7 +3,7 @@ layout: post
 title: "SaaS的黄昏：当通用AGI工具引发市场大地震"
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260119-agi-market-disruption-cover.webp
+image: assets/images/screenshot-20260119-claude-code-agi-cover.webp
 tags: [AGI, AI Agent, SaaS, 股市, Claude Code, Anthropic, 软件行业, 市场分析]
 slug: agi-market-disruption-saas-crash
 ---
@@ -45,8 +45,8 @@ slug: agi-market-disruption-saas-crash
 
 摩根士丹利追踪的SaaS股票指数**2026年开年下跌15%**，叠加2025年11%的跌幅——这是自2022年科技股崩盘以来最糟糕的开局。
 
-![SaaS股票暴跌：2026年市场冲击](/assets/images/screenshot-20260119-saas-stock-crash.webp)
-*2026年1月SaaS板块遭遇大规模抛售*
+![Salesforce股价走势：从历史高点366跌至227](/assets/images/screenshot-20260119-salesforce-stock.webp)
+*Salesforce（赛富时）股价K线图：当前227.11，较历史高点366.19下跌38%*
 
 ### 1.2 触发点：Adobe降级引发的连锁反应
 
@@ -105,8 +105,8 @@ Anthropic的Claude Code，最初只是一个内部实验项目。
 
 **6个月内从0到10亿美元**——开发者工具历史上前所未有的增长速度。
 
-![Claude Code增长对比传统SaaS](/assets/images/screenshot-20260119-claude-vs-saas-growth.webp)
-*Claude Code的爆发式增长与传统SaaS的增长形成鲜明对比*
+![Claude Code收入增长曲线](/assets/images/screenshot-20260119-claude-code-growth.webp)
+*Claude Code的爆发式增长：6个月达到$10亿年化收入*
 
 ### 2.2 从编程工具到"通用执行者"
 
@@ -200,8 +200,7 @@ Anthropic的财务数据揭示了AI公司与传统软件公司之间日益扩大
 - **Wuri**：YC孵化项目，因获客成本过高关闭
 - **Humane**：前苹果高管创办的AI硬件公司，停止运营
 
-![AI Wrapper大灭绝示意图](/assets/images/screenshot-20260119-ai-wrapper-extinction.webp)
-*2025-2026年：AI Wrapper创业公司的"大灭绝事件"*
+> **"AI Wrapper大灭绝"**：当平台方（OpenAI、Anthropic）自己下场做产品，那些只是在API外面套一层皮的创业公司，瞬间失去了存在的价值。
 
 ### 3.3 估值倍数的坍塌
 
@@ -362,8 +361,13 @@ Bain的分析师倾向于第二种观点：
 
 这意味着AI Agent的崛起不会是一帆风顺的。但这不改变一个基本事实：**方向已经确定，只是节奏可能比想象的慢一些。**
 
-![2026年AI与SaaS市场格局](/assets/images/screenshot-20260119-ai-saas-landscape-2026.webp)
-*2026年AI与SaaS市场：分化加剧的一年*
+> **2026年市场格局一览：**
+>
+> | 类别 | 代表公司 | 趋势 |
+> |------|----------|------|
+> | **AI赢家** | Anthropic、OpenAI、NVIDIA | 持续上升 |
+> | **转型中** | Salesforce、ServiceNow、Adobe | 命运未定 |
+> | **高风险** | 中小SaaS、AI Wrapper创业公司 | 下行压力 |
 
 ---
 
