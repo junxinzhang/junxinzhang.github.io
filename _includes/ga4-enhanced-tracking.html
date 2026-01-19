@@ -1,0 +1,224 @@
+<!-- GA4 Enhanced Event Tracking for Better Analytics -->
+<script>
+(function() {
+    'use strict';
+
+    // Wait for gtag to be available
+    function waitForGtag(callback, attempts) {
+        attempts = attempts || 0;
+        if (typeof gtag === 'function') {
+            callback();
+        } else if (attempts < 50) {
+            setTimeout(function() { waitForGtag(callback, attempts + 1); }, 200);
+        }
+    }
+
+    waitForGtag(function() {
+        var isArticlePage = document.querySelector('article.article-post') !== null;
+
+        // ========================================
+        // 1. Scroll Depth Tracking (25%, 50%, 75%, 90%, 100%)
+        // ========================================
+        var scrollMilestones = [25, 50, 75, 90, 100];
+        var scrollMilestonesReached = {};
+
+        function getScrollPercentage() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            return docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
+        }
+
+        var scrollThrottle = false;
+        window.addEventListener('scroll', function() {
+            if (scrollThrottle) return;
+            scrollThrottle = true;
+
+            requestAnimationFrame(function() {
+                var scrollPercent = getScrollPercentage();
+                scrollMilestones.forEach(function(milestone) {
+                    if (scrollPercent >= milestone && !scrollMilestonesReached[milestone]) {
+                        scrollMilestonesReached[milestone] = true;
+                        gtag('event', 'scroll_depth', {
+                            'percent_scrolled': milestone,
+                            'page_title': document.title,
+                            'page_location': window.location.href
+                        });
+
+                        // Special event for article read completion
+                        if (isArticlePage && milestone === 90) {
+                            gtag('event', 'article_read_complete', {
+                                'page_title': document.title,
+                                'page_location': window.location.href
+                            });
+                        }
+                    }
+                });
+                scrollThrottle = false;
+            });
+        }, {passive: true});
+
+        // ========================================
+        // 2. Time on Page Tracking
+        // ========================================
+        var pageStartTime = Date.now();
+        var timeThresholds = [30, 60, 120, 300]; // seconds
+        var timeThresholdsReached = {};
+
+        var timeInterval = setInterval(function() {
+            var timeOnPage = Math.floor((Date.now() - pageStartTime) / 1000);
+            timeThresholds.forEach(function(threshold) {
+                if (timeOnPage >= threshold && !timeThresholdsReached[threshold]) {
+                    timeThresholdsReached[threshold] = true;
+                    gtag('event', 'engaged_time', {
+                        'time_seconds': threshold,
+                        'page_title': document.title,
+                        'page_location': window.location.href
+                    });
+                }
+            });
+
+            // Stop tracking after 5 minutes
+            if (timeOnPage >= 300) {
+                clearInterval(timeInterval);
+            }
+        }, 10000); // Check every 10 seconds
+
+        // ========================================
+        // 3. Outbound Link Click Tracking
+        // ========================================
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a');
+            if (!link) return;
+
+            var href = link.getAttribute('href');
+            if (!href) return;
+
+            // Check if it's an outbound link
+            if (href.indexOf('http') === 0 && href.indexOf(window.location.hostname) === -1) {
+                gtag('event', 'outbound_click', {
+                    'link_url': href,
+                    'link_text': link.textContent.trim().substring(0, 100),
+                    'page_location': window.location.href
+                });
+            }
+        });
+
+        // ========================================
+        // 4. Code Block Copy Tracking (for tech blogs)
+        // ========================================
+        document.querySelectorAll('pre code, .highlight code').forEach(function(codeBlock) {
+            codeBlock.addEventListener('copy', function() {
+                gtag('event', 'code_copy', {
+                    'page_title': document.title,
+                    'page_location': window.location.href
+                });
+            });
+        });
+
+        // Also track manual selection + copy
+        document.addEventListener('copy', function(e) {
+            var selection = window.getSelection().toString();
+            if (selection.length > 50) {
+                var isCodeSelection = e.target.closest('pre, code, .highlight');
+                gtag('event', isCodeSelection ? 'code_copy' : 'text_copy', {
+                    'content_length': selection.length,
+                    'page_title': document.title,
+                    'page_location': window.location.href
+                });
+            }
+        });
+
+        // ========================================
+        // 5. Social Share Button Click Tracking
+        // ========================================
+        document.querySelectorAll('.a2a_kit a, .share a').forEach(function(shareBtn) {
+            shareBtn.addEventListener('click', function() {
+                var platform = this.className.match(/a2a_button_(\w+)/);
+                platform = platform ? platform[1] : 'unknown';
+                gtag('event', 'social_share', {
+                    'platform': platform,
+                    'page_title': document.title,
+                    'page_location': window.location.href
+                });
+            });
+        });
+
+        // ========================================
+        // 6. Internal Navigation Tracking
+        // ========================================
+        document.querySelectorAll('.alertbar a, [class*="related"] a, .breadcrumb a').forEach(function(navLink) {
+            navLink.addEventListener('click', function() {
+                var navType = this.closest('.alertbar') ? 'prev_next' :
+                              this.closest('[class*="related"]') ? 'related_post' : 'breadcrumb';
+                gtag('event', 'internal_navigation', {
+                    'navigation_type': navType,
+                    'destination_url': this.href,
+                    'page_location': window.location.href
+                });
+            });
+        });
+
+        // ========================================
+        // 7. Search Usage Tracking
+        // ========================================
+        var searchInput = document.querySelector('#lunrsearch, input[type="search"]');
+        if (searchInput) {
+            var searchTimeout;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                var query = this.value;
+                searchTimeout = setTimeout(function() {
+                    if (query.length >= 3) {
+                        gtag('event', 'site_search', {
+                            'search_term': query,
+                            'page_location': window.location.href
+                        });
+                    }
+                }, 1000);
+            });
+        }
+
+        // ========================================
+        // 8. Dark Mode Toggle Tracking
+        // ========================================
+        var themeToggle = document.getElementById('themeToggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function() {
+                var newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                gtag('event', 'theme_toggle', {
+                    'new_theme': newTheme,
+                    'page_location': window.location.href
+                });
+            });
+        }
+
+        // ========================================
+        // 9. Language Switch Tracking
+        // ========================================
+        document.querySelectorAll('.language-switcher a, [data-lang]').forEach(function(langLink) {
+            langLink.addEventListener('click', function() {
+                var newLang = this.getAttribute('data-lang') || this.textContent.trim();
+                gtag('event', 'language_switch', {
+                    'new_language': newLang,
+                    'page_location': window.location.href
+                });
+            });
+        });
+
+        // ========================================
+        // 10. Donate/Support Button Tracking
+        // ========================================
+        document.querySelectorAll('#donate a, .donate a, [href*="paypal"], [href*="buy-me-a-coffee"]').forEach(function(donateLink) {
+            donateLink.addEventListener('click', function() {
+                gtag('event', 'donate_click', {
+                    'donate_method': this.href.indexOf('paypal') > -1 ? 'paypal' : 'other',
+                    'page_title': document.title,
+                    'page_location': window.location.href
+                });
+            });
+        });
+
+        console.log('[GA4 Enhanced] Event tracking initialized');
+    });
+})();
+</script>

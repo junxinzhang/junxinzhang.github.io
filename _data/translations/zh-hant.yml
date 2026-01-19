@@ -90,3 +90,11 @@ sidebar:
 language:
   select: "語言"
   current: "繁體中文"
+
+cta:
+  enjoyed_reading: "喜歡這篇文章嗎？"
+  stay_updated_desc: "訂閱獲取最新的 AI、DevOps 和雲架構技術洞察，第一時間收到新文章通知。"
+  subscribe_rss: "RSS 訂閱"
+  follow_twitter: "關注 X"
+  follow_github: "關注 GitHub"
+  share_prompt: "覺得有幫助？分享給可能受益的朋友吧！"

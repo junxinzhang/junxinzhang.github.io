@@ -90,3 +90,11 @@ sidebar:
 language:
   select: "भाषा"
   current: "हिन्दी"
+
+cta:
+  enjoyed_reading: "क्या आपको यह लेख पसंद आया?"
+  stay_updated_desc: "AI, DevOps और क्लाउड आर्किटेक्चर पर नवीनतम जानकारी से अपडेट रहें। नए लेखों की सूचना पाने के लिए सब्सक्राइब करें।"
+  subscribe_rss: "RSS से सब्सक्राइब करें"
+  follow_twitter: "X पर फॉलो करें"
+  follow_github: "GitHub पर फॉलो करें"
+  share_prompt: "क्या यह मददगार था? इसे दूसरों के साथ साझा करें जो इससे लाभान्वित हो सकते हैं!"
