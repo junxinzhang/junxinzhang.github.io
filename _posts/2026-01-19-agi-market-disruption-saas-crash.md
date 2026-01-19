@@ -45,8 +45,20 @@ slug: agi-market-disruption-saas-crash
 
 摩根士丹利追踪的SaaS股票指数**2026年开年下跌15%**，叠加2025年11%的跌幅——这是自2022年科技股崩盘以来最糟糕的开局。
 
-![Salesforce股价走势：从历史高点366跌至227](/assets/images/screenshot-20260119-salesforce-stock.webp)
-*Salesforce（赛富时）股价K线图：当前227.11，较历史高点366.19下跌38%*
+![Salesforce股价走势](/assets/images/screenshot-20260119-salesforce-crm-stock.jpg)
+*Salesforce（CRM）5日股价走势：1月13日暴跌后持续下行，当前227.11，5日跌幅-12.63%*
+
+![Adobe股价走势](/assets/images/screenshot-20260119-adobe-adbe-stock.jpg)
+*Adobe（ADBE）5日股价走势：1月13日遭Oppenheimer降级后大跌，当前296.12，5日跌幅-11.33%*
+
+![ServiceNow股价走势](/assets/images/screenshot-20260119-servicenow-now-stock.jpg)
+*ServiceNow（NOW）5日股价走势：被高盛下调至"卖出"，当前127.31，5日跌幅-10.22%*
+
+![HubSpot股价走势](/assets/images/screenshot-20260119-hubspot-hubs-stock.jpg)
+*HubSpot（HUBS）5日股价走势：中型SaaS公司代表，当前311.88，5日跌幅-16.06%*
+
+![Monday.com股价走势](/assets/images/screenshot-20260119-monday-mndy-stock.jpg)
+*Monday.com（MNDY）5日股价走势：当前126.70，5日跌幅-14.41%*
 
 ### 1.2 触发点：Adobe降级引发的连锁反应
 
