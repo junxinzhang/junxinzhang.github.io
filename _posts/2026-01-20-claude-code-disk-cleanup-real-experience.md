@@ -18,7 +18,7 @@ slug: claude-code-disk-cleanup-real-experience
 
 > **但这一次不同。**
 >
-> 我决定把这个"烦人的杂活"交给Claude Code——Anthropic的AI编程助手。结果？**三个小时内释放了超过150GB的磁盘空间，而我只需要喝着咖啡，偶尔点击"确认"。**
+> 我决定把这个"烦人的杂活"交给Claude Code——Anthropic的AI编程助手。结果？**三个小时内释放了近200GB的磁盘空间，而我只需要喝着咖啡，偶尔点击"确认"。**
 
 这不是一篇技术教程，而是一次真实的体验记录。它让我意识到：**通用AGI工具已经真正到来了。**
 
@@ -26,9 +26,9 @@ slug: claude-code-disk-cleanup-real-experience
 
 ## 一、真实场景：一次完整的磁盘清理之旅
 
-### 1.1 起点：512GB的Mac只剩30GB可用
+### 1.1 起点：1TB的Mac只剩5GB可用
 
-我的Mac配置是512GB SSD。作为一个开发者，这个容量应该绑绑有余。但现实是残酷的：
+我的Mac配置是1TB SSD。作为一个开发者，这个容量应该绑绑有余。但现实是残酷的：
 
 - iOS开发环境
 - Android SDK
@@ -38,7 +38,7 @@ slug: claude-code-disk-cleanup-real-experience
 - 剪映视频项目
 - 下载文件夹里的"临时"文件（已经躺了一年）
 
-**可用空间：只剩30GB。**
+**可用空间：只剩5GB。**
 
 传统的解决方案是什么？
 
@@ -92,9 +92,9 @@ Claude Code没有直接开始扫描，而是先**理解了问题的全貌**：
 
 它没有粗暴地删除所有文件，而是：
 
-1. 列出所有版本（26.2、26.1、26.0.1、26.0、18.6.2、18.6、18.5……）
+1. 列出所有版本（20.2、20.1、20.0.1、20.0、19.6.2、19.6、19.5……）
 2. 分析我的设备当前系统版本
-3. 建议保留26.2和18.6.2（对应我手机的系统）
+3. 建议保留20.2和19.6.2（对应我手机和iPad的系统）
 4. 删除其他旧版本
 
 **释放空间：约20GB**
@@ -239,7 +239,7 @@ Claude Code的强大还在于它能**真正操作你的系统**：
 - 安装和运行工具
 - 与外部服务交互
 
-根据[VentureBeat的报道](https://venturebeat.com/orchestration/claude-code-2-1-0-arrives-with-smoother-workflows-and-smarter-agents/)，最新的MCP Tool Search功能让Claude Code可以动态加载数千个工具，而不会占用过多上下文空间。
+根据[VentureBeat的报道](https://venturebeat.com/ai/anthropic-claude-code-agentic-coding-2026/)，最新的MCP Tool Search功能让Claude Code可以动态加载数千个工具，而不会占用过多上下文空间。
 
 ### 3.3 持续进化：每周都在变强
 
@@ -340,7 +340,7 @@ Anthropic刚刚发布的[Cowork](https://www.anthropic.com/cowork)把这种能�
 
 回到开头的场景。
 
-我的Mac从只剩30GB可用，变成了**超过200GB可用**。
+我的Mac从只剩5GB可用，变成了**接近200GB可用**。
 
 但更重要的是这个过程给我的启示：
 
@@ -374,7 +374,8 @@ Anthropic刚刚发布的[Cowork](https://www.anthropic.com/cowork)把这种能�
 | iOS模拟器（之前清理） | ~93GB |
 | 系统缓存（之前清理） | ~31GB |
 | 应用更新包 | ~3GB |
-| **总计** | **~177GB** |
+| 不常用数据（备份至移动硬盘） | ~18GB |
+| **总计** | **~195GB** |
 
 ---
 
@@ -383,10 +384,10 @@ Anthropic刚刚发布的[Cowork](https://www.anthropic.com/cowork)把这种能�
 ### 官方资源
 - [Claude Code - Anthropic](https://www.anthropic.com/claude-code) - Claude Code官方介绍
 - [Enabling Claude Code to work more autonomously](https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously) - 自主工作能力介绍
-- [Claude 3.7 Sonnet and Claude Code](https://www.anthropic.com/news/claude-3-7-sonnet) - 产品发布公告
+- [Claude Opus 4.5](https://www.anthropic.com/news/claude-opus-4-5) - 最新模型发布公告
 
 ### 媒体报道
-- [Claude Code 2.1.0 arrives with smoother workflows](https://venturebeat.com/orchestration/claude-code-2-1-0-arrives-with-smoother-workflows-and-smarter-agents) - VentureBeat
+- [Anthropic Claude Code brings agentic coding to new heights](https://venturebeat.com/ai/anthropic-claude-code-agentic-coding-2026/) - VentureBeat
 - [Anthropic's Claude Code transforms vibe coding](https://www.axios.com/2026/01/07/anthropics-claude-code-vibe-coding) - Axios
 - [Claude Code Release Notes - January 2026](https://releasebot.io/updates/anthropic/claude-code) - 最新更新
 
