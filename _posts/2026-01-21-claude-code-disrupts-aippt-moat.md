@@ -388,10 +388,6 @@ AIPPT类产品的商业逻辑曾经非常清晰：
 - 微信：winnielove2020
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
-**扫码关注我的微信公众号，获取更多AI前沿洞察：**
-
-![微信公众号：JustJason](/assets/images/wechat-qrcode-justjason.webp)
-
 特别欢迎讨论：
 - AI工具创业的生存策略
 - 通用AGI对垂直工具的冲击
