@@ -249,7 +249,7 @@ layout: default
 /* Contact Links */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0.75rem;
 }
 
@@ -282,6 +282,53 @@ layout: default
 .contact-item span {
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+/* WeChat Contact Hover Popup */
+.wechat-contact-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.wechat-contact-popup {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 1000;
+  text-align: center;
+}
+
+.wechat-contact-popup::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: white;
+}
+
+.wechat-contact-popup p {
+  margin: 8px 0 0;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.wechat-contact-wrapper:hover .wechat-contact-popup {
+  display: block;
+  animation: wechatFadeIn 0.2s ease;
+}
+
+@keyframes wechatFadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(5px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
 /* FAQ Section */
@@ -523,6 +570,20 @@ layout: default
 [data-theme="dark"] .faq-answer {
   color: var(--text-muted, #8b949e);
   background: var(--bg-color, #0d1117);
+}
+
+/* Dark mode for WeChat popup */
+[data-theme="dark"] .wechat-contact-popup {
+  background: #1e293b;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+[data-theme="dark"] .wechat-contact-popup::after {
+  border-top-color: #1e293b;
+}
+
+[data-theme="dark"] .wechat-contact-popup p {
+  color: #94a3b8;
 }
 </style>
 
