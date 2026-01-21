@@ -70,7 +70,7 @@ AIPPT类产品的商业逻辑曾经非常清晰：
 
 | 维度 | AIPPT类工具 | Claude Code |
 |-----|------------|-------------|
-| **月费** | $6-$20/月 | $20/月（Max计划）但可做无限任务 |
+| **月费** | $6-$20/月 | $20/月（Pro计划）但可做有限任务，Max额度更高，可做"无限"任务 |
 | **输入方式** | 选模板+填内容 | 自然语言描述 |
 | **定制程度** | 基于预设模板 | 完全根据需求生成 |
 | **输出质量** | 模板化、标准化 | 上下文感知、个性化 |
@@ -355,8 +355,28 @@ AIPPT类产品的商业逻辑曾经非常清晰：
 - [The Agentic Workspace](https://subramanya.ai/2026/01/19/the-agentic-workspace-a-strategic-imperative-for-the-next-era-of-saas/) - Agent工作空间
 
 ### 相关阅读
-- [通用AGI工具已经到来：Token成为衡量工作量的新KPI]({{ site.baseurl }}/token-new-work-metric-agi-era) - 昨日分析
-- [当AI真正成为你的助手：用Claude Code完成一次深度磁盘清理的真实体验]({{ site.baseurl }}/claude-code-disk-cleanup-real-experience) - 昨日体验
+
+**Claude Code与AGI工具系列**
+- [通用AGI工具已经到来：Token成为衡量工作量的新KPI]({{ site.baseurl }}/token-new-work-metric-agi-era) - Token经济学分析
+- [当AI真正成为你的助手：用Claude Code完成一次深度磁盘清理的真实体验]({{ site.baseurl }}/claude-code-disk-cleanup-real-experience) - 真实使用体验
+- [通用AGI工具已经到来：从Cowork两周诞生看Claude Code的革命性突破]({{ site.baseurl }}/claude-code-general-agi-tool-has-arrived) - Claude Code深度分析
+- [Claude Code 官方插件全解析：24款工具助你成为10倍效率开发者]({{ site.baseurl }}/claude-official-plugins-guide) - 插件生态指南
+
+**AI创业与市场分析**
+- [SaaS的黄昏：当通用AGI工具引发市场大地震]({{ site.baseurl }}/agi-market-disruption-saas-crash) - SaaS市场冲击分析
+- [2026年一人公司生存指南：从卖时间到卖杠杆的思维革命]({{ site.baseurl }}/one-person-business-2026-guide) - AI时代个体策略
+- [2026年AI Agent战场：当科技巨头们开始抢人、抢协议、抢未来]({{ site.baseurl }}/ai-agent-battlefield-2026) - Agent生态竞争
+- [Manus创始人肖弘：从微信生态到AI Agent，一位90后连续创业者的深度洞察]({{ site.baseurl }}/manus-founder-insights) - AI创业者访谈
+
+**AI开发与实践**
+- [6小时奇迹：用AI Vibe Coding从零构建企业级运维平台并自动部署Vercel]({{ site.baseurl }}/ai-vibe-coding-portal) - AI编程实战
+- [GitHub热榜揭秘：五大AI开发工具正在重塑程序员的工作方式]({{ site.baseurl }}/github-trending-ai-tools-revolution) - 开发工具生态
+- [AI Agent的两面：当安全漏洞遇上万亿商业蓝图]({{ site.baseurl }}/ai-agent-security-commerce-revolution) - Agent安全与商业
+
+**AI深度思考**
+- [AI时代的隐性淘汰：被取代的不是能力不足，而是解释不清楚]({{ site.baseurl }}/ai-explanation-ability) - 职场能力重塑
+- [AI是新时代的纺织机，但这次没人告诉工人怎么活下去]({{ site.baseurl }}/ai-new-era-loom) - 社会影响思考
+- [一道小学三年级数学题，揭开了大模型'智能'的遮羞布]({{ site.baseurl }}/llm-reasoning-limitation) - LLM能力边界
 
 ---
 
