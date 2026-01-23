@@ -50,7 +50,7 @@ slug: ai-usage-posture-evolution
 
 让我画一条时间线，看看AI使用姿势这四年是怎么演进的。
 
-![AI使用姿势演进历程](/assets/images/screenshot-20260123-ai-evolution-timeline.svg)
+![AI使用姿势演进历程](/assets/images/screenshot-20260123-ai-evolution-timeline.webp)
 *AI使用姿势的四年演进：从被动问答到自主执行*
 
 ### 2023年：Chatbot时代——"我问你答"
@@ -81,7 +81,7 @@ ChatGPT震惊世界。
 
 **大多数人的AI使用姿势，至今还停留在这个阶段。**
 
-![Chatbot vs AI Agent对比](/assets/images/screenshot-20260123-chatbot-vs-agent.svg)
+![Chatbot vs AI Agent对比](/assets/images/screenshot-20260123-chatbot-vs-agent.webp)
 *Chatbot vs AI Agent：从单轮问答到循环迭代的质变*
 
 ---
@@ -151,7 +151,7 @@ ChatGPT震惊世界。
 - 300+个MCP客户端
 - 从GitHub到Notion，从Slack到数据库
 
-![MCP生态系统](/assets/images/screenshot-20260123-mcp-ecosystem.svg)
+![MCP生态系统](/assets/images/screenshot-20260123-mcp-ecosystem.webp)
 *MCP生态系统：一次接入，处处可用*
 
 **但这还不是终点。**
@@ -300,7 +300,7 @@ Claude不知道你公司的编码规范，只能按通用最佳实践写。
 
 那么，如何更新你的AI使用姿势？
 
-![AI使用姿势演进流程图](/assets/images/screenshot-20260123-ai-evolution-flowchart.svg)
+![AI使用姿势演进流程图](/assets/images/screenshot-20260123-ai-evolution-flowchart.webp)
 *从被动问答到自主执行：AI交互范式的质变*
 
 ### 建议一：从"问答"升级到"任务描述"
@@ -447,7 +447,7 @@ Claude不知道你公司的编码规范，只能按通用最佳实践写。
 
 ---
 
-**2026年1月23日，周四。**
+**2026年1月23日，周五。**
 
 **通用AGI工具已经到来。**
 
