@@ -405,7 +405,6 @@ Pencil 做了一件简单但革命性的事：
 
 - [Pencil 官网](https://www.pencil.dev/)
 - [Pencil VS Code 插件](https://marketplace.visualstudio.com/items?itemName=highagency.pencildev)
-- [刘小排：Pencil 设计和写代码全让 AI 干了](https://mp.weixin.qq.com/s/qalljmCFzF6QZJiG2zEZNg) - 感谢这篇文章的启发
 
 ---
 
