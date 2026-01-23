@@ -3,7 +3,7 @@ layout: post
 title: "人类编码的时代结束了？微软内部全面拥抱Claude Code背后的行业巨变"
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260125-human-coding-era-ends-cover.webp
+image: assets/images/screenshot-20260125-human-coding-era-ends-cover.jpg
 tags: [Claude Code, GitHub Copilot, Microsoft, AI编程, 软件开发, Anthropic, 开发者工具]
 slug: human-coding-era-ends-microsoft-embraces-claude-code
 ---
@@ -53,7 +53,7 @@ slug: human-coding-era-ends-microsoft-embraces-claude-code
 
 **微软花了近10年和数十亿美元打造AI编程生态，现在却让员工用竞争对手的产品？**
 
-![微软GitHub Copilot vs Claude Code：内外有别](/assets/images/screenshot-20260125-microsoft-copilot-claude-comparison.webp)
+![微软GitHub Copilot vs Claude Code：内外有别](/assets/images/screenshot-20260125-microsoft-copilot-claude-comparison.jpg)
 *微软对外销售 GitHub Copilot，内部却在推广 Claude Code*
 
 ### 1.3 微软不是蠢，而是务实
@@ -110,7 +110,7 @@ slug: human-coding-era-ends-microsoft-embraces-claude-code
 - Anthropic内部工程师生产力提升约70%
 - Claude Code自身80-90%的代码由Claude Code生成
 
-![Claude Code vs GitHub Copilot 核心差异](/assets/images/screenshot-20260125-claude-vs-copilot-architecture.webp)
+![Claude Code vs GitHub Copilot 核心差异](/assets/images/screenshot-20260125-claude-vs-copilot-architecture.jpg)
 *Claude Code 和 GitHub Copilot 的本质区别：工具 vs Agent*
 
 ---
@@ -174,7 +174,7 @@ Vercel的CTO Malte Ubl分享了一个震撼的案例：
 
 这不是营销话术。当AI能够自主执行复杂任务时，人类只需要做决策和审核——这是生产力的质变。
 
-![Claude Code实际使用场景](/assets/images/screenshot-20260125-claude-code-real-usage.webp)
+![Claude Code实际使用场景](/assets/images/screenshot-20260125-claude-code-real-usage.jpg)
 *Claude Code 在实际开发中的应用：从规划到执行全流程自动化*
 
 ---
@@ -275,7 +275,7 @@ Claude Code的成功证明：开发者会用脚投票。如果有更好的选择
 
 Claude Code的易用性——用自然语言描述需求，AI去实现——让这成为可能。
 
-![AI编程能力民主化趋势](/assets/images/screenshot-20260125-ai-coding-democratization.webp)
+![AI编程能力民主化趋势](/assets/images/screenshot-20260125-ai-coding-democratization.jpg)
 *AI 编程能力的民主化：从专业技能到通用能力*
 
 ---
