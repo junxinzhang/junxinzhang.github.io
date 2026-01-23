@@ -4,7 +4,7 @@ title: "当AI Agent学会画图：Pencil + MCP 正在改写设计与开发的边
 author: Jason Zhang
 categories: [AI]
 image: assets/images/screenshot-20260124-pencil-mcp-cover.webp
-tags: [AI Agent, Claude Code, MCP, Pencil, 设计工具, AI设计, 效率革命, 微信公众号]
+tags: [AI Agent, Claude Code, MCP, Pencil, Vibe Design, 设计工具, AI设计, 效率革命, 微信公众号]
 slug: pencil-mcp-ai-design-revolution
 ---
 
@@ -20,38 +20,39 @@ slug: pencil-mcp-ai-design-revolution
 
 **AI Agent不仅能写代码，现在还能直接在画布上设计——而且设计完就能出代码。**
 
+从今天开始，世界多了一个新词：**Vibe Design**。
+
 ---
 
 ## 一
 
 先讲一个真实的场景。
 
-昨天晚上，我想给博客加一个新的落地页。
+我正在开发一个 macOS 应用——**语音实时翻译**（Voice Translation）。
+
+应用的核心功能已经完成，但主页的 UI 设计一直让我头疼。作为一个开发者，我可以写出功能完善的代码，但设计？那是另一个领域。
 
 **传统流程是这样的：**
 
 1. 打开 Figma，花1小时画原型
 2. 导出设计稿，标注各种尺寸和颜色
-3. 打开 VS Code，对着设计稿写代码
+3. 打开 Xcode，对着设计稿写 SwiftUI 代码
 4. 反复调整，直到"看起来差不多"
 5. 发现和设计稿还是有出入，再调
 6. **总耗时：3-4小时**
 
 **昨晚我是这样做的：**
 
-1. 打开 Claude Code
-2. 说："帮我设计一个简洁的博客落地页，要有英雄区、特色介绍和订阅表单"
+1. 在 VS Code 中安装 Pencil 插件
+2. 打开 Claude Code，说："帮我设计一个语音翻译应用的主页，需要有语言切换、麦克风/系统音频输入、实时翻译显示区域和底部操作栏"
 3. AI 在 Pencil 画布上直接开始设计
 4. 我看着实时预览，提出修改意见
-5. AI 调整设计，然后直接生成代码
+5. AI 调整设计，我把设计直接应用到 SwiftUI 代码
 6. **总耗时：40分钟**
 
 **效率提升：5倍。**
 
-而且，设计和代码**完全一致**——因为它们本来就是同一个东西。
-
-![Pencil 设计画布](/assets/images/screenshot-20260124-pencil-canvas-demo.webp)
-*Pencil 画布：AI Agent 的设计工作台*
+而且，设计效果出乎意料的专业——有清晰的层次结构、合理的间距、统一的配色。
 
 ---
 
@@ -59,386 +60,330 @@ slug: pencil-mcp-ai-design-revolution
 
 这一切是怎么实现的？
 
-答案是两个关键技术的结合：**Pencil** 和 **MCP**。
+### 一句话解释
 
-### Pencil 是什么？
+以前，设计师用 Figma 画图，程序员用 VS Code 写代码，两边是两个世界。
 
-根据 [Pencil 官网](https://www.pencil.dev/) 的介绍：
+**Pencil 把这两个世界合并了。**
 
-> "Pencil fundamentally increases your engineering speed by bringing designing directly into your preferred IDE."
->
-> （Pencil 通过将设计直接带入你的 IDE，从根本上提升你的工程效率。）
+它是一个装在 VS Code 里的"画板"，让你可以一边写代码一边画设计图。
 
-简单说，[Pencil](https://marketplace.visualstudio.com/items?itemName=highagency.pencildev) 是一个 VS Code 插件，它做了一件革命性的事情：
+### 为什么 AI 能帮你画图？
 
-**把设计画布搬进了代码编辑器。**
+这里要说一个叫 **MCP** 的东西。
 
-但这还不是最厉害的。
+**不用怕，我用大白话解释：**
 
-最厉害的是，Pencil 支持 **MCP（Model Context Protocol）**——这意味着 AI Agent 可以直接操作这个画布。
+你知道手机的充电口吗？以前安卓用 Micro USB，苹果用 Lightning，互不兼容。后来大家都改用 Type-C，一根线充所有手机。
 
-### MCP 是什么？
+**MCP 就是 AI 世界的 Type-C 接口。**
 
-如果你读过我[昨天的文章]({{ site.baseurl }}/ai-usage-posture-evolution)，你应该知道：
+有了这个"接口"，AI 就能连接各种工具——包括 Pencil 这个画板。
 
-> "MCP 就像 AI 的 USB-C 接口。"
+所以现在的情况是：
+- **Pencil** = 一个智能画板
+- **MCP** = 让 AI 能操作这个画板的"接口"
+- **Claude Code** = 会画图的 AI 助手
 
-[MCP 官方数据](https://modelcontextprotocol.io/) 显示：
-
-> "每月 SDK 下载量超过 9700 万次，获得 Anthropic、OpenAI、Google 和 Microsoft 的支持。"
-
-当 Pencil 通过 MCP 连接到 Claude Code，神奇的事情发生了：
-
-**AI Agent 获得了"画图"的能力。**
+三者一结合，AI 就能帮你画设计图了。
 
 ![MCP 连接架构](/assets/images/screenshot-20260124-pencil-mcp-architecture.webp)
-*Pencil MCP 架构：AI Agent 与设计画布的桥梁*
+*简单理解：AI 通过 MCP "接口" 操作 Pencil 画板*
 
 ---
 
 ## 三
 
-让我详细介绍一下 Pencil 的核心能力。
+Pencil 能做什么？说几个让你惊讶的事情。
 
-### 能力一：实时设计画布
+### 它像 Figma，但更聪明
 
-Pencil 在 VS Code 中提供了一个完整的设计画布。
+用过 Figma 的人都知道，那是设计师画图的工具。
 
-**你可以：**
-- 创建 Frame（框架）、Text（文本）、Shape（形状）
-- 使用组件库快速搭建 UI
-- 实时预览设计效果
-- 导出为代码
+Pencil 也是个画图工具，但有一个本质区别：
 
-根据 [Medium 上的深度分析](https://medium.com/@breezen100/cursor-becomes-a-design-powerhouse-unlock-real-time-canvas-with-mcp-pencil-dev-e4e08afa8f69)：
+**Figma 只能人来画，Pencil 可以让 AI 来画。**
 
-> "你在画布上拖动一个按钮或画一个表单，AI 就会立即生成对应的 HTML/CSS 代码——比手动编码快 10 倍。"
+你只需要用大白话描述你想要什么：
 
-### 能力二：MCP 工具集
+> "帮我画一个音乐播放器的界面，要有播放按钮、进度条、歌词显示"
 
-Pencil 通过 MCP 暴露了一系列强大的工具：
+AI 就会在画板上帮你画出来。
 
-| 工具名 | 功能 | 使用场景 |
-|-------|------|---------|
-| `get_editor_state` | 获取当前画布状态 | AI 了解设计上下文 |
-| `batch_design` | 批量设计操作 | 插入、更新、删除元素 |
-| `get_screenshot` | 获取设计截图 | AI 验证设计效果 |
-| `get_guidelines` | 获取设计规范 | 确保设计一致性 |
-| `get_style_guide` | 获取样式指南 | 应用设计系统 |
-| `snapshot_layout` | 获取布局快照 | 分析空间分布 |
+### 画完的设计可以直接变代码
 
-**这意味着什么？**
+这是最神奇的地方。
 
-AI Agent 可以：
-1. **读取**当前设计状态
-2. **创建**新的设计元素
-3. **修改**现有组件
-4. **验证**设计效果
-5. **生成**对应代码
+传统流程：设计师画图 → 程序员看图 → 程序员写代码 → 反复对比修改
 
-### 能力三：组件化设计系统
+Pencil 流程：AI 画图 → AI 写代码 → **完事**
 
-Pencil 支持可复用组件（`reusable: true`），这意味着：
+因为设计和代码在同一个地方，**不存在"还原度"的问题**——设计长什么样，代码就是什么样。
 
-- 你可以创建设计系统
-- AI 可以智能使用这些组件
-- 保证设计一致性
+### 设计可以像乐高一样拼装
 
-根据 Pencil 的技术文档：
+Pencil 里有很多现成的"积木"：按钮、输入框、卡片、导航栏……
 
-> "When working with components, insert their instances as refs with their properties overridden."
->
-> （使用组件时，以 ref 方式插入实例并覆盖属性。）
+AI 会智能地使用这些积木来搭建你的界面，就像玩乐高一样。
 
-这就像编程中的"函数复用"——定义一次，到处使用。
-
-![Pencil 组件系统](/assets/images/screenshot-20260124-pencil-component-system.webp)
-*Pencil 组件系统：设计的乐高积木*
+从我的 Voice Translation App 案例中可以看到，每个页面都由"顶部栏"、"内容区"、"底部栏"这些积木组成——整齐、统一、专业。
 
 ---
 
 ## 四
 
-说了这么多理论，来点实操。
+说了这么多，怎么用？
 
-**如何让你的 Claude Code 用上 Pencil MCP？**
+### 先澄清一个误解
 
-### 步骤一：安装 Pencil VS Code 插件
+网上有人说：用 Pencil 必须花钱买 Claude Code 官方套餐。
 
-1. 打开 VS Code
-2. 按 `Ctrl+P`（Mac 是 `Cmd+P`）
-3. 输入：`ext install highagency.pencildev`
-4. 回车安装
+**别信，这是错的。**
 
-根据 [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=highagency.pencildev) 数据：
+Pencil 支持市面上几乎所有的 AI 编程工具：
+- Claude Code（官方的、非官方的都行）
+- Cursor
+- Windsurf
+- Codex
+- 还有很多……
 
-- **版本：** 0.6.9（截至 2026年1月21日）
-- **安装量：** 3,852+
-- **发布者：** High Agency
-- **支持平台：** Windows、Mac、Linux、Web
+**用你手头有的就行，不用额外花钱。**
 
-### 步骤二：配置 Claude Code MCP
+### 三步搞定
 
-Pencil 插件安装后会自动注册 MCP 服务器。
+**第一步：装插件**
 
-你可以通过以下命令验证：
+打开 VS Code，搜索 "Pencil"，点安装。完事。
 
-```bash
-claude mcp list
-```
+![Pencil 安装界面](/assets/images/screenshot-20260124-pencil-install.webp)
+*在 VS Code 插件商店搜索 Pencil，一键安装*
 
-如果看到 `pencil` 相关的服务器，说明配置成功。
+（注意：不用去官网下载什么应用，装这个插件就够了）
 
-根据 [Claude Code MCP 文档](https://code.claude.com/docs/en/mcp)：
+装完后，左边会多一个铅笔图标，那就是 Pencil。
 
-> "MCP servers can be configured at three different scope levels: local, user, and project."
+**第二步：不用管配置**
 
-### 步骤三：开始使用
+好消息：装完插件，它会自动配置好一切。
 
-打开 Claude Code，尝试这些命令：
+如果你不放心，可以问问你的 AI 助手："Pencil 装好了吗？"它会告诉你。
 
-**创建新设计：**
-```
-帮我在 Pencil 中创建一个登录页面设计
-```
+**第三步：开口说话**
 
-**修改现有设计：**
-```
-把这个按钮的颜色改成蓝色，圆角改大一些
-```
+打开你的 AI 助手（Claude Code 或者别的），用大白话告诉它你想要什么：
 
-**生成代码：**
-```
-根据当前设计生成 React 组件代码
-```
+> "帮我设计一个外卖 App 的首页，要有搜索框、分类图标、附近商家列表"
+
+然后看着 AI 帮你画。
+
+**不满意？直接说：**
+
+> "商家卡片太小了，放大一点"
+> "颜色太花哨了，换成简约风格"
+
+AI 会立刻帮你改。
+
+**满意了？让它写代码：**
+
+> "设计我很满意，帮我写成代码吧"
+
+**这就是 Vibe Design——全程动嘴，不用动手。**
 
 ---
 
 ## 五
 
-我来分享几个真实的使用场景。
+来看一个真实案例。
 
-### 场景一：快速原型设计
+### 我的语音翻译 App 需要一个新界面
 
-**任务：** 设计一个 SaaS 产品的定价页面
+我在做一个 macOS 上的语音翻译应用，功能都写好了，就差一个好看的界面。
 
-**传统方式：**
-- 打开 Figma
-- 从空白开始设计
-- 设计 3 个定价卡片
-- 调整布局和间距
-- 导出给开发
-- **耗时：2小时**
+作为一个程序员，写代码没问题，但设计……真的不是我的强项。
 
-**Pencil + Claude Code 方式：**
-```
-我需要设计一个 SaaS 定价页面，包含三个套餐：
-- 免费版：基础功能
-- 专业版：$29/月，全部功能
-- 企业版：联系销售，定制方案
+以前我会打开 Figma 自己画，画得丑不说，还要花好几个小时。
 
-使用现代卡片设计，专业版要突出显示
-```
+这次，我决定试试 Vibe Design。
 
-AI 会：
-1. 在 Pencil 画布上创建三列布局
-2. 插入定价卡片组件
-3. 填充内容和样式
-4. 突出显示专业版
-5. **耗时：10分钟**
+### 我是这么跟 AI 说的
 
-### 场景二：设计迭代
-
-**传统痛点：**
-
-设计师："按钮要往左移 10 像素。"
-开发者："好的。"（改代码）
-设计师："不对，再往右一点。"
-开发者：……
-
-**Pencil + Claude Code 方式：**
-
-你和 AI 在同一个画布上工作，实时看到效果。
-
-```
-把那个按钮往左移一点
-```
-
-AI 立刻调整，你立刻看到效果。不满意？
-
-```
-再往右一些，和标题对齐
-```
-
-**设计和代码同步更新，零损耗。**
-
-### 场景三：从设计到代码
-
-这是 Pencil 最强大的能力。
-
-根据 [Pencil 的设计理念](https://www.pencil.dev/)：
-
-> "Design on canvas. Land in code."
+> "帮我设计一个语音翻译应用的界面，要有：
+> - 语言切换（英语和中文）
+> - 麦克风和系统音频的选择
+> - 显示翻译结果的区域
+> - 开始/停止翻译的按钮
+> - 底下放清空、历史、设置
 >
-> （在画布上设计，落地为代码。）
+> 风格简洁现代，用绿色"
 
-当你的设计完成后：
+然后我就坐着看 AI 画图。
 
-```
-根据这个设计生成 Tailwind CSS 的 React 组件
-```
+### AI 画出来的效果
 
-AI 会分析设计，生成结构化的代码，包括：
-- 组件结构
-- 样式类名
-- 响应式断点
-- 交互状态
+![Voice Translation App 设计](/assets/images/screenshot-20260124-pencil-voicetranslation.webp)
+*AI 帮我设计的界面：一个待机状态，一个录音状态*
 
-**设计和代码，本来就应该是一体的。**
+**我没动一下鼠标**，AI 就画出了两个界面：
+- 左边是待机状态：绿色的"开始翻译"按钮
+- 右边是录音状态：红色的"停止翻译"按钮
+
+而且它自动考虑了两种状态的切换，这是我没提的。
+
+### 看看设计的层次
+
+![Voice Translation App 编辑视图](/assets/images/screenshot-20260124-pencil-voicetranslation-edit.webp)
+*左边是图层结构，非常清晰*
+
+看左边的图层面板：
+- **Header**（顶部栏）
+- **Content**（内容区）
+- **Bottom Bar**（底部栏）
+
+**这不是随便糊的草图，是有专业结构的设计。**
+
+我一个不懂设计的程序员，用嘴说了几句话，就得到了这样的结果。
+
+### 然后让 AI 写代码
+
+> "设计我很满意，帮我写成 SwiftUI 代码吧"
+
+AI 看着这个设计，直接生成了对应的代码。
+
+颜色、间距、布局——全都是按设计来的，**不用我一点点对照着调**。
 
 ![设计到代码的转换](/assets/images/screenshot-20260124-design-to-code.webp)
-*从设计到代码：一键转换，零损耗*
+*从设计到代码，一步到位*
+
+**这就是 Vibe Design 的魅力：动嘴不动手，设计代码全都有。**
 
 ---
 
 ## 六
 
-说几个进阶技巧。
+几个让设计更好看的小技巧。
 
-### 技巧一：使用设计规范
+### 技巧一：告诉 AI 你想要什么风格
 
-Pencil 提供了多种设计规范（Guidelines），你可以让 AI 在设计时遵循：
+> "用苹果公司的设计风格"
+> "像小红书那种清新的感觉"
+> "参考 Notion 的简约风"
 
-```
-请遵循 landing-page 设计规范，帮我设计一个产品落地页
-```
+AI 见过无数设计，你一说它就懂。
 
-可用的规范包括：
-- `code`：代码生成规范
-- `table`：表格设计规范
-- `tailwind`：Tailwind CSS 实现规范
-- `landing-page`：落地页设计规范
-- `design-system`：设计系统组件规范
+### 技巧二：不满意就直接说
 
-### 技巧二：使用样式指南
+别客气，AI 不会生气：
 
-Pencil 还支持样式指南（Style Guide），可以让设计更有个性：
+> "这个太丑了，重新设计"
+> "按钮太小了，看不清"
+> "颜色太土了，换成高级灰"
 
-```
-使用 modern-minimal 风格设计这个页面
-```
+改到你满意为止。
 
-这确保了设计的一致性和专业感。
+### 技巧三：让 AI 一次画多个页面
 
-### 技巧三：批量操作
+> "帮我设计一个 App，包括：首页、个人中心、设置页面、登录页面"
 
-对于复杂设计，可以让 AI 进行批量操作：
+AI 会一口气全给你画出来，而且风格统一。
 
-```
-在仪表盘中添加：
-1. 左侧导航栏
-2. 顶部统计卡片（4个）
-3. 中间的图表区域
-4. 右侧的活动日志
-```
+### 技巧四：Figma 的设计可以导进来
 
-AI 会使用 `batch_design` 工具，一次性完成多个设计操作。
+如果你已经有 Figma 的设计稿，可以直接导入 Pencil，然后让 AI 帮你改、帮你写代码。
+
+**旧设计不浪费，新玩法也能用上。**
 
 ---
 
 ## 七
 
-来看看数据。
+到底能省多少时间？
 
-根据用户反馈和行业分析：
+**我自己的体验：**
 
-| 指标 | 传统方式 | Pencil + AI | 提升 |
-|-----|---------|-------------|-----|
-| 原型设计时间 | 2-4 小时 | 20-40 分钟 | 5x |
-| 设计到代码转换 | 1-2 天 | 即时 | 10x+ |
-| 设计迭代次数 | 3-5 轮 | 1-2 轮 | 60% |
-| 设计与代码一致性 | 70-80% | 100% | 完美 |
+| 事情 | 以前 | 现在 |
+|-----|------|------|
+| 画一个 App 界面 | 2-3 小时 | 20 分钟 |
+| 改设计 | 来回沟通半天 | 说一句话的事 |
+| 设计变代码 | 程序员对着图写一天 | AI 几分钟搞定 |
 
-根据 [Medium 文章](https://medium.com/@breezen100/cursor-becomes-a-design-powerhouse-unlock-real-time-canvas-with-mcp-pencil-dev-e4e08afa8f69) 的测试：
+**最爽的是什么？**
 
-> "What used to take 1 hour (prototyping + coding) now gets done in 20 minutes."
->
-> （原来需要 1 小时的工作现在 20 分钟完成。）
+以前设计稿和最终产品总是有差距，"还原度 80%" 已经算不错了。
 
-**这不是渐进式改进，而是范式转变。**
+现在？**100% 一致**。因为设计和代码本来就是一个东西。
+
+有个博主测试后说：
+
+> "原来需要 1 小时的工作，现在 20 分钟完成。"
+
+**这不是快一点，是快了好几倍。**
 
 ---
 
 ## 八
 
-让我们退后一步，看看更大的图景。
+往大了说，这意味着什么？
 
-### 设计与开发的历史演进
+### 以前的痛苦
 
-**1990s-2000s：瀑布式**
-- 设计先行
-- 设计完成后交给开发
-- 开发"还原"设计
-- 几乎必然有损耗
+设计师和程序员之间，永远有一道鸿沟：
 
-**2010s：敏捷式**
-- 设计师和开发者并行工作
-- 使用 Sketch、Figma 协作
-- 仍然需要"翻译"
-- Handoff 工具减少损耗
+- 设计师用 Figma 画图
+- 程序员用 VS Code 写代码
+- 两边是两个世界
 
-**2020s：Design-to-Code**
-- Figma Dev Mode
-- AI 辅助代码生成
-- 仍有人工干预
-- 仍存在断层
+设计师改了图，程序员可能不知道。程序员动了代码，设计稿还是老样子。
 
-**2026：Design-in-Code**
-- 设计直接在代码环境中进行
-- AI Agent 同时理解设计和代码
-- 设计即代码，代码即设计
-- **断层消失**
+来回扯皮、反复沟通、"这里还原度不够"……
 
-Pencil + MCP + Claude Code 代表的，正是这个新范式。
+**这种痛苦，每个做过产品的人都懂。**
+
+### 现在的变化
+
+Pencil 做了一件简单但革命性的事：
+
+**把设计和代码放到同一个地方。**
+
+而且让 AI 同时掌管设计和代码。
+
+设计师不用学代码，程序员不用学设计——**AI 成了两边的翻译官**。
+
+这不是小改进，这是游戏规则变了。
 
 ---
 
 ## 九
 
-说几句心里话。
+最后说两句。
 
-作为一个写了十几年代码的人，我经历过无数次这样的对话：
+我写了十几年代码，经历过无数次这样的对话：
 
-"设计稿上是这样的。"
-"代码实现上做不到。"
-"那你改改？"
-"改完就不是那个效果了。"
+> "设计稿上是这样的。"
+> "代码实现不了啊。"
+> "那你改改？"
+> "改完就不是那个效果了……"
 
-**设计和开发之间的鸿沟，不是技术问题，而是工具问题。**
+**以前我以为这是沟通问题，现在我明白了：这是工具问题。**
 
-当设计和代码使用不同的工具、不同的语言、不同的思维模式时，鸿沟是必然的。
+设计用一套工具，代码用另一套工具，两边永远对不上。
 
-但当 AI Agent 可以同时操作设计画布和代码编辑器时，这个鸿沟就被填平了。
+现在 AI 来了，它既能画图，也能写代码，还能在两者之间自由切换。
 
-**不是让设计师学代码，也不是让开发者学设计——**
-
-**而是让 AI 成为两者之间的桥梁。**
-
-这就是 2026 年正在发生的事情。
+**鸿沟，就这么被填平了。**
 
 ---
 
 ## 核心观点
 
-1. **Pencil 是什么：** 一个 VS Code 插件，把设计画布带入 IDE，支持 MCP 协议让 AI Agent 可以直接操作
+1. **Pencil 是什么：** 一个让 AI 帮你画设计图的工具，装在 VS Code 里就能用
 
-2. **为什么重要：** 打破了设计和开发之间的壁垒，实现"设计即代码"
+2. **Vibe Design：** 用嘴说你想要什么，AI 帮你画出来，不用动手
 
-3. **如何使用：** 安装 Pencil 插件 → 配置 Claude Code MCP → 开始 AI 驱动的设计
+3. **不用花钱：** 不需要买什么正版套餐，用你现有的 AI 工具就行
 
-4. **效率提升：** 原型设计快 5 倍，设计到代码转换即时完成，一致性 100%
+4. **效率爆表：** 以前几小时的活，现在 20 分钟搞定
 
-5. **更大图景：** 从 Design-to-Code 到 Design-in-Code 的范式转变
+5. **设计=代码：** AI 画完图直接写代码，不存在"还原度"问题
 
 ---
 
@@ -456,20 +401,9 @@ Pencil + MCP + Claude Code 代表的，正是这个新范式。
 
 ## 参考资料
 
-### 官方资源
-- [Pencil 官网](https://www.pencil.dev/) - Design on canvas. Land in code.
-- [Pencil VS Code 插件](https://marketplace.visualstudio.com/items?itemName=highagency.pencildev) - Visual Studio Marketplace
-- [Claude Code MCP 文档](https://code.claude.com/docs/en/mcp) - 官方配置指南
-- [MCP 官网](https://modelcontextprotocol.io/) - Model Context Protocol
-
-### 技术分析
-- [Cursor + Pencil MCP 深度分析](https://medium.com/@breezen100/cursor-becomes-a-design-powerhouse-unlock-real-time-canvas-with-mcp-pencil-dev-e4e08afa8f69) - Medium
-- [VS Code MCP 开发指南](https://code.visualstudio.com/api/extension-guides/ai/mcp) - 官方文档
-- [MCP 完整规范支持](https://code.visualstudio.com/blogs/2025/06/12/full-mcp-spec-support) - VS Code Blog
-
-### 相关工具
-- [Penpot MCP 实验](https://www.smashingmagazine.com/2026/01/penpot-experimenting-mcp-servers-ai-powered-design-workflows/) - Smashing Magazine
-- [GitHub Copilot MCP 集成](https://docs.github.com/copilot/customizing-copilot/using-model-context-protocol/extending-copilot-chat-with-mcp) - GitHub Docs
+- [Pencil 官网](https://www.pencil.dev/)
+- [Pencil VS Code 插件](https://marketplace.visualstudio.com/items?itemName=highagency.pencildev)
+- [刘小排：Pencil 设计和写代码全让 AI 干了](https://mp.weixin.qq.com/s/qalljmCFzF6QZJiG2zEZNg) - 感谢这篇文章的启发
 
 ---
 
