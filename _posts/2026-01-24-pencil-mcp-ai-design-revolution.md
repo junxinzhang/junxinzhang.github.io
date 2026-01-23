@@ -54,6 +54,8 @@ slug: pencil-mcp-ai-design-revolution
 
 而且，设计效果出乎意料的专业——有清晰的层次结构、合理的间距、统一的配色。
 
+![AI设计的语音翻译应用界面](/assets/images/screenshot-20260124-pencil-voicetranslation.webp)
+
 ---
 
 ## 二
