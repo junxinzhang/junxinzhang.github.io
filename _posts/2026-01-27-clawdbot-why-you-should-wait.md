@@ -43,6 +43,7 @@ slug: clawdbot-why-you-should-wait
 X上的博主@AlexFinn说了这么一段话，可能代表了大多数人的兴奋：
 
 ![AlexFinn的推文：Clawdbot帮他完成了大量工作](/assets/images/screenshot-20260127-clawdbot-alexfinn-tweet.webp)
+
 *@AlexFinn 列举Clawdbot帮他完成的任务：3个YouTube脚本、Newsletter、26个AI账号调研、项目管理系统……图片来源：X*
 
 他说自己"昨天装了ClawdBot，然后就去过自己的生活了"。等他回来一看，AI已经帮他：写了3个YouTube脚本、一封Newsletter、调研了26个AI账号并做了笔记、创建了每日AI新闻简报、建了项目管理系统、组建了两级AI代理员工团队、搭了一个完整的第二大脑系统来替代Notion。
@@ -101,6 +102,7 @@ Clawdbot像一个住在你家里的助理——你在WhatsApp上跟它说"帮我
 技术上，它是一个跑在你自己电脑上的AI Agent，通过消息平台（WhatsApp、Telegram、Discord、Slack等）接收指令，然后调用各种工具去执行。
 
 ![Clawdbot 架构与数据流向](/assets/images/screenshot-20260127-clawdbot-architecture.webp)
+
 *Clawdbot四层架构：消息平台 → 网关 → AI Agent → 工具执行*
 
 它的架构由四个部分组成：
@@ -159,6 +161,7 @@ Clawdbot像一个住在你家里的助理——你在WhatsApp上跟它说"帮我
 中文用户也不少。有人在Telegram上让它查C盘空间——它会称呼你"白先生"，查完还说"看来您的数字领地还算宽裕，暂时不需要我启动大扫除程序"：
 
 ![Telegram上用中文和Clawdbot对话](/assets/images/screenshot-20260127-clawdbot-telegram-disk.webp)
+
 *Telegram上的真实中文对话：Clawdbot查询磁盘空间，连回复都带人格，图片来源：网络*
 
 但让很多人真正"上头"的，不是它能干活，而是它**有温度**。
@@ -166,6 +169,7 @@ Clawdbot像一个住在你家里的助理——你在WhatsApp上跟它说"帮我
 看这个WhatsApp对话——用户出差到摩洛哥，Clawd不只是回复消息，它会关心你天气怎么样、有没有被当地人忽悠，甚至开玩笑说"希望别人别偷走我的Mac"：
 
 ![通过WhatsApp与Clawd对话](/assets/images/screenshot-20260127-clawdbot-whatsapp-demo.webp)
+
 *通过WhatsApp与Clawd的真实对话：不只是助理，更像一个记得你所有事情的朋友，图片来源：GitHub*
 
 **这就是Clawdbot让人欲罢不能的地方：它不仅帮你干活，还让你产生情感依赖。**
@@ -187,6 +191,7 @@ Clawdbot像一个住在你家里的助理——你在WhatsApp上跟它说"帮我
 但你注意看终端输出的第一句话：
 
 ![Clawdbot安装终端界面](/assets/images/screenshot-20260127-clawdbot-onboarding-terminal.webp)
+
 *Clawdbot onboarding界面：第一步就是安全警告——"Please read: docs.clawd.bot/security"，图片来源：作者截图*
 
 **"Clawdbot agents can run commands, read/write files, and act through..."**
@@ -195,7 +200,7 @@ Clawdbot像一个住在你家里的助理——你在WhatsApp上跟它说"帮我
 
 那一刻，我突然有一种很具体的感觉——**像是把家里的钥匙交给了一个你刚认识的人。**
 
-我在2022年以前做了7年数据科学家，命令行对我来说不陌生。但即便如此，我还是开始反复确认：
+我做了10年以上的开发工作，命令行对我来说不陌生。但即便如此，我还是开始反复确认：
 
 - 它能访问我哪些目录？
 - 权限开到了什么程度？
@@ -211,6 +216,7 @@ Clawdbot像一个住在你家里的助理——你在WhatsApp上跟它说"帮我
 先看一组数据：
 
 ![Clawdbot 安全风险全景图](/assets/images/screenshot-20260127-clawdbot-security-risks.webp)
+
 *基于Clawdbot官方安全文档、CybersecurityNews及SlowMist安全报告整理*
 
 ### 风险一：1,009个暴露的网关
@@ -253,6 +259,7 @@ Clawdbot把所有敏感信息以**明文**存储在本地文件中：
 看这个Discord截图：一个用户刚装好Clawdbot，只是随口问了一句"我电脑上有什么"，AI就把整个Home目录翻了一遍——`.clawdbot`、`.claude`、`.gemini`、`.codex`、`Projects`、各种开发工具配置，全部列出来了：
 
 ![Discord中Clawdbot探索用户文件系统](/assets/images/screenshot-20260127-clawdbot-discord-filesystem.webp)
+
 *用户问"我电脑上有什么"，Clawdbot立刻扫描并列出完整目录结构，包括所有AI工具配置文件，图片来源：网络*
 
 Clawdbot觉得这是在"帮你了解自己的电脑"。但如果这段对话被攻击者看到（记住，1,009个网关暴露在公网上），你的整个系统结构就相当于画了一张藏宝图。
@@ -288,6 +295,7 @@ Clawdbot可以访问你浏览器中**已登录的会话**。
 X上@Legendaryy发了一条帖子，420条评论、491次转发、9,614个点赞、153万次浏览：
 
 ![有人给Clawdbot一个2000美元的加密货币交易钱包](/assets/images/screenshot-20260127-clawdbot-trading-wallet.webp)
+
 *@Legendaryy：Clawdbot向他要一台RTX 4090显卡。他没买，而是给了AI一个$2,000的Hyperliquid交易钱包，让它自己赚。图片中还展示了AI的交易模型和自学习闭环。图片来源：X/铁锤人*
 
 他的原话是："If you want the GPU, earn it."（你想要GPU，就自己去赚。）
@@ -327,6 +335,7 @@ MacStories创始人Federico Viticci是Clawdbot的深度用户。他的数据是�
 看看这张Claude订阅的定价对比图，就知道为什么成本容易失控：
 
 ![Claude各档位定价与Token对比](/assets/images/screenshot-20260127-clawdbot-claude-pricing.webp)
+
 *Claude Pro/Max 5x/Max 20x 各档位价格与Token额度对比。Max 20x每月$200，等价API成本$2,708。图片来源：X @she_llac*
 
 按图中@she_llac的测算，Max 20x每月361.1M credits，换算成Opus-rate约**541.7M input或108.3M output**，等价API成本$2,708。看起来性价比极高——但这里有个容易被忽略的细节：**Claude的prompt caching机制**。
@@ -387,6 +396,7 @@ MacStories创始人Federico Viticci是Clawdbot的深度用户。他的数据是�
 Threads上@linglingfa的一个帖子，精准地描述了很多人的真实感受：
 
 ![Threads上的"工具疲劳"吐槽](/assets/images/screenshot-20260127-clawdbot-tool-fatigue.webp)
+
 *196个赞——Manus没用过、OpenCode还没装、Cowork还没捂热，又来个Clawdbot。前脚Remotion干翻剪映，后脚Pencil打倒Figma。"每天都革了昨天的命，日日都是AGI"。图片来源：Threads*
 
 > "学习和选择新工具的目的是为了搞出一个有用的东西来，而不是为了等着学习下一个工具啊！！"
@@ -414,6 +424,7 @@ Clawdbot真正重要的，不是它这个产品本身，而是它验证了一件
 X上的技术博主@Yangyixxxx有一段分析，我觉得说到了点子上：
 
 ![Yangyi对Clawdbot火爆原因的分析](/assets/images/screenshot-20260127-clawdbot-yangyi-analysis.webp)
+
 *@Yangyixxxx 分析：Clawdbot之所以火，不是因为想法新——2023年就有了。而是因为Claude Code这些底层能力变强了，这是"模型给场景赋能"的好例子。图片来源：X*
 
 他说了两个关键洞察：
@@ -491,7 +502,7 @@ Clawdbot支持多种模型后端，我挨个测了一遍——GPT-4.1和GPT-5.2�
 
 最后，留一个问题。
 
-Clawdbot的作者Peter Steinberger，在卖掉价值数十亿的公司后，选择亲手打造一个"住在电脑里的AI助手"。
+Clawdbot的作者Peter Steinberger，在实现财务自由后，选择亲手打造一个"住在电脑里的AI助手"。
 
 他说自己进入了"vibe coding mode"——跟着感觉写代码。
 
