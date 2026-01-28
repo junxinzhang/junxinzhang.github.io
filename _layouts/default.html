@@ -814,7 +814,9 @@
 
     <!-- jQuery removed - using vanilla JS for better performance -->
 
+    {% unless page.ads == false %}
     {% include tracking-header.html %}
+    {% endunless %}
 
 
 </head>

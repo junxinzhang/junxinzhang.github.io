@@ -1,6 +1,7 @@
 ---
 title: "Terms of Service"
 permalink: "/terms.html"
+ads: false
 ---
 
 ## 1. Terms

@@ -1,6 +1,7 @@
 ---
 title: "Contact"
 permalink: "/contact.html"
+ads: false
 ---
 
 ## 联系我们
