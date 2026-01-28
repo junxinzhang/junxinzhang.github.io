@@ -92,6 +92,28 @@ Google Analytics uses cookies to collect this information. For more information,
 
 To opt out of Google Analytics, you can install the [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout).
 
+### Baidu Analytics (百度统计)
+
+We use Baidu Analytics to analyze website traffic from visitors in China. Baidu Analytics collects:
+
+- Pages you visit
+- Time spent on the site
+- Your approximate geographic location
+- Device and browser information
+
+For more information, visit [Baidu's Privacy Policy](https://tongji.baidu.com/web/help/article?id=330&type=0).
+
+### Umami Analytics
+
+We use Umami Analytics as a privacy-focused analytics solution. Umami is designed to be GDPR compliant and does not use cookies or collect personal data. It only collects:
+
+- Page views
+- Referrer information
+- Browser and device type
+- Country (based on anonymized IP)
+
+For more information, visit [Umami's Privacy Policy](https://umami.is/privacy).
+
 ### Google AdSense
 
 We use Google AdSense to display advertisements on our website. Google AdSense may:
