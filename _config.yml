@@ -8,7 +8,7 @@ favicon: 'assets/images/favicon/favicon.ico'
 domain: 'junxinzhang.com'
 url: 'https://junxinzhang.com'
 baseurl: ''
-disqus: 'demowebsite'
+# disqus: 'demowebsite'
 email: 'jason2023zhang@gmail.com'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
