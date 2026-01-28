@@ -9,44 +9,50 @@ layout: default
 <!-- Reading Progress Bar -->
 <div class="reading-progress-bar" id="readingProgress"></div>
 
-<!-- Social Share Floating Buttons -->
-{% include social-share-floating.html %}
-
 <div class="container">
 
-<!-- Breadcrumb Navigation -->
-<nav aria-label="breadcrumb" class="mt-3">
-    <ol class="breadcrumb bg-transparent p-0 mb-2 small">
-        <li class="breadcrumb-item"><a href="{{site.baseurl}}/" class="text-muted"><span data-i18n="nav.home">Home</span></a></li>
-        {% if page.categories.size > 0 %}
-        <li class="breadcrumb-item"><a href="{{site.baseurl}}/categories.html#{{ page.categories | first | downcase }}" class="text-muted">{{ page.categories | first }}</a></li>
-        {% endif %}
-        <li class="breadcrumb-item active text-truncate" aria-current="page" style="max-width: 300px;">{{ page.title }}</li>
-    </ol>
-</nav>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="mt-3">
+        <ol class="breadcrumb bg-transparent p-0 mb-2 small">
+            <li class="breadcrumb-item"><a href="{{site.baseurl}}/" class="text-muted"><span
+                        data-i18n="nav.home">Home</span></a></li>
+            {% if page.categories.size > 0 %}
+            <li class="breadcrumb-item"><a
+                    href="{{site.baseurl}}/categories.html#{{ page.categories | first | downcase }}"
+                    class="text-muted">{{ page.categories | first }}</a></li>
+            {% endif %}
+            <li class="breadcrumb-item active text-truncate" aria-current="page" style="max-width: 300px;">{{ page.title
+                }}</li>
+        </ol>
+    </nav>
 
-<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
-		<div class="h-100 tofront">
-			<div class="row {% if page.image %} justify-content-between {% else %} justify-content-center {% endif %}">
-				<div class="{% if page.image %} col-md-6 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-4 pb-4 align-self-center">
-					<p class="text-uppercase font-weight-bold">
+    <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row {% if page.image %} justify-content-between {% else %} justify-content-center {% endif %}">
+                <div
+                    class="{% if page.image %} col-md-6 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+                    <p class="text-uppercase font-weight-bold">
                         <span class="catlist">
-						{% for category in page.categories %}
-                          <a class="sscroll text-danger" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category | downcase }}</a><span class="sep">, </span>
-                        {% endfor %}
+                            {% for category in page.categories %}
+                            <a class="sscroll text-danger"
+                                href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category | downcase
+                                }}</a><span class="sep">, </span>
+                            {% endfor %}
                         </span>
-					</p>
-					<h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
-					<span class="text-muted d-block mt-1">{{ page.date | date: '%b %d, %Y' }} · {% include meta-read-time.html %}</span>
-				</div>
+                    </p>
+                    <h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
+                    <span class="text-muted d-block mt-1">{{ page.date | date: '%b %d, %Y' }} · {% include
+                        meta-read-time.html %}</span>
+                </div>
                 {% if page.image %}
-				<div class="col-md-6 pr-0 align-self-center">
-					{% include responsive-image.html src=page.image alt=page.title class="rounded w-100" width="600" height="400" fetchpriority="high" %}
-				</div>
+                <div class="col-md-6 pr-0 align-self-center">
+                    {% include responsive-image.html src=page.image alt=page.title class="rounded w-100" width="600"
+                    height="400" fetchpriority="high" %}
+                </div>
                 {% endif %}
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -54,63 +60,123 @@ layout: default
 
 
 <div class="container-lg pt-4 pb-4">
-	<div class="row justify-content-center">
-        
-        
+    <div class="row justify-content-center">
+
+
         <!-- Share -->
-		<div class="col-lg-2 pr-4 mb-4 col-md-12">
-			<div class="sticky-top sticky-top-offset text-center">
-				<div class="text-muted" data-i18n="post.share">
-					Share
-				</div>
-				<div class="share d-inline-block">
-					<!-- AddToAny BEGIN -->
-					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-						<a class="a2a_button_facebook"></a>
-						<a class="a2a_button_twitter"></a>
-					</div>
-					<script async src="https://static.addtoany.com/menu/page.js"></script>
-					<!-- AddToAny END -->
-				</div>
-			</div>
-		</div>
-        
-        
-		<div class="col-md-12 col-lg-8">
+        <div class="col-lg-2 pr-4 mb-4 col-md-12">
+            <div class="sticky-top sticky-top-offset text-center">
+                <div class="text-muted" data-i18n="post.share">
+                    Share
+                </div>
+                <div class="share-sidebar d-inline-block">
+                    <!-- AddToAny + Button for more platforms -->
+                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style"
+                        style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                    </div>
+                    <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+                    <!-- Custom Share buttons -->
+                    <div class="share-buttons-list">
+                        <!-- Twitter/X -->
+                        <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}&via={{ site.twitter.username }}"
+                            class="share-sidebar-btn share-sidebar-twitter" target="_blank" rel="noopener noreferrer"
+                            title="Share on X (Twitter)" aria-label="Share on X">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}"
+                            class="share-sidebar-btn share-sidebar-linkedin" target="_blank" rel="noopener noreferrer"
+                            title="Share on LinkedIn" aria-label="Share on LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}"
+                            class="share-sidebar-btn share-sidebar-facebook" target="_blank" rel="noopener noreferrer"
+                            title="Share on Facebook" aria-label="Share on Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+                        </a>
+                        <!-- WeChat -->
+                        <button class="share-sidebar-btn share-sidebar-wechat" id="sidebarWechatShareBtn"
+                            title="Share on WeChat" aria-label="Share on WeChat">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.324.324 0 0 0-.12.366l.218.81a.616.616 0 0 1 .029.117.166.166 0 0 1-.162.162.177.177 0 0 1-.092-.03l-1.057-.61a.519.519 0 0 0-.256-.074.509.509 0 0 0-.142.021 5.668 5.668 0 0 1-1.576.22ZM9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.615.615 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.627.627 0 0 0 .098.356Z" />
+                                <path
+                                    d="M0 6.826c0 1.455.781 2.765 2.001 3.656a.385.385 0 0 1 .143.439l-.161.6-.1.373a.499.499 0 0 0-.032.14.192.192 0 0 0 .193.193c.039 0 .077-.01.111-.029l1.268-.733a.622.622 0 0 1 .308-.088c.058 0 .116.009.171.025a6.83 6.83 0 0 0 1.625.26 4.45 4.45 0 0 1-.177-1.251c0-2.936 2.785-5.02 5.824-5.02.05 0 .1 0 .15.002C10.587 3.429 8.392 2 5.796 2 2.596 2 0 4.16 0 6.826Zm4.632-1.555a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0Zm3.875 0a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0Z" />
+                            </svg>
+                        </button>
+                        <!-- Copy Link -->
+                        <button class="share-sidebar-btn share-sidebar-copy" id="sidebarCopyLinkBtn" title="Copy Link"
+                            aria-label="Copy article link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16" class="sidebar-copy-icon">
+                                <path
+                                    d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                                <path
+                                    d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16" class="sidebar-check-icon" style="display:none;">
+                                <path
+                                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 col-lg-8">
 
             <!-- Series Navigation (if article is part of a series) -->
             {% include series-nav.html %}
 
             <!-- Article -->
-			<article class="article-post">
-			{{ content }}                
-			</article>
-			
-			<!-- Tags -->
-			<div class="mb-4">
-				<span class="taglist">
-				{% for tag in page.tags %}
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="{{site.baseurl}}/tags.html#{{ tag | downcase }}">{{ tag | downcase }}</a>
-				{% endfor %}
-				</span>
-			</div>
+            <article class="article-post">
+                {{ content }}
+            </article>
+
+            <!-- Tags -->
+            <div class="mb-4">
+                <span class="taglist">
+                    {% for tag in page.tags %}
+                    <a class="sscroll btn btn-light btn-sm font-weight-bold"
+                        href="{{site.baseurl}}/tags.html#{{ tag | downcase }}">{{ tag | downcase }}</a>
+                    {% endfor %}
+                </span>
+            </div>
 
             <!-- Article CTA -->
             {% include article-cta.html %}
 
             <!-- donate -->
-			{% include donate.html %}
+            {% include donate.html %}
 
             <!-- Comments -->
             {% if page.comments != false %}
-                {% include comments.html %}
+            {% include comments.html %}
             {% endif %}
-            
-		</div>
-        
-        
-	</div>
+
+        </div>
+
+
+    </div>
 </div>
 
 
@@ -126,220 +192,436 @@ layout: default
         {% assign minCommonTags = 1 %}
         {% assign maxRelatedCounter = 0 %}
         {% for post in site.posts %}
-            {% assign sameTagCount = 0 %}
-            {% assign commonTags = '' %}
-            {% for tag in post.tags %}
-                {% if post.url != page.url %}
-                    {% if page.tags contains tag %}
-                        {% assign sameTagCount = sameTagCount | plus: 1 %}
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
-            {% if sameTagCount >= minCommonTags %}
-                {% if maxRelatedCounter < maxRelated %}
-                    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 border-0 rounded shadow-sm hover-effect">
-                            {% if post.image %}
-                            <a href="{{site.baseurl}}{{post.url}}">
-                                {% include optimized-image.html src=post.image alt=post.title height="140px" loading="lazy" class="card-img-top" %}
-                            </a>
-                            {% endif %}
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">
-                                    <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
-                                </h5>
-                                {% assign words = post.content | strip_html | number_of_words %}
-                                {% assign read_time = words | divided_by: 300 | at_least: 1 %}
-                                <div class="mt-auto">
-                                    <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }} · {{ read_time }} 分钟</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-            {% endif %}
+        {% assign sameTagCount = 0 %}
+        {% assign commonTags = '' %}
+        {% for tag in post.tags %}
+        {% if post.url != page.url %}
+        {% if page.tags contains tag %}
+        {% assign sameTagCount = sameTagCount | plus: 1 %}
+        {% endif %}
+        {% endif %}
         {% endfor %}
-        {% if maxRelatedCounter == 0 %}
-            {% for post in site.posts limit:3 %}
-                {% if post.url != page.url %}
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 rounded shadow-sm hover-effect">
-                        {% if post.image %}
-                        <a href="{{site.baseurl}}{{post.url}}">
-                            {% include optimized-image.html src=post.image alt=post.title height="140px" loading="lazy" class="card-img-top" %}
-                        </a>
-                        {% endif %}
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">
-                                <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
-                            </h5>
-                            {% assign words = post.content | strip_html | number_of_words %}
-                            {% assign read_time = words | divided_by: 300 | at_least: 1 %}
-                            <div class="mt-auto">
-                                <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }} · {{ read_time }} 分钟</small>
-                            </div>
-                        </div>
+        {% if sameTagCount >= minCommonTags %}
+        {% if maxRelatedCounter < maxRelated %} {% assign maxRelatedCounter=maxRelatedCounter | plus: 1 %} <div
+            class="col-md-4 mb-4">
+            <div class="card h-100 border-0 rounded shadow-sm hover-effect">
+                {% if post.image %}
+                <a href="{{site.baseurl}}{{post.url}}">
+                    {% include optimized-image.html src=post.image alt=post.title height="140px" loading="lazy"
+                    class="card-img-top" %}
+                </a>
+                {% endif %}
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">
+                        <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+                    </h5>
+                    {% assign words = post.content | strip_html | number_of_words %}
+                    {% assign read_time = words | divided_by: 300 | at_least: 1 %}
+                    <div class="mt-auto">
+                        <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }} · {{ read_time }} 分钟</small>
                     </div>
                 </div>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
+            </div>
     </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    {% if maxRelatedCounter == 0 %}
+    {% for post in site.posts limit:3 %}
+    {% if post.url != page.url %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 rounded shadow-sm hover-effect">
+            {% if post.image %}
+            <a href="{{site.baseurl}}{{post.url}}">
+                {% include optimized-image.html src=post.image alt=post.title height="140px" loading="lazy"
+                class="card-img-top" %}
+            </a>
+            {% endif %}
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                    <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+                </h5>
+                {% assign words = post.content | strip_html | number_of_words %}
+                {% assign read_time = words | divided_by: 300 | at_least: 1 %}
+                <div class="mt-auto">
+                    <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }} · {{ read_time }} 分钟</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+</div>
 </div>
 
 <!-- Aletbar Prev/Next -->
 <div class="alertbar">
     <div class="container">
         <div class="row prevnextlinks small font-weight-bold">
-          {% if page.previous.url %}
+            {% if page.previous.url %}
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="{{ site.baseurl }}{{ page.previous.url }}">{% if page.previous.image %} <img height="30" width="45" class="mr-1" src="{{site.baseurl}}/{{page.previous.image}}" alt="{{ page.previous.title | escape }}" loading="lazy"> {% endif %} {{page.previous.title}}</a>
+                <a class="text-dark" href="{{ site.baseurl }}{{ page.previous.url }}">{% if page.previous.image %} <img
+                        height="30" width="45" class="mr-1" src="{{site.baseurl}}/{{page.previous.image}}"
+                        alt="{{ page.previous.title | escape }}" loading="lazy"> {% endif %} {{page.previous.title}}</a>
             </div>
-          {% endif %}
-          {% if page.next.url %}
+            {% endif %}
+            {% if page.next.url %}
             <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="{{ site.baseurl }}{{ page.next.url }}"> {{page.next.title}} {% if page.next.image %} <img height="30" width="45" class="ml-1" src="{{site.baseurl}}/{{page.next.image}}" alt="{{ page.next.title | escape }}" loading="lazy"> {% endif %}</a>
+                <a class="text-dark" href="{{ site.baseurl }}{{ page.next.url }}"> {{page.next.title}} {% if
+                    page.next.image %} <img height="30" width="45" class="ml-1"
+                        src="{{site.baseurl}}/{{page.next.image}}" alt="{{ page.next.title | escape }}" loading="lazy">
+                    {% endif %}</a>
             </div>
-          {% endif %}
+            {% endif %}
         </div>
     </div>
 </div>
 
 <!-- Reading Progress Bar Styles -->
 <style>
-.reading-progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background: linear-gradient(90deg, #007bff, #00d4ff);
-    z-index: 9999;
-    transition: width 0.1s ease;
-}
-.breadcrumb-item + .breadcrumb-item::before {
-    content: "›";
-}
+    .reading-progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #007bff, #00d4ff);
+        z-index: 9999;
+        transition: width 0.1s ease;
+    }
 
-/* Dark Mode Styles for Post Page */
-[data-theme="dark"] .jumbotron {
-    background-color: var(--bg-color, #1a1a2e) !important;
-}
+    .breadcrumb-item+.breadcrumb-item::before {
+        content: "›";
+    }
 
-[data-theme="dark"] .article-headline {
-    color: var(--text-color, #e4e4e7);
-}
+    /* Dark Mode Styles for Post Page */
+    [data-theme="dark"] .jumbotron {
+        background-color: var(--bg-color, #1a1a2e) !important;
+    }
 
-[data-theme="dark"] article.article-post {
-    color: var(--text-color, #e4e4e7);
-}
+    [data-theme="dark"] .article-headline {
+        color: var(--text-color, #e4e4e7);
+    }
 
-[data-theme="dark"] article.article-post h1,
-[data-theme="dark"] article.article-post h2,
-[data-theme="dark"] article.article-post h3,
-[data-theme="dark"] article.article-post h4,
-[data-theme="dark"] article.article-post h5,
-[data-theme="dark"] article.article-post h6 {
-    color: var(--text-color, #e4e4e7);
-}
+    [data-theme="dark"] article.article-post {
+        color: var(--text-color, #e4e4e7);
+    }
 
-[data-theme="dark"] article.article-post a {
-    color: #4ade80;
-}
+    [data-theme="dark"] article.article-post h1,
+    [data-theme="dark"] article.article-post h2,
+    [data-theme="dark"] article.article-post h3,
+    [data-theme="dark"] article.article-post h4,
+    [data-theme="dark"] article.article-post h5,
+    [data-theme="dark"] article.article-post h6 {
+        color: var(--text-color, #e4e4e7);
+    }
 
-[data-theme="dark"] article.article-post blockquote {
-    color: var(--text-muted, #a1a1aa);
-    border-left-color: #4ade80;
-}
+    [data-theme="dark"] article.article-post a {
+        color: #4ade80;
+    }
 
-[data-theme="dark"] article.article-post code {
-    background-color: #0f3460;
-    color: #e4e4e7;
-}
+    [data-theme="dark"] article.article-post blockquote {
+        color: var(--text-muted, #a1a1aa);
+        border-left-color: #4ade80;
+    }
 
-[data-theme="dark"] article.article-post pre {
-    background-color: #0f3460;
-}
+    [data-theme="dark"] article.article-post code {
+        background-color: #0f3460;
+        color: #e4e4e7;
+    }
 
-[data-theme="dark"] .breadcrumb-item.active {
-    color: var(--text-muted, #a1a1aa);
-}
+    [data-theme="dark"] article.article-post pre {
+        background-color: #0f3460;
+    }
 
-[data-theme="dark"] .btn-light {
-    background-color: var(--card-bg, #16213e);
-    border-color: var(--border-color, #2d3748);
-    color: var(--text-color, #e4e4e7);
-}
+    [data-theme="dark"] .breadcrumb-item.active {
+        color: var(--text-muted, #a1a1aa);
+    }
 
-[data-theme="dark"] .btn-light:hover {
-    background-color: #1e3a5f;
-    border-color: #4ade80;
-    color: #4ade80;
-}
+    [data-theme="dark"] .btn-light {
+        background-color: var(--card-bg, #16213e);
+        border-color: var(--border-color, #2d3748);
+        color: var(--text-color, #e4e4e7);
+    }
 
-[data-theme="dark"] .alertbar {
-    background-color: var(--card-bg, #16213e);
-    box-shadow: 0 -3px 10px 0 rgba(0,0,0,0.3);
-}
+    [data-theme="dark"] .btn-light:hover {
+        background-color: #1e3a5f;
+        border-color: #4ade80;
+        color: #4ade80;
+    }
 
-[data-theme="dark"] .alertbar a.text-dark {
-    color: var(--text-color, #e4e4e7) !important;
-}
+    [data-theme="dark"] .alertbar {
+        background-color: var(--card-bg, #16213e);
+        box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.3);
+    }
 
-[data-theme="dark"] .alertbar .rightborder {
-    border-right-color: var(--border-color, #2d3748);
-}
+    [data-theme="dark"] .alertbar a.text-dark {
+        color: var(--text-color, #e4e4e7) !important;
+    }
 
-[data-theme="dark"] .reading-progress-bar {
-    background: linear-gradient(90deg, #4ade80, #22d3ee);
-}
+    [data-theme="dark"] .alertbar .rightborder {
+        border-right-color: var(--border-color, #2d3748);
+    }
 
-[data-theme="dark"] .sticky-top-offset {
-    background-color: var(--bg-color, #1a1a2e);
-}
+    [data-theme="dark"] .reading-progress-bar {
+        background: linear-gradient(90deg, #4ade80, #22d3ee);
+    }
 
-[data-theme="dark"] .text-danger {
-    color: #f87171 !important;
-}
+    [data-theme="dark"] .sticky-top-offset {
+        background-color: var(--bg-color, #1a1a2e);
+    }
+
+    [data-theme="dark"] .text-danger {
+        color: #f87171 !important;
+    }
+
+    /* Sidebar Share Buttons */
+    .share-sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .share-buttons-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 6px;
+    }
+
+    /* Mobile: horizontal layout for share buttons */
+    @media (max-width: 991.98px) {
+        .col-lg-2 .sticky-top {
+            position: relative !important;
+            top: auto !important;
+        }
+
+        .share-sidebar {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .share-buttons-list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0;
+        }
+
+        .share-sidebar .a2a_kit {
+            flex-direction: row !important;
+        }
+    }
+
+    .share-sidebar-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .share-sidebar-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .share-sidebar-twitter {
+        background: #000;
+    }
+
+    .share-sidebar-linkedin {
+        background: #0077b5;
+    }
+
+    .share-sidebar-facebook {
+        background: #1877f2;
+    }
+
+    .share-sidebar-wechat {
+        background: #07c160;
+    }
+
+    .share-sidebar-copy {
+        background: #6c757d;
+    }
+
+    .share-sidebar-copy.copied {
+        background: #28a745;
+    }
+
+    /* Dark mode for sidebar share */
+    [data-theme="dark"] .share-sidebar-btn {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
 </style>
 
 <!-- Reading Progress Bar Script - Optimized with RAF (Pure vanilla JS) -->
 <script>
-(function() {
-    var progressBar = document.getElementById('readingProgress');
-    var article = document.querySelector('article.article-post');
+    (function () {
+        var progressBar = document.getElementById('readingProgress');
+        var article = document.querySelector('article.article-post');
 
-    if (article && progressBar) {
-        var ticking = false;
-        var articleTop = article.offsetTop;
-        var articleHeight = article.offsetHeight;
-        var windowHeight = window.innerHeight;
-        var scrollStart = articleTop - windowHeight / 2;
-        var scrollEnd = articleTop + articleHeight - windowHeight / 2;
+        if (article && progressBar) {
+            var ticking = false;
+            var articleTop = article.offsetTop;
+            var articleHeight = article.offsetHeight;
+            var windowHeight = window.innerHeight;
+            var scrollStart = articleTop - windowHeight / 2;
+            var scrollEnd = articleTop + articleHeight - windowHeight / 2;
 
-        function updateProgress() {
-            var scrollTop = window.pageYOffset;
-            var progress;
-            if (scrollTop < scrollStart) {
-                progress = 0;
-            } else if (scrollTop > scrollEnd) {
-                progress = 100;
-            } else {
-                progress = ((scrollTop - scrollStart) / (scrollEnd - scrollStart)) * 100;
+            function updateProgress() {
+                var scrollTop = window.pageYOffset;
+                var progress;
+                if (scrollTop < scrollStart) {
+                    progress = 0;
+                } else if (scrollTop > scrollEnd) {
+                    progress = 100;
+                } else {
+                    progress = ((scrollTop - scrollStart) / (scrollEnd - scrollStart)) * 100;
+                }
+                progressBar.style.width = progress + '%';
+                ticking = false;
             }
-            progressBar.style.width = progress + '%';
-            ticking = false;
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(updateProgress);
+                    ticking = true;
+                }
+            }, { passive: true });
+        }
+    })();
+</script>
+
+<!-- Sidebar Share Buttons Script -->
+<script>
+    (function () {
+        'use strict';
+
+        // Sidebar Copy Link
+        var sidebarCopyBtn = document.getElementById('sidebarCopyLinkBtn');
+        if (sidebarCopyBtn) {
+            sidebarCopyBtn.addEventListener('click', function () {
+                var url = window.location.href;
+                var copyIcon = sidebarCopyBtn.querySelector('.sidebar-copy-icon');
+                var checkIcon = sidebarCopyBtn.querySelector('.sidebar-check-icon');
+
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(url).then(function () {
+                        showSidebarCopied(sidebarCopyBtn, copyIcon, checkIcon);
+                    }).catch(function () {
+                        fallbackSidebarCopy(url, sidebarCopyBtn, copyIcon, checkIcon);
+                    });
+                } else {
+                    fallbackSidebarCopy(url, sidebarCopyBtn, copyIcon, checkIcon);
+                }
+            });
         }
 
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                requestAnimationFrame(updateProgress);
-                ticking = true;
+        function fallbackSidebarCopy(text, btn, copyIcon, checkIcon) {
+            var textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showSidebarCopied(btn, copyIcon, checkIcon);
+            } catch (err) {
+                console.error('Copy failed:', err);
             }
-        }, {passive: true});
-    }
-})();
+            document.body.removeChild(textarea);
+        }
+
+        function showSidebarCopied(btn, copyIcon, checkIcon) {
+            btn.classList.add('copied');
+            if (copyIcon) copyIcon.style.display = 'none';
+            if (checkIcon) checkIcon.style.display = 'block';
+
+            setTimeout(function () {
+                btn.classList.remove('copied');
+                if (copyIcon) copyIcon.style.display = 'block';
+                if (checkIcon) checkIcon.style.display = 'none';
+            }, 2000);
+
+            // Track in GA4
+            if (typeof gtag === 'function') {
+                gtag('event', 'share', {
+                    method: 'copy_link_sidebar',
+                    content_type: 'article',
+                    item_id: window.location.pathname
+                });
+            }
+        }
+
+        // Sidebar WeChat - reuse the existing modal from social-share-floating
+        var sidebarWechatBtn = document.getElementById('sidebarWechatShareBtn');
+        var wechatModal = document.getElementById('wechatQrModal');
+
+        if (sidebarWechatBtn && wechatModal) {
+            sidebarWechatBtn.addEventListener('click', function () {
+                var wechatQrCode = document.getElementById('wechatQrCode');
+                wechatModal.classList.add('show');
+
+                // Generate QR code if not already generated
+                if (wechatQrCode && !wechatQrCode.hasChildNodes()) {
+                    var script = document.createElement('script');
+                    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+                    script.onload = function () {
+                        new QRCode(wechatQrCode, {
+                            text: window.location.href,
+                            width: 180,
+                            height: 180,
+                            colorDark: '#000000',
+                            colorLight: '#ffffff',
+                            correctLevel: QRCode.CorrectLevel.M
+                        });
+                    };
+                    document.head.appendChild(script);
+                }
+
+                // Track in GA4
+                if (typeof gtag === 'function') {
+                    gtag('event', 'share', {
+                        method: 'wechat_sidebar',
+                        content_type: 'article',
+                        item_id: window.location.pathname
+                    });
+                }
+            });
+        }
+
+        // Track sidebar share clicks
+        document.querySelectorAll('.share-sidebar-btn[href]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var platform = this.classList.contains('share-sidebar-twitter') ? 'twitter' :
+                    this.classList.contains('share-sidebar-linkedin') ? 'linkedin' :
+                        this.classList.contains('share-sidebar-facebook') ? 'facebook' : 'other';
+
+                if (typeof gtag === 'function') {
+                    gtag('event', 'share', {
+                        method: platform + '_sidebar',
+                        content_type: 'article',
+                        item_id: window.location.pathname
+                    });
+                }
+            });
+        });
+    })();
 </script>
 
 <!-- TTS Player Script -->
