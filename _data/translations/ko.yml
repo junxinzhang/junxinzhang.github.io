@@ -55,6 +55,8 @@ comments:
 footer:
   copyright: "All rights reserved"
   powered_by: "Powered by"
+  privacy_policy: "개인정보 처리방침"
+  terms: "이용약관"
 
 misc:
   table_of_contents: "목차"
