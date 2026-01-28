@@ -5,184 +5,193 @@ permalink: "/categories.html"
 ---
 
 <style>
-.category-filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
-}
-.category-filter .filter-btn {
-    padding: 8px 16px;
-    border: 1px solid #dee2e6;
-    border-radius: 20px;
-    background: #fff;
-    color: #495057;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-decoration: none;
-    font-size: 14px;
-}
-.category-filter .filter-btn:hover {
-    background: #e9ecef;
-    text-decoration: none;
-    color: #495057;
-}
-.category-filter .filter-btn.active {
-    background: #111;
-    color: #fff;
-    border-color: #111;
-}
-.category-filter .filter-btn .count {
-    display: inline-block;
-    background: rgba(0,0,0,0.1);
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-size: 12px;
-    margin-left: 5px;
-}
-.category-filter .filter-btn.active .count {
-    background: rgba(255,255,255,0.2);
-}
-.category-section {
-    display: block;
-}
-.category-section.hidden {
-    display: none;
-}
-
-/* 移动端响应式布局 */
-@media (max-width: 767px) {
-    /* 文章卡片在移动端垂直堆叠 */
-    .main-loop-card {
-        flex-direction: column-reverse !important;
-    }
-
-    /* 图片容器移动端全宽显示 */
-    .main-loop-card > .col-md-4 {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 !important;
-        margin-bottom: 15px;
-        text-align: left !important;
-    }
-
-    /* 图片移动端样式 */
-    .main-loop-card > .col-md-4 img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: 200px;
-        object-fit: cover;
+    .category-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+        padding: 15px;
+        background: #f8f9fa;
         border-radius: 8px;
     }
 
-    /* 文字内容区域移动端全宽 */
-    .main-loop-card > .pr-3 {
-        width: 100% !important;
-        padding-right: 0 !important;
+    .category-filter .filter-btn {
+        padding: 8px 16px;
+        border: 1px solid #dee2e6;
+        border-radius: 20px;
+        background: #fff;
+        color: #495057;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        font-size: 14px;
     }
 
-    /* 标题移动端字号调整 */
-    .main-loop-card h2 {
-        font-size: 1.1rem;
-        line-height: 1.4;
+    .category-filter .filter-btn:hover {
+        background: #e9ecef;
+        text-decoration: none;
+        color: #495057;
     }
 
-    /* 摘要文字移动端优化 */
-    .main-loop-card .excerpt {
-        font-size: 0.9rem;
-        line-height: 1.5;
+    .category-filter .filter-btn.active {
+        background: #111;
+        color: #fff;
+        border-color: #111;
     }
-}
+
+    .category-filter .filter-btn .count {
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.1);
+        padding: 2px 8px;
+        border-radius: 10px;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+
+    .category-filter .filter-btn.active .count {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .category-section {
+        display: block;
+    }
+
+    .category-section.hidden {
+        display: none;
+    }
+
+    /* 移动端响应式布局 */
+    @media (max-width: 767px) {
+
+        /* 文章卡片在移动端垂直堆叠 */
+        .main-loop-card {
+            flex-direction: column-reverse !important;
+        }
+
+        /* 图片容器移动端全宽显示 */
+        .main-loop-card>.col-md-4 {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 0 !important;
+            margin-bottom: 15px;
+            text-align: left !important;
+        }
+
+        /* 图片移动端样式 */
+        .main-loop-card>.col-md-4 img {
+            width: 100% !important;
+            height: auto !important;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* 文字内容区域移动端全宽 */
+        .main-loop-card>.pr-3 {
+            width: 100% !important;
+            padding-right: 0 !important;
+        }
+
+        /* 标题移动端字号调整 */
+        .main-loop-card h2 {
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        /* 摘要文字移动端优化 */
+        .main-loop-card .excerpt {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    }
 </style>
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <h1 class="font-weight-bold title h3 text-capitalize mb-4">Categories</h1>
+            <h1 class="font-weight-bold title h3 text-capitalize mb-4">Categories</h1>
 
-        {% comment %} 定义分类顺序，AI优先 {% endcomment %}
-        {% assign category_order = "AI,DevOps,Technology,Business,Career,Culture,Jekyll" | split: "," %}
+            {% comment %} 定义分类顺序，AI优先 {% endcomment %}
+            {% assign category_order = "AI,DevOps,Technology,Business,Career,Culture,Jekyll" | split: "," %}
 
-        {% comment %} 分类筛选导航栏 {% endcomment %}
-        <div class="category-filter">
-            <a href="#" class="filter-btn active" data-category="all">
-                All
-                <span class="count">{{ site.posts.size }}</span>
-            </a>
-            {% for cat_name in category_order %}
+            {% comment %} 分类筛选导航栏 {% endcomment %}
+            <div class="category-filter">
+                <a href="#" class="filter-btn active" data-category="all">
+                    All
+                    <span class="count">{{ site.posts.size }}</span>
+                </a>
+                {% for cat_name in category_order %}
                 {% if site.categories[cat_name] %}
                 <a href="#" class="filter-btn" data-category="{{ cat_name | downcase }}">
                     {{ cat_name }}
                     <span class="count">{{ site.categories[cat_name].size }}</span>
                 </a>
                 {% endif %}
-            {% endfor %}
-        </div>
+                {% endfor %}
+            </div>
 
-        {% comment %} 分类内容 {% endcomment %}
-        {% for cat_name in category_order %}
+            {% comment %} 分类内容 {% endcomment %}
+            {% for cat_name in category_order %}
             {% if site.categories[cat_name] %}
             <div class="category-section" data-category="{{ cat_name | downcase }}">
-            <h4 class="font-weight-bold spanborder text-capitalize" id="{{ cat_name | downcase }}"><span>{{ cat_name }}</span></h4>
+                <h4 class="font-weight-bold spanborder text-capitalize" id="{{ cat_name | downcase }}"><span>{{ cat_name
+                        }}</span></h4>
 
-            {% assign pages_list = site.categories[cat_name] %}
-            {% for post in pages_list %}
-            {% if post.title != null %}
-              {% if group == null or group == post.group %}
+                {% assign pages_list = site.categories[cat_name] %}
+                {% for post in pages_list %}
+                {% if post.title != null %}
+                {% if group == null or group == post.group %}
                 {% include main-loop-card.html %}
-              {% endif %}
-            {% endif %}
-            {% endfor %}
-            {% assign pages_list = nil %}
-            {% assign group = nil %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+                {% assign pages_list = nil %}
+                {% assign group = nil %}
             </div>
             {% endif %}
-        {% endfor %}
+            {% endfor %}
 
         </div>
 
-            <div class="col-md-4">
-        {% include sidebar-featured.html %}
-    </div>
+        <div class="col-md-4">
+            {% include sidebar-featured.html %}
+        </div>
 
     </div>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const categorySections = document.querySelectorAll('.category-section');
+    document.addEventListener('DOMContentLoaded', function () {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const categorySections = document.querySelectorAll('.category-section');
 
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const category = this.dataset.category;
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const category = this.dataset.category;
 
-            // 更新按钮状态
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
+                // 更新按钮状态
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
 
-            // 筛选显示内容
-            if (category === 'all') {
-                categorySections.forEach(section => {
-                    section.classList.remove('hidden');
-                });
-            } else {
-                categorySections.forEach(section => {
-                    if (section.dataset.category === category) {
+                // 筛选显示内容
+                if (category === 'all') {
+                    categorySections.forEach(section => {
                         section.classList.remove('hidden');
-                    } else {
-                        section.classList.add('hidden');
-                    }
-                });
-            }
+                    });
+                } else {
+                    categorySections.forEach(section => {
+                        if (section.dataset.category === category) {
+                            section.classList.remove('hidden');
+                        } else {
+                            section.classList.add('hidden');
+                        }
+                    });
+                }
 
-            // 平滑滚动到顶部
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+                // 平滑滚动到顶部
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
         });
     });
-});
 </script>
