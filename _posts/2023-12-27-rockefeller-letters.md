@@ -123,8 +123,5 @@ tags: [leadership, wealth building]
 ### 第38封信：谁都能成为大人物
 - 在最后一封信中，洛克菲勒分享了他对于“伟大”的看法。他认为每个人都能成为伟大的人物，关键在于个人的行为和对社会的贡献。
 
-
-## References
-- [book][links-1]
-
-[links-1]: https://github.com/junxinzhang/junxinzhang.github.io/blob/master/assets/books/一生的财富_洛克菲勒写给儿子的38封信_传世励志经典_约翰D洛克_Z_Library.epub
+## 获取方式
+如需获取读书笔记/摘要/书单，请关注微信公众号 **JustJason** 并联系获取。

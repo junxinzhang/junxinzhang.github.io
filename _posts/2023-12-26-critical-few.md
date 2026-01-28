@@ -41,9 +41,5 @@ tags: [business, corporate culture, leadership]
 
 ![]({{ site.baseurl }}/assets/images/screenshot-20231226-critical-few-2.webp)
 
-
-## References
-- [book][links-1]
-
-
-[links-1]: https://github.com/junxinzhang/junxinzhang.github.io/blob/master/assets/books/关键的少数_不确定时代的核心圈法则_2020年危机时代必读书_普华永道美国_Z_Library.epub
+## 获取方式
+如需获取读书笔记/摘要/书单，请关注微信公众号 **JustJason** 并联系获取。
