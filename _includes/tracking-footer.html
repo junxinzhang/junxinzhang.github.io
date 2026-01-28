@@ -1,66 +1,65 @@
 <!-- All this area goes before </body> closing tag -->
 <!-- Third-party scripts delayed until after page load for better performance -->
 <script>
-// Delay non-critical third-party scripts until after page is interactive
-// This significantly improves FCP, LCP, and TBT scores
-(function() {
-    'use strict';
+    // Delay non-critical third-party scripts until after page is interactive
+    // This significantly improves FCP, LCP, and TBT scores
+    (function () {
+        'use strict';
 
-    // Load scripts after window load or after 3 seconds (whichever comes first)
-    var scriptsLoaded = false;
+        // Load scripts after window load or after 3 seconds (whichever comes first)
+        var scriptsLoaded = false;
 
-    function loadThirdPartyScripts() {
-        if (scriptsLoaded) return;
-        scriptsLoaded = true;
+        function loadThirdPartyScripts() {
+            if (scriptsLoaded) return;
+            scriptsLoaded = true;
 
-        // Google Analytics (gtag.js)
-        var gtagScript = document.createElement('script');
-        gtagScript.async = true;
-        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-R8TYFJ6Q2Y';
-        document.head.appendChild(gtagScript);
+            // Google Analytics (gtag.js)
+            var gtagScript = document.createElement('script');
+            gtagScript.async = true;
+            gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-R8TYFJ6Q2Y';
+            document.head.appendChild(gtagScript);
 
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function(){dataLayer.push(arguments);};
-        gtag('js', new Date());
-        gtag('config', 'G-R8TYFJ6Q2Y');
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () { dataLayer.push(arguments); };
+            gtag('js', new Date());
+            gtag('config', 'G-R8TYFJ6Q2Y');
 
-        // Baidu Analytics
-        var _hmt = window._hmt || [];
-        var hmScript = document.createElement('script');
-        hmScript.async = true;
-        hmScript.src = 'https://hm.baidu.com/hm.js?f85eaac20b336682b488801911c259b6';
-        document.head.appendChild(hmScript);
+            // Baidu Analytics
+            var _hmt = window._hmt || [];
+            var hmScript = document.createElement('script');
+            hmScript.async = true;
+            hmScript.src = 'https://hm.baidu.com/hm.js?f85eaac20b336682b488801911c259b6';
+            document.head.appendChild(hmScript);
 
-        // Umami Analytics
-        var umamiScript = document.createElement('script');
-        umamiScript.defer = true;
-        umamiScript.src = 'https://cloud.umami.is/script.js';
-        umamiScript.dataset.websiteId = '12611587-3ce8-4304-a20c-c64c2c99a239';
-        document.head.appendChild(umamiScript);
+            // Umami Analytics
+            var umamiScript = document.createElement('script');
+            umamiScript.defer = true;
+            umamiScript.src = 'https://cloud.umami.is/script.js';
+            umamiScript.dataset.websiteId = '12611587-3ce8-4304-a20c-c64c2c99a239';
+            document.head.appendChild(umamiScript);
 
-        // Google AdSense - load last since it's least critical for UX
-        setTimeout(function() {
-            var adsenseScript = document.createElement('script');
-            adsenseScript.async = true;
-            adsenseScript.crossOrigin = 'anonymous';
-            adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8212494466876521';
-            document.head.appendChild(adsenseScript);
-        }, 1000);
-    }
+            // Google AdSense - load last since it's least critical for UX
+            // setTimeout(function() {
+            //     var adsenseScript = document.createElement('script');
+            //     adsenseScript.async = true;
+            //     adsenseScript.crossOrigin = 'anonymous';
+            //     adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8212494466876521';
+            //     document.head.appendChild(adsenseScript);
+            // }, 1000);
+        }
 
-    // Load after window load event
-    if (document.readyState === 'complete') {
-        setTimeout(loadThirdPartyScripts, 100);
-    } else {
-        window.addEventListener('load', function() {
+        // Load after window load event
+        if (document.readyState === 'complete') {
             setTimeout(loadThirdPartyScripts, 100);
-        });
-    }
+        } else {
+            window.addEventListener('load', function () {
+                setTimeout(loadThirdPartyScripts, 100);
+            });
+        }
 
-    // Fallback: Load after 4 seconds regardless
-    setTimeout(loadThirdPartyScripts, 4000);
-})();
+        // Fallback: Load after 4 seconds regardless
+        setTimeout(loadThirdPartyScripts, 4000);
+    })();
 </script>
 
 {% include ga4-enhanced-tracking.html %}
-  

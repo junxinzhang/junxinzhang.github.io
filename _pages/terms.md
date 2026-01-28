@@ -45,4 +45,4 @@ Please read our [Privacy Policy]({{ site.baseurl }}/privacy-policy.html).
 
 ## 9. Governing Law
 
-Any claim related to {{ site.name }}'s Website shall be governed by the laws of without regards to its conflict of law provisions.
+Any claim related to {{ site.name }}'s Website shall be governed by the laws of China without regards to its conflict of law provisions.
