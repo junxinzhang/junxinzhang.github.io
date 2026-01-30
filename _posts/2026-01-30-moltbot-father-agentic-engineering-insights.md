@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Moltbot之父的AI Agent实战手册：同时跑10个Agent，他是怎么做到的？"
+title: "OpenClaw之父的AI Agent实战手册：同时跑10个Agent，他是怎么做到的？"
 author: Jason Zhang
 categories: [AI]
 image: assets/images/screenshot-20260130-moltbot-agentic-engineering-cover.webp
-tags: [AI Agent, Moltbot, Agentic Engineering, Claude Code, Codex, Peter Steinberger, 深度分析, 微信公众号]
+tags: [AI Agent, OpenClaw, Moltbot, Agentic Engineering, Claude Code, Codex, Peter Steinberger, 深度分析, 微信公众号]
 slug: moltbot-father-agentic-engineering-insights
-description: "Moltbot创始人Peter Steinberger 114分钟深度访谈精华：验证闭环是核心秘密、如何与Agent对话而非指挥、Claude Code vs Codex的真实对比、为什么好的Prompt是协作出来的"
+description: "OpenClaw创始人Peter Steinberger 114分钟深度访谈精华：验证闭环是核心秘密、如何与Agent对话而非指挥、Claude Code vs Codex的真实对比、为什么好的Prompt是协作出来的"
 ---
 
 **前两天我写了[《Clawdbot刷屏AI圈，我为什么劝你别急着用》]({{ site.baseurl }}/clawdbot-why-you-should-wait)，讲的是风险。**
@@ -35,11 +35,13 @@ description: "Moltbot创始人Peter Steinberger 114分钟深度访谈精华：�
 
 ---
 
-1月29日晚，知名技术播客《The Pragmatic Engineer》跟Moltbot（原Clawdbot）创始人Peter Steinberger进行了[114分钟的深度对谈](https://www.youtube.com/watch?v=8lF7HmQ_RgY)。
+1月29日晚，知名技术播客《The Pragmatic Engineer》跟[OpenClaw](https://github.com/openclaw/openclaw)创始人Peter Steinberger进行了[114分钟的深度对谈](https://www.youtube.com/watch?v=8lF7HmQ_RgY)。
 
-Peter不是普通开发者。他创办的PSPDFKit是iOS开发圈的知名PDF框架，2021年获得约€1亿战略投资。13年创业，3年"燃尽"，去年5月开始做Clawdbot，一开始担心大厂会很快做出来，结果大厂迟迟没动作，最后自己忍不住下场了。
+> **📌 项目名称演变：** 这个项目经历了快速改名——2025年末首发时叫 **Clawdbot**，2026年1月27日因Anthropic商标请求改名为 **Moltbot**（"Clawd"与"Claude"过于相似），1月30日又更名为 **OpenClaw**，强调其开源社区属性。目前[官方仓库](https://github.com/openclaw/openclaw)已超过 **10.8万 Stars**。
 
-**播客前半段是Clawdbot诞生的故事。后半段才是重点——Peter毫无保留地分享了他使用AI Agent的实战经验。**
+Peter不是普通开发者。他创办的PSPDFKit是iOS开发圈的知名PDF框架，2021年获得约€1亿战略投资。13年创业，3年"燃尽"，去年5月开始做这个项目，一开始担心大厂会很快做出来，结果大厂迟迟没动作，最后自己忍不住下场了。
+
+**播客前半段是项目诞生的故事。后半段才是重点——Peter毫无保留地分享了他使用AI Agent的实战经验。**
 
 我从这114分钟里提炼出了**5个可以直接应用的核心洞察**。
 
