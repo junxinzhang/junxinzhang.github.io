@@ -5,6 +5,9 @@ author: Jason Zhang
 categories: [DevOps]
 image: assets/images/screenshot-20240126-devops-thoughtful.webp
 tags: [DevOps, Strategic Thinking, Jenkins, AWS CodeDeploy, Project Management]
+ads: false
+noindex: true
+sitemap: false
 ---
 
 在今天这个快速发展的IT行业中，对DevOps工具如Jenkins和AWS CodeDeploy的策略性思考和应用成为了项目成功的关键。在过去的一周里，我深入实践这些工具，不仅是为了技术实施，更重要的是为了洞察其背后的策略意义。以下是我在这一过程中的一些深度思考。

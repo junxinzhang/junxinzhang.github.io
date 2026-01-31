@@ -5,6 +5,9 @@ author: Jason Zhang
 categories: [Business]
 image: assets/images/screenshot-20240109-kondratiev.jpg
 tags: [featured, Economics, Business Cycle, Kondratiev Wave]
+ads: false
+noindex: true
+sitemap: false
 ---
 
 在经济学领域，理解和利用经济周期的规律对于制定有效的商业策略至关重要。康波周期，又称为康德拉季耶夫波，是描述了经济长期波动的理论，它通过划分经济活动的四个不同阶段——上升期、繁荣期、滞涨期和衰退期——提供了一个框架来理解和预测经济趋势。

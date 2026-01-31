@@ -29,10 +29,23 @@
     <!-- Enhanced Social Media Meta Tags -->
     {% include social-meta.html %}
 
+    {% assign content_text = content | strip_html | strip_newlines %}
+    {% assign content_chars = content_text | replace: ' ', '' | size %}
+    {% assign auto_noindex = false %}
+    {% if page.layout == "post" and content_chars < 800 %}
+    {% assign auto_noindex = true %}
+    {% endif %}
+
     <!-- Additional meta tags for enhanced SEO & GEO -->
+    {% if page.noindex == true or auto_noindex %}
+    <meta name="robots" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="bingbot" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    {% else %}
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    {% endif %}
 
     <!-- GEO: AI Search Engine Optimization -->
     <meta name="ai-content-declaration"
@@ -814,9 +827,16 @@
 
     <!-- jQuery removed - using vanilla JS for better performance -->
 
-    {% unless page.ads == false %}
+    {% assign ads_allowed = true %}
+    {% if page.ads == false %}
+    {% assign ads_allowed = false %}
+    {% endif %}
+    {% if page.layout == "post" and content_chars < 1200 %}
+    {% assign ads_allowed = false %}
+    {% endif %}
+    {% if ads_allowed %}
     {% include tracking-header.html %}
-    {% endunless %}
+    {% endif %}
 
 
 </head>

@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="供应商PRD环境访问控制方案 - 加强生产环境安全性与稳定性">
+    <meta name="robots" content="noindex">
     <title>供应商PRD环境访问控制方案</title>
     <!-- 引入字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <!-- 引入图标 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Mermaid JS -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js"></script>
     <style>
         :root {
-            --primary-color: #1a73e8; /* 蓝色 */
-            --primary-dark: #0d47a1; /* 深蓝 */
-            --secondary-color: #4285f4; /* 浅蓝 */
-            --accent-color: #f4b400; /* 黄色 */
-            --success-color: #0f9d58; /* 绿色 */
-            --warning-color: #f4511e; /* 橙色 */
-            --danger-color: #db4437; /* 红色 */
-            --light-color: #f8f9fa; /* 浅灰 */
-            --dark-color: #202124; /* 深灰 */
-            --text-primary: #202124; /* 主要文本 */
-            --text-secondary: #5f6368; /* 次要文本 */
+            --primary-color: #1a73e8;
+            /* 蓝色 */
+            --primary-dark: #0d47a1;
+            /* 深蓝 */
+            --secondary-color: #4285f4;
+            /* 浅蓝 */
+            --accent-color: #f4b400;
+            /* 黄色 */
+            --success-color: #0f9d58;
+            /* 绿色 */
+            --warning-color: #f4511e;
+            /* 橙色 */
+            --danger-color: #db4437;
+            /* 红色 */
+            --light-color: #f8f9fa;
+            /* 浅灰 */
+            --dark-color: #202124;
+            /* 深灰 */
+            --text-primary: #202124;
+            /* 主要文本 */
+            --text-secondary: #5f6368;
+            /* 次要文本 */
             --border-radius: 8px;
             --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Noto Sans SC', sans-serif;
             line-height: 1.7;
@@ -46,11 +60,11 @@
             margin: 0 auto;
             padding: 0;
         }
-        
+
         .container {
             padding: 0 24px;
         }
-        
+
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: white;
@@ -61,7 +75,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         header::before {
             content: "";
             position: absolute;
@@ -72,7 +86,7 @@
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><path fill="rgba(255,255,255,0.05)" d="M30,10L80,90M40,10L90,90M50,10L100,90M60,10L110,90M70,10L120,90M80,10L130,90M90,10L140,90M0,10L50,90M10,10L60,90M20,10L70,90"/></svg>');
             opacity: 0.3;
         }
-        
+
         h1 {
             margin: 0;
             font-size: 2.5rem;
@@ -80,24 +94,24 @@
             letter-spacing: -0.5px;
             position: relative;
         }
-        
+
         .header-subtitle {
             font-size: 1.1rem;
             opacity: 0.9;
             margin-top: 1rem;
             font-weight: 300;
         }
-        
+
         .last-updated {
             margin-top: 1.5rem;
             font-size: 0.9rem;
             opacity: 0.8;
         }
-        
+
         section {
             margin-bottom: 3rem;
         }
-        
+
         h2 {
             color: var(--primary-color);
             font-size: 1.8rem;
@@ -107,20 +121,20 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         h3 {
             color: var(--dark-color);
             font-size: 1.4rem;
             margin: 1.5rem 0 1rem;
             font-weight: 500;
         }
-        
+
         h4 {
             font-size: 1.1rem;
             margin: 1rem 0 0.5rem;
             color: var(--text-primary);
         }
-        
+
         .card {
             background: white;
             border-radius: var(--border-radius);
@@ -128,46 +142,47 @@
             margin-bottom: 1.5rem;
             box-shadow: var(--box-shadow);
             transition: var(--transition);
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
-        
+
         .card:hover {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transform: translateY(-2px);
         }
-        
+
         .card.highlight {
             border-left: 4px solid var(--primary-color);
         }
-        
+
         .card.warning {
             border-left: 4px solid var(--warning-color);
         }
-        
+
         .card.success {
             border-left: 4px solid var(--success-color);
         }
-        
+
         .card.danger {
             border-left: 4px solid var(--danger-color);
         }
-        
-        ul, ol {
+
+        ul,
+        ol {
             padding-left: 1.5rem;
             margin: 1rem 0;
         }
-        
+
         li {
             margin-bottom: 0.5rem;
         }
-        
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin: 1.5rem 0;
         }
-        
+
         .badge {
             display: inline-flex;
             align-items: center;
@@ -179,36 +194,36 @@
             margin-bottom: 0.5rem;
             gap: 0.3rem;
         }
-        
+
         .badge i {
             font-size: 0.9rem;
         }
-        
+
         .badge.primary {
             background-color: rgba(26, 115, 232, 0.1);
             color: var(--primary-color);
         }
-        
+
         .badge.secondary {
             background-color: rgba(66, 133, 244, 0.1);
             color: var(--secondary-color);
         }
-        
+
         .badge.accent {
             background-color: rgba(244, 180, 0, 0.1);
             color: var(--accent-color);
         }
-        
+
         .badge.success {
             background-color: rgba(15, 157, 88, 0.1);
             color: var(--success-color);
         }
-        
+
         .badge.warning {
             background-color: rgba(244, 81, 30, 0.1);
             color: var(--warning-color);
         }
-        
+
         .flowchart-container {
             margin: 2rem 0;
             background: white;
@@ -216,7 +231,7 @@
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
         }
-        
+
         .flowchart-title {
             color: var(--primary-color);
             margin-bottom: 1.5rem;
@@ -224,7 +239,7 @@
             font-size: 1.2rem;
             font-weight: 500;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -232,26 +247,27 @@
             border-radius: var(--border-radius);
             overflow: hidden;
         }
-        
+
         thead {
             background-color: rgba(26, 115, 232, 0.05);
         }
-        
-        th, td {
+
+        th,
+        td {
             padding: 0.75rem 1rem;
             text-align: left;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
-        
+
         th {
             font-weight: 500;
             color: var(--primary-color);
         }
-        
+
         tr:last-child td {
             border-bottom: none;
         }
-        
+
         footer {
             text-align: center;
             margin-top: 4rem;
@@ -261,25 +277,25 @@
             background-color: var(--light-color);
             border-top: 1px solid rgba(0, 0, 0, 0.05);
         }
-        
+
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             margin: 1rem 0;
         }
-        
+
         .footer-links a {
             color: var(--primary-color);
             text-decoration: none;
             transition: var(--transition);
         }
-        
+
         .footer-links a:hover {
             color: var(--primary-dark);
             text-decoration: underline;
         }
-        
+
         /* 折叠面板 */
         .collapsible {
             background-color: rgba(26, 115, 232, 0.05);
@@ -299,22 +315,23 @@
             transition: var(--transition);
             margin-bottom: 0.5rem;
         }
-        
-        .collapsible:hover, .collapsible.active {
+
+        .collapsible:hover,
+        .collapsible.active {
             background-color: rgba(26, 115, 232, 0.1);
         }
-        
+
         .collapsible:after {
             content: '\002B';
             font-weight: bold;
             float: right;
             margin-left: 5px;
         }
-        
+
         .collapsible.active:after {
             content: "\2212";
         }
-        
+
         .collapsible-content {
             max-height: 0;
             overflow: hidden;
@@ -323,14 +340,14 @@
             border-radius: 0 0 var(--border-radius) var(--border-radius);
             margin-bottom: 1rem;
         }
-        
+
         .collapsible-inner {
             padding: 1rem;
             border: 1px solid rgba(0, 0, 0, 0.05);
             border-top: none;
             border-radius: 0 0 var(--border-radius) var(--border-radius);
         }
-        
+
         /* 标签页 */
         .tabs {
             display: flex;
@@ -339,7 +356,7 @@
             border-radius: var(--border-radius);
             overflow: hidden;
         }
-        
+
         .tab-label {
             padding: 1rem 1.5rem;
             cursor: pointer;
@@ -350,12 +367,12 @@
             text-align: center;
             flex-grow: 1;
         }
-        
+
         .tab-label:hover {
             background-color: rgba(26, 115, 232, 0.1);
             color: var(--primary-color);
         }
-        
+
         .tab-content {
             display: none;
             padding: 1.5rem;
@@ -364,27 +381,27 @@
             order: 1;
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
-        
+
         .tab-input {
             display: none;
         }
-        
-        .tab-input:checked + .tab-label {
+
+        .tab-input:checked+.tab-label {
             background-color: var(--primary-color);
             color: white;
         }
-        
-        .tab-input:checked + .tab-label + .tab-content {
+
+        .tab-input:checked+.tab-label+.tab-content {
             display: block;
         }
-        
+
         /* 进度条 */
         .timeline {
             position: relative;
             max-width: 1200px;
             margin: 2rem auto;
         }
-        
+
         .timeline::after {
             content: '';
             position: absolute;
@@ -395,14 +412,14 @@
             left: 50%;
             margin-left: -2px;
         }
-        
+
         .timeline-item {
             padding: 10px 40px;
             position: relative;
             width: 50%;
             box-sizing: border-box;
         }
-        
+
         .timeline-item::after {
             content: '';
             position: absolute;
@@ -414,23 +431,23 @@
             top: 15px;
             z-index: 1;
         }
-        
+
         .timeline-left {
             left: 0;
         }
-        
+
         .timeline-right {
             left: 50%;
         }
-        
+
         .timeline-left::after {
             right: -10px;
         }
-        
+
         .timeline-right::after {
             left: -10px;
         }
-        
+
         .timeline-content {
             padding: 1rem;
             background-color: white;
@@ -438,85 +455,107 @@
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
         }
-        
+
         .timeline-date {
             font-weight: 500;
             color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
-        
+
         /* 响应式设计 */
         @media (max-width: 992px) {
             .timeline::after {
                 left: 31px;
             }
-            
+
             .timeline-item {
                 width: 100%;
                 padding-left: 70px;
                 padding-right: 25px;
             }
-            
-            .timeline-left::after, .timeline-right::after {
+
+            .timeline-left::after,
+            .timeline-right::after {
                 left: 21px;
             }
-            
+
             .timeline-right {
                 left: 0;
             }
         }
-        
+
         @media (max-width: 768px) {
             body {
                 padding: 0;
             }
-            
+
             header {
                 padding: 2rem 1rem;
             }
-            
+
             h1 {
                 font-size: 2rem;
             }
-            
+
             h2 {
                 font-size: 1.5rem;
             }
-            
+
             h3 {
                 font-size: 1.2rem;
             }
-            
+
             .grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .tabs {
                 flex-direction: column;
             }
-            
+
             .tab-label {
                 width: 100%;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             }
         }
-        
+
         /* 动画效果 */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         section {
             animation: fadeIn 0.5s ease-out forwards;
         }
-        
-        section:nth-child(2) { animation-delay: 0.1s; }
-        section:nth-child(3) { animation-delay: 0.2s; }
-        section:nth-child(4) { animation-delay: 0.3s; }
-        section:nth-child(5) { animation-delay: 0.4s; }
-        section:nth-child(6) { animation-delay: 0.5s; }
-        
+
+        section:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        section:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        section:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        section:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        section:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
         /* 打印样式 */
         @media print {
             body {
@@ -524,50 +563,51 @@
                 color: black;
                 font-size: 12pt;
             }
-            
+
             header {
                 background: none;
                 color: black;
                 padding: 1rem;
                 box-shadow: none;
             }
-            
+
             .card {
                 box-shadow: none;
                 border: 1px solid #ddd;
                 break-inside: avoid;
             }
-            
+
             .badge {
                 border: 1px solid #ddd;
                 color: black !important;
                 background: none !important;
             }
-            
+
             footer {
                 background: none;
                 border-top: 1px solid #ddd;
             }
-            
+
             .collapsible-content {
                 max-height: none !important;
             }
-            
+
             .tab-content {
                 display: block !important;
             }
-            
+
             a {
                 color: black;
                 text-decoration: none;
             }
-            
+
             .no-print {
                 display: none;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -576,13 +616,13 @@
             <p class="last-updated"><i class="bi bi-clock"></i> 最后更新: 2025年4月23日</p>
         </div>
     </header>
-    
+
     <div class="container">
         <section id="overview">
             <h2><i class="bi bi-info-circle"></i> 方案概述</h2>
             <div class="card highlight">
                 <p>本方案旨在加强对供应商在PRD环境的访问控制，确保生产环境的稳定性和安全性。通过实施严格的权限管控和临时授权机制，平衡安全需求与运维灵活性，同时确保所有代码部署通过标准化流程执行。</p>
-                
+
                 <div class="tabs">
                     <input type="radio" name="tabs" id="tab1" class="tab-input" checked>
                     <label for="tab1" class="tab-label">核心目标</label>
@@ -594,7 +634,7 @@
                             <li>保持系统稳定性，减少人为操作错误</li>
                         </ul>
                     </div>
-                    
+
                     <input type="radio" name="tabs" id="tab2" class="tab-input">
                     <label for="tab2" class="tab-label">预期收益</label>
                     <div class="tab-content">
@@ -605,7 +645,7 @@
                             <li>建立更规范的开发与运维流程</li>
                         </ul>
                     </div>
-                    
+
                     <input type="radio" name="tabs" id="tab3" class="tab-input">
                     <label for="tab3" class="tab-label">实施范围</label>
                     <div class="tab-content">
@@ -619,7 +659,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="architecture">
             <h2><i class="bi bi-diagram-3"></i> 当前架构</h2>
             <div class="card">
@@ -627,7 +667,7 @@
                 <div class="badge primary"><i class="bi bi-cloud"></i> AWS</div>
                 <div class="badge secondary"><i class="bi bi-check2-circle"></i> UAT</div>
                 <div class="badge accent"><i class="bi bi-shield-check"></i> PRD</div>
-                
+
                 <h3>部署模式</h3>
                 <div class="grid">
                     <div class="card">
@@ -646,7 +686,7 @@
                         <p class="badge success">微服务架构</p>
                     </div>
                 </div>
-                
+
                 <button class="collapsible">查看当前访问控制架构</button>
                 <div class="collapsible-content">
                     <div class="collapsible-inner">
@@ -668,10 +708,10 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="access-control">
             <h2><i class="bi bi-shield-lock"></i> 权限管控方案</h2>
-            
+
             <div class="card warning">
                 <h3><i class="bi bi-exclamation-triangle"></i> PRD环境权限调整</h3>
                 <ul>
@@ -681,7 +721,7 @@
                     <li><strong>AWS权限：</strong>供应商不直接拥有AWS控制台权限</li>
                 </ul>
             </div>
-            
+
             <div class="card">
                 <h3><i class="bi bi-clock-history"></i> 临时授权流程</h3>
                 <ol>
@@ -708,7 +748,7 @@
                         G -->|否| I[申请延长]
                         I --> B
                         H --> J[记录审计日志]
-                        
+
                         style A fill:#d0e8ff,stroke:#1a73e8,stroke-width:2px
                         style B fill:#fff8e1,stroke:#f4b400,stroke-width:2px
                         style C fill:#fff8e1,stroke:#f4b400,stroke-width:2px
@@ -727,14 +767,14 @@
                         A[供应商] --> B[JumpServer]
                         B --> C[PRD环境]
                         C --> D[EC2/ECS/EKS]
-                        
+
                         style A fill:#d0e8ff,stroke:#1a73e8,stroke-width:2px
                         style B fill:#fff8e1,stroke:#f4b400,stroke-width:2px
                         style C fill:#ffebee,stroke:#db4437,stroke-width:2px
                         style D fill:#e8f5e9,stroke:#0f9d58,stroke-width:2px
                     </div>
                 </div>
-                
+
                 <button class="collapsible">查看详细权限矩阵</button>
                 <div class="collapsible-content">
                     <div class="collapsible-inner">
@@ -784,7 +824,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="scenarios">
             <h2><i class="bi bi-list-check"></i> 适用场景</h2>
             <div class="grid">
@@ -816,11 +856,11 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="card">
                 <h3><i class="bi bi-kanban"></i> DevOps流程</h3>
                 <p>所有代码部署将通过DevOps平台进行，确保每次部署都经过审批和审核：</p>
-                
+
                 <div class="flowchart-container">
                     <h4 class="flowchart-title">代码部署流程</h4>
                     <div class="mermaid">
@@ -832,7 +872,7 @@
                         D -->|拒绝| F[返回修改]
                         E --> G[部署完成]
                         F --> A
-                        
+
                         style A fill:#d0e8ff,stroke:#1a73e8,stroke-width:2px
                         style B fill:#fff8e1,stroke:#f4b400,stroke-width:2px
                         style C fill:#fff8e1,stroke:#f4b400,stroke-width:2px
@@ -843,7 +883,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="communication">
             <h2><i class="bi bi-chat-dots"></i> 沟通计划</h2>
             <div class="card">
@@ -858,7 +898,7 @@
                             <li><strong>文档更新：</strong>更新内部文档和操作手册</li>
                             <li><strong>反馈渠道：</strong>建立内部反馈渠道，收集优化建议</li>
                         </ul>
-                        
+
                         <h4>邮件模板：内部团队通知</h4>
                         <div class="card">
                             <p><strong>主题：</strong>【重要】供应商PRD环境访问控制方案实施通知</p>
@@ -875,7 +915,7 @@
                             <p>如有任何疑问，请联系安全团队或运维团队。</p>
                         </div>
                     </div>
-                    
+
                     <input type="radio" name="comm-tabs" id="comm-tab2" class="tab-input">
                     <label for="comm-tab2" class="tab-label">供应商沟通</label>
                     <div class="tab-content">
@@ -886,7 +926,7 @@
                             <li><strong>紧急渠道：</strong>设立专用沟通渠道处理紧急请求</li>
                             <li><strong>定期反馈：</strong>定期收集供应商反馈优化流程</li>
                         </ul>
-                        
+
                         <h4>邮件模板：供应商通知</h4>
                         <div class="card">
                             <p><strong>主题：</strong>【重要】关于PRD环境访问权限变更的通知</p>
@@ -903,7 +943,7 @@
                             <p>如有任何疑问，请随时联系您的项目经理或发送邮件至support@example.com。</p>
                         </div>
                     </div>
-                    
+
                     <input type="radio" name="comm-tabs" id="comm-tab3" class="tab-input">
                     <label for="comm-tab3" class="tab-label">反馈机制</label>
                     <div class="tab-content">
@@ -914,7 +954,7 @@
                             <li><strong>流程优化：</strong>根据反馈定期优化授权流程</li>
                             <li><strong>满意度调查：</strong>每季度进行一次满意度调查</li>
                         </ul>
-                        
+
                         <div class="card">
                             <h4>反馈表单示例</h4>
                             <table>
@@ -948,7 +988,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="timeline">
             <h2><i class="bi bi-calendar-check"></i> 实施时间表</h2>
             <div class="card">
@@ -986,7 +1026,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <button class="collapsible">查看详细实施计划</button>
                 <div class="collapsible-content">
                     <div class="collapsible-inner">
@@ -1070,7 +1110,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="risk-management">
             <h2><i class="bi bi-exclamation-diamond"></i> 风险管理</h2>
             <div class="card danger">
@@ -1095,7 +1135,7 @@
             </div>
         </section>
     </div>
-    
+
     <footer>
         <div class="container">
             <p>© 2025 Just Jason. 保留所有权利.</p>
@@ -1111,7 +1151,7 @@
 
     <script>
         // 初始化Mermaid
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // 确保mermaid已定义
             if (typeof mermaid !== 'undefined') {
                 mermaid.initialize({
@@ -1128,25 +1168,25 @@
                 // 尝试重新加载mermaid
                 var script = document.createElement('script');
                 script.src = 'https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js';
-                script.onload = function() {
+                script.onload = function () {
                     mermaid.initialize({
                         startOnLoad: true,
                         theme: 'default'
                     });
                     // 手动渲染所有图表
-                    document.querySelectorAll('.mermaid').forEach(function(el) {
+                    document.querySelectorAll('.mermaid').forEach(function (el) {
                         mermaid.init(undefined, el);
                     });
                 };
                 document.head.appendChild(script);
             }
         });
-        
+
         // 折叠面板功能
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var coll = document.getElementsByClassName("collapsible");
             for (var i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
+                coll[i].addEventListener("click", function () {
                     this.classList.toggle("active");
                     var content = this.nextElementSibling;
                     if (content.style.maxHeight) {
@@ -1156,7 +1196,7 @@
                     }
                 });
             }
-            
+
             // 平滑滚动
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -1166,7 +1206,7 @@
                     });
                 });
             });
-            
+
             // 添加打印按钮
             var printBtn = document.createElement('button');
             printBtn.innerHTML = '<i class="bi bi-printer"></i> 打印文档';
@@ -1182,13 +1222,14 @@
             printBtn.style.boxShadow = 'var(--box-shadow)';
             printBtn.style.zIndex = '1000';
             printBtn.className = 'no-print';
-            
-            printBtn.addEventListener('click', function() {
+
+            printBtn.addEventListener('click', function () {
                 window.print();
             });
-            
+
             document.body.appendChild(printBtn);
         });
     </script>
 </body>
+
 </html>

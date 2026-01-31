@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>网络健康情况汇报 | 高管版</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #0a2d4d; /* 更深邃的蓝色，彰显专业感 */
-            --secondary-color: #2980b9; /* 沉稳的蓝色 */
-            --accent-color: #16a085; /* 高端的绿色 */
+            --primary-color: #0a2d4d;
+            /* 更深邃的蓝色，彰显专业感 */
+            --secondary-color: #2980b9;
+            /* 沉稳的蓝色 */
+            --accent-color: #16a085;
+            /* 高端的绿色 */
             --light-bg: #f8f9fa;
             --dark-text: #1a202c;
             --light-text: #ffffff;
@@ -27,25 +33,55 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         @keyframes slideIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(49, 130, 206, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(49, 130, 206, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(49, 130, 206, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(49, 130, 206, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(49, 130, 206, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(49, 130, 206, 0);
+            }
         }
-        
+
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         * {
@@ -72,7 +108,8 @@
 
         .section-wrapper {
             margin-bottom: 70px;
-            perspective: 1000px; /* 3D效果的视角 */
+            perspective: 1000px;
+            /* 3D效果的视角 */
         }
 
         header {
@@ -89,7 +126,7 @@
             transform-style: preserve-3d;
             backface-visibility: hidden;
         }
-        
+
         header::before {
             content: '';
             position: absolute;
@@ -101,8 +138,8 @@
             opacity: 0.15;
             z-index: 0;
         }
-        
-        header > * {
+
+        header>* {
             position: relative;
             z-index: 1;
         }
@@ -113,7 +150,7 @@
             justify-content: center;
             margin-bottom: 25px;
         }
-        
+
         .company-logo {
             width: 80px;
             height: 80px;
@@ -167,7 +204,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease, background 0.3s ease;
         }
-        
+
         .meta-item:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateY(-3px);
@@ -208,7 +245,8 @@
             gap: 8px;
         }
 
-        .nav-item:hover, .nav-item.active {
+        .nav-item:hover,
+        .nav-item.active {
             background: var(--primary-color);
             color: var(--light-text);
         }
@@ -264,13 +302,27 @@
             transform-style: preserve-3d;
             backface-visibility: hidden;
         }
-        
-        .slide:nth-child(1) { animation-delay: 0.1s; }
-        .slide:nth-child(2) { animation-delay: 0.2s; }
-        .slide:nth-child(3) { animation-delay: 0.3s; }
-        .slide:nth-child(4) { animation-delay: 0.4s; }
-        .slide:nth-child(5) { animation-delay: 0.5s; }
-        
+
+        .slide:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .slide:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .slide:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .slide:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .slide:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
         .slide::before {
             content: '';
             position: absolute;
@@ -308,16 +360,27 @@
             overflow: hidden;
         }
 
-        .metric-card:nth-child(1) { border-color: var(--info-color); }
-        .metric-card:nth-child(2) { border-color: var(--success-color); }
-        .metric-card:nth-child(3) { border-color: var(--warning-color); }
-        .metric-card:nth-child(4) { border-color: var(--danger-color); }
+        .metric-card:nth-child(1) {
+            border-color: var(--info-color);
+        }
+
+        .metric-card:nth-child(2) {
+            border-color: var(--success-color);
+        }
+
+        .metric-card:nth-child(3) {
+            border-color: var(--warning-color);
+        }
+
+        .metric-card:nth-child(4) {
+            border-color: var(--danger-color);
+        }
 
         .metric-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
-        
+
         .metric-card::after {
             content: '';
             position: absolute;
@@ -325,16 +388,14 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(
-                to bottom right,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0.1) 50%,
-                rgba(255, 255, 255, 0) 100%
-            );
+            background: linear-gradient(to bottom right,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.1) 50%,
+                    rgba(255, 255, 255, 0) 100%);
             transform: rotate(45deg);
             transition: all 0.8s;
         }
-        
+
         .metric-card:hover::after {
             transform: rotate(45deg) translate(100%, 100%);
         }
@@ -352,11 +413,22 @@
             background: var(--primary-color);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
-        
-        .metric-card:nth-child(1) .metric-icon { background: var(--info-color); }
-        .metric-card:nth-child(2) .metric-icon { background: var(--success-color); }
-        .metric-card:nth-child(3) .metric-icon { background: var(--warning-color); }
-        .metric-card:nth-child(4) .metric-icon { background: var(--danger-color); }
+
+        .metric-card:nth-child(1) .metric-icon {
+            background: var(--info-color);
+        }
+
+        .metric-card:nth-child(2) .metric-icon {
+            background: var(--success-color);
+        }
+
+        .metric-card:nth-child(3) .metric-icon {
+            background: var(--warning-color);
+        }
+
+        .metric-card:nth-child(4) .metric-icon {
+            background: var(--danger-color);
+        }
 
         .metric-value {
             font-size: 3em;
@@ -367,10 +439,21 @@
             display: inline-block;
         }
 
-        .metric-card:nth-child(1) .metric-value { color: var(--info-color); }
-        .metric-card:nth-child(2) .metric-value { color: var(--success-color); }
-        .metric-card:nth-child(3) .metric-value { color: var(--warning-color); }
-        .metric-card:nth-child(4) .metric-value { color: var(--danger-color); }
+        .metric-card:nth-child(1) .metric-value {
+            color: var(--info-color);
+        }
+
+        .metric-card:nth-child(2) .metric-value {
+            color: var(--success-color);
+        }
+
+        .metric-card:nth-child(3) .metric-value {
+            color: var(--warning-color);
+        }
+
+        .metric-card:nth-child(4) .metric-value {
+            color: var(--danger-color);
+        }
 
         .metric-label {
             font-size: 1.15em;
@@ -393,9 +476,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
         }
 
-        .trend-up { color: var(--success-color); }
-        .trend-down-good { color: var(--success-color); }
-        .trend-down-bad { color: var(--danger-color); }
+        .trend-up {
+            color: var(--success-color);
+        }
+
+        .trend-down-good {
+            color: var(--success-color);
+        }
+
+        .trend-down-bad {
+            color: var(--danger-color);
+        }
 
         /* 图表容器增强 */
         .chart-container {
@@ -409,12 +500,12 @@
             border: 1px solid rgba(226, 232, 240, 0.8);
             transition: all 0.4s ease;
         }
-        
+
         .chart-container:hover {
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
             transform: translateY(-5px);
         }
-        
+
         .chart-header {
             display: flex;
             justify-content: space-between;
@@ -423,7 +514,7 @@
             padding-bottom: 15px;
             border-bottom: 1px solid rgba(226, 232, 240, 0.8);
         }
-        
+
         .chart-title {
             font-size: 1.3em;
             font-weight: 600;
@@ -432,12 +523,12 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .chart-controls {
             display: flex;
             gap: 10px;
         }
-        
+
         .chart-control-btn {
             background: #f1f5f9;
             border: none;
@@ -448,12 +539,12 @@
             font-size: 0.9em;
             transition: all 0.3s ease;
         }
-        
+
         .chart-control-btn:hover {
             background: #e2e8f0;
             color: var(--primary-color);
         }
-        
+
         .chart-control-btn.active {
             background: var(--primary-color);
             color: white;
@@ -488,7 +579,7 @@
             transform: translateY(-8px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
         }
-        
+
         .insight-card::before {
             content: '';
             position: absolute;
@@ -496,9 +587,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, 
-                rgba(255, 255, 255, 0.2) 0%, 
-                rgba(255, 255, 255, 0) 80%);
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.2) 0%,
+                    rgba(255, 255, 255, 0) 80%);
         }
 
         .insight-title {
@@ -533,7 +624,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .polished::before {
             content: '\f0eb';
             font-family: 'Font Awesome 5 Free';
@@ -545,7 +636,7 @@
             color: rgba(0, 0, 0, 0.03);
             z-index: 0;
         }
-        
+
         .polished p {
             margin: 0;
             position: relative;
@@ -577,7 +668,7 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
             border-color: var(--accent-color);
         }
-        
+
         .action-item::after {
             content: '';
             position: absolute;
@@ -614,7 +705,7 @@
             color: #4a5568;
             line-height: 1.6;
         }
-        
+
         .action-bar {
             height: 5px;
             background: #e2e8f0;
@@ -622,7 +713,7 @@
             margin-top: 15px;
             overflow: hidden;
         }
-        
+
         .action-progress {
             height: 100%;
             background: var(--accent-color);
@@ -642,7 +733,7 @@
             overflow: hidden;
             box-shadow: 0 -15px 35px rgba(0, 0, 0, 0.1);
         }
-        
+
         footer::before {
             content: '';
             position: absolute;
@@ -652,7 +743,7 @@
             height: 5px;
             background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
         }
-        
+
         .footer-content {
             display: flex;
             justify-content: space-between;
@@ -662,7 +753,7 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-        
+
         .footer-logo {
             font-weight: 700;
             font-size: 1.4em;
@@ -671,16 +762,16 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .footer-logo i {
             font-size: 1.2em;
         }
-        
+
         .footer-links {
             display: flex;
             gap: 25px;
         }
-        
+
         .footer-links a {
             color: var(--light-text);
             opacity: 0.8;
@@ -690,12 +781,12 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .footer-links a:hover {
             opacity: 1;
             transform: translateY(-3px);
         }
-        
+
         .footer-bottom {
             margin-top: 30px;
             padding-top: 20px;
@@ -755,22 +846,28 @@
                 background: white;
                 color: black;
             }
-            
+
             .container {
                 max-width: 100%;
                 padding: 0;
             }
-            
-            header, .slide, .chart-container, .insight-card, .metric-card, .action-item {
+
+            header,
+            .slide,
+            .chart-container,
+            .insight-card,
+            .metric-card,
+            .action-item {
                 box-shadow: none !important;
                 border: 1px solid #ddd;
                 break-inside: avoid;
             }
-            
-            footer, .nav-container {
+
+            footer,
+            .nav-container {
                 display: none;
             }
-            
+
             .chart-container canvas {
                 height: 250px !important;
             }
@@ -781,13 +878,39 @@
             .container {
                 padding: 25px;
             }
-            h1 { font-size: 3em; }
-            h2 { font-size: 1.9em; }
-            .slide { padding: 35px; }
-            .report-meta { gap: 20px; flex-wrap: wrap; justify-content: center; }
-            .metric-row { gap: 20px; }
-            .nav-bar { overflow-x: auto; justify-content: flex-start; padding: 8px; }
-            .nav-item { padding: 8px 15px; font-size: 0.85rem; }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            h2 {
+                font-size: 1.9em;
+            }
+
+            .slide {
+                padding: 35px;
+            }
+
+            .report-meta {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .metric-row {
+                gap: 20px;
+            }
+
+            .nav-bar {
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding: 8px;
+            }
+
+            .nav-item {
+                padding: 8px 15px;
+                font-size: 0.85rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -795,41 +918,129 @@
                 margin: 0 auto;
                 padding: 15px;
             }
+
             header {
                 padding: 60px 20px;
                 margin-bottom: 50px;
             }
-            h1 { font-size: 2.5em; }
-            .header-info { font-size: 1.1em; }
-            .slide { padding: 30px; margin-bottom: 40px; }
-            h2 { font-size: 1.7em; padding-bottom: 12px; margin-bottom: 25px;}
-            .chart-container { max-width: 100%; padding: 20px; }
-            .chart-container canvas { height: 300px !important; }
-            .polished { padding: 25px; font-size: 1.1em; }
-            .insight-card { padding: 25px; }
-            .metric-card { padding: 25px; }
-            .metric-value { font-size: 2.5em; }
-            footer { padding: 40px 20px; }
-            .footer-content { flex-direction: column; text-align: center; }
-            .footer-links { justify-content: center; flex-wrap: wrap; }
-            .company-logo { width: 70px; height: 70px; }
-            .company-logo i { font-size: 30px; }
-            .section-title { font-size: 2em; }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .header-info {
+                font-size: 1.1em;
+            }
+
+            .slide {
+                padding: 30px;
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                font-size: 1.7em;
+                padding-bottom: 12px;
+                margin-bottom: 25px;
+            }
+
+            .chart-container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .chart-container canvas {
+                height: 300px !important;
+            }
+
+            .polished {
+                padding: 25px;
+                font-size: 1.1em;
+            }
+
+            .insight-card {
+                padding: 25px;
+            }
+
+            .metric-card {
+                padding: 25px;
+            }
+
+            .metric-value {
+                font-size: 2.5em;
+            }
+
+            footer {
+                padding: 40px 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .company-logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .company-logo i {
+                font-size: 30px;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
         }
 
-         @media (max-width: 576px) {
-            h1 { font-size: 2em; }
-            .chart-container canvas { height: 280px !important; }
-            .insight-container { flex-direction: column; }
-            .metric-row { flex-direction: column; gap: 20px; }
-            .action-item { flex-direction: column; align-items: center; text-align: center; }
-            .action-icon { margin-bottom: 15px; }
-            .company-logo { width: 60px; height: 60px; }
-            .company-logo i { font-size: 26px; }
-            .section-subtitle { font-size: 1em; }
-         }
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .chart-container canvas {
+                height: 280px !important;
+            }
+
+            .insight-container {
+                flex-direction: column;
+            }
+
+            .metric-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .action-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .action-icon {
+                margin-bottom: 15px;
+            }
+
+            .company-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .company-logo i {
+                font-size: 26px;
+            }
+
+            .section-subtitle {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -838,10 +1049,10 @@
                     <i class="fas fa-network-wired"></i>
                 </div>
             </div>
-            
+
             <h1>网络健康状况汇报</h1>
             <p class="header-info">2025财年第一季度执行总结</p>
-            
+
             <div class="report-meta">
                 <div class="meta-item">
                     <i class="fas fa-calendar-alt"></i>
@@ -861,7 +1072,7 @@
                 </div>
             </div>
         </header>
-        
+
         <div class="nav-container">
             <div class="nav-bar">
                 <a href="#overview" class="nav-item active">
@@ -888,7 +1099,7 @@
                     <div class="section-title">整体状况概览</div>
                     <div class="section-subtitle">全面展示公司网络基础设施的健康状态和关键性能指标</div>
                 </div>
-                
+
                 <div class="metric-row">
                     <div class="metric-card">
                         <div class="metric-icon">
@@ -931,7 +1142,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="chart-container">
                     <div class="chart-header">
                         <div class="chart-title">
@@ -944,7 +1155,7 @@
                     </div>
                     <canvas id="overviewChart"></canvas>
                 </div>
-                
+
                 <div class="insight-container">
                     <div class="insight-card">
                         <div class="insight-title">
@@ -974,7 +1185,7 @@
                     <div class="section-title">网络性能指标</div>
                     <div class="section-subtitle">深入分析公司网络性能表现，确保各项业务运行流畅高效</div>
                 </div>
-                
+
                 <div class="chart-container">
                     <div class="chart-header">
                         <div class="chart-title">
@@ -988,7 +1199,7 @@
                     </div>
                     <canvas id="performanceChart"></canvas>
                 </div>
-                
+
                 <div class="insight-container">
                     <div class="insight-card">
                         <div class="insight-title">
@@ -1009,9 +1220,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="polished">
-                    <p>通过硬件升级和网络优化，我们成功将网络延迟降低至30ms，并将带宽利用率控制在合理范围内。这些改进直接提升了系统响应速度，为用户提供了更流畅的操作体验，同时为未来业务增长预留了充足的扩展空间。持续的性能优化也为公司降低了约15%的网络运营成本。</p>
+                    <p>通过硬件升级和网络优化，我们成功将网络延迟降低至30ms，并将带宽利用率控制在合理范围内。这些改进直接提升了系统响应速度，为用户提供了更流畅的操作体验，同时为未来业务增长预留了充足的扩展空间。持续的性能优化也为公司降低了约15%的网络运营成本。
+                    </p>
                 </div>
             </section>
         </div>
@@ -1022,7 +1234,7 @@
                     <div class="section-title">网络稳定性评估</div>
                     <div class="section-subtitle">全面评估网络可靠性和连续性，确保业务持续稳定运行</div>
                 </div>
-                
+
                 <div class="chart-container">
                     <div class="chart-header">
                         <div class="chart-title">
@@ -1035,7 +1247,7 @@
                     </div>
                     <canvas id="stabilityChart"></canvas>
                 </div>
-                
+
                 <div class="insight-container">
                     <div class="insight-card">
                         <div class="insight-title">
@@ -1056,9 +1268,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="polished">
-                    <p>我们实施的故障自动切换机制和24/7监控系统显著提高了网络稳定性，中断事件数量较上季度减少25%。同时，平均故障恢复时间缩短40%，大幅降低了业务中断风险，提升了整体服务质量。这些改进为企业避免了约200万元的潜在损失，同时提升了员工工作效率和客户满意度。</p>
+                    <p>我们实施的故障自动切换机制和24/7监控系统显著提高了网络稳定性，中断事件数量较上季度减少25%。同时，平均故障恢复时间缩短40%，大幅降低了业务中断风险，提升了整体服务质量。这些改进为企业避免了约200万元的潜在损失，同时提升了员工工作效率和客户满意度。
+                    </p>
                 </div>
             </section>
         </div>
@@ -1069,7 +1282,7 @@
                     <div class="section-title">网络安全态势</div>
                     <div class="section-subtitle">全面评估网络防护能力，确保企业数据和系统安全</div>
                 </div>
-                
+
                 <div class="chart-container">
                     <div class="chart-header">
                         <div class="chart-title">
@@ -1082,7 +1295,7 @@
                     </div>
                     <canvas id="securityChart"></canvas>
                 </div>
-                
+
                 <div class="insight-container">
                     <div class="insight-card">
                         <div class="insight-title">
@@ -1103,9 +1316,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="polished">
-                    <p>本季度安全体系全面升级，包括部署高级威胁检测系统、强化权限控制和加密机制。我们的网络安全评分已达95分，同比提升5%，所有发现的漏洞均在24小时内完成修复，确保企业数据和系统安全。这些措施有效防范了潜在的数据泄露风险，保障了公司的商业信誉和客户信任。</p>
+                    <p>本季度安全体系全面升级，包括部署高级威胁检测系统、强化权限控制和加密机制。我们的网络安全评分已达95分，同比提升5%，所有发现的漏洞均在24小时内完成修复，确保企业数据和系统安全。这些措施有效防范了潜在的数据泄露风险，保障了公司的商业信誉和客户信任。
+                    </p>
                 </div>
             </section>
         </div>
@@ -1116,7 +1330,7 @@
                     <div class="section-title">战略优化与发展规划</div>
                     <div class="section-subtitle">基于前瞻性视角，规划未来网络架构升级路径</div>
                 </div>
-                
+
                 <div class="chart-container">
                     <div class="chart-header">
                         <div class="chart-title">
@@ -1129,7 +1343,7 @@
                     </div>
                     <canvas id="improvementChart"></canvas>
                 </div>
-                
+
                 <div class="action-items">
                     <div class="action-item">
                         <div class="action-icon">
@@ -1168,9 +1382,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="polished">
-                    <p>基于当前业务增长趋势和技术发展方向，我们制定了分阶段的网络优化路线图。这一战略规划将持续提升网络性能、可靠性和安全性，同时降低总体拥有成本，为公司数字化转型和业务创新提供坚实的技术基础。预计完成全部规划后，将提升30%的运维效率并降低20%的IT基础设施成本。</p>
+                    <p>基于当前业务增长趋势和技术发展方向，我们制定了分阶段的网络优化路线图。这一战略规划将持续提升网络性能、可靠性和安全性，同时降低总体拥有成本，为公司数字化转型和业务创新提供坚实的技术基础。预计完成全部规划后，将提升30%的运维效率并降低20%的IT基础设施成本。
+                    </p>
                 </div>
             </section>
         </div>
@@ -1188,7 +1403,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                © 2025  | IT基础设施部
+                © 2025 | IT基础设施部
             </div>
         </footer>
     </div>
@@ -1196,33 +1411,33 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script>
         // 激活导航菜单
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('.slide');
             const navItems = document.querySelectorAll('.nav-item');
-            
+
             // 滚动监听
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 let current = '';
-                
+
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
                     const sectionHeight = section.clientHeight;
-                    if(pageYOffset >= (sectionTop - 300)) {
+                    if (pageYOffset >= (sectionTop - 300)) {
                         current = section.getAttribute('id');
                     }
                 });
-                
+
                 navItems.forEach(item => {
                     item.classList.remove('active');
-                    if(item.getAttribute('href').substring(1) === current) {
+                    if (item.getAttribute('href').substring(1) === current) {
                         item.classList.add('active');
                     }
                 });
             });
-            
+
             // 平滑滚动
             navItems.forEach(item => {
-                item.addEventListener('click', function(e) {
+                item.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
@@ -1233,7 +1448,7 @@
                 });
             });
         });
-        
+
         // 定义高端配色方案
         const chartColors = {
             primary: '#0a2d4d',
@@ -1248,7 +1463,7 @@
             gridColor: 'rgba(226, 232, 240, 0.5)',
             tooltipBackground: 'rgba(10, 45, 77, 0.9)'
         };
-        
+
         // 图表全局配置
         Chart.defaults.font.family = "'Noto Sans SC', 'Microsoft YaHei', Arial, sans-serif";
         Chart.defaults.color = chartColors.dark;
@@ -1258,7 +1473,7 @@
         Chart.defaults.plugins.tooltip.padding = 12;
         Chart.defaults.plugins.tooltip.cornerRadius = 8;
         Chart.defaults.plugins.tooltip.displayColors = false;
-        
+
         // 概览图表
         const overviewCtx = document.getElementById('overviewChart').getContext('2d');
         const overviewChart = new Chart(overviewCtx, {
@@ -1300,7 +1515,7 @@
                     },
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 const label = context.label || '';
                                 return label + ': ' + context.raw + '%';
                             }
@@ -1357,14 +1572,14 @@
                 plugins: {
                     legend: {
                         position: 'top',
-                        labels: { 
-                            boxWidth: 15, 
-                            font: { size: 14, weight: '500' }, 
-                            color: chartColors.dark 
+                        labels: {
+                            boxWidth: 15,
+                            font: { size: 14, weight: '500' },
+                            color: chartColors.dark
                         }
                     },
-                    tooltip: { 
-                        mode: 'index', 
+                    tooltip: {
+                        mode: 'index',
                         intersect: false
                     }
                 },
@@ -1372,16 +1587,16 @@
                     y: {
                         beginAtZero: true,
                         grid: { color: chartColors.gridColor },
-                        ticks: { 
-                            padding: 10, 
+                        ticks: {
+                            padding: 10,
                             color: chartColors.dark,
                             font: { size: 12 }
                         }
                     },
                     x: {
                         grid: { display: false },
-                        ticks: { 
-                            padding: 10, 
+                        ticks: {
+                            padding: 10,
                             color: chartColors.dark,
                             font: { size: 13, weight: '500' }
                         }
@@ -1424,7 +1639,7 @@
                     legend: { display: false },
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return '中断次数: ' + context.raw;
                             }
                         }
@@ -1434,9 +1649,9 @@
                     y: {
                         beginAtZero: true,
                         grid: { color: chartColors.gridColor },
-                        ticks: { 
-                            padding: 10, 
-                            stepSize: 1, 
+                        ticks: {
+                            padding: 10,
+                            stepSize: 1,
                             color: chartColors.dark,
                             font: { size: 12 }
                         },
@@ -1449,8 +1664,8 @@
                     },
                     x: {
                         grid: { display: false },
-                        ticks: { 
-                            padding: 10, 
+                        ticks: {
+                            padding: 10,
                             color: chartColors.dark,
                             font: { size: 13, weight: '500' }
                         }
@@ -1489,15 +1704,15 @@
                 plugins: {
                     legend: {
                         position: 'top',
-                        labels: { 
-                            boxWidth: 15, 
-                            font: { size: 14, weight: '500' }, 
-                            color: chartColors.dark 
+                        labels: {
+                            boxWidth: 15,
+                            font: { size: 14, weight: '500' },
+                            color: chartColors.dark
                         }
                     },
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return context.label + ': ' + context.raw + '/100';
                             }
                         }
@@ -1507,9 +1722,9 @@
                     r: {
                         angleLines: { color: chartColors.gridColor },
                         grid: { color: chartColors.gridColor },
-                        pointLabels: { 
-                            font: { size: 14, weight: '500' }, 
-                            color: chartColors.dark 
+                        pointLabels: {
+                            font: { size: 14, weight: '500' },
+                            color: chartColors.dark
                         },
                         ticks: {
                             backdropColor: 'transparent',
@@ -1561,15 +1776,15 @@
                 plugins: {
                     legend: {
                         position: 'top',
-                        labels: { 
-                            boxWidth: 15, 
-                            font: { size: 14, weight: '500' }, 
-                            color: chartColors.dark 
+                        labels: {
+                            boxWidth: 15,
+                            font: { size: 14, weight: '500' },
+                            color: chartColors.dark
                         }
                     },
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return context.dataset.label + ': ' + context.raw + '%';
                             }
                         }
@@ -1580,9 +1795,9 @@
                         beginAtZero: true,
                         stacked: true,
                         grid: { color: chartColors.gridColor },
-                        ticks: { 
-                            padding: 10, 
-                            callback: function(value) { return value + '%' }, 
+                        ticks: {
+                            padding: 10,
+                            callback: function (value) { return value + '%' },
                             color: chartColors.dark,
                             font: { size: 12 }
                         },
@@ -1596,8 +1811,8 @@
                     x: {
                         stacked: true,
                         grid: { display: false },
-                        ticks: { 
-                            padding: 10, 
+                        ticks: {
+                            padding: 10,
                             color: chartColors.dark,
                             font: { size: 13, weight: '500' }
                         }
@@ -1605,12 +1820,13 @@
                 }
             }
         });
-        
+
         // 打印功能
-        document.querySelector('.footer-links a:nth-child(4)').addEventListener('click', function(e) {
+        document.querySelector('.footer-links a:nth-child(4)').addEventListener('click', function (e) {
             e.preventDefault();
             window.print();
         });
     </script>
 </body>
+
 </html>

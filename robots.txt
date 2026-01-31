@@ -57,3 +57,4 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://junxinzhang.com/sitemap.xml
+Disallow: /_html_pages/

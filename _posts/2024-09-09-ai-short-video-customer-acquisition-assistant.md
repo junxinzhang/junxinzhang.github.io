@@ -5,6 +5,9 @@ author: Jason Zhang
 categories: [Business]
 image: assets/images/screenshot-20240916-debt-crisis-response.webp
 tags: [Debt Crisis, Government Finance, Economic Policy, Local Government, Debt Management]
+ads: false
+noindex: true
+sitemap: false
 ---
 
 在当前经济下行压力下，许多地方政府面临巨大的债务挑战。如何通过“砸锅卖铁”策略缓解地方债务问题？我们为您详细解析地方债务危机，从债务鉴定、资产变卖到资金使用，帮助您深入了解地方政府的应对策略与未来经济发展的可能路径。

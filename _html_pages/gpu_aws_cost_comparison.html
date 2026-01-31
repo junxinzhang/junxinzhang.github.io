@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>本地GPU接入AWS成本对比</title>
+    <meta name="robots" content="noindex">
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -11,49 +13,59 @@
             line-height: 1.6;
             background-color: #f9f9f9;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             background: white;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             color: #2c3e50;
             text-align: center;
             margin-bottom: 30px;
             font-size: 28px;
         }
+
         h2 {
             color: #3498db;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
             margin-top: 40px;
         }
+
         .chart-container {
             margin: 40px auto;
             text-align: center;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 25px 0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
+
         th {
             background-color: #3498db;
             color: white;
             font-weight: 500;
         }
-        th, td {
+
+        th,
+        td {
             padding: 12px 15px;
             text-align: left;
             border: 1px solid #ddd;
         }
+
         tr:nth-child(even) {
             background-color: #f8f9fa;
         }
+
         .recommendation {
             background-color: #f0f7ff;
             padding: 20px;
@@ -61,6 +73,7 @@
             margin: 30px 0;
             border-left: 4px solid #3498db;
         }
+
         .data-source {
             font-size: 14px;
             color: #666;
@@ -68,6 +81,7 @@
             padding-top: 20px;
             border-top: 1px solid #eee;
         }
+
         .cost-breakdown {
             background: #f5f5f5;
             padding: 15px;
@@ -76,28 +90,29 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>本地GPU接入AWS成本对比</h1>
-        
+
         <div class="chart-container">
             <svg width="700" height="450" viewBox="0 0 700 450">
                 <!-- 背景和标题 -->
-                <rect x="0" y="0" width="700" height="450" fill="#f9f9f9" rx="8" ry="8"/>
+                <rect x="0" y="0" width="700" height="450" fill="#f9f9f9" rx="8" ry="8" />
                 <text x="350" y="40" text-anchor="middle" font-size="20" font-weight="bold">AWS中国区(北京)月成本对比</text>
-                
+
                 <!-- 坐标轴 -->
-                <line x1="80" y1="380" x2="620" y2="380" stroke="#666" stroke-width="2"/>
-                <line x1="80" y1="380" x2="80" y2="80" stroke="#666" stroke-width="2"/>
-                
+                <line x1="80" y1="380" x2="620" y2="380" stroke="#666" stroke-width="2" />
+                <line x1="80" y1="380" x2="80" y2="80" stroke="#666" stroke-width="2" />
+
                 <!-- Y轴刻度和网格线 -->
-                <line x1="80" y1="330" x2="620" y2="330" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
-                <line x1="80" y1="280" x2="620" y2="280" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
-                <line x1="80" y1="230" x2="620" y2="230" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
-                <line x1="80" y1="180" x2="620" y2="180" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
-                <line x1="80" y1="130" x2="620" y2="130" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
-                <line x1="80" y1="80" x2="620" y2="80" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
-                
+                <line x1="80" y1="330" x2="620" y2="330" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+                <line x1="80" y1="280" x2="620" y2="280" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+                <line x1="80" y1="230" x2="620" y2="230" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+                <line x1="80" y1="180" x2="620" y2="180" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+                <line x1="80" y1="130" x2="620" y2="130" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+                <line x1="80" y1="80" x2="620" y2="80" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+
                 <text x="60" y="380" text-anchor="end" font-size="14">¥0</text>
                 <text x="60" y="330" text-anchor="end" font-size="14">¥500</text>
                 <text x="60" y="280" text-anchor="end" font-size="14">¥1,000</text>
@@ -105,39 +120,39 @@
                 <text x="60" y="180" text-anchor="end" font-size="14">¥2,000</text>
                 <text x="60" y="130" text-anchor="end" font-size="14">¥2,500</text>
                 <text x="60" y="80" text-anchor="end" font-size="14">¥3,000</text>
-                
+
                 <!-- Direct Connect柱状图 -->
-                <rect x="150" y="180" width="120" height="200" fill="#3498db" rx="4" ry="4"/>
+                <rect x="150" y="180" width="120" height="200" fill="#3498db" rx="4" ry="4" />
                 <text x="210" y="160" text-anchor="middle" font-size="16" font-weight="bold">Direct Connect</text>
                 <text x="210" y="170" text-anchor="middle" font-size="12">(1Gbps专用连接)</text>
                 <text x="210" y="400" text-anchor="middle" font-size="14" font-weight="bold">¥1,385.8</text>
-                
+
                 <!-- 成本细分 -->
-                <rect x="150" y="180" width="120" height="40" fill="#2980b9"/>
+                <rect x="150" y="180" width="120" height="40" fill="#2980b9" />
                 <text x="210" y="205" text-anchor="middle" font-size="12" fill="white">连接:¥1,357.8</text>
-                <rect x="150" y="220" width="120" height="160" fill="#1a5276"/>
+                <rect x="150" y="220" width="120" height="160" fill="#1a5276" />
                 <text x="210" y="300" text-anchor="middle" font-size="12" fill="white">数据:¥28</text>
-                
+
                 <!-- VPN柱状图 -->
-                <rect x="400" y="330" width="120" height="50" fill="#2ecc71" rx="4" ry="4"/>
+                <rect x="400" y="330" width="120" height="50" fill="#2ecc71" rx="4" ry="4" />
                 <text x="460" y="310" text-anchor="middle" font-size="16" font-weight="bold">VPN</text>
                 <text x="460" y="320" text-anchor="middle" font-size="12">(VPN网关连接)</text>
                 <text x="460" y="400" text-anchor="middle" font-size="14" font-weight="bold">¥354.41</text>
-                
+
                 <!-- 成本细分 -->
-                <rect x="400" y="330" width="120" height="20" fill="#27ae60"/>
+                <rect x="400" y="330" width="120" height="20" fill="#27ae60" />
                 <text x="460" y="345" text-anchor="middle" font-size="12" fill="white">连接:¥311.71</text>
-                <rect x="400" y="350" width="120" height="30" fill="#1e8449"/>
+                <rect x="400" y="350" width="120" height="30" fill="#1e8449" />
                 <text x="460" y="365" text-anchor="middle" font-size="12" fill="white">数据:¥42.7</text>
-                
+
                 <!-- 图例 -->
-                <rect x="500" y="50" width="20" height="20" fill="#2980b9" rx="2" ry="2"/>
+                <rect x="500" y="50" width="20" height="20" fill="#2980b9" rx="2" ry="2" />
                 <text x="530" y="65" text-anchor="start" font-size="14">连接成本</text>
-                <rect x="500" y="80" width="20" height="20" fill="#1a5276" rx="2" ry="2"/>
+                <rect x="500" y="80" width="20" height="20" fill="#1a5276" rx="2" ry="2" />
                 <text x="530" y="95" text-anchor="start" font-size="14">数据成本</text>
             </svg>
         </div>
-        
+
         <h2>详细成本分析</h2>
         <table>
             <tr>
@@ -176,7 +191,7 @@
                 <td>¥354.41</td>
             </tr>
         </table>
-        
+
         <div class="cost-breakdown">
             <h3>成本构成分析</h3>
             <p><strong>Direct Connect (¥1,385.8/月):</strong></p>
@@ -195,7 +210,7 @@
             <h3>方案建议</h3>
             <ul>
                 <li><strong>VPN方案</strong>：月成本¥354.41，比Direct Connect节省74.4%，适合预算有限且对延迟要求不高的场景</li>
-                <li><strong>Direct Connect方案</strong>：月成本¥1,385.8，提供更稳定、低延迟的连接(延迟<2ms)，适合关键业务</li>
+                <li><strong>Direct Connect方案</strong>：月成本¥1,385.8，提供更稳定、低延迟的连接(延迟<2ms)，适合关键业务< /li>
                 <li><strong>人工成本</strong>：初始配置需要16-26个工作日，按工程师平均日薪¥1,500计算，约¥24,000-¥39,000</li>
                 <li>长期使用建议：可考虑预留容量，Direct Connect可节省30-50%成本</li>
                 <li>优化建议：压缩数据传输可降低30-70%的数据传输成本</li>
@@ -276,12 +291,16 @@
         <div class="data-source">
             <h3>数据来源</h3>
             <ul>
-                <li>AWS中国区Direct Connect定价: <a href="https://www.amazonaws.cn/directconnect/pricing/" target="_blank">https://www.amazonaws.cn/directconnect/pricing/</a></li>
-                <li>AWS中国区VPN定价: <a href="https://www.amazonaws.cn/vpc/pricing/" target="_blank">https://www.amazonaws.cn/vpc/pricing/</a></li>
-                <li>数据传输定价: <a href="https://www.amazonaws.cn/ec2/pricing/" target="_blank">https://www.amazonaws.cn/ec2/pricing/</a></li>
+                <li>AWS中国区Direct Connect定价: <a href="https://www.amazonaws.cn/directconnect/pricing/"
+                        target="_blank">https://www.amazonaws.cn/directconnect/pricing/</a></li>
+                <li>AWS中国区VPN定价: <a href="https://www.amazonaws.cn/vpc/pricing/"
+                        target="_blank">https://www.amazonaws.cn/vpc/pricing/</a></li>
+                <li>数据传输定价: <a href="https://www.amazonaws.cn/ec2/pricing/"
+                        target="_blank">https://www.amazonaws.cn/ec2/pricing/</a></li>
                 <li>价格计算日期: 2025年4月</li>
             </ul>
         </div>
     </div>
 </body>
+
 </html>

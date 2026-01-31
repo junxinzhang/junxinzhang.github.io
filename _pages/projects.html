@@ -5,250 +5,298 @@ permalink: "/projects.html"
 description: "Jason Zhang 的开源项目作品集，包含企业级 DevOps 仪表盘、SD-WAN 网络监控、蓝鲸 CMDB 定制方案、AI 安全防护平台等落地页项目。专注 AI 技术、DevOps、云原生架构。"
 image: /assets/images/projects-og.jpg
 keywords:
-  - 落地页设计
-  - Landing Page
-  - DevOps Dashboard
-  - SD-WAN Monitor
-  - 蓝鲸CMDB
-  - AI Security Guard
-  - AI安全防护
-  - 开源项目
-  - GitHub Portfolio
-  - 企业级解决方案
-  - Tailwind CSS
-  - 前端开发
+- 落地页设计
+- Landing Page
+- DevOps Dashboard
+- SD-WAN Monitor
+- 蓝鲸CMDB
+- AI Security Guard
+- AI安全防护
+- 开源项目
+- GitHub Portfolio
+- 企业级解决方案
+- Tailwind CSS
+- 前端开发
 seo:
-  type: CollectionPage
-  name: Projects Portfolio
+type: CollectionPage
+name: Projects Portfolio
 sitemap:
-  priority: 0.9
-  changefreq: weekly
+priority: 0.9
+changefreq: weekly
 ---
 
 <style>
-.projects-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 40px 20px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-.projects-hero h1 {
-    color: white;
-    margin-bottom: 10px;
-}
-.projects-hero p {
-    opacity: 0.9;
-    margin: 0;
-}
-
-.category-filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
-}
-.category-filter .filter-btn {
-    padding: 8px 16px;
-    border: 1px solid #dee2e6;
-    border-radius: 20px;
-    background: #fff;
-    color: #495057;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-decoration: none;
-    font-size: 14px;
-}
-.category-filter .filter-btn:hover {
-    background: #e9ecef;
-    text-decoration: none;
-    color: #495057;
-}
-.category-filter .filter-btn.active {
-    background: #667eea;
-    color: #fff;
-    border-color: #667eea;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-    margin-bottom: 40px;
-}
-
-.project-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-.project-card.hidden {
-    display: none;
-}
-
-.project-card-header {
-    padding: 20px;
-    border-bottom: 1px solid #f0f0f0;
-}
-.project-card-header h3 {
-    font-size: 1.1rem;
-    margin: 0 0 8px 0;
-    font-weight: 600;
-}
-.project-card-header h3 a {
-    color: #333;
-    text-decoration: none;
-}
-.project-card-header h3 a:hover {
-    color: #667eea;
-}
-
-.project-category {
-    display: inline-block;
-    padding: 3px 10px;
-    background: #e9ecef;
-    border-radius: 12px;
-    font-size: 12px;
-    color: #666;
-}
-.project-category.network { background: #d4edda; color: #155724; }
-.project-category.devops { background: #cce5ff; color: #004085; }
-.project-category.cmdb { background: #fff3cd; color: #856404; }
-.project-category.app { background: #f8d7da; color: #721c24; }
-.project-category.security { background: #d1ecf1; color: #0c5460; }
-.project-category.report { background: #e2e3e5; color: #383d41; }
-
-.project-card-body {
-    padding: 20px;
-    flex: 1;
-}
-.project-card-body p {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0 0 15px 0;
-}
-
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-.tech-tag {
-    display: inline-block;
-    padding: 2px 8px;
-    background: #f1f3f4;
-    border-radius: 4px;
-    font-size: 11px;
-    color: #5f6368;
-}
-
-.project-card-footer {
-    padding: 15px 20px;
-    border-top: 1px solid #f0f0f0;
-    display: flex;
-    gap: 10px;
-}
-.project-link {
-    flex: 1;
-    text-align: center;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 13px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-.project-link.demo {
-    background: #667eea;
-    color: white;
-}
-.project-link.demo:hover {
-    background: #5a6fd6;
-    text-decoration: none;
-    color: white;
-}
-.project-link.github {
-    background: #f6f8fa;
-    color: #24292e;
-    border: 1px solid #e1e4e8;
-}
-.project-link.github:hover {
-    background: #e9ecef;
-    text-decoration: none;
-    color: #24292e;
-}
-
-.section-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin: 40px 0 20px 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #667eea;
-    display: inline-block;
-}
-
-.featured-badge {
-    display: inline-block;
-    padding: 2px 6px;
-    background: #ffd700;
-    color: #333;
-    border-radius: 4px;
-    font-size: 10px;
-    margin-left: 8px;
-    vertical-align: middle;
-}
-
-/* 响应式 */
-@media (max-width: 767px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
     .projects-hero {
-        padding: 30px 15px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px 20px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        text-align: center;
     }
-}
 
-/* 暗色模式支持 */
-@media (prefers-color-scheme: dark) {
-    .project-card {
-        background: #1e1e1e;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    .projects-hero h1 {
+        color: white;
+        margin-bottom: 10px;
     }
-    .project-card-header {
-        border-bottom-color: #333;
+
+    .projects-hero p {
+        opacity: 0.9;
+        margin: 0;
     }
-    .project-card-header h3 a {
-        color: #e0e0e0;
-    }
-    .project-card-body p {
-        color: #aaa;
-    }
+
     .category-filter {
-        background: #2d2d2d;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
     }
+
     .category-filter .filter-btn {
-        background: #3d3d3d;
-        border-color: #4d4d4d;
-        color: #ccc;
+        padding: 8px 16px;
+        border: 1px solid #dee2e6;
+        border-radius: 20px;
+        background: #fff;
+        color: #495057;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        font-size: 14px;
     }
+
+    .category-filter .filter-btn:hover {
+        background: #e9ecef;
+        text-decoration: none;
+        color: #495057;
+    }
+
+    .category-filter .filter-btn.active {
+        background: #667eea;
+        color: #fff;
+        border-color: #667eea;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+
+    .project-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-card.hidden {
+        display: none;
+    }
+
+    .project-card-header {
+        padding: 20px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .project-card-header h3 {
+        font-size: 1.1rem;
+        margin: 0 0 8px 0;
+        font-weight: 600;
+    }
+
+    .project-card-header h3 a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .project-card-header h3 a:hover {
+        color: #667eea;
+    }
+
+    .project-category {
+        display: inline-block;
+        padding: 3px 10px;
+        background: #e9ecef;
+        border-radius: 12px;
+        font-size: 12px;
+        color: #666;
+    }
+
+    .project-category.network {
+        background: #d4edda;
+        color: #155724;
+    }
+
+    .project-category.devops {
+        background: #cce5ff;
+        color: #004085;
+    }
+
+    .project-category.cmdb {
+        background: #fff3cd;
+        color: #856404;
+    }
+
+    .project-category.app {
+        background: #f8d7da;
+        color: #721c24;
+    }
+
+    .project-category.security {
+        background: #d1ecf1;
+        color: #0c5460;
+    }
+
+    .project-category.report {
+        background: #e2e3e5;
+        color: #383d41;
+    }
+
+    .project-card-body {
+        padding: 20px;
+        flex: 1;
+    }
+
+    .project-card-body p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 0 0 15px 0;
+    }
+
+    .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .tech-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        background: #f1f3f4;
+        border-radius: 4px;
+        font-size: 11px;
+        color: #5f6368;
+    }
+
+    .project-card-footer {
+        padding: 15px 20px;
+        border-top: 1px solid #f0f0f0;
+        display: flex;
+        gap: 10px;
+    }
+
+    .project-link {
+        flex: 1;
+        text-align: center;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 13px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .project-link.demo {
+        background: #667eea;
+        color: white;
+    }
+
+    .project-link.demo:hover {
+        background: #5a6fd6;
+        text-decoration: none;
+        color: white;
+    }
+
     .project-link.github {
-        background: #2d2d2d;
-        color: #e0e0e0;
-        border-color: #4d4d4d;
+        background: #f6f8fa;
+        color: #24292e;
+        border: 1px solid #e1e4e8;
     }
-}
+
+    .project-link.github:hover {
+        background: #e9ecef;
+        text-decoration: none;
+        color: #24292e;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 40px 0 20px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #667eea;
+        display: inline-block;
+    }
+
+    .featured-badge {
+        display: inline-block;
+        padding: 2px 6px;
+        background: #ffd700;
+        color: #333;
+        border-radius: 4px;
+        font-size: 10px;
+        margin-left: 8px;
+        vertical-align: middle;
+    }
+
+    /* 响应式 */
+    @media (max-width: 767px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .projects-hero {
+            padding: 30px 15px;
+        }
+    }
+
+    /* 暗色模式支持 */
+    @media (prefers-color-scheme: dark) {
+        .project-card {
+            background: #1e1e1e;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card-header {
+            border-bottom-color: #333;
+        }
+
+        .project-card-header h3 a {
+            color: #e0e0e0;
+        }
+
+        .project-card-body p {
+            color: #aaa;
+        }
+
+        .category-filter {
+            background: #2d2d2d;
+        }
+
+        .category-filter .filter-btn {
+            background: #3d3d3d;
+            border-color: #4d4d4d;
+            color: #ccc;
+        }
+
+        .project-link.github {
+            background: #2d2d2d;
+            color: #e0e0e0;
+            border-color: #4d4d4d;
+        }
+    }
 </style>
 
 <!-- JSON-LD 结构化数据 - 帮助搜索引擎理解页面内容 -->
@@ -304,7 +352,8 @@ sitemap:
             <div class="category-filter">
                 <a href="#" class="filter-btn active" data-category="all">
                     All
-                    <span class="count">({% assign landing_count = site.data.landing_pages | size %}{% assign html_count = site.data.html_pages | size %}{{ landing_count | plus: html_count }})</span>
+                    <span class="count">({% assign landing_count = site.data.landing_pages | size %}{% assign html_count
+                        = site.data.html_pages | size %}{{ landing_count | plus: html_count }})</span>
                 </a>
                 <a href="#" class="filter-btn" data-category="landing">Landing Pages</a>
                 <a href="#" class="filter-btn" data-category="report">专项报告</a>
@@ -332,18 +381,29 @@ sitemap:
                         {% if project.keywords %}
                         <div class="seo-keywords" style="margin-top:10px;">
                             {% for keyword in project.keywords %}
-                            <span class="keyword-tag" style="display:inline-block;padding:2px 6px;background:#f0f4ff;border-radius:3px;font-size:10px;color:#667eea;margin:2px;">{{ keyword }}</span>
+                            <span class="keyword-tag"
+                                style="display:inline-block;padding:2px 6px;background:#f0f4ff;border-radius:3px;font-size:10px;color:#667eea;margin:2px;">{{
+                                keyword }}</span>
                             {% endfor %}
                         </div>
                         {% endif %}
                     </div>
                     <div class="project-card-footer">
                         <a href="{{ project.demo_url }}" target="_blank" class="project-link demo">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="margin-right:4px;vertical-align:-2px;"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                viewBox="0 0 16 16" style="margin-right:4px;vertical-align:-2px;">
+                                <path
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+                            </svg>
                             Demo
                         </a>
-                        <a href="https://github.com/junxinzhang/{{ project.repo }}" target="_blank" class="project-link github">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="margin-right:4px;vertical-align:-2px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                        <a href="https://github.com/junxinzhang/{{ project.repo }}" target="_blank"
+                            class="project-link github">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                viewBox="0 0 16 16" style="margin-right:4px;vertical-align:-2px;">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg>
                             GitHub
                         </a>
                     </div>
@@ -351,13 +411,13 @@ sitemap:
                 {% endfor %}
             </div>
 
-            <!-- HTML Reports Section -->
+            <!-- HTML Reports Section - Temporarily hidden for AdSense review
             <h2 class="section-title">专项报告</h2>
             <div class="projects-grid" id="html-reports">
                 {% for page in site.data.html_pages %}
                 <div class="project-card" data-type="report">
                     <div class="project-card-header">
-                        <h3><a href="{{ site.baseurl }}/_html_pages/{{ page.path }}">{{ page.title }}</a></h3>
+                        <h3><a href="{{ site.baseurl }}/_html_pages/{{ page.path }}" rel="nofollow">{{ page.title }}</a></h3>
                         <span class="project-category report">Report</span>
                     </div>
                     <div class="project-card-body">
@@ -367,7 +427,7 @@ sitemap:
                         </div>
                     </div>
                     <div class="project-card-footer">
-                        <a href="{{ site.baseurl }}/_html_pages/{{ page.path }}" class="project-link demo" style="flex:1;">
+                        <a href="{{ site.baseurl }}/_html_pages/{{ page.path }}" rel="nofollow" class="project-link demo" style="flex:1;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="margin-right:4px;vertical-align:-2px;"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/></svg>
                             查看报告
                         </a>
@@ -375,53 +435,54 @@ sitemap:
                 </div>
                 {% endfor %}
             </div>
+            -->
 
         </div>
     </div>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-    const landingSection = document.querySelector('#landing-pages').parentElement.querySelector('.section-title');
-    const reportSection = document.querySelector('#html-reports').parentElement.querySelectorAll('.section-title')[1];
+    document.addEventListener('DOMContentLoaded', function () {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        const landingSection = document.querySelector('#landing-pages').parentElement.querySelector('.section-title');
+        const reportSection = document.querySelector('#html-reports').parentElement.querySelectorAll('.section-title')[1];
 
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const category = this.dataset.category;
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const category = this.dataset.category;
 
-            // 更新按钮状态
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
+                // 更新按钮状态
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
 
-            // 筛选显示内容
-            projectCards.forEach(card => {
-                const cardType = card.dataset.type;
+                // 筛选显示内容
+                projectCards.forEach(card => {
+                    const cardType = card.dataset.type;
+                    if (category === 'all') {
+                        card.classList.remove('hidden');
+                    } else if (category === 'landing' && cardType === 'landing') {
+                        card.classList.remove('hidden');
+                    } else if (category === 'report' && cardType === 'report') {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                // 显示/隐藏分区标题
+                const sectionTitles = document.querySelectorAll('.section-title');
                 if (category === 'all') {
-                    card.classList.remove('hidden');
-                } else if (category === 'landing' && cardType === 'landing') {
-                    card.classList.remove('hidden');
-                } else if (category === 'report' && cardType === 'report') {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
+                    sectionTitles.forEach(t => t.style.display = 'inline-block');
+                } else if (category === 'landing') {
+                    sectionTitles[0].style.display = 'inline-block';
+                    sectionTitles[1].style.display = 'none';
+                } else if (category === 'report') {
+                    sectionTitles[0].style.display = 'none';
+                    sectionTitles[1].style.display = 'inline-block';
                 }
             });
-
-            // 显示/隐藏分区标题
-            const sectionTitles = document.querySelectorAll('.section-title');
-            if (category === 'all') {
-                sectionTitles.forEach(t => t.style.display = 'inline-block');
-            } else if (category === 'landing') {
-                sectionTitles[0].style.display = 'inline-block';
-                sectionTitles[1].style.display = 'none';
-            } else if (category === 'report') {
-                sectionTitles[0].style.display = 'none';
-                sectionTitles[1].style.display = 'inline-block';
-            }
         });
     });
-});
 </script>
