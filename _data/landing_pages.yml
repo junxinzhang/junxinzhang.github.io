@@ -16,6 +16,7 @@
   repo: fortigate-sdwan-monitor
   demo_url: https://network-monitor.junxinzhang.com
   description: 企业级 FortiGate SD-WAN 网络健康监控解决方案，支持实时监控、智能告警、趋势分析
+  image: /assets/images/screenshot-20260202-fortigate-sdwan-monitor.png
   category: Network
   tech_stack:
     - HTML5
@@ -36,6 +37,7 @@
   repo: devops-dash-landing-page
   demo_url: https://devops-dash.junxinzhang.com
   description: 企业级 DevOps 仪表盘产品展示页，支持双语、PWA、无障碍访问
+  image: /assets/images/screenshot-20260202-devops-dashboard.png
   category: DevOps
   tech_stack:
     - HTML5
@@ -56,6 +58,7 @@
   repo: bk-cmdb-landing-page
   demo_url: https://cmdb.junxinzhang.com
   description: 蓝鲸智云 CMDB 精细化权限与用户管理定制方案展示
+  image: /assets/images/screenshot-20250730-bk-cmdb-permission.webp
   category: CMDB
   tech_stack:
     - HTML5
@@ -76,6 +79,7 @@
   repo: meterinfoapp-landing-page
   demo_url: https://meterinfoapp.junxinzhang.com
   description: 电表轮换全生命周期管理系统，支持电表资产登记、轮换计划制定、到期预警提醒、更换记录追踪，助力电力公司实现电表资产精细化管理
+  image: /assets/images/screenshot-20250724-meterinfoapp.webp
   category: App
   tech_stack:
     - HTML5
@@ -100,6 +104,7 @@
   repo: ai-security-guard-landing-page
   demo_url: https://aisecguard.junxinzhang.com
   description: 企业级 AI 安全防护平台，为 AI 应用构建全方位安全防线，支持中英双语、PWA、无障碍访问
+  image: /assets/images/screenshot-20260202-ai-security-guard.png
   category: Security
   tech_stack:
     - HTML5
