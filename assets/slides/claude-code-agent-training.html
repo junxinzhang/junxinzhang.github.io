@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code Agent - AWS MSP 赋能培训</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Claude AI Branding Colors */
+            --primary-gradient: linear-gradient(135deg, #D97757 0%, #C85A4D 100%);
+            --secondary-gradient: linear-gradient(135deg, #EAD7BA 0%, #D4BE9F 100%);
+            --accent-color: #D97757;
+            --aws-dark: #232f3e;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --code-bg: #f1f3f5;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, "Microsoft YaHei", sans-serif;
+            background: #0f0f23;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, #D97757 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, #4D5E7A 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, #232f3e 0%, transparent 50%);
+            opacity: 0.2;
+            animation: bgAnimation 20s ease infinite;
+        }
+
+        @keyframes bgAnimation {
+
+            0%,
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            33% {
+                transform: scale(1.1) rotate(2deg);
+            }
+
+            66% {
+                transform: scale(0.9) rotate(-2deg);
+            }
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+            padding: 60px 120px;
+            display: none;
+            overflow-y: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-sizing: border-box;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            animation: slideIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        h1 {
+            color: var(--aws-dark);
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #232f3e 0%, #D97757 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 120px;
+            height: 5px;
+            background: var(--primary-gradient);
+            border-radius: 3px;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 32px;
+            font-weight: 700;
+            margin: 30px 0 20px;
+            letter-spacing: -0.5px;
+        }
+
+        h3 {
+            color: var(--text-primary);
+            font-size: 26px;
+            font-weight: 600;
+            margin: 25px 0 18px;
+        }
+
+        p,
+        li {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin: 18px 0;
+            font-weight: 400;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        li {
+            margin: 16px 0;
+            padding-left: 35px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 8px;
+            height: 8px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 35px 0;
+        }
+
+        .feature-card {
+            background: white;
+            color: var(--text-primary);
+            padding: 30px;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 35px rgba(217, 119, 87, 0.15);
+        }
+
+        .feature-card h4 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .term-window {
+            background: #1a1b26;
+            color: #a9b1d6;
+            padding: 20px;
+            border-radius: 12px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 16px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .term-prompt {
+            color: #7aa2f7;
+        }
+
+        .term-cmd {
+            color: #e0af68;
+        }
+
+        .term-success {
+            color: #9ece6a;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 25px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            padding: 14px 32px;
+            background: rgba(35, 47, 62, 0.9);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .slide-number {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            background: rgba(35, 47, 62, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            z-index: 1000;
+        }
+
+        .title-slide {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .title-slide h1 {
+            font-size: 72px;
+            border: none;
+            background: linear-gradient(135deg, #232f3e 0%, #D97757 50%, #C85A4D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 32px;
+            color: var(--text-secondary);
+            margin: 25px 0;
+            font-weight: 300;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1001;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress"></div>
+    </div>
+
+    <div class="presentation-container">
+        <div class="slide-number">
+            <span id="current-slide">1</span> / <span id="total-slides">15</span>
+        </div>
+
+        <!-- Slide 1: Title -->
+        <div class="slide active title-slide">
+            <h1>Claude Code Agent<br>AWS MSP 赋能培训</h1>
+            <div class="subtitle">Next-Gen CLI for Cloud Engineers</div>
+            <div class="subtitle">让 AI 成为你的结对编程伙伴</div>
+            <div style="margin-top: 50px; color: #718096;">
+                <p>演讲者：AWS MSP 卓越中心</p>
+                <p>2026年2月</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: 开场问题 -->
+        <div class="slide title-slide">
+            <h1 style="font-size: 56px;">🤔 开场问题</h1>
+            <div class="subtitle" style="font-size: 36px; margin-top: 60px;">
+                你们知道 2025 年的 AI 现象级产品有哪些吗？
+            </div>
+            <div class="subtitle" style="font-size: 36px; margin-top: 30px;">
+                2026 年开年又出现了哪些？
+            </div>
+            <div style="margin-top: 80px; color: #718096; font-size: 24px;">
+                <p>💡 提示：这些产品正在重新定义 AI 的使用方式...</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: 2025-2026 现象级 AI 产品演进 -->
+        <div class="slide">
+            <h1>2025-2026 现象级 AI 产品演进</h1>
+            <p>从对话式 AI 到工程化 AI 工作台，AI 正在从"回答问题"走向"自主执行任务"。</p>
+
+            <h2>🔥 2025 三大现象级</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Claude Code</h4>
+                    <p><strong>定位：</strong>AI 工程师<br>
+                    <strong>本质：</strong>终端原生的 AI 编程代理，能自主拆任务、写代码、跑测试、修 Bug<br>
+                    <strong>现象级原因：</strong>AI 真正进入"工程生产力"</p>
+                </div>
+                <div class="feature-card">
+                    <h4>豆包手机</h4>
+                    <p><strong>定位：</strong>AI 原生设备<br>
+                    <strong>本质：</strong>硬件层面与 AI 深度融合的新型交互形态<br>
+                    <strong>现象级原因：</strong>AI 原生设备形态的探索</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Manus</h4>
+                    <p><strong>定位：</strong>通用 Agent OS<br>
+                    <strong>本质：</strong>通用 Agent 操作系统雏形，跨应用自动化<br>
+                    <strong>现象级原因：</strong>Agent 操作系统化</p>
+                </div>
+            </div>
+
+            <h2>🚀 2026 开年三大现象级</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>OpenClaw</h4>
+                    <p><strong>定位：</strong>AI 操作员<br>
+                    <strong>本质：</strong>开源浏览器 Agent，能自动点击、填写、导航网页<br>
+                    <strong>现象级原因：</strong>浏览器 Agent 开源爆发</p>
+                </div>
+                <div class="feature-card">
+                    <h4>MoltBook</h4>
+                    <p><strong>定位：</strong>AI 工程团队工作台<br>
+                    <strong>本质：</strong>多 Agent 协作的工程化 AI 开发环境（Claude Code/Codex CLI 类产品统称）<br>
+                    <strong>现象级原因：</strong>多 Agent 工程环境成熟</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Chrome Gemini</h4>
+                    <p><strong>定位：</strong>AI 浏览器助手<br>
+                    <strong>本质：</strong>Gemini 深度嵌入 Chrome，原生页面理解 + 跨 Tab 推理 + 自动操作<br>
+                    <strong>现象级原因：</strong>浏览器内置 Agent 化</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 30px; text-align: center; font-size: 18px; color: #718096;">
+                <strong>演进路径：</strong>Chat → Tool → Agent → Multi-Agent → Agent Workspace → Agent OS
+            </p>
+        </div>
+
+        <!-- Slide 3: What is Claude Code? -->
+        <div class="slide">
+            <h1>什么是 Claude Code?</h1>
+            <p>Claude Code 不是一个简单的聊天机器人，它是运行在你终端（Terminal）里的高级 AI 代理（Agent）。它能够直接理解你的本地代码库，并执行实际操作。</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>💻 终端原生</h4>
+                    <p>直接在你的 Terminal 中运行，无缝集成到现有的工作流（Git, AWS CLI, Terraform）。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🧠 深度上下文</h4>
+                    <p>能够扫描和阅读成百上千个文件，理解复杂的项目架构，而不仅仅是单个文件。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>⚡️ 自主执行</h4>
+                    <p>可以规划任务、编辑文件、运行测试、修复错误，形成完整的闭环。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Why for MSP? -->
+        <div class="slide">
+            <h1>为什么 MSP 团队需要它？</h1>
+            <p>在 AWS MSP 运维场景中，我们面临着独特的挑战，Claude Code 能精准解决这些痛点：</p>
+
+            <ul>
+                <li><strong>遗留代码维护</strong>：快速理解并重构前人留下的复杂 Boto3 脚本或 Python 2.x 代码。</li>
+                <li><strong>基础设施修复</strong>：自动分析 Terraform Plan 报错，并直接修改 .tf 文件。</li>
+                <li><strong>日志排查</strong>：自动 Grep 分析 CloudWatch 日志，定位 Lambda 超时或 500 错误根因。</li>
+                <li><strong>标准化交付</strong>：确保所有生成的代码符合 AWS 最佳实践（如自动添加 Tags，使用加密等）。</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: 核心能力展示 -->
+        <div class="slide">
+            <h1>核心能力演示 (Live Demo)</h1>
+            <p>让我们现场演示 Claude Code 如何检查 AWS EC2 实例的配置和安全性。</p>
+
+            <div class="term-window">
+                <span class="term-prompt">➜ aws-ops git:(main)</span> <span class="term-cmd">claude</span><br>
+                <br>
+                <span style="color: #bbb">Claude Code 已初始化。有什么可以帮您？</span><br>
+                <br>
+                > <span class="term-cmd">请检查我的 AWS 账户中所有 EC2 实例，分析它们是否符合安全最佳实践：
+                    1. 是否启用了 IMDSv2
+                    2. 安全组是否有过于宽松的入站规则
+                    3. 是否有必要的 Tags（如 Name, Environment, Owner）
+                    4. EBS 卷是否启用了加密</span><br>
+                <br>
+                <span style="color: #7aa2f7">✓ 正在查询 EC2 实例...</span><br>
+                <span style="color: #7aa2f7">✓ 发现 2 个实例，正在分析配置...</span><br>
+            </div>
+
+            <div class="feature-grid" style="margin-top: 30px;">
+                <div class="feature-card">
+                    <h4>🎯 演示要点</h4>
+                    <p>观察 Claude Code 如何自动调用 AWS CLI，理解返回结果，并生成结构化的检查报告。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🔐 安全说明</h4>
+                    <p>Claude Code 使用您终端已配置的 AWS 凭证，不会存储任何敏感信息。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Case Study 1 - IaC -->
+        <div class="slide">
+            <h1>场景一：IaC 漂移检查与升级评估</h1>
+            <h2>挑战：Terraform 版本过旧，State 漂移</h2>
+            <p>客户的 Terraform 代码基于 v0.12，无法在 v1.0+ 上运行，且存在大量废弃语法。</p>
+
+            <div class="feature-grid">
+                <div class="feature-card" style="border-left: 5px solid #D97757;">
+                    <h4>Agent 检查</h4>
+                    <ul>
+                        <li><span style="color: #C85A4D;">Scanning</span>：扫描整个 terraform 目录。</li>
+                        <li><span style="color: #C85A4D;">Analyzing</span>：识别所有 `Type mismatch` 和废弃的 `interpolation` 语法。
+                        </li>
+                        <li><span style="color: #e0af68;">⚠ Found</span>：发现 20+ 个 .tf 文件需要更新。</li>
+                        <li><span style="color: #7aa2f7;">📋 Report</span>：生成详细的问题清单，等待人工确认后再执行修改。</li>
+                    </ul>
+                </div>
+            </div>
+            <p><strong>价值：</strong> 快速识别所有兼容性问题，避免盲目升级导致生产事故。</p>
+        </div>
+
+        <!-- Slide 6: Case Study 2 - Security -->
+        <div class="slide">
+            <h1>场景二：Security Hub 安全检查</h1>
+            <h2>挑战：大量高危安全发现（Findings）</h2>
+            <p>Security Hub 报告了 50+ 个 S3 存储桶未启用加密，以及 20+ 个安全组存在 0.0.0.0/0 开放。</p>
+
+            <div class="term-window">
+                > <span class="term-cmd">Check all S3 buckets in our CloudFormation templates. List which ones are missing 'BucketEncryption'.
+                    Also, find any SecurityGroupIngress allowing 0.0.0.0/0 on port 22 and report them.</span><br>
+                <span style="color: #718096; font-size: 14px;">&nbsp;&nbsp;(检查 CloudFormation 模板中的所有 S3 存储桶，列出缺少 'BucketEncryption' 的存储桶。同时查找允许 0.0.0.0/0 访问 22 端口的安全组入站规则并报告。)</span><br>
+                <br>
+                <span style="color: #7aa2f7">✓ 发现 12 个 CFN 模板。</span><br>
+                <span style="color: #e0af68">⚠ s3_app_data.yaml: 缺少 ServerSideEncryptionRule</span><br>
+                <span style="color: #e0af68">⚠ s3_logs_bucket.yaml: 缺少 ServerSideEncryptionRule</span><br>
+                <span style="color: #e0af68">⚠ sg_bastion.yaml: 检测到 SSH 入站规则 0.0.0.0/0 开放 22 端口</span><br>
+                <span style="color: #7aa2f7">📋 发现 3 个问题。等待您确认后再进行修改...</span>
+            </div>
+        </div>
+
+        <!-- Slide 7: Case Study 3 - Log Analysis -->
+        <div class="slide">
+            <h1>场景三：故障根因快速定位</h1>
+            <h2>挑战：生产环境 API 偶发 500 错误</h2>
+            <p>报警显示 API Gateway 5xx 激增，但 CloudWatch Logs 分散在多个 Log Group 中，人工排查困难。</p>
+
+            <h3>Claude Code 检查流程：</h3>
+            <ol style="margin-left: 20px;">
+                <li><strong>指令：</strong> "分析过去 1 小时 prod 环境的 Lambda 错误日志，找出重复出现的 StackTrace。"</li>
+                <li><strong>分析：</strong> Agent 调用 AWS CLI 拉取日志 -> 本地分析模式匹配。</li>
+                <li><strong>发现：</strong> 定位到 `database_connector.py` 第 45 行连接超时。</li>
+                <li><strong>建议：</strong> 建议增加指数退避（Exponential Backoff）重试机制，等待确认后再生成修复补丁。</li>
+            </ol>
+        </div>
+
+        <!-- Slide 8: Case Study 4 - Cost Optimization -->
+        <div class="slide">
+            <h1>场景四：成本优化资源检查</h1>
+            <h2>挑战：清理废弃 EBS 卷和未关联 EIP</h2>
+            <p>需要检查跨所有 Region 的废弃资源，生成清理清单供人工确认。</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🔍 资源扫描</h4>
+                    <p>Agent 扫描所有 Region，识别 status='available' 的 EBS 卷和未关联的 EIP，生成详细清单。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h4>📋 确认清单</h4>
+                    <p>列出每个资源的 ID、Region、创建时间、预估月费用，等待人工确认后再执行清理。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Best Practices -->
+        <div class="slide">
+            <h1>最佳实践 (Best Practices)</h1>
+            <div class="benefit-list" style="padding: 25px; background: white; border: 1px solid #eee;">
+                <div class="benefit-item">
+                    <div class="benefit-icon" style="background: #232f3e;">👁️</div>
+                    <div>
+                        <strong>Always Review the Plan</strong>
+                        <p>在 Agent 执行大规模修改前，仔细检查它生成的 "Plan"。如果方向不对，及时通过自然语言纠正。</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon" style="background: #D97757;">git</div>
+                    <div>
+                        <strong>Commit Often</strong>
+                        <p>Claude Code 会在修改文件时建议 git commit。保持小步提交，方便回滚。</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon" style="background: #4caf50;">🧪</div>
+                    <div>
+                        <strong>Verify with Tests</strong>
+                        <p>不要只让 Agent 写代码，更要让它写测试。指令示例："Fix the bug AND add a regression test case."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Security & Auth (SSO) -->
+        <div class="slide">
+            <h1>安全接入：告别 AK/SK</h1>
+            <h2>挑战：企业安全合规要求禁用长期 Access Keys</h2>
+            <p>很多企业环境下，为了防止凭证泄露，严禁在开发者终端保存静态的 <code>aws_access_key_id</code> 和 <code>secret_access_key</code>。</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🔐 原生支持 AWS SSO (Identity Center)</h4>
+                    <p>Claude Code 直接复用本地终端的 AWS 鉴权环境。只要你的 Terminal 能跑通 AWS CLI，Claude 就能用。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>⏱️ 临时凭证 (Temporary Credentials)</h4>
+                    <p>支持 <code>aws sso login</code> 获取的短期 Token。过期自动提示，无需在代码或配置中硬编码任何密钥。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🎭 IAM Role + AssumeRole</h4>
+                    <p>通过 <code>aws sts assume-role --role-arn arn:aws:iam::xxx:role/YourRole</code> 获取临时凭证，适合跨账户访问场景。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🖥️ EC2 Instance Profile</h4>
+                    <p>在 EC2 实例上运行时，自动从 Instance Metadata Service 获取凭证，零配置开箱即用。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🐳 ECS/EKS Task Role</h4>
+                    <p>容器环境中通过 Task Role 或 Pod Identity (Service Account) 自动注入凭证，无需手动管理。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🌐 Web Identity / OIDC</h4>
+                    <p>通过外部 IdP (GitHub Actions, GitLab CI) 的 OIDC Token 换取 AWS 临时凭证，适合 CI/CD 流水线。</p>
+                </div>
+            </div>
+
+            <div class="term-window">
+                <span class="term-prompt"># 1. 正常进行 SSO 登录</span><br>
+                <span class="term-prompt">➜</span> <span class="term-cmd">aws sso login --profile
+                    my-prod-profile</span><br>
+                <span class="term-success">Success: you are now logged in.</span><br>
+                <br>
+                <span class="term-prompt"># 2. 告诉 Claude 使用该 Profile</span><br>
+                <span class="term-prompt">➜</span> <span class="term-cmd">export AWS_PROFILE=my-prod-profile</span><br>
+                <span class="term-prompt">➜</span> <span class="term-cmd">claude</span><br>
+                <br>
+                > <span class="term-cmd">List my EC2 instances in us-east-1</span><br>
+                <span style="color: #7aa2f7">✓ Authenticated as: ARNOA... (via SSO)</span><br>
+                <span style="color: #7aa2f7">✓ Found 3 running instances.</span>
+            </div>
+        </div>
+
+        <!-- Slide 11: Getting Started -->
+        <div class="slide">
+            <h1>如何开始？</h1>
+            <p>请参考团队内部文档 <code>Claude Code团队使用指南.png</code> 获取详细的安装和配置 Token 步骤。</p>
+
+            <div style="margin-top: 30px;">
+                <h3>基础命令速查：</h3>
+                <div class="term-window">
+                    <span class="term-cmd">claude</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 启动交互模式<br>
+                    <span class="term-cmd">claude "fix bug"</span> # 直接执行单条指令<br>
+                    <span class="term-cmd">/compact</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#
+                    压缩上下文，节省 Token<br>
+                    <span class="term-cmd">/cost</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 查看当前会话 Token 消耗<br>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Future Outlook -->
+        <div class="slide">
+            <h1>展望：AI-Native MSP</h1>
+            <p>Claude Code 只是开始。未来的 MSP 服务将从 "人工响应" 转变为 "AI 自主修复"。</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>L1 Support 自动化</h4>
+                    <p>AI Agent 自动处理 80% 的常见工单（重置密码、扩容磁盘）。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>预测性维护</h4>
+                    <p>结合 CloudWatch Anomaly Detection，提前发现隐患并生成修复方案。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Q&A -->
+        <div class="slide title-slide">
+            <h1>Q & A</h1>
+            <div class="subtitle">感谢您的参与</div>
+            <div style="margin-top: 40px;">
+                <button class="nav-btn"
+                    onclick="location.href='aws-msp-llmops-presentation-enhanced.html'">返回主演示</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prev-btn" onclick="changeSlide(-1)">← Prev</button>
+        <button class="nav-btn" id="next-btn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 15;
+
+        function updateProgress() {
+            const progress = (currentSlide / totalSlides) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+        }
+
+        function showSlide(n) {
+            const slides = document.getElementsByClassName('slide');
+
+            if (n > totalSlides) currentSlide = 1;
+            if (n < 1) currentSlide = totalSlides;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+            }
+
+            slides[currentSlide - 1].classList.add('active');
+
+            document.getElementById('current-slide').textContent = currentSlide;
+
+            // Update navigation buttons
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            if (currentSlide === 1) {
+                prevBtn.disabled = true;
+                prevBtn.style.opacity = '0.3';
+                prevBtn.style.cursor = 'not-allowed';
+            } else {
+                prevBtn.disabled = false;
+                prevBtn.style.opacity = '1';
+                prevBtn.style.cursor = 'pointer';
+            }
+
+            if (currentSlide === totalSlides) {
+                nextBtn.disabled = true;
+                nextBtn.style.opacity = '0.3';
+                nextBtn.style.cursor = 'not-allowed';
+            } else {
+                nextBtn.disabled = false;
+                nextBtn.style.opacity = '1';
+                nextBtn.style.cursor = 'pointer';
+            }
+
+            updateProgress();
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                changeSlide(-1);
+            }
+            if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                changeSlide(1);
+            }
+            if (event.key === ' ') {
+                event.preventDefault();
+                changeSlide(1);
+            }
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                currentSlide = 1;
+                showSlide(1);
+            }
+        });
+
+        // Initialize
+        document.getElementById('total-slides').textContent = totalSlides;
+        showSlide(1);
+
+        // Touch/swipe
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', function (event) {
+            touchStartX = event.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', function (event) {
+            touchEndX = event.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) changeSlide(1);
+            if (touchEndX > touchStartX + 50) changeSlide(-1);
+        }
+    </script>
+</body>
+
+</html>
