@@ -301,7 +301,7 @@ OpenClaw能不能用来做量化？能，但目前更适合做"外挂"而不是"
 
 - 邮箱：jason2023zhang@gmail.com
 - 微信：winnielove2020
-- 博客：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+- 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别想听听：
 - 你有没有用AI Agent做量化的经验？

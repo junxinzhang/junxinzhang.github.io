@@ -354,7 +354,7 @@ MCP协议正在成为行业标准。学习如何：
 
 - 邮箱：jason2023zhang@gmail.com
 - 微信：winnielove2020
-- 博客：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+- 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 ---
 

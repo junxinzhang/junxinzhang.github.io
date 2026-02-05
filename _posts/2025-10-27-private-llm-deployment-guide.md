@@ -630,7 +630,7 @@ A：取决于任务特殊性：
 
 - **📧 邮箱**：jason2023zhang@gmail.com
 - **💬 微信**：winnielove2020
-- **🌐 技术博客**：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+- **🌐 技术博客**：[https://junxinzhang.com](https://junxinzhang.com)
 
 我特别欢迎来自以下背景的交流：
 - 正在进行大模型 POC 或采购的企业
@@ -654,7 +654,7 @@ A：取决于任务特殊性：
 **如需引用本文**，请参考：
 ```
 Jason Zhang, "【国内企业必读】私有化大模型落地完全指南：
-从预算估算到参数选型的权威解析", junxinzhang.github.io, 2025
+从预算估算到参数选型的权威解析", junxinzhang.com, 2025
 ```
 
 ---

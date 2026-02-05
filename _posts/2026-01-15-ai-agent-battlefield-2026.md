@@ -396,7 +396,7 @@ AI Agent时代，谁能占据类似的位置？
 
 - 邮箱：jason2023zhang@gmail.com
 - 微信：winnielove2020
-- 博客：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+- 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：
 - AI Agent的应用场景

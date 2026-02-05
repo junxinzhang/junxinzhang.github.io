@@ -138,7 +138,7 @@ slug: why-language-models-hallucinate
 
 **📧 邮箱**：jason2023zhang@gmail.com
 **💬 微信**：winnielove2020
-**🌐 技术博客**：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+**🌐 技术博客**：[https://junxinzhang.com](https://junxinzhang.com)
 
 ---
 

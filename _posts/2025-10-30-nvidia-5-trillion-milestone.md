@@ -427,7 +427,7 @@ AMD的生态 = 基于行业通用标准的开放生态
 
 - 📧 邮箱：jason2023zhang@gmail.com
 - 💬 微信：winnielove2020
-- 🌐 博客：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+- 🌐 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：
 - 英伟达的估值是否合理

@@ -481,7 +481,7 @@ AI 应用生命周期管理
 
 - 📧 邮箱：jason2023zhang@gmail.com
 - 💬 微信：winnielove2020
-- 🌐 博客：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+- 🌐 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：
 - 你的 AI 应用成本和性能痛点

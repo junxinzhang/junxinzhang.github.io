@@ -236,7 +236,7 @@ Apple生态的整合确实丝滑——日历同步、提醒事项、系统工具
 
 - 邮箱：jason2023zhang@gmail.com
 - 微信：winnielove2020
-- 博客：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+- 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别想听听：
 - 你的Chrome Relay稳定吗？

@@ -1181,7 +1181,7 @@ AI很适合模式匹配，但不适合逻辑推理。
 
 - 📧 邮箱：jason2023zhang@gmail.com
 - 💬 微信：winnielove2020
-- 🌐 博客：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+- 🌐 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：
 - 神经符号系统的实现路径

@@ -355,7 +355,7 @@ AI革命之后，我们可能需要：
 
 - 邮箱：jason2023zhang@gmail.com
 - 微信：winnielove2020
-- 博客：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+- 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：
 - AI对就业市场的影响

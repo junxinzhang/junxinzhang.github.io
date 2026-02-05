@@ -305,7 +305,7 @@ AI Agent正在渗透每一个专业领域：
 
 - 邮箱：jason2023zhang@gmail.com
 - 微信：winnielove2020
-- 博客：[https://junxinzhang.github.io](https://junxinzhang.github.io)
+- 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：
 - 你们团队是怎么引入AI Agent的？
