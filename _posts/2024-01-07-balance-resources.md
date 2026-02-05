@@ -6,8 +6,6 @@ categories: [Career]
 image: assets/images/screenshot-20240107-balance-resources.webp
 tags: [featured, self-improvement, sustainability, success]
 ads: false
-noindex: true
-sitemap: false
 ---
 
 在这个瞬息万变的时代，如何作为一个长期主义者，合理利用身边的资源，比如亲戚、同事、朋友和资金，同时不让资源被滥用或浪费，是一门艺术。这篇文章将讨论如何找到使用资源的平衡点，既充分利用，又避免过度消耗。

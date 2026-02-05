@@ -6,8 +6,6 @@ categories: [Career]
 image: assets/images/screenshot-20240102-personal-ip.jpg
 tags: [featured, branding, decision-making, career growth]
 ads: false
-noindex: true
-sitemap: false
 ---
 
 在这个信息爆炸的时代，个人IP（知名度和影响力）已成为一种新兴的力量。随着社交媒体的蓬勃发展，个人品牌建设变得前所未有地重要。个人IP的崛起，带来了巨大的商业价值和社会影响。然而，伴随这种势能的增长，每个人都将面临一个关键的抉择：是继续投资于未来，还是立即兑现现有的成果？
