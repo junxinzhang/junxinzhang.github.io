@@ -43,5 +43,5 @@ tags: [GitLab, AWS, CodeCommit, CI/CD, Repository Mirroring, Version Control, Au
 希望本文能为您提供清晰的指导，帮助您在 AWS 上实施和优化 DevOps 工作流。如有任何疑问或进一步的讨论，请在评论区留言。
 
 ## References
-- [统一DevOps流程：供应商协作的关键](https://junxinzhang.github.io/devops/)
-- [AWS DevOps CodePipeline体系建设：构建高效、自动化的部署流程](https://junxinzhang.github.io/devops-aws-codepipeline/)
+- [统一DevOps流程：供应商协作的关键](https://junxinzhang.com/devops/)
+- [AWS DevOps CodePipeline体系建设：构建高效、自动化的部署流程](https://junxinzhang.com/devops-aws-codepipeline/)

@@ -46,7 +46,7 @@ ERP及其各关联模块共同构建了一个综合性的企业管理系统，�
 - [制造型企业管理系统核心模块之：质量管理系统（QMS）][qms]
 - [制造型企业管理系统核心模块之：客户管理系统（CRM）][crm]
 
-[mrp]: https://junxinzhang.github.io/mrp/
-[aps]: https://junxinzhang.github.io/aps/
-[qms]: https://junxinzhang.github.io/qms/
-[crm]: https://junxinzhang.github.io/crm/
+[mrp]: https://junxinzhang.com/mrp/
+[aps]: https://junxinzhang.com/aps/
+[qms]: https://junxinzhang.com/qms/
+[crm]: https://junxinzhang.com/crm/

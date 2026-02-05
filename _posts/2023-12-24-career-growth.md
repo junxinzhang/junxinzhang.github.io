@@ -41,4 +41,4 @@ tags: [career, efficiency, personal development]
 ## References
 - [财富积累的艺术：赚小钱到赚超大的钱][links-1]
 
-[links-1]: https://junxinzhang.github.io/The-secret-to-making-money/
+[links-1]: https://junxinzhang.com/The-secret-to-making-money/

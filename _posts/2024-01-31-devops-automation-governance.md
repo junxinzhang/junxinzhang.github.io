@@ -28,6 +28,6 @@ tags: [DevOps, Automation, CI/CD, Policy as Code, Resilience, Chaos Engineering,
 
 
 ### References
-- [统一DevOps流程：供应商协作的关键](https://junxinzhang.github.io/devops/)
-- [AWS DevOps CodePipeline体系建设：构建高效、自动化的部署流程](https://junxinzhang.github.io/devops-aws-codepipeline/)
-- [DevOps实践中的深思熟虑：利用Jenkins和AWS CodeDeploy的策略性应用](https://junxinzhang.github.io/devops-thoughtful/)
+- [统一DevOps流程：供应商协作的关键](https://junxinzhang.com/devops/)
+- [AWS DevOps CodePipeline体系建设：构建高效、自动化的部署流程](https://junxinzhang.com/devops-aws-codepipeline/)
+- [DevOps实践中的深思熟虑：利用Jenkins和AWS CodeDeploy的策略性应用](https://junxinzhang.com/devops-thoughtful/)
