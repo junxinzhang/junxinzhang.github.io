@@ -7,7 +7,7 @@ categories: [AI, 量化交易, 深度分析]
 tags: [AI量化, 大模型选型, Claude, GPT, DeepSeek, Qwen, 成本优化, 多智能体, A股]
 image: assets/images/screenshot-20260207-llm-selection-quant-cover.png
 slug: ai-quant-llm-selection-guide
-description: "做AI量化交易，大模型怎么选？11家厂商、开源闭源、成本差异50倍——这篇文章用真实场景测试告诉你：不同环节该用什么模型，怎么搭配才能既省钱又靠谱。"
+description: "做AI量化交易，大模型怎么选？11家厂商、开源闭源、成本差异可达60倍——这篇文章用真实场景测试告诉你：不同环节该用什么模型，怎么搭配才能既省钱又靠谱。"
 ---
 
 > **实战报告抢先看**：本文附带三份AI量化系统生成的真实个股分析报告（NVDA、TSLA、AMZN），展示多智能体+分级调用的实际输出效果。👉 [跳转到报告下载](#附录实战分析报告)
@@ -38,8 +38,8 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 
 | 厂商 | 最新模型 | 类型 | 关键数据 | 量化交易定位 |
 |------|---------|------|---------|------------|
-| **Anthropic** | Claude Opus 4.6 / Sonnet 4.5 | 闭源 | 100万Token上下文，Terminal-Bench 65.4%（全场最高） | **决策大脑**——最复杂的判断交给它 |
-| **OpenAI** | GPT-5.3 Codex / o3 | 闭源 | 比前代快25%，首个获"高能力"网络安全评级的模型 | **全能副手**——什么都能干，干得都不错 |
+| **Anthropic** | Claude Opus 4.6 / Sonnet 4.5 | 闭源 | 100万Token上下文，Terminal-Bench 65.4%（2026-02公开数据） | **决策大脑**——最复杂的判断交给它 |
+| **OpenAI** | GPT-5.3 Codex / o3 | 闭源 | GPT-5.3-Codex在Terminal-Bench 2.0达77.3%，API标注为"soon"；o3已提供API | **全能副手**——什么都能干，干得都不错 |
 | **Google** | Gemini 3 Pro | 闭源 | 100万Token输入，6.4万Token输出 | **财报专家**——200页年报一口气读完 |
 | **Meta** | Llama 4 Scout | 开源 | 1000万Token上下文 | **私有管家**——部署在自己服务器上最安心 |
 | **xAI** | Grok 4.1 | 闭源 | LMArena推理排名#1 | **推理悍将**——数学推理突出 |
@@ -71,25 +71,27 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 
 ![大模型API价格对比](/assets/images/screenshot-20260207-llm-pricing-comparison.png)
 
-*2026年2月主流大模型API定价对比：价差最高达50倍*
+*2026年2月主流大模型API定价对比：价差可达60倍以上（按输出单价口径）*
 
-<!-- 图片提示词：Flat vector illustration, Infographic style, Clean data visualization. Ultra-wide layout showing a horizontal bar chart comparing AI model API pricing. Title area on top left: "2026大模型API价格对比". Six horizontal bars representing different models, each with model name on left and price on right. From top (most expensive) to bottom (cheapest): Claude Opus 4.6 ($5/$25 per M tokens) in deep coral red bar, GPT-5.3 ($4.5/$22) in orange bar, Gemini 3 Pro ($2/$12) in blue bar, Claude Sonnet 4.5 ($1.5/$5.5) in teal bar, Qwen 3 ($0.5/$2) in green bar, DeepSeek V3.2 ($0.27/$0.41) in light mint bar. Each bar has an icon: brain for Opus, star for GPT, eye for Gemini, lightning for Sonnet, speech bubble for Qwen, worker hat for DeepSeek. Right side annotation showing "50x price gap" with arrow spanning from top to bottom. Small callout box: "同样分析100条新闻：Opus ¥200+ vs DeepSeek ¥10". Color palette: Dark charcoal background (#1E293B), bars in gradient warm-to-cool colors, white text, coral (#F97316) accent for highlights. Professional fintech chart aesthetic. Aspect Ratio 2.35:1. -->
+<!-- 图片提示词：Flat vector illustration, Infographic style, Clean data visualization. Ultra-wide layout showing a horizontal bar chart comparing AI model API pricing. Title area on top left: "2026大模型API价格对比". Six horizontal bars representing different models, each with model name on left and price on right. From top (most expensive) to bottom (cheapest): Claude Opus 4.6, Claude Sonnet 4.5, Gemini 3 Pro, o3, Qwen 3, DeepSeek V3.2. Right side annotation showing "60x+ price gap（output pricing）" with arrow spanning from top to bottom. Small callout box: "同样分析100条新闻：成本差异与输出长度强相关". Color palette: Dark charcoal background (#1E293B), bars in gradient warm-to-cool colors, white text, coral (#F97316) accent for highlights. Professional fintech chart aesthetic. Aspect Ratio 2.35:1. -->
 
-我把目前主流模型的API价格整理成一张表，**单位统一换算成人民币**（按1美元≈7.3元），方便你直接比较：
+我把目前主流模型的API价格整理成一张表，**单位统一换算成人民币**（按1美元≈7.3元），方便你直接比较。注：不同厂商存在缓存价/批量价/分层价，以下统一按公开主价档口径横向对比。
 
-| 模型 | 输入价格（每百万Token） | 输出价格（每百万Token） | 单次分析成本估算 | 性能定位 |
-|------|----------------------|----------------------|---------------|---------|
-| **Claude Opus 4.6** | ¥36.5 | ¥182.5 | ~¥7.5 | 推理天花板 |
-| **GPT-5.3 Codex** | ¥33 | ¥160 | ~¥6.0 | 全能型 |
-| **o3** | ¥40+ | ¥200+ | ~¥8.0 | 数学推理 |
-| **Gemini 3 Pro** | ¥14.6 | ¥87.6 | ~¥3.0 | 长文档 |
-| **Claude Sonnet 4.5** | ¥11 | ¥40 | ~¥1.8 | 性价比 |
-| **Kimi K2.5** | ¥8 | ¥30 | ~¥1.5 | 长上下文 |
-| **DeepSeek-R1** | ¥4.0 | ¥16.0 | ~¥0.8 | 推理性价比 |
-| **Qwen 3** | ¥3.6 | ¥14.6 | ~¥0.5 | 中文专家 |
-| **DeepSeek-V3.2** | ¥2.0 | ¥3.0 | ~¥0.03 | 成本王者 |
+| 模型 | 输入价格（每百万Token） | 输出价格（每百万Token） | 可用性说明 | 性能定位 |
+|------|----------------------|----------------------|-----------|---------|
+| **Claude Opus 4.6** | ¥36.5 | ¥182.5 | API可用 | 推理天花板 |
+| **GPT-5.3 Codex** | - | - | 主要在Codex/ChatGPT可用，API待开放 | 全能型 |
+| **o3** | ¥14.6 | ¥58.4 | API可用 | 数学推理 |
+| **Gemini 3 Pro** | ¥14.6 | ¥87.6 | API可用 | 长文档 |
+| **Claude Sonnet 4.5** | ¥21.9 | ¥109.5 | API可用 | 通用性价比 |
+| **Kimi K2.5** | ¥8 | ¥30 | API可用 | 长上下文 |
+| **DeepSeek-R1** | ¥4.0 | ¥16.0 | API可用 | 推理性价比 |
+| **Qwen 3** | ¥3.6 | ¥14.6 | API可用 | 中文专家 |
+| **DeepSeek-V3.2** | ¥2.0 | ¥3.0 | API可用 | 成本王者 |
 
-> **一个直觉性的对比**：用Claude Opus分析100条A股新闻，成本约¥750。同样的活儿交给DeepSeek-V3.2，成本不到¥3。**价差250倍。** 但推理质量呢？对于"判断这条新闻是利好还是利空"这种简单任务，两者的准确率差距不超过5%。
+> **一个直觉性的对比**：按公开主价档，Claude Opus与DeepSeek-V3.2的单价差距约为**输入18倍、输出61倍**。落到真实任务里，成本差距通常在**20-60倍**，核心取决于输出长度控制（越“话多”越贵）。
+
+> **数据口径说明（2026-02-08）**：Anthropic Pricing/Max、OpenAI GPT-5.3-Codex发布页、OpenAI o3模型页。后续若厂商调价，请以官方页面为准。
 
 <mark>这就是分级调用的核心逻辑：简单的活儿用便宜的，关键的决策用最强的。</mark>
 
@@ -99,12 +101,12 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 
 | 订阅计划 | 月费 | 折合人民币 | 核心权益 | 适合谁 |
 |---------|------|----------|---------|----|
-| **Claude Max 5x** | $100/月 | ~¥730 | Opus 4.6 免费版25倍用量，含Extended Thinking | 轻度使用者 |
-| **Claude Max 20x** | $200/月 | ~¥1,460 | Opus 4.6 免费版100倍用量，最高优先级 | 认真做研究 |
-| **ChatGPT Pro** | $200/月 | ~¥1,460 | GPT-5.3/o3无限制，深度研究模式，Sora视频 | 全能需求 |
+| **Claude Max 5x** | $100/月 | ~¥730 | 约为Pro配额5倍，含Extended Thinking | 轻度使用者 |
+| **Claude Max 20x** | $200/月 | ~¥1,460 | 约为Pro配额20倍，最高优先级 | 认真做研究 |
+| **ChatGPT Pro** | $200/月 | ~¥1,460 | GPT-5.3/o3高配额（非无限），深度研究模式，Sora视频 | 全能需求 |
 | **Google AI Ultra** | $249.99/月 | ~¥1,825 | Gemini 3 Pro最高用量，100万上下文，25,000 AI积分 | 财报重度分析 |
 
-> **我的建议**：试水阶段（前3个月），花**¥3,300/月**订阅Claude Max 20x + Google AI Ultra，手动+半自动分析，边学边调。等跑通了再切API按量付费。
+> **我的建议**：试水阶段（前3个月），花**¥3,300/月**订阅ChatGPT Pro + Google AI Ultra，手动+半自动分析，边学边调。等跑通了再切API按量付费。
 >
 > <mark>订阅制是"学习期的最佳伴侣"——用固定成本获得顶级模型的充分体验，帮你在正式投入前搞清楚哪个模型真正好用。</mark>
 
@@ -147,7 +149,7 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 | 推荐模型 | 原因 | 单次成本 |
 |---------|------|---------|
 | **Gemini 3 Pro** | 100万Token上下文，200页年报一次读完，不用切片 | ~¥3.0 |
-| **Claude Opus 4.6** | Terminal-Bench 65.4%（最高），措辞分析精准 | ~¥7.5 |
+| **Claude Opus 4.6** | Terminal-Bench 65.4%（公开基准表现强），措辞分析精准 | ~¥7.5 |
 | **Kimi K2.5** | 长上下文能力突出，中文原生理解 | ~¥1.5 |
 
 > **实测心得**：一份120页的年报，Gemini 3 Pro可以一次性读入全文做分析，不用切片，这是它100万Token上下文窗口的巨大优势。Claude Opus 4.6拆成多段分析后综合，推理深度更好但耗时更长。**建议**：先用Gemini做初筛（成本¥3），对重点公司用Claude做深度分析（成本¥7.5）。一只股票的财报解读总成本控制在¥10以内。
@@ -167,8 +169,8 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 
 | 推荐模型 | 原因 | 单次成本 |
 |---------|------|---------|
-| **Claude Opus 4.6** | 推理最强（Terminal-Bench 65.4%），Finance Agent评分60.7% | ~¥7.5 |
-| **o3** | 数学推理顶级，Codeforces新纪录，定量分析精准 | ~¥8.0 |
+| **Claude Opus 4.6** | 推理表现稳定（Terminal-Bench 65.4%），Finance Agent评分60.7% | ~¥7.5 |
+| **o3** | 数学推理顶级，Codeforces新纪录，定量分析精准 | ~¥2.3 |
 | **Grok 4.1** | LMArena推理排名#1 | ~¥6.0 |
 
 > **实测心得**：Claude Opus 4.6在辩论环节的表现最让我惊喜。它不仅能列出看多/看空的理由，还能**主动指出对方论证中的薄弱环节**——比如："看多方提到的'行业景气度回升'依据的是2025年Q3数据，但Q4的PMI已经开始走弱，这个论据的时效性存疑。"这种批判性思维是其他模型比较弱的地方。
@@ -183,11 +185,11 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 
 | 推荐模型 | 原因 | 单次成本 |
 |---------|------|---------|
-| **o3** | 数学推理最强，AIME满分，比o1减少20%错误 | ~¥8.0 |
-| **Claude Sonnet 4.5** | 性价比高，推理能力够用 | ~¥1.8 |
+| **o3** | 数学推理最强，AIME满分，比o1减少20%错误 | ~¥2.3 |
+| **Claude Sonnet 4.5** | 性价比高，推理能力够用 | ~¥4.5 |
 | **DeepSeek-R1** | 推理链透明，32K Chain-of-Thought，成本低 | ~¥0.8 |
 
-> **实测心得**：风控计算对数学精度要求高，但逻辑复杂度适中（主要是公式计算）。Claude Sonnet 4.5在这个环节是**性价比最高的选择**——推理能力够用，价格只有Opus的四分之一。DeepSeek-R1的优势在于它的32K推理链完全透明——你能看到它每一步的计算过程，出了问题容易排查。
+> **实测心得**：风控计算对数学精度要求高，但逻辑复杂度适中（主要是公式计算）。Claude Sonnet 4.5在这个环节是**性价比很高的选择**——推理能力够用，价格显著低于Opus。DeepSeek-R1的优势在于它的32K推理链完全透明——你能看到它每一步的计算过程，出了问题容易排查。
 
 ### <mark>环节五：综合决策——不能省钱的环节</mark>
 
@@ -198,7 +200,7 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 | 推荐模型 | 原因 | 单次成本 |
 |---------|------|---------|
 | **Claude Opus 4.6** | 综合推理+报告生成最强，GDPval-AA超GPT-5.2约144 Elo | ~¥7.5 |
-| **GPT-5.3 Codex** | 全能选手，比前代快25% | ~¥6.0 |
+| **GPT-5.3 Codex** | 全能选手，比前代快25% | 订阅配额内 |
 
 > **实测心得**：最终决策这个环节不能省钱。这里用便宜模型就像让实习生做最终拍板——风险太大。Claude Opus 4.6生成的决策报告逻辑链最清晰，每个结论都能追溯到具体的分析依据。而且它新增的**Adaptive Thinking模式**支持配置思考深度（low/medium/high/max），对于特别重要的决策可以开到max，让模型"想得更深"。
 
@@ -211,7 +213,7 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 ![三层金字塔模型架构](/assets/images/screenshot-20260207-pyramid-architecture.png)
 *三层金字塔架构：不同环节用不同层级的模型，实现成本与质量的最优平衡*
 
-<!-- 图片提示词：Flat vector illustration, Minimalist, Architecture diagram style. Ultra-wide cinematic layout showing a three-tier pyramid structure for AI model deployment. The pyramid is centered and prominent. Top tier (smallest, golden glow): Crown icon, label "决策层" with "Claude Opus 4.6 / GPT-5.3" and "¥7.5/次". Contains icons: gavel, brain with lightbulb, report document. Tag: "多空辩论 + 综合决策". Middle tier (medium, teal glow): Shield icon, label "分析层" with "Sonnet 4.5 / Gemini 3 Pro" and "¥1.5-3/次". Contains icons: magnifying glass over document, calculator, chart. Tag: "财报解读 + 风险评估". Bottom tier (largest, cool gray with subtle green): Worker helmet icon, label "采集层" with "DeepSeek-V3 / Qwen 3" and "¥0.03-0.05/次". Contains icons: newspaper, data stream, filter funnel. Tag: "新闻舆情 + 数据清洗". Arrows flowing upward between tiers showing data flow. Right side: vertical cost comparison bar showing "全Opus ¥427.5" vs "分级 ¥28.8" with "节省93%" callout in coral. Background: clean white to light gray gradient. Color palette: Gold (#F59E0B) for top, teal (#0D9488) for middle, slate gray (#64748B) for bottom, coral (#F97316) for savings highlight. Professional engineering diagram feel. Aspect Ratio 2.35:1. -->
+<!-- 图片提示词：Flat vector illustration, Minimalist, Architecture diagram style. Ultra-wide cinematic layout showing a three-tier pyramid structure for AI model deployment. The pyramid is centered and prominent. Top tier (smallest, golden glow): Crown icon, label "决策层" with "Claude Opus 4.6 / GPT-5.3" and "¥7.5/次". Contains icons: gavel, brain with lightbulb, report document. Tag: "多空辩论 + 综合决策". Middle tier (medium, teal glow): Shield icon, label "分析层" with "Sonnet 4.5 / Gemini 3 Pro" and "¥3-4.5/次". Contains icons: magnifying glass over document, calculator, chart. Tag: "财报解读 + 风险评估". Bottom tier (largest, cool gray with subtle green): Worker helmet icon, label "采集层" with "DeepSeek-V3 / Qwen 3" and "¥0.03-0.05/次". Contains icons: newspaper, data stream, filter funnel. Tag: "新闻舆情 + 数据清洗". Arrows flowing upward between tiers showing data flow. Right side: vertical cost comparison bar showing "全Opus ¥427.5" vs "分级 ¥31.5" with "节省93%" callout in coral. Background: clean white to light gray gradient. Color palette: Gold (#F59E0B) for top, teal (#0D9488) for middle, slate gray (#64748B) for bottom, coral (#F97316) for savings highlight. Professional engineering diagram feel. Aspect Ratio 2.35:1. -->
 
 ```
           ┌─────────────┐
@@ -220,7 +222,7 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
           └──────┬──────┘
            ┌─────┴─────┐
            │  分析层    │  Claude Sonnet 4.5 / Gemini 3 Pro
-           │ ¥1.5-3/次 │  财报解读 + 风险评估
+           │ ¥3-4.5/次 │  财报解读 + 风险评估
            └─────┬─────┘
         ┌────────┴────────┐
         │    采集层        │  DeepSeek-V3 / Qwen 3
@@ -237,9 +239,9 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 | 新闻舆情 | DeepSeek-V3.2 | 50次 | ¥0.03 | ¥1.5 |
 | 财报解读 | Gemini 3 Pro | 1次 | ¥3.0 | ¥3.0 |
 | 多空辩论 | Claude Opus 4.6 | 2次 | ¥7.5 | ¥15.0 |
-| 风险评估 | Claude Sonnet 4.5 | 1次 | ¥1.8 | ¥1.8 |
+| 风险评估 | Claude Sonnet 4.5 | 1次 | ¥4.5 | ¥4.5 |
 | 综合决策 | Claude Opus 4.6 | 1次 | ¥7.5 | ¥7.5 |
-| **合计** | | | | **¥28.8** |
+| **合计** | | | | **¥31.5** |
 
 ### 4.2 对比：如果全部用最强模型
 
@@ -252,7 +254,7 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 | 综合决策 | Claude Opus 4.6 | 1次 | ¥7.5 | ¥7.5 |
 | **合计** | | | | **¥427.5** |
 
-<mark>分级调用节省了93%的成本</mark>——从¥427.5降到¥28.8，主要省在新闻舆情这个"量大但简单"的环节。
+<mark>分级调用节省了约93%的成本</mark>——从¥427.5降到¥31.5，主要省在新闻舆情这个"量大但简单"的环节。
 
 ### 4.3 月度成本估算
 
@@ -261,10 +263,10 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 | 方案 | 月成本 | 年成本 | 适用人群 |
 |------|-------|-------|---------|
 | 全部用Opus | ¥188,100 | ¥225.7万 | 土豪专属 |
-| **分级调用**（推荐） | **¥12,672** | **¥15.2万** | 认真做的个人/小团队 |
+| **分级调用**（推荐） | **¥13,860** | **¥16.6万** | 认真做的个人/小团队 |
 | 极致省钱版（全DeepSeek） | ¥2,640 | ¥3.2万 | 试水阶段 |
 
-分级调用方案的月成本约**¥1.3万**，对于认真做量化的个人投资者来说，是可以承受的范围。
+分级调用方案的月成本约**¥1.4万**，对于认真做量化的个人投资者来说，是可以承受的范围。
 
 ---
 
@@ -310,7 +312,7 @@ description: "做AI量化交易，大模型怎么选？11家厂商、开源闭�
 
 ---
 
-## 六、真实案例：Snowflake和Quantopian怎么做的？
+## 六、真实案例：Snowflake和量化教育圈怎么做的？
 
 光讲理论不够，来看看行业里真实在做的事情。
 
@@ -369,11 +371,11 @@ Azilen Technologies在2026年1月发布了一份金融领域LLM选型指南，�
 | 项目 | 月成本 |
 |------|-------|
 | AWS基础设施 | ¥1,025 |
-| 大模型API（分级调用） | ¥12,672 |
+| 大模型API（分级调用） | ¥13,860 |
 | 数据源（Tushare Pro等） | ¥200 |
-| **总计** | **~¥13,900** |
+| **总计** | **~¥15,100** |
 
-年化成本约**¥16.7万**。如果按¥500万本金计算，运营成本占本金的**3.3%**——也就是说，策略年化收益率需要跑赢3.3%才能覆盖成本。考虑到目标是年化12%以上，成本占比是可接受的。
+年化成本约**¥18.1万**。如果按¥500万本金计算，运营成本占本金的**3.6%**——也就是说，策略年化收益率需要跑赢3.6%才能覆盖成本。考虑到目标是年化12%以上，成本占比是可接受的。
 
 ---
 
@@ -393,8 +395,8 @@ Azilen Technologies在2026年1月发布了一份金融领域LLM选型指南，�
 
 | 如果你是… | 推荐方案 |
 |----------|---------|
-| **个人投资者，试水阶段** | 订阅Claude Max 20x + Google AI Ultra，月成本¥3,300以内 |
-| **个人投资者，认真做** | 三层分级API调用，月成本¥1.3万 |
+| **个人投资者，试水阶段** | 订阅ChatGPT Pro + Google AI Ultra，月成本¥3,300以内 |
+| **个人投资者，认真做** | 三层分级API调用，月成本¥1.4万 |
 | **小型私募/工作室** | 分级 + Llama 4私有化，注重数据安全 |
 | **机构投资者** | Claude/GPT全栈 + 私有化，不差钱差质量 |
 
@@ -403,9 +405,9 @@ Azilen Technologies在2026年1月发布了一份金融领域LLM选型指南，�
 | 模型 | 一句话定位 | 核心数据支撑 |
 |------|----------|------------|
 | Claude Opus 4.6 | **决策大脑**——最复杂的判断交给它 | Terminal-Bench 65.4%，Finance Agent 60.7% |
-| GPT-5.3 Codex | **全能副手**——什么都能干，干得都不错 | 比前代快25%，首个"高能力"网络安全评级 |
+| GPT-5.3 Codex | **全能副手**——什么都能干，干得都不错 | 比前代快25%，Terminal-Bench 2.0达77.3%，API状态为"soon" |
 | Gemini 3 Pro | **财报专家**——200页年报一口气读完 | 100万Token输入，上下文缓存低至$0.20/M |
-| o3 | **数学天才**——风控计算、定量分析 | AIME满分，比o1减少20%错误 |
+| o3 | **数学天才**——风控计算、定量分析 | AIME满分，比o1减少20%错误，API价格$2/$8（每百万Token） |
 | DeepSeek-V3.2 | **勤劳苦力**——量大活糙不怕累，成本极低 | 输入仅$0.27/百万Token |
 | Qwen 3 | **中文专家**——A股新闻、政策解读 | 119种语言和方言支持 |
 | DeepSeek-R1 | **透明推理**——每一步计算过程都看得见 | 32K Chain-of-Thought推理链 |
@@ -467,7 +469,7 @@ Azilen Technologies在2026年1月发布了一份金融领域LLM选型指南，�
 
 ## 附录：实战分析报告
 
-以下三份报告由AI多智能体量化系统（分级调用架构）于**2026年2月8日**生成，完整展示了新闻舆情分析、财报解读、多空辩论、风险评估和综合决策的全流程输出。你可以直接点击预览或下载：
+本文首发于**2026年2月8日**，以下三份报告为**2026年2月8日补充更新**：由AI多智能体量化系统（分级调用架构）生成，完整展示了新闻舆情分析、财报解读、多空辩论、风险评估和综合决策的全流程输出。你可以直接点击预览或下载：
 
 | 股票 | 报告 | 说明 |
 |------|------|------|
