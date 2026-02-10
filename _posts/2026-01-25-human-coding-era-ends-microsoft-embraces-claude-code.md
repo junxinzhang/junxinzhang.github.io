@@ -4,7 +4,7 @@ title: "人类编码的时代结束了？微软内部全面拥抱Claude Code背�
 author: Jason Zhang
 categories: [AI]
 image: assets/images/screenshot-20260125-human-coding-era-ends-cover.jpg
-tags: [Claude Code, GitHub Copilot, Microsoft, AI编程, 软件开发, Anthropic, 开发者工具]
+tags: [featured, Claude Code, GitHub Copilot, Microsoft, AI编程, 软件开发, Anthropic, 开发者工具]
 slug: human-coding-era-ends-microsoft-embraces-claude-code
 ---
 

@@ -4,7 +4,7 @@ title: "AI时代的隐性淘汰：被取代的不是能力不足，而是解释�
 author: Jason Zhang
 categories: [AI]
 image: assets/images/ai-explanation-ability-cover.webp
-tags: [AI, 沟通能力, 职场竞争力, 知识诅咒, 专业表达, 认知升级]
+tags: [featured, AI, 沟通能力, 职场竞争力, 知识诅咒, 专业表达, 认知升级]
 slug: ai-explanation-ability
 ---
 

@@ -4,7 +4,7 @@ title: "当AI Agent学会画图：Pencil + MCP 正在改写设计与开发的边
 author: Jason Zhang
 categories: [AI]
 image: assets/images/screenshot-20260124-pencil-mcp-cover.webp
-tags: [AI Agent, Claude Code, MCP, Pencil, Vibe Design, 设计工具, AI设计, 效率革命, 微信公众号]
+tags: [featured, AI Agent, Claude Code, MCP, Pencil, Vibe Design, 设计工具, AI设计, 效率革命, 微信公众号]
 slug: pencil-mcp-ai-design-revolution
 ---
 

@@ -4,7 +4,7 @@ title: "当Claude Code能直出PPT：大模型正在吞噬创业公司的护城�
 author: Jason Zhang
 categories: [AI]
 image: assets/images/screenshot-20260121-claude-code-vs-aippt-cover.webp
-tags: [Claude Code, AGI, AIPPT, AI创业, 护城河, SaaS, 商业模式, 2026趋势]
+tags: [featured, Claude Code, AGI, AIPPT, AI创业, 护城河, SaaS, 商业模式, 2026趋势]
 slug: claude-code-disrupts-aippt-moat
 ---
 

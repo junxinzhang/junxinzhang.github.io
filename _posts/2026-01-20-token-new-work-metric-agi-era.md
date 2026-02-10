@@ -4,7 +4,7 @@ title: "通用AGI工具已经到来：Token成为衡量工作量的新KPI"
 author: Jason Zhang
 categories: [AI]
 image: assets/images/screenshot-20260120-token-metric-cover.webp
-tags: [Token, AGI, Claude Code, AI经济学, 工作效率, 数字化转型]
+tags: [featured, Token, AGI, Claude Code, AI经济学, 工作效率, 数字化转型]
 slug: token-new-work-metric-agi-era
 ---
 
