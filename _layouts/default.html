@@ -98,7 +98,7 @@
       "url": "{{ site.url }}/about.html",
       "image": "{{ site.url }}/assets/images/avatar1.jpg",
       "jobTitle": "AI 技术专家 & DevOps 架构师",
-      "description": "10年+ 企业级软件架构师，专注 AI 私有化部署、DevOps、云原生架构。",
+      "description": "{% assign work_years = 'now' | date: '%Y' | minus: site.career_start_year %}{{ work_years }}年+ 企业级软件架构师，专注 AI 私有化部署、DevOps、云原生架构。",
       "sameAs": [
         "https://x.com/Jasonz9788",
         "https://github.com/junxinzhang"
@@ -1170,6 +1170,11 @@
     </style>
 
     {% include tracking-footer.html %}
+
+    <!-- 动态计算工作年限 -->
+    <script>
+    (function(){var y=new Date().getFullYear()-{{ site.career_start_year | default: 2014 }};document.querySelectorAll('.work-years').forEach(function(el){el.textContent=y;});})();
+    </script>
 
 </body>
 

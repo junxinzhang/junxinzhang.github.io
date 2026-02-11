@@ -10,6 +10,7 @@ url: 'https://junxinzhang.com'
 baseurl: ''
 # disqus: 'demowebsite'
 email: 'jason2023zhang@gmail.com'
+career_start_year: 2014
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 # i18n - Internationalization / 国际化配置
@@ -51,7 +52,7 @@ authors:
       name:           Jason Zhang
       site:           https://junxinzhang.com
       avatar:         assets/images/avatar1.jpg
-      bio:            "10年+ 企业级软件架构师，专注 AI 私有化部署、DevOps、云原生架构。曾主导多个知名企业的大模型落地项目。"
+      bio:            "企业级软件架构师，专注 AI 私有化部署、DevOps、云原生架构。曾主导多个知名企业的大模型落地项目。"
       job_title:      "AI 技术专家 & DevOps 架构师"
       credentials:    "AWS Solutions Architect | 云原生技术专家"
       expertise:

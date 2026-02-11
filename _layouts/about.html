@@ -590,7 +590,7 @@ layout: default
 <!-- Hero Section -->
 <div class="about-hero">
   <div class="container">
-    <p class="tagline">{{ page.tagline | default: "10年+ 企业级软件架构师，专注于 AI 私有化部署、DevOps 实践和云原生架构设计" }}</p>
+    <p class="tagline"><span class="work-years"></span>年+ {{ page.tagline }}</p>
 
     {% if page.skills %}
     <div class="skill-tags">

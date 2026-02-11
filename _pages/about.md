@@ -5,7 +5,7 @@ permalink: "/about.html"
 author: Jason Zhang
 comments: true
 name: "Jason Zhang"
-tagline: "12年+ 软件架构经验，专注于 AI Agent 工程化落地、DevOps 架构和微服务系统设计"
+tagline: "软件架构经验，专注于 AI Agent 工程化落地、DevOps 架构和微服务系统设计"
 skills:
   - "AI Agent"
   - "RAG"
@@ -13,10 +13,10 @@ skills:
   - "微服务"
   - "Kubernetes"
   - "AWS"
-description: "Jason Zhang - 12年+ 软件架构经验，专注于 AI Agent 工程化落地、DevOps 架构设计、微服务系统开发。具备从 0 到 1 构建智能产品的全流程能力。"
+description: "Jason Zhang - 软件架构经验，专注于 AI Agent 工程化落地、DevOps 架构设计、微服务系统开发。具备从 0 到 1 构建智能产品的全流程能力。"
 faq:
   - question: "Jason Zhang 的专业背景是什么？"
-    answer: "Jason Zhang 拥有 12 年以上软件开发经验，专注于微服务架构设计与系统工程实践，近年来聚焦于大模型与 AI Agent 应用场景的工程化落地，具备端到端的产品交付能力。"
+    answer: "Jason Zhang 拥有多年软件开发经验，专注于微服务架构设计与系统工程实践，近年来聚焦于大模型与 AI Agent 应用场景的工程化落地，具备端到端的产品交付能力。"
   - question: "这个博客主要分享什么内容？"
     answer: "博客主要分享 AI 技术实战经验（包括 RAG 系统、AI Agent 开发）、DevOps 最佳实践（CI/CD、Kubernetes）以及职业成长心得。"
   - question: "如何联系 Jason Zhang？"
@@ -28,7 +28,7 @@ faq:
 <div class="credentials-grid">
 <div class="credential-item">
 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5H5V1H1.5zM10 15V1H6v14h4zm1 0h3.5a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5H11v14z"/></svg></div>
-<h4>12+ 年经验</h4>
+<h4><span class="work-years"></span>+ 年经验</h4>
 <p>软件开发与架构设计</p>
 </div>
 <div class="credential-item">
@@ -205,7 +205,7 @@ faq:
 <h2>常见问题 (FAQ)</h2>
 <div class="faq-item">
 <div class="faq-question">Jason Zhang 的专业背景是什么？</div>
-<div class="faq-answer">我拥有 12 年以上软件开发经验，专注于微服务架构设计与系统工程实践，技术覆盖 Java、Go、Python 等主流语言。近年来聚焦于大模型与 AI Agent 应用场景的工程化落地，具备端到端的产品交付能力，包括 RAG 系统开发、AI Agent 集成、私有化大模型部署等。</div>
+<div class="faq-answer">我拥有 <span class="work-years"></span> 年以上软件开发经验，专注于微服务架构设计与系统工程实践，技术覆盖 Java、Go、Python 等主流语言。近年来聚焦于大模型与 AI Agent 应用场景的工程化落地，具备端到端的产品交付能力，包括 RAG 系统开发、AI Agent 集成、私有化大模型部署等。</div>
 </div>
 <div class="faq-item">
 <div class="faq-question">这个博客主要分享什么内容？</div>
@@ -217,6 +217,3 @@ faq:
 </div>
 </div>
 
-<!-- donate -->
-{% assign author = site.authors[page.author] %}
-{% include donate.html %}
