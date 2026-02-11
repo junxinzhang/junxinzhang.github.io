@@ -602,6 +602,12 @@ layout: default
   </div>
 </div>
 
+<!-- donate -->
+<div class="container" style="max-width: 800px; margin: 0 auto; padding: 1.5rem;">
+  {% assign author = site.authors[page.author] %}
+  {% include donate.html %}
+</div>
+
 <div class="about-content">
   {{ content }}
 </div>
