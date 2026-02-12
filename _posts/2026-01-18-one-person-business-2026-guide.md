@@ -6,6 +6,7 @@ categories: [创业]
 image: assets/images/screenshot-20260118-one-person-business-cover.webp
 tags: [一人公司, 个人创业, 被动收入, AI创业, 商业模式, Dan Koe]
 slug: one-person-business-2026-guide
+last_modified_at: 2026-02-05
 ---
 
 ## 前言：当打工人开始觉醒

@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/screenshot-20260117-ai-agent-security-commerce.webp
 tags: [AI Agent, 安全漏洞, ServiceNow, Google UCP, CrowdStrike, 电商AI, 身份安全]
 slug: ai-agent-security-commerce-revolution
+last_modified_at: 2026-02-05
 ---
 
 ## 前言：一半是火焰，一半是海水

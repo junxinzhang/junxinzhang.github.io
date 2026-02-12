@@ -3,7 +3,7 @@ layout: post
 title: "如何远离消耗你的人：维护个人界限的艺术"
 author: Jason Zhang
 categories: [Growth]
-image: assets/images/screenshot-20240105-avoiding-toxic-people.webp
+image: assets/images/screenshot-20240105-avoiding-toxic-people.jpg
 tags: [Boundary, Communication, Growth, Mental]
 ---
 

@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/ai-explanation-ability-cover.webp
 tags: [featured, AI, 沟通能力, 职场竞争力, 知识诅咒, 专业表达, 认知升级]
 slug: ai-explanation-ability
+last_modified_at: 2026-02-10
 ---
 
 ## 前言：一个被忽视的危险信号

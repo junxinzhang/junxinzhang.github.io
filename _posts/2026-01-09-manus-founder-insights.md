@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/screenshot-20260109-manus-founder.webp
 tags: [Manus, AI Agent, 创业, 肖弘, Monica, 产品思维]
 slug: manus-founder-insights
+last_modified_at: 2026-02-05
 ---
 
 ## 前言：9个月，从0到1亿美元ARR

@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/screenshot-20260113-vibe-coding-portal.webp
 tags: [Vibe Coding, AI编程, React, Vercel, Claude Code, 运维平台, 前端开发]
 slug: ai-vibe-coding-portal
+last_modified_at: 2026-02-05
 ---
 
 ## 前言：当"写代码"变成"说话"

@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/screenshot-20260124-pencil-mcp-cover.webp
 tags: [featured, AI Agent, Claude Code, MCP, Pencil, Vibe Design, 设计工具, AI设计, 效率革命, 微信公众号]
 slug: pencil-mcp-ai-design-revolution
+last_modified_at: 2026-02-10
 ---
 
 "设计师和开发者之间的鸿沟，永远无法跨越。"

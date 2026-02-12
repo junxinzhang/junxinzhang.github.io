@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/screenshot-20260122-claude-constitution-cover.webp
 tags: [Claude, Anthropic, AI宪法, AI对齐, AI意识, Constitutional AI, Soul Document]
 slug: claude-constitution-ai-soul
+last_modified_at: 2026-01-28
 ---
 
 ## 前言：14000个Token，定义一个AI的"灵魂"

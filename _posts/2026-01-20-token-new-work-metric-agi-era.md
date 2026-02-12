@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/screenshot-20260120-token-metric-cover.webp
 tags: [featured, Token, AGI, Claude Code, AI经济学, 工作效率, 数字化转型]
 slug: token-new-work-metric-agi-era
+last_modified_at: 2026-02-10
 ---
 
 ## 前言：一个月，10亿Token

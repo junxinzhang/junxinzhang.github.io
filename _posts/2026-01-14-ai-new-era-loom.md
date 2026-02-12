@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/screenshot-20260114-ai-new-era-loom.webp
 tags: [AI, 技术变革, 就业危机, 技术正义, 工业革命, 社会思考]
 slug: ai-new-era-loom
+last_modified_at: 2026-02-05
 ---
 
 ## 前言：一场静悄悄的革命

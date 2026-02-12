@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/screenshot-20260121-claude-code-vs-aippt-cover.webp
 tags: [featured, Claude Code, AGI, AIPPT, AI创业, 护城河, SaaS, 商业模式, 2026趋势]
 slug: claude-code-disrupts-aippt-moat
+last_modified_at: 2026-02-10
 ---
 
 ## 前言：一个真实的场景

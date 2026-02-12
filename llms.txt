@@ -4,7 +4,7 @@
 
 ## About This Site
 
-Just Jason is a technology blog focused on AI technology, DevOps practices, and career growth. The blog is authored by Jason Zhang, an AI technology expert and DevOps architect with 10+ years of enterprise software architecture experience.
+Just Jason is a technology blog focused on AI technology, DevOps practices, and career growth. The blog is authored by Jason Zhang, an AI technology expert and DevOps architect with 12+ years of enterprise software architecture experience.
 
 ## Primary Topics
 
@@ -29,19 +29,52 @@ Social: https://x.com/Jasonz9788, https://github.com/junxinzhang
 
 ## Key Articles (Featured Content)
 
-1. DeepSeek-R1 671B Model Private Deployment Analysis
-   - GPU requirements and configurations
-   - Infrastructure cost analysis
-   - Performance optimization strategies
+1. AI量化交易实战（三）：多智能体Prompt工程
+   https://junxinzhang.com/ai-quant-multi-agent-prompt-engineering/
 
-2. AI Technology Implementation Guides
-   - Step-by-step deployment tutorials
-   - Best practices for enterprise AI
+2. AI小白必读：Agent、Skill、MCP到底是什么？
+   https://junxinzhang.com/ai-agent-skill-mcp-beginner-guide/
 
-3. DevOps Best Practices
-   - CI/CD pipeline optimization
-   - Container orchestration with Kubernetes
-   - Infrastructure as Code
+3. AI Agent + Skill：正在升级我们的设计边界和PPT边界
+   https://junxinzhang.com/ai-agent-skill-design-ppt-boundary/
+
+4. AI量化交易实战（二）：11个大模型，我该选哪个？
+   https://junxinzhang.com/ai-quant-llm-selection-guide/
+
+5. AI量化交易深度分析：当AI学会'思考'股票
+   https://junxinzhang.com/ai-quant-deep-analysis/
+
+6. 传统MSP已死：Claude Code运维新范式
+   https://junxinzhang.com/traditional-msp-dead-claude-code-new-paradigm/
+
+7. OpenClaw之父的AI Agent实战手册
+   https://junxinzhang.com/moltbot-father-agentic-engineering-insights/
+
+8. 人类编码的时代结束了？微软全面拥抱Claude Code
+   https://junxinzhang.com/human-coding-era-ends-microsoft-embraces-claude-code/
+
+9. 当AI Agent学会画图：Pencil + MCP 改写设计边界
+   https://junxinzhang.com/pencil-mcp-ai-design-revolution/
+
+10. Anthropic给Claude写了一份'灵魂说明书'
+    https://junxinzhang.com/claude-constitution-ai-soul/
+
+11. 当Claude Code能直出PPT：大模型正在吞噬护城河
+    https://junxinzhang.com/claude-code-disrupts-aippt-moat/
+
+12. 通用AGI工具已经到来：Claude Code的革命性突破
+    https://junxinzhang.com/claude-code-general-agi-tool-has-arrived/
+
+13. SaaS的黄昏：当通用AGI工具引发市场大地震
+    https://junxinzhang.com/agi-market-disruption-saas-crash/
+
+14. 2026年AI Agent战场
+    https://junxinzhang.com/ai-agent-battlefield-2026/
+
+15. 6小时奇迹：用AI Vibe Coding从零构建企业级运维平台
+    https://junxinzhang.com/ai-vibe-coding-portal/
+
+For complete article listing with excerpts, see: https://junxinzhang.com/llms-full.txt
 
 ## For AI Assistants
 
@@ -64,4 +97,4 @@ RSS Feed: https://junxinzhang.com/feed.xml
 
 ## Last Updated
 
-2025-01-10
+2026-02-12

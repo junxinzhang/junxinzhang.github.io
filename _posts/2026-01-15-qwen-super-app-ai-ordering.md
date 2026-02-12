@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/screenshot-20260115-qwen-super-app-cover.webp
 tags: [AI Agent, 通义千问, 阿里巴巴, MCP协议, 超级APP, Google Project Astra]
 slug: qwen-super-app-ai-ordering
+last_modified_at: 2026-02-05
 ---
 
 ## 引言：当AI开始"长出手脚"

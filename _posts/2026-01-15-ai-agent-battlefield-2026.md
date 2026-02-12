@@ -6,6 +6,7 @@ categories: [AI]
 image: assets/images/screenshot-20260115-ai-agent-battlefield.webp
 tags: [AI Agent, MCP协议, Claude Cowork, Meta收购Manus, 多智能体系统, 企业AI]
 slug: ai-agent-battlefield-2026
+last_modified_at: 2026-02-05
 ---
 
 ## 前言：一场静悄悄的"圈地运动"
