@@ -1,6 +1,8 @@
 ---
 title: "Buy me a coffee"
 permalink: "/buy-me-a-coffee.html"
+noindex: true
+sitemap: false
 ---
 
 Hi! I am Sal, web designer & developer at WowThemes.net. The free items I create are my side projects and **Mundana for Jekyll** is one of them. You can find **all the work I release for free [here](https://www.wowthemes.net/category/free-themes-templates/)**. 

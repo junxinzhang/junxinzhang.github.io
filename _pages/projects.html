@@ -3,7 +3,7 @@ title: "Projects Portfolio - 开源项目与落地页作品集"
 layout: default
 permalink: "/projects.html"
 description: "Jason Zhang 的开源项目作品集，包含企业级 DevOps 仪表盘、SD-WAN 网络监控、蓝鲸 CMDB 定制方案、AI 安全防护平台等落地页项目。专注 AI 技术、DevOps、云原生架构。"
-image: /assets/images/projects-og.jpg
+image: /assets/images/logo.webp
 keywords:
 - 落地页设计
 - Landing Page
@@ -456,8 +456,7 @@ changefreq: weekly
     document.addEventListener('DOMContentLoaded', function () {
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
-        const landingSection = document.querySelector('#landing-pages').parentElement.querySelector('.section-title');
-        const reportSection = document.querySelector('#html-reports').parentElement.querySelectorAll('.section-title')[1];
+        const sectionTitles = document.querySelectorAll('.section-title');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function (e) {
@@ -483,15 +482,14 @@ changefreq: weekly
                 });
 
                 // 显示/隐藏分区标题
-                const sectionTitles = document.querySelectorAll('.section-title');
                 if (category === 'all') {
                     sectionTitles.forEach(t => t.style.display = 'inline-block');
                 } else if (category === 'landing') {
-                    sectionTitles[0].style.display = 'inline-block';
-                    sectionTitles[1].style.display = 'none';
+                    if (sectionTitles[0]) sectionTitles[0].style.display = 'inline-block';
+                    if (sectionTitles[1]) sectionTitles[1].style.display = 'none';
                 } else if (category === 'report') {
-                    sectionTitles[0].style.display = 'none';
-                    sectionTitles[1].style.display = 'inline-block';
+                    if (sectionTitles[0]) sectionTitles[0].style.display = 'none';
+                    if (sectionTitles[1]) sectionTitles[1].style.display = 'inline-block';
                 }
             });
         });

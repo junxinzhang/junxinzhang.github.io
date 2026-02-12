@@ -1,6 +1,8 @@
 ---
-title: "Contact"
+title: "Contact - 联系我"
 permalink: "/contact.html"
+description: "联系 Jason Zhang，欢迎技术交流、商务合作、AI 私有化部署咨询。提供邮件、社交媒体等多种联系方式。"
+keywords: "联系Jason Zhang, 技术交流, 商务合作, AI咨询"
 ads: false
 ---
 

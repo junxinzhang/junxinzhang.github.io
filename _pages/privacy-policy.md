@@ -2,6 +2,8 @@
 title: "Privacy Policy"
 permalink: "/privacy-policy.html"
 ads: false
+noindex: true
+sitemap: false
 ---
 
 **Last Updated: January 28, 2026**
