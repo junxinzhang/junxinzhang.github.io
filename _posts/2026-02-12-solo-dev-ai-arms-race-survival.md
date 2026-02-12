@@ -11,7 +11,7 @@ description: "从10亿到17.6亿Token，月花费$7,767，11个Claude MAX阵亡�
 geo_facts:
   - text: "作者30天内消耗1,761.45M Token（约17.6亿），花费$7,767.53，共17,862次会话，平均每次$0.43"
   - text: "累计阵亡13个AI订阅账号：11个Claude MAX（$200/月）和2个Google Antigravity Ultra（$249.99/月）"
-  - text: "Claude MAX $200/月（20x计划）每5小时窗口约500万-1000万Token上限，外加周上限"
+  - text: "Claude MAX $200/月（20x计划）每5小时窗口约2500万-3000万Token上限，外加周上限"
   - text: "独立开发者月度AI总支出约$8,368-8,468，年化约$100,000-$102,000，投入产出比约1:5"
   - text: "AI使用形成五层'数字阶级'：免费层、基础层、专业层、军备层（$1,000+/月）、企业层（$10,000+/月），军备层处境最尴尬"
 faq:
@@ -22,7 +22,7 @@ faq:
   - question: "个人专业开发者如何降低AI使用成本？"
     answer: "文章提出四大策略：1）混合订阅+API弹性架构，分层使用不同平台；2）Token效率优化（精准Prompt、缓存利用、模型分层），理论可降低60-70%消耗；3）从AI消费者转型为AI生态构建者；4）等待推理成本持续下降的行业拐点。"
   - question: "Claude MAX和Google Antigravity Ultra的限额具体是多少？"
-    answer: "Claude MAX $200/月（20x计划）约每5小时窗口500万-1000万Token，且claude.ai和Claude Code共享额度。Google AI Ultra（$249.99/月）提供最高优先级访问，每5小时刷新配额，但同样在持续高强度使用下会被限速。"
+    answer: "Claude MAX $200/月（20x计划）约每5小时窗口2500万-3000万Token，且claude.ai和Claude Code共享额度。Google AI Ultra（$249.99/月）提供最高优先级访问，每5小时刷新配额，但同样在持续高强度使用下会被限速。"
 ---
 
 ## 前言：一个月后的战报
@@ -65,7 +65,7 @@ faq:
 
 根据[Anthropic官方文档](https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan)，Claude MAX的限额在claude.ai和Claude Code之间**共享**——这意味着你在CLI里消耗的额度，直接影响网页端的可用性，反之亦然。
 
-更具体地说，Claude MAX $200/月（20x计划）的实际限额大约是每个5小时窗口**500万-1000万Token**，外加周上限。这意味着理论上的"20倍Pro"在持续重度使用下，一天内就会触及天花板。
+更具体地说，Claude MAX $200/月（20x计划）的实际限额大约是每个5小时窗口**2500万-3000万Token**，外加周上限。官方标称每周可用24-40小时Opus，但[GitHub上大量用户反馈](https://github.com/anthropics/claude-code/issues/9424)实际**1-2天就会耗尽整周配额**，剩下5-6天几乎不可用。理论上的"20倍Pro"在持续重度使用下，一天之内就会触及天花板。
 
 [The Register在今年1月的报道](https://www.theregister.com/2026/01/05/claude_devs_usage_limits/)中提到：
 
