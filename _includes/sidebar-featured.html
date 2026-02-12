@@ -32,7 +32,7 @@
                 </h6>
                 <span class="d-block text-muted small">
                     {% for category in post.categories %}
-                    <a class="text-capitalize text-muted" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+                    <a class="text-capitalize text-muted" href="{% include category-url.html category=category %}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
                     {% endfor %}
                 </span>
             </span>

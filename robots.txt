@@ -1,5 +1,5 @@
 # Robots.txt for junxinzhang.com
-# Last updated: 2025
+# Last updated: 2026-02-12
 
 User-agent: *
 Allow: /
@@ -57,4 +57,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://junxinzhang.com/sitemap.xml
-Disallow: /_html_pages/

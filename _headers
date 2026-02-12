@@ -67,3 +67,10 @@
 # Offline Page
 /offline.html
   Cache-Control: public, max-age=86400
+
+# Non-indexable standalone report pages
+/_html_pages/*
+  X-Robots-Tag: noindex, nofollow
+
+/assets/html/*
+  X-Robots-Tag: noindex, nofollow

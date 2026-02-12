@@ -5,18 +5,13 @@ This component enhances the default jekyll-seo-tag with additional
 social media optimizations for better engagement when shared.
 {% endcomment %}
 
-{% assign page_image = page.image | default: site.logo %}
-{% unless page_image contains '://' %}
-    {% assign page_image = page_image | prepend: site.url | prepend: '/' %}
-{% endunless %}
+{% assign page_image = page.image | default: site.logo | absolute_url %}
 
 {% assign page_description = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 200 %}
 
 <!-- Open Graph Enhanced -->
 <meta property="og:site_name" content="{{ site.name }}">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:locale:alternate" content="en_US">
-<meta property="og:locale:alternate" content="ja_JP">
 
 {% if page.layout == 'post' %}
 <meta property="og:type" content="article">
@@ -68,9 +63,6 @@ social media optimizations for better engagement when shared.
 {% else %}
 <meta name="author" content="Jason Zhang">
 {% endif %}
-
-<!-- Canonical URL (important for SEO) -->
-<link rel="canonical" href="{{ page.url | absolute_url }}">
 
 <!-- Article specific meta for news aggregators -->
 {% if page.layout == 'post' %}

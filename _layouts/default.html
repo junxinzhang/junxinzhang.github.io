@@ -15,14 +15,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{page.title}} | {{site.name}}</title>
-
     <!-- PWA Support -->
     <link rel="manifest" href="{{site.baseurl}}/manifest.json">
     <meta name="theme-color" content="#03a87c">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Just Jason">
+    <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
 
     {% seo %}
 
@@ -30,7 +28,14 @@
     {% include social-meta.html %}
 
     <!-- Additional meta tags for enhanced SEO & GEO -->
+    {% assign should_noindex = false %}
     {% if page.noindex == true %}
+    {% assign should_noindex = true %}
+    {% endif %}
+    {% if paginator and paginator.page and paginator.page > 1 %}
+    {% assign should_noindex = true %}
+    {% endif %}
+    {% if should_noindex %}
     <meta name="robots" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="bingbot" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -43,17 +48,6 @@
     <!-- GEO: AI Search Engine Optimization -->
     <meta name="ai-content-declaration"
         content="This content is authored by a human expert with AI assistance for editing">
-
-    <!-- hreflang for international SEO -->
-    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}">
-    <link rel="alternate" hreflang="zh-CN" href="{{ site.url }}{{ page.url }}">
-    {% for lang in site.languages %}
-    {% assign lang_hreflang = lang %}
-    {% if lang == "zh-hans" %}{% assign lang_hreflang = "zh-CN" %}{% endif %}
-    {% if lang == "zh-hant" %}{% assign lang_hreflang = "zh-TW" %}{% endif %}
-    <link rel="alternate" hreflang="{{ lang_hreflang }}"
-        href="{{ site.url }}{{ page.url }}{% if lang != site.default_lang %}?lang={{ lang }}{% endif %}">
-    {% endfor %}
 
     <!-- Organization Schema for brand identity -->
     <script type="application/ld+json">
@@ -117,15 +111,32 @@
     }
     </script>
 
-    <!-- Schema.org structured data for SEO & GEO -->
+    <!-- WebSite Schema (critical for site name and sitelinks search box) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "{% if page.layout == 'post' %}BlogPosting{% else %}WebSite{% endif %}",
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
       "name": "{{ site.name }}",
+      "url": "{{ site.url }}",
+      "inLanguage": "{{ html_lang }}",
+      "description": "{{ site.description | escape }}",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "{{ site.url }}/#organization"
+      }
+    }
+    </script>
+
+    <!-- BlogPosting Schema for article pages -->
+    {% if page.layout == 'post' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "name": "{{ page.title | escape }}",
       "url": "{{ site.url }}{{ page.url }}",
       "inLanguage": "{{ html_lang }}",
-      {% if page.layout == 'post' %}
       "headline": "{{ page.title | escape }}",
       "datePublished": "{{ page.date | date_to_xmlschema }}",
       "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
@@ -160,19 +171,55 @@
       },
       "isAccessibleForFree": true,
       "license": "https://creativecommons.org/licenses/by/4.0/"
-      {% else %}
-      "description": "{{ site.description | escape }}",
-      "author": {
-        "@type": "Person",
-        "name": "Jason Zhang",
-        "url": "{{ site.url }}/about.html"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "{{ site.url }}/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-      {% endif %}
+    }
+    </script>
+    {% endif %}
+
+    <!-- SiteNavigationElement Schema for Google Sitelinks -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SiteNavigationElement",
+      "@id": "{{ site.url }}/#navigation",
+      "name": "Main Navigation",
+      "hasPart": [
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Posts",
+          "description": "按时间浏览所有博客文章",
+          "url": "{{ site.url }}/posts.html"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Categories",
+          "description": "按分类浏览所有技术文章，包括AI、DevOps、云原生等主题",
+          "url": "{{ site.url }}/categories.html"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Projects",
+          "description": "开源项目与技术作品集，包含企业级DevOps仪表盘、AI解决方案等",
+          "url": "{{ site.url }}/projects.html"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Tags",
+          "description": "按标签浏览文章主题",
+          "url": "{{ site.url }}/tags.html"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "About",
+          "description": "关于Jason Zhang - AI技术专家与DevOps架构师",
+          "url": "{{ site.url }}/about.html"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Contact",
+          "description": "联系Jason Zhang，技术交流与商务合作",
+          "url": "{{ site.url }}/contact.html"
+        }
+      ]
     }
     </script>
 
@@ -190,11 +237,22 @@
           "item": "{{ site.url }}"
         },
         {% if page.categories.size > 0 %}
+        {% assign breadcrumb_category = page.categories | first %}
+        {% assign breadcrumb_category_key = breadcrumb_category | downcase %}
+        {% assign breadcrumb_category_path = '/categories.html#' | append: breadcrumb_category_key %}
+        {% case breadcrumb_category_key %}
+        {% when 'ai' %}{% assign breadcrumb_category_path = '/category-ai.html' %}
+        {% when 'devops' %}{% assign breadcrumb_category_path = '/category-devops.html' %}
+        {% when 'technology' %}{% assign breadcrumb_category_path = '/category-technology.html' %}
+        {% when 'business' %}{% assign breadcrumb_category_path = '/category-business.html' %}
+        {% when 'career' %}{% assign breadcrumb_category_path = '/category-career.html' %}
+        {% when 'growth' %}{% assign breadcrumb_category_path = '/category-growth.html' %}
+        {% endcase %}
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "{{ page.categories | first }}",
-          "item": "{{ site.url }}/categories.html#{{ page.categories | first | downcase }}"
+          "name": "{{ breadcrumb_category }}",
+          "item": "{{ site.url }}{{ breadcrumb_category_path }}"
         },
         {
           "@type": "ListItem",
@@ -912,7 +970,7 @@
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md-6 copyright" style="margin-bottom: 0px;">
-                    <span><strong>Just Jason</strong></span>
+                    <span><strong>{{ site.name }}</strong></span>
                     <span>Copyright © <span id="copyright-year">2025</span>.</span>
                     <span class="ml-2">
                         <a href="{{site.baseurl}}/contact.html" class="text-dark"><span

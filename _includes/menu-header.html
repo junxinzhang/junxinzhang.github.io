@@ -1,13 +1,14 @@
 <!--  Menu links with i18n support / 支持国际化的菜单链接 -->
 <li class="nav-item">
-    {% assign total_count = site.posts | size %}
-    {% assign html_pages_count = site.data.html_pages | size %}
-    {% assign combined_count = total_count | plus: html_pages_count %}
-    <a class="nav-link" href="{{site.baseurl}}/#all-posts"><span data-i18n="nav.posts">所有文章</span> <span
-            class="badge badge-light">{{ combined_count }}</span></a>
+    {% assign posts_count = site.posts | size %}
+    <a class="nav-link" href="{{site.baseurl}}/posts.html"><span data-i18n="nav.posts">所有文章</span> <span
+            class="badge badge-light">{{ posts_count }}</span></a>
 </li>
 <li class="nav-item">
     <a class="nav-link" href="{{site.baseurl}}/categories.html"><span data-i18n="nav.categories">Categories</span></a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{{site.baseurl}}/tags.html"><span>Tags</span></a>
 </li>
 <li class="nav-item">
     <a class="nav-link" href="{{site.baseurl}}/projects.html"><span data-i18n="nav.projects">Projects</span></a>

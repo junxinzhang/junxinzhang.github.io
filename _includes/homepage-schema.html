@@ -101,7 +101,6 @@ Helps Google understand the blog structure and display rich results
   "description": "{{ site.description }}",
   "url": "{{ site.url }}",
   "isPartOf": {
-    "@type": "WebSite",
     "@id": "{{ site.url }}/#website"
   },
   "about": [
@@ -127,62 +126,5 @@ Helps Google understand the blog structure and display rich results
     "Cloud Native Architecture",
     "Career Development"
   ]
-}
-</script>
-
-<!-- Professional Service Schema (for consulting visibility) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "{{ site.url }}/#service",
-  "name": "Jason Zhang - AI & DevOps Consulting",
-  "description": "Expert consulting services for AI private deployment, DevOps implementation, and cloud-native architecture design.",
-  "url": "{{ site.url }}",
-  "image": "{{ site.url }}/assets/images/avatar1.jpg",
-  "priceRange": "$$",
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 31.2304,
-      "longitude": 121.4737
-    },
-    "geoRadius": "5000"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Consulting Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "AI Private Deployment",
-          "description": "Enterprise LLM deployment and optimization"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "DevOps Implementation",
-          "description": "CI/CD pipeline design and implementation"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Cloud Architecture",
-          "description": "Cloud-native architecture design and migration"
-        }
-      }
-    ]
-  },
-  "founder": {
-    "@type": "Person",
-    "@id": "{{ site.url }}/about.html#person"
-  }
 }
 </script>

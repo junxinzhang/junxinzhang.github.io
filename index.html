@@ -1,15 +1,17 @@
 ---
-title: "首页"
+title: "Just Jason - AI技术、DevOps实践与职业成长博客"
 layout: default
 pagination:
     enabled: true
 description: "专注于 AI 技术、DevOps 实践、职业成长的技术博客。分享 LLM 私有化部署、云原生架构、个人成长等深度内容。"
-image: assets/images/logo.png
-keywords: "AI技术博客, DevOps实践, LLM私有化部署, 云原生架构, 职业成长, Jason Zhang"
+image: assets/images/logo.webp
+keywords: "Just Jason, AI技术博客, DevOps实践, LLM私有化部署, 云原生架构, 职业成长"
 ---
 
 <!-- Enhanced Homepage Schema for Rich Search Results -->
+{% if paginator.page == 1 or paginator == nil %}
 {% include homepage-schema.html %}
+{% endif %}
 
 <div class="container">
 
@@ -135,13 +137,14 @@ keywords: "AI技术博客, DevOps实践, LLM私有化部署, 云原生架构, �
 <!-- All Posts Section -->
 <div class="row" id="all-posts">
     <div class="col-12">
-        <h2 class="font-weight-bold spanborder mb-4">
-            <span data-i18n="home.all_posts">所有文章</span>
-            {% assign total_count = site.posts | size %}
-            {% assign html_pages_count = site.data.html_pages | size %}
-            {% assign combined_count = total_count | plus: html_pages_count %}
-            <sup class="text-muted ml-2">{{ combined_count }}</sup>
-        </h2>
+        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+            <h2 class="font-weight-bold spanborder mb-0">
+                <span data-i18n="home.all_posts">所有文章</span>
+                {% assign total_count = site.posts | size %}
+                <sup class="text-muted ml-2">{{ total_count }}</sup>
+            </h2>
+            <a href="{{site.baseurl}}/posts.html" class="btn btn-sm btn-outline-primary mt-2 mt-md-0">{{ t.post.view_all_posts | default: "查看全部文章页" }}</a>
+        </div>
     </div>
     
     <div class="col-md-8">

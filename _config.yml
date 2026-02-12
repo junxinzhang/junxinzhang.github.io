@@ -1,6 +1,6 @@
 # Site
 name: "Just Jason"
-title: "Just Jason - AI与技术博客"
+title: "Just Jason"
 tagline: "AI技术 | DevOps | 职业成长"
 description: "专注于 AI 技术、DevOps 实践、职业成长的技术博客。分享 LLM 私有化部署、云原生架构、个人成长等深度内容。"
 logo: 'assets/images/logo.webp'
@@ -22,7 +22,7 @@ twitter:
   username: Jasonz9788
   card: summary_large_image
 social:
-  name: Jason Zhang
+  name: Just Jason
   links:
     - https://x.com/Jasonz9788
     - https://github.com/junxinzhang
@@ -80,6 +80,41 @@ defaults:
       path: "_pages"
     values:
       layout: page
+
+  # exclude standalone report pages from sitemap
+  - scope:
+      path: "_html_pages/**/*.html"
+    values:
+      sitemap: false
+      noindex: true
+
+  # exclude static html assets from sitemap
+  - scope:
+      path: "assets/**/*.html"
+    values:
+      sitemap: false
+      noindex: true
+
+  # exclude utility pages from sitemap
+  - scope:
+      path: "offline.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "404.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "googlee66b464babe97d2e.html"
+    values:
+      sitemap: false
+
+  # exclude paginated archive pages from index/sitemap
+  - scope:
+      path: "page*/**"
+    values:
+      sitemap: false
+      noindex: true
       
 # Syntax
 markdown: kramdown
@@ -98,7 +133,7 @@ future: true
 
 # Feed
 feed:
-  posts_limit: 10
+  posts_limit: 25
 
 
 
@@ -111,6 +146,8 @@ exclude:
   - Gruntfile.coffee
   - node_modules
   - scripts
+  - article-image-processor-skill
+  - assets/images/prompts
   - Gemfile
   - Gemfile.lock
   - vendor
