@@ -28,6 +28,9 @@ User-agent: Bingbot
 Allow: /
 
 # AI Search Engines (GEO - Generative Engine Optimization)
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
