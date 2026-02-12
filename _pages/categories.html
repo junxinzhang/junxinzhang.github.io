@@ -57,39 +57,6 @@ sitemap:
         background: rgba(255, 255, 255, 0.2);
     }
 
-    .category-hub-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 10px;
-        margin-bottom: 20px;
-    }
-
-    .category-hub-link {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 12px;
-        border: 1px solid #dee2e6;
-        border-radius: 8px;
-        color: #212529;
-        text-decoration: none;
-        background: #fff;
-        font-weight: 600;
-    }
-
-    .category-hub-link:hover {
-        text-decoration: none;
-        color: #212529;
-        border-color: #0d6efd;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    .category-hub-count {
-        font-size: 12px;
-        color: #6c757d;
-        font-weight: 500;
-    }
-
     .category-section {
         display: block;
     }
@@ -100,10 +67,6 @@ sitemap:
 
     /* 移动端响应式布局 */
     @media (max-width: 767px) {
-        .category-hub-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
         /* 文章卡片在移动端垂直堆叠 */
         .main-loop-card {
             flex-direction: column-reverse !important;
@@ -153,20 +116,9 @@ sitemap:
             <h1 class="font-weight-bold title h3 text-capitalize mb-4">Categories</h1>
             <p class="text-muted mb-4">{{ site.categories.size }} {{ t.pages.total_categories | default: "个分类，可按业务主题或技术领域快速筛选。" }}</p>
 
-            <div class="category-hub-grid">
-                {% assign core_categories = "AI,DevOps,Technology,Business,Career,Growth" | split: "," %}
-                {% for cat_name in core_categories %}
-                {% if site.categories[cat_name] %}
-                <a class="category-hub-link" href="{% include category-url.html category=cat_name %}">
-                    <span>{{ cat_name }}</span>
-                    <span class="category-hub-count">{{ site.categories[cat_name].size }}</span>
-                </a>
-                {% endif %}
-                {% endfor %}
-            </div>
-
             {% comment %} 优先显示核心分类，其余分类自动补齐 {% endcomment %}
             {% assign preferred_categories = "AI,DevOps,Technology,Business,Career,Culture,Growth" | split: "," %}
+            {% assign core_categories = "AI,DevOps,Technology,Business,Career,Growth" | split: "," %}
 
             {% comment %} 分类筛选导航栏 {% endcomment %}
             <div class="category-filter">
@@ -176,10 +128,17 @@ sitemap:
                 </a>
                 {% for cat_name in preferred_categories %}
                 {% if site.categories[cat_name] %}
+                {% if core_categories contains cat_name %}
+                <a href="{% include category-url.html category=cat_name %}" class="filter-btn" data-category="{{ cat_name | downcase }}">
+                    {{ cat_name }}
+                    <span class="count">{{ site.categories[cat_name].size }}</span>
+                </a>
+                {% else %}
                 <a href="#" class="filter-btn" data-category="{{ cat_name | downcase }}">
                     {{ cat_name }}
                     <span class="count">{{ site.categories[cat_name].size }}</span>
                 </a>
+                {% endif %}
                 {% endif %}
                 {% endfor %}
                 {% assign sorted_categories = site.categories | sort %}
@@ -252,6 +211,12 @@ sitemap:
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function (e) {
+                // 核心分类有真实链接，直接跳转到独立分类页
+                const rawHref = this.getAttribute('href');
+                if (rawHref && rawHref !== '#') {
+                    window.location.href = rawHref;
+                    return;
+                }
                 e.preventDefault();
                 const category = this.dataset.category;
 
