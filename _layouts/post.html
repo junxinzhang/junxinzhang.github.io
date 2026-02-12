@@ -148,6 +148,76 @@ layout: default
             <!-- Series Navigation (if article is part of a series) -->
             {% include series-nav.html %}
 
+            <!-- GEO/SEO Citable Summary -->
+            {% if page.geo_summary != false %}
+            {% assign citation_source_url = page.url | absolute_url %}
+            {% assign citation_summary = page.description | default: page.excerpt | strip_html | strip_newlines | replace: "  ", " " | truncate: 160 %}
+            <section class="geo-citable-summary mb-4" aria-label="Citable Summary">
+                <div class="geo-citable-summary-head">
+                    <strong class="geo-citable-summary-title">{{ t.post.citable_summary | default: "可引用摘要" }}</strong>
+                    <a href="{{ citation_source_url }}" class="small" rel="bookmark">{{ t.post.source_article | default: "原文链接" }}</a>
+                </div>
+                <ul>
+                    {% if page.geo_facts and page.geo_facts.size > 0 %}
+                    {% for fact in page.geo_facts limit: 5 %}
+                    {% assign fact_source = fact.source | default: citation_source_url %}
+                    {% unless fact_source contains '://' %}
+                    {% assign fact_source = fact_source | absolute_url %}
+                    {% endunless %}
+                    <li>{{ fact.text | default: fact }} <a href="{{ fact_source }}" rel="bookmark">{{ t.post.source | default: "来源" }}</a></li>
+                    {% endfor %}
+                    {% else %}
+                    <li>{{ t.post.article_title | default: "文章标题" }}：{{ page.title }} <a href="{{ citation_source_url }}" rel="bookmark">{{ t.post.source | default: "来源" }}</a></li>
+                    <li>{{ t.post.published_at | default: "发布时间" }}：{{ page.date | date: '%Y-%m-%d' }}{% if page.last_modified_at %}（{{ t.post.updated_at | default: "更新" }}：{{ page.last_modified_at | date: '%Y-%m-%d' }}）{% endif %} <a href="{{ citation_source_url }}" rel="bookmark">{{ t.post.source | default: "来源" }}</a></li>
+                    {% if page.categories and page.categories.size > 0 %}
+                    <li>{{ t.post.categories | default: "分类" }}：{{ page.categories | join: " / " }} <a href="{{ '/categories.html' | absolute_url }}" rel="bookmark">{{ t.post.source | default: "来源" }}</a></li>
+                    {% endif %}
+                    {% if page.tags and page.tags.size > 0 %}
+                    {% assign quote_tags = page.tags | slice: 0, 8 %}
+                    <li>{{ t.post.keywords | default: "关键词" }}：{{ quote_tags | join: ", " }} <a href="{{ '/tags.html' | absolute_url }}" rel="bookmark">{{ t.post.source | default: "来源" }}</a></li>
+                    {% endif %}
+                    <li>{{ t.post.core_summary | default: "核心摘要" }}：{{ citation_summary }} <a href="{{ citation_source_url }}" rel="bookmark">{{ t.post.source | default: "来源" }}</a></li>
+                    {% endif %}
+                </ul>
+            </section>
+            {% endif %}
+
+            <!-- GEO FAQ Block -->
+            {% assign auto_faq_enabled = false %}
+            {% if page.auto_faq == true %}
+            {% assign auto_faq_enabled = true %}
+            {% elsif page.auto_faq != false and page.tags contains 'featured' %}
+            {% assign auto_faq_enabled = true %}
+            {% endif %}
+            {% if page.faq or auto_faq_enabled %}
+            <section class="geo-faq-block mb-4" aria-label="FAQ">
+                <h2 class="geo-faq-title">{{ t.post.faq_title | default: "常见问题" }}</h2>
+                <div class="geo-faq-items">
+                    {% if page.faq and page.faq.size > 0 %}
+                    {% for item in page.faq limit: 5 %}
+                    <div class="geo-faq-item">
+                        <h3>{{ item.question }}</h3>
+                        <p>{{ item.answer }}</p>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="geo-faq-item">
+                        <h3>这篇文章主要讲什么？</h3>
+                        <p>{{ page.description | default: page.excerpt | strip_html | strip_newlines | replace: "  ", " " | truncate: 200 }}</p>
+                    </div>
+                    <div class="geo-faq-item">
+                        <h3>这篇文章适合谁阅读？</h3>
+                        <p>适合关注{% if page.categories and page.categories.size > 0 %}{{ page.categories | join: "、" }}{% else %}AI 与工程实践{% endif %}的读者，尤其是想快速理解核心观点并落地实践的人。</p>
+                    </div>
+                    <div class="geo-faq-item">
+                        <h3>如何引用这篇文章？</h3>
+                        <p>建议引用时保留标题、发布日期和原文链接：<a href="{{ page.url | absolute_url }}">{{ page.url | absolute_url }}</a>。</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </section>
+            {% endif %}
+
             <!-- Article -->
             <article class="article-post">
                 {{ content }}
@@ -338,6 +408,74 @@ layout: default
         content: "›";
     }
 
+    .geo-citable-summary {
+        border: 1px solid #d8e6ff;
+        background: #f6faff;
+        border-radius: 10px;
+        padding: 14px 16px;
+    }
+
+    .geo-citable-summary-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+
+    .geo-citable-summary-title {
+        font-size: 0.98rem;
+    }
+
+    .geo-citable-summary ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .geo-citable-summary li {
+        margin-bottom: 6px;
+        line-height: 1.45;
+    }
+
+    .geo-citable-summary li:last-child {
+        margin-bottom: 0;
+    }
+
+    .geo-citable-summary a {
+        margin-left: 6px;
+        white-space: nowrap;
+    }
+
+    .geo-faq-block {
+        border: 1px solid #dbe7df;
+        background: #f8fbf9;
+        border-radius: 10px;
+        padding: 14px 16px;
+    }
+
+    .geo-faq-title {
+        font-size: 1.05rem;
+        margin-bottom: 12px;
+    }
+
+    .geo-faq-item {
+        margin-bottom: 10px;
+    }
+
+    .geo-faq-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .geo-faq-item h3 {
+        font-size: 0.98rem;
+        margin-bottom: 4px;
+    }
+
+    .geo-faq-item p {
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+
     /* Dark Mode Styles for Post Page */
     [data-theme="dark"] .jumbotron {
         background-color: var(--bg-color, #1a1a2e) !important;
@@ -345,6 +483,20 @@ layout: default
 
     [data-theme="dark"] .article-headline {
         color: var(--text-color, #e4e4e7);
+    }
+
+    [data-theme="dark"] .geo-citable-summary {
+        border-color: #2f4b70;
+        background: #0f1d30;
+    }
+
+    [data-theme="dark"] .geo-citable-summary a {
+        color: #86d7ff;
+    }
+
+    [data-theme="dark"] .geo-faq-block {
+        border-color: #30443a;
+        background: #0f1713;
     }
 
     [data-theme="dark"] article.article-post {
