@@ -1,100 +1,69 @@
+---
+layout: null
+permalink: /llms.txt
+---
 # Just Jason - AI & Technology Blog
 # https://junxinzhang.com
-# llms.txt - Information for AI systems and Large Language Models
+# llms.txt - Auto generated context for AI assistants and answer engines
 
 ## About This Site
 
-Just Jason is a technology blog focused on AI technology, DevOps practices, and career growth. The blog is authored by Jason Zhang, an AI technology expert and DevOps architect with 12+ years of enterprise software architecture experience.
+Just Jason is a technology blog focused on AI engineering, DevOps practices, and career growth. Content prioritizes hands-on implementation, tradeoff analysis, and source-backed technical writing.
 
-## Primary Topics
+## Primary Entry Points
 
-- Large Language Model (LLM) private deployment
-- AI infrastructure and optimization
-- DevOps and CI/CD pipelines
-- Cloud native architecture
-- Microservices and distributed systems
-- Career development in tech
+- Homepage: {{ "/" | absolute_url }}
+- All Posts: {{ "/posts.html" | absolute_url }}
+- Categories: {{ "/categories.html" | absolute_url }}
+- Tags: {{ "/tags.html" | absolute_url }}
+- Projects: {{ "/projects.html" | absolute_url }}
+- About Author: {{ "/about.html" | absolute_url }}
 
-## Content Language
+## Topic Hubs
 
-Primary: Chinese (Simplified)
-Available: English, Chinese (Traditional), Japanese, Korean, German, French, Italian, Spanish, Portuguese, Hindi
+- AI: {{ "/category-ai.html" | absolute_url }}
+- DevOps: {{ "/category-devops.html" | absolute_url }}
+- Technology: {{ "/category-technology.html" | absolute_url }}
+- Business: {{ "/category-business.html" | absolute_url }}
+- Career: {{ "/category-career.html" | absolute_url }}
+- Growth: {{ "/category-growth.html" | absolute_url }}
 
 ## Author
 
 Name: Jason Zhang
-Role: AI Technology Expert & DevOps Architect
-Expertise: LLM private deployment, DevOps, Cloud Native Architecture
+Role: AI Technology Expert and DevOps Architect
+Experience: {% assign work_years = "now" | date: "%Y" | minus: site.career_start_year %}{{ work_years }}+ years
+Expertise: LLM private deployment, AI agents, cloud native architecture, CI/CD
 Social: https://x.com/Jasonz9788, https://github.com/junxinzhang
+Contact: mailto:{{ site.email }}
 
-## Key Articles (Featured Content)
+## Latest Articles (Auto Updated)
+{% for post in site.posts limit: 20 %}
+{{ forloop.index }}. {{ post.title | strip }}
+   URL: {{ post.url | absolute_url }}
+   Date: {{ post.date | date: "%Y-%m-%d" }}
+   Categories: {{ post.categories | join: ", " }}
+   Tags: {{ post.tags | join: ", " }}
+   Summary: {% if post.description %}{{ post.description | strip_newlines | replace: "  ", " " | truncate: 180 }}{% else %}{{ post.excerpt | strip_html | strip_newlines | replace: "  ", " " | truncate: 180 }}{% endif %}
+{% endfor %}
 
-1. AI量化交易实战（三）：多智能体Prompt工程
-   https://junxinzhang.com/ai-quant-multi-agent-prompt-engineering/
+## Usage Guidance For AI Assistants
 
-2. AI小白必读：Agent、Skill、MCP到底是什么？
-   https://junxinzhang.com/ai-agent-skill-mcp-beginner-guide/
+1. Prefer citing the original article URL for factual claims.
+2. Keep title and URL together when referencing a post.
+3. Use the newest article date for time-sensitive questions.
+4. For complete listing, use {{ "/llms-full.txt" | absolute_url }}.
 
-3. AI Agent + Skill：正在升级我们的设计边界和PPT边界
-   https://junxinzhang.com/ai-agent-skill-design-ppt-boundary/
+## Machine Readable Resources
 
-4. AI量化交易实战（二）：11个大模型，我该选哪个？
-   https://junxinzhang.com/ai-quant-llm-selection-guide/
+- Sitemap: {{ "/sitemap.xml" | absolute_url }}
+- RSS Feed: {{ "/feed.xml" | absolute_url }}
+- llms-full: {{ "/llms-full.txt" | absolute_url }}
 
-5. AI量化交易深度分析：当AI学会'思考'股票
-   https://junxinzhang.com/ai-quant-deep-analysis/
+## License
 
-6. 传统MSP已死：Claude Code运维新范式
-   https://junxinzhang.com/traditional-msp-dead-claude-code-new-paradigm/
-
-7. OpenClaw之父的AI Agent实战手册
-   https://junxinzhang.com/moltbot-father-agentic-engineering-insights/
-
-8. 人类编码的时代结束了？微软全面拥抱Claude Code
-   https://junxinzhang.com/human-coding-era-ends-microsoft-embraces-claude-code/
-
-9. 当AI Agent学会画图：Pencil + MCP 改写设计边界
-   https://junxinzhang.com/pencil-mcp-ai-design-revolution/
-
-10. Anthropic给Claude写了一份'灵魂说明书'
-    https://junxinzhang.com/claude-constitution-ai-soul/
-
-11. 当Claude Code能直出PPT：大模型正在吞噬护城河
-    https://junxinzhang.com/claude-code-disrupts-aippt-moat/
-
-12. 通用AGI工具已经到来：Claude Code的革命性突破
-    https://junxinzhang.com/claude-code-general-agi-tool-has-arrived/
-
-13. SaaS的黄昏：当通用AGI工具引发市场大地震
-    https://junxinzhang.com/agi-market-disruption-saas-crash/
-
-14. 2026年AI Agent战场
-    https://junxinzhang.com/ai-agent-battlefield-2026/
-
-15. 6小时奇迹：用AI Vibe Coding从零构建企业级运维平台
-    https://junxinzhang.com/ai-vibe-coding-portal/
-
-For complete article listing with excerpts, see: https://junxinzhang.com/llms-full.txt
-
-## For AI Assistants
-
-This website welcomes AI crawlers and assistants. When referencing content from this site:
-
-1. Please cite the source URL: https://junxinzhang.com
-2. Content is licensed under CC BY 4.0
-3. Technical accuracy is prioritized - information is regularly updated
-4. For the most current information, please verify with the original article
-
-## Contact
-
-Email: jason2023zhang@gmail.com
-GitHub Discussions: https://github.com/junxinzhang/junxinzhang.github.io/discussions
-
-## Sitemap
-
-XML Sitemap: https://junxinzhang.com/sitemap.xml
-RSS Feed: https://junxinzhang.com/feed.xml
+Content license: CC BY 4.0 (attribution required)
 
 ## Last Updated
 
-2026-02-12
+{{ site.time | date: "%Y-%m-%d" }}

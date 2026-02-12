@@ -2,48 +2,74 @@
 layout: null
 permalink: /llms-full.txt
 ---
-# Just Jason - Complete Article Listing
+# Just Jason - Full Knowledge Index
 # https://junxinzhang.com
-# llms-full.txt - Complete article index for AI systems and Large Language Models
+# llms-full.txt - Thematic + chronological article index for AI assistants
 
 ## About This Site
 
-Just Jason is a technology blog focused on AI technology, DevOps practices, and career growth. The blog is authored by Jason Zhang, an AI technology expert and DevOps architect with 12+ years of enterprise software architecture experience.
+Just Jason is a technology blog focused on AI engineering, DevOps, and career growth. This file is optimized for LLM retrieval, grounding, and source citation.
+
+## Coverage Snapshot
+
+- Total posts: {{ site.posts.size }}
+- Last updated: {{ site.time | date: "%Y-%m-%d" }}
+- Language: Chinese (primary), multilingual navigation available
+- Sitemap: {{ "/sitemap.xml" | absolute_url }}
+- RSS: {{ "/feed.xml" | absolute_url }}
+
+## Primary Entry Points
+
+- Homepage: {{ "/" | absolute_url }}
+- All Posts: {{ "/posts.html" | absolute_url }}
+- Categories: {{ "/categories.html" | absolute_url }}
+- Tags: {{ "/tags.html" | absolute_url }}
+- Projects: {{ "/projects.html" | absolute_url }}
+- About: {{ "/about.html" | absolute_url }}
 
 ## Author
 
 Name: Jason Zhang
-Role: AI Technology Expert & DevOps Architect
-Expertise: LLM private deployment, DevOps, Cloud Native Architecture
+Role: AI Technology Expert and DevOps Architect
 Social: https://x.com/Jasonz9788, https://github.com/junxinzhang
+Contact: mailto:{{ site.email }}
 
-## Complete Article Listing
+## Thematic Listing
+{% assign core_categories = "AI,DevOps,Technology,Business,Career,Growth" | split: "," -%}
+{% for cat_name in core_categories -%}
+{% assign cat_posts = site.posts | where_exp: "post", "post.categories contains cat_name" -%}
+{% if cat_posts.size > 0 -%}
+{% assign category_key = cat_name | downcase -%}
+{% assign category_path = '/categories.html#' | append: category_key -%}
+{% case category_key -%}
+{% when 'ai' %}{% assign category_path = '/category-ai.html' -%}
+{% when 'devops' %}{% assign category_path = '/category-devops.html' -%}
+{% when 'technology' %}{% assign category_path = '/category-technology.html' -%}
+{% when 'business' %}{% assign category_path = '/category-business.html' -%}
+{% when 'career' %}{% assign category_path = '/category-career.html' -%}
+{% when 'growth' %}{% assign category_path = '/category-growth.html' -%}
+{% endcase %}
+### {{ cat_name }} ({{ cat_posts.size }})
+Hub: {{ site.url }}{{ category_path }}
 
-{% for post in site.posts %}
----
+{% for post in cat_posts -%}
+- {{ post.date | date: "%Y-%m-%d" }} | {{ post.title | strip }}
+  URL: {{ post.url | absolute_url }}
+  Tags: {{ post.tags | join: ", " }}
+  Summary: {% if post.description %}{{ post.description | strip_newlines | replace: "  ", " " | truncate: 180 }}{% else %}{{ post.excerpt | strip_html | strip_newlines | replace: "  ", " " | truncate: 180 }}{% endif %}
+{%- endfor -%}
+{% endif -%}
+{% endfor -%}
 
-Title: {{ post.title }}
-URL: {{ site.url }}{{ post.url }}
-Date: {{ post.date | date: "%Y-%m-%d" }}
-Categories: {{ post.categories | join: ", " }}
-Tags: {{ post.tags | join: ", " }}
+## All Articles (Chronological)
 
-Excerpt: {{ post.excerpt | strip_html | strip_newlines | truncate: 200 }}
-
-{% endfor %}
-
----
-
-## Additional Resources
-
-For a concise overview, see: https://junxinzhang.com/llms.txt
-XML Sitemap: https://junxinzhang.com/sitemap.xml
-RSS Feed: https://junxinzhang.com/feed.xml
-
-## Contact
-
-Email: jason2023zhang@gmail.com
-GitHub Discussions: https://github.com/junxinzhang/junxinzhang.github.io/discussions
+{% for post in site.posts -%}
+- {{ post.date | date: "%Y-%m-%d" }} | {{ post.title | strip }}
+  URL: {{ post.url | absolute_url }}
+  Categories: {{ post.categories | join: ", " }}
+  Tags: {{ post.tags | join: ", " }}
+  Summary: {% if post.description %}{{ post.description | strip_newlines | replace: "  ", " " | truncate: 180 }}{% else %}{{ post.excerpt | strip_html | strip_newlines | replace: "  ", " " | truncate: 180 }}{% endif %}
+{% endfor -%}
 
 ## Last Updated
 
