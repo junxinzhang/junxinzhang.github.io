@@ -31,6 +31,12 @@ post:
   all_posts: "所有文章"
   featured: "精选"
   latest: "最新"
+  same_category: "同分类推荐"
+  view_more: "查看更多"
+  articles: "文章"
+  tag_related: "标签相关推荐"
+  view_all_posts: "查看全部文章页"
+  minutes: "分钟"
 
 categories:
   all: "全部"
@@ -112,3 +118,28 @@ share:
   share: "分享"
   scan_wechat: "扫码分享到微信"
   wechat_tip: "打开微信扫一扫"
+
+error_page:
+  not_found: "页面未找到，可能已被移动或删除。"
+  go_home: "返回首页"
+  all_posts: "所有文章"
+  browse_categories: "分类浏览"
+  recent_posts: "最近发布的文章"
+
+pages:
+  total_posts: "篇文章"
+  recommend_browse: "推荐配合"
+  categories_page: "分类页"
+  and: "和"
+  tags_page: "标签页"
+  browse: "浏览"
+  total_categories: "个分类，可按业务主题或技术领域快速筛选。"
+  total_tags: "个标签，按主题快速定位相关文章。"
+
+category_landing:
+  all_posts: "所有文章"
+  all_categories: "全部分类"
+  tag_index: "标签索引"
+  current_category: "当前分类"
+  posts_unit: "篇"
+  no_posts: "当前分类暂无文章。"

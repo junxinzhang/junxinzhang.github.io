@@ -30,6 +30,12 @@ post:
   all_posts: "すべての記事"
   featured: "注目"
   latest: "最新"
+  same_category: "同じカテゴリーのおすすめ"
+  view_more: "もっと見る"
+  articles: "の記事"
+  tag_related: "タグ関連のおすすめ"
+  view_all_posts: "すべての記事を見る"
+  minutes: "分"
 
 categories:
   all: "すべて"
@@ -100,3 +106,28 @@ cta:
   follow_twitter: "Xでフォロー"
   follow_github: "GitHubでフォロー"
   share_prompt: "参考になりましたか？他の方にもシェアしてください！"
+
+error_page:
+  not_found: "ページが見つかりません。移動または削除された可能性があります。"
+  go_home: "ホームに戻る"
+  all_posts: "すべての記事"
+  browse_categories: "カテゴリーで探す"
+  recent_posts: "最近の記事"
+
+pages:
+  total_posts: "件の記事"
+  recommend_browse: "。こちらもご覧ください："
+  categories_page: "カテゴリー"
+  and: "と"
+  tags_page: "タグ"
+  browse: ""
+  total_categories: "カテゴリー。トピックや分野で絞り込めます。"
+  total_tags: "タグ。トピック別に関連記事を素早く見つけられます。"
+
+category_landing:
+  all_posts: "すべての記事"
+  all_categories: "全カテゴリー"
+  tag_index: "タグ一覧"
+  current_category: "現在のカテゴリー"
+  posts_unit: "件"
+  no_posts: "このカテゴリーにはまだ記事がありません。"

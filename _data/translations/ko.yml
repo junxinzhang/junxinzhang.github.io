@@ -30,6 +30,12 @@ post:
   all_posts: "모든 글"
   featured: "추천"
   latest: "최신"
+  same_category: "같은 카테고리 추천"
+  view_more: "더 보기"
+  articles: "글"
+  tag_related: "태그 관련 추천"
+  view_all_posts: "모든 글 보기"
+  minutes: "분"
 
 categories:
   all: "전체"
@@ -100,3 +106,28 @@ cta:
   follow_twitter: "X 팔로우"
   follow_github: "GitHub 팔로우"
   share_prompt: "도움이 되셨다면 다른 분들께도 공유해 주세요!"
+
+error_page:
+  not_found: "페이지를 찾을 수 없습니다. 이동되었거나 삭제되었을 수 있습니다."
+  go_home: "홈으로"
+  all_posts: "모든 글"
+  browse_categories: "카테고리 탐색"
+  recent_posts: "최근 게시물"
+
+pages:
+  total_posts: "개의 글"
+  recommend_browse: ". 다음도 함께 둘러보세요: "
+  categories_page: "카테고리"
+  and: "및"
+  tags_page: "태그"
+  browse: ""
+  total_categories: "개 카테고리. 주제별로 필터링하세요."
+  total_tags: "개 태그. 주제별로 관련 글을 빠르게 찾으세요."
+
+category_landing:
+  all_posts: "모든 글"
+  all_categories: "전체 카테고리"
+  tag_index: "태그 목록"
+  current_category: "현재 카테고리"
+  posts_unit: "개"
+  no_posts: "이 카테고리에는 아직 글이 없습니다."

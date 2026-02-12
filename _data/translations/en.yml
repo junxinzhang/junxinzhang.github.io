@@ -31,6 +31,12 @@ post:
   all_posts: "All Posts"
   featured: "Featured"
   latest: "Latest"
+  same_category: "More in"
+  view_more: "View more"
+  articles: "articles"
+  tag_related: "Related by Tags"
+  view_all_posts: "View all posts"
+  minutes: "min"
 
 categories:
   all: "All"
@@ -112,3 +118,28 @@ share:
   share: "Share"
   scan_wechat: "Scan to share on WeChat"
   wechat_tip: "Open WeChat and scan"
+
+error_page:
+  not_found: "The page could not be found. It may have been moved or deleted."
+  go_home: "Go Home"
+  all_posts: "All Posts"
+  browse_categories: "Browse Categories"
+  recent_posts: "Recent Posts"
+
+pages:
+  total_posts: "posts"
+  recommend_browse: "Also browse by"
+  categories_page: "Categories"
+  and: "and"
+  tags_page: "Tags"
+  browse: ""
+  total_categories: "categories. Filter by topic or domain."
+  total_tags: "tags. Quickly locate related articles by topic."
+
+category_landing:
+  all_posts: "All Posts"
+  all_categories: "All Categories"
+  tag_index: "Tag Index"
+  current_category: "Current"
+  posts_unit: "posts"
+  no_posts: "No posts in this category yet."

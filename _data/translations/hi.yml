@@ -30,6 +30,12 @@ post:
   all_posts: "सभी लेख"
   featured: "विशेष"
   latest: "नवीनतम"
+  same_category: "और अधिक"
+  view_more: "अधिक देखें"
+  articles: "लेख"
+  tag_related: "टैग से संबंधित"
+  view_all_posts: "सभी लेख देखें"
+  minutes: "मिनट"
 
 categories:
   all: "सभी"
@@ -100,3 +106,28 @@ cta:
   follow_twitter: "X पर फॉलो करें"
   follow_github: "GitHub पर फॉलो करें"
   share_prompt: "क्या यह मददगार था? इसे दूसरों के साथ साझा करें जो इससे लाभान्वित हो सकते हैं!"
+
+error_page:
+  not_found: "पृष्ठ नहीं मिल सका। यह स्थानांतरित या हटाया गया हो सकता है।"
+  go_home: "होम जाएं"
+  all_posts: "सभी लेख"
+  browse_categories: "श्रेणियों को ब्राउज़ करें"
+  recent_posts: "हाल के लेख"
+
+pages:
+  total_posts: "लेख"
+  recommend_browse: "भी ब्राउज़ करें"
+  categories_page: "श्रेणियाँ"
+  and: "और"
+  tags_page: "टैग"
+  browse: ""
+  total_categories: "श्रेणियाँ। विषय या डोमेन द्वारा फ़िल्टर करें।"
+  total_tags: "टैग। विषय द्वारा संबंधित लेख जल्दी खोजें।"
+
+category_landing:
+  all_posts: "सभी लेख"
+  all_categories: "सभी श्रेणियाँ"
+  tag_index: "टैग इंडेक्स"
+  current_category: "वर्तमान"
+  posts_unit: "लेख"
+  no_posts: "इस श्रेणी में अभी कोई लेख नहीं है।"

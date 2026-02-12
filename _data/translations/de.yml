@@ -30,6 +30,12 @@ post:
   all_posts: "Alle Beiträge"
   featured: "Empfohlen"
   latest: "Neueste"
+  same_category: "Mehr von"
+  view_more: "Mehr anzeigen"
+  articles: "Artikel"
+  tag_related: "Nach Tags verwandt"
+  view_all_posts: "Alle Beiträge anzeigen"
+  minutes: "min"
 
 categories:
   all: "Alle"
@@ -100,3 +106,28 @@ cta:
   follow_twitter: "Auf X folgen"
   follow_github: "Auf GitHub folgen"
   share_prompt: "War das hilfreich? Teilen Sie es mit anderen, die davon profitieren könnten!"
+
+error_page:
+  not_found: "Die Seite konnte nicht gefunden werden. Sie wurde möglicherweise verschoben oder gelöscht."
+  go_home: "Zur Startseite"
+  all_posts: "Alle Beiträge"
+  browse_categories: "Kategorien durchsuchen"
+  recent_posts: "Aktuelle Beiträge"
+
+pages:
+  total_posts: "Beiträge"
+  recommend_browse: "Auch durchsuchen nach"
+  categories_page: "Kategorien"
+  and: "und"
+  tags_page: "Tags"
+  browse: ""
+  total_categories: "Kategorien. Nach Thema oder Bereich filtern."
+  total_tags: "Tags. Suchen Sie schnell verwandte Artikel nach Thema."
+
+category_landing:
+  all_posts: "Alle Beiträge"
+  all_categories: "Alle Kategorien"
+  tag_index: "Tag-Index"
+  current_category: "Aktuell"
+  posts_unit: "Beiträge"
+  no_posts: "Noch keine Beiträge in dieser Kategorie."

@@ -30,6 +30,12 @@ post:
   all_posts: "Todos los artículos"
   featured: "Destacado"
   latest: "Últimos"
+  same_category: "Más de"
+  view_more: "Ver más"
+  articles: "artículos"
+  tag_related: "Relacionado por etiquetas"
+  view_all_posts: "Ver todos los artículos"
+  minutes: "min"
 
 categories:
   all: "Todos"
@@ -100,3 +106,28 @@ cta:
   follow_twitter: "Seguir en X"
   follow_github: "Seguir en GitHub"
   share_prompt: "¿Te fue útil? ¡Compártelo con otros que puedan beneficiarse!"
+
+error_page:
+  not_found: "La página no pudo ser encontrada. Es posible que haya sido movida o eliminada."
+  go_home: "Ir al inicio"
+  all_posts: "Todos los artículos"
+  browse_categories: "Explorar categorías"
+  recent_posts: "Artículos recientes"
+
+pages:
+  total_posts: "artículos"
+  recommend_browse: "También explora por"
+  categories_page: "Categorías"
+  and: "y"
+  tags_page: "Etiquetas"
+  browse: ""
+  total_categories: "categorías. Filtra por tema o dominio."
+  total_tags: "etiquetas. Localiza rápidamente artículos relacionados por tema."
+
+category_landing:
+  all_posts: "Todos los artículos"
+  all_categories: "Todas las categorías"
+  tag_index: "Índice de etiquetas"
+  current_category: "Actual"
+  posts_unit: "artículos"
+  no_posts: "Aún no hay artículos en esta categoría."

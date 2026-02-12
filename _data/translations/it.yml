@@ -30,6 +30,12 @@ post:
   all_posts: "Tutti gli articoli"
   featured: "In evidenza"
   latest: "Ultimi"
+  same_category: "Altro da"
+  view_more: "Visualizza di più"
+  articles: "articoli"
+  tag_related: "Correlato per tag"
+  view_all_posts: "Visualizza tutti gli articoli"
+  minutes: "min"
 
 categories:
   all: "Tutti"
@@ -100,3 +106,28 @@ cta:
   follow_twitter: "Segui su X"
   follow_github: "Segui su GitHub"
   share_prompt: "L'hai trovato utile? Condividilo con altri che potrebbero trarne beneficio!"
+
+error_page:
+  not_found: "La pagina non può essere trovata. Potrebbe essere stata spostata o eliminata."
+  go_home: "Vai a casa"
+  all_posts: "Tutti gli articoli"
+  browse_categories: "Sfoglia categorie"
+  recent_posts: "Articoli recenti"
+
+pages:
+  total_posts: "articoli"
+  recommend_browse: "Sfoglia anche per"
+  categories_page: "Categorie"
+  and: "e"
+  tags_page: "Tag"
+  browse: ""
+  total_categories: "categorie. Filtra per argomento o dominio."
+  total_tags: "tag. Trova rapidamente articoli correlati per argomento."
+
+category_landing:
+  all_posts: "Tutti gli articoli"
+  all_categories: "Tutte le categorie"
+  tag_index: "Indice dei tag"
+  current_category: "Attuale"
+  posts_unit: "articoli"
+  no_posts: "Nessun articolo in questa categoria ancora."
