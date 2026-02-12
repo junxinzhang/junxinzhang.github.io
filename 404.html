@@ -1,26 +1,98 @@
 ---
 layout: default
+permalink: /404.html
 ads: false
+noindex: true
+sitemap: false
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
+<style>
+.error-container {
     text-align: center;
-  }
-
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
+    padding: 40px 20px;
+}
+.error-code {
+    font-size: 6rem;
+    font-weight: 800;
+    color: #dee2e6;
     line-height: 1;
-    letter-spacing: -1px;
-  }
+    margin-bottom: 10px;
+}
+.error-msg {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+.error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.error-actions a {
+    padding: 8px 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    color: #212529;
+    text-decoration: none;
+    font-weight: 500;
+}
+.error-actions a:hover {
+    border-color: #0d6efd;
+    text-decoration: none;
+}
+.error-actions a.primary {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+.error-posts h4 {
+    margin-bottom: 20px;
+}
+.error-post-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.error-post-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+.error-post-list li a {
+    font-weight: 500;
+    color: #212529;
+}
+.error-post-list li small {
+    display: block;
+    color: #6c757d;
+    margin-top: 2px;
+}
 </style>
 
 <div class="container">
-  <h1>404</h1>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <p class="error-msg">{{ t.error_page.not_found | default: "页面未找到，可能已被移动或删除。" }}</p>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+        <div class="error-actions">
+            <a class="primary" href="{{ site.baseurl }}/">{{ t.error_page.go_home | default: "返回首页" }}</a>
+            <a href="{{ site.baseurl }}/posts.html">{{ t.error_page.all_posts | default: "所有文章" }}</a>
+            <a href="{{ site.baseurl }}/categories.html">{{ t.error_page.browse_categories | default: "分类浏览" }}</a>
+        </div>
+
+        <div class="error-posts">
+            <h4 class="font-weight-bold">{{ t.error_page.recent_posts | default: "最近发布的文章" }}</h4>
+            <ul class="error-post-list">
+                {% for post in site.posts limit:5 %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    <small>{{ post.date | date: t.date.format | default: '%Y年%m月%d日' }} · {{ post.categories | first }}</small>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>

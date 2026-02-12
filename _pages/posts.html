@@ -1,0 +1,73 @@
+---
+title: "All Posts - 所有文章"
+layout: default
+permalink: "/posts.html"
+description: "按时间浏览 Just Jason 博客的全部文章，覆盖 AI、DevOps、云原生、职业成长等主题。"
+keywords: "所有文章, AI博客, DevOps, 云原生, 技术文章"
+sitemap:
+  priority: 0.9
+  changefreq: daily
+---
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1 class="font-weight-bold title h3 text-capitalize mb-4">All Posts</h1>
+      <p class="text-muted mb-4">
+        {{ site.posts.size }} {{ t.pages.total_posts | default: "篇文章" }}{{ t.pages.recommend_browse | default: "，推荐配合" }} <a href="{{site.baseurl}}/categories.html">{{ t.pages.categories_page | default: "分类页" }}</a> {{ t.pages.and | default: "和" }} <a href="{{site.baseurl}}/tags.html">{{ t.pages.tags_page | default: "标签页" }}</a>{{ t.pages.browse | default: "浏览" }}。
+      </p>
+      <div class="mb-4 d-flex flex-wrap" style="gap:8px;">
+        {% assign core_categories = "AI,DevOps,Technology,Business,Career,Growth" | split: "," %}
+        {% for cat_name in core_categories %}
+        {% if site.categories[cat_name] %}
+        <a class="btn btn-sm btn-light border" href="{% include category-url.html category=cat_name %}">{{ cat_name }} ({{ site.categories[cat_name].size }})</a>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      {% for post in site.posts %}
+      {% if post.title != null %}
+      {% if group == null or group == post.group %}
+      {% include main-loop-card.html %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      {% assign pages_list = nil %}
+      {% assign group = nil %}
+    </div>
+
+    <div class="col-md-4">
+      {% include sidebar-featured.html %}
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "{{ site.url }}/posts.html#collection",
+  "name": "All Posts - {{ site.name }}",
+  "url": "{{ site.url }}/posts.html",
+  "description": "{{ page.description | escape }}",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "{{ site.url }}"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": {{ site.posts.size }},
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "itemListElement": [
+      {% for post in site.posts limit: 30 %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "url": "{{ post.url | absolute_url }}",
+        "name": "{{ post.title | escape }}"
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+}
+</script>

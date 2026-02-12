@@ -1,0 +1,10 @@
+{%- assign category_key = include.category | downcase -%}
+{%- case category_key -%}
+{%- when 'ai' -%}{{ site.baseurl }}/category-ai.html
+{%- when 'devops' -%}{{ site.baseurl }}/category-devops.html
+{%- when 'technology' -%}{{ site.baseurl }}/category-technology.html
+{%- when 'business' -%}{{ site.baseurl }}/category-business.html
+{%- when 'career' -%}{{ site.baseurl }}/category-career.html
+{%- when 'growth' -%}{{ site.baseurl }}/category-growth.html
+{%- else -%}{{ site.baseurl }}/categories.html#{{ category_key }}
+{%- endcase -%}

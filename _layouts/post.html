@@ -17,9 +17,10 @@ layout: default
             <li class="breadcrumb-item"><a href="{{site.baseurl}}/" class="text-muted"><span
                         data-i18n="nav.home">Home</span></a></li>
             {% if page.categories.size > 0 %}
+            {% assign breadcrumb_category = page.categories | first %}
             <li class="breadcrumb-item"><a
-                    href="{{site.baseurl}}/categories.html#{{ page.categories | first | downcase }}"
-                    class="text-muted">{{ page.categories | first }}</a></li>
+                    href="{% include category-url.html category=breadcrumb_category %}"
+                    class="text-muted">{{ breadcrumb_category }}</a></li>
             {% endif %}
             <li class="breadcrumb-item active text-truncate" aria-current="page" style="max-width: 300px;">{{ page.title
                 }}</li>
@@ -35,7 +36,7 @@ layout: default
                         <span class="catlist">
                             {% for category in page.categories %}
                             <a class="sscroll text-danger"
-                                href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category | downcase
+                                href="{% include category-url.html category=category %}">{{ category
                                 }}</a><span class="sep">, </span>
                             {% endfor %}
                         </span>
@@ -162,6 +163,48 @@ layout: default
                 </span>
             </div>
 
+            <!-- Same Category Recommendations -->
+            {% assign primary_category = page.categories | first %}
+            {% if primary_category %}
+            {% assign same_category_posts = site.categories[primary_category] %}
+            {% assign same_category_counter = 0 %}
+            <div class="mb-5">
+                <h4 class="font-weight-bold spanborder"><span>{{ t.post.same_category | default: "同分类推荐" }} · {{ primary_category }}</span></h4>
+                <div class="row">
+                    {% for related_post in same_category_posts %}
+                    {% if related_post.url != page.url and same_category_counter < 3 %}
+                    {% assign same_category_counter = same_category_counter | plus: 1 %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 border-0 rounded shadow-sm hover-effect">
+                            {% if related_post.image %}
+                            <a href="{{site.baseurl}}{{related_post.url}}">
+                                {% include optimized-image.html src=related_post.image alt=related_post.title height="140px"
+                                loading="lazy" class="card-img-top" %}
+                            </a>
+                            {% endif %}
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">
+                                    <a class="text-dark" href="{{site.baseurl}}{{related_post.url}}">{{ related_post.title }}</a>
+                                </h5>
+                                {% assign words = related_post.content | strip_html | number_of_words %}
+                                {% assign read_time = words | divided_by: 300 | at_least: 1 %}
+                                <div class="mt-auto">
+                                    <small class="text-muted">{{ related_post.date | date: t.date.format | default: '%Y年%m月%d日' }} · {{ read_time }} {{ t.post.minutes | default: "分钟" }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% if same_category_counter > 0 %}
+                <a class="btn btn-sm btn-outline-primary" href="{% include category-url.html category=primary_category %}">
+                    {{ t.post.view_more | default: "查看更多" }} {{ primary_category }} {{ t.post.articles | default: "文章" }}
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+
             <!-- Article CTA -->
             {% include article-cta.html %}
 
@@ -184,7 +227,7 @@ layout: default
 <div class="container mb-5">
     <div class="row">
         <div class="col-12">
-            <h4 class="font-weight-bold spanborder"><span data-i18n="post.related_posts">Related Posts</span></h4>
+            <h4 class="font-weight-bold spanborder"><span>{{ t.post.tag_related | default: "标签相关推荐" }}</span></h4>
         </div>
     </div>
     <div class="row">
