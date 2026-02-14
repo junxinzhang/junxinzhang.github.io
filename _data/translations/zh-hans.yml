@@ -13,6 +13,7 @@ nav:
   about: "关于"
   contact: "联系我"
   search: "搜索"
+  more: "更多"
   search_placeholder: "输入关键词，按回车搜索..."
 
 post:

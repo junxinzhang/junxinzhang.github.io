@@ -12,6 +12,7 @@ nav:
   tags: "標籤"
   about: "關於"
   search: "搜尋"
+  more: "更多"
   search_placeholder: "輸入關鍵詞，按 Enter 搜尋..."
 
 post:

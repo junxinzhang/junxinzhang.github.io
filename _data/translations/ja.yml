@@ -12,6 +12,7 @@ nav:
   tags: "タグ"
   about: "概要"
   search: "検索"
+  more: "その他"
   search_placeholder: "キーワードを入力してEnterを押す..."
 
 post:

@@ -12,6 +12,7 @@ nav:
   tags: "Tag"
   about: "Chi sono"
   search: "Cerca"
+  more: "Altro"
   search_placeholder: "Digita e premi Invio..."
 
 post:

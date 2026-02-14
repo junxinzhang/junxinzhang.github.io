@@ -12,6 +12,7 @@ nav:
   tags: "태그"
   about: "소개"
   search: "검색"
+  more: "더보기"
   search_placeholder: "검색어 입력 후 Enter..."
 
 post:

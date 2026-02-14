@@ -13,6 +13,7 @@ nav:
   about: "About"
   contact: "Contact"
   search: "Search"
+  more: "More"
   search_placeholder: "Type and hit enter..."
 
 post:

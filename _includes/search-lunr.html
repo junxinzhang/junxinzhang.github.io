@@ -45,17 +45,147 @@
     [data-theme="dark"] .no-results .badge {
         background-color: var(--card-bg, #16213e);
     }
+
+    .nav-search-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+    }
+    .nav-search-toggle {
+        border: 0;
+        background: transparent;
+        border-radius: 8px;
+        padding: 0.35rem 0.55rem !important;
+        cursor: pointer;
+    }
+    .nav-search-toggle:focus {
+        outline: 2px solid #03a87c;
+        outline-offset: 2px;
+    }
+    .nav-search-form {
+        margin: 0;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: width 0.2s ease, opacity 0.2s ease;
+    }
+    .nav-search-item.expanded .nav-search-form {
+        width: 210px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .nav-search-form .form-control {
+        min-width: 210px;
+        border-radius: 999px;
+        height: 2.15rem;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 991.98px) {
+        .nav-search-item {
+            width: 100%;
+            margin-top: 0.35rem;
+        }
+        .nav-search-toggle {
+            display: none;
+        }
+        .nav-search-form {
+            width: 100% !important;
+            opacity: 1;
+            overflow: visible;
+            pointer-events: auto;
+        }
+        .nav-search-form .form-control {
+            min-width: 0;
+            width: 100%;
+        }
+    }
 </style>
 
-<form class="bd-search hidden-sm-down" role="search" onSubmit="return initSearchAndRun(document.getElementById('lunrsearch').value);">
-    <label for="lunrsearch" class="sr-only">Search</label>
-    <input type="search" class="form-control text-small" id="lunrsearch" name="q" value="" placeholder="Type and hit enter..." data-i18n="nav.search_placeholder" aria-label="Search site content" autocomplete="off">
-</form>
+<li class="nav-item nav-search-item" id="navSearchItem">
+    <button id="searchToggle" class="nav-link nav-search-toggle" type="button" aria-label="Open search"
+        aria-expanded="false" title="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 16 16"
+            aria-hidden="true">
+            <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.398 1.398h.001l3.85 3.85a1 1 0 0 0 1.414-1.415l-3.85-3.85zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+    </button>
+    <form class="bd-search nav-search-form" role="search"
+        onSubmit="return initSearchAndRun(document.getElementById('lunrsearch').value);">
+        <label for="lunrsearch" class="sr-only">Search</label>
+        <input type="search" class="form-control text-small" id="lunrsearch" name="q" value=""
+            placeholder="Type and hit enter..." data-i18n="nav.search_placeholder" aria-label="Search site content"
+            autocomplete="off">
+    </form>
+</li>
 
 <script>
 // Lazy load search functionality
 var searchLoaded = false;
 var pendingSearch = null;
+var navSearchItem = document.getElementById('navSearchItem');
+var searchInput = document.getElementById('lunrsearch');
+var searchToggle = document.getElementById('searchToggle');
+
+function openNavbarSearch(shouldFocus) {
+    if (navSearchItem && window.innerWidth >= 992) {
+        navSearchItem.classList.add('expanded');
+    }
+    if (searchToggle) {
+        searchToggle.setAttribute('aria-expanded', 'true');
+    }
+    if (shouldFocus && searchInput) {
+        setTimeout(function () {
+            searchInput.focus();
+        }, 100);
+    }
+}
+
+function closeNavbarSearch() {
+    if (window.innerWidth < 992) return;
+    if (navSearchItem) {
+        navSearchItem.classList.remove('expanded');
+    }
+    if (searchToggle) {
+        searchToggle.setAttribute('aria-expanded', 'false');
+    }
+}
+
+window.openNavbarSearch = openNavbarSearch;
+
+if (searchToggle) {
+    searchToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isExpanded = navSearchItem && navSearchItem.classList.contains('expanded');
+        if (isExpanded) {
+            closeNavbarSearch();
+        } else {
+            openNavbarSearch(true);
+        }
+    });
+}
+
+document.addEventListener('click', function (e) {
+    if (!navSearchItem || window.innerWidth < 992) return;
+    if (!navSearchItem.contains(e.target)) {
+        closeNavbarSearch();
+    }
+});
+
+document.addEventListener('keydown', function (e) {
+    var isShortcut = (e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k';
+    if (isShortcut) {
+        e.preventDefault();
+        openNavbarSearch(true);
+    }
+    if (e.key === 'Escape' && searchInput === document.activeElement) {
+        closeNavbarSearch();
+    }
+});
 
 function initSearchAndRun(term) {
     if (!term) return false;
@@ -86,11 +216,13 @@ function loadSearchLibrary() {
 }
 
 // Pre-load on focus for better UX
-document.getElementById('lunrsearch').addEventListener('focus', function() {
-    if (!searchLoaded) {
-        loadSearchLibrary();
-    }
-}, {once: true});
+if (searchInput) {
+    searchInput.addEventListener('focus', function() {
+        if (!searchLoaded) {
+            loadSearchLibrary();
+        }
+    }, {once: true});
+}
 
 {% assign counter = 0 %}
 var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' or page.noindex == true or page.sitemap == false %}{% else %}{
@@ -238,7 +370,11 @@ document.addEventListener('keydown', function(e) {
 function closeSearchModal() {
     document.getElementById('lunrsearchresults').style.display = 'none';
     document.body.classList.remove('modal-open');
-    // Return focus to search input
-    document.getElementById('lunrsearch').focus();
+    // Return focus to search input, expanding desktop search first if needed
+    if (window.openNavbarSearch) {
+        window.openNavbarSearch(true);
+    } else if (searchInput) {
+        searchInput.focus();
+    }
 }
 </script>

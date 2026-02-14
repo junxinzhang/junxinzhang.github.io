@@ -942,20 +942,20 @@
     <!-- Navbar -->
     <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
-            <a href="{{site.baseurl}}/" aria-label="Home">
+            <a class="navbar-brand" href="{{site.baseurl}}/" aria-label="Home">
                 <img src="{{site.baseurl}}/assets/images/favicon/apple-touch-icon.png" alt="{{site.name}} Logo"
-                    width="28" height="28" style="margin-right: 0.55rem;" loading="eager" decoding="async">
+                    class="site-logo" width="24" height="24" loading="eager" decoding="async">
+                <strong>{{site.name}}</strong>
             </a>
-            <a class="navbar-brand" href="{{site.baseurl}}/"><strong>{{site.name}}</strong></a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02"
                 aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbarColor02" style="">
-                <ul class="navbar-nav mr-auto d-flex align-items-center">
+                <ul class="navbar-nav mr-auto d-flex align-items-center nav-primary">
                     {% include menu-header.html %}
                 </ul>
-                <ul class="navbar-nav ml-auto d-flex align-items-center">
+                <ul class="navbar-nav ml-auto d-flex align-items-center nav-utilities">
                     {% include search-lunr.html %}
                     <!-- Dark Mode Toggle -->
                     <li class="nav-item ml-2">
@@ -1239,6 +1239,114 @@
         @media(min-width:992px) {
             .navbar-collapse {
                 display: flex !important
+            }
+        }
+
+        #MagicMenu .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            margin-right: 1.25rem;
+            font-size: 1.38rem;
+            line-height: 1.1;
+        }
+
+        #MagicMenu .site-logo {
+            flex: 0 0 auto;
+        }
+
+        #MagicMenu .nav-primary .nav-link,
+        #MagicMenu .nav-utilities .nav-link {
+            white-space: nowrap;
+        }
+
+        #MagicMenu .nav-primary .nav-main-item .nav-link,
+        #MagicMenu .nav-primary .nav-more-toggle {
+            padding-left: 0.55rem;
+            padding-right: 0.55rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        #MagicMenu .nav-agent-item {
+            margin-left: 0.35rem;
+        }
+
+        #MagicMenu .nav-agent-item .nav-link {
+            padding-left: 0.9rem;
+            padding-right: 0.9rem;
+        }
+
+        #MagicMenu .nav-more-toggle {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        #MagicMenu .nav-more-menu {
+            min-width: 11.5rem;
+            margin-top: 0.4rem;
+        }
+
+        #MagicMenu .nav-utilities {
+            column-gap: 0.2rem;
+        }
+
+        @media (max-width: 1199.98px) {
+            #MagicMenu .navbar-brand {
+                font-size: 1.28rem;
+                margin-right: 0.9rem;
+            }
+
+            #MagicMenu .nav-primary .nav-main-item .nav-link,
+            #MagicMenu .nav-primary .nav-more-toggle {
+                padding-left: 0.45rem;
+                padding-right: 0.45rem;
+                font-size: 0.91rem;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            #MagicMenu .navbar-brand {
+                font-size: 1.2rem;
+                margin-right: auto;
+            }
+
+            #MagicMenu .nav-primary,
+            #MagicMenu .nav-utilities {
+                align-items: stretch !important;
+                margin-top: 0.35rem;
+            }
+
+            #MagicMenu .nav-primary .nav-item,
+            #MagicMenu .nav-utilities .nav-item {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            #MagicMenu .nav-primary .nav-link,
+            #MagicMenu .nav-utilities .nav-link {
+                display: block;
+                width: 100%;
+                padding-left: 0.85rem;
+                padding-right: 0.85rem;
+            }
+
+            #MagicMenu .nav-more-menu {
+                position: static;
+                float: none;
+                margin-top: 0;
+                border: 0;
+                box-shadow: none;
+                padding-top: 0;
+                padding-bottom: 0.35rem;
+            }
+
+            #MagicMenu .nav-agent-item .nav-link {
+                display: inline-block;
+                width: auto;
+                margin-left: 0.75rem;
+                margin-top: 0.2rem;
             }
         }
 
