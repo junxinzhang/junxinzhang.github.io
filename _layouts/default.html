@@ -874,26 +874,10 @@
         }
     </style>
 
-    <!-- Main CSS - Async load for non-blocking -->
-    <link rel="preload" href="{{site.baseurl}}/assets/css/main.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
-    </noscript>
-
-    <!-- Theme Stylesheet - Async load (minified) -->
-    <link rel="preload" href="{{site.baseurl}}/assets/css/theme.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.min.css">
-    </noscript>
-
-    <!-- Dark Mode Stylesheet - Async load -->
-    <link rel="preload" href="{{site.baseurl}}/assets/css/dark-mode.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/dark-mode.css">
-    </noscript>
+    <!-- CSS - render-blocking to prevent CLS caused by late style application -->
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.min.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/dark-mode.css">
 
     <!-- Font Awesome - Defer load until after page interactive -->
     <!-- Google Fonts removed - using system fonts for better performance -->

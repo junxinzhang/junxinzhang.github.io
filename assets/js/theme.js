@@ -41,6 +41,14 @@
     var currentIndex = 0;
     var intervalId = null;
     var interval = 5000; // Auto-slide every 5 seconds
+    var autoSlideEnabled = false; // Enable only after explicit user interaction
+    var prefersReducedMotion = false;
+
+    try {
+        prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) {
+        prefersReducedMotion = false;
+    }
 
     function showSlide(index) {
         if (index >= items.length) index = 0;
@@ -64,6 +72,7 @@
     }
 
     function startAutoSlide() {
+        if (!autoSlideEnabled || prefersReducedMotion) return;
         stopAutoSlide();
         intervalId = setInterval(nextSlide, interval);
     }
@@ -79,6 +88,7 @@
         prevBtn.addEventListener('click', function(e) {
             e.preventDefault();
             prevSlide();
+            autoSlideEnabled = true;
             startAutoSlide();
         });
     }
@@ -87,6 +97,7 @@
         nextBtn.addEventListener('click', function(e) {
             e.preventDefault();
             nextSlide();
+            autoSlideEnabled = true;
             startAutoSlide();
         });
     }
@@ -94,6 +105,7 @@
     indicators.forEach(function(indicator, index) {
         indicator.addEventListener('click', function() {
             showSlide(index);
+            autoSlideEnabled = true;
             startAutoSlide();
         });
     });
@@ -101,13 +113,16 @@
     document.addEventListener('keydown', function(e) {
         if (e.key === 'ArrowLeft') {
             prevSlide();
+            autoSlideEnabled = true;
             startAutoSlide();
         } else if (e.key === 'ArrowRight') {
             nextSlide();
+            autoSlideEnabled = true;
             startAutoSlide();
         }
     });
 
+    // Keep hover behavior only after user has enabled autoplay.
     carousel.addEventListener('mouseenter', stopAutoSlide);
     carousel.addEventListener('mouseleave', startAutoSlide);
 
@@ -127,6 +142,7 @@
         touchEndX = e.changedTouches[0].screenX;
         touchEndY = e.changedTouches[0].screenY;
         handleSwipe();
+        autoSlideEnabled = true;
         startAutoSlide();
     }, {passive: true});
 
@@ -143,7 +159,7 @@
         }
     }
 
-    startAutoSlide();
+    // Do not autoplay by default to avoid delaying LCP and inflating CLS in lab runs.
 })();
 
 // Hide Header on scroll down - optimized with passive listener
@@ -202,7 +218,9 @@
     setTimeout(function() {
         if (location.hash) {
             window.scrollTo(0, 0);
-            var target = document.querySelector(location.hash);
+            // Escape special characters in CSS selectors (colons in footnote IDs like #fn:fn-agent)
+            var escapedHash = location.hash.replace(/:/g, '\\:');
+            var target = document.querySelector(escapedHash);
             if (target) {
                 smoothScrollTo(target);
             }
