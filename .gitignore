@@ -7,3 +7,6 @@ Gemfile.lock
 .DS_Store
 .claude/
 article-image-processor-skill/
+post-to-wechat/
+xhs-images/
+*.bak-*
