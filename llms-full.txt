@@ -21,6 +21,7 @@ Just Jason is a technology blog focused on AI engineering, DevOps, and career gr
 ## Primary Entry Points
 
 - Homepage: {{ "/" | absolute_url }}
+- For Agents: {{ "/for-agents.html" | absolute_url }}
 - All Posts: {{ "/posts.html" | absolute_url }}
 - Categories: {{ "/categories.html" | absolute_url }}
 - Tags: {{ "/tags.html" | absolute_url }}

@@ -39,6 +39,10 @@
 /
   Cache-Control: public, max-age=3600, must-revalidate
 
+# Agent capability page - shorter cache for faster rollout checks
+/for-agents.html
+  Cache-Control: public, max-age=600, must-revalidate
+
 # RSS Feed
 /feed.xml
   Cache-Control: public, max-age=3600
