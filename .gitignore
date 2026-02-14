@@ -9,4 +9,6 @@ Gemfile.lock
 article-image-processor-skill/
 post-to-wechat/
 xhs-images/
+cover-image/
+illustrations/
 *.bak-*
