@@ -5,7 +5,7 @@ date: 2026-02-02
 author: Jason Zhang
 categories: [AI, OpenClaw, 浏览器自动化, macOS]
 tags: [OpenClaw, AI Agent, macOS, Mac Mini, Playwright, Chrome Relay, 浏览器自动化, AI工作站]
-image: assets/images/screenshot-20260202-openclaw-macos-cover.png
+image: assets/images/screenshot-20260202-openclaw-macos-cover.webp
 slug: openclaw-macos-best-environment
 description: "Mac Mini被AI圈买断货了，说是跑OpenClaw最合适。我自己也在Mac上跑了一段时间，体验确实比服务器舒服，但——也没网上说的那么完美。这篇文章聊聊我的真实感受。"
 ---

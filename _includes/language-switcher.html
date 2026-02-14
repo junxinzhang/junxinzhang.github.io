@@ -84,12 +84,12 @@
 </style>
 
 <script>
-// All translations data embedded from Jekyll
-var i18nTranslations = {
-{% for lang in site.data.translations %}
-    "{{ lang[0] }}": {{ lang[1] | jsonify }}{% unless forloop.last %},{% endunless %}
-{% endfor %}
-};
+// Load translations on demand instead of embedding all languages in HTML.
+var i18nTranslations = Object.create(null);
+var translationsLoaded = false;
+var translationsLoading = false;
+var translationLoadCallbacks = [];
+var translationsEndpoint = '{{ site.baseurl }}/assets/data/translations.json';
 
 // Language labels
 var i18nLanguages = {
@@ -104,6 +104,42 @@ var htmlLangMap = {
     "zh-hans": "zh-CN",
     "zh-hant": "zh-TW"
 };
+
+function loadTranslations(callback) {
+    if (translationsLoaded) {
+        if (typeof callback === 'function') callback();
+        return;
+    }
+
+    if (typeof callback === 'function') {
+        translationLoadCallbacks.push(callback);
+    }
+
+    if (translationsLoading) return;
+    translationsLoading = true;
+
+    fetch(translationsEndpoint, { credentials: 'same-origin' })
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('HTTP ' + response.status);
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            i18nTranslations = data || Object.create(null);
+        })
+        .catch(function(error) {
+            console.error('Failed to load translations:', error);
+            i18nTranslations = Object.create(null);
+        })
+        .finally(function() {
+            translationsLoaded = true;
+            translationsLoading = false;
+            var callbacks = translationLoadCallbacks.slice();
+            translationLoadCallbacks = [];
+            callbacks.forEach(function(fn) { fn(); });
+        });
+}
 
 function updateDocumentLang(langCode) {
     var htmlLang = htmlLangMap[langCode] || langCode;
@@ -124,12 +160,32 @@ function getTranslation(obj, path) {
     return current;
 }
 
+function updateLanguageSelectionUI(langCode) {
+    var langCodeEl = document.getElementById('currentLangCode');
+    if (langCodeEl && i18nLanguages[langCode]) {
+        langCodeEl.textContent = i18nLanguages[langCode].code || langCode.toUpperCase();
+    }
+
+    document.querySelectorAll('.lang-option').forEach(function(el) {
+        var itemLang = el.getAttribute('data-lang');
+        var checkIcon = el.querySelector('.lang-check');
+        if (itemLang === langCode) {
+            el.classList.add('active');
+            if (checkIcon) checkIcon.style.display = 'inline';
+        } else {
+            el.classList.remove('active');
+            if (checkIcon) checkIcon.style.display = 'none';
+        }
+    });
+}
+
 // Apply translations to all elements with data-i18n attribute
 function applyTranslations(langCode) {
+    updateDocumentLang(langCode);
+    updateLanguageSelectionUI(langCode);
+
     var translations = i18nTranslations[langCode] || i18nTranslations[defaultLang];
     if (!translations) return;
-
-    updateDocumentLang(langCode);
 
     // Update elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
@@ -153,39 +209,34 @@ function applyTranslations(langCode) {
         }
     });
 
-    // Update current language code display
-    var langCodeEl = document.getElementById('currentLangCode');
-    if (langCodeEl && i18nLanguages[langCode]) {
-        langCodeEl.textContent = i18nLanguages[langCode].code || langCode.toUpperCase();
-    }
-
-    // Update active state in dropdown
-    document.querySelectorAll('.lang-option').forEach(function(el) {
-        var itemLang = el.getAttribute('data-lang');
-        var checkIcon = el.querySelector('.lang-check');
-        if (itemLang === langCode) {
-            el.classList.add('active');
-            if (checkIcon) checkIcon.style.display = 'inline';
-        } else {
-            el.classList.remove('active');
-            if (checkIcon) checkIcon.style.display = 'none';
-        }
-    });
 }
 
 // Switch language function
 function switchLanguage(langCode) {
     localStorage.setItem('preferred_language', langCode);
-    applyTranslations(langCode);
+    if (langCode === defaultLang && !translationsLoaded) {
+        applyTranslations(langCode);
+        return;
+    }
+    loadTranslations(function() {
+        applyTranslations(langCode);
+    });
 }
 
 // Initialize language switcher - deferred to reduce TBT
 function initLanguageSwitcher() {
     // Get saved language or use default
     var savedLang = localStorage.getItem('preferred_language') || defaultLang;
+    if (!i18nLanguages[savedLang]) savedLang = defaultLang;
 
-    // Apply translations
-    applyTranslations(savedLang);
+    // Apply translations lazily. Default language uses the already-rendered text.
+    if (savedLang === defaultLang) {
+        applyTranslations(savedLang);
+    } else {
+        loadTranslations(function() {
+            applyTranslations(savedLang);
+        });
+    }
 
     // Dropdown toggle (replaces Bootstrap dropdown)
     var dropdown = document.getElementById('languageDropdown');
@@ -194,6 +245,9 @@ function initLanguageSwitcher() {
     var currentFocusIndex = -1;
 
     function openDropdown() {
+        if (!translationsLoaded) {
+            loadTranslations();
+        }
         dropdownMenu.classList.add('show');
         dropdown.setAttribute('aria-expanded', 'true');
         currentFocusIndex = 0;

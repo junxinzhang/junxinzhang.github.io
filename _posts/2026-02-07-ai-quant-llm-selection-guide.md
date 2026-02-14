@@ -5,7 +5,7 @@ date: 2026-02-07
 author: Jason Zhang
 categories: [AI, 量化交易, 深度分析]
 tags: [AI量化, 大模型选型, Claude, GPT, DeepSeek, Qwen, 成本优化, 多智能体, A股]
-image: assets/images/screenshot-20260207-llm-selection-quant-cover.png
+image: assets/images/screenshot-20260207-llm-selection-quant-cover.webp
 slug: ai-quant-llm-selection-guide
 description: "做AI量化交易，大模型怎么选？11家厂商、开源闭源、成本差异可达60倍——这篇文章用真实场景测试告诉你：不同环节该用什么模型，怎么搭配才能既省钱又靠谱。"
 ---

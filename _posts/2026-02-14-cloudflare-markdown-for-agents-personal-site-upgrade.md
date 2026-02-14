@@ -4,7 +4,7 @@ title: "2月14日观察：Cloudflare 开放 Markdown for Agents 后，个人站�
 date: 2026-02-14
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260214-cf-agent-cover.png
+image: assets/images/screenshot-20260214-cf-agent-cover.webp
 tags: [featured, Cloudflare, Markdown for Agents, llms.txt, AI SEO, Agent, 个人站]
 slug: cloudflare-markdown-for-agents-personal-site-upgrade
 description: "作为 Cloudflare 深度用户，我从实操角度拆解 Markdown for Agents 的真正价值：它不是一个小功能，而是个人站从‘仅人类可读’走向‘人类+Agent双可读’的关键拐点。文末给出30天落地路线图。"
@@ -33,7 +33,7 @@ Cloudflare 在 **2026 年 2 月 12 日**发布了 [Markdown for Agents](https://
 
 我的结论更激进一点：**它是个人站从“只服务人类读者”，升级为“同时服务人类读者 + AI Agent”的关键基础设施。**
 
-![Cloudflare 打开 Agent 入口后的个人站升级方向](/assets/images/screenshot-20260214-cf-agent-cover.png)
+![Cloudflare 打开 Agent 入口后的个人站升级方向](/assets/images/screenshot-20260214-cf-agent-cover.webp)
 
 <!-- 封面图提示词（2.35:1）：概念化技术封面，中心是橙色云朵演变为蓝色数据流，左右分别代表“传统网页”与“Agent可读结构化世界”，大标题“个人站进入Agent时代”，副标题“Cloudflare打开了第一道门”，所有文字简体中文，数字插画风，Aspect Ratio 2.35:1。 -->
 

@@ -4,7 +4,7 @@ title: "AI小白必读：Agent、Skill、MCP到底是什么？一篇讲透在哪
 date: 2026-02-10
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260210-ai-beginner-guide-cover.png
+image: assets/images/screenshot-20260210-ai-beginner-guide-cover.webp
 tags: [AI Agent, MCP, Skill, Claude Code, 新手教程, AI入门, 实操指南, 微信公众号]
 slug: ai-agent-skill-mcp-beginner-guide
 description: "写给完全不懂AI的人：什么是Agent、Skill、MCP？它们之间是什么关系？普通人在哪里用、怎么用？这篇教程用最大白话，从零开始，手把手带你进入AI Agent时代。"
@@ -22,7 +22,7 @@ description: "写给完全不懂AI的人：什么是Agent、Skill、MCP？它们
 2. **跟我有什么关系？**
 3. **我现在就能用吗？怎么用？**
 
-![AI Agent + Skill + MCP：你的超级数字助手](/assets/images/screenshot-20260210-ai-beginner-guide-cover.png)
+![AI Agent + Skill + MCP：你的超级数字助手](/assets/images/screenshot-20260210-ai-beginner-guide-cover.webp)
 
 ---
 

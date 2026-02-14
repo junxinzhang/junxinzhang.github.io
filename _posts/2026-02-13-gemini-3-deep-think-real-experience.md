@@ -4,7 +4,7 @@ title: "Google AI Ultra用户实测：Gemini-3 Deep Think到底强在哪？一�
 date: 2026-02-13
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260213-gemini-deep-think-cover.png
+image: assets/images/screenshot-20260213-gemini-deep-think-cover.webp
 tags: [featured, Google AI Ultra, Gemini 3, Deep Think, 深度思考, AI推理, Claude Opus, GPT-5, 模型对比, 微信公众号]
 slug: gemini-3-deep-think-real-experience
 description: "作为Google AI Ultra订阅用户，深度使用Gemini-3 Pro Deep Think模式一整天后的真实体感报告。从数学推理到代码生成，从科学分析到创意写作，逐场景拆解这个'会暂停思考的AI'到底值不值$249.99/月。"
@@ -35,7 +35,7 @@ faq:
 
 **今天这篇文章，不是技术评测报告，是一个重度AI用户的真实体感。**
 
-![Gemini-3 Deep Think：会暂停思考的AI](/assets/images/screenshot-20260213-gemini-deep-think-cover.png)
+![Gemini-3 Deep Think：会暂停思考的AI](/assets/images/screenshot-20260213-gemini-deep-think-cover.webp)
 
 <!-- 封面图提示词：Ultra-wide cinematic composition, 2.35:1 aspect ratio. A futuristic AI brain visualization with deep blue and gold color scheme. Center shows a glowing neural network brain split into two halves - left half rapidly firing neurons representing fast AI, right half with slow deliberate spiraling deep thought patterns representing Deep Think mode. Above the brain, floating Chinese text "深度思考" in elegant golden typography. Below, smaller text "当AI学会暂停思考". Background: dark gradient from midnight blue to black with subtle constellation-like data points. Style: clean modern tech illustration with cinematic lighting. Golden particles emanating from the right deep think half. Professional premium feel suitable for a tech blog cover. NO realistic human faces. Aspect Ratio 2.35:1. -->
 

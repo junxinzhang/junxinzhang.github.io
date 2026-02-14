@@ -224,28 +224,58 @@ if (searchInput) {
     }, {once: true});
 }
 
-{% assign counter = 0 %}
-var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' or page.noindex == true or page.sitemap == false %}{% else %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' | truncate: 500 }}"{% assign counter = counter | plus: 1 %}
-    }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{% if page.url contains '.xml' or page.url contains 'assets' or page.noindex == true or page.sitemap == false %}{% else %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' | truncate: 500 }}"{% assign counter = counter | plus: 1 %}
-    }, {% endif %}{% endfor %}{% for page in site.data.html_pages %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{site.baseurl}}/_html_pages/{{ page.path }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.description | truncate: 300 }}"{% assign counter = counter | plus: 1 %}
-    }, {% endfor %}{% for page in site.posts %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' | truncate: 500 }}"{% assign counter = counter | plus: 1 %}
-    }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
+var documents = [];
+var documentsById = Object.create(null);
+var documentsLoaded = false;
+var documentsLoading = false;
+var documentLoadCallbacks = [];
+
+function setSearchDocuments(data) {
+    documents = Array.isArray(data) ? data : [];
+    documentsById = Object.create(null);
+    for (var i = 0; i < documents.length; i++) {
+        var doc = documents[i];
+        if (doc && doc.id !== undefined) {
+            documentsById[String(doc.id)] = doc;
+        }
+    }
+}
+
+function loadSearchDocuments(callback) {
+    if (documentsLoaded) {
+        if (typeof callback === 'function') callback();
+        return;
+    }
+
+    if (typeof callback === 'function') {
+        documentLoadCallbacks.push(callback);
+    }
+
+    if (documentsLoading) return;
+    documentsLoading = true;
+
+    fetch('{{site.baseurl}}/assets/data/search-documents.json', { credentials: 'same-origin' })
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('HTTP ' + response.status);
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            setSearchDocuments(data);
+        })
+        .catch(function(error) {
+            console.error('Failed to load search documents:', error);
+            setSearchDocuments([]);
+        })
+        .finally(function() {
+            documentsLoaded = true;
+            documentsLoading = false;
+            var callbacks = documentLoadCallbacks.slice();
+            documentLoadCallbacks = [];
+            callbacks.forEach(function(fn) { fn(); });
+        });
+}
 
 var idx = null;
 var indexInitialized = false;
@@ -253,6 +283,10 @@ var indexInitialized = false;
 // Initialize search index with chunked processing to reduce TBT
 function initSearchIndex() {
     if (indexInitialized) return;
+    if (!documentsLoaded) {
+        loadSearchDocuments(initSearchIndex);
+        return;
+    }
     indexInitialized = true;
 
     var builder = new lunr.Builder();
@@ -317,9 +351,11 @@ function lunr_search(term) {
         if(results.length > 0){
             for (var i = 0; i < results.length; i++) {
                 var ref = results[i]['ref'];
-                var url = documents[ref]['url'];
-                var title = documents[ref]['title'];
-                var body = documents[ref]['body'].substring(0,160)+'...';
+                var doc = documentsById[String(ref)];
+                if (!doc) continue;
+                var url = doc['url'];
+                var title = doc['title'];
+                var body = (doc['body'] || '').substring(0,160)+'...';
                 document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML += "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><small><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></small></a></li>";
             }
         } else {

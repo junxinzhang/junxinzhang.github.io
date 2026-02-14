@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /assets/data/translations.json
+sitemap: false
+---
+{{ site.data.translations | jsonify }}

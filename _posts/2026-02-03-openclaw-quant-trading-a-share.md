@@ -5,7 +5,7 @@ date: 2026-02-03
 author: Jason Zhang
 categories: [AI, OpenClaw, 量化交易, A股]
 tags: [OpenClaw, AI Agent, 量化交易, A股, Python, vnpy, 浏览器自动化, TradingAgents]
-image: assets/images/screenshot-20260203-openclaw-quant-cover.png
+image: assets/images/screenshot-20260203-openclaw-quant-cover.webp
 slug: openclaw-quant-trading-a-share
 description: "有三年美股经验的我，最近在琢磨A股量化。传统策略用腻了，AI Agent这么火，能不能用OpenClaw搞点不一样的？这篇文章聊聊我的探索，以及圈里已经在用的一些方案。"
 ---

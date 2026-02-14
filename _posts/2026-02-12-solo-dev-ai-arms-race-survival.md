@@ -4,7 +4,7 @@ title: "月耗17亿Token，阵亡13个账号：一个独立开发者的AI军备�
 date: 2026-02-12
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260212-solo-dev-ai-survival-cover.png
+image: assets/images/screenshot-20260212-solo-dev-ai-survival-cover.webp
 tags: [featured, Token, Claude MAX, Google Antigravity Ultra, 独立开发者, AI成本, 个人专业开发者, AI军备竞赛]
 slug: solo-dev-ai-arms-race-survival
 description: "从10亿到17.6亿Token，月花费$7,767，11个Claude MAX阵亡账号加2个Google Antigravity Ultra，共13个。一个独立开发者的AI军备竞赛实录，以及对'个人专业开发者路在何方'的深度思考。"

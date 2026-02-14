@@ -1,0 +1,49 @@
+---
+layout: null
+permalink: /assets/data/search-documents.json
+sitemap: false
+---
+[
+{% assign is_first_doc = true %}
+{% for page in site.pages %}
+{% assign skip_page = false %}
+{% if page.url contains '.xml' or page.url contains 'assets' or page.noindex == true or page.sitemap == false %}
+{% assign skip_page = true %}
+{% endif %}
+{% unless skip_page %}
+{% capture page_body %}{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 500 }}{% endcapture %}
+{% assign page_absolute_url = site.url | append: site.baseurl | append: page.url %}
+{% unless is_first_doc %},{% endunless %}
+{
+  "id": {{ page_absolute_url | jsonify }},
+  "url": {{ page_absolute_url | jsonify }},
+  "title": {{ page.title | default: "" | jsonify }},
+  "body": {{ page_body | jsonify }}
+}
+{% assign is_first_doc = false %}
+{% endunless %}
+{% endfor %}
+{% for page in site.data.html_pages %}
+{% assign html_page_url = site.url | append: site.baseurl | append: '/_html_pages/' | append: page.path %}
+{% unless is_first_doc %},{% endunless %}
+{
+  "id": {{ html_page_url | jsonify }},
+  "url": {{ html_page_url | jsonify }},
+  "title": {{ page.title | default: "" | jsonify }},
+  "body": {{ page.description | default: "" | truncate: 300 | jsonify }}
+}
+{% assign is_first_doc = false %}
+{% endfor %}
+{% for page in site.posts %}
+{% capture post_body %}{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 500 }}{% endcapture %}
+{% assign post_absolute_url = site.url | append: site.baseurl | append: page.url %}
+{% unless is_first_doc %},{% endunless %}
+{
+  "id": {{ post_absolute_url | jsonify }},
+  "url": {{ post_absolute_url | jsonify }},
+  "title": {{ page.title | default: "" | jsonify }},
+  "body": {{ post_body | jsonify }}
+}
+{% assign is_first_doc = false %}
+{% endfor %}
+]

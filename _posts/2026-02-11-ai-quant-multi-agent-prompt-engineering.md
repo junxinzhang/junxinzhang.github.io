@@ -5,7 +5,7 @@ date: 2026-02-11
 author: Jason Zhang
 categories: [AI, 量化交易, 深度分析]
 tags: [AI量化, Prompt工程, 多智能体, Bull Bear辩论, Claude, 对抗式AI, TradingAgents, A股]
-image: assets/images/screenshot-20260211-multi-agent-prompt-cover.png
+image: assets/images/screenshot-20260211-multi-agent-prompt-cover.webp
 slug: ai-quant-multi-agent-prompt-engineering
 description: "你的Bull Agent和Bear Agent总是'和和气气'地达成一致？问题出在Prompt上。这篇实战教程，手把手教你用角色锚定、证据强制、结构化反驳等6大技术，让AI真正像投资委员会一样激烈辩论，产出有价值的投资决策。"
 featured: true
@@ -21,7 +21,7 @@ featured: true
 
 今天这篇文章，就来解决这个问题。
 
-![多智能体Prompt工程：让Bull和Bear真正吵起来](/assets/images/screenshot-20260211-multi-agent-prompt-cover.png)
+![多智能体Prompt工程：让Bull和Bear真正吵起来](/assets/images/screenshot-20260211-multi-agent-prompt-cover.webp)
 *多智能体Prompt工程：从"和谐讨论"到"真刀真枪的辩论"*
 
 <!-- 封面图提示词：Flat vector illustration, Minimalist, Dynamic confrontation style. Ultra-wide cinematic composition showing an intense AI debate scene. Left side: A bold geometric bull figure in warm gold (#F59E0B) and green (#22C55E), charging forward with upward arrows, surrounded by floating evidence cards, chart-up icons, and glowing data points. Multiple speech bubbles with exclamation marks and checkmarks emanating aggressively. Right side: A fierce geometric bear figure in deep blue (#3B82F6) and red (#EF4444), standing ground with downward arrows, surrounded by warning triangles, risk metrics, and counter-evidence cards. Multiple speech bubbles with question marks and X marks pushing back. Center: Explosive collision zone with electric sparks, lightning bolts, and neural network connections forming a chaotic but beautiful clash pattern. Flying debate fragments: "反驳!", "证据?", "逻辑漏洞!". Below the clash: A calm judge figure (scales of justice icon) in teal (#0D9488) receiving distilled insights from both sides, outputting a refined diamond-shaped report. Background: Dark gradient from deep navy (#0F172A) to charcoal (#1E293B) with subtle grid pattern. Bottom banner in coral (#F97316): "好的辩论 = 好的决策". Color palette: Gold and green for bull, blue and red for bear, teal for judge, coral for emphasis, dark background. Energetic, confrontational, professional. NO realistic human faces. Aspect Ratio 2.35:1. -->

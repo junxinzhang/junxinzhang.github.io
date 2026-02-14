@@ -898,13 +898,25 @@
     <!-- Font Awesome - Defer load until after page interactive -->
     <!-- Google Fonts removed - using system fonts for better performance -->
 
-    <!-- Preload LCP image for faster load with high priority (WebP format) -->
+    <!-- Preload LCP image for faster load with high priority -->
     {% if page.url == "/" %}
     {% assign first_post = site.posts | first %}
     {% if first_post.image %}
     {% unless first_post.image contains '://' %}
     {% assign img_base = first_post.image | split: '.' | pop | join: '.' %}
+    {% assign webp_path = '/' | append: img_base | append: '.webp' %}
+    {% assign webp_exists = false %}
+    {% for static_file in site.static_files %}
+    {% if static_file.path == webp_path %}
+    {% assign webp_exists = true %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
+    {% if webp_exists %}
     <link rel="preload" as="image" type="image/webp" fetchpriority="high" href="{{site.baseurl}}/{{ img_base }}.webp">
+    {% else %}
+    <link rel="preload" as="image" fetchpriority="high" href="{{site.baseurl}}/{{ first_post.image }}">
+    {% endif %}
     {% else %}
     <link rel="preload" as="image" fetchpriority="high" href="{{ first_post.image }}">
     {% endunless %}
@@ -912,7 +924,19 @@
     {% elsif page.image %}
     {% unless page.image contains '://' %}
     {% assign img_base = page.image | split: '.' | pop | join: '.' %}
+    {% assign webp_path = '/' | append: img_base | append: '.webp' %}
+    {% assign webp_exists = false %}
+    {% for static_file in site.static_files %}
+    {% if static_file.path == webp_path %}
+    {% assign webp_exists = true %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
+    {% if webp_exists %}
     <link rel="preload" as="image" type="image/webp" fetchpriority="high" href="{{site.baseurl}}/{{ img_base }}.webp">
+    {% else %}
+    <link rel="preload" as="image" fetchpriority="high" href="{{site.baseurl}}/{{ page.image }}">
+    {% endif %}
     {% else %}
     <link rel="preload" as="image" fetchpriority="high" href="{{ page.image }}">
     {% endunless %}
@@ -927,9 +951,9 @@
     {% if page.layout == "post" and content_chars < 1200 %}
     {% assign ads_allowed = false %}
     {% endif %}
-    {% if ads_allowed %}
-    {% include tracking-header.html %}
-    {% endif %}
+    <script>
+        window.__adsAllowed = {% if ads_allowed %}true{% else %}false{% endif %};
+    </script>
 
 
 </head>

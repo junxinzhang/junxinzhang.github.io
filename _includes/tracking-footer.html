@@ -8,6 +8,18 @@
 
         // Load scripts after window load or after 3 seconds (whichever comes first)
         var scriptsLoaded = false;
+        var ADSENSE_SRC = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8212494466876521';
+
+        function loadAdSenseScript() {
+            if (window.__adsAllowed === false) return;
+            if (document.querySelector('script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]')) return;
+
+            var adsenseScript = document.createElement('script');
+            adsenseScript.async = true;
+            adsenseScript.crossOrigin = 'anonymous';
+            adsenseScript.src = ADSENSE_SRC;
+            document.head.appendChild(adsenseScript);
+        }
 
         function loadThirdPartyScripts() {
             if (scriptsLoaded) return;
@@ -38,14 +50,8 @@
             umamiScript.dataset.websiteId = '12611587-3ce8-4304-a20c-c64c2c99a239';
             document.head.appendChild(umamiScript);
 
-            // Google AdSense - load last since it's least critical for UX
-            // setTimeout(function() {
-            //     var adsenseScript = document.createElement('script');
-            //     adsenseScript.async = true;
-            //     adsenseScript.crossOrigin = 'anonymous';
-            //     adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8212494466876521';
-            //     document.head.appendChild(adsenseScript);
-            // }, 1000);
+            // Google AdSense - delay extra to protect first paint and interaction.
+            setTimeout(loadAdSenseScript, 1500);
         }
 
         // Load after window load event

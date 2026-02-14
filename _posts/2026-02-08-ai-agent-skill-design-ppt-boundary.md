@@ -4,7 +4,7 @@ title: "AI Agent + Skill：正在升级我们的设计边界和PPT边界"
 date: 2026-02-08
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260208-ai-agent-skill-cover.png
+image: assets/images/screenshot-20260208-ai-agent-skill-cover.webp
 tags: [AI Agent, Claude Code, Skill, PPT, 设计工具, 效率革命, Vibe Design, 插件生态, 微信公众号]
 slug: ai-agent-skill-design-ppt-boundary
 description: "当AI Agent学会调用Skill，设计和PPT的边界正在被彻底改写。从一句话生成专业演示文稿，到自动调度50+技能完成创作全链路——这不是未来，这是正在发生的事。"
@@ -26,7 +26,7 @@ description: "当AI Agent学会调用Skill，设计和PPT的边界正在被彻�
 
 秘密武器？**AI Agent + Skill。**
 
-![AI Agent + Skill：无限创作力](/assets/images/screenshot-20260208-ai-agent-skill-cover.png)
+![AI Agent + Skill：无限创作力](/assets/images/screenshot-20260208-ai-agent-skill-cover.webp)
 
 ---
 
