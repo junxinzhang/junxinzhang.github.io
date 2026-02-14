@@ -148,6 +148,7 @@ exclude:
   - scripts
   - article-image-processor-skill
   - assets/images/prompts
+  - xhs-images/**/*.md
   - Gemfile
   - Gemfile.lock
   - vendor
