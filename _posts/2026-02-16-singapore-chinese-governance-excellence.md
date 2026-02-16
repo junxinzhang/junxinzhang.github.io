@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "除夕夜落地新加坡：一个中国人眼中的华人社会治理样本"
+title: "除夕落地新加坡：一个中国人眼中的华人社会治理样本"
 date: 2026-02-16
 author: Jason Zhang
 categories: [随想]
 image: assets/images/screenshot-20260216-singapore-governance-cover.png
 tags: [featured, 新加坡, 华人社会, 社会治理, 城市管理, 春节, 文化观察, 多元文化]
 slug: singapore-chinese-governance-excellence
-description: "2026年除夕夜抵达新加坡，从樟宜机场到牛车水，从组屋制度到反腐体系，一个技术从业者视角的深度观察：新加坡作为全球唯一华人主导的发达国家，它的社会治理到底做对了什么？对我们又有哪些可迁移的启示？"
+description: "2026年除夕抵达新加坡，从樟宜机场到牛车水，从组屋制度到反腐体系，一个技术从业者视角的深度观察：新加坡作为全球唯一华人主导的发达国家，它的社会治理到底做对了什么？对我们又有哪些可迁移的启示？"
 geo_facts:
   - text: "新加坡华人占总人口约74.3%，是全球唯一以华人为主体民族的发达国家（数据来源：新加坡统计局 Department of Statistics Singapore）。"
   - text: "新加坡在透明国际2025年清廉指数中排名全球第3，亚洲第1，得分83/100（数据来源：Transparency International CPI 2025）。"
@@ -35,15 +35,15 @@ faq:
 
 昨晚的航班从上海浦东起飞，今天早上 5 点半落地樟宜机场。走出廊桥的那一刻，热带的温湿空气扑面而来——这是我第一次在除夕当天踏上新加坡的土地。
 
-![初到新加坡：椰林环绕的热带风情](/assets/images/singapore-IMG_4146.webp)
+![初到新加坡：椰林环绕的热带风情](/assets/images/screenshot-20260216-singapore-tropical-arrival.webp)
 
 说实话，来之前我对新加坡的印象停留在三个关键词：**干净、严格、有钱**。
 
 但当我真正走进这座城市，从机场到酒店、从地铁到街头、从牛车水的年货摊到组屋楼下的咖啡店，**<mark>我看到的不是一个"管出来的干净城市"，而是一套真正在运转的社会治理系统。</mark>**
 
-这让我想写点什么。不是旅游攻略，不是打卡清单，而是一个在中国做了十多年技术和管理工作的人，站在除夕夜的新加坡街头，看到了什么、想到了什么。
+这让我想写点什么。不是旅游攻略，不是打卡清单，而是一个在中国做了十多年技术和管理工作的人，站在除夕的新加坡街头，看到了什么、想到了什么。
 
-![除夕夜的新加坡：华人社会治理的另一种可能](/assets/images/screenshot-20260216-singapore-governance-cover.png)
+![除夕的新加坡：华人社会治理的另一种可能](/assets/images/screenshot-20260216-singapore-governance-cover.png)
 
 <!-- 封面图提示词（严格 2.35:1）：
 除夕夜新加坡城市全景，前景是牛车水（Chinatown）的红色灯笼装饰和年货市集人群，中景是现代化的组屋建筑群和地铁高架，远景是滨海湾金沙酒店和金融区天际线。画面上方挂着横幅"除夕夜的新加坡"，副标题"华人社会治理的另一种可能"，所有文字简体中文。整体风格：温暖的节日氛围与现代城市秩序感并存，主色调红色+金色（春节元素）搭配深蓝夜空，电影级数字插画，中文字体清晰醒目。禁止英文大字。Aspect Ratio 2.35:1。 -->
@@ -151,7 +151,7 @@ faq:
 
 **<mark>安全感不是一种"感觉"，而是制度设计、执法力度和社会规范共同作用的结果。</mark>**
 
-![除夕夜的新加坡：灯火通明，秩序井然](/assets/images/singapore-IMG_4166.webp)
+![除夕夜的新加坡：灯火通明，秩序井然](/assets/images/screenshot-20260216-singapore-night-cityscape.webp)
 
 ![新加坡法治体系：为什么严得让人服气](/assets/images/screenshot-20260216-singapore-rule-of-law.png)
 
@@ -191,7 +191,7 @@ faq:
 
 一位摊主用中文跟我说："新年快乐！今年是马年，生意要跑起来了。"旁边的马来裔保安对我微笑点头。
 
-![新加坡的咖椰吐司店：春节装饰下的本地早餐文化](/assets/images/singapore-IMG_4141.webp)
+![新加坡的咖椰吐司店：春节装饰下的本地早餐文化](/assets/images/screenshot-20260216-singapore-kaya-toast-cny.webp)
 
 这种"自然的混搭"，不是表演，而是生活本身。
 
@@ -252,7 +252,7 @@ faq:
 
 组屋制度也是如此——它不是一个应急方案，而是一套持续运营了六十多年、覆盖了全国绝大多数人口的长期系统。
 
-![花园城市的日常：热带午后的休闲时光](/assets/images/singapore-IMG_4147.webp)
+![花园城市的日常：热带午后的休闲时光](/assets/images/screenshot-20260216-singapore-garden-city-pool.webp)
 
 **<mark>短期来看，很多"严格"的政策像是限制。长期来看，它们构建了一种可持续的社会秩序。</mark>**
 
@@ -332,7 +332,7 @@ faq:
 
 我在一家小档口买了一碗叻沙（Laksa），老板娘用闽南话跟我打招呼，然后切换到普通话："过年好啊，加辣吗？"
 
-![除夕夜的宁静：新加坡夜色中的热带花园](/assets/images/singapore-IMG_4167.webp)
+![除夕夜的宁静：新加坡夜色中的热带花园](/assets/images/screenshot-20260216-singapore-night-garden.webp)
 
 那一刻我突然觉得，**这碗叻沙就是新加坡的缩影——底料是华人传统，调味是南洋风情，盛在一个多元文化的碗里，热气腾腾地端到你面前。**
 
