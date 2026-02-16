@@ -9,17 +9,9 @@
         // Load scripts after window load or after 3 seconds (whichever comes first)
         var scriptsLoaded = false;
         var ADSENSE_SRC = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8212494466876521';
-        // Prevent intrusive Auto Ads on small screens (e.g. iPhone).
-        var ADSENSE_MIN_WIDTH = 992; // Bootstrap lg breakpoint
-
-        function isAdSenseAllowedForViewport() {
-            if (window.matchMedia) return window.matchMedia('(min-width: ' + ADSENSE_MIN_WIDTH + 'px)').matches;
-            return (window.innerWidth || 0) >= ADSENSE_MIN_WIDTH;
-        }
 
         function loadAdSenseScript() {
             if (window.__adsAllowed === false) return;
-            if (!isAdSenseAllowedForViewport()) return;
             if (document.querySelector('script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]')) return;
 
             var adsenseScript = document.createElement('script');
@@ -58,7 +50,7 @@
             umamiScript.dataset.websiteId = '12611587-3ce8-4304-a20c-c64c2c99a239';
             document.head.appendChild(umamiScript);
 
-            // Google AdSense - delay extra to protect first paint and interaction (desktop only).
+            // Google AdSense - delay extra to protect first paint and interaction.
             setTimeout(loadAdSenseScript, 1500);
         }
 
