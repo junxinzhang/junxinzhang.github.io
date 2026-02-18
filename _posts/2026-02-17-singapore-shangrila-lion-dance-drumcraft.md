@@ -4,7 +4,7 @@ title: "正月初一在香格里拉看舞狮：我一直在看鼓手"
 date: 2026-02-16
 author: Jason Zhang
 categories: [随想]
-image: assets/images/screenshot-20260216-shangrila-cny-cover-anon.png
+image: assets/images/screenshot-2026-02-17-shangrila-cny-cover-anon.png
 tags: [featured, 新加坡, 春节, 香格里拉, 舞狮, 舞龙舞狮, 锣鼓, 捞鱼生, 文化观察]
 slug: singapore-shangrila-lion-dance-drumcraft
 description: "这篇就是一篇现场笔记：2月17日（正月初一）在新加坡香格里拉看舞狮和 Lo Hei，我最深的体感不是狮头动作，而是鼓手怎么把全场节奏拎起来。"
@@ -29,9 +29,9 @@ faq:
 
 餐厅吃完早饭，我们本来打算出发去 China Town，在香格里拉大堂看到了昨天晚上就在准备的活动，我们待了接近一小时，原本只是想看看春节活动，最后注意力一直被同一个人拉走：鼓手。
 
-![新加坡香格里拉春节大堂布置与人流组织](/assets/images/screenshot-20260216-shangrila-cny-lobby-setup-anon.webp)
+![新加坡香格里拉春节大堂布置与人流组织](/assets/images/screenshot-2026-02-17-shangrila-cny-lobby-setup-anon.webp)
 
-![大堂中心区的锣鼓架、旗阵与围观动线](/assets/images/screenshot-20260216-shangrila-cny-performance-wide-anon.webp)
+![大堂中心区的锣鼓架、旗阵与围观动线](/assets/images/screenshot-2026-02-17-shangrila-cny-performance-wide-anon.webp)
 
 <!-- 封面图提示词（baoyu-cover-image，严格 2.35:1）：
 Type=scene, Palette=warm, Rendering=digital, Text=title-subtitle, Mood=balanced。
@@ -45,9 +45,9 @@ Type=scene, Palette=warm, Rendering=digital, Text=title-subtitle, Mood=balanced�
 
 舞狮开始后，我一开始也是跟着看狮头，后来发现只盯动作会漏掉关键。每次要起跳、要转身、要收的时候，都是鼓先变，狮子后动。那一刻我就明白了，为什么这场看起来“很顺”：有人在后面把节奏牢牢按住。
 
-![鼓手与锣鼓队在舞狮中的节奏控制](/assets/images/screenshot-20260216-shangrila-cny-drummer-anon.webp)
+![鼓手与锣鼓队在舞狮中的节奏控制](/assets/images/screenshot-2026-02-17-shangrila-cny-drummer-anon.webp)
 
-![舞狮腾跃瞬间与上下两层围观人群](/assets/images/screenshot-20260216-shangrila-cny-lion-jump-anon.webp)
+![舞狮腾跃瞬间与上下两层围观人群](/assets/images/screenshot-2026-02-17-shangrila-cny-lion-jump-anon.webp)
 
 如果用最朴素的话说，鼓手在做三件事：
 
@@ -68,9 +68,9 @@ Type=timeline, Style=editorial。
 
 前半段大家在拍，后半段大家拿起筷子一起捞鱼生，现场一下子从“围观”变成“参与”。以前我看这类活动，总觉得节目和吃饭是两件事，这次体感是它们本来就是连在一起的。
 
-![Lo Hei 捞鱼生：从围观到共同参与的瞬间](/assets/images/screenshot-20260216-shangrila-cny-lohei-toss-anon.webp)
+![Lo Hei 捞鱼生：从围观到共同参与的瞬间](/assets/images/screenshot-2026-02-17-shangrila-cny-lohei-toss-anon.webp)
 
-![Lo Hei 全场互动：节日情绪在桌面被共同放大](/assets/images/screenshot-20260216-shangrila-cny-lohei-crowd-anon.webp)
+![Lo Hei 全场互动：节日情绪在桌面被共同放大](/assets/images/screenshot-2026-02-17-shangrila-cny-lohei-crowd-anon.webp)
 
 Singapore Roots 对 Lo Hei 的记录里提到“捞得高，寓意更旺”。现场看下来，这个仪式的意义不只在寓意，也在于它把陌生人短时间拉到同一个情绪里。
 
