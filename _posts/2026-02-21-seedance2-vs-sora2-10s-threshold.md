@@ -118,7 +118,23 @@ william_storyboard_9grid_product.jpg
 
 ![Seedance 2：10秒样本接触图（整体稳定）](/assets/images/screenshot-20260221-seedance2-10s-contact-sheet.jpg)
 
-15s 的对比效果太差，这里不放图，直接看评分结果和结论。
+15 秒主对照样本（B）接触图：
+
+![Seedance 2：15秒样本接触图（长时段主对照）](/assets/images/screenshot-20260221-seedance2-15s-contact-sheet.jpg)
+
+15 秒复核样本（C，fast）接触图：
+
+![Seedance 2：15秒样本接触图（fast复核）](/assets/images/screenshot-20260221-seedance2-15s-fast-contact-sheet.jpg)
+
+末段帧对照（左：10 秒末段，右：15 秒末段）：
+
+![Seedance 2：10秒末段 vs 15秒末段帧对照](/assets/images/screenshot-20260221-seedance2-endframe-compare.jpg)
+
+Google Veo 3.1 的 15 秒同题材对照接触图：
+
+![Google Veo 3.1：15秒样本接触图（同题材本地对照）](/assets/images/screenshot-20260221-veo31-15s-contact-sheet.jpg)
+
+这四组图放在一起看，结论会更直观：10 秒段基本稳，15 秒段在人物细节、产品字样和后段构图上的漂移会明显增加。
 
 我的主观评分（用于横向对比，不是学术基准）：
 
