@@ -91,7 +91,7 @@ Type=conceptual, Palette=cool, Rendering=digital, Text=title-subtitle, Mood=bala
 
 ```text
 shot_01.jpg ~ shot_09.jpg
-storyboard_9grid_product.jpg
+william_storyboard_9grid_product.jpg
 ```
 
 第二步，把这套分镜图作为镜头锚点，分别生成 10 秒和 15 秒版本，再做横向对比。
