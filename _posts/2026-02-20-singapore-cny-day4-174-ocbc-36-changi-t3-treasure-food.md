@@ -4,7 +4,7 @@ title: "大年初四的新加坡：174路办完OCBC，36路直达樟宜T3吃到�
 date: 2026-02-20
 author: Jason Zhang
 categories: [随想]
-image: assets/images/screenshot-20260220-cny4-ocbc-changi-t3-treasure-food-cover.png
+image: assets/images/screenshot-20260220-cny4-ocbc-changi-t3-treasure-food-cover.webp
 tags: [featured, 新加坡, 春节, 大年初四, 174路, OCBC, 存款, 36路, 樟宜机场T3, LeMa Dumpling, 性价比]
 slug: singapore-cny-day4-174-ocbc-36-changi-t3-treasure-food
 description: "2月20日（大年初四）这天，我用174路直达OCBC办存款，再用36路一路到樟宜机场T3。一天只做三件事：办事、转场、吃饭。结果在机场吃到了来新加坡之后我最满意、也最实惠的一餐。"
@@ -34,7 +34,7 @@ faq:
 
 **174 路直达 OCBC 办存款 → 36 路直达樟宜机场 T3 → 晚上只做一件事：找一顿真正值得记住的饭。**
 
-![大年初四新加坡办事+转场+收尾封面](/assets/images/screenshot-20260220-cny4-ocbc-changi-t3-treasure-food-cover.png)
+![大年初四新加坡办事+转场+收尾封面](/assets/images/screenshot-20260220-cny4-ocbc-changi-t3-treasure-food-cover.webp)
 
 <!-- 封面图提示词（baoyu-cover-image，严格 2.35:1）：
 Type=scene, Palette=elegant, Rendering=digital, Text=title-subtitle, Mood=balanced。
@@ -54,18 +54,18 @@ Type=scene, Palette=elegant, Rendering=digital, Text=title-subtitle, Mood=balanc
 
 174 路这段，车上很安静，节奏也稳。
 
-![174路车厢内部：先把一天节奏跑稳](/assets/images/screenshot-20260220-cny4-bus-174-interior.jpg)
+![174路车厢内部：先把一天节奏跑稳](/assets/images/screenshot-20260220-cny4-bus-174-interior.webp)
 
 我坐在车上看着窗外一点点进城，脑子也跟着安静下来。
 这趟路给我的感觉就是：今天不用抢，不用赶，按步骤走就行。
 
 到 City 一带后步行去 OCBC，路上是典型的 CBD 工作日气质：楼高、路宽、车流快。
 
-![George St 一带城市路口：从通勤流切入办事流](/assets/images/screenshot-20260220-cny4-george-st-cbd.jpg)
+![George St 一带城市路口：从通勤流切入办事流](/assets/images/screenshot-20260220-cny4-george-st-cbd.webp)
 
 到了 OCBC 门口，春节视觉还在，但内部运转是工作日逻辑。
 
-![OCBC Centre 门口：节日氛围里依然高效运转](/assets/images/screenshot-20260220-cny4-ocbc-centre-exterior.jpg)
+![OCBC Centre 门口：节日氛围里依然高效运转](/assets/images/screenshot-20260220-cny4-ocbc-centre-exterior.webp)
 
 ---
 
@@ -85,7 +85,7 @@ Type=scene, Palette=elegant, Rendering=digital, Text=title-subtitle, Mood=balanc
 
 这几个细节看起来小，但如果你手里是外币，差别其实很明显。
 
-![OCBC ATM Deposit：现金存款可快速闭环](/assets/images/screenshot-20260220-cny4-ocbc-atm-deposit.jpg)
+![OCBC ATM Deposit：现金存款可快速闭环](/assets/images/screenshot-20260220-cny4-ocbc-atm-deposit.webp)
 
 办完以后真的会松一口气。
 那种“心里还挂着事”的感觉一下就没了，后半天整个人都轻了。
@@ -96,16 +96,16 @@ Type=scene, Palette=elegant, Rendering=digital, Text=title-subtitle, Mood=balanc
 
 办完业务后我没再折腾路线，直接上 36 路去樟宜 T3。
 
-![36路沿线（Marine Parade）：长距离转场但换乘负担低](/assets/images/screenshot-20260220-cny4-bus36-marine-parade.jpg)
+![36路沿线（Marine Parade）：长距离转场但换乘负担低](/assets/images/screenshot-20260220-cny4-bus36-marine-parade.webp)
 
 我出发前也查了线路信息，36 会经过机场片区，停靠到 T3 地下巴士区。
 所以这段我基本没再改计划，坐着就到了。
 
 到了 T3 之后，动线还是樟宜一贯的清楚，跟着指示牌走就行。
 
-![樟宜T3到达区动线：导视系统让决策更轻](/assets/images/screenshot-20260220-cny4-changi-t3-arrival-concourse.jpg)
+![樟宜T3到达区动线：导视系统让决策更轻](/assets/images/screenshot-20260220-cny4-changi-t3-arrival-concourse.webp)
 
-![樟宜T3离港信息屏：时间信息透明，晚餐安排更从容](/assets/images/screenshot-20260220-cny4-changi-t3-departure-board.jpg)
+![樟宜T3离港信息屏：时间信息透明，晚餐安排更从容](/assets/images/screenshot-20260220-cny4-changi-t3-departure-board.webp)
 
 ---
 
@@ -115,7 +115,7 @@ Type=scene, Palette=elegant, Rendering=digital, Text=title-subtitle, Mood=balanc
 
 本来只是想“随便吃点”，结果在 T3 看到 **LeMa Dumpling × LE Congee**，吃完直接改口：这家真可以。
 
-![LeMa Dumpling × LE Congee（樟宜T3）门店现场](/assets/images/screenshot-20260220-cny4-lema-storefront.jpg)
+![LeMa Dumpling × LE Congee（樟宜T3）门店现场](/assets/images/screenshot-20260220-cny4-lema-storefront.webp)
 
 我们一家四口坐下后，点了肉丝炒面、紫菜蛋花汤、脆皮豆腐这些家常款。
 最直观的是小朋友特别喜欢，最后基本都吃光光。
@@ -127,9 +127,9 @@ Type=scene, Palette=elegant, Rendering=digital, Text=title-subtitle, Mood=balanc
 菜单上，炒面类大约在 **SGD 7.90** 左右，汤品从 **SGD 3.30** 起。
 这个价格在机场场景里，真的算友好。
 
-![LeMa 菜单（炒面）：主食价格区间](/assets/images/screenshot-20260220-cny4-lema-menu-noodle.png)
+![LeMa 菜单（炒面）：主食价格区间](/assets/images/screenshot-20260220-cny4-lema-menu-noodle.webp)
 
-![LeMa 菜单（汤品）：汤类价格区间](/assets/images/screenshot-20260220-cny4-lema-menu-soup.png)
+![LeMa 菜单（汤品）：汤类价格区间](/assets/images/screenshot-20260220-cny4-lema-menu-soup.webp)
 
 如果只用一句话概括这顿饭：
 不是“机场将就吃”，而是“好吃又不贵”。

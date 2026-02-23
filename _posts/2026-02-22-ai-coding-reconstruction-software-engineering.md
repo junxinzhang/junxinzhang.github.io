@@ -4,7 +4,7 @@ title: "从 GLM-5、MiniMax 到'红包大战'：开工第一天你必须看懂�
 date: 2026-02-22
 author: Jason Zhang
 categories: [AI, 软件工程]
-image: assets/images/screenshot-20260222-cny-ai-model-war-cover.png
+image: assets/images/screenshot-20260222-cny-ai-model-war-cover.webp
 tags: [featured, AI Coding, GLM-5, MiniMax, 豆包, 千问, 元宝, 红包大战, Agentic Engineering, 开工指南]
 slug: ai-coding-reconstruction-software-engineering
 description: "这个春节，GLM-5 与 MiniMax 新模型密集上新，豆包/千问/元宝把流量战打到了全民场景。表面是红包，底层是入口。开工第一天，你必须重建自己的软件工程坐标系。"
@@ -34,7 +34,7 @@ faq:
 
 **<mark>核心结论：代码继续贬值，入口和验证继续升值。谁能把"流量"转成"可复用工程能力"，谁就赢下下一阶段。</mark>**
 
-![春节AI入口战与模型战封面](/assets/images/screenshot-20260222-cny-ai-model-war-cover.png)
+![春节AI入口战与模型战封面](/assets/images/screenshot-20260222-cny-ai-model-war-cover.webp)
 
 <!-- 封面图提示词（baoyu-cover-image，严格 2.35:1）：
 Type=conceptual, Palette=warm, Rendering=digital, Text=title-subtitle, Mood=bold。
@@ -70,7 +70,7 @@ GLM-5 的核心叙事很清楚：从"Vibe Coding"转向"Agentic Engineering"。�
 
 MiniMax M2.5 的打法不同：它不追参数规模，而是追"可用性"。2300 亿参数但只激活 100 亿，意味着推理速度极快、成本极低。上线不到一天，全球用户就在 MiniMax Agent 上构建了 1 万多个专家。这个数据说明：**速度和成本优势可以直接转化为用户活跃度。**
 
-![春节期间模型与入口动作时间线](/assets/images/screenshot-20260222-cny-ai-timeline-model-release.png)
+![春节期间模型与入口动作时间线](/assets/images/screenshot-20260222-cny-ai-timeline-model-release.webp)
 
 <!-- 插图1提示词（baoyu-article-illustrator，严格 2.35:1）：
 Type=timeline, Style=editorial。
@@ -111,7 +111,7 @@ Type=timeline, Style=editorial。
 2. **心智重排**：用户正在从"AI 是搜索替代品"升级到"AI 是事务代理人"——不只是查信息，而是帮我做事、帮我下单、帮我写东西。  
 3. **工作流重排**：企业端开始把模型能力嵌入真实业务链路。你今天看到的"请喝奶茶"背后，是千问和淘宝下单系统的 API 打通；你看到的"春晚互动"背后，是豆包大模型的实时推理集群在承压。  
 
-![红包拉新与模型留存的双轮竞争](/assets/images/screenshot-20260222-cny-redpacket-vs-model-strategy.png)
+![红包拉新与模型留存的双轮竞争](/assets/images/screenshot-20260222-cny-redpacket-vs-model-strategy.webp)
 
 <!-- 插图2提示词（baoyu-article-illustrator，严格 2.35:1）：
 Type=comparison, Style=blueprint。
@@ -180,7 +180,7 @@ MiniMax M2.5 走的完全是另一条路：
 
 **<mark>代码不再是资产，意图与测试才是资产。</mark>**
 
-![开工第一天的Agent Team运行框架](/assets/images/screenshot-20260222-cny-agentic-team-operating-model.png)
+![开工第一天的Agent Team运行框架](/assets/images/screenshot-20260222-cny-agentic-team-operating-model.webp)
 
 <!-- 插图3提示词（baoyu-article-illustrator，严格 2.35:1）：
 Type=framework, Style=minimal-flat。
@@ -237,7 +237,7 @@ GLM-5 和 MiniMax M2.5 都在朝"Agentic"方向走，说明这三角色协同不
 4. 把测试、日志、回滚条件写入 PR 模板。  
 5. 晚上复盘：省了什么人力，新增了什么风险。  
 
-![开工第一天执行清单与风险看板](/assets/images/screenshot-20260222-cny-first-day-checklist.png)
+![开工第一天执行清单与风险看板](/assets/images/screenshot-20260222-cny-first-day-checklist.webp)
 
 <!-- 插图4提示词（baoyu-article-illustrator，严格 2.35:1）：
 Type=framework, Style=notion。

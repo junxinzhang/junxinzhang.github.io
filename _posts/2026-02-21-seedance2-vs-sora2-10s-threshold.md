@@ -4,7 +4,7 @@ title: "大年初五视频生成模型深度实测：Seedance 2、Sora 2、Veo 3
 date: 2026-02-21
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260221-seedance2-sora2-cover.png
+image: assets/images/screenshot-20260221-seedance2-sora2-cover.webp
 tags: [featured, Seedance 2, Sora 2, Veo 3.1, 视频生成, 分镜转换, 人物一致性, 大年初五, 实测, AIGC]
 slug: seedance2-vs-sora2-10s-threshold
 description: "2月21日（大年初五）我把 Seedance 2 连续重度使用后，最强体感是：在分镜转换和人物一致性上，它已经非常接近、并在 10 秒广告段里局部超过我在 2025 年 9 月 30 日正式发布后使用的 Sora 2 版本；但一旦拉到 10 秒以上，幻觉率和人物一致性会明显下滑。本文给出可复现样本、对比图和可执行工作流。"
@@ -34,7 +34,7 @@ faq:
 
 **对比视频见文中第四部分（靠近文末），可直接播放，不用跳外链。若无声请手动开启音量，体感更强。**
 
-![大年初五 Seedance 2 实测封面](/assets/images/screenshot-20260221-seedance2-sora2-cover.png)
+![大年初五 Seedance 2 实测封面](/assets/images/screenshot-20260221-seedance2-sora2-cover.webp)
 
 <!-- 封面图提示词（baoyu-cover-image，严格 2.35:1）：
 Type=conceptual, Palette=cool, Rendering=digital, Text=title-subtitle, Mood=balanced。
@@ -60,7 +60,7 @@ Type=conceptual, Palette=cool, Rendering=digital, Text=title-subtitle, Mood=bala
 
 这次我用的是九宫格分镜参考图（先由 `nano-banana-pro` 设计），要求镜头严格按“从左到右、从上到下”执行：
 
-![九宫格分镜参考图（镜头顺序锚点）](/assets/images/screenshot-20260221-seedance2-storyboard-9grid-reference.jpg)
+![九宫格分镜参考图（镜头顺序锚点）](/assets/images/screenshot-20260221-seedance2-storyboard-9grid-reference.webp)
 
 在这个设定下，Seedance 2 有两个点让我很意外：
 

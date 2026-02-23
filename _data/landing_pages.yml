@@ -16,7 +16,7 @@
   repo: fortigate-sdwan-monitor
   demo_url: https://network-monitor.junxinzhang.com
   description: 企业级 FortiGate SD-WAN 网络健康监控解决方案，支持实时监控、智能告警、趋势分析
-  image: /assets/images/screenshot-20260202-fortigate-sdwan-monitor.png
+  image: /assets/images/screenshot-20260202-fortigate-sdwan-monitor.webp
   category: Network
   tech_stack:
     - HTML5
@@ -37,7 +37,7 @@
   repo: devops-dash-landing-page
   demo_url: https://devops-dash.junxinzhang.com
   description: 企业级 DevOps 仪表盘产品展示页，支持双语、PWA、无障碍访问
-  image: /assets/images/screenshot-20260202-devops-dashboard.png
+  image: /assets/images/screenshot-20260202-devops-dashboard.webp
   category: DevOps
   tech_stack:
     - HTML5
@@ -104,7 +104,7 @@
   repo: ai-security-guard-landing-page
   demo_url: https://aisecguard.junxinzhang.com
   description: 企业级 AI 安全防护平台，为 AI 应用构建全方位安全防线，支持中英双语、PWA、无障碍访问
-  image: /assets/images/screenshot-20260202-ai-security-guard.png
+  image: /assets/images/screenshot-20260202-ai-security-guard.webp
   category: Security
   tech_stack:
     - HTML5

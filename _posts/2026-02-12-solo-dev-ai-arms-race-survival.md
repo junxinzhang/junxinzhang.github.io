@@ -86,7 +86,7 @@ faq:
 | #12 | Google Antigravity Ultra | 已阵亡 | 2026.2.12 | openClaw Agent开发测试 |
 | #13 | Google Antigravity Ultra | 已阵亡 | 2026.2.12 | openClaw Agent开发测试 |
 
-![13个阵亡账号的编年史](/assets/images/screenshot-20260212-account-graveyard.png)
+![13个阵亡账号的编年史](/assets/images/screenshot-20260212-account-graveyard.webp)
 *13个阵亡账号编年史：每一个都是真金白银的"战损"*
 
 <!-- 图片提示词：Flat vector illustration, Minimalist, Timeline infographic style. Ultra-wide horizontal timeline showing 13 account "casualties". Timeline runs left to right from July 2025 to February 2026. Each account represented by a shield/badge icon: 11 shields in Anthropic purple/coral (#F97316) with Claude logo silhouette, 2 shields in Google blue/green (#4285F4/#34A853). Each fallen shield has a dramatic X mark or crack effect, with small flame or smoke wisps. Above each shield: date label. Below timeline: cumulative cost counter growing from $200 to $2,700+ (minimum one billing cycle per account). Background elements: faded dollar signs floating upward like spirits. Left side label: "2025.7 开始" in muted gray. Right side label: "2026.2 至今" in bright coral. Color palette: Dark charcoal background (#1E293B), Claude shields in warm coral, Google shields in blue/green, white timeline, gold (#F59E0B) for cost numbers. Memorial/military aesthetic but with tech feel. NO realistic human faces. Aspect Ratio 2.35:1. -->
@@ -150,7 +150,7 @@ faq:
 
 比起上个月的1:12，这个比值在下降——因为花费增长的速度远快于产出增长。
 
-![独立开发者AI军备支出与回报对比](/assets/images/screenshot-20260212-cost-roi-comparison.png)
+![独立开发者AI军备支出与回报对比](/assets/images/screenshot-20260212-cost-roi-comparison.webp)
 *AI军备支出 vs 等效产出：投入产出比约1:5，效率红利正在收窄*
 
 <!-- 图片提示词：Flat vector illustration, Minimalist, Infographic comparison style. Ultra-wide split layout. Left side labeled "投入" (Input): Stacked cost blocks forming a small tower - Claude MAX blocks in coral (#F97316), Google Ultra blocks in blue (#3B82F6), API blocks in teal (#0D9488), Other tools blocks in gray. Total at top showing "$8,400/月". Right side labeled "产出" (Output): Much taller tower of work blocks - code icons, document icons, project icons, stacked high. Total showing "$40,000-50,000 等效价值". Center: Large "1:5" ratio number with arrow connecting the two towers. Below: simple ROI bar showing the difference. Small cautionary note icon at bottom: "但代价是13个阵亡账号". Color palette: Warm coral for costs, teal (#0D9488) for value, dark navy background (#0F172A), gold (#F59E0B) for ratio highlight. Professional business chart aesthetic. NO realistic human faces. Aspect Ratio 2.35:1. -->
@@ -259,7 +259,7 @@ AI使用正在形成新的"数字阶级"：
 
 **<mark>"军备层"可能是最尴尬的群体：用量接近企业，但资源和议价能力远不如企业。</mark>**
 
-![AI使用的新数字阶级](/assets/images/screenshot-20260212-ai-digital-class.png)
+![AI使用的新数字阶级](/assets/images/screenshot-20260212-ai-digital-class.webp)
 *AI时代的新"数字阶级"：军备层独立开发者处境最为尴尬*
 
 <!-- 图片提示词：Flat vector illustration, Minimalist, Pyramid infographic style. Ultra-wide composition showing a five-tier pyramid. Bottom tier (widest, light gray): "免费层" with simple user icons and "$0". Second tier (slightly smaller, soft blue): "基础层" with laptop icons and "$20-50". Third tier (medium, teal #0D9488): "专业层" with code terminal icons and "$100-200". Fourth tier (smaller, highlighted with pulsing coral #F97316 border and glow effect): "军备层" with battle helmet + code icons and "$1,000+", this tier has spotlight/emphasis effect showing it's the focus. Top tier (smallest, gold #F59E0B): "企业层" with building icons and "$10,000+". The "军备层" tier has a speech bubble: "用量接近企业，资源远不如企业". Arrows showing gap between 军备层 and 企业层. Side annotation: "最尴尬的位置". Color palette: Dark navy background (#0F172A), each tier in progressively warmer colors, coral spotlight on 军备层. Professional sociological infographic aesthetic. NO realistic human faces. Aspect Ratio 2.35:1. -->

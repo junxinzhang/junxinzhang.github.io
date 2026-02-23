@@ -18,7 +18,7 @@ description: "有三年美股经验的我，最近在琢磨A股量化。传统�
 
 调研了一圈，发现已经有人在做了，而且玩法比我想象的成熟。
 
-![AI量化交易流程](/assets/images/screenshot-20260203-openclaw-quant-header.png)
+![AI量化交易流程](/assets/images/screenshot-20260203-openclaw-quant-header.webp)
 *AI量化交易的核心流程：从量化分析到代码策略，再到交易执行*
 
 ---
@@ -132,7 +132,7 @@ OpenClaw本质上是个能自己动手的AI助手。它的核心能力是**浏�
 - **交易所公告**：巨潮资讯、上交所、深交所
 - **社交媒体**：微博财经大V、股吧热帖
 
-![浏览器自动化抓取](/assets/images/screenshot-20260203-browser-data-collection.png)
+![浏览器自动化抓取](/assets/images/screenshot-20260203-browser-data-collection.webp)
 *OpenClaw Browser Relay：能像人一样浏览网页，抓取信息*
 
 <!-- 图片提示词：Flat vector illustration, Minimalist, Line art style. A browser window icon with multiple floating data cards being collected: news headlines, stock tickers, social media posts, and document icons flowing into a funnel or collector. Include elements: web crawler spider icon, RSS feed symbol, and sentiment indicators (thumbs up/down). Color: Warm pastel colors - peach, cream, soft blue, mint green. Beige background. Clean tech aesthetic. Aspect Ratio 2.35:1. -->
@@ -152,7 +152,7 @@ OpenClaw本身不是多Agent框架，但可以作为其中的"执行层"。
 
 各司其职，通过API或消息队列协作。
 
-![OpenClaw 工作环境](/assets/images/screenshot-20260203-workspace-setup.png)
+![OpenClaw 工作环境](/assets/images/screenshot-20260203-workspace-setup.webp)
 *我的 OpenClaw 日常工作环境：Mac Mini + 宽屏显示器*
 
 <!-- 图片提示词：Flat vector illustration, Minimalist, Line art style. A clean desk setup showing: Mac Mini (simple rounded rectangle), widescreen monitor displaying terminal window with code and stock charts side by side, keyboard, and coffee cup. Floating elements: AI brain icon, chart trending up, and notification bells. Color: Warm pastel colors - soft beige, cream, coral accents, mint highlights. Beige background. Cozy tech workspace vibe. Aspect Ratio 2.35:1. -->

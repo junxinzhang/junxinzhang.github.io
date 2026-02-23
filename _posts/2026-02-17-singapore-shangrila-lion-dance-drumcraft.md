@@ -4,7 +4,7 @@ title: "正月初一在香格里拉看舞狮：我一直在看鼓手"
 date: 2026-02-16
 author: Jason Zhang
 categories: [随想]
-image: assets/images/screenshot-2026-02-17-shangrila-cny-cover-anon.png
+image: assets/images/screenshot-2026-02-17-shangrila-cny-cover-anon.webp
 tags: [featured, 新加坡, 春节, 香格里拉, 舞狮, 舞龙舞狮, 锣鼓, 捞鱼生, 文化观察]
 slug: singapore-shangrila-lion-dance-drumcraft
 description: "这篇就是一篇现场笔记：2月17日（正月初一）在新加坡香格里拉看舞狮和 Lo Hei，我最深的体感不是狮头动作，而是鼓手怎么把全场节奏拎起来。"

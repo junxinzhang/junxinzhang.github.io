@@ -4,7 +4,7 @@ title: "大年初二的新加坡：从 China Town 到滨海湾花园的完美体
 date: 2026-02-18
 author: Jason Zhang
 categories: [随想]
-image: assets/images/screenshot-20260218-singapore-cny-route-cover.png
+image: assets/images/screenshot-20260218-singapore-cny-route-cover.webp
 tags: [featured, 新加坡, 春节, 牛车水, ChinaTown, 滨海湾花园, 花穹, 云雾林, 灯光秀, 城市体验]
 slug: singapore-cny-chinatown-gardens-bay-perfect-day
 description: "2月18日（正月初二）这天，我从牛车水一路走到滨海湾花园：花穹、云雾林、再到夜里的 Supertree 灯光秀。不是赶景点，而是把一天过成一条顺着情绪走完的路线。"
@@ -31,7 +31,7 @@ faq:
 
 **从 China Town 走到滨海湾花园，把这一天认真地过完。**
 
-![大年初二新加坡路线封面图](/assets/images/screenshot-20260218-singapore-cny-route-cover.png)
+![大年初二新加坡路线封面图](/assets/images/screenshot-20260218-singapore-cny-route-cover.webp)
 
 <!-- 封面图提示词（baoyu-cover-image，严格 2.35:1）：
 Type=scene, Palette=warm, Rendering=digital, Text=title-subtitle, Mood=balanced。
@@ -45,7 +45,7 @@ Type=scene, Palette=warm, Rendering=digital, Text=title-subtitle, Mood=balanced�
 
 **<mark>新加坡这条线最厉害的，不是某一个点有多惊艳，而是它让你很自然地从“热闹”走到“沉浸”，最后再走到“惊喜”。</mark>**
 
-![大年初二新加坡一日路线图（信息图）](/assets/images/screenshot-20260218-singapore-cny-route-timeline-infographic.png)
+![大年初二新加坡一日路线图（信息图）](/assets/images/screenshot-20260218-singapore-cny-route-timeline-infographic.webp)
 
 <!-- 插图1提示词（baoyu-article-illustrator，严格 2.35:1）：
 Type=timeline, Style=editorial。
@@ -66,7 +66,7 @@ Type=timeline, Style=editorial。
 
 到中段我会看一眼线路，确认自己接下来怎么去 Bayfront。这个动作不酷，但特别有用。
 
-![出发前先确认线路：Downtown Line 沿线站点](/assets/images/screenshot-20260218-singapore-cny-route-mrt-start.jpg)
+![出发前先确认线路：Downtown Line 沿线站点](/assets/images/screenshot-20260218-singapore-cny-route-mrt-start.webp)
 
 ---
 
@@ -78,7 +78,7 @@ Type=timeline, Style=editorial。
 
 这张图是我当天很喜欢的一瞬间：水景、树形结构、灰蓝天色，整个人会从“节日兴奋”慢慢转成“可以慢下来”。
 
-![滨海湾花园外围的 Supertree 与水景过渡区](/assets/images/screenshot-20260218-singapore-cny-route-outdoor-supertree-fountain.jpg)
+![滨海湾花园外围的 Supertree 与水景过渡区](/assets/images/screenshot-20260218-singapore-cny-route-outdoor-supertree-fountain.webp)
 
 ---
 
@@ -92,7 +92,7 @@ Type=timeline, Style=editorial。
 
 当天我在花穹里基本就是边走边看，脑子里那种“下一个呢、下一个呢”的冲动会慢慢消失，这个状态特别好。
 
-![花穹内部：大尺度植物与穹顶结构](/assets/images/screenshot-20260218-singapore-cny-route-flower-dome-desert-garden.jpg)
+![花穹内部：大尺度植物与穹顶结构](/assets/images/screenshot-20260218-singapore-cny-route-flower-dome-desert-garden.webp)
 
 ---
 
@@ -102,9 +102,9 @@ Type=timeline, Style=editorial。
 
 高位步道、垂直山体、瀑布、潮湿空气、植物密度，全部叠在一起，人会非常容易进入“我现在就在这个场景里”的状态。
 
-![云雾林内部高位步道与垂直山体](/assets/images/screenshot-20260218-singapore-cny-route-cloud-forest-skywalk.jpg)
+![云雾林内部高位步道与垂直山体](/assets/images/screenshot-20260218-singapore-cny-route-cloud-forest-skywalk.webp)
 
-![云雾林瀑布区：温湿变化最明显的沉浸点](/assets/images/screenshot-20260218-singapore-cny-route-cloud-forest-waterfall.jpg)
+![云雾林瀑布区：温湿变化最明显的沉浸点](/assets/images/screenshot-20260218-singapore-cny-route-cloud-forest-waterfall.webp)
 
 我在这段最直观的感觉是：
 
@@ -137,7 +137,7 @@ Type=timeline, Style=editorial。
 - 下午云雾林沉浸；
 - 晚上 19:45 看 Supertree，把整天收好。
 
-![这条路线为什么会“完美”（框架图）](/assets/images/screenshot-20260218-singapore-cny-route-experience-framework.png)
+![这条路线为什么会“完美”（框架图）](/assets/images/screenshot-20260218-singapore-cny-route-experience-framework.webp)
 
 <!-- 插图2提示词（baoyu-article-illustrator，严格 2.35:1）：
 Type=framework, Style=warm。
@@ -148,7 +148,7 @@ Type=framework, Style=warm。
 
 如果你不想临时做攻略，直接按这张清单走，也基本不会出错：
 
-![从 China Town 到滨海湾花园的可复制攻略](/assets/images/screenshot-20260218-singapore-cny-route-practical-checklist.png)
+![从 China Town 到滨海湾花园的可复制攻略](/assets/images/screenshot-20260218-singapore-cny-route-practical-checklist.webp)
 
 <!-- 插图3提示词（baoyu-article-illustrator，严格 2.35:1）：
 Type=infographic, Style=editorial。

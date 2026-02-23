@@ -95,7 +95,7 @@ Deep Think在收到问题后，沉默了大约45秒。屏幕上能看到它的"�
 
 **对比Claude Opus：** Opus的回答来得更快（约10秒），思路也清晰，但它直接给了一个方案，没有对比其他可能性。Deep Think的回答更像是一个研究员的分析报告，Opus的回答更像是一个高级工程师的快速方案。
 
-![Deep Think推理过程：像一个会"暂停思考"的研究员](/assets/images/screenshot-20260213-deep-think-reasoning-process.png)
+![Deep Think推理过程：像一个会"暂停思考"的研究员](/assets/images/screenshot-20260213-deep-think-reasoning-process.webp)
 *Deep Think的推理过程可视化：先发散多个假设，再收敛到最优方案*
 
 <!-- 图片提示词：Ultra-wide cinematic infographic, 2.35:1 aspect ratio. Split-screen visualization showing AI reasoning process. Left side labeled "普通AI" shows a straight arrow from question to answer with lightning bolt icon, fast but shallow. Right side labeled "Deep Think" shows a complex branching tree of thought with multiple hypothesis nodes, evaluation paths, and convergence to optimal answer. Chinese labels throughout. Color scheme: left side cool gray and blue, right side warm gold and teal. Clean flat vector style with subtle gradients. Professional tech diagram aesthetic. Title at top: "推理过程可视化" in bold Chinese typography. NO realistic human faces. Aspect Ratio 2.35:1. -->
@@ -158,7 +158,7 @@ Claude Opus在这里的表现最好——既有技术深度，又有叙事节奏
 
 Deep Think在这里展现了**"系统性思考"**的优势——它的回答像一份完整的技术咨询报告，从多个维度交叉验证了每个决策的合理性。
 
-![Deep Think多场景体感对比](/assets/images/screenshot-20260213-deep-think-scenario-comparison.png)
+![Deep Think多场景体感对比](/assets/images/screenshot-20260213-deep-think-scenario-comparison.webp)
 *五个真实场景的体感对比：Deep Think在推理和科学分析上遥遥领先*
 
 <!-- 图片提示词：Ultra-wide cinematic comparison chart, 2.35:1 aspect ratio. Radar chart or pentagon diagram comparing three AI models across five dimensions. Use colorblind-friendly high-contrast color scheme: Google Gemini Deep Think in BRIGHT ORANGE (#FF6B00) with solid fill, Claude Opus in DEEP BLUE (#0055D4) with diagonal stripe pattern, GPT-5.2 in DARK GREEN (#006B3F) with dotted pattern. Each polygon has distinct pattern AND color for maximum accessibility. Five axes labeled in large bold Chinese text: "推理深度", "编码实战", "创意写作", "多模态", "Agent能力". Thick distinct line styles: solid for Gemini, dashed for Claude, dotted for GPT. Large clear legend box in top-right corner with model names, colors AND pattern swatches. Background: clean white with light gray grid lines. Title: "五维场景体感对比" in large bold black Chinese typography at top. Professional accessible data visualization. High contrast design optimized for colorblind users. NO realistic human faces. Aspect Ratio 2.35:1. -->
@@ -206,7 +206,7 @@ Deep Think能自动调用Google搜索和代码执行工具，而且调用方式�
 
 不同于Claude可以通过Project功能维护一个持久化的上下文，Gemini目前还没有一个好用的"项目空间"概念。每次对话都是从零开始，没有记忆延续。
 
-![Deep Think优劣势全景分析](/assets/images/screenshot-20260213-deep-think-pros-cons.png)
+![Deep Think优劣势全景分析](/assets/images/screenshot-20260213-deep-think-pros-cons.webp)
 *Deep Think的优势和短板一目了然：推理之王，但生态是软肋*
 
 <!-- 图片提示词：Ultra-wide cinematic infographic, 2.35:1 aspect ratio. Pros and cons analysis layout for AI Deep Think mode. Left half with green accent shows three advantage cards with icons: "推理深度无人能及" with brain icon, "多模态理解天花板" with eye-camera-audio icons, "工具集成自然度" with gear-connection icon. Right half with orange-red accent shows three disadvantage cards: "输出Token大幅缩减" with scissors cutting icon, "生态碎片化" with broken puzzle pieces, "无持久化工作空间" with empty desk icon. Center divider with balance scale. Chinese typography throughout. Clean modern card-based layout. Professional tech analysis style. Dark background with colored accent cards. NO realistic human faces. Aspect Ratio 2.35:1. -->
@@ -275,7 +275,7 @@ Deep Think在国际数学奥赛上拿到金牌级表现（81.5%），在物理�
 
 注：本表“性价比”仅比较旗舰模型能力与价格（Deep Think / Opus 4.6 / GPT-5.2），不包含Claude Pro等基础订阅套餐。
 
-![2026年AI三足鼎立格局](/assets/images/screenshot-20260213-ai-three-kingdoms.png)
+![2026年AI三足鼎立格局](/assets/images/screenshot-20260213-ai-three-kingdoms.webp)
 *2026年2月的AI格局：Google主攻推理深度，Anthropic主攻Agent生态，OpenAI主攻通用体验*
 
 <!-- 图片提示词：Ultra-wide cinematic illustration, 2.35:1 aspect ratio. Three kingdoms battle map style showing 2026 AI landscape. Three territories on a stylized digital map. Left territory in blue with Google DeepMind logo area labeled "推理之王" with Gemini constellation symbol. Center territory in purple labeled "Agent生态" with Anthropic Claude shield symbol. Right territory in green labeled "通用体验" with OpenAI symbol. Borders between territories show competitive tension with lightning. Chinese title at top: "2026年AI三足鼎立" in bold calligraphy-modern hybrid style. Each territory has small icons showing strengths. Background: dark tech-themed map with circuit board patterns. Professional dramatic illustration style. NO realistic human faces. Aspect Ratio 2.35:1. -->

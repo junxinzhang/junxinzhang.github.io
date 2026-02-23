@@ -324,6 +324,6 @@ AI Agent正在渗透每一个专业领域：
 
 这是我整理的团队内部使用指南，来自Claude Code创建者Boris Cherny的实战经验分享，包含10个核心技巧、并行工作流、Plan Mode优先、可复用Skills等最佳实践。
 
-![Claude Code 团队内部使用指南](/assets/images/screenshot-20260204-claude-code-team-guide.png)
+![Claude Code 团队内部使用指南](/assets/images/screenshot-20260204-claude-code-team-guide.webp)
 *Claude Code 团队内部使用指南：来自Anthropic团队的实战经验，涵盖工作流革命、自动化技能、环境配置等10大核心技巧*
 

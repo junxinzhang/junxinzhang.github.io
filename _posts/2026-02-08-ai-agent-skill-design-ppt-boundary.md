@@ -36,10 +36,10 @@ description: "当AI Agent学会调用Skill，设计和PPT的边界正在被彻�
 
 我需要做一套关于"2026全球大模型格局"的演示文稿。内容涉及国际和中国两大阵营、11家厂商的最新模型对比、选型建议——信息量不小。
 
-![全球大模型全景（截止2月6日）](/assets/images/screenshot-20260208-llm-landscape.png)
+![全球大模型全景（截止2月6日）](/assets/images/screenshot-20260208-llm-landscape.webp)
 *全球大模型全景：国际阵营 vs 中国阵营，11家厂商的最新模型与核心亮点*
 
-![Global LLM Landscape (As of Feb 6)](/assets/images/screenshot-20260208-llm-landscape-en.png)
+![Global LLM Landscape (As of Feb 6)](/assets/images/screenshot-20260208-llm-landscape-en.webp)
 *Global LLM Landscape: International vs China camp, 11 vendors with latest models and key highlights*
 
 **传统做法：**
@@ -60,7 +60,7 @@ description: "当AI Agent学会调用Skill，设计和PPT的边界正在被彻�
 
 效果？看下面这张图——这是AI直接生成的：
 
-![传统PPT制作 vs AI Agent + Skill](/assets/images/screenshot-20260208-before-after-ppt.png)
+![传统PPT制作 vs AI Agent + Skill](/assets/images/screenshot-20260208-before-after-ppt.webp)
 *左边：传统方式的3-4小时痛苦。右边：AI Agent + Skill的10分钟搞定*
 
 **效率提升：20倍。**
@@ -110,13 +110,13 @@ Agent是"代理人"的意思。在AI语境下，**Agent就是一个能自主思�
 
 **Skill就是工具箱里的工具。Agent决定什么时候用什么工具。**
 
-![AI Agent 全球产品趋势（2025-2026年2月）](/assets/images/screenshot-20260208-agent-products.png)
+![AI Agent 全球产品趋势（2025-2026年2月）](/assets/images/screenshot-20260208-agent-products.webp)
 *AI Agent 全球产品趋势：从Chat到Agent OS，2025-2026年现象级产品一览*
 
-![Global AI Agent Product Trends (2025 - Feb 2026)](/assets/images/screenshot-20260208-agent-products-en.png)
+![Global AI Agent Product Trends (2025 - Feb 2026)](/assets/images/screenshot-20260208-agent-products-en.webp)
 *Global AI Agent Product Trends: From Chat to Agent OS, breakthrough products in 2025-2026*
 
-![AI Agent + Skill 架构](/assets/images/screenshot-20260208-skill-architecture.png)
+![AI Agent + Skill 架构](/assets/images/screenshot-20260208-skill-architecture.webp)
 *三层架构：用户用自然语言说需求，Agent理解并规划，Skill执行具体任务*
 
 ---
@@ -178,7 +178,7 @@ Skill到底有多少？能干什么？
 | `review` | 代码审查 | 置信度过滤的精准审查 |
 | `debug` | 调试 | 系统性问题分析 |
 
-![Skill生态全景](/assets/images/screenshot-20260208-skill-ecosystem.png)
+![Skill生态全景](/assets/images/screenshot-20260208-skill-ecosystem.webp)
 *50+ Skills覆盖创作全链路：从构思到发布，全程AI驱动*
 
 **这意味着什么？**
@@ -340,7 +340,7 @@ Anthropic官方也在2026年推出了**Agent Skills**，其中就包括PowerPoin
 
 **2026年，AI成了全能创作者——能帮你做PPT、画设计、生成图片、制作漫画、写文章、发社交媒体……**
 
-![从文字助手到全能创作者](/assets/images/screenshot-20260208-future-creative-boundary.png)
+![从文字助手到全能创作者](/assets/images/screenshot-20260208-future-creative-boundary.webp)
 *AI能力的扩展边界：每一年都在指数级增长*
 
 **边界还在扩展。** 视频、音乐、3D建模——下一个被Skill化的能力，可能就在眼前。

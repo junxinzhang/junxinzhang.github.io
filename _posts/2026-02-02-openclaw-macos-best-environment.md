@@ -63,14 +63,14 @@ OpenClaw自己管理一个独立的Chromium实例。有自己的用户数据目�
 
 **但这恰恰是我踩坑最多的地方。**（关于安全风险，我之前写过[Clawdbot刷屏AI圈，我为什么劝你别急着用]({{ site.baseurl }}/clawdbot-why-you-should-wait)）
 
-![OpenClaw 浏览器自动化架构示意图](/assets/images/screenshot-20260202-openclaw-architecture.png)
+![OpenClaw 浏览器自动化架构示意图](/assets/images/screenshot-20260202-openclaw-architecture.webp)
 *OpenClaw 浏览器自动化架构：Playwright驱动 + 两种Profile模式*
 
 ---
 
 ## macOS跑起来怎么样？
 
-![Mac Mini 运行 OpenClaw 自动化演示](/assets/images/screenshot-20260202-mac-mini-automation-demo.png)
+![Mac Mini 运行 OpenClaw 自动化演示](/assets/images/screenshot-20260202-mac-mini-automation-demo.webp)
 *终端日志 + 浏览器自动化实时操作界面*
 
 说说我的真实体验。
@@ -96,7 +96,7 @@ Chrome Relay的设计初衷确实诱人：
 
 ### 真正让我觉得值的：Apple生态整合
 
-![OpenClaw 工作环境](/assets/images/screenshot-20260202-openclaw-workspace.png)
+![OpenClaw 工作环境](/assets/images/screenshot-20260202-openclaw-workspace.webp)
 *我的 OpenClaw 日常工作环境：Mac Mini + 宽屏显示器，舒适高效*
 
 浏览器自动化有坑，但macOS还有别的优势——<mark>这块是真的香</mark>。
@@ -154,7 +154,7 @@ Chrome Relay在Mac上都不稳定，<mark>在没有图形界面的服务器上�
 
 这套架构增加了复杂度，也增加了出问题的可能。GitHub Issue #1935提到的"tab not found"问题，在这种远程架构下只会更严重。
 
-![VPS 远程架构延迟示意图](/assets/images/screenshot-20260202-vps-latency-topology.png)
+![VPS 远程架构延迟示意图](/assets/images/screenshot-20260202-vps-latency-topology.webp)
 *远程 VPS 架构：网络延迟和连接中断是主要问题*
 
 ### 依赖管理是个坑

@@ -4,7 +4,7 @@ title: "大年初三的新加坡：123路到圣淘沙，暴雨里临场改道的
 date: 2026-02-19
 author: Jason Zhang
 categories: [随想]
-image: assets/images/screenshot-20260219-sentosa-rain-detour-cover.png
+image: assets/images/screenshot-20260219-sentosa-rain-detour-cover.webp
 tags: [featured, 新加坡, 春节, 大年初三, 圣淘沙, Palawan Beach, Northpoint City, Night Safari, 暴雨, 家庭出行]
 slug: singapore-sentosa-palawan-rain-detour-night-safari
 description: "2026年2月19日（大年初三），从123路公交到圣淘沙、Bus B 到 Palawan Beach，原计划继续去 Night Safari，却在暴雨中和印度裔 Grab 司机沟通后临场改道回酒店。这是一篇关于家庭旅行“动态决策”的现场笔记。"
@@ -33,7 +33,7 @@ faq:
 
 **123 路 Bus 去圣淘沙 → 岛内 Bus B 到 Palawan Beach（给小朋友下水）→ 再去 Northpoint City 吃饭 → 晚上 Night Safari。**
 
-![大年初三新加坡暴雨改道封面](/assets/images/screenshot-20260219-sentosa-rain-detour-cover.png)
+![大年初三新加坡暴雨改道封面](/assets/images/screenshot-20260219-sentosa-rain-detour-cover.webp)
 
 <!-- 封面图提示词（baoyu-cover-image，严格 2.35:1）：
 Type=scene, Palette=cool, Rendering=digital, Text=title-subtitle, Mood=balanced。
@@ -59,7 +59,7 @@ Type=scene, Palette=cool, Rendering=digital, Text=title-subtitle, Mood=balanced�
 
 到岛上以后，我们直接接 Bus B 去 Palawan Beach 区域。当天没有搞“先拍几张再玩”，而是先让小朋友下水、玩沙。
 
-![Palawan Beach：适合亲子停留的下水时段](/assets/images/screenshot-20260219-palawan-kid-beach.jpg)
+![Palawan Beach：适合亲子停留的下水时段](/assets/images/screenshot-20260219-palawan-kid-beach.webp)
 
 小朋友一屁股坐到沙里，立刻就进入“这是我的海滩”模式。那一刻我就觉得，今天来对了。
 有时候亲子行程的成败就这么简单：不是看你走了几个点，而是看孩子是不是在当下真的开心。
@@ -72,7 +72,7 @@ Type=scene, Palette=cool, Rendering=digital, Text=title-subtitle, Mood=balanced�
 
 前一阵还在海边踩水，下一阵雨就砸下来了。地面很快起水，鞋和裤脚全湿，站在雨棚边上都能感到风把雨往里推。
 
-![圣淘沙暴雨：路面与通行条件快速恶化](/assets/images/screenshot-20260219-sentosa-heavy-rain.jpg)
+![圣淘沙暴雨：路面与通行条件快速恶化](/assets/images/screenshot-20260219-sentosa-heavy-rain.webp)
 
 我们在雨棚下站了几分钟，我脑子里只剩一个问题：
 现在继续硬顶，是在“完成计划”，还是在“消耗全家”？
@@ -85,11 +85,11 @@ Type=scene, Palette=cool, Rendering=digital, Text=title-subtitle, Mood=balanced�
 
 后面的动作很直接，叫 Grab 去 Northpoint City。进到商场那一刻，空调和干燥地面真的像“重启键”。
 
-![Northpoint City：暴雨日的补给与中转点](/assets/images/screenshot-20260219-northpoint-transend.jpg)
+![Northpoint City：暴雨日的补给与中转点](/assets/images/screenshot-20260219-northpoint-transend.webp)
 
 吃完饭顺手看了下汇率，坦白说，不太满意，价格和我心里的锚点差得有点多。
 
-![现场汇率牌价：与预期存在明显价差](/assets/images/screenshot-20260219-exchange-board.jpg)
+![现场汇率牌价：与预期存在明显价差](/assets/images/screenshot-20260219-exchange-board.webp)
 
 我一般会先看官方中间价，再看柜台买卖价差。当天这个价差不太友好，我就直接决定先不换，钱留在手里，选择权也留着。
 

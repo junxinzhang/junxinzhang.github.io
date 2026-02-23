@@ -86,7 +86,7 @@ slug: vibe-coding-sleep-deprivation-confession
 >
 > ——Jerry，江苏
 
-![评论区截图1](/assets/images/screenshot-20260126-comments-1.png)
+![评论区截图1](/assets/images/screenshot-20260126-comments-1.webp)
 
 ### 2.2 "再优化一下就睡"
 
@@ -134,7 +134,7 @@ slug: vibe-coding-sleep-deprivation-confession
 
 **大家都是同路人。**
 
-![评论区截图2](/assets/images/screenshot-20260126-comments-2.png)
+![评论区截图2](/assets/images/screenshot-20260126-comments-2.webp)
 
 看完这些评论，我意识到一件事：
 
@@ -160,7 +160,7 @@ slug: vibe-coding-sleep-deprivation-confession
 >
 > ——一蓑烟雨任平生，广东
 
-![评论区截图5](/assets/images/screenshot-20260126-comments-5.png)
+![评论区截图5](/assets/images/screenshot-20260126-comments-5.webp)
 
 ### 3.2 这是一种自由
 
@@ -190,7 +190,7 @@ slug: vibe-coding-sleep-deprivation-confession
 
 **以前只有老板才能体验的"创造"快感，现在普通人也能感受到了。**
 
-![评论区截图4](/assets/images/screenshot-20260126-comments-4.png)
+![评论区截图4](/assets/images/screenshot-20260126-comments-4.webp)
 
 ---
 
@@ -209,7 +209,7 @@ slug: vibe-coding-sleep-deprivation-confession
 > ——天路客，广东
 
 ![评论区截图31](/assets/images/screenshot-20260126-comments-31.png)
-![评论区截图3](/assets/images/screenshot-20260126-comments-3.png)
+![评论区截图3](/assets/images/screenshot-20260126-comments-3.webp)
 
 ### 4.2 健康还是要的
 
@@ -223,7 +223,7 @@ slug: vibe-coding-sleep-deprivation-confession
 
 **身体有它的节奏。可以心流超频，但持续时间久了，也容易烧坏。**
 
-![评论区截图6](/assets/images/screenshot-20260126-comments-6.png)
+![评论区截图6](/assets/images/screenshot-20260126-comments-6.webp)
 
 ---
 

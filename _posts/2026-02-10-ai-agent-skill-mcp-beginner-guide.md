@@ -63,7 +63,7 @@ AI也是一样。
 | **Skill** | 管家会的各种技能 | 管家会订餐、会叫车、会订机票、会安排行程——每一项都是一个Skill |
 | **MCP** | 酒店的服务标准协议 | 不管哪个酒店、哪个管家，对接方式都是统一的——这就是MCP |
 
-![三个核心概念的关系](/assets/images/screenshot-20260210-hotel-butler-analogy.png)
+![三个核心概念的关系](/assets/images/screenshot-20260210-hotel-butler-analogy.webp)
 *AI Agent就像你的私人管家，Skill是他掌握的各种技能，MCP是让管家能接入各种服务的统一标准*
 
 就这么简单：
@@ -127,7 +127,7 @@ MCP的全称是 **Model Context Protocol（模型上下文协议）**。
 
 **MCP就是AI世界里的Type-C。**
 
-![MCP：AI世界的统一接口标准](/assets/images/screenshot-20260210-mcp-usbc-analogy.png)
+![MCP：AI世界的统一接口标准](/assets/images/screenshot-20260210-mcp-usbc-analogy.webp)
 *MCP就像USB-C：一个协议连接所有AI工具，不再需要为每个工具单独写适配器*
 
 ### 没有MCP的世界（以前）
@@ -238,7 +238,7 @@ Agent是一个聪明的助手，MCP是万能接口——那Skill呢？
 ✅ "把这10张照片按日期分类整理到文件夹里"
 ```
 
-![零基础用户的AI使用路线](/assets/images/screenshot-20260210-beginner-roadmap.png)
+![零基础用户的AI使用路线](/assets/images/screenshot-20260210-beginner-roadmap.webp)
 *从哪里开始？根据你的身份选择合适的入口*
 
 ### 路线二：职场人士（想提高工作效率）
@@ -416,7 +416,7 @@ AI做的设计可以直接上线吗？简单场景可以，重要项目建议设
 
 AI Agent + Skill + MCP也是一样——你不需要懂底层技术，但它会渗透到你生活和工作的方方面面。
 
-![AI Agent时代的三层架构](/assets/images/screenshot-20260210-three-layer-architecture.png)
+![AI Agent时代的三层架构](/assets/images/screenshot-20260210-three-layer-architecture.webp)
 *三层架构：MCP是地基，Skill是工具箱，Agent是你的智能管家*
 
 ---
