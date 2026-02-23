@@ -13,3 +13,5 @@ cover-image/
 illustrations/
 *.bak-*
 ai-coding-video/
+assets/images/.backup/
+scripts/remotion/
