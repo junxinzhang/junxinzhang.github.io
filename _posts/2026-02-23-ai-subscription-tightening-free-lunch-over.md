@@ -4,7 +4,7 @@ title: "AI 订阅收紧潮：从 Anthropic 到 Google、GLM，免费午餐真的
 date: 2026-02-23
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260223-ai-subscription-tightening-cover-v2.png
+image: assets/images/screenshot-20260223-ai-subscription-tightening-cover-v2.webp
 tags: [featured, AI 订阅, Anthropic, Google, GLM, 智谱, OpenAI, Claude Max, AI Ultra, 订阅经济, 定价策略]
 slug: ai-subscription-tightening-free-lunch-over
 description: "2026 年 2 月，Anthropic 推出 $200/月的 Max 计划并限制第三方工具，Google 祭出 $250/月的 AI Ultra，智谱 GLM-5 涨价 30%-60%，OpenAI 测试 $100/月的 Pro Lite。当所有 AI 公司都在收紧免费额度、拉高付费门槛时，背后的逻辑是什么？普通用户又该怎么应对？"
@@ -31,7 +31,7 @@ faq:
 
 **<mark>一句话结论：2026 年 2 月，AI 行业正在经历一轮系统性的「订阅收紧潮」。免费午餐的窗口在快速关闭，付费门槛在快速拉高。</mark>**
 
-![AI 订阅收紧潮封面](/assets/images/screenshot-20260223-ai-subscription-tightening-cover-v2.png)
+![AI 订阅收紧潮封面](/assets/images/screenshot-20260223-ai-subscription-tightening-cover-v2.webp)
 
 <!-- 封面图提示词（baoyu-cover-image，严格 2.35:1）：
 Type=conceptual, Palette=dark, Rendering=digital, Text=title-subtitle, Mood=bold。
@@ -77,7 +77,7 @@ Max 计划的定位很清楚：给那些把 Claude 当核心生产工具的重�
 
 ![Anthropic 官方推文：指控工业级蒸馏攻击](/assets/images/screenshot-20260223-anthropic-distillation-tweet.webp)
 
-![2026年2月 AI 订阅变动时间线](/assets/images/screenshot-20260223-ai-subscription-timeline-v2.png)
+![2026年2月 AI 订阅变动时间线](/assets/images/screenshot-20260223-ai-subscription-timeline-v2.webp)
 
 <!-- 插图1提示词（baoyu-article-illustrator，严格 2.35:1）：
 Type=timeline, Style=sci-fi。
@@ -325,4 +325,3 @@ OpenAI 已经开始在免费和 Go 用户中测试广告。这个方向的逻辑
 ---
 
 > 💡 **福利时间**：既然说到 Google AI Ultra，我自己的 **Google AI Ultra 家庭计划目前还有 2 个位置**。如果你正好有主力需求，又想省心、省钱地用上 30TB 存储和最强模型，欢迎私信我（或在评论区留言）。**先到先得，满员即止！**
-
