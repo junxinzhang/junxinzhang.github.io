@@ -3,7 +3,7 @@ layout: post
 title: "SaaS的黄昏：当通用AGI工具引发市场大地震"
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260119-salesforce-crm-stock.jpg
+image: assets/images/screenshot-20260119-salesforce-crm-stock.webp
 tags: [AGI, AI Agent, SaaS, 股市, Claude Code, Anthropic, 软件行业, 市场分析]
 slug: agi-market-disruption-saas-crash
 ---
@@ -45,19 +45,19 @@ slug: agi-market-disruption-saas-crash
 
 摩根士丹利追踪的SaaS股票指数**2026年开年下跌15%**，叠加2025年11%的跌幅——这是自2022年科技股崩盘以来最糟糕的开局。
 
-![Salesforce股价走势](/assets/images/screenshot-20260119-salesforce-crm-stock.jpg)
+![Salesforce股价走势](/assets/images/screenshot-20260119-salesforce-crm-stock.webp)
 *Salesforce（CRM）5日股价走势：1月13日暴跌后持续下行，当前227.11，5日跌幅-12.63%*
 
-![Adobe股价走势](/assets/images/screenshot-20260119-adobe-adbe-stock.jpg)
+![Adobe股价走势](/assets/images/screenshot-20260119-adobe-adbe-stock.webp)
 *Adobe（ADBE）5日股价走势：1月13日遭Oppenheimer降级后大跌，当前296.12，5日跌幅-11.33%*
 
-![ServiceNow股价走势](/assets/images/screenshot-20260119-servicenow-now-stock.jpg)
+![ServiceNow股价走势](/assets/images/screenshot-20260119-servicenow-now-stock.webp)
 *ServiceNow（NOW）5日股价走势：被高盛下调至"卖出"，当前127.31，5日跌幅-10.22%*
 
-![HubSpot股价走势](/assets/images/screenshot-20260119-hubspot-hubs-stock.jpg)
+![HubSpot股价走势](/assets/images/screenshot-20260119-hubspot-hubs-stock.webp)
 *HubSpot（HUBS）5日股价走势：中型SaaS公司代表，当前311.88，5日跌幅-16.06%*
 
-![Monday.com股价走势](/assets/images/screenshot-20260119-monday-mndy-stock.jpg)
+![Monday.com股价走势](/assets/images/screenshot-20260119-monday-mndy-stock.webp)
 *Monday.com（MNDY）5日股价走势：当前126.70，5日跌幅-14.41%*
 
 ![Accenture股价走势](/assets/images/screenshot-20260119-accenture-acn-stock.jpg)

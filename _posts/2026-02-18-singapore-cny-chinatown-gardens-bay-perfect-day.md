@@ -120,7 +120,7 @@ Type=timeline, Style=editorial。
 
 灯光亮起那一刻你会明白，白天那条线不是结束在“看完”，而是结束在“收束”。
 
-![Supertree Grove 夜间灯光秀现场](/assets/images/screenshot-20260218-singapore-cny-route-supertree-lightshow.jpg)
+![Supertree Grove 夜间灯光秀现场](/assets/images/screenshot-20260218-singapore-cny-route-supertree-lightshow.webp)
 
 这里也顺手记一个实用信息：
 

@@ -103,7 +103,7 @@ Type=scene, Palette=cool, Rendering=digital, Text=title-subtitle, Mood=balanced�
 
 我听完那一刻其实就定了，今天到这儿，回酒店。
 
-![夜间改道时刻：在雨夜中把行程从“完成”改为“止损”](/assets/images/screenshot-20260219-marina-blvd-night.jpg)
+![夜间改道时刻：在雨夜中把行程从“完成”改为“止损”](/assets/images/screenshot-20260219-marina-blvd-night.webp)
 
 说不遗憾是假的，但车往回开的时候，我反而松了一口气。大家都累了，硬冲下去未必会有好体验。
 这次改道看起来像“没完成”，但对家庭出行来说，它其实是把损失停在了可控范围里。

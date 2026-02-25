@@ -56,7 +56,7 @@ description: "有三年美股经验的我，最近在琢磨A股量化。传统�
 
 这些Agent不是各干各的，而是通过"结构化沟通和辩论"来协作决策。比如基本面分析师说"这公司财报不错"，情绪分析师说"但社交媒体上骂声一片"，然后研究员综合判断。
 
-![多Agent协作架构](/assets/images/screenshot-20260203-multi-agent-architecture.png)
+![多Agent协作架构](/assets/images/screenshot-20260203-multi-agent-architecture.webp)
 *多Agent协作架构：不同角色的Agent各司其职，通过协作形成决策*
 
 <!-- 图片提示词：Flat vector illustration, Minimalist, Line art style. A diagram showing multi-agent collaboration architecture: 6 connected agent icons in a circular arrangement - each represented by simple geometric avatars with different symbols (chart icon for analyst, shield for risk manager, terminal for trader, magnifying glass for researcher, heart for sentiment analyst, gear for technical analyst). Arrows showing communication flow between agents. Center hub with brain/AI icon. Color: Warm pastel colors - soft coral, peach, lavender, mint. Beige background. Aspect Ratio 2.35:1. -->
@@ -240,7 +240,7 @@ AI Agent的决策过程往往不透明。在金融交易里，你不光要知道
 
 我在[Mac Mini那篇文章]({{ site.baseurl }}/openclaw-macos-best-environment)里提过，M芯片的能效比和稳定性确实不错，但软件层面的坑还是要注意。
 
-![Mac Mini vs 服务器对比](/assets/images/screenshot-20260203-mac-mini-vs-server.png)
+![Mac Mini vs 服务器对比](/assets/images/screenshot-20260203-mac-mini-vs-server.webp)
 *Mac Mini vs 传统服务器：功耗低、稳定，但Chrome Relay本身的坑还是存在*
 
 <!-- 图片提示词：Flat vector illustration, Minimalist, Line art style. Split comparison layout: Left side shows a compact Mac Mini icon with checkmarks (low power, quiet, stable), Right side shows a traditional server rack with warning signs (complex, high power, noisy). Center dividing line with "VS" text. Include simple icons: lightning bolt for power, sound waves for noise, clock for uptime. Color: Warm pastel colors - Mac Mini side in soft mint/green tones (positive), Server side in soft coral/orange tones (cautionary). Beige background. Aspect Ratio 2.35:1. -->
