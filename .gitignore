@@ -14,4 +14,9 @@ illustrations/
 *.bak-*
 ai-coding-video/
 assets/images/.backup/
+assets/images/_redundant/
+assets/videos/
+assets/audio/
+assets/subtitles/
+assets/images/screenshot-*-video-cover-*.png
 scripts/remotion/
