@@ -322,9 +322,9 @@ Type=comparison, Style=editorial。
 
 | 账号 | 用途 | 隔离原因 |
 |---|---|---|
-| kiyo.liang@gmail.com | 仅本地 macOS Codex CLI | 我的日常开发，不参与 Agent |
-| jason2023zhang@gmail.com | OpenClaw Agent 主账号 | Agent session 独立消耗 |
-| winnie.zhang0022@gmail.com | OpenClaw Agent 备用 | 限额轮换，避免触顶 |
+| k\*\*\*\*\*\*g@gmail.com | 仅本地 macOS Codex CLI | 我的日常开发，不参与 Agent |
+| j\*\*\*\*\*\*\*\*g@gmail.com | OpenClaw Agent 主账号 | Agent session 独立消耗 |
+| w\*\*\*\*\*\*\*\*2@gmail.com | OpenClaw Agent 备用 | 限额轮换，避免触顶 |
 
 为什么要隔离？因为 Agent 的 token 消耗量远超人类手动使用。如果共用一个账号，Agent 跑满限额后我自己就用不了了。
 
