@@ -60,13 +60,21 @@ sitemap:
     "@type": "ItemList",
     "numberOfItems": {{ site.tags.size }},
     "itemListElement": [
-      {% assign sorted_tags = site.tags | sort %}
-      {% for tag in sorted_tags limit: 50 %}
+      {% assign tag_names = "" %}
+      {% for tag in site.tags %}
+        {% if forloop.first %}
+          {% assign tag_names = tag[0] %}
+        {% else %}
+          {% assign tag_names = tag_names | append: "," | append: tag[0] %}
+        {% endif %}
+      {% endfor %}
+      {% assign sorted_tag_names = tag_names | split: "," | sort_natural %}
+      {% for tag_name in sorted_tag_names limit: 50 %}
       {
         "@type": "ListItem",
         "position": {{ forloop.index }},
-        "url": "{{ site.url }}/tags.html#{{ tag[0] | downcase }}",
-        "name": "{{ tag[0] | escape }}"
+        "url": "{{ site.url }}/tags.html#{{ tag_name | downcase }}",
+        "name": "{{ tag_name | escape }}"
       }{% unless forloop.last %},{% endunless %}
       {% endfor %}
     ]
