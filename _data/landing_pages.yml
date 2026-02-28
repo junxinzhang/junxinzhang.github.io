@@ -12,6 +12,28 @@
 # - date: 创建或更新日期
 # - featured: 是否精选展示
 
+- title: Voice Real-time Translation
+  repo: vrt-landing-page
+  demo_url: https://vrt.junxinzhang.com
+  description: macOS 实时语音转写与翻译工具，主打低延迟、原生体验与会议级稳定性，适用于跨语言会议、远程沟通与内容创作
+  image: /assets/images/screenshot-20260228-vrt-landing-page.png
+  category: App
+  tech_stack:
+    - HTML5
+    - CSS3
+    - JavaScript
+    - PWA
+  keywords:
+    - Voice Real-time Translation
+    - 实时语音翻译
+    - 语音实时转写
+    - 跨语言会议
+    - 双语字幕
+    - macOS 应用
+    - 低延迟翻译
+  date: 2026-02-28
+  featured: true
+
 - title: FortiGate SD-WAN Monitor
   repo: fortigate-sdwan-monitor
   demo_url: https://network-monitor.junxinzhang.com

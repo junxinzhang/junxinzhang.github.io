@@ -1,0 +1,257 @@
+zh-hans: &projects_page_zh_hans
+  meta:
+    title: "Projects Portfolio - 开源项目与落地页作品集"
+    description: "Jason Zhang 的开源项目作品集，包含 Voice Real-time Translation、企业级 DevOps 仪表盘、SD-WAN 网络监控、蓝鲸 CMDB 定制方案、AI 安全防护平台等落地页项目。专注 AI 技术、DevOps、云原生架构。"
+  hero:
+    title: "Projects Portfolio"
+    subtitle: "我的开源项目和落地页作品集"
+  filters:
+    all: "全部"
+    landing: "落地页"
+    report: "专项报告"
+  sections:
+    landing: "落地页项目"
+    report: "专项报告"
+  badges:
+    featured: "精选"
+  buttons:
+    official_site: "官网"
+    source_code: "源码"
+    view_report: "查看报告"
+  categories:
+    network: "网络"
+    devops: "DevOps"
+    cmdb: "CMDB"
+    app: "应用"
+    security: "安全"
+    report: "报告"
+  items:
+    vrt-landing-page:
+      title: "Voice Real-time Translation"
+      description: "macOS 实时语音转写与翻译工具，主打低延迟、原生体验与会议级稳定性，适用于跨语言会议、远程沟通与内容创作。"
+      keywords:
+        - "实时语音翻译"
+        - "语音实时转写"
+        - "跨语言会议"
+        - "双语字幕"
+        - "macOS 应用"
+    fortigate-sdwan-monitor:
+      title: "FortiGate SD-WAN Monitor"
+      description: "企业级 FortiGate SD-WAN 网络健康监控解决方案，支持实时监控、智能告警与趋势分析。"
+      keywords:
+        - "FortiGate"
+        - "SD-WAN"
+        - "网络监控"
+        - "实时告警"
+        - "企业网络"
+    devops-dash-landing-page:
+      title: "DevOps Dashboard"
+      description: "企业级 DevOps 仪表盘产品展示页，支持双语、PWA 和无障碍访问。"
+      keywords:
+        - "DevOps"
+        - "Dashboard"
+        - "CI/CD"
+        - "持续集成"
+        - "自动化运维"
+    bk-cmdb-landing-page:
+      title: "蓝鲸CMDB定制方案"
+      description: "蓝鲸智云 CMDB 精细化权限与用户管理定制方案展示。"
+      keywords:
+        - "蓝鲸"
+        - "CMDB"
+        - "权限管理"
+        - "资产管理"
+        - "运维平台"
+    meterinfoapp-landing-page:
+      title: "Meterinfo 电表轮换管理系统"
+      description: "电表轮换全生命周期管理系统，支持资产登记、轮换计划、到期预警与更换记录追踪。"
+      keywords:
+        - "电表轮换"
+        - "电表管理"
+        - "资产管理"
+        - "到期预警"
+        - "AMI"
+    ai-security-guard-landing-page:
+      title: "AI Security Guard"
+      description: "企业级 AI 安全防护平台，为 AI 应用构建全方位安全防线，支持中英双语、PWA 与无障碍访问。"
+      keywords:
+        - "AI Security"
+        - "AI安全"
+        - "安全防护"
+        - "企业安全"
+        - "人工智能安全"
+
+en: &projects_page_en
+  meta:
+    title: "Projects Portfolio - Open Source Projects and Landing Pages"
+    description: "Jason Zhang's open-source project portfolio featuring Voice Real-time Translation, enterprise DevOps dashboards, SD-WAN monitoring, BlueKing CMDB custom solutions, and AI security platforms."
+  hero:
+    title: "Projects Portfolio"
+    subtitle: "My open-source projects and landing page portfolio"
+  filters:
+    all: "All"
+    landing: "Landing Pages"
+    report: "Reports"
+  sections:
+    landing: "Landing Pages"
+    report: "Reports"
+  badges:
+    featured: "Featured"
+  buttons:
+    official_site: "Official Site"
+    source_code: "Source Code"
+    view_report: "View Report"
+  categories:
+    network: "Network"
+    devops: "DevOps"
+    cmdb: "CMDB"
+    app: "App"
+    security: "Security"
+    report: "Report"
+  items:
+    vrt-landing-page:
+      title: "Voice Real-time Translation"
+      description: "A macOS real-time speech transcription and translation app built for low latency, native UX, and meeting-grade reliability."
+      keywords:
+        - "real-time translation"
+        - "speech transcription"
+        - "cross-language meetings"
+        - "bilingual subtitles"
+        - "macOS app"
+    fortigate-sdwan-monitor:
+      title: "FortiGate SD-WAN Monitor"
+      description: "An enterprise-grade FortiGate SD-WAN health monitoring solution with real-time visibility, alerts, and trend analysis."
+      keywords:
+        - "FortiGate"
+        - "SD-WAN"
+        - "network monitoring"
+        - "real-time alerts"
+        - "enterprise network"
+    devops-dash-landing-page:
+      title: "DevOps Dashboard"
+      description: "An enterprise DevOps dashboard product page with bilingual support, PWA capabilities, and accessible UX."
+      keywords:
+        - "DevOps"
+        - "dashboard"
+        - "CI/CD"
+        - "continuous delivery"
+        - "automation"
+    bk-cmdb-landing-page:
+      title: "BlueKing CMDB Custom Solution"
+      description: "A showcase page for granular permission control and user management customization on BlueKing CMDB."
+      keywords:
+        - "BlueKing"
+        - "CMDB"
+        - "permission control"
+        - "asset management"
+        - "ops platform"
+    meterinfoapp-landing-page:
+      title: "Meterinfo Meter Rotation Management"
+      description: "A full-lifecycle meter rotation system covering asset registration, planning, expiry alerts, and replacement tracking."
+      keywords:
+        - "meter rotation"
+        - "meter management"
+        - "asset lifecycle"
+        - "expiry alerts"
+        - "AMI"
+    ai-security-guard-landing-page:
+      title: "AI Security Guard"
+      description: "An enterprise AI security platform that builds end-to-end protection for AI applications with bilingual and PWA support."
+      keywords:
+        - "AI security"
+        - "security platform"
+        - "enterprise security"
+        - "AI application security"
+        - "protection"
+
+zh-hant:
+  meta:
+    title: "Projects Portfolio - 開源專案與落地頁作品集"
+    description: "Jason Zhang 的開源專案作品集，包含 Voice Real-time Translation、企業級 DevOps 儀表盤、SD-WAN 網路監控、藍鯨 CMDB 定制方案、AI 安全防護平台等落地頁專案。專注 AI 技術、DevOps、雲原生架構。"
+  hero:
+    title: "Projects Portfolio"
+    subtitle: "我的開源專案與落地頁作品集"
+  filters:
+    all: "全部"
+    landing: "落地頁"
+    report: "專項報告"
+  sections:
+    landing: "落地頁專案"
+    report: "專項報告"
+  badges:
+    featured: "精選"
+  buttons:
+    official_site: "官網"
+    source_code: "原始碼"
+    view_report: "查看報告"
+  categories:
+    network: "網路"
+    devops: "DevOps"
+    cmdb: "CMDB"
+    app: "應用"
+    security: "安全"
+    report: "報告"
+  items:
+    vrt-landing-page:
+      title: "Voice Real-time Translation"
+      description: "macOS 即時語音轉寫與翻譯工具，主打低延遲、原生體驗與會議級穩定性，適用於跨語言會議、遠端溝通與內容創作。"
+      keywords:
+        - "即時語音翻譯"
+        - "語音即時轉寫"
+        - "跨語言會議"
+        - "雙語字幕"
+        - "macOS 應用"
+    fortigate-sdwan-monitor:
+      title: "FortiGate SD-WAN Monitor"
+      description: "企業級 FortiGate SD-WAN 網路健康監控方案，支援即時監控、智慧告警與趨勢分析。"
+      keywords:
+        - "FortiGate"
+        - "SD-WAN"
+        - "網路監控"
+        - "即時告警"
+        - "企業網路"
+    devops-dash-landing-page:
+      title: "DevOps Dashboard"
+      description: "企業級 DevOps 儀表盤產品展示頁，支援雙語、PWA 與無障礙存取。"
+      keywords:
+        - "DevOps"
+        - "Dashboard"
+        - "CI/CD"
+        - "持續整合"
+        - "自動化維運"
+    bk-cmdb-landing-page:
+      title: "藍鯨CMDB定制方案"
+      description: "藍鯨智雲 CMDB 精細化權限與使用者管理定制方案展示。"
+      keywords:
+        - "藍鯨"
+        - "CMDB"
+        - "權限管理"
+        - "資產管理"
+        - "維運平台"
+    meterinfoapp-landing-page:
+      title: "Meterinfo 電錶輪換管理系統"
+      description: "電錶輪換全生命週期管理系統，支援資產登記、輪換計畫、到期預警與更換紀錄追蹤。"
+      keywords:
+        - "電錶輪換"
+        - "電錶管理"
+        - "資產管理"
+        - "到期預警"
+        - "AMI"
+    ai-security-guard-landing-page:
+      title: "AI Security Guard"
+      description: "企業級 AI 安全防護平台，為 AI 應用建立全方位安全防線，支援中英雙語、PWA 與無障礙存取。"
+      keywords:
+        - "AI Security"
+        - "AI安全"
+        - "安全防護"
+        - "企業安全"
+        - "人工智慧安全"
+
+de: *projects_page_en
+fr: *projects_page_en
+it: *projects_page_en
+es: *projects_page_en
+pt: *projects_page_en
+ja: *projects_page_en
+ko: *projects_page_en
+hi: *projects_page_en

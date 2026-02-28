@@ -2,11 +2,14 @@
 title: "Projects Portfolio - 开源项目与落地页作品集"
 layout: default
 permalink: "/projects.html"
-description: "Jason Zhang 的开源项目作品集，包含企业级 DevOps 仪表盘、SD-WAN 网络监控、蓝鲸 CMDB 定制方案、AI 安全防护平台等落地页项目。专注 AI 技术、DevOps、云原生架构。"
+description: "Jason Zhang 的开源项目作品集，包含 Voice Real-time Translation、企业级 DevOps 仪表盘、SD-WAN 网络监控、蓝鲸 CMDB 定制方案、AI 安全防护平台等落地页项目。专注 AI 技术、DevOps、云原生架构。"
 image: /assets/images/logo.webp
 keywords:
 - 落地页设计
 - Landing Page
+- Voice Real-time Translation
+- 实时语音翻译
+- 语音实时转写
 - DevOps Dashboard
 - SD-WAN Monitor
 - 蓝鲸CMDB
@@ -24,6 +27,8 @@ sitemap:
 priority: 0.9
 changefreq: weekly
 ---
+
+{% assign projects_page_default = site.data.projects_page_i18n[site.default_lang] %}
 
 <style>
     .projects-hero {
@@ -308,8 +313,8 @@ changefreq: weekly
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Projects Portfolio - 开源项目与落地页作品集",
-  "description": "Jason Zhang 的开源项目作品集，包含企业级 DevOps 仪表盘、SD-WAN 网络监控、蓝鲸 CMDB 定制方案等落地页项目。",
+  "name": "{{ projects_page_default.meta.title }}",
+  "description": "{{ projects_page_default.meta.description }}",
   "url": "{{ site.url }}/projects.html",
   "author": {
     "@type": "Person",
@@ -348,26 +353,28 @@ changefreq: weekly
 
             <!-- Hero Section -->
             <div class="projects-hero">
-                <h1>Projects Portfolio</h1>
-                <p>我的开源项目和落地页作品集</p>
+                <h1 data-projects-key="hero.title">{{ projects_page_default.hero.title }}</h1>
+                <p data-projects-key="hero.subtitle">{{ projects_page_default.hero.subtitle }}</p>
             </div>
 
             <!-- Category Filter -->
             <div class="category-filter">
                 <a href="#" class="filter-btn active" data-category="all">
-                    All
+                    <span data-projects-key="filters.all">{{ projects_page_default.filters.all }}</span>
                     <span class="count">({% assign landing_count = site.data.landing_pages | size %}{% assign html_count
                         = site.data.html_pages | size %}{{ landing_count | plus: html_count }})</span>
                 </a>
-                <a href="#" class="filter-btn" data-category="landing">Landing Pages</a>
-                <a href="#" class="filter-btn" data-category="report">专项报告</a>
+                <a href="#" class="filter-btn" data-category="landing"><span data-projects-key="filters.landing">{{ projects_page_default.filters.landing }}</span></a>
+                <a href="#" class="filter-btn" data-category="report"><span data-projects-key="filters.report">{{ projects_page_default.filters.report }}</span></a>
             </div>
 
             <!-- Landing Pages Section -->
-            <h2 class="section-title">Landing Pages</h2>
+            <h2 class="section-title" data-projects-key="sections.landing">{{ projects_page_default.sections.landing }}</h2>
             <div class="projects-grid" id="landing-pages">
                 {% for project in site.data.landing_pages %}
-                <div class="project-card" data-type="landing" data-category="{{ project.category | downcase }}">
+                {% assign project_i18n = projects_page_default.items[project.repo] %}
+                {% assign project_category_key = project.category | downcase %}
+                <div class="project-card" data-type="landing" data-category="{{ project_category_key }}" data-project-id="{{ project.repo }}">
                     {% if project.image %}
                     <a href="{{ project.demo_url }}" target="_blank" class="project-image-link"
                         style="display:block;height:180px;overflow:hidden;border-bottom:1px solid #f0f0f0;">
@@ -377,24 +384,24 @@ changefreq: weekly
                     {% endif %}
                     <div class="project-card-header">
                         <h3>
-                            <a href="{{ project.demo_url }}" target="_blank">{{ project.title }}</a>
-                            {% if project.featured %}<span class="featured-badge">Featured</span>{% endif %}
+                            <a href="{{ project.demo_url }}" target="_blank" data-project-field="title">{{ project_i18n.title | default: project.title }}</a>
+                            {% if project.featured %}<span class="featured-badge" data-projects-key="badges.featured">{{ projects_page_default.badges.featured }}</span>{% endif %}
                         </h3>
-                        <span class="project-category {{ project.category | downcase }}">{{ project.category }}</span>
+                        <span class="project-category {{ project_category_key }}" data-project-field="category">{{ projects_page_default.categories[project_category_key] | default: project.category }}</span>
                     </div>
                     <div class="project-card-body">
-                        <p>{{ project.description }}</p>
+                        <p data-project-field="description">{{ project_i18n.description | default: project.description }}</p>
                         <div class="tech-stack">
                             {% for tech in project.tech_stack %}
                             <span class="tech-tag">{{ tech }}</span>
                             {% endfor %}
                         </div>
-                        {% if project.keywords %}
-                        <div class="seo-keywords" style="margin-top:10px;">
-                            {% for keyword in project.keywords %}
+                        {% assign project_keywords = project_i18n.keywords | default: project.keywords %}
+                        {% if project_keywords %}
+                        <div class="seo-keywords" style="margin-top:10px;" data-project-field="keywords">
+                            {% for keyword in project_keywords %}
                             <span class="keyword-tag"
-                                style="display:inline-block;padding:2px 6px;background:#f0f4ff;border-radius:3px;font-size:10px;color:#667eea;margin:2px;">{{
-                                keyword }}</span>
+                                style="display:inline-block;padding:2px 6px;background:#f0f4ff;border-radius:3px;font-size:10px;color:#667eea;margin:2px;">{{ keyword }}</span>
                             {% endfor %}
                         </div>
                         {% endif %}
@@ -406,7 +413,7 @@ changefreq: weekly
                                 <path
                                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
                             </svg>
-                            Demo
+                            <span data-projects-key="buttons.official_site">{{ projects_page_default.buttons.official_site }}</span>
                         </a>
                         <a href="https://github.com/junxinzhang/{{ project.repo }}" target="_blank"
                             class="project-link github">
@@ -415,7 +422,7 @@ changefreq: weekly
                                 <path
                                     d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                             </svg>
-                            GitHub
+                            <span data-projects-key="buttons.source_code">{{ projects_page_default.buttons.source_code }}</span>
                         </a>
                     </div>
                 </div>
@@ -423,13 +430,13 @@ changefreq: weekly
             </div>
 
             <!-- HTML Reports Section - Temporarily hidden for AdSense review
-            <h2 class="section-title">专项报告</h2>
+            <h2 class="section-title" data-projects-key="sections.report">{{ projects_page_default.sections.report }}</h2>
             <div class="projects-grid" id="html-reports">
                 {% for page in site.data.html_pages %}
                 <div class="project-card" data-type="report">
                     <div class="project-card-header">
                         <h3><a href="{{ site.baseurl }}/_html_pages/{{ page.path }}" rel="nofollow">{{ page.title }}</a></h3>
-                        <span class="project-category report">Report</span>
+                        <span class="project-category report">{{ projects_page_default.categories.report }}</span>
                     </div>
                     <div class="project-card-body">
                         <p>{{ page.description }}</p>
@@ -440,7 +447,7 @@ changefreq: weekly
                     <div class="project-card-footer">
                         <a href="{{ site.baseurl }}/_html_pages/{{ page.path }}" rel="nofollow" class="project-link demo" style="flex:1;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="margin-right:4px;vertical-align:-2px;"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/></svg>
-                            查看报告
+                            <span data-projects-key="buttons.view_report">{{ projects_page_default.buttons.view_report }}</span>
                         </a>
                     </div>
                 </div>
@@ -454,9 +461,98 @@ changefreq: weekly
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        const projectsPageTranslations = {{ site.data.projects_page_i18n | jsonify }};
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
         const sectionTitles = document.querySelectorAll('.section-title');
+
+        function getProjectsPagePack(langCode) {
+            return projectsPageTranslations[langCode] || projectsPageTranslations.en || projectsPageTranslations['{{ site.default_lang }}'] || null;
+        }
+
+        function getNestedValue(obj, path) {
+            return path.split('.').reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : null), obj);
+        }
+
+        function updateMetaContent(selector, value) {
+            if (!value) return;
+            document.querySelectorAll(selector).forEach(function (el) {
+                el.setAttribute('content', value);
+            });
+        }
+
+        function renderKeywordTags(container, keywords) {
+            if (!container || !Array.isArray(keywords)) return;
+            container.innerHTML = '';
+            keywords.forEach(function (keyword) {
+                const tag = document.createElement('span');
+                tag.className = 'keyword-tag';
+                tag.style.display = 'inline-block';
+                tag.style.padding = '2px 6px';
+                tag.style.background = '#f0f4ff';
+                tag.style.borderRadius = '3px';
+                tag.style.fontSize = '10px';
+                tag.style.color = '#667eea';
+                tag.style.margin = '2px';
+                tag.textContent = keyword;
+                container.appendChild(tag);
+            });
+        }
+
+        function applyProjectsPageTranslations(langCode) {
+            const pack = getProjectsPagePack(langCode);
+            if (!pack) return;
+
+            document.querySelectorAll('[data-projects-key]').forEach(function (el) {
+                const value = getNestedValue(pack, el.getAttribute('data-projects-key'));
+                if (value) el.textContent = value;
+            });
+
+            document.querySelectorAll('.project-card[data-project-id]').forEach(function (card) {
+                const projectId = card.getAttribute('data-project-id');
+                const item = pack.items && pack.items[projectId];
+                const categoryKey = card.getAttribute('data-category');
+
+                if (item) {
+                    const titleEl = card.querySelector('[data-project-field="title"]');
+                    const descEl = card.querySelector('[data-project-field="description"]');
+                    const keywordsEl = card.querySelector('[data-project-field="keywords"]');
+
+                    if (titleEl && item.title) titleEl.textContent = item.title;
+                    if (descEl && item.description) descEl.textContent = item.description;
+                    if (keywordsEl && item.keywords) renderKeywordTags(keywordsEl, item.keywords);
+                }
+
+                const categoryEl = card.querySelector('[data-project-field="category"]');
+                const categoryValue = categoryKey ? getNestedValue(pack, 'categories.' + categoryKey) : null;
+                if (categoryEl && categoryValue) categoryEl.textContent = categoryValue;
+            });
+
+            if (pack.meta) {
+                if (pack.meta.title) {
+                    document.title = pack.meta.title;
+                    updateMetaContent('meta[property="og:title"]', pack.meta.title);
+                    updateMetaContent('meta[name="twitter:title"]', pack.meta.title);
+                }
+                if (pack.meta.description) {
+                    updateMetaContent('meta[name="description"]', pack.meta.description);
+                    updateMetaContent('meta[property="og:description"]', pack.meta.description);
+                    updateMetaContent('meta[name="twitter:description"]', pack.meta.description);
+                    updateMetaContent('meta[itemprop="description"]', pack.meta.description);
+                }
+            }
+        }
+
+        if (typeof window.applyTranslations === 'function' && !window.__projectsPageI18nWrapped) {
+            const originalApplyTranslations = window.applyTranslations;
+            window.applyTranslations = function (langCode) {
+                originalApplyTranslations(langCode);
+                applyProjectsPageTranslations(langCode);
+            };
+            window.__projectsPageI18nWrapped = true;
+        }
+
+        applyProjectsPageTranslations(localStorage.getItem('preferred_language') || defaultLang);
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function (e) {
