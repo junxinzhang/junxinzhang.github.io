@@ -75,9 +75,6 @@ misc:
   yes: "Oui"
   no: "Non"
 
-project_links:
-  official_site: "Site officiel"
-
 date:
   format: "%d %B %Y"
   format_short: "%d %b %Y"

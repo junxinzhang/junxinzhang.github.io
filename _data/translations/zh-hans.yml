@@ -76,9 +76,6 @@ misc:
   yes: "是"
   no: "否"
 
-project_links:
-  official_site: "官网"
-
 date:
   format: "%Y年%m月%d日"
   format_short: "%m月%d日"

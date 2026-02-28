@@ -75,9 +75,6 @@ misc:
   yes: "예"
   no: "아니요"
 
-project_links:
-  official_site: "공식 사이트"
-
 date:
   format: "%Y년 %m월 %d일"
   format_short: "%m월 %d일"
