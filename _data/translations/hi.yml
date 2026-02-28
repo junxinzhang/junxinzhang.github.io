@@ -75,6 +75,9 @@ misc:
   yes: "हाँ"
   no: "नहीं"
 
+project_links:
+  official_site: "आधिकारिक साइट"
+
 date:
   format: "%d %B %Y"
   format_short: "%d %b %Y"
