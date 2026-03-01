@@ -2,7 +2,7 @@
 title: "Just Jason - AI技术、DevOps实践与职业成长博客"
 layout: default
 pagination:
-    enabled: true
+enabled: true
 description: "专注于 AI 技术、DevOps 实践、职业成长的技术博客。分享 LLM 私有化部署、云原生架构、个人成长等深度内容。"
 image: assets/images/logo.webp
 keywords: "Just Jason, AI技术博客, DevOps实践, LLM私有化部署, 云原生架构, 职业成长"
@@ -15,502 +15,542 @@ keywords: "Just Jason, AI技术博客, DevOps实践, LLM私有化部署, 云原�
 
 <div class="container">
 
-{% if paginator.page == 1 %}
-<!-- Featured Posts Carousel Section -->
-<div class="row mt-4 mb-5">
-    <div class="col-12">
-        <h2 class="font-weight-bold spanborder mb-4">
-            <span data-i18n="home.latest_posts">最新文章</span>
-        </h2>
+    {% if paginator.page == 1 %}
+    <!-- Featured Posts Carousel Section -->
+    <div class="row mt-4 mb-5">
+        <div class="col-12">
+            <h2 class="font-weight-bold spanborder mb-4">
+                <span data-i18n="home.latest_posts">最新文章</span>
+            </h2>
 
-        <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                {% for post in site.posts limit:5 %}
-                <li data-target="#featuredCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></li>
-                {% endfor %}
-            </ol>
+            <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    {% for post in site.posts limit:5 %}
+                    <li data-target="#featuredCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first
+                        %}class="active" {% endif %}></li>
+                    {% endfor %}
+                </ol>
 
-            <div class="carousel-inner rounded shadow" style="height: 350px; aspect-ratio: 16/9;">
-                {% for post in site.posts limit:5 %}
-                <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <!-- LCP optimization: First carousel image loads immediately with WebP, others lazy load -->
-                    {% if forloop.first %}
-                    {% include optimized-image.html src=post.image alt=post.title height="350px" loading="eager" fetchpriority="high" class="carousel-background" %}
-                    {% else %}
-                    {% include optimized-image.html src=post.image alt=post.title height="350px" loading="lazy" class="carousel-background" %}
-                    {% endif %}
-                    <div class="carousel-caption text-left">
-                        <h3 class="carousel-title">
-                            <a href="{{site.baseurl}}{{post.url}}" class="text-white">{{ post.title }}</a>
-                        </h3>
-                        <p class="d-none d-md-block">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
-                        {% assign words = post.content | strip_html | number_of_words %}
-                        {% assign read_time = words | divided_by: 300 | at_least: 1 %}
-                        <div class="carousel-date">{{ post.date | date: '%Y年%m月%d日' }} · {{ read_time }} <span data-i18n="home.min_read">分钟阅读</span></div>
-                        <a href="{{site.baseurl}}{{post.url}}" class="btn btn-sm btn-primary mt-2" data-i18n="home.read_full">阅读全文</a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-
-            <button class="carousel-control-prev" type="button" aria-label="Previous">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" aria-label="Next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- AI Solutions Section -->
-<div class="row mb-5">
-    <div class="col-12">
-        <h2 class="font-weight-bold spanborder mb-4">
-            <span data-i18n="home.ai_solutions">AI 解决方案库</span>
-        </h2>
-    </div>
-
-    <div class="col-12">
-        <div class="card-deck-wrapper">
-            <div class="card-deck">
-                {% assign sorted_pages = site.data.html_pages | sort: 'date' | reverse %}
-                {% for page in sorted_pages %}
-                <div class="card border-0 rounded shadow-sm hover-effect">
-                    {% if page.image %}
-                    {% assign ai_img_path = "assets/images/" | append: page.image %}
-                    <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" target="_blank">
-                        {% include optimized-image.html src=ai_img_path alt=page.title height="160px" loading="lazy" class="card-img-top" %}
-                    </a>
-                    {% endif %}
-                    <div class="card-body d-flex flex-column">
-                        <h4 class="card-title">
-                            <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" class="text-dark" target="_blank">{{ page.title }}</a>
-                        </h4>
-                        <p class="card-text flex-grow-1">{{ page.description }}</p>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <small class="text-muted">{{ page.date }}</small>
-                            <a href="{{site.baseurl}}/_html_pages/{{ page.path }}" class="btn btn-sm btn-outline-primary" target="_blank" data-i18n="home.view_solution">查看方案</a>
+                <div class="carousel-inner rounded shadow" style="height: 350px; aspect-ratio: 16/9;">
+                    {% for post in site.posts limit:5 %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <!-- LCP optimization: First carousel image loads immediately with WebP, others lazy load -->
+                        {% if forloop.first %}
+                        {% include optimized-image.html src=post.image alt=post.title height="350px" loading="eager"
+                        fetchpriority="high" class="carousel-background" %}
+                        {% else %}
+                        {% include optimized-image.html src=post.image alt=post.title height="350px" loading="lazy"
+                        class="carousel-background" %}
+                        {% endif %}
+                        <div class="carousel-caption text-left">
+                            <h3 class="carousel-title">
+                                <a href="{{site.baseurl}}{{post.url}}" class="text-white">{{ post.title }}</a>
+                            </h3>
+                            <p class="d-none d-md-block">{{ post.excerpt | strip_html | strip_newlines | truncate: 100
+                                }}</p>
+                            {% assign words = post.content | strip_html | number_of_words %}
+                            {% assign read_time = words | divided_by: 300 | at_least: 1 %}
+                            <div class="carousel-date">{{ post.date | date: '%Y年%m月%d日' }} · {{ read_time }} <span
+                                    data-i18n="home.min_read">分钟阅读</span></div>
+                            <a href="{{site.baseurl}}{{post.url}}" class="btn btn-sm btn-primary mt-2"
+                                data-i18n="home.read_full">阅读全文</a>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+
+                <button class="carousel-control-prev" type="button" aria-label="Previous">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" aria-label="Next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Recent Posts Grid -->
-<div class="row mb-5">
-    <div class="col-12">
-        <h2 class="font-weight-bold spanborder mb-4">
-            <span data-i18n="home.popular_posts">热门文章</span>
-        </h2>
-    </div>
 
-    {% for post in site.posts offset:5 limit:6 %}
-    <div class="col-md-4 mb-4">
-        <div class="card h-100 border-0 rounded shadow-sm hover-effect">
-            <a href="{{site.baseurl}}{{post.url}}">
-                {% include optimized-image.html src=post.image alt=post.title height="180px" loading="lazy" class="card-img-top" %}
-            </a>
-            <div class="card-body d-flex flex-column">
-                <h4 class="card-title">
-                    <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
-                </h4>
-                <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
-                {% assign words = post.content | strip_html | number_of_words %}
-                {% assign read_time = words | divided_by: 300 | at_least: 1 %}
-                <div class="mt-auto d-flex justify-content-between align-items-center">
-                    <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
-                    <small class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" style="vertical-align:-1px"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg> {{ read_time }} <span data-i18n="home.minutes">分钟</span></small>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-{% endif %}
-
-<!-- All Posts Section -->
-<div class="row" id="all-posts">
-    <div class="col-12">
-        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
-            <h2 class="font-weight-bold spanborder mb-0">
-                <span data-i18n="home.all_posts">所有文章</span>
-                {% assign total_count = site.posts | size %}
-                <sup class="text-muted ml-2">{{ total_count }}</sup>
+    <!-- Recent Posts Grid -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="font-weight-bold spanborder mb-4">
+                <span data-i18n="home.popular_posts">热门文章</span>
             </h2>
-            <a href="{{site.baseurl}}/posts.html" class="btn btn-sm btn-outline-primary mt-2 mt-md-0">{{ t.post.view_all_posts | default: "查看全部文章页" }}</a>
         </div>
+
+        {% for post in site.posts offset:5 limit:6 %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 rounded shadow-sm hover-effect">
+                <a href="{{site.baseurl}}{{post.url}}">
+                    {% include optimized-image.html src=post.image alt=post.title height="180px" loading="lazy"
+                    class="card-img-top" %}
+                </a>
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">
+                        <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+                    </h4>
+                    <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+                    {% assign words = post.content | strip_html | number_of_words %}
+                    {% assign read_time = words | divided_by: 300 | at_least: 1 %}
+                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
+                        <small class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" viewBox="0 0 16 16" style="vertical-align:-1px">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg> {{ read_time }} <span data-i18n="home.minutes">分钟</span></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    
-    <div class="col-md-8">
-        <div class="row">
-            {% if paginator.page == 1 %}
+    {% endif %}
+
+    <!-- All Posts Section -->
+    <div class="row" id="all-posts">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+                <h2 class="font-weight-bold spanborder mb-0">
+                    <span data-i18n="home.all_posts">所有文章</span>
+                    {% assign total_count = site.posts | size %}
+                    <sup class="text-muted ml-2">{{ total_count }}</sup>
+                </h2>
+                <a href="{{site.baseurl}}/posts.html" class="btn btn-sm btn-outline-primary mt-2 mt-md-0">{{
+                    t.post.view_all_posts | default: "查看全部文章页" }}</a>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="row">
+                {% if paginator.page == 1 %}
                 <!-- 首页显示博客文章 -->
                 {% for post in paginator.posts %}
                 <div class="col-md-6 mb-4">
                     <div class="card h-100 border-0 rounded shadow-sm hover-effect">
                         {% if post.image %}
                         <a href="{{site.baseurl}}{{post.url}}">
-                            {% include optimized-image.html src=post.image alt=post.title height="140px" loading="lazy" class="card-img-top" %}
+                            {% include optimized-image.html src=post.image alt=post.title height="140px" loading="lazy"
+                            class="card-img-top" %}
                         </a>
                         {% endif %}
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">
                                 <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
                             </h5>
-                            <p class="card-text small">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}</p>
+                            <p class="card-text small">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}
+                            </p>
                             {% assign words = post.content | strip_html | number_of_words %}
                             {% assign read_time = words | divided_by: 300 | at_least: 1 %}
                             <div class="mt-auto d-flex justify-content-between align-items-center">
                                 <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
-                                <small class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" style="vertical-align:-1px"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg> {{ read_time }} <span data-i18n="home.minutes">分钟</span></small>
+                                <small class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="currentColor" viewBox="0 0 16 16" style="vertical-align:-1px">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg> {{ read_time }} <span data-i18n="home.minutes">分钟</span></small>
                             </div>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
-            {% else %}
+                {% else %}
                 <!-- 第二页及以后只显示博客文章 -->
                 {% for post in paginator.posts %}
                 <div class="col-md-6 mb-4">
                     <div class="card h-100 border-0 rounded shadow-sm hover-effect">
                         {% if post.image %}
                         <a href="{{site.baseurl}}{{post.url}}">
-                            {% include optimized-image.html src=post.image alt=post.title height="140px" loading="lazy" class="card-img-top" %}
+                            {% include optimized-image.html src=post.image alt=post.title height="140px" loading="lazy"
+                            class="card-img-top" %}
                         </a>
                         {% endif %}
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">
                                 <a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
                             </h5>
-                            <p class="card-text small">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}</p>
+                            <p class="card-text small">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}
+                            </p>
                             {% assign words = post.content | strip_html | number_of_words %}
                             {% assign read_time = words | divided_by: 300 | at_least: 1 %}
                             <div class="mt-auto d-flex justify-content-between align-items-center">
                                 <small class="text-muted">{{ post.date | date: '%Y年%m月%d日' }}</small>
-                                <small class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" style="vertical-align:-1px"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg> {{ read_time }} <span data-i18n="home.minutes">分钟</span></small>
+                                <small class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="currentColor" viewBox="0 0 16 16" style="vertical-align:-1px">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg> {{ read_time }} <span data-i18n="home.minutes">分钟</span></small>
                             </div>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
-            {% endif %}
+                {% endif %}
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-4 mb-5">
+                {% if paginator.total_pages > 1 %}
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        {% if paginator.previous_page %}
+                        <li class="page-item">
+                            <a class="page-link"
+                                href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;
+                                <span data-i18n="pagination.previous">上一页</span></a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link">&laquo;</span>
+                        </li>
+                        {% endif %}
+
+                        {% for page in (1..paginator.total_pages) %}
+                        {% if page == paginator.page %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ page }}</span>
+                        </li>
+                        {% elsif page == 1 %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{site.baseurl}}/">{{ page }}</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a class="page-link"
+                                href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{
+                                page }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+
+                        {% if paginator.next_page %}
+                        <li class="page-item">
+                            <a class="page-link"
+                                href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span
+                                    data-i18n="pagination.next">下一页</span> &raquo;</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link">&raquo;</span>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
+            </div>
         </div>
-        
-        <!-- Pagination -->
-        <div class="mt-4 mb-5">
-            {% if paginator.total_pages > 1 %}
-            <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center"> 
-                    {% if paginator.previous_page %}
-                    <li class="page-item">
-                        <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; <span data-i18n="pagination.previous">上一页</span></a>
-                    </li>
-                    {% else %}
-                    <li class="page-item disabled">
-                        <span class="page-link">&laquo;</span>
-                    </li>
-                    {% endif %}
 
-                    {% for page in (1..paginator.total_pages) %}
-                    {% if page == paginator.page %}
-                    <li class="page-item active">
-                        <span class="page-link">{{ page }}</span>
-                    </li>
-                    {% elsif page == 1 %}
-                    <li class="page-item">
-                        <a class="page-link" href="{{site.baseurl}}/">{{ page }}</a>
-                    </li>
-                    {% else %}
-                    <li class="page-item">
-                        <a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                    </li>
-                    {% endif %}
-                    {% endfor %}
-
-                    {% if paginator.next_page %}
-                    <li class="page-item">
-                        <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span data-i18n="pagination.next">下一页</span> &raquo;</a>
-                    </li>
-                    {% else %}
-                    <li class="page-item disabled">
-                        <span class="page-link">&raquo;</span>
-                    </li>
-                    {% endif %}
-                </ul>
-            </nav>
-            {% endif %}
+        <!-- Sidebar -->
+        <div class="col-md-4">
+            <div class="sticky-top" style="top: 80px;">
+                {% include sidebar-featured.html %}
+            </div>
         </div>
     </div>
-    
-    <!-- Sidebar -->
-    <div class="col-md-4">
-        <div class="sticky-top" style="top: 80px;">
-            {% include sidebar-featured.html %}
-        </div>
-    </div>
-</div>
 
 </div>
 
 <style>
-/* Custom styles for modern look */
-.hover-effect {
-    transition: transform var(--transition-duration, 0.3s) ease, box-shadow var(--transition-duration, 0.3s) ease;
-}
-.hover-effect:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px var(--shadow-color, rgba(0,0,0,0.1)) !important;
-}
-.shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
-}
-.card {
-    overflow: hidden;
-    border-radius: 8px !important;
-    margin-bottom: 20px;
-    /* CLS fix: ensure card has predictable height */
-    contain: layout;
-}
-.card-img-top {
-    /* CLS fix: explicit dimensions and aspect ratio */
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    background-color: var(--card-bg, #f0f0f0);
-}
-.card-img-top .optimized-img {
-    transition: transform 0.4s ease;
-}
-.card:hover .card-img-top .optimized-img {
-    transform: scale(1.05);
-}
-/* Optimized image container styles */
-.optimized-img-container {
-    background-color: var(--card-bg, #f0f0f0);
-}
-.spanborder {
-    border-bottom: 1px solid #e8f3ec;
-    margin-bottom: 2rem;
-}
-.spanborder span {
-    border-bottom: 2px solid #007bff;
-    display: inline-block;
-    padding-bottom: 8px;
-    margin-bottom: -1px;
-}
+    /* Custom styles for modern look */
+    .hover-effect {
+        transition: transform var(--transition-duration, 0.3s) ease, box-shadow var(--transition-duration, 0.3s) ease;
+    }
 
-/* Carousel styles */
-.carousel {
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-.carousel-background,
-.carousel-background *,
-.carousel-background picture,
-.carousel-background img {
-    pointer-events: none;
-}
-.carousel-background:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
-    z-index: 1;
-    pointer-events: none;
-}
-.carousel-caption {
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 20px 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-    text-align: left;
-    z-index: 15;
-}
-.carousel-caption a {
-    position: relative;
-    z-index: 16;
-}
-.carousel-title {
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
-.carousel-date {
-    opacity: 0.8;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-}
-.carousel-indicators {
-    bottom: 10px;
-}
+    .hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px var(--shadow-color, rgba(0, 0, 0, 0.1)) !important;
+    }
 
-/* Card deck for AI solutions */
-.card-deck .card {
-    min-width: 300px;
-    flex: 1 0 0%;
-    margin-right: 15px;
-    margin-left: 15px;
-}
-.card-deck-wrapper {
-    overflow-x: auto;
-    padding-bottom: 15px;
-}
-.card-deck {
-    display: flex;
-    flex-flow: row nowrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
+    .shadow-sm {
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    }
 
-@media (max-width: 768px) {
+    .card {
+        overflow: hidden;
+        border-radius: 8px !important;
+        margin-bottom: 20px;
+        /* CLS fix: ensure card has predictable height */
+        contain: layout;
+    }
+
+    .card-img-top {
+        /* CLS fix: explicit dimensions and aspect ratio */
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background-color: var(--card-bg, #f0f0f0);
+    }
+
+    .card-img-top .optimized-img {
+        transition: transform 0.4s ease;
+    }
+
+    .card:hover .card-img-top .optimized-img {
+        transform: scale(1.05);
+    }
+
+    /* Optimized image container styles */
+    .optimized-img-container {
+        background-color: var(--card-bg, #f0f0f0);
+    }
+
+    .spanborder {
+        border-bottom: 1px solid #e8f3ec;
+        margin-bottom: 2rem;
+    }
+
+    .spanborder span {
+        border-bottom: 2px solid #007bff;
+        display: inline-block;
+        padding-bottom: 8px;
+        margin-bottom: -1px;
+    }
+
+    /* Carousel styles */
+    .carousel {
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .carousel-background,
+    .carousel-background *,
+    .carousel-background picture,
+    .carousel-background img {
+        pointer-events: none;
+    }
+
+    .carousel-background:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
     .carousel-caption {
-        padding: 15px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 20px 30px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+        text-align: left;
+        z-index: 15;
     }
+
+    .carousel-caption a {
+        position: relative;
+        z-index: 16;
+    }
+
     .carousel-title {
-        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     }
+
+    .carousel-date {
+        opacity: 0.8;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    .carousel-indicators {
+        bottom: 10px;
+    }
+
+    /* AI Solutions sidebar list */
+    .sidebar-solutions-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar-solutions-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+    }
+
+    .sidebar-solutions-list li:last-child {
+        border-bottom: none;
+    }
+
+    .sidebar-solutions-list .solution-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 2px;
+        line-height: 1.4;
+    }
+
+    .sidebar-solutions-list .solution-title a {
+        transition: color 0.2s ease;
+    }
+
+    .sidebar-solutions-list .solution-title a:hover {
+        color: #007bff !important;
+        text-decoration: none;
+    }
+
+    .sidebar-solutions-list .solution-meta {
+        font-size: 0.75rem;
+        color: #6c757d;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-caption {
+            padding: 15px;
+        }
+
+        .carousel-title {
+            font-size: 1.5rem;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            bottom: 120px;
+        }
+    }
+
     .carousel-control-prev,
     .carousel-control-next {
-        bottom: 120px;
+        width: 10%;
+        opacity: 0.8;
+        cursor: pointer;
+        z-index: 10;
+        bottom: 140px;
+        background: none;
+        border: 0;
+        padding: 0;
     }
-}
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 10%;
-    opacity: 0.8;
-    cursor: pointer;
-    z-index: 10;
-    bottom: 140px;
-    background: none;
-    border: 0;
-    padding: 0;
-}
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 15px;
+        border-radius: 50%;
+    }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.3);
-    padding: 15px;
-    border-radius: 50%;
-}
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 1;
+    }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    opacity: 1;
-}
+    /* Focus indicators for carousel controls */
+    .carousel-control-prev:focus,
+    .carousel-control-next:focus {
+        outline: 2px solid var(--primary, #03a87c);
+        outline-offset: 2px;
+    }
 
-/* Focus indicators for carousel controls */
-.carousel-control-prev:focus,
-.carousel-control-next:focus {
-    outline: 2px solid var(--primary, #03a87c);
-    outline-offset: 2px;
-}
+    .carousel-indicators li:focus {
+        outline: 2px solid var(--primary, #03a87c);
+        outline-offset: 2px;
+    }
 
-.carousel-indicators li:focus {
-    outline: 2px solid var(--primary, #03a87c);
-    outline-offset: 2px;
-}
+    /* Dark mode support for cards and carousel */
+    [data-theme="dark"] .card {
+        background-color: var(--card-bg);
+        border-color: var(--border-color);
+    }
 
-/* Dark mode support for cards and carousel */
-[data-theme="dark"] .card {
-    background-color: var(--card-bg);
-    border-color: var(--border-color);
-}
+    [data-theme="dark"] .card-title a,
+    [data-theme="dark"] .carousel-title a {
+        color: var(--text-color) !important;
+    }
 
-[data-theme="dark"] .card-title a,
-[data-theme="dark"] .carousel-title a {
-    color: var(--text-color) !important;
-}
+    [data-theme="dark"] .card-text {
+        color: var(--text-muted);
+    }
 
-[data-theme="dark"] .card-text {
-    color: var(--text-muted);
-}
+    [data-theme="dark"] .spanborder {
+        border-bottom-color: var(--border-color);
+    }
 
-[data-theme="dark"] .spanborder {
-    border-bottom-color: var(--border-color);
-}
+    [data-theme="dark"] .spanborder span {
+        border-bottom-color: #58a6ff;
+    }
 
-[data-theme="dark"] .spanborder span {
-    border-bottom-color: #58a6ff;
-}
+    [data-theme="dark"] .lazy-bg {
+        background-color: var(--card-bg);
+    }
 
-[data-theme="dark"] .lazy-bg {
-    background-color: var(--card-bg);
-}
+    [data-theme="dark"] .btn-outline-primary {
+        color: #58a6ff;
+        border-color: #58a6ff;
+    }
 
-[data-theme="dark"] .btn-outline-primary {
-    color: #58a6ff;
-    border-color: #58a6ff;
-}
+    [data-theme="dark"] .btn-outline-primary:hover {
+        background-color: #58a6ff;
+        color: var(--card-bg);
+    }
 
-[data-theme="dark"] .btn-outline-primary:hover {
-    background-color: #58a6ff;
-    color: var(--card-bg);
-}
+    [data-theme="dark"] .btn-primary {
+        background-color: #238636;
+        border-color: #238636;
+    }
 
-[data-theme="dark"] .btn-primary {
-    background-color: #238636;
-    border-color: #238636;
-}
+    [data-theme="dark"] .btn-primary:hover {
+        background-color: #2ea043;
+        border-color: #2ea043;
+    }
 
-[data-theme="dark"] .btn-primary:hover {
-    background-color: #2ea043;
-    border-color: #2ea043;
-}
+    /* Dark mode - Carousel */
+    [data-theme="dark"] .carousel {
+        background-color: var(--card-bg);
+    }
 
-/* Dark mode - Carousel */
-[data-theme="dark"] .carousel {
-    background-color: var(--card-bg);
-}
+    [data-theme="dark"] .carousel-background {
+        opacity: 0.9;
+    }
 
-[data-theme="dark"] .carousel-background {
-    opacity: 0.9;
-}
+    /* Dark mode - Pagination */
+    [data-theme="dark"] .page-link {
+        background-color: var(--card-bg);
+        border-color: var(--border-color);
+        color: var(--text-color);
+    }
 
-/* Dark mode - Pagination */
-[data-theme="dark"] .page-link {
-    background-color: var(--card-bg);
-    border-color: var(--border-color);
-    color: var(--text-color);
-}
+    [data-theme="dark"] .page-link:hover {
+        background-color: #21262d;
+        border-color: #58a6ff;
+        color: #58a6ff;
+    }
 
-[data-theme="dark"] .page-link:hover {
-    background-color: #21262d;
-    border-color: #58a6ff;
-    color: #58a6ff;
-}
+    [data-theme="dark"] .page-item.active .page-link {
+        background-color: #238636;
+        border-color: #238636;
+    }
 
-[data-theme="dark"] .page-item.active .page-link {
-    background-color: #238636;
-    border-color: #238636;
-}
+    [data-theme="dark"] .page-item.disabled .page-link {
+        background-color: var(--card-bg);
+        color: var(--text-muted);
+    }
 
-[data-theme="dark"] .page-item.disabled .page-link {
-    background-color: var(--card-bg);
-    color: var(--text-muted);
-}
+    /* Dark mode - Section headers */
+    [data-theme="dark"] h2.font-weight-bold {
+        color: var(--text-color);
+    }
 
-/* Dark mode - Section headers */
-[data-theme="dark"] h2.font-weight-bold {
-    color: var(--text-color);
-}
+    /* Dark mode - AI Solutions sidebar */
+    [data-theme="dark"] .sidebar-solutions-list li {
+        border-bottom-color: var(--border-color);
+    }
 
-/* Dark mode - Card deck for AI solutions */
-[data-theme="dark"] .card-deck .card {
-    background-color: var(--card-bg);
-}
+    [data-theme="dark"] .sidebar-solutions-list .solution-title a {
+        color: var(--text-color);
+    }
 
-[data-theme="dark"] .card-deck .card h4 a {
-    color: var(--text-color);
-}
+    [data-theme="dark"] .sidebar-solutions-list .solution-meta {
+        color: var(--text-muted);
+    }
 </style>
