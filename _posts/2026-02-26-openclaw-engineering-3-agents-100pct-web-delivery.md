@@ -4,7 +4,7 @@ title: "我的 OpenClaw 工程化：3 个 Agent 跑通 100% Web 开发交付闭�
 date: 2026-02-26
 author: Jason Zhang
 categories: [AI, 软件工程]
-image: assets/images/screenshot-20260226-openclaw-3agent-web-cover.png
+image: assets/images/screenshot-20260226-openclaw-3agent-web-cover.webp
 tags: [featured, OpenClaw, Agent Team, Web开发, 工程化, GitHub Pages, Cloudflare, HTTPS, DevOps, Landing Page, 自动化交付]
 slug: openclaw-engineering-3-agents-100pct-web-delivery
 description: "我用 3 个 OpenClaw Agent（开发、验证、上线）把 Voice Real-time Translation 落地页从代码编写、测试、部署、域名配置到证书配置全链路跑通。22 次 commit、一次完整回滚、三套统计系统接入——不是 demo，是可复用的工程化交付实战。"
@@ -41,7 +41,7 @@ faq:
 
 **<mark>一句话结论：一条消息发给 Main Claw，Winnie 写代码、跑验证、做上线，Amy 写复盘——一顿饭的功夫，从代码到线上产品页，全链路交付完成。</mark>**
 
-![一条消息触发：从代码编写到线上交付的全链路自动化](/assets/images/screenshot-20260226-openclaw-3agent-web-cover.png)
+![一条消息触发：从代码编写到线上交付的全链路自动化](/assets/images/screenshot-20260226-openclaw-3agent-web-cover.webp)
 
 <!-- 封面图提示词（baoyu-cover-image / baoyu-image-gen，严格 2.35:1，输出 PNG）：
 Type=conceptual, Palette=cool, Rendering=digital, Text=title-subtitle, Mood=bold。

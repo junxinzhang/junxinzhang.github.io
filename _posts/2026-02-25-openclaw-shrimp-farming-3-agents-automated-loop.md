@@ -4,7 +4,7 @@ title: "我的 OpenClaw 养虾记：3 个 Agent 跑通 100% 自动化闭环"
 date: 2026-02-25
 author: Jason Zhang
 categories: [AI, 软件工程]
-image: assets/images/screenshot-20260225-openclaw-shrimp-farming-cover.png
+image: assets/images/screenshot-20260225-openclaw-shrimp-farming-cover.webp
 tags: [featured, OpenClaw, Agent Swarm, AI Agent, 自动化闭环, Codex, Claude Code, Telegram, 养虾, Agentic Engineering]
 slug: openclaw-shrimp-farming-3-agents-automated-loop
 description: "我在 Mac 上用 OpenClaw 搭了一个 3 Agent Swarm：编排器 + 编码虾 Winnie + 文案虾 Amy。从任务派发、自主执行、PR 提交到监控重试，整条链路跑通了 100% 的自动化闭环。这篇是完整踩坑记录。"
@@ -32,7 +32,7 @@ faq:
 
 **<mark>一句话结论：当你能用 3 个 Agent 跑通从任务派发到交付审核的完整闭环时，"一人团队"就不再是口号，而是每天在发生的事。</mark>**
 
-![OpenClaw 养虾记：3 个 Agent 跑通自动化闭环](/assets/images/screenshot-20260225-openclaw-shrimp-farming-cover.png)
+![OpenClaw 养虾记：3 个 Agent 跑通自动化闭环](/assets/images/screenshot-20260225-openclaw-shrimp-farming-cover.webp)
 
 <!-- 封面图提示词（baoyu-cover-image + baoyu-image-gen，严格 2.35:1）：
 Type=conceptual, Palette=warm, Rendering=digital, Text=title-subtitle, Mood=bold。
