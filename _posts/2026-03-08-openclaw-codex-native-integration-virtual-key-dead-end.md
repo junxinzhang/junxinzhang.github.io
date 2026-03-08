@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "OpenClaw 模型实力排行：Codex Pro 为什么能打？翻源码找到了根本原因"
-date: 2026-03-07
+date: 2026-03-08
 author: Jason Zhang
 categories: [AI, OpenClaw]
-image: assets/images/screenshot-20260307-openclaw-codex-native-cover.webp
+image: assets/images/screenshot-20260308-openclaw-codex-native-cover.webp
 tags: [featured, OpenClaw, Codex, openai-codex, 原生接入, 虚拟Key, AI Agent]
 slug: openclaw-codex-native-integration-virtual-key-dead-end
 description: "用户反馈 Codex Pro 体验远超中转和其他模型。翻了 OpenClaw 2026.03.07 版本源码，找到了根本原因：Codex 走的是 ChatGPT 专属通道，用的是 JWT 身份证而非普通 API 钥匙，中转和虚拟 Key 根本进不了这扇门。"
@@ -23,7 +23,7 @@ faq:
 
 作为一名写了十多年代码的老程序员，遇到"知其然不知其所以然"的事情就睡不着。今天下午特意把 OpenClaw 2026 年 3 月 7 日的源代码拉下来，一行一行翻了个底朝天。**下面把我找到的根本原因，用尽量通俗的语言分享给大家。**
 
-![OpenClaw Codex 原生接入：正道 vs 死胡同](/assets/images/screenshot-20260307-openclaw-codex-native-cover.webp)
+![OpenClaw Codex 原生接入：正道 vs 死胡同](/assets/images/screenshot-20260308-openclaw-codex-native-cover.webp)
 
 ---
 
@@ -44,7 +44,7 @@ faq:
 | **普通中转** | 公共 API `api.openai.com` | API 钥匙（sk-...） | 🟡 能用，但体验打折 |
 | **虚拟 Key** | 试图走 ChatGPT 专属门 | 格式不对的钥匙 | 🔴 大概率进不去 |
 
-![原生 API vs 第三方转发：中间商的代价](/assets/images/screenshot-20260307-openclaw-codex-api-compare.webp)
+![原生 API vs 第三方转发：中间商的代价](/assets/images/screenshot-20260308-openclaw-codex-api-compare.webp)
 
 ---
 
@@ -92,7 +92,7 @@ faq:
 
 **<mark>所以这不是"钥匙型号不对"的问题，而是"你拿着一把钥匙去刷人脸识别"——根本不是同一种认证方式。</mark>**
 
-![虚拟 Key 鉴权三步验证：倒在第二关](/assets/images/screenshot-20260307-openclaw-codex-auth-fail.webp)
+![虚拟 Key 鉴权三步验证：倒在第二关](/assets/images/screenshot-20260308-openclaw-codex-auth-fail.webp)
 
 ---
 
@@ -135,7 +135,7 @@ faq:
 
 **<mark>一句话：用真实账号 + 内建路径 = 最佳体验。不需要折腾中转、不需要虚拟 Key、不需要手动配置。</mark>**
 
-![原生接入 vs 虚拟 Key：省钱的代价](/assets/images/screenshot-20260307-openclaw-codex-setup.webp)
+![原生接入 vs 虚拟 Key：省钱的代价](/assets/images/screenshot-20260308-openclaw-codex-setup.webp)
 
 ---
 
@@ -151,7 +151,7 @@ faq:
 
 **<mark>正道未必最省钱，但往往最省时间。用 OpenClaw，优先走内建路径、用真实账号，这条路反而最短。</mark>**
 
-![原生能力 > 一切捷径：Agent 时代的生存法则](/assets/images/screenshot-20260307-openclaw-codex-native-wins.webp)
+![原生能力 > 一切捷径：Agent 时代的生存法则](/assets/images/screenshot-20260308-openclaw-codex-native-wins.webp)
 
 ---
 
