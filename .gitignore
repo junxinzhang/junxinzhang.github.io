@@ -6,6 +6,7 @@ Gemfile.lock
 /.idea/
 .DS_Store
 .claude/
+.bundle/
 article-image-processor-skill/
 post-to-wechat/
 xhs-images/
