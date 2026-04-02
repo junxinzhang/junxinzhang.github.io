@@ -16,6 +16,8 @@ infographic/
 ai-coding-video/
 assets/images/.backup/
 assets/images/_redundant/
+assets/images/batch-*.json
+assets/images/prompts-*/
 assets/videos/
 assets/audio/
 assets/subtitles/
