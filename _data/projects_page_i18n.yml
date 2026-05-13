@@ -24,8 +24,18 @@ zh-hans: &projects_page_zh_hans
     cmdb: "CMDB"
     app: "应用"
     security: "安全"
+    service: "服务"
     report: "报告"
   items:
+    gift-card:
+      title: "Apple Gift Card 代充值"
+      description: "Apple Gift Card 专业代充值服务，支持美区、日区、港区等多地区苹果礼品卡，价格优惠、即时到账、安全可靠。"
+      keywords:
+        - "苹果礼品卡"
+        - "代充值服务"
+        - "App Store充值"
+        - "美区充值"
+        - "港区充值"
     vrt-landing-page:
       title: "Voice Real-time Translation"
       description: "macOS 实时语音转写与翻译工具，主打低延迟、原生体验与会议级稳定性，适用于跨语言会议、远程沟通与内容创作。"
@@ -107,8 +117,18 @@ en: &projects_page_en
     cmdb: "CMDB"
     app: "App"
     security: "Security"
+    service: "Service"
     report: "Report"
   items:
+    gift-card:
+      title: "Apple Gift Card Top-up Service"
+      description: "A professional Apple Gift Card top-up service landing page supporting US, Japan, Hong Kong, and more regions."
+      keywords:
+        - "Apple Gift Card"
+        - "top-up service"
+        - "App Store recharge"
+        - "US region"
+        - "gift card"
     vrt-landing-page:
       title: "Voice Real-time Translation"
       description: "A macOS real-time speech transcription and translation app built for low latency, native UX, and meeting-grade reliability."
@@ -190,8 +210,18 @@ zh-hant:
     cmdb: "CMDB"
     app: "應用"
     security: "安全"
+    service: "服務"
     report: "報告"
   items:
+    gift-card:
+      title: "Apple Gift Card 代充值"
+      description: "Apple Gift Card 專業代充值服務，支持美區、日區、港區等多地區蘋果禮品卡，價格優惠、即時到賬、安全可靠。"
+      keywords:
+        - "蘋果禮品卡"
+        - "代充值服務"
+        - "App Store充值"
+        - "美區充值"
+        - "港區充值"
     vrt-landing-page:
       title: "Voice Real-time Translation"
       description: "macOS 即時語音轉寫與翻譯工具，主打低延遲、原生體驗與會議級穩定性，適用於跨語言會議、遠端溝通與內容創作。"

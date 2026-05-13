@@ -12,6 +12,28 @@
 # - date: 创建或更新日期
 # - featured: 是否精选展示
 
+- title: Apple Gift Card 代充值
+  repo: gift-card
+  demo_url: https://gift.junxinzhang.com
+  description: Apple Gift Card 专业代充值服务落地页，支持美区、日区、港区等多地区苹果礼品卡充值，价格优惠、即时到账、安全可靠
+  image: /projects/gift-card/assets/hero-card.png
+  category: Service
+  tech_stack:
+    - HTML5
+    - CSS3
+    - JavaScript
+  keywords:
+    - Apple Gift Card
+    - 苹果礼品卡代充
+    - 礼品卡充值
+    - App Store充值
+    - iTunes充值
+    - 美区充值
+    - 日区充值
+    - 港区充值
+  date: 2026-05-13
+  featured: true
+
 - title: Voice Real-time Translation
   repo: vrt-landing-page
   demo_url: https://vrt.junxinzhang.com

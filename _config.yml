@@ -109,6 +109,13 @@ defaults:
     values:
       sitemap: false
 
+  # exclude standalone project sub-sites from sitemap
+  - scope:
+      path: "projects/**"
+    values:
+      sitemap: false
+      noindex: true
+
   # exclude paginated archive pages from index/sitemap
   - scope:
       path: "page*/**"
