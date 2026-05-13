@@ -27,6 +27,15 @@ zh-hans: &projects_page_zh_hans
     service: "服务"
     report: "报告"
   items:
+    zaokit-cc:
+      title: "Zaokit Claude API 服务"
+      description: "企业级 Claude API 合规代理服务，100% 兼容官方接口，支持 Claude 4.7 全系列模型，提供对公结算与增值税发票。"
+      keywords:
+        - "Claude API"
+        - "企业级 AI"
+        - "大模型接入"
+        - "增值税发票"
+        - "API 代理"
     gift-card:
       title: "Apple Gift Card 代充值"
       description: "Apple Gift Card 专业代充值服务，支持美区、日区、港区等多地区苹果礼品卡，价格优惠、即时到账、安全可靠。"
@@ -120,6 +129,15 @@ en: &projects_page_en
     service: "Service"
     report: "Report"
   items:
+    zaokit-cc:
+      title: "Zaokit Claude API Service"
+      description: "Enterprise-grade Claude API proxy with full official protocol compatibility, supporting Claude 4.7 models, corporate billing, and VAT invoicing."
+      keywords:
+        - "Claude API"
+        - "enterprise AI"
+        - "LLM API access"
+        - "VAT invoice"
+        - "API proxy"
     gift-card:
       title: "Apple Gift Card Top-up Service"
       description: "A professional Apple Gift Card top-up service landing page supporting US, Japan, Hong Kong, and more regions."
@@ -213,6 +231,15 @@ zh-hant:
     service: "服務"
     report: "報告"
   items:
+    zaokit-cc:
+      title: "Zaokit Claude API 服務"
+      description: "企業級 Claude API 合規代理服務，100% 兼容官方接口，支持 Claude 4.7 全系列模型，提供對公結算與增值稅發票。"
+      keywords:
+        - "Claude API"
+        - "企業級 AI"
+        - "大模型接入"
+        - "增值稅發票"
+        - "API 代理"
     gift-card:
       title: "Apple Gift Card 代充值"
       description: "Apple Gift Card 專業代充值服務，支持美區、日區、港區等多地區蘋果禮品卡，價格優惠、即時到賬、安全可靠。"

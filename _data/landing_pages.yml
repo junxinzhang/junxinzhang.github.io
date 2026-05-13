@@ -12,6 +12,28 @@
 # - date: 创建或更新日期
 # - featured: 是否精选展示
 
+- title: Zaokit Claude API 服务
+  repo: zaokit-cc
+  demo_url: https://cc.zaokit.com
+  description: 企业级 Claude API 合规代理服务，100% 兼容官方接口协议，支持 Claude 4.7 全系列模型，提供对公结算与增值税发票，解决企业接入合规与报销痛点
+  image: /projects/zaokit-cc/assets/hero-card.png
+  category: Service
+  tech_stack:
+    - HTML5
+    - CSS3
+    - JavaScript
+  keywords:
+    - Claude API
+    - Claude 代理
+    - 企业级 AI
+    - 大模型 API 接入
+    - Claude 发票
+    - 增值税专票
+    - 商业级 API
+    - Anthropic
+  date: 2026-05-13
+  featured: true
+
 - title: Apple Gift Card 代充值
   repo: gift-card
   demo_url: https://gift.junxinzhang.com
