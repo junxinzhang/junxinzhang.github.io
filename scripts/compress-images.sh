@@ -117,7 +117,7 @@ while IFS= read -r file; do
         fi
         FILES_TO_CONVERT+=("$file")
     fi
-done < <(find "$IMAGE_DIR" -type f \( -name "*.png" -o -name "*.PNG" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.JPG" -o -name "*.JPEG" \) | sort)
+done < <(find "$IMAGE_DIR" -type f ! -path "*/.backup/*" \( -name "*.png" -o -name "*.PNG" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.JPG" -o -name "*.JPEG" \) | sort)
 
 # 2) 扫描过大的 WebP 文件
 while IFS= read -r file; do
@@ -125,7 +125,7 @@ while IFS= read -r file; do
     if [ $size -gt $LARGE_WEBP_THRESHOLD ]; then
         FILES_TO_RECOMPRESS+=("$file")
     fi
-done < <(find "$IMAGE_DIR" -type f -name "*.webp" | sort)
+done < <(find "$IMAGE_DIR" -type f ! -path "*/.backup/*" -name "*.webp" | sort)
 
 # ===== 显示转换计划 =====
 echo -e "${BOLD}━━━ PNG/JPG → WebP 转换 ━━━${NC}"
