@@ -4,7 +4,7 @@ title: "不是因为 AI 要裁员，而是想用 AI，必须裁员"
 date: 2026-03-20
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260320-ai-layoff-cover.png
+image: assets/images/screenshot-20260320-ai-layoff-cover.webp
 tags: [featured, AI, 裁员, 组织变革, 大厂, 网易, 阿里, 腾讯, 中间管理层]
 slug: ai-layoff-not-because-of-ai-but-for-ai
 description: "网易、阿里、腾讯裁员传闻闹得沸沸扬扬。但真正值得关注的不是裁不裁——而是大厂终于意识到：没有组织层面的改革，AI 推不下去。不是 AI 导致裁员，而是要用好 AI，必须先裁员。"
@@ -25,7 +25,7 @@ faq:
 
 还真不一样。人的寿命是自然规律，但大厂的组织臃肿是人为的——而 AI 正在把这个问题从"慢性病"变成"急性发作"。
 
-![大厂裁员风暴：不是因为 AI，而是为了 AI](/assets/images/screenshot-20260320-ai-layoff-cover.png)
+![大厂裁员风暴：不是因为 AI，而是为了 AI](/assets/images/screenshot-20260320-ai-layoff-cover.webp)
 
 ---
 
@@ -45,7 +45,7 @@ faq:
 
 **<mark>信息传递的速度越来越快。猪厂、阿里、腾讯——大厂终于回过神来了。</mark>**
 
-![硅谷裁员潮一个月传导到中国大厂](/assets/images/screenshot-20260320-ai-layoff-wave.png)
+![硅谷裁员潮一个月传导到中国大厂](/assets/images/screenshot-20260320-ai-layoff-wave.webp)
 
 ---
 
@@ -65,7 +65,7 @@ faq:
 
 **<mark>组织层面的提效，光靠工具和管理培训太单薄了。老员工的工作惯性很重，大厂没有时间等他们慢慢 AI 成熟。</mark>**
 
-![组织层面的AI改革：工具层管理层组织层三级跃迁](/assets/images/screenshot-20260320-ai-layoff-org-reform.png)
+![组织层面的AI改革：工具层管理层组织层三级跃迁](/assets/images/screenshot-20260320-ai-layoff-org-reform.webp)
 
 ---
 
@@ -92,7 +92,7 @@ faq:
 
 **<mark>不是因为 AI 需要裁员，而是想用 AI，必须裁员。逻辑不是"AI 太强所以你被裁"，而是"不裁你，AI 就用不起来"。</mark>**
 
-![因果链倒置：不是AI导致裁员，而是裁员才能用好AI](/assets/images/screenshot-20260320-ai-layoff-causation.png)
+![因果链倒置：不是AI导致裁员，而是裁员才能用好AI](/assets/images/screenshot-20260320-ai-layoff-causation.webp)
 
 ---
 

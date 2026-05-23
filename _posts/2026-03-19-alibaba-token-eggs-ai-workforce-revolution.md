@@ -4,7 +4,7 @@ title: "阿里给全员发 Token：当年生产队发鸡蛋，现在大厂发算
 date: 2026-03-19
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260319-ali-token-cover-main.png
+image: assets/images/screenshot-20260319-ali-token-cover-main.webp
 tags: [featured, Token, 阿里巴巴, ATH, AI经济学, 工作效率, Qwen, 悟空, Qoder]
 slug: alibaba-token-eggs-ai-workforce-revolution
 description: "阿里成立 ATH 事业群，全体员工发 Token 额度，买外部 AI 工具也能报销。Token 正在从计费单位变成新时代的工分——你的消耗量，决定了你的产出天花板。"

@@ -4,7 +4,7 @@ title: "DeepSeek-V4 私有化部署到底要花多少钱？一台 H20 就够了"
 date: 2026-04-27
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260427-deepseek-v4-deploy-cover.jpg
+image: assets/images/screenshot-20260427-deepseek-v4-deploy-cover.webp
 tags: [featured, DeepSeek, V4, 私有化部署, H20, GPU, 企业AI, Zaokit]
 slug: deepseek-v4-private-deployment-cost-analysis
 description: "DeepSeek-V4 发布后最大的悬念不是性能，而是私有化部署到底要花多少钱。我拿 AWS H20 实例做了一次完整的 TCO 测算：V4-Flash 年度 TCO 约 60 万，V4-Pro 约 232 万。结论很明确——V4-Flash 是私有化首选，V4-Pro 用 API 弹性调用更划算。"
@@ -23,7 +23,7 @@ faq:
 
 **<mark>所以今天，我用 AWS H20 GPU 实例做了一次完整的 TCO 测算，把三个版本的部署成本掰开揉碎算一遍。结论可能比你想的便宜很多。</mark>**
 
-![DeepSeek-V4 私有化部署成本全景分析](/assets/images/screenshot-20260427-deepseek-v4-deploy-cover.jpg)
+![DeepSeek-V4 私有化部署成本全景分析](/assets/images/screenshot-20260427-deepseek-v4-deploy-cover.webp)
 
 ---
 
@@ -75,7 +75,7 @@ vLLM/SGLang 已经适配 DeepSeek V4 架构，**开箱即用**。
 | 3 年合约 | ¥1,440,000/3年 | ¥40,000 | ¥42,400 |
 | 5 年合约 | ¥2,130,000/5年 | ¥35,500 | ¥37,630 |
 
-![H20 实例定价与部署方案全景图](/assets/images/screenshot-20260427-deepseek-v4-h20-pricing.jpg)
+![H20 实例定价与部署方案全景图](/assets/images/screenshot-20260427-deepseek-v4-h20-pricing.webp)
 
 **V4-Flash（1 台 H20）vs V4-Pro（4 台 H20）年成本对比：**
 

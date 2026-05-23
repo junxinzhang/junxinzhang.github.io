@@ -4,7 +4,7 @@ title: "AI 时代信息差悖论：所有人都在加速获取信息，但只有
 date: 2026-03-23
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260323-ai-info-gap-cover.png
+image: assets/images/screenshot-20260323-ai-info-gap-cover.webp
 tags: [featured, AI, 信息差, 信息不对称, 变现, 资本, AI Agent, 平台]
 slug: ai-info-gap-monetization-capital-perspective
 description: "AI 让信息获取的速度前所未有地快，但信息差反而越来越大。当所有人用同一个 AI 工具搜索时，真正值钱的不再是信息本身——而是谁能最先把信息转化为行动。从资本的角度看，AI Agent 信息差平台是这个时代最被低估的机会。"
@@ -21,7 +21,7 @@ faq:
 
 **<mark>AI 时代最大的悖论：信息获取速度越来越快，但信息差反而越来越大。能变现的人和不能变现的人之间，隔了一整个认知鸿沟。</mark>**
 
-![AI 时代信息差悖论：信息加速但变现分化](/assets/images/screenshot-20260323-ai-info-gap-cover.png)
+![AI 时代信息差悖论：信息加速但变现分化](/assets/images/screenshot-20260323-ai-info-gap-cover.webp)
 
 ---
 
@@ -40,7 +40,7 @@ faq:
 
 **<mark>当所有人都有同一把锤子，真正值钱的不是锤子——是谁先发现该砸哪颗钉子。</mark>**
 
-![信息平权幻觉：同样的AI工具，变现能力天差地别](/assets/images/screenshot-20260323-ai-info-gap-illusion.png)
+![信息平权幻觉：同样的AI工具，变现能力天差地别](/assets/images/screenshot-20260323-ai-info-gap-illusion.webp)
 
 ---
 
@@ -61,7 +61,7 @@ faq:
 
 **<mark>你看到的是一条新闻，资本看到的是一个套利窗口。区别在于——你有没有 Agent 帮你抢在窗口关闭之前行动。</mark>**
 
-![资本视角的信息变现链路：从机构级降到个人级](/assets/images/screenshot-20260323-ai-info-gap-capital.png)
+![资本视角的信息变现链路：从机构级降到个人级](/assets/images/screenshot-20260323-ai-info-gap-capital.webp)
 
 ---
 
@@ -84,7 +84,7 @@ faq:
 
 **<mark>信息差平台的终极形态：不是给你更多信息，而是帮你在正确的时间做出正确的决策。</mark>**
 
-![AI Agent 信息差平台：下一代信息变现入口](/assets/images/screenshot-20260323-ai-info-gap-platform.png)
+![AI Agent 信息差平台：下一代信息变现入口](/assets/images/screenshot-20260323-ai-info-gap-platform.webp)
 
 ---
 

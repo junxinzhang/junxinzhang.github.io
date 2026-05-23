@@ -272,28 +272,48 @@ for file in "${FILES_TO_RECOMPRESS[@]}"; do
     fi
     
     # 先解码再重新编码（用更低的质量）
-    dwebp "$file" -o "${file}.png" -quiet 2>/dev/null
-    if [ -f "${file}.png" ]; then
-        cwebp -q $WEBP_RECOMPRESS_QUALITY "${file}.png" -o "$tmp_file" -quiet 2>/dev/null
-        rm "${file}.png"
-        
-        if [ -f "$tmp_file" ]; then
-            size_after=$(get_size "$tmp_file")
-            if [ $size_after -lt $size_before ]; then
-                mv "$tmp_file" "$file"
-                saved=$((size_before - size_after))
-                ACTUAL_SAVED=$((ACTUAL_SAVED + saved))
-                ACTUAL_PROCESSED=$((ACTUAL_PROCESSED + 1))
-                echo -e "${GREEN}$(format_size $size_before) → $(format_size $size_after) (节省 $(format_size $saved))${NC}"
+    if dwebp "$file" -o "${file}.png" -quiet 2>/dev/null; then
+        if [ -f "${file}.png" ]; then
+            cwebp -q $WEBP_RECOMPRESS_QUALITY "${file}.png" -o "$tmp_file" -quiet 2>/dev/null
+            rm "${file}.png"
+            
+            if [ -f "$tmp_file" ]; then
+                size_after=$(get_size "$tmp_file")
+                if [ $size_after -lt $size_before ]; then
+                    mv "$tmp_file" "$file"
+                    saved=$((size_before - size_after))
+                    ACTUAL_SAVED=$((ACTUAL_SAVED + saved))
+                    ACTUAL_PROCESSED=$((ACTUAL_PROCESSED + 1))
+                    echo -e "${GREEN}$(format_size $size_before) → $(format_size $size_after) (节省 $(format_size $saved))${NC}"
+                else
+                    rm "$tmp_file"
+                    echo -e "${YELLOW}已跳过（重压缩后更大）${NC}"
+                fi
             else
-                rm "$tmp_file"
-                echo -e "${YELLOW}已跳过（重压缩后更大）${NC}"
+                echo -e "${RED}失败${NC}"
             fi
-        else
-            echo -e "${RED}失败${NC}"
         fi
     else
-        echo -e "${RED}解码失败${NC}"
+        # 如果解码失败，可能原本就是 PNG/JPG 但被错误命名为了 .webp，直接尝试用 cwebp 压缩它
+        if cwebp -q $WEBP_QUALITY "$file" -o "$tmp_file" -quiet 2>/dev/null; then
+            if [ -f "$tmp_file" ]; then
+                size_after=$(get_size "$tmp_file")
+                if [ $size_after -lt $size_before ]; then
+                    mv "$tmp_file" "$file"
+                    saved=$((size_before - size_after))
+                    ACTUAL_SAVED=$((ACTUAL_SAVED + saved))
+                    ACTUAL_PROCESSED=$((ACTUAL_PROCESSED + 1))
+                    echo -e "${GREEN}$(format_size $size_before) → $(format_size $size_after) (节省 $(format_size $saved))${NC}"
+                else
+                    rm "$tmp_file"
+                    echo -e "${YELLOW}已跳过（直接压缩后更大）${NC}"
+                fi
+            else
+                echo -e "${RED}直接压缩后未生成临时文件${NC}"
+            fi
+        else
+            echo -e "${RED}解码与直接压缩均失败${NC}"
+        fi
     fi
 done
 

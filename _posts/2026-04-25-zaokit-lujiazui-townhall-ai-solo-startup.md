@@ -4,7 +4,7 @@ title: "带着 Zaokit 去陆家嘴摆摊：一个人的 AI 产品，站上了五
 date: 2026-04-25
 author: Jason Zhang
 categories: [AI]
-image: assets/images/screenshot-20260425-zaokit-townhall-cover.png
+image: assets/images/screenshot-20260425-zaokit-townhall-cover.webp
 tags: [featured, Zaokit, 陆家嘴, Townhall, 一人公司, AI创业, OPC]
 slug: zaokit-lujiazui-townhall-ai-solo-startup
 description: "2026年4月25日，Zaokit 参加陆家嘴街道举办的五四青年社创汇。一个人的AI产品，展位紧挨讯飞星辰，站上红毯路演。没有团队、没有融资，只有产品和一台 MacBook。"
@@ -21,7 +21,7 @@ faq:
 
 **<mark>展位招牌上写着「Zaokit · AI 内容生成平台」——整个摊位从产品到招牌，就我一个人搞定的。旁边是讯飞星辰 Agent 平台的展位。</mark>**
 
-![Zaokit 展位与讯飞星辰 Agent 平台并排亮相陆家嘴社创汇](/assets/images/screenshot-20260425-zaokit-booth-panorama.jpg)
+![Zaokit 展位与讯飞星辰 Agent 平台并排亮相陆家嘴社创汇](/assets/images/screenshot-20260425-zaokit-booth-panorama.webp)
 
 ---
 
@@ -31,7 +31,7 @@ faq:
 
 旁边展位是讯飞星辰——背后站着科大讯飞的整个 AI 生态。而我这边，一张蓝色桌布、两台 MacBook、一块「Zaokit AI 内容生成平台」的招牌，就是全部家当了。
 
-![Zaokit 展位：一张桌子、两台电脑、一块招牌，就是全部](/assets/images/screenshot-20260425-zaokit-booth-front.jpg)
+![Zaokit 展位：一张桌子、两台电脑、一块招牌，就是全部](/assets/images/screenshot-20260425-zaokit-booth-front.webp)
 
 但一上午聊下来，发现担心是多余的。**来逛展的人不关心你背后有多少人，他们关心的是：你这个东西能干嘛，我现在能不能试。**
 
@@ -98,7 +98,7 @@ Zaokit 做的不是「用 AI 做一个便宜版 Canva」——而是做以前根
 
 过去创业的叙事是：找投资人、租办公室、招团队、烧钱。现在的叙事变了：**一个人、一台电脑、几个 AI Agent，从客厅里启动，直接面向用户。**
 
-![一人公司 vs 传统创业：AI 时代的创业成本结构对比](/assets/images/screenshot-20260425-opc-vs-traditional.png)
+![一人公司 vs 传统创业：AI 时代的创业成本结构对比](/assets/images/screenshot-20260425-opc-vs-traditional.webp)
 
 这不是降级，是**效率革命的必然结果。** 当 AI 把执行层成本压到接近零，唯一的瓶颈就是你的想法和判断力。今天在陆家嘴，我看到的不只是几个展位——而是一整代年轻人正在用完全不同的方式理解「创业」这两个字。
 
@@ -114,7 +114,7 @@ Zaokit 做的不是「用 AI 做一个便宜版 Canva」——而是做以前根
 
 现场扫码体验，也可以直接加微信交流👇
 
-![现场扫码体验 Zaokit：产品体验 / 添加微信 / 加入体验群](/assets/images/screenshot-20260425-zaokit-scan-card.png)
+![现场扫码体验 Zaokit：产品体验 / 添加微信 / 加入体验群](/assets/images/screenshot-20260425-zaokit-scan-card.webp)
 
 **<mark>AI 不会替代创业者，但会让更多人有资格成为创业者。门槛降了，门开了——剩下的是你敢不敢走进去。</mark>**
 
