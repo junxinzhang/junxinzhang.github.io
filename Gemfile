@@ -13,9 +13,9 @@ group :jekyll_plugins do
     gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
     gem 'jekyll-gist'
-    # Pin to 3.0.x: 3.1.0 pulls sass-embedded 1.100.0 which uses JSON::Fragment
-    # (json >= 2.9.0 only), incompatible with Ruby 3.1.x bundled json 2.6.x
+    # Keep CI on the known-good Sass line used by this site.
     gem 'jekyll-sass-converter', '~> 3.0.0'
+    gem 'sass-embedded', '~> 1.58.3'
 end
 
 # Development dependencies
