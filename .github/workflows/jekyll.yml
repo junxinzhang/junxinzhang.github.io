@@ -20,6 +20,10 @@ permissions:
   pages: write
   id-token: write
 
+# Force Node.js 24 for all actions (required before June 2, 2026 deadline)
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
@@ -34,12 +38,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
-        # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
-        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          ruby-version: '3.1'
+          bundler-cache: true
+          cache-version: 1 # Incremented to force full cache rebuild (fix 400 restore error)
+      - name: Update sass-embedded for Ubuntu 24.04 compatibility
+        run: bundle update sass-embedded jekyll-sass-converter --conservative
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
