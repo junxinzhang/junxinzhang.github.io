@@ -43,8 +43,6 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
           cache-version: 1 # Incremented to force full cache rebuild (fix 400 restore error)
-      - name: Update sass-embedded for Ubuntu 24.04 compatibility
-        run: bundle update sass-embedded jekyll-sass-converter --conservative
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
