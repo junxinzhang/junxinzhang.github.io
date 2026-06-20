@@ -1,6 +1,6 @@
 const RAW_BASE = 'https://raw.githubusercontent.com/junxinzhang/junxinzhang.github.io/master/projects/huiben';
 const DEFAULT_MODEL = 'gpt-5.5';
-const ASSET_VERSION = 'd9e7305';
+const ASSET_VERSION = '81f2050-api';
 
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
@@ -151,6 +151,7 @@ async function serveStatic(pathname, request) {
 
 function normalizePath(pathname) {
   let path = pathname.replace(/^\/projects\/huiben/, '');
+  path = path.split('?')[0];
   if (path === '' || path === '/') return '/index.html';
   if (!/^\/(css|js|assets)\//.test(path)) return '/index.html';
   return path;
