@@ -1,6 +1,6 @@
-const RAW_BASE = 'https://raw.githubusercontent.com/junxinzhang/junxinzhang.github.io/master/projects/huiben';
+const RAW_BASE = 'https://raw.githubusercontent.com/junxinzhang/junxinzhang.github.io/cc90d46/projects/huiben';
 const DEFAULT_MODEL = 'gpt-5.5';
-const ASSET_VERSION = '81f2050-api';
+const ASSET_VERSION = 'cc90d46-api';
 
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
@@ -135,8 +135,8 @@ async function serveStatic(pathname, request) {
   const cleanPath = normalizePath(pathname);
   const assetUrl = `${RAW_BASE}${cleanPath}?v=${ASSET_VERSION}`;
   const upstream = await fetch(assetUrl, {
-    headers: { 'user-agent': 'huiben-worker' },
-    cf: { cacheTtl: cleanPath === '/index.html' ? 60 : 3600, cacheEverything: true }
+    headers: { 'user-agent': 'huiben-worker', 'cache-control': 'no-cache' },
+    cf: { cacheTtl: 0, cacheEverything: false }
   });
   if (!upstream.ok) return new Response('Not found', { status: 404 });
   const headers = new Headers(upstream.headers);
@@ -146,6 +146,7 @@ async function serveStatic(pathname, request) {
   headers.delete('x-content-type-options');
   headers.set('content-type', contentType(cleanPath));
   headers.set('cache-control', cleanPath === '/index.html' ? 'public, max-age=60' : 'public, max-age=3600');
+  headers.set('x-huiben-worker', ASSET_VERSION);
   return new Response(request.method === 'HEAD' ? null : upstream.body, { status: 200, headers });
 }
 
