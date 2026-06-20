@@ -36,7 +36,7 @@ webmaster_verifications:
 # Google recommends these settings for better indexing
 google_analytics: G-R8TYFJ6Q2Y
 
-include: ["_pages", "_html_pages", ".well-known"]
+include: ["_pages", "_html_pages", ".well-known", "_headers", "_redirects"]
 permalink: /:title/
 
 # Plugins
