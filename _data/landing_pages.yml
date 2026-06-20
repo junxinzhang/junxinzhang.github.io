@@ -34,25 +34,6 @@
   date: 2026-05-13
   featured: true
 
-- title: Huiben 儿童专属绘本
-  repo: huiben
-  demo_url: https://huiben.zaikit.com
-  description: 面向家长的儿童个性化绘本生成应用，填写孩子资料后即可生成可阅读、可打印、可下载的专属绘本草稿
-  image: /projects/huiben/assets/preview.svg
-  category: App
-  tech_stack:
-    - HTML5
-    - CSS3
-    - JavaScript
-  keywords:
-    - 儿童绘本
-    - AI绘本
-    - 个性化绘本
-    - 亲子阅读
-    - 睡前故事
-  date: 2026-06-20
-  featured: true
-
 - title: Apple Gift Card 代充值
   repo: gift-card
   demo_url: https://gift.junxinzhang.com
