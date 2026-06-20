@@ -140,6 +140,10 @@ async function serveStatic(pathname, request) {
   });
   if (!upstream.ok) return new Response('Not found', { status: 404 });
   const headers = new Headers(upstream.headers);
+  headers.delete('content-security-policy');
+  headers.delete('x-frame-options');
+  headers.delete('cross-origin-resource-policy');
+  headers.delete('x-content-type-options');
   headers.set('content-type', contentType(cleanPath));
   headers.set('cache-control', cleanPath === '/index.html' ? 'public, max-age=60' : 'public, max-age=3600');
   return new Response(request.method === 'HEAD' ? null : upstream.body, { status: 200, headers });
