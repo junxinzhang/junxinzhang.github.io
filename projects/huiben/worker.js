@@ -1,6 +1,5 @@
 const RAW_BASE = 'https://raw.githubusercontent.com/junxinzhang/junxinzhang.github.io/master/projects/huiben';
 const DEFAULT_MODEL = 'gpt-5.5';
-const ASSET_VERSION = 'd9e7305';
 
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
@@ -133,8 +132,7 @@ function parseBook(content, input) {
 
 async function serveStatic(pathname, request) {
   const cleanPath = normalizePath(pathname);
-  const assetUrl = `${RAW_BASE}${cleanPath}?v=${ASSET_VERSION}`;
-  const upstream = await fetch(assetUrl, {
+  const upstream = await fetch(`${RAW_BASE}${cleanPath}`, {
     headers: { 'user-agent': 'huiben-worker' },
     cf: { cacheTtl: cleanPath === '/index.html' ? 60 : 3600, cacheEverything: true }
   });
