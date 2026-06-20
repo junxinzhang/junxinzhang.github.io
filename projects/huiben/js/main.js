@@ -119,7 +119,7 @@
     };
   };
 
-  const buildBook = input => {
+  const buildLocalBook = input => {
     const config = themeData[input.theme] || themeData['勇气'];
     const detail = splitDetail(input.details);
     const name = input.childName;
@@ -177,6 +177,34 @@
     };
   };
 
+  const normalizeRemoteBook = (book, fallbackInput) => {
+    if (!book || !Array.isArray(book.pages) || book.pages.length < 4) {
+      throw new Error('invalid remote book');
+    }
+    return {
+      title: String(book.title || themeData[fallbackInput.theme].title(fallbackInput.childName)).slice(0, 40),
+      subtitle: String(book.subtitle || `${fallbackInput.childAge} 岁孩子的${fallbackInput.theme}主题绘本`).slice(0, 60),
+      style: String(book.style || fallbackInput.style).slice(0, 30),
+      prompt: String(book.prompt || '').slice(0, 600),
+      pages: book.pages.slice(0, 8).map((page, index) => ({
+        heading: String(page.heading || `第 ${index + 1} 页`).slice(0, 24),
+        text: String(page.text || '').slice(0, 180),
+        scene: scenes.includes(page.scene) ? page.scene : scenes[index % scenes.length]
+      })).filter(page => page.text)
+    };
+  };
+
+  const fetchRemoteBook = async input => {
+    const res = await fetch('/api/story', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(input)
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'story api failed');
+    return normalizeRemoteBook(data.book, input);
+  };
+
   const renderThumbs = () => {
     if (!currentBook) return;
     thumbs.innerHTML = currentBook.pages.map((_, index) => (
@@ -203,11 +231,18 @@
     localStorage.setItem('huiben:lastBook', JSON.stringify({ book: currentBook, page: currentPage }));
   };
 
-  const generate = () => {
-    currentBook = buildBook(getFormData());
+  const generate = async () => {
+    const input = getFormData();
+    setStatus('正在生成绘本...');
+    try {
+      currentBook = await fetchRemoteBook(input);
+      setStatus('绘本已由额度 API 生成，可以阅读、打印或下载。');
+    } catch {
+      currentBook = buildLocalBook(input);
+      setStatus('接口暂时不可用，已先生成本地草稿。');
+    }
     renderPage(0);
     document.querySelector('.progress span:nth-child(2)')?.classList.add('is-active');
-    setStatus('绘本已生成，可以阅读、打印或下载。');
   };
 
   const changePage = delta => {

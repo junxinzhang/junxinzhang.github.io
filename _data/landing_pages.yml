@@ -36,7 +36,7 @@
 
 - title: Huiben 儿童专属绘本
   repo: huiben
-  demo_url: https://huiben.zaikit.com
+  demo_url: https://huiben.zaokit.com
   description: 面向家长的儿童个性化绘本生成应用，填写孩子资料后即可生成可阅读、可打印、可下载的专属绘本草稿
   image: /projects/huiben/assets/preview.svg
   category: App
