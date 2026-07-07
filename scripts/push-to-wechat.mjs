@@ -6,6 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -13,6 +14,24 @@ const ROOT = path.resolve(__dirname, '..');
 // ===== 配置 =====
 const WECHAT_APP_ID = 'wx1a1d6f220430079b';
 const WECHAT_APP_SECRET = 'd7dac2e7a5a487a551a86a6af43b5556';
+
+// WebP 自动转换辅助函数
+function ensureWechatCompatibleImage(imagePath) {
+  const ext = path.extname(imagePath).toLowerCase();
+  if (ext === '.webp') {
+    const tempPngPath = path.join(ROOT, 'scripts', '.tmp_images', `${path.basename(imagePath, ext)}.png`);
+    console.log(`    🔄 正在将 WebP 转换为 PNG: ${path.basename(imagePath)} -> ${path.basename(tempPngPath)}`);
+    try {
+      execSync(`/opt/homebrew/bin/dwebp "${imagePath}" -o "${tempPngPath}"`, { stdio: 'ignore' });
+      return { tempPath: tempPngPath, cleanup: () => {
+        try { fs.unlinkSync(tempPngPath); } catch (e) {}
+      }};
+    } catch (err) {
+      console.warn(`    ⚠️ WebP 转换失败，尝试直接使用原文件: ${err.message}`);
+    }
+  }
+  return { tempPath: imagePath, cleanup: () => {} };
+}
 
 // ===== 微信 API =====
 async function getAccessToken() {
@@ -27,45 +46,55 @@ async function getAccessToken() {
 }
 
 async function uploadImage(accessToken, imagePath) {
-  const url = `https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=${accessToken}&type=image`;
-  const imageBuffer = fs.readFileSync(imagePath);
-  const filename = path.basename(imagePath);
-  const ext = path.extname(filename).toLowerCase();
-  const mimeTypes = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.gif': 'image/gif' };
-  const mimeType = mimeTypes[ext] || 'image/png';
+  const { tempPath, cleanup } = ensureWechatCompatibleImage(imagePath);
+  try {
+    const url = `https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=${accessToken}&type=image`;
+    const imageBuffer = fs.readFileSync(tempPath);
+    const filename = path.basename(tempPath);
+    const ext = path.extname(filename).toLowerCase();
+    const mimeTypes = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.gif': 'image/gif' };
+    const mimeType = mimeTypes[ext] || 'image/png';
 
-  const formData = new FormData();
-  const blob = new Blob([imageBuffer], { type: mimeType });
-  formData.append('media', blob, filename);
+    const formData = new FormData();
+    const blob = new Blob([imageBuffer], { type: mimeType });
+    formData.append('media', blob, filename);
 
-  const resp = await fetch(url, { method: 'POST', body: formData });
-  const data = await resp.json();
-  if (data.errcode || !data.media_id) {
-    throw new Error(`上传图片失败 (${filename}): ${data.errmsg} (${data.errcode})`);
+    const resp = await fetch(url, { method: 'POST', body: formData });
+    const data = await resp.json();
+    if (data.errcode || !data.media_id) {
+      throw new Error(`上传图片失败 (${filename}): ${data.errmsg} (${data.errcode})`);
+    }
+    console.log(`  ✅ 上传成功: ${filename} → ${data.media_id}`);
+    return { media_id: data.media_id, url: data.url };
+  } finally {
+    cleanup();
   }
-  console.log(`  ✅ 上传成功: ${filename} → ${data.media_id}`);
-  return { media_id: data.media_id, url: data.url };
 }
 
 async function uploadContentImage(accessToken, imagePath) {
-  const url = `https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token=${accessToken}`;
-  const imageBuffer = fs.readFileSync(imagePath);
-  const filename = path.basename(imagePath);
-  const ext = path.extname(filename).toLowerCase();
-  const mimeTypes = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.gif': 'image/gif' };
-  const mimeType = mimeTypes[ext] || 'image/png';
+  const { tempPath, cleanup } = ensureWechatCompatibleImage(imagePath);
+  try {
+    const url = `https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token=${accessToken}`;
+    const imageBuffer = fs.readFileSync(tempPath);
+    const filename = path.basename(tempPath);
+    const ext = path.extname(filename).toLowerCase();
+    const mimeTypes = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.gif': 'image/gif' };
+    const mimeType = mimeTypes[ext] || 'image/png';
 
-  const formData = new FormData();
-  const blob = new Blob([imageBuffer], { type: mimeType });
-  formData.append('media', blob, filename);
+    const formData = new FormData();
+    const blob = new Blob([imageBuffer], { type: mimeType });
+    formData.append('media', blob, filename);
 
-  const resp = await fetch(url, { method: 'POST', body: formData });
-  const data = await resp.json();
-  if (!data.url) {
-    throw new Error(`上传正文图片失败 (${filename}): ${data.errmsg} (${data.errcode})`);
+    const resp = await fetch(url, { method: 'POST', body: formData });
+    const data = await resp.json();
+    if (!data.url) {
+      throw new Error(`上传正文图片失败 (${filename}): ${data.errmsg} (${data.errcode})`);
+    }
+    console.log(`  ✅ 正文图片上传: ${filename} → ${data.url}`);
+    return data.url;
+  } finally {
+    cleanup();
   }
-  console.log(`  ✅ 正文图片上传: ${filename} → ${data.url}`);
-  return data.url;
 }
 
 async function createDraft(accessToken, article) {
@@ -255,7 +284,10 @@ async function main() {
   // 3. 上传封面图（front matter 中的 image）
   let thumbMediaId = null;
   if (meta.image) {
-    const coverPath = path.resolve(ROOT, meta.image);
+    let coverPath = meta.image;
+    if (!fs.existsSync(coverPath)) {
+      coverPath = path.resolve(ROOT, meta.image.startsWith('/') ? meta.image.slice(1) : meta.image);
+    }
     console.log(`\n📸 上传封面图: ${coverPath}`);
     const result = await uploadImage(accessToken, coverPath);
     thumbMediaId = result.media_id;
@@ -266,7 +298,10 @@ async function main() {
   const imageUrlMap = {};
   for (const imgPath of imagePaths) {
     // 转为绝对路径
-    const absPath = path.resolve(ROOT, imgPath.startsWith('/') ? imgPath.slice(1) : imgPath);
+    let absPath = imgPath;
+    if (!fs.existsSync(absPath)) {
+      absPath = path.resolve(ROOT, imgPath.startsWith('/') ? imgPath.slice(1) : imgPath);
+    }
     if (fs.existsSync(absPath)) {
       const wxUrl = await uploadContentImage(accessToken, absPath);
       imageUrlMap[imgPath] = wxUrl;
@@ -291,7 +326,10 @@ async function main() {
   if (!thumbMediaId && imagePaths.length > 0) {
     // 如果没有封面，用第一张正文图当封面
     const firstImgPath = imagePaths[0];
-    const absPath = path.resolve(ROOT, firstImgPath.startsWith('/') ? firstImgPath.slice(1) : firstImgPath);
+    let absPath = firstImgPath;
+    if (!fs.existsSync(absPath)) {
+      absPath = path.resolve(ROOT, firstImgPath.startsWith('/') ? firstImgPath.slice(1) : firstImgPath);
+    }
     if (fs.existsSync(absPath)) {
       const result = await uploadImage(accessToken, absPath);
       thumbMediaId = result.media_id;
