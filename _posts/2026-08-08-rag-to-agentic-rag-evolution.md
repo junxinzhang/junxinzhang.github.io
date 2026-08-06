@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "你还在切 chunk 做向量？RAG 早就不是这回事了"
-date: 2026-08-07
+date: 2026-08-08
 author: Jason Zhang
 categories: [AI]
-image: assets/images/cover-20260807-rag-agentic-evolution.webp
+image: assets/images/cover-20260808-rag-agentic-evolution.webp
 tags: [featured, AI, RAG, Agentic RAG, GraphRAG, Self-RAG, 检索增强生成, 知识图谱, 向量检索, Zaokit]
 slug: rag-to-agentic-rag-evolution
 description: >
@@ -29,7 +29,7 @@ faq:
 
 > **大部分人还停在"切 chunk 做向量"的阶段，以为自己在用 RAG。真正的 RAG 已经进化到 AI 自己决定用什么工具、查几轮、怎么合成。这中间差的不是几篇论文，是"固定管道"和"自主智能体"之间的范式鸿沟。**
 
-![从切 chunk 到自己找信息：RAG 这三年走了多远](/assets/images/cover-20260807-rag-agentic-evolution.webp)
+![从切 chunk 到自己找信息：RAG 这三年走了多远](/assets/images/cover-20260808-rag-agentic-evolution.webp)
 
 ## 一、先给结论：RAG 不是一种技术，是一条进化路线
 
@@ -59,7 +59,7 @@ faq:
 
 **这一代解决的是"怎么让检索更准"和"怎么让管道更灵活"。但它还是个固定流程——你设计好管道，它就照着跑。**
 
-![基础 RAG 到模块化 RAG](/assets/images/illust-20260807-basic-to-modular-rag.webp)
+![基础 RAG 到模块化 RAG](/assets/images/illust-20260808-basic-to-modular-rag.webp)
 
 ## 三、2023–2024：给 RAG 装上"质检员"和"知识图谱"
 
@@ -82,7 +82,7 @@ Self-RAG 和 CRAG 就是给 RAG 装的"质检员"：
 
 但图谱路线有个硬伤：**全量构建太贵。** 这也催生了后面 LazyGraphRAG 的出现。
 
-![Self-RAG 质检流程](/assets/images/illust-20260807-self-rag-quality.webp)
+![Self-RAG 质检流程](/assets/images/illust-20260808-self-rag-quality.webp)
 
 ## 四、2024–2025：不是什么问题都值得 RAG
 
@@ -108,7 +108,7 @@ ICLR 2026 的 GraphRAG-Bench 给出了经验法则：**图的价值随查询复�
 
 **这一代的核心认知是：RAG 不该一刀切，该按需分流。**
 
-![RAG 路由分流](/assets/images/illust-20260807-adaptive-rag-routing.webp)
+![RAG 路由分流](/assets/images/illust-20260808-adaptive-rag-routing.webp)
 
 ## 五、2025–2026：AI 自己决定怎么找信息
 
@@ -132,7 +132,7 @@ Agentic RAG 把最后这层也交出去了：让 AI 智能体自己决定"用什
 
 这和 Agent 领域的大趋势完全一致。我在 [组织还在信息化，别人已经在跑智能体](/agentic-org-vs-informatization-six-months) 里写过：核心变化不是工具更强，而是执行主体从人变成了 AI。RAG 这条线，走的是同一个方向。
 
-![Agentic RAG：AI 自主决策](/assets/images/illust-20260807-agentic-rag-agent.webp)
+![Agentic RAG：AI 自主决策](/assets/images/illust-20260808-agentic-rag-agent.webp)
 
 ## 六、2023 年做 RAG 的体感
 
