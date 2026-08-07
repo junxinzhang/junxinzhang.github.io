@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI应用最尴尬的账单，可能正在被翻过来"
-date: 2026-08-04
+date: 2026-08-02
 author: Jason Zhang
 categories: [AI]
 image: assets/images/cover-20260804-ai-app-cost-curve-flip.webp

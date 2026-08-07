@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "WorkBuddy 和 Codex 谁更强？你问错了"
-date: 2026-08-07
+date: 2026-08-05
 author: Jason Zhang
 categories: [AI]
 image: assets/images/cover-20260807-workbuddy-codex-positioning.webp

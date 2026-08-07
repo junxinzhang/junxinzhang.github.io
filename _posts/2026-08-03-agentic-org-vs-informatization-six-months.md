@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "组织还在信息化，别人已经在跑智能体"
-date: 2026-08-05
+date: 2026-08-03
 author: Jason Zhang
 categories: [AI]
 image: assets/images/cover-20260805-agentic-org-six-months.webp

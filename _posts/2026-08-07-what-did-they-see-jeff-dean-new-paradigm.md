@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "他们到底看到了什么？让 Jeff Dean 离开待了 27 年的 Google"
-date: 2026-08-09
+date: 2026-08-07
 author: Jason Zhang
 categories: [AI]
 image: assets/images/cover-20260809-what-did-they-see.webp
@@ -90,7 +90,7 @@ Claude Opus 5 的发布说明里，有几个细节值得注意：官方示例里
 
 **所以这句话的分量完全不一样：造 Codex 的人，在说自己做的东西很快会显得原始。**
 
-我前两天在 [你的公司电脑，可能连 Agent 的门都进不了](/agent-runtime-beyond-laptop-infrastructure) 里引用过这条帖子，当时还没把身份钉死。结合 Jeff Dean 离职创办 Discovery Loop 的消息，现在拼图完整了。
+我前几天在 [你的公司电脑，可能连 Agent 的门都进不了](/agent-runtime-beyond-laptop-infrastructure) 里引用过这条帖子，当时还没把身份钉死。结合 Jeff Dean 离职创办 Discovery Loop 的消息，现在拼图完整了。
 
 **Tibo 这条帖子至少传递了三层信号：**
 

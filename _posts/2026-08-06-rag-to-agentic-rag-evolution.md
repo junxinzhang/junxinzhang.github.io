@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "你还在切 chunk 做向量？RAG 早就不是这回事了"
-date: 2026-08-08
+date: 2026-08-06
 author: Jason Zhang
 categories: [AI]
 image: assets/images/cover-20260808-rag-agentic-evolution.webp

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "你的公司电脑，可能连 Agent 的门都进不了"
-date: 2026-08-06
+date: 2026-08-04
 author: Jason Zhang
 categories: [AI]
 image: assets/images/cover-20260806-agent-runtime-beyond-laptop.webp
@@ -166,7 +166,7 @@ Codex 已经很能干了——我八月一号写过 [用 Codex 两小时交三�
 - 长任务怎么管理、怎么监控、怎么回滚？
 - 成本怎么控制——100 个 Agent 并行跑，token 费用谁买单？
 
-我前天写过 [组织还在信息化，别人已经在跑智能体](/agentic-org-vs-informatization-six-months)：工具已经换成 Agent 了，但组织图纸还是信息化时代的。Agent 基础设施也一样——**你不能用管「桌面应用」的方式管 Agent。**
+我昨天写过 [组织还在信息化，别人已经在跑智能体](/agentic-org-vs-informatization-six-months)：工具已经换成 Agent 了，但组织图纸还是信息化时代的。Agent 基础设施也一样——**你不能用管「桌面应用」的方式管 Agent。**
 
 ### 3）所有人：理解「运行环境」比理解「模型」更重要
 
