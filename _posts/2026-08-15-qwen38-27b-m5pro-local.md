@@ -55,6 +55,10 @@ Qwen3.8-27B 的权重是 8 月 13 到 15 号这窗口落地的。Apache 2.0，�
 | `qwen3.8:27b` | Q4_K_M | **17 GB** | qwen35 + CLIP 视觉 |
 | `qwen3.8:27b-mlx` | nvfp4 | **18 GB** | qwen3_5，`--mlx-engine` |
 
+这台机器上当时的真实命令输出：
+
+![Ollama 0.32.13 拉下的两个标签](/assets/images/shot-20260815-ollama-list.webp)
+
 下面所有速度，除特别注明外，都走 Ollama HTTP `/api/generate`，`num_ctx=8192`，温度 1 / top_p 0.95 / top_k 20。没有 128K，没有 256K，没有 BF16，也没有复现官方 SWE-bench。
 
 ## 二、官方 Q4_K_M：28 tok/s，20G，没掉交换
@@ -73,11 +77,15 @@ Qwen3.8-27B 的权重是 8 月 13 到 15 号这窗口落地的。Apache 2.0，�
 
 命令行再打一条 `ollama run --verbose`（新进程，默认上下文 256K）：加载 7.4 s，解码 **27.6 t/s**。
 
+![官方标签 verbose：解码 27.57 tok/s](/assets/images/shot-20260815-verbose-27b.webp)
+
 看这张表，只抓三件事。
 
 第一，**热身之后，官方 GGUF 就在 27–29 tok/s 这条线上。** 首次加载 4 秒，之后加载都在 0.14–0.17 秒。16.7 那种冷启动数字，不要拿去当日常体感。
 
 第二，**内存很老实。** 进程 RSS 从 18.0G 爬到 20.3G，8K 上下文全程 Swapins=0、Swapouts=0，memory_pressure 没有 warn。压缩内存有，交换没有。官方 runner 报 66/66 层在 GPU，Metal 占用约 16.0 GiB，再加 888 MiB 的 CLIP mmproj。
+
+![加载后进程 18.9G RSS，8K 没掉交换](/assets/images/shot-20260815-rss-loaded.webp)
 
 第三，**长一点的预填充，这台机器吃得动。** 3662 个 prompt token，prefill 272 t/s，首 token 大约 13.4 秒。这不是 256K 长窗口，只是说明 8K 档的预填充不是瓶颈。
 
