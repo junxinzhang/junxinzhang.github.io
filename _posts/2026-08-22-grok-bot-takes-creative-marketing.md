@@ -57,20 +57,24 @@ Creative Strategist。bingoJob。两个岗位，两台工位，活从我桌上�
 
 bingoJob 这个 Bot 的职位写得很死：把产品痛点做成广告（文案+素材），发到 Telegram [@info_bingojob](https://t.me/info_bingojob)。
 
-产品是 [BingoJob.AI](https://bingojob.ai/)——柬埔寨这边的 AI 招聘。求职端 Kaka AI 走 Telegram，雇主端做 AI 筛选。今天它自己去扒了官网，按求职、雇主、品牌三条线各出卖点和痛点，配图十套，打成相册发出去。
+产品是 [BingoJob.AI](https://bingojob.ai/)——柬埔寨这边的 AI 招聘。求职端 Kaka AI 走 Telegram，雇主端做 AI 筛选。流程也写死：先扒 bingojob.ai，拆痛点和卖点写出 caption，GenerateImage 出图，再用 Pillow 叠上官方 logo lockup，最后走 Telegram Desktop 发出去。不走网页端，也没有 Telegram MCP。
 
-每条消息末尾写清楚：这是 AI Agent（bingojob）自动发出的，请人工确认。
+第一批发了大约十张中英广告，进的是对接人私聊：bingojob-人力招聘 / nico li，也就是 t.me/info_bingojob。每条带【痛点】【卖点】，末尾写清楚：AI Agent 主动发出，请人工确认。
 
 ![营销岗在发货](/assets/images/illust-20260822-ship-confirm.webp)
 <!-- baoyu-skill prompt: 2.35:1清线漫画+清新扁平插画，奶油到天蓝渐变底，干净描边，薄荷绿/蜜桃/天蓝平涂，留白充足。禁止品牌logo与深色赛博UI。机器人把广告卡塞进标「确认后发出」的纸飞机信箱。顶部粗体中文「营销岗在发货」，底部小字「AI 发出，人点确认」。中文清晰可读。 --ar 2.35:1 -->
 
-频道反馈很快：统一官方 Logo，文案和高棉语对齐。它改了一版，再发。私聊细节我涂掉了，流程留着。
+对方说可以，但公司 logo 要固定，还要支持高棉语，并把官方 logo 发了过来：一双手、紫色球体、一颗星。它按这个锁了 lockup，画面和文案改成高棉语，补了一条说明，连 ad08、ad09、ad10 再发一次。nico 回了一句，大意是确实强、比较稳定。私聊细节我涂掉了，流程留着。
+
+然后我说：「先停一下，不用发了。」这之后 Telegram 再没发出去。
 
 ![Telegram @info_bingojob（私聊已脱敏）](/assets/images/shot-20260822-bingojob-telegram.webp)
 
 ![BingoJob 广告成片之一](/assets/images/shot-20260822-bingojob-creative.webp)
 
-我没有坐在中间传话。策略出套装，营销发频道，两边在各自线程里改。当天两件事分开做：Creative Strategist 跑美素 TrackEasy，bingoJob 跑 BingoJob.AI，当日未联动作同一条任务。我只在「能不能用」这一下出现。
+Telegram Desktop 卡死过一次，重启接着干。本机缺高棉语字体，聊天框里的字可能方块，图里的高棉文是好的。
+
+我没有坐在中间传话。策略出套装，营销发私聊，两边在各自线程里改。当天两件事分开做：Creative Strategist 跑美素 TrackEasy，bingoJob 跑 BingoJob.AI，当日未联动作同一条任务。我只在「能不能用」这一下出现。
 
 ## 编制写进名字，才叫接管
 
@@ -86,7 +90,7 @@ bingoJob 这个 Bot 的职位写得很死：把产品痛点做成广告（文案
 
 1. **两个岗位写进了名字**——Creative Strategist 出美素 TrackEasy 套装；bingoJob 发 BingoJob 广告到 @info_bingojob
 2. **图和文成套交，不丢半成品**——策略岗拆痛点卖点，营销岗带「AI 发出请确认」
-3. **我只批最后一刀**——Logo、语言、能不能转发，人点头；中间别再当传话筒
+3. **我只批最后一刀**——Logo、语言、能不能转发，人点头；我说「先停一下，不用发了」就停
 4. **截图是真跑出来的**——Facebook、Telegram、成片都做了脱敏，留下工作流
 5. **编制比模型热闹更值钱**——岗位不写清，Bot 只是聊天；写清了，才叫接管
 
