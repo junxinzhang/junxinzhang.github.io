@@ -23,7 +23,7 @@ faq:
 
 这周我一边在企业里落地 Harness Agent，一边看着自己公司里的 Bot 坐上编制。
 
-Creative Strategist 出广告。bingoJob 往 Telegram 发素材。DeerFlow 接上 Authing 和算力中心。数字员工不是口号，是工位上真有人在交货，坐上去的是 Bot。
+Creative Strategist 出广告。bingoJob 往 Telegram 发素材。Zaokit Cowork 接上 Authing 和算力中心。数字员工不是口号，是工位上真有人在交货，坐上去的是 Bot。
 
 于是问题变了。
 
