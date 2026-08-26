@@ -86,6 +86,67 @@ layout: default
   margin: 1.25rem 0 0.75rem;
 }
 
+.about-bio p {
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 1.15rem;
+  font-size: 1rem;
+}
+
+.about-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.about-quote {
+  background: #e8f3ec;
+  border-left: 3px solid #03a87c;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0 0;
+  font-size: 1.05rem;
+  color: #212529;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.profile-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.profile-fact {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid #03a87c;
+}
+
+.profile-fact dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.profile-fact dd {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #212529;
+  line-height: 1.5;
+}
+
+.profile-fact a {
+  color: #03a87c;
+  text-decoration: none;
+}
+
+.profile-fact a:hover {
+  text-decoration: underline;
+}
+
 /* Credentials Grid */
 .credentials-grid {
   display: grid;
@@ -384,7 +445,8 @@ layout: default
 
   .credentials-grid,
   .expertise-grid,
-  .blog-topics {
+  .blog-topics,
+  .profile-facts {
     grid-template-columns: 1fr;
   }
 
@@ -463,6 +525,33 @@ layout: default
 
 [data-theme="dark"] .about-section h3 {
   color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .about-bio p {
+  color: var(--text-muted, #8b949e);
+}
+
+[data-theme="dark"] .about-quote {
+  background: #21262d;
+  border-left-color: #58a6ff;
+  color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .profile-fact {
+  background: var(--card-bg, #161b22);
+  border-left-color: #58a6ff;
+}
+
+[data-theme="dark"] .profile-fact dt {
+  color: var(--text-muted, #8b949e);
+}
+
+[data-theme="dark"] .profile-fact dd {
+  color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .profile-fact a {
+  color: #58a6ff;
 }
 
 [data-theme="dark"] .credential-item {
