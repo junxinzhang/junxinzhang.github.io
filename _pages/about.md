@@ -5,23 +5,89 @@ permalink: "/about.html"
 author: Jason Zhang
 comments: true
 name: "Jason Zhang"
-tagline: "软件架构经验，专注于 AI Agent 工程化落地、DevOps 架构和微服务系统设计"
+tagline: "AI 时代的一人公司实践者，上海寻绎信息科技创始人，Zaokit AI 产品负责人"
 skills:
+  - "一人公司"
+  - "Zaokit AI"
   - "AI Agent"
-  - "RAG"
-  - "DevOps"
-  - "微服务"
-  - "Kubernetes"
-  - "AWS"
-description: "Jason Zhang - 软件架构经验，专注于 AI Agent 工程化落地、DevOps 架构设计、微服务系统开发。具备从 0 到 1 构建智能产品的全流程能力。"
+  - "AI Gateway"
+  - "私有化算力"
+  - "企业级 Agent"
+description: "张俊欣，上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人。探索 AI 时代的一人公司模式，主导 Zaokit AI PPT、Zaokit Cowork，以及 AI Gateway、安全护栏、私有化算力与企业级 Agent 落地。"
 faq:
+  - question: "张俊欣是谁？"
+    answer: "张俊欣是上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人及核心开发者。2023 年初投身 AI 创业，是国内较早一批生成式 AI 创业实践者，也是一人公司模式的践行者。"
   - question: "Jason Zhang 的专业背景是什么？"
-    answer: "Jason Zhang 拥有多年软件开发经验，专注于微服务架构设计与系统工程实践，近年来聚焦于大模型与 AI Agent 应用场景的工程化落地，具备端到端的产品交付能力。"
+    answer: "Jason Zhang（张俊欣）拥有多年软件开发经验，专注于微服务架构设计与系统工程实践，近年来聚焦于大模型与 AI Agent 应用场景的工程化落地，具备端到端的产品交付能力。"
+  - question: "寻绎和 Zaokit AI 是什么？"
+    answer: "上海寻绎信息科技有限公司由张俊欣于 2023 年 7 月创立。Zaokit AI 已形成包括 Zaokit AI PPT、Zaokit Cowork 在内的产品矩阵，并完成 AI Gateway、AI 安全护栏、私有化 AI 算力部署及企业级 Agent 等落地。"
   - question: "这个博客主要分享什么内容？"
     answer: "博客主要分享 AI 技术实战经验（包括 RAG 系统、AI Agent 开发）、DevOps 最佳实践（CI/CD、Kubernetes）以及职业成长心得。"
   - question: "如何联系 Jason Zhang？"
-    answer: "可以通过 Email (jason2023zhang@gmail.com)、GitHub (@junxinzhang) 或 Twitter/X (@Jasonz9788) 联系我。"
+    answer: "可以通过 Email (jason2023zhang@gmail.com)、GitHub (@junxinzhang)、Twitter/X (@Jasonz9788) 或微信公众号 Just Jason 联系我。"
 ---
+
+<div class="about-section">
+<h2>AI 时代的“一人公司”创业实践</h2>
+<div class="about-bio">
+<p>张俊欣，上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人及核心开发者。2023 年初投身 AI 创业，同年 7 月创立上海寻绎信息科技有限公司，是国内较早一批生成式 AI 创业实践者，也是“一人公司”模式的践行者。</p>
+<p>“寻绎”二字，寓意“寻找线索，发现价值”。公司创立之初便确立了一个朴素的理念：从客户真实需求中寻找线索，以技术和产品将线索转化为价值，为客户创造价值，实现合作共赢。这也成为寻绎信息科技一直坚持的核心企业文化。</p>
+<p>从产品设计、技术研发到运营及商业化，张俊欣持续探索以 AI 重构个人生产力，尝试一种 AI 时代的新型创业模式——让一个人借助 AI，拥有过去一支团队的执行能力。</p>
+<p>目前，其主导开发的 Zaokit AI 已形成包括 Zaokit AI PPT、Zaokit Cowork 在内的产品矩阵。Zaokit AI PPT 聚焦 AI 驱动的演示文稿生成与内容创作；Zaokit Cowork 则进一步以 AI Agent 为核心，让 AI 从“回答问题的工具”走向能够参与研究、创作、开发与交付的“数字同事”，探索人与 AI 协同工作的新方式。</p>
+<p>围绕企业级 AI 落地，寻绎已经完成 AI Gateway、AI 安全护栏、私有化 AI 算力部署及企业级 Agent 等一系列技术与产品的实际落地，覆盖大模型统一接入、安全治理、私有化算力基础设施与智能体应用，推动 AI 从概念验证和单点工具真正进入企业生产场景，成为安全、可控、可落地的生产力。</p>
+<p>技术不断迭代，AI 的能力边界也在不断变化，但寻绎始终坚持一个方向：以客户需求为起点，以创造价值为结果，与客户共同成长。</p>
+<p>对于张俊欣而言，“一人公司”并不意味着一个人完成所有工作，而是借助 AI 重新定义个人、团队与组织之间的边界。他希望通过自己的创业实践验证一种新的可能：</p>
+</div>
+<blockquote class="about-quote">未来，公司的最小组织单位，或许不再是一支传统团队，而是“一个人 + 一群 AI Agent”。</blockquote>
+<dl class="profile-facts">
+<div class="profile-fact">
+<dt>个人网站</dt>
+<dd><a href="https://junxinzhang.com">junxinzhang.com</a></dd>
+</div>
+<div class="profile-fact">
+<dt>微信公众号</dt>
+<dd>Just Jason</dd>
+</div>
+<div class="profile-fact">
+<dt>公司</dt>
+<dd>上海寻绎信息科技有限公司</dd>
+</div>
+<div class="profile-fact">
+<dt>产品与方向</dt>
+<dd><a href="https://zaokit.app">Zaokit AI PPT</a> / <a href="https://zaokit.ai">Zaokit Cowork</a> / AI Gateway / AI 安全护栏 / 私有化 AI 算力 / 企业级 Agent</dd>
+</div>
+</dl>
+</div>
+
+<div class="about-section">
+<h2>产品与方向</h2>
+<div class="expertise-grid">
+<div class="expertise-card">
+<h4><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.757.757 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/></svg></span> Zaokit AI PPT</h4>
+<ul>
+<li>AI 驱动的演示文稿生成</li>
+<li>图文内容创作与表达</li>
+<li>从想法到成稿的个人生产力</li>
+</ul>
+</div>
+<div class="expertise-card">
+<h4><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"/><path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z"/></svg></span> Zaokit Cowork</h4>
+<ul>
+<li>以 AI Agent 为核心的数字同事</li>
+<li>参与研究、创作、开发与交付</li>
+<li>探索人与 AI 协同工作的新方式</li>
+</ul>
+</div>
+<div class="expertise-card">
+<h4><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/><path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.833 1.428-.833 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.833.246.833 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.833-1.428.833-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.833-.246-.833-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/></svg></span> 企业级 AI 落地</h4>
+<ul>
+<li>AI Gateway 与大模型统一接入</li>
+<li>AI 安全护栏与治理</li>
+<li>私有化 AI 算力与企业级 Agent</li>
+</ul>
+</div>
+</div>
+</div>
 
 <div class="about-section">
 <h2>专业背景</h2>
@@ -204,8 +270,16 @@ faq:
 <div class="about-section">
 <h2>常见问题 (FAQ)</h2>
 <div class="faq-item">
+<div class="faq-question">张俊欣是谁？</div>
+<div class="faq-answer">张俊欣是上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人及核心开发者。2023 年初投身 AI 创业，同年 7 月创立寻绎，是国内较早一批生成式 AI 创业实践者，也是“一人公司”模式的践行者。</div>
+</div>
+<div class="faq-item">
 <div class="faq-question">Jason Zhang 的专业背景是什么？</div>
 <div class="faq-answer">我拥有 <span class="work-years"></span> 年以上软件开发经验，专注于微服务架构设计与系统工程实践，技术覆盖 Java、Go、Python 等主流语言。近年来聚焦于大模型与 AI Agent 应用场景的工程化落地，具备端到端的产品交付能力，包括 RAG 系统开发、AI Agent 集成、私有化大模型部署等。</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">寻绎和 Zaokit AI 是什么？</div>
+<div class="faq-answer">上海寻绎信息科技有限公司由张俊欣于 2023 年 7 月创立，寓意“寻找线索，发现价值”。Zaokit AI 已形成包括 Zaokit AI PPT、Zaokit Cowork 在内的产品矩阵，并完成 AI Gateway、AI 安全护栏、私有化 AI 算力部署及企业级 Agent 等落地。</div>
 </div>
 <div class="faq-item">
 <div class="faq-question">这个博客主要分享什么内容？</div>
@@ -213,7 +287,7 @@ faq:
 </div>
 <div class="faq-item">
 <div class="faq-question">如何获取文章更新？</div>
-<div class="faq-answer">你可以通过订阅 RSS Feed、关注我的 Twitter/X (@Jasonz9788) 或在 GitHub Discussions 参与讨论来获取最新文章更新。</div>
+<div class="faq-answer">你可以通过订阅 RSS Feed、关注微信公众号 Just Jason、关注我的 Twitter/X (@Jasonz9788) 或在 GitHub Discussions 参与讨论来获取最新文章更新。</div>
 </div>
 </div>
 
