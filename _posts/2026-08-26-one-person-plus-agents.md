@@ -59,7 +59,7 @@ faq:
 
 面向创作，是 [Zaokit AI PPT](https://zaokit.app)。图文和演示从需求长出来，不是再雇一套设计和文案班子。
 
-面向共事，是 Zaokit Cowork。AI 不再只回答问题，要进研究、创作、开发、交付。8 月 24 号文里写过，DeerFlow 那条线已经改叫 Zaokit Cowork，接上 Authing 和算力中心。数字同事坐上工位，人批最后一刀。
+面向共事，是我们自己实现的 Zaokit Cowork。AI 不再只回答问题，要进研究、创作、开发、交付。8 月 24 号文里写过，它接上 Authing 和算力中心。数字同事坐上工位，人批最后一刀。
 
 交易和模型入口在 [zaokit.ai](https://zaokit.ai)。个人站是 [junxinzhang.com](https://junxinzhang.com)，公众号 Just Jason。
 
