@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zaokit AI 产品架构 · 产品能力架构示意</title>
+<style>
+  :root{--bg:#09090B;--panel:#0C0C0F;--line:#27272A;--dim:#71717A;--mute:#A1A1AA;--text:#E4E4E7;--acc:#A78BFA}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--text)}
+  body{font-family:"SF Mono",Menlo,"JetBrains Mono",Consolas,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",monospace;min-height:100vh}
+  .wrap{width:min(1600px, calc(100vw - 32px), calc((100vh - 92px) * 1.4545));min-width:min(1120px, calc(100vw - 24px));margin:0 auto;padding:14px 0 18px}
+  .bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0 0 10px}
+  .seg{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--panel)}
+  .seg button,.ctl button{font:inherit;font-size:14px;color:var(--mute);background:transparent;border:0;padding:8px 14px;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap}
+  .seg button+button{border-left:1px solid var(--line)}
+  .seg button i{width:8px;height:8px;background:var(--c);display:inline-block}
+  .seg button:hover,.ctl button:hover{color:var(--text);background:#18181B}
+  .seg button[aria-pressed="true"]{color:#FAFAFA;background:#18181B;box-shadow:inset 0 -2px 0 var(--c,#A78BFA)}
+  .ctl{display:flex;gap:8px}
+  .ctl button{border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+  .ctl button[aria-pressed="true"]{color:#FCD34D;border-color:#FCD34D66}
+  button:focus-visible,[role=button]:focus-visible{outline:2px solid #A78BFA;outline-offset:2px}
+  .hint{margin:0 0 0 auto;font-size:13px;color:var(--dim)}
+  .scroller{overflow-x:auto;overflow-y:hidden;border-radius:14px;-webkit-overflow-scrolling:touch;position:relative}
+  .stage{min-width:1120px}
+  .stage svg{display:block;width:100%;height:auto}
+  .scroll-hint{display:none;margin:0 0 8px;padding:8px 12px;font-size:13px;color:#FCD34D;border:1px dashed #FCD34D66;border-radius:6px;text-align:center}
+  .overflow .scroll-hint{display:block}
+  @media (max-width: 760px){.hint{display:none}.wrap{padding:10px 0;width:calc(100vw - 20px)}.seg{flex-wrap:wrap;max-width:100%}.seg button{padding:8px 10px}}
+
+  /* ---------- diagram states ---------- */
+  #arch .node{transition:opacity .35s}
+  #arch .node .frame{transition:stroke-opacity .3s, stroke .3s}
+  #arch .product{cursor:pointer}
+  #arch .product:hover .frame{stroke-opacity:1;stroke-width:1.8}
+  #arch .wire,#arch #layers,#arch .route{transition:opacity .35s, stroke-opacity .35s}
+  #arch.dimmed .node:not(.on){opacity:.3}
+  #arch.dimmed .wire{opacity:.22}
+  #arch.dimmed #layers{opacity:.55}
+  #arch .node.on .frame{stroke:var(--c);stroke-opacity:1;stroke-width:1.8;filter:drop-shadow(0 0 6px color-mix(in srgb, var(--c) 45%, transparent))}
+  #arch .node.on .frame-c{stroke:var(--acc)}
+  #arch .cap .cap-t{transition:fill .3s}
+  #arch .cap.on .cap-t{fill:var(--c);font-weight:600}
+  #arch .route.path{stroke:var(--acc);stroke-opacity:.2}
+  #arch .route.on{stroke:var(--acc);stroke-opacity:.95}
+  #arch .route.gov{stroke-dasharray:6 6}
+  #arch .route.combo{stroke-dasharray:3 4}
+  #arch .dot .halo{opacity:.35}
+  #st-cursor{animation:blink 1.1s steps(1) infinite}
+  .paused #st-cursor{animation:none}
+  @keyframes blink{50%{opacity:0}}
+  @media (prefers-reduced-motion: reduce){#st-cursor{animation:none}}
+</style>
+</head>
+<body>
+<main class="wrap" id="wrap">
+  <header class="bar">
+    <div class="seg" role="group" aria-label="场景选择">
+      <button data-mode="overview" aria-pressed="true" style="--c:#A78BFA"><i></i>总览</button>
+      <button data-mode="ppt" aria-pressed="false" style="--c:#F472B6"><i></i>PPT创作</button>
+      <button data-mode="cowork" aria-pressed="false" style="--c:#34D399"><i></i>Cowork协作</button>
+      <button data-mode="edu" aria-pressed="false" style="--c:#FCD34D"><i></i>教学学习</button>
+    </div>
+    <div class="ctl">
+      <button id="btn-pause" aria-pressed="false">⏸ 暂停</button>
+      <button id="btn-replay">↻ 重播</button>
+    </div>
+    <p class="hint">点击产品查看详情 · 空格 暂停/继续 · 1–4 切换场景 · Esc 返回</p>
+  </header>
+  <div class="scroll-hint" id="scroll-hint">← 架构图较宽：左右滑动查看完整内容 →</div>
+  <div class="scroller" id="scroller"><div class="stage">
+<svg id="arch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" role="img" aria-labelledby="arch-title arch-desc">
+<title id="arch-title">Zaokit AI 产品架构（产品能力架构示意）</title>
+<desc id="arch-desc">用户经品牌入口进入 Zaokit AI PPT、Cowork、AI Education 三个应用；PPT 与 Cowork 通过 Zaokit AI Gateway 按需调用文本推理、图像生成、语音等外部模型能力；Zaokit Token Hub 以旁路治理方式提供团队用量、额度分配与成本可视；各应用分别产出演示文稿、工作成果与学习实践。本图为产品能力示意，不代表生产部署拓扑。</desc>
+<defs><style>
+.sans{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei",system-ui,sans-serif}
+.mono{font-family:"SF Mono",Menlo,"JetBrains Mono",Consolas,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",monospace}
+.wire{fill:none;stroke:#52525B;stroke-width:1.4}
+.wire.gov{stroke:#93C5FD;stroke-opacity:.75;stroke-dasharray:6 6}
+.wire.combo{stroke:#71717A;stroke-dasharray:2 4}
+.wire.deliver{stroke-opacity:.8}
+.route{fill:none;stroke:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+</style><linearGradient id="zk-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C3AED"/><stop offset=".55" stop-color="#8B5CF6"/><stop offset="1" stop-color="#EC4899"/></linearGradient><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#52525B"/></marker><marker id="ar-ppt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#F472B6"/></marker><marker id="ar-cowork" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#34D399"/></marker><marker id="ar-edu" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#FCD34D"/></marker><marker id="ar-hub" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#93C5FD"/></marker><filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="3"/></filter></defs>
+<rect x="0" y="0" width="1600" height="1100" fill="#09090B"/>
+<rect x="16" y="16" width="1568" height="1068" rx="14" fill="#0C0C0F" stroke="#2A2A30" stroke-width="1.2"/>
+<path d="M16,52 V30 a14,14 0 0 1 14,-14 H1570 a14,14 0 0 1 14,14 V52 Z" fill="#131317"/>
+<line x1="16" y1="52" x2="1584" y2="52" stroke="#27272A"/>
+<circle cx="40" cy="34" r="6" fill="#FF5F57" fill-opacity=".85"/>
+<circle cx="60" cy="34" r="6" fill="#FEBC2E" fill-opacity=".85"/>
+<circle cx="80" cy="34" r="6" fill="#28C840" fill-opacity=".85"/>
+<text x="800" y="39" class="mono" font-size="13" fill="#71717A" text-anchor="middle">~/zaokit/architecture — 产品能力架构示意</text>
+<g transform="translate(44,70) scale(1.0000)" aria-label="Zaokit logo">
+  <rect x="0" y="0" width="56" height="56" rx="15" fill="url(#zk-grad)"/>
+  <path d="M17 18.5 H38.5 L17.5 38 H39" fill="none" stroke="#FFFFFF" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M47 3 C47.9 7.4 49.1 8.6 53.5 9.5 C49.1 10.4 47.9 11.6 47 16 C46.1 11.6 44.9 10.4 40.5 9.5 C44.9 8.6 46.1 7.4 47 3 Z" fill="#FCD34D" stroke="#0C0C0F" stroke-width="1.6"/>
+</g>
+<text x="118" y="104" class="sans" font-size="34" fill="#FAFAFA" text-anchor="start" font-weight="700">Zaokit AI 产品架构</text>
+<text x="118" y="134" class="sans" font-size="17" fill="#A1A1AA" text-anchor="start">从能力接入，到创作、协作与学习</text>
+<rect x="1414" y="74" width="142" height="30" rx="4" fill="none" stroke="#FCD34D" stroke-width="1" stroke-opacity=".55"/>
+<text x="1485" y="94" class="sans" font-size="14" fill="#FCD34D" text-anchor="middle">产品能力架构示意</text>
+<g id="legend" class="mono">
+<line x1="1012" y1="131" x2="1040" y2="131" stroke="#A1A1AA" stroke-width="1.6"/>
+<text x="1048" y="136" class="sans" font-size="14" fill="#A1A1AA" text-anchor="start">调用关系</text>
+<line x1="1128" y1="131" x2="1156" y2="131" stroke="#93C5FD" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="1164" y="136" class="sans" font-size="14" fill="#A1A1AA" text-anchor="start">治理关系</text>
+<line x1="1244" y1="131" x2="1270" y2="131" stroke="#34D399" stroke-width="1.6" marker-end="url(#ar-cowork)"/>
+<text x="1280" y="136" class="sans" font-size="14" fill="#A1A1AA" text-anchor="start">产出交付</text>
+<circle cx="1370" cy="131" r="8" fill="#0C0C0F" stroke="#71717A"/>
+<text x="1370" y="135" class="mono" font-size="13" fill="#A1A1AA" text-anchor="middle">+</text>
+<text x="1386" y="136" class="sans" font-size="14" fill="#A1A1AA" text-anchor="start">按需组合</text>
+<circle cx="1474" cy="131" r="7" fill="#A78BFA" opacity=".3" filter="url(#glow)"/>
+<circle cx="1474" cy="131" r="3" fill="#A78BFA"/>
+<text x="1486" y="136" class="sans" font-size="14" fill="#A1A1AA" text-anchor="start">演示流向</text>
+</g>
+<line x1="40" y1="154" x2="1560" y2="154" stroke="#27272A"/>
+<line x1="40" y1="158" x2="1560" y2="158" stroke="#27272A"/>
+<g id="layers">
+<text x="312" y="201" class="mono" font-size="12" fill="#52525B" text-anchor="start">01</text>
+<text x="334" y="201" class="sans" font-size="15" fill="#A1A1AA" text-anchor="start">用户</text>
+<text x="312" y="284" class="mono" font-size="12" fill="#52525B" text-anchor="start">02</text>
+<text x="334" y="284" class="sans" font-size="15" fill="#A1A1AA" text-anchor="start">品牌入口</text>
+<text x="334" y="304" class="sans" font-size="13" fill="#5F5F68" text-anchor="start">非独占路由</text>
+<text x="312" y="392" class="mono" font-size="12" fill="#52525B" text-anchor="start">03</text>
+<text x="334" y="392" class="sans" font-size="15" fill="#A1A1AA" text-anchor="start">应用层</text>
+<text x="334" y="412" class="sans" font-size="13" fill="#5F5F68" text-anchor="start">独立 · 可组合</text>
+<text x="312" y="640" class="mono" font-size="12" fill="#52525B" text-anchor="start">04</text>
+<text x="334" y="640" class="sans" font-size="15" fill="#A1A1AA" text-anchor="start">接入层</text>
+<text x="312" y="752" class="mono" font-size="12" fill="#52525B" text-anchor="start">05</text>
+<text x="334" y="752" class="sans" font-size="15" fill="#A1A1AA" text-anchor="start">模型能力</text>
+<text x="334" y="772" class="sans" font-size="13" fill="#5F5F68" text-anchor="start">外部 · 通用类别</text>
+<text x="312" y="861" class="mono" font-size="12" fill="#52525B" text-anchor="start">06</text>
+<text x="334" y="861" class="sans" font-size="15" fill="#A1A1AA" text-anchor="start">成果</text>
+</g>
+<g id="wires">
+<path class="wire call" d="M603,216 V238"/>
+<path class="wire call" d="M603,238 V258" marker-end="url(#ar)"/>
+<path class="wire call" d="M603,320 V340"/>
+<path class="wire call" d="M603,340 V362" marker-end="url(#ar)"/>
+<path class="wire call" d="M989,216 V238"/>
+<path class="wire call" d="M989,238 V258" marker-end="url(#ar)"/>
+<path class="wire call" d="M989,320 V340"/>
+<path class="wire call" d="M989,340 V362" marker-end="url(#ar)"/>
+<path class="wire call" d="M1375,216 V238"/>
+<path class="wire call" d="M1375,238 V258" marker-end="url(#ar)"/>
+<path class="wire call" d="M1375,320 V340"/>
+<path class="wire call" d="M1375,340 V362" marker-end="url(#ar)"/>
+<path class="wire call" d="M603,238 H1375"/>
+<path class="wire call" d="M603,340 H1375"/>
+<path class="wire call" d="M603,542 V610" marker-end="url(#ar)"/>
+<path class="wire call" d="M989,542 V610" marker-end="url(#ar)"/>
+<path class="wire call" d="M989,692 V712"/>
+<path class="wire call" d="M680,712 H1298"/>
+<path class="wire call" d="M680,712 V732" marker-end="url(#ar)"/>
+<path class="wire call" d="M989,712 V732" marker-end="url(#ar)"/>
+<path class="wire call" d="M1298,712 V732" marker-end="url(#ar)"/>
+<path class="wire gov" d="M292,470 H430"/>
+<path class="wire gov" d="M292,668 H520"/>
+<path class="wire deliver" d="M455,542 V661 A7,7 0 0 0 455,675 V856 H468" style="stroke:#F472B6" marker-end="url(#ar-ppt)"/>
+<path class="wire deliver" d="M1120,542 V576 H1495 V812 H989 V832" style="stroke:#34D399" marker-end="url(#ar-cowork)"/>
+<path class="wire deliver" d="M1523,542 V856 H1510" style="stroke:#FCD34D" marker-end="url(#ar-edu)"/>
+<path class="wire combo" d="M776,452 H816"/>
+<path class="wire combo" d="M1162,452 H1202"/>
+<circle cx="603" cy="238" r="3" fill="#71717A"/>
+<circle cx="603" cy="340" r="3" fill="#71717A"/>
+<circle cx="989" cy="238" r="3" fill="#71717A"/>
+<circle cx="989" cy="340" r="3" fill="#71717A"/>
+<circle cx="1375" cy="238" r="3" fill="#71717A"/>
+<circle cx="1375" cy="340" r="3" fill="#71717A"/>
+<circle cx="680" cy="712" r="3" fill="#71717A"/>
+<circle cx="989" cy="712" r="3" fill="#71717A"/>
+<circle cx="1298" cy="712" r="3" fill="#71717A"/>
+</g>
+<g id="n-hub" class="node product" data-id="hub" data-box="1" style="--c:#93C5FD" role="button" tabindex="0" aria-label="Zaokit Token Hub：查看详情">
+<rect x="40" y="180" width="252" height="700" rx="3" fill="#0C0C0F" stroke="#93C5FD" stroke-width="1.3" class="frame" stroke-opacity=".75"/>
+<text x="166.0" y="214" class="sans" font-size="19" fill="#FAFAFA" text-anchor="middle" font-weight="700">Zaokit Token Hub</text>
+<text x="166.0" y="240" class="sans" font-size="14" fill="#93C5FD" text-anchor="middle">治理面 · 旁路关系</text>
+<line x1="40" y1="258" x2="292" y2="258" stroke="#93C5FD" stroke-opacity=".3"/>
+<line x1="60" y1="276" x2="60" y2="858" stroke="#93C5FD" stroke-opacity=".35" stroke-dasharray="3 5"/>
+<g class="cap" id="cap-hub-1">
+<path class="cap-mark" d="M60,280 l6,6 l-6,6 l-6,-6 z" fill="#93C5FD"/>
+<text x="78" y="292" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">团队用量</text>
+<text x="78" y="314" class="sans" font-size="14" fill="#A1A1AA" text-anchor="start">按团队查看使用情况</text>
+</g>
+<g class="cap" id="cap-hub-2">
+<path class="cap-mark" d="M60,338 l6,6 l-6,6 l-6,-6 z" fill="#93C5FD"/>
+<text x="78" y="350" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">额度分配</text>
+<text x="78" y="372" class="sans" font-size="14" fill="#A1A1AA" text-anchor="start">为团队设定可用额度</text>
+</g>
+<g class="cap" id="cap-hub-3">
+<path class="cap-mark" d="M60,396 l6,6 l-6,6 l-6,-6 z" fill="#93C5FD"/>
+<text x="78" y="408" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">成本可视</text>
+<text x="78" y="430" class="sans" font-size="14" fill="#A1A1AA" text-anchor="start">让 AI 成本清楚可见</text>
+</g>
+<path d="M60,464 l6,6 l-6,6 l-6,-6 z" fill="#0C0C0F" stroke="#93C5FD" stroke-width="1.3"/>
+<text x="78" y="475" class="sans" font-size="15" fill="#E4E4E7" text-anchor="start">应用层</text>
+<path d="M60,662 l6,6 l-6,6 l-6,-6 z" fill="#0C0C0F" stroke="#93C5FD" stroke-width="1.3"/>
+<text x="78" y="673" class="mono" font-size="15" fill="#E4E4E7" text-anchor="start">Gateway</text>
+<rect x="80" y="498" width="7" height="7" fill="#F472B6"/>
+<text x="96" y="506" class="mono" font-size="13" fill="#A1A1AA" text-anchor="start">AI PPT</text>
+<rect x="80" y="522" width="7" height="7" fill="#34D399"/>
+<text x="96" y="530" class="mono" font-size="13" fill="#A1A1AA" text-anchor="start">Cowork</text>
+<rect x="80" y="546" width="7" height="7" fill="#FCD34D"/>
+<text x="96" y="554" class="mono" font-size="13" fill="#A1A1AA" text-anchor="start">Education</text>
+<text x="78" y="584" class="sans" font-size="13" fill="#71717A" text-anchor="start">可查看各应用用量</text>
+<text x="60" y="798" class="sans" font-size="14" fill="#71717A" text-anchor="start">◇ 关系说明</text>
+<text x="60" y="824" class="sans" font-size="14" fill="#A1A1AA" text-anchor="start">旁路治理，不代理内容</text>
+<text x="60" y="848" class="sans" font-size="14" fill="#A1A1AA" text-anchor="start">不是调用必经环节</text>
+</g>
+<g id="n-aud-ind" class="node" data-id="aud-ind" data-box="1" style="--c:#E4E4E7">
+<rect x="513" y="176" width="180" height="40" rx="3" fill="#0C0C0F" stroke="#3F3F46" stroke-width="1.2" class="frame"/>
+<text x="603" y="202" class="sans" font-size="17" fill="#E4E4E7" text-anchor="middle">个人</text>
+</g>
+<g id="n-aud-team" class="node" data-id="aud-team" data-box="1" style="--c:#E4E4E7">
+<rect x="899" y="176" width="180" height="40" rx="3" fill="#0C0C0F" stroke="#3F3F46" stroke-width="1.2" class="frame"/>
+<text x="989" y="202" class="sans" font-size="17" fill="#E4E4E7" text-anchor="middle">团队</text>
+</g>
+<g id="n-aud-ent" class="node" data-id="aud-ent" data-box="1" style="--c:#E4E4E7">
+<rect x="1285" y="176" width="180" height="40" rx="3" fill="#0C0C0F" stroke="#3F3F46" stroke-width="1.2" class="frame"/>
+<text x="1375" y="202" class="sans" font-size="17" fill="#E4E4E7" text-anchor="middle">企业</text>
+</g>
+<g id="n-en-com" class="node" data-id="en-com" data-box="1" style="--c:#E4E4E7">
+<rect x="453" y="258" width="300" height="62" rx="3" fill="#0C0C0F" stroke="#3F3F46" stroke-width="1.2" class="frame"/>
+<text x="603" y="284" class="mono" font-size="17" fill="#E4E4E7" text-anchor="middle" font-weight="600">zaokit.com</text>
+<text x="603" y="308" class="sans" font-size="15" fill="#A1A1AA" text-anchor="middle">了解产品</text>
+</g>
+<g id="n-en-app" class="node" data-id="en-app" data-box="1" style="--c:#C4B5FD">
+<rect x="839" y="258" width="300" height="62" rx="3" fill="#0C0C0F" stroke="#3F3F46" stroke-width="1.2" class="frame"/>
+<text x="989" y="284" class="mono" font-size="17" fill="#C4B5FD" text-anchor="middle" font-weight="600">zaokit.app</text>
+<text x="989" y="308" class="sans" font-size="15" fill="#A1A1AA" text-anchor="middle">体验创作</text>
+</g>
+<g id="n-en-ai" class="node" data-id="en-ai" data-box="1" style="--c:#6EE7B7">
+<rect x="1225" y="258" width="300" height="62" rx="3" fill="#0C0C0F" stroke="#3F3F46" stroke-width="1.2" class="frame"/>
+<text x="1375" y="284" class="mono" font-size="17" fill="#6EE7B7" text-anchor="middle" font-weight="600">zaokit.ai</text>
+<text x="1375" y="308" class="sans" font-size="15" fill="#A1A1AA" text-anchor="middle">企业需求</text>
+</g>
+<g id="n-ppt" class="node product" data-id="ppt" data-box="1" style="--c:#F472B6" role="button" tabindex="0" aria-label="Zaokit AI PPT：查看详情">
+<rect x="430" y="362" width="346" height="180" rx="3" fill="#0C0C0F" stroke="#F472B6" stroke-width="1.4" class="frame" stroke-opacity=".8"/>
+<rect x="450" y="383" width="10" height="10" fill="#F472B6"/>
+<text x="470" y="394" class="sans" font-size="20" fill="#FAFAFA" text-anchor="start" font-weight="700">Zaokit AI PPT</text>
+<text x="450" y="422" class="sans" font-size="15" fill="#A1A1AA" text-anchor="start">演示创作工具</text>
+<rect x="680" y="406" width="80" height="22" rx="11" fill="none" stroke="#3F3F46" stroke-width="1"/>
+<text x="720" y="421.5" class="sans" font-size="12" fill="#71717A" text-anchor="middle">可独立使用</text>
+<line x1="450" y1="438" x2="756" y2="438" stroke="#27272A"/>
+<g class="cap" id="cap-ppt-1">
+<text x="450" y="466" class="cap-mark mono" font-size="14" fill="#F472B6" text-anchor="start">▸</text>
+<text x="470" y="466" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">内容梳理</text>
+<text x="756" y="466" class="mono" font-size="13" fill="#52525B" text-anchor="end">01</text>
+</g>
+<g class="cap" id="cap-ppt-2">
+<text x="450" y="492" class="cap-mark mono" font-size="14" fill="#F472B6" text-anchor="start">▸</text>
+<text x="470" y="492" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">大纲生成</text>
+<text x="756" y="492" class="mono" font-size="13" fill="#52525B" text-anchor="end">02</text>
+</g>
+<g class="cap" id="cap-ppt-3">
+<text x="450" y="518" class="cap-mark mono" font-size="14" fill="#F472B6" text-anchor="start">▸</text>
+<text x="470" y="518" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">演示创作</text>
+<text x="756" y="518" class="mono" font-size="13" fill="#52525B" text-anchor="end">03</text>
+</g>
+</g>
+<g id="n-cowork" class="node product" data-id="cowork" data-box="1" style="--c:#34D399" role="button" tabindex="0" aria-label="Zaokit Cowork：查看详情">
+<rect x="816" y="362" width="346" height="180" rx="3" fill="#0C0C0F" stroke="#34D399" stroke-width="1.4" class="frame" stroke-opacity=".8"/>
+<rect x="836" y="383" width="10" height="10" fill="#34D399"/>
+<text x="856" y="394" class="sans" font-size="20" fill="#FAFAFA" text-anchor="start" font-weight="700">Zaokit Cowork</text>
+<text x="836" y="422" class="sans" font-size="15" fill="#A1A1AA" text-anchor="start">工作协作工具</text>
+<rect x="1066" y="406" width="80" height="22" rx="11" fill="none" stroke="#3F3F46" stroke-width="1"/>
+<text x="1106" y="421.5" class="sans" font-size="12" fill="#71717A" text-anchor="middle">可独立使用</text>
+<line x1="836" y1="438" x2="1142" y2="438" stroke="#27272A"/>
+<g class="cap" id="cap-cowork-1">
+<text x="836" y="466" class="cap-mark mono" font-size="14" fill="#34D399" text-anchor="start">▸</text>
+<text x="856" y="466" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">资料分析</text>
+<text x="1142" y="466" class="mono" font-size="13" fill="#52525B" text-anchor="end">01</text>
+</g>
+<g class="cap" id="cap-cowork-2">
+<text x="836" y="492" class="cap-mark mono" font-size="14" fill="#34D399" text-anchor="start">▸</text>
+<text x="856" y="492" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">文件处理</text>
+<text x="1142" y="492" class="mono" font-size="13" fill="#52525B" text-anchor="end">02</text>
+</g>
+<g class="cap" id="cap-cowork-3">
+<text x="836" y="518" class="cap-mark mono" font-size="14" fill="#34D399" text-anchor="start">▸</text>
+<text x="856" y="518" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">任务协作</text>
+<text x="1142" y="518" class="mono" font-size="13" fill="#52525B" text-anchor="end">03</text>
+</g>
+</g>
+<g id="n-edu" class="node product" data-id="edu" data-box="1" style="--c:#FCD34D" role="button" tabindex="0" aria-label="Zaokit AI Education：查看详情">
+<rect x="1202" y="362" width="346" height="180" rx="3" fill="#0C0C0F" stroke="#FCD34D" stroke-width="1.4" class="frame" stroke-opacity=".8"/>
+<rect x="1222" y="383" width="10" height="10" fill="#FCD34D"/>
+<text x="1242" y="394" class="sans" font-size="20" fill="#FAFAFA" text-anchor="start" font-weight="700">Zaokit AI Education</text>
+<text x="1222" y="422" class="sans" font-size="15" fill="#A1A1AA" text-anchor="start">学习与应用赋能</text>
+<rect x="1452" y="406" width="80" height="22" rx="11" fill="none" stroke="#3F3F46" stroke-width="1"/>
+<text x="1492" y="421.5" class="sans" font-size="12" fill="#71717A" text-anchor="middle">可独立使用</text>
+<line x1="1222" y1="438" x2="1528" y2="438" stroke="#27272A"/>
+<g class="cap" id="cap-edu-1">
+<text x="1222" y="466" class="cap-mark mono" font-size="14" fill="#FCD34D" text-anchor="start">▸</text>
+<text x="1242" y="466" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">企业实战</text>
+<text x="1528" y="466" class="mono" font-size="13" fill="#52525B" text-anchor="end">01</text>
+</g>
+<g class="cap" id="cap-edu-2">
+<text x="1222" y="492" class="cap-mark mono" font-size="14" fill="#FCD34D" text-anchor="start">▸</text>
+<text x="1242" y="492" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">教学学习</text>
+<text x="1528" y="492" class="mono" font-size="13" fill="#52525B" text-anchor="end">02</text>
+</g>
+<g class="cap" id="cap-edu-3">
+<text x="1222" y="518" class="cap-mark mono" font-size="14" fill="#FCD34D" text-anchor="start">▸</text>
+<text x="1242" y="518" class="cap-t sans" font-size="17" fill="#E4E4E7" text-anchor="start">实践训练</text>
+<text x="1528" y="518" class="mono" font-size="13" fill="#52525B" text-anchor="end">03</text>
+</g>
+</g>
+<g id="n-combo-1" class="node combo" data-id="combo-1">
+<circle cx="796" cy="452" r="11" fill="#0C0C0F" stroke="#71717A" class="frame-c"/>
+<text x="796" y="457" class="mono" font-size="15" fill="#A1A1AA" text-anchor="middle">+</text>
+<text x="796" y="484" class="sans" font-size="12" fill="#71717A" text-anchor="middle">组合</text>
+</g>
+<g id="n-combo-2" class="node combo" data-id="combo-2">
+<circle cx="1182" cy="452" r="11" fill="#0C0C0F" stroke="#71717A" class="frame-c"/>
+<text x="1182" y="457" class="mono" font-size="15" fill="#A1A1AA" text-anchor="middle">+</text>
+<text x="1182" y="484" class="sans" font-size="12" fill="#71717A" text-anchor="middle">组合</text>
+</g>
+<g id="n-gw" class="node product" data-id="gw" data-box="1" style="--c:#A78BFA" role="button" tabindex="0" aria-label="Zaokit AI Gateway：查看详情">
+<rect x="520" y="610" width="938" height="82" rx="3" fill="#0C0C0F" stroke="#A78BFA" stroke-width="1.4" class="frame" stroke-opacity=".85"/>
+<rect x="542" y="631" width="10" height="10" fill="#A78BFA"/>
+<text x="562" y="643" class="sans" font-size="22" fill="#FAFAFA" text-anchor="start" font-weight="700">Zaokit AI Gateway</text>
+<text x="542" y="672" class="sans" font-size="15" fill="#A1A1AA" text-anchor="start">能力接入层 · 连接应用与外部模型能力</text>
+<g class="cap" id="cap-gw-1">
+<rect x="1100" y="632" width="132" height="38" rx="3" fill="none" stroke="#A78BFA" stroke-width="1" stroke-opacity=".45"/>
+<text x="1166.0" y="657" class="cap-t sans" font-size="16" fill="#E4E4E7" text-anchor="middle">统一模型接入</text>
+</g>
+<g class="cap" id="cap-gw-2">
+<rect x="1248" y="632" width="186" height="38" rx="3" fill="none" stroke="#A78BFA" stroke-width="1" stroke-opacity=".45"/>
+<text x="1341.0" y="657" class="cap-t sans" font-size="16" fill="#E4E4E7" text-anchor="middle">多模型与服务连接</text>
+</g>
+</g>
+<g id="n-m-text" class="node" data-id="m-text" data-box="1" style="--c:#A1A1AA">
+<rect x="555" y="732" width="250" height="52" rx="3" fill="#0C0C0F" stroke="#3F3F46" stroke-width="1.2" class="frame"/>
+<text x="626" y="764" class="mono" font-size="16" fill="#A78BFA" text-anchor="middle">¶</text>
+<text x="688" y="764" class="sans" font-size="17" fill="#E4E4E7" text-anchor="middle">文本推理</text>
+</g>
+<g id="n-m-img" class="node" data-id="m-img" data-box="1" style="--c:#A1A1AA">
+<rect x="864" y="732" width="250" height="52" rx="3" fill="#0C0C0F" stroke="#3F3F46" stroke-width="1.2" class="frame"/>
+<text x="935" y="764" class="mono" font-size="16" fill="#A78BFA" text-anchor="middle">▣</text>
+<text x="997" y="764" class="sans" font-size="17" fill="#E4E4E7" text-anchor="middle">图像生成</text>
+</g>
+<g id="n-m-voice" class="node" data-id="m-voice" data-box="1" style="--c:#A1A1AA">
+<rect x="1173" y="732" width="250" height="52" rx="3" fill="#0C0C0F" stroke="#3F3F46" stroke-width="1.2" class="frame"/>
+<text x="1244" y="764" class="mono" font-size="16" fill="#A78BFA" text-anchor="middle">∿</text>
+<text x="1306" y="764" class="sans" font-size="17" fill="#E4E4E7" text-anchor="middle">语音能力</text>
+</g>
+<g id="n-o-deck" class="node" data-id="o-deck" data-box="1" style="--c:#F472B6">
+<rect x="468" y="832" width="270" height="48" rx="3" fill="#0C0C0F" stroke="#F472B6" stroke-width="1.2" class="frame" stroke-opacity=".55"/>
+<rect x="486" y="851" width="9" height="9" fill="#F472B6"/>
+<text x="506" y="862" class="sans" font-size="17" fill="#E4E4E7" text-anchor="start">演示文稿</text>
+<text x="720" y="862" class="mono" font-size="13" fill="#71717A" text-anchor="end">AI PPT</text>
+</g>
+<g id="n-o-work" class="node" data-id="o-work" data-box="1" style="--c:#34D399">
+<rect x="854" y="832" width="270" height="48" rx="3" fill="#0C0C0F" stroke="#34D399" stroke-width="1.2" class="frame" stroke-opacity=".55"/>
+<rect x="872" y="851" width="9" height="9" fill="#34D399"/>
+<text x="892" y="862" class="sans" font-size="17" fill="#E4E4E7" text-anchor="start">工作成果</text>
+<text x="1106" y="862" class="mono" font-size="13" fill="#71717A" text-anchor="end">Cowork</text>
+</g>
+<g id="n-o-learn" class="node" data-id="o-learn" data-box="1" style="--c:#FCD34D">
+<rect x="1240" y="832" width="270" height="48" rx="3" fill="#0C0C0F" stroke="#FCD34D" stroke-width="1.2" class="frame" stroke-opacity=".55"/>
+<rect x="1258" y="851" width="9" height="9" fill="#FCD34D"/>
+<text x="1278" y="862" class="sans" font-size="17" fill="#E4E4E7" text-anchor="start">学习实践</text>
+<text x="1492" y="862" class="mono" font-size="13" fill="#71717A" text-anchor="end">Education</text>
+</g>
+<g id="routes">
+<path class="route call" id="r-ind-com" d="M603,216 V258"/>
+<path class="route call" id="r-ind-app" d="M603,216 V238 H989 V258"/>
+<path class="route call" id="r-ind-ai" d="M603,216 V238 H1375 V258"/>
+<path class="route call" id="r-team-com" d="M989,216 V238 H603 V258"/>
+<path class="route call" id="r-team-app" d="M989,216 V258"/>
+<path class="route call" id="r-team-ai" d="M989,216 V238 H1375 V258"/>
+<path class="route call" id="r-ent-com" d="M1375,216 V238 H603 V258"/>
+<path class="route call" id="r-ent-app" d="M1375,216 V238 H989 V258"/>
+<path class="route call" id="r-ent-ai" d="M1375,216 V258"/>
+<path class="route call" id="r-com-ppt" d="M603,320 V362"/>
+<path class="route call" id="r-com-cowork" d="M603,320 V340 H989 V362"/>
+<path class="route call" id="r-com-edu" d="M603,320 V340 H1375 V362"/>
+<path class="route call" id="r-app-ppt" d="M989,320 V340 H603 V362"/>
+<path class="route call" id="r-app-cowork" d="M989,320 V362"/>
+<path class="route call" id="r-app-edu" d="M989,320 V340 H1375 V362"/>
+<path class="route call" id="r-ai-ppt" d="M1375,320 V340 H603 V362"/>
+<path class="route call" id="r-ai-cowork" d="M1375,320 V340 H989 V362"/>
+<path class="route call" id="r-ai-edu" d="M1375,320 V362"/>
+<path class="route call" id="r-ppt-gw" d="M603,542 V610"/>
+<path class="route call" id="r-cowork-gw" d="M989,542 V610"/>
+<path class="route call" id="r-gw-text" d="M989,692 V712 H680 V732"/>
+<path class="route call" id="r-gw-img" d="M989,692 V732"/>
+<path class="route call" id="r-gw-voice" d="M989,692 V712 H1298 V732"/>
+<path class="route deliver" id="r-ppt-out" d="M455,542 V661 A7,7 0 0 0 455,675 V856 H468"/>
+<path class="route deliver" id="r-cowork-out" d="M1120,542 V576 H1495 V812 H989 V832"/>
+<path class="route deliver" id="r-edu-out" d="M1523,542 V856 H1510"/>
+<path class="route combo" id="r-ppt-cowork" d="M776,452 H816"/>
+<path class="route combo" id="r-cowork-ppt" d="M816,452 H776"/>
+<path class="route combo" id="r-edu-cowork" d="M1202,452 H1162"/>
+<path class="route gov" id="r-hub-app" d="M292,470 H430"/>
+<path class="route gov" id="r-hub-gw" d="M292,668 H520"/>
+</g>
+<g id="bus-notes">
+<rect x="695.0" y="329" width="202" height="22" rx="11" fill="#0C0C0F" stroke="#27272A" stroke-width="1"/>
+<text x="796" y="344.5" class="sans" font-size="13" fill="#71717A" text-anchor="middle">任一入口 · 可进入任一产品</text>
+<rect x="1100.5" y="329" width="163" height="22" rx="11" fill="#0C0C0F" stroke="#27272A" stroke-width="1"/>
+<text x="1182" y="344.5" class="sans" font-size="13" fill="#71717A" text-anchor="middle">品牌入口，非一对一后端</text>
+</g><g id="dots"></g>
+<g id="log">
+<rect x="40" y="904" width="1520" height="128" rx="3" fill="none" stroke="#27272A" stroke-width="1.2"/>
+<rect x="56" y="893" width="420" height="22" fill="#0C0C0F"/>
+<text x="66" y="909" class="sans" font-size="15" fill="#E4E4E7"><tspan id="log-title">演示事件</tspan><tspan id="log-sub" fill="#71717A" font-size="13">  · 场景路径（概念示意，非实时监控）</tspan></text>
+<text id="log-0" x="64" y="942" class="mono" font-size="14"><tspan class="la" fill="#52525B">│</tspan><tspan class="lb" x="94" fill="#F472B6">PPT创作</tspan><tspan class="lc sans" x="200" fill="#E4E4E7" font-size="15">个人 → zaokit.app → Zaokit AI PPT → Gateway → 文本推理 / 图像生成 → 演示文稿</tspan></text>
+<text id="log-1" x="64" y="968" class="mono" font-size="14"><tspan class="la" fill="#52525B">│</tspan><tspan class="lb" x="94" fill="#34D399">Cowork协作</tspan><tspan class="lc sans" x="200" fill="#E4E4E7" font-size="15">团队 → zaokit.com → Zaokit Cowork → Gateway → 文本推理 → 工作成果；Token Hub 旁路查看团队用量</tspan></text>
+<text id="log-2" x="64" y="994" class="mono" font-size="14"><tspan class="la" fill="#52525B">│</tspan><tspan class="lb" x="94" fill="#FCD34D">教学学习</tspan><tspan class="lc sans" x="200" fill="#E4E4E7" font-size="15">企业 → zaokit.ai → Zaokit AI Education → 在 Cowork / AI PPT 中实践训练 → 学习实践</tspan></text>
+<text id="log-3" x="64" y="1020" class="mono" font-size="14"><tspan class="la" fill="#52525B">│</tspan><tspan class="lb" x="94" fill="#71717A">说明</tspan><tspan class="lc sans" x="200" fill="#E4E4E7" font-size="15">各产品可独立使用，也可按需组合；Education 是学习赋能，不是 PPT 请求的必经环节</tspan></text>
+</g>
+<g id="status" class="mono" font-size="14">
+<text x="40" y="1064" class="mono" font-size="14"><tspan fill="#34D399">zaokit ~/architecture $</tspan><tspan id="st-cmd" fill="#E4E4E7"> explore --view overview</tspan></text>
+<rect id="st-cursor" x="0" y="1051" width="9" height="16" fill="#E4E4E7" opacity=".8"/>
+<text x="1560" y="1064" class="mono" font-size="14" text-anchor="end" fill="#71717A">场景 <tspan fill="#A78BFA">[</tspan><tspan id="st-scn" fill="#E4E4E7">总览</tspan><tspan fill="#A78BFA">]</tspan>   状态 <tspan fill="#A78BFA">[</tspan><tspan id="st-play" fill="#E4E4E7">静态示意</tspan><tspan fill="#A78BFA">]</tspan>   产品 <tspan fill="#A78BFA">[</tspan><tspan fill="#E4E4E7">5</tspan><tspan fill="#A78BFA">]</tspan></text>
+</g>
+</svg>
+  </div></div>
+</main>
+<script>
+(() => {
+'use strict';
+const svg = document.getElementById('arch');
+const $ = id => document.getElementById(id);
+const COL = {ppt:'#F472B6', cowork:'#34D399', edu:'#FCD34D', gw:'#A78BFA', hub:'#93C5FD', overview:'#A78BFA'};
+const NAME = {overview:'总览', ppt:'PPT创作', cowork:'Cowork协作', edu:'教学学习'};
+
+// ---------------------------------------------------------------- scenarios
+// 每步：n 点亮节点，c 点亮能力项，r 流动路径 [id, 反向]，tag/text 为演示事件文案
+const SC = {
+  ppt: {steps: [
+    {n:['aud-ind','en-app'], r:[['r-ind-app']], tag:'入口', text:'个人用户从 zaokit.app 进入，开始体验创作', dur:2.0},
+    {n:['ppt'], r:[['r-app-ppt']], tag:'AI PPT', text:'在 Zaokit AI PPT 中发起一份演示创作', dur:1.8},
+    {c:['cap-ppt-1'], tag:'内容梳理', text:'整理要点与素材，形成内容结构', dur:1.6},
+    {n:['gw'], c:['cap-gw-1'], r:[['r-ppt-gw']], tag:'Gateway', text:'按需经 Gateway 统一接入所需模型能力', dur:1.8},
+    {n:['m-text','m-img'], c:['cap-gw-2'], r:[['r-gw-text'],['r-gw-img']], tag:'模型能力', text:'调用文本推理与图像生成（通用能力类别）', dur:1.9},
+    {c:['cap-ppt-2'], r:[['r-gw-text',1],['r-gw-img',1],['r-ppt-gw',1]], tag:'大纲生成', text:'结果回到 AI PPT，生成演示大纲', dur:2.0},
+    {c:['cap-ppt-3'], tag:'演示创作', text:'在大纲基础上完成演示页面创作', dur:1.6},
+    {n:['o-deck'], r:[['r-ppt-out']], tag:'产出', text:'得到可继续编辑的演示文稿', dur:2.2},
+  ]},
+  cowork: {steps: [
+    {n:['aud-team','en-com'], r:[['r-team-com']], tag:'入口', text:'团队先在 zaokit.com 了解产品', dur:2.0},
+    {n:['cowork'], c:['cap-cowork-1'], r:[['r-com-cowork']], tag:'资料分析', text:'进入 Zaokit Cowork，上传资料进行分析', dur:2.0},
+    {c:['cap-cowork-2'], tag:'文件处理', text:'整理、提取与改写团队文件', dur:1.6},
+    {n:['gw','m-text'], c:['cap-gw-1'], r:[['r-cowork-gw'],['r-gw-text']], tag:'Gateway', text:'经 Gateway 按需调用文本推理能力', dur:2.0},
+    {c:['cap-cowork-3'], r:[['r-gw-text',1],['r-cowork-gw',1]], tag:'任务协作', text:'结果回到 Cowork，成员分工推进任务', dur:1.9},
+    {n:['hub'], c:['cap-hub-1'], r:[['r-hub-app'],['r-hub-gw']], tag:'Token Hub', text:'旁路查看团队用量；不经手、不代理内容', dur:2.2},
+    {n:['ppt','combo-1'], r:[['r-cowork-ppt']], tag:'可选组合', text:'需要汇报时，可把分析结果交给 AI PPT', dur:1.9},
+    {n:['o-work'], r:[['r-cowork-out']], tag:'产出', text:'形成可交付的工作成果', dur:2.2},
+  ]},
+  edu: {steps: [
+    {n:['aud-ent','en-ai'], r:[['r-ent-ai']], tag:'入口', text:'企业通过 zaokit.ai 提出培训与落地需求', dur:2.0},
+    {n:['edu'], c:['cap-edu-1'], r:[['r-ai-edu']], tag:'企业实战', text:'Zaokit AI Education 结合真实业务设计课程', dur:2.0},
+    {c:['cap-edu-2'], tag:'教学学习', text:'理解 AI 工具的用法、适用场景与边界', dur:1.8},
+    {n:['cowork','ppt','combo-1','combo-2'], c:['cap-edu-3'], r:[['r-edu-cowork'],['r-cowork-ppt']], tag:'实践训练', text:'在 Cowork / AI PPT 中动手完成真实任务', dur:2.4},
+    {n:['hub'], c:['cap-hub-2'], r:[['r-hub-app']], tag:'Token Hub', text:'可为学员团队分配练习额度（可选）', dur:2.0},
+    {n:['o-learn'], r:[['r-edu-out']], tag:'产出', text:'沉淀为学习实践成果', dur:2.0},
+    {tag:'说明', text:'Education 是学习赋能，不是 PPT 请求的必经环节', dur:2.2},
+  ]},
+};
+
+// ---------------------------------------------------------------- product details
+const ENTR = p => ['com','app','ai'].map(e => `r-${e}-${p}`);
+const INFO = {
+  ppt: {name:'Zaokit AI PPT', lines:[
+    ['定位','从内容到演示的创作工具，可独立使用'],
+    ['能力','内容梳理 · 大纲生成 · 演示创作'],
+    ['组合','可承接 Cowork 的资料分析结果；经 Gateway 按需调用文本、图像等模型能力'],
+    ['产出','演示文稿']],
+    n:['en-com','en-app','en-ai','gw','o-deck','combo-1'], r:[...ENTR('ppt'),'r-ppt-gw','r-ppt-out','r-ppt-cowork','r-hub-app']},
+  cowork: {name:'Zaokit Cowork', lines:[
+    ['定位','面向实际工作的 AI 协作工具，可独立使用'],
+    ['能力','资料分析 · 文件处理 · 任务协作'],
+    ['组合','分析结果可按需交给 AI PPT 制作汇报；经 Gateway 调用模型能力'],
+    ['产出','工作成果']],
+    n:['en-com','en-app','en-ai','gw','o-work','combo-1','combo-2'], r:[...ENTR('cowork'),'r-cowork-gw','r-cowork-out','r-cowork-ppt','r-edu-cowork','r-hub-app']},
+  edu: {name:'Zaokit AI Education', lines:[
+    ['定位','学习与应用赋能：帮助团队从听懂到会用'],
+    ['能力','企业实战 · 教学学习 · 实践训练'],
+    ['组合','实践训练可结合 Cowork / AI PPT 完成真实任务'],
+    ['说明','不是 AI PPT 请求的运行环节；产出为学习实践']],
+    n:['en-com','en-app','en-ai','o-learn','combo-2','cowork'], r:[...ENTR('edu'),'r-edu-cowork','r-edu-out','r-hub-app']},
+  gw: {name:'Zaokit AI Gateway', lines:[
+    ['定位','能力接入层：让应用以统一方式接入外部 AI 模型能力'],
+    ['能力','统一模型接入 · 多模型与服务连接'],
+    ['连接','上接 AI PPT、Cowork 等应用；下接文本推理 / 图像生成 / 语音能力'],
+    ['说明','模型能力为通用类别示意，不代表具体厂商或部署方式']],
+    n:['ppt','cowork','m-text','m-img','m-voice'], r:['r-ppt-gw','r-cowork-gw','r-gw-text','r-gw-img','r-gw-voice','r-hub-gw']},
+  hub: {name:'Zaokit Token Hub', lines:[
+    ['定位','治理面：团队用量、额度与成本的统一视图'],
+    ['能力','团队用量 · 额度分配 · 成本可视'],
+    ['关系','以虚线旁路连接应用层与 Gateway；不代理内容，也不是调用必经环节'],
+    ['适合','需要管理 AI 使用额度与成本的团队和企业']],
+    n:['ppt','cowork','edu','gw'], r:['r-hub-app','r-hub-gw']},
+};
+
+// ---------------------------------------------------------------- ambient chains (总览)
+const AMBIENT = [
+  [['r-ind-app'],['r-app-ppt'],['r-ppt-gw'],['r-gw-text']],
+  [['r-team-com'],['r-com-cowork'],['r-cowork-gw'],['r-gw-img']],
+  [['r-ent-ai'],['r-ai-edu'],['r-edu-out']],
+  [['r-gw-voice',1],['r-cowork-gw',1],['r-cowork-out']],
+  [['r-gw-img',1],['r-ppt-gw',1],['r-ppt-out']],
+  [['r-team-app'],['r-app-cowork'],['r-cowork-ppt']],
+  [['r-hub-app']], [['r-hub-gw',1]],
+  [['r-ind-com'],['r-com-ppt']],
+  [['r-ent-app'],['r-app-edu'],['r-edu-cowork']],
+];
+const KIND_COL = {call:'#C4B5FD', gov:'#93C5FD', combo:'#A1A1AA'};
+
+// ---------------------------------------------------------------- state
+const routes = {};
+svg.querySelectorAll('.route').forEach(p => routes[p.id] = {el:p, len:p.getTotalLength(), kind:p.classList[1]});
+const dotsG = $('dots');
+const NS = 'http://www.w3.org/2000/svg';
+const logEl = $('log'), logStatic = logEl.innerHTML;
+const S = {mode:'overview', paused:false, t:0, step:-1, stepT:0, focus:null, dots:[], nextSpawn:0, log:[]};
+
+function makeDot(color){
+  const g = document.createElementNS(NS, 'g'); g.setAttribute('class','dot');
+  g.innerHTML = `<circle class="halo" r="7" fill="${color}" filter="url(#glow)"/><circle r="2.8" fill="${color}"/>`;
+  dotsG.appendChild(g); return g;
+}
+function spawn(segs, start, color, speed){
+  // segs: [[id, rev, dur?]]
+  const list = segs.filter(s => routes[s[0]]).map(s => ({id:s[0], rev:!!s[1], dur: s[2] || Math.max(.55, routes[s[0]].len / (speed || 170))}));
+  if (!list.length) return;
+  const total = list.reduce((a, s) => a + s.dur, 0);
+  S.dots.push({segs:list, start, total, el:makeDot(color || KIND_COL[routes[list[0].id].kind] || '#C4B5FD')});
+}
+function renderDots(){
+  S.dots = S.dots.filter(d => {
+    let e = S.t - d.start;
+    if (e > d.total){ d.el.remove(); return false; }
+    if (e < 0){ d.el.setAttribute('visibility','hidden'); return true; }
+    d.el.removeAttribute('visibility');
+    for (const s of d.segs){
+      if (e <= s.dur){
+        const r = routes[s.id], k = e / s.dur, ease = k < .5 ? 2*k*k : 1 - Math.pow(-2*k + 2, 2) / 2;
+        const p = r.el.getPointAtLength((s.rev ? 1 - ease : ease) * r.len);
+        d.el.setAttribute('transform', `translate(${p.x.toFixed(1)},${p.y.toFixed(1)})`);
+        break;
+      }
+      e -= s.dur;
+    }
+    return true;
+  });
+}
+function clearDots(){ S.dots.forEach(d => d.el.remove()); S.dots = []; }
+function clearLit(){
+  svg.querySelectorAll('.on,.path').forEach(el => el.classList.remove('on','path'));
+  svg.classList.remove('dimmed');
+}
+
+// ---------------------------------------------------------------- log + status
+const logLines = [0,1,2,3].map(i => $('log-'+i));
+function setLog(title, sub, rows, color){
+  if (!$('log-title')){ logEl.innerHTML = logStatic; logLines.splice(0, 4, ...[0,1,2,3].map(i => $('log-'+i))); }
+  $('log-title').textContent = title; $('log-sub').textContent = '  · ' + sub;
+  logLines.forEach((el, i) => {
+    const r = rows[i], [a, b, c] = el.children;
+    a.textContent = r ? r[0] : ''; b.textContent = r ? r[1] : ''; c.textContent = r ? r[2] : '';
+    b.setAttribute('fill', r && r[3] ? r[3] : color);
+  });
+}
+function restoreStaticLog(){ logEl.innerHTML = logStatic; logLines.splice(0, 4, ...[0,1,2,3].map(i => $('log-'+i))); }
+function status(){
+  const cmd = S.focus ? ` inspect --product ${S.focus}` : (S.mode === 'overview' ? ' explore --view overview' : ` play --scenario ${S.mode}`);
+  $('st-cmd').textContent = cmd;
+  $('st-scn').textContent = S.focus ? INFO[S.focus].name : NAME[S.mode];
+  $('st-play').textContent = S.paused ? '已暂停' : '播放中';
+  const tx = $('st-cmd').parentNode; const bb = tx.getBBox();
+  $('st-cursor').setAttribute('x', (bb.x + bb.width + 6).toFixed(1));
+  document.body.classList.toggle('paused', S.paused);
+  const pb = $('btn-pause'); pb.textContent = S.paused ? '▶ 继续' : '⏸ 暂停'; pb.setAttribute('aria-pressed', S.paused);
+  document.querySelectorAll('.seg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.mode === S.mode && !S.focus));
+}
+
+// ---------------------------------------------------------------- modes
+function setMode(m){
+  S.focus = null; S.mode = m; S.step = -1; S.stepT = S.t; S.log = []; S.nextSpawn = S.t;
+  clearDots(); clearLit();
+  if (m === 'overview'){ restoreStaticLog(); }
+  else {
+    const sc = SC[m]; svg.style.setProperty('--acc', COL[m]); svg.classList.add('dimmed');
+    sc.steps.forEach(st => (st.r || []).forEach(([id]) => routes[id] && routes[id].el.classList.add('path')));
+    setLog('演示事件', `${NAME[m]} · 概念旅程示意，非实时监控`, [['', '准备', '即将播放该场景的概念路径', '#71717A']], COL[m]);
+  }
+  status(); render();
+}
+function applyStep(sc, i, t0){
+  const st = sc.steps[i];
+  (st.n || []).forEach(id => $('n-'+id) && $('n-'+id).classList.add('on'));
+  (st.c || []).forEach(id => $(id) && $(id).classList.add('on'));
+  (st.r || []).forEach(([id, rev]) => { if (!routes[id]) return; routes[id].el.classList.add('on'); spawn([[id, rev, st.dur * .8]], t0, COL[S.mode]); });
+  S.log.push([String(i + 1).padStart(2, '0'), st.tag, st.text]);
+  setLog('演示事件', `${NAME[S.mode]} · 概念旅程示意，非实时监控`, S.log.slice(-4), COL[S.mode]);
+}
+function advance(){
+  const sc = SC[S.mode], n = sc.steps.length;
+  for (let guard = 0; guard < 50; guard++){
+    const d = S.step < 0 ? .5 : (S.step < n ? sc.steps[S.step].dur : 3.2);
+    if (S.t - S.stepT < d) return;
+    S.stepT += d; S.step++;
+    if (S.step < n) applyStep(sc, S.step, S.stepT);
+    else if (S.step > n){ // 循环
+      clearLit(); svg.classList.add('dimmed');
+      sc.steps.forEach(st => (st.r || []).forEach(([id]) => routes[id] && routes[id].el.classList.add('path')));
+      S.step = -1; S.log = [];
+    }
+  }
+}
+function setFocus(id){
+  if (S.focus === id || !id){ const m = S.mode; S.focus = null; setMode(m); return; }
+  clearDots(); clearLit();
+  S.focus = id; S.nextSpawn = S.t;
+  const f = INFO[id];
+  svg.style.setProperty('--acc', COL[id]); svg.classList.add('dimmed');
+  $('n-'+id).classList.add('on');
+  f.n.forEach(n => $('n-'+n) && $('n-'+n).classList.add('on'));
+  svg.querySelectorAll(`#n-${id} .cap`).forEach(c => c.classList.add('on'));
+  f.r.forEach(r => routes[r] && routes[r].el.classList.add('on'));
+  setLog('产品详情', `${f.name} · 再次点击或按 Esc 返回`, f.lines.map(([k, v]) => ['›', k, v, COL[id]]), COL[id]);
+  status(); render();
+}
+
+// ---------------------------------------------------------------- loop
+function tick(dt){
+  if (S.paused) return;
+  S.t += dt;
+  if (S.focus){
+    if (S.t >= S.nextSpawn){ const r = INFO[S.focus].r; spawn([[r[Math.floor(Math.random()*r.length)], Math.random() < .3]], S.nextSpawn, COL[S.focus]); S.nextSpawn += .45; }
+  } else if (S.mode === 'overview'){
+    if (S.t >= S.nextSpawn){ spawn(AMBIENT[Math.floor(Math.random()*AMBIENT.length)], S.nextSpawn); S.nextSpawn += .7; }
+  } else advance();
+}
+function render(){ renderDots(); }
+let last = null;
+function frame(ts){
+  if (last !== null) tick(Math.min(.05, (ts - last) / 1000));
+  last = ts; render(); requestAnimationFrame(frame);
+}
+
+// ---------------------------------------------------------------- controls
+document.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
+function togglePause(){ S.paused = !S.paused; status(); }
+$('btn-pause').addEventListener('click', togglePause);
+$('btn-replay').addEventListener('click', () => { S.paused = false; S.focus ? setFocus(S.focus) : setMode(S.mode); status(); });
+svg.querySelectorAll('.product').forEach(g => {
+  const id = g.dataset.id;
+  g.addEventListener('click', e => { e.stopPropagation(); setFocus(id); });
+  g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); e.stopPropagation(); setFocus(id); } });
+});
+svg.addEventListener('click', () => { if (S.focus) setFocus(null); });
+document.addEventListener('keydown', e => {
+  if (e.target.closest && e.target.closest('button,[role=button]') && (e.key === ' ' || e.key === 'Enter')) return;
+  if (e.key === ' '){ e.preventDefault(); togglePause(); }
+  else if (e.key === 'Escape' && S.focus) setFocus(null);
+  else if ('1234'.includes(e.key) && e.key.length === 1) setMode(['overview','ppt','cowork','edu'][+e.key - 1]);
+});
+const scroller = $('scroller'), wrap = $('wrap');
+function checkOverflow(){ wrap.classList.toggle('overflow', scroller.scrollWidth > scroller.clientWidth + 2); }
+addEventListener('resize', checkOverflow);
+
+// ---------------------------------------------------------------- init (#s=ppt&t=8&paused=1&focus=gw)
+const hp = new URLSearchParams(location.hash.slice(1));
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) S.paused = false;
+setMode(SC[hp.get('s')] ? hp.get('s') : 'overview');
+const seek = parseFloat(hp.get('t') || '0');
+for (let k = 0; k < seek * 30; k++) tick(1/30);
+if (INFO[hp.get('focus')]) setFocus(hp.get('focus'));
+if (hp.get('paused') === '1') S.paused = true;
+status(); render(); checkOverflow();
+const SELFTEST = new URLSearchParams(location.search).has('selftest');
+if (!SELFTEST) requestAnimationFrame(frame);
+
+// ---------------------------------------------------------------- self test (?selftest)
+if (SELFTEST) (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => {
+  const R = {errors:[], checks:0};
+  const fail = m => R.errors.push(m);
+  const inside = (a, b, pad = 0) => a.x >= b.x - pad && a.y >= b.y - pad && a.x + a.width <= b.x + b.width + pad && a.y + a.height <= b.y + b.height + pad;
+  const label = el => (el.id || el.textContent || el.tagName).slice(0, 40);
+  setMode('overview'); clearDots();
+  // 1. 全部元素在画布内
+  const canvas = {x:0, y:0, width:1600, height:1100};
+  svg.querySelectorAll('text,rect,path,circle,line').forEach(el => {
+    if (el.closest('defs') || el.closest('#dots')) return;
+    const b = el.getBBox(); R.checks++;
+    if (!inside(b, canvas)) fail('out of canvas: ' + label(el));
+  });
+  // 2. 卡片内文字不越界
+  svg.querySelectorAll('[data-box]').forEach(g => {
+    const fb = g.querySelector('.frame').getBBox();
+    g.querySelectorAll('text').forEach(tx => { R.checks++; if (!inside(tx.getBBox(), fb, -3)) fail(`text overflow in ${g.id}: ${tx.textContent}`); });
+  });
+  // 3. 文本互不重叠（静态与每种动态文案）
+  const overlapCheck = tag => {
+    const ts = [...svg.querySelectorAll('text')].filter(t => t.textContent.trim()).map(t => [t, t.getBBox()]);
+    for (let i = 0; i < ts.length; i++) for (let j = i + 1; j < ts.length; j++){
+      const a = ts[i][1], b = ts[j][1]; R.checks++;
+      if (a.x < b.x + b.width - 1 && b.x < a.x + a.width - 1 && a.y < b.y + b.height - 3 && b.y < a.y + a.height - 3)
+        fail(`[${tag}] text overlap: "${label(ts[i][0])}" × "${label(ts[j][0])}"`);
+    }
+    // 日志行在日志框内
+    const lb = logEl.querySelector('rect').getBBox();
+    logLines.forEach(l => { R.checks++; if (l.textContent.trim() && !inside(l.getBBox(), lb, -4)) fail(`[${tag}] log overflow: ${l.textContent}`); });
+    const sb = $('st-cmd').parentNode.getBBox(), sr = svg.querySelector('#status text[text-anchor=end]').getBBox();
+    R.checks++; if (sb.x + sb.width + 20 > sr.x) fail(`[${tag}] status bar overlap`);
+  };
+  overlapCheck('overview');
+  // 4. 路径
+  Object.entries(routes).forEach(([id, r]) => { R.checks++; if (!(r.len > 10)) fail('bad route ' + id); });
+  Object.values(SC).forEach(sc => sc.steps.forEach(st => {
+    (st.r || []).forEach(([id]) => { R.checks++; if (!routes[id]) fail('missing route ' + id); });
+    [...(st.n || []).map(n => 'n-' + n), ...(st.c || [])].forEach(id => { R.checks++; if (!$(id)) fail('missing node ' + id); });
+  }));
+  Object.values(INFO).forEach(f => { f.r.forEach(id => { R.checks++; if (!routes[id]) fail('missing focus route ' + id); });
+    f.n.forEach(id => { R.checks++; if (!$('n-' + id)) fail('missing focus node ' + id); }); });
+  // 5. 控件：场景按钮
+  document.querySelectorAll('.seg button').forEach(b => {
+    b.click(); R.checks++;
+    const m = b.dataset.mode;
+    if (S.mode !== m || b.getAttribute('aria-pressed') !== 'true' || $('st-scn').textContent !== NAME[m]) fail('scenario button ' + m);
+    if (m !== 'overview'){
+      const sc = SC[m]; let total = .5; sc.steps.forEach(s => total += s.dur);
+      for (let k = 0; k < (total - sc.steps[sc.steps.length-1].dur / 2) * 30; k++) tick(1/30);
+      render(); R.checks++;
+      if (S.step !== sc.steps.length - 1) fail(`scenario ${m} reached step ${S.step}`);
+      if (!svg.classList.contains('dimmed') || !svg.querySelector('.route.on')) fail('scenario highlight ' + m);
+      if (S.dots.length === 0 && sc.steps[sc.steps.length-1].r) fail('no dots ' + m);
+      overlapCheck(m);
+      for (let k = 0; k < 4.6 * 30; k++) tick(1/30); // 循环
+      R.checks++; if (S.step > 0) fail('scenario loop ' + m);
+    }
+  });
+  // 6. 暂停/继续
+  setMode('ppt'); for (let k = 0; k < 90; k++) tick(1/30);
+  const pb = $('btn-pause'); pb.click(); const t0 = S.t; for (let k = 0; k < 30; k++) tick(1/30);
+  R.checks++; if (!S.paused || S.t !== t0 || $('st-play').textContent !== '已暂停' || !pb.textContent.includes('继续')) fail('pause');
+  pb.click(); tick(1/30); R.checks++; if (S.paused || S.t === t0 || !pb.textContent.includes('暂停')) fail('resume');
+  $('btn-replay').click(); R.checks++; if (S.step !== -1 || S.mode !== 'ppt') fail('replay');
+  // 7. 产品聚焦
+  svg.querySelectorAll('.product').forEach(g => {
+    g.dispatchEvent(new MouseEvent('click', {bubbles:true})); R.checks++;
+    const id = g.dataset.id;
+    if (S.focus !== id || !$('log-sub').textContent.includes(INFO[id].name) || !g.classList.contains('on')) fail('focus ' + id);
+    for (let k = 0; k < 30; k++) tick(1/30);
+    R.checks++; if (!S.dots.length) fail('focus dots ' + id);
+    overlapCheck('focus-' + id);
+  });
+  document.dispatchEvent(new KeyboardEvent('keydown', {key:'Escape'})); R.checks++;
+  if (S.focus) fail('escape unfocus');
+  document.dispatchEvent(new KeyboardEvent('keydown', {key:'3'})); R.checks++;
+  if (S.mode !== 'cowork') fail('key 3');
+  document.dispatchEvent(new KeyboardEvent('keydown', {key:' '})); R.checks++;
+  if (!S.paused) fail('space pause');
+  setMode('overview'); S.paused = false; status();
+  const pre = document.createElement('pre'); pre.id = 'selftest';
+  pre.textContent = JSON.stringify({pass: !R.errors.length, checks: R.checks, errors: R.errors}, null, 1);
+  document.body.appendChild(pre);
+  document.title = 'SELFTEST:' + (R.errors.length ? 'FAIL' : 'PASS');
+});
+})();
+</script>
+</body>
+</html>
