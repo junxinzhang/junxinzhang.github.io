@@ -51,7 +51,7 @@ authors:
     Jason Zhang:
       name:           Jason Zhang
       site:           https://junxinzhang.com
-      avatar:         assets/images/avatar1.jpg
+      avatar:         assets/images/avatar.jpg
       bio:            "企业级软件架构师，专注 AI 私有化部署、DevOps、云原生架构。曾主导多个知名企业的大模型落地项目。"
       job_title:      "AI 技术专家 & DevOps 架构师"
       credentials:    "AWS Solutions Architect | 云原生技术专家"
@@ -73,7 +73,7 @@ defaults:
     values:
       layout: post
       author: Jason Zhang
-      avatar: /assets/images/avatar1.jpg
+      avatar: /assets/images/avatar.jpg
 
   # all pages
   - scope:
