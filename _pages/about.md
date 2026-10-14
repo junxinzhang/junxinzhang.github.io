@@ -5,7 +5,7 @@ permalink: "/about.html"
 author: Jason Zhang
 comments: true
 name: "Jason Zhang"
-tagline: "AI 时代的一人公司实践者，上海寻绎信息科技创始人，Zaokit AI 产品负责人"
+tagline: "技术与管理经验，AI 时代的一人公司实践者，上海寻绎信息科技创始人，Zaokit AI 产品负责人"
 skills:
   - "一人公司"
   - "Zaokit AI"
@@ -13,18 +13,18 @@ skills:
   - "AI Gateway"
   - "私有化算力"
   - "企业级 Agent"
-description: "张俊欣，上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人。探索 AI 时代的一人公司模式，主导 Zaokit AI PPT、Zaokit Cowork，以及 AI Gateway、安全护栏、私有化算力与企业级 Agent 落地。"
+description: "张俊欣，上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人。探索 AI 时代的一人公司模式，主导 Zaokit AI PPT、Zaokit Cowork、Zaokit SSO、Zaokit OA、Zaokit MDM、Zaokit iPaaS 数据 ETL 平台，以及 AI Gateway、安全护栏、私有化算力与企业级 Agent 落地。"
 faq:
   - question: "张俊欣是谁？"
     answer: "张俊欣是上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人及核心开发者。2023 年初投身 AI 创业，是国内较早一批生成式 AI 创业实践者，也是一人公司模式的践行者。"
   - question: "Jason Zhang 的专业背景是什么？"
-    answer: "Jason Zhang（张俊欣）拥有多年软件开发经验，专注于微服务架构设计与系统工程实践，近年来聚焦于大模型与 AI Agent 应用场景的工程化落地，具备端到端的产品交付能力。"
+    answer: "Jason Zhang（张俊欣）拥有 12 年以上技术与管理经验，经历了从销售、售前、项目经理、开发、大数据、交付、运维到客户成功的完整业务全链路轮岗，既做过复杂企业级项目交付，也做过从 0 到 1 的商业化产品。专注于微服务架构、大模型与 AI Agent 工程化落地。"
   - question: "寻绎和 Zaokit AI 是什么？"
-    answer: "上海寻绎信息科技有限公司由张俊欣于 2023 年 7 月创立。Zaokit AI 已形成包括 Zaokit AI PPT、Zaokit Cowork 在内的产品矩阵，并完成 AI Gateway、AI 安全护栏、私有化 AI 算力部署及企业级 Agent 等落地。"
+    answer: "上海寻绎信息科技有限公司由张俊欣于 2023 年 7 月创立。Zaokit 已形成包括 Zaokit AI PPT、Zaokit Cowork，以及 Zaokit SSO、Zaokit OA、Zaokit MDM、Zaokit iPaaS 数据 ETL 平台在内的完整产品矩阵，并完成 AI Gateway、AI 安全护栏、私有化 AI 算力部署及企业级 Agent 等落地，欢迎与我们洽谈合作。"
   - question: "这个博客主要分享什么内容？"
     answer: "博客主要分享 AI 技术实战经验（包括 RAG 系统、AI Agent 开发）、DevOps 最佳实践（CI/CD、Kubernetes）以及职业成长心得。"
   - question: "如何联系 Jason Zhang？"
-    answer: "可以通过 Email (jason2023zhang@gmail.com)、GitHub (@junxinzhang)、Twitter/X (@Jasonz9788) 或微信公众号 Just Jason 联系我。"
+    answer: "可以通过 Email (jason2023zhang@gmail.com)、GitHub (@junxinzhang)、Twitter/X (@Jasonz9788) 或微信公众号 Just Jason 联系我，欢迎您与我们洽谈合作。"
 ---
 
 <div class="about-section">
@@ -32,9 +32,11 @@ faq:
 <div class="about-bio">
 <p>张俊欣，上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人及核心开发者。2023 年初投身 AI 创业，同年 7 月创立上海寻绎信息科技有限公司，是国内较早一批生成式 AI 创业实践者，也是“一人公司”模式的践行者。</p>
 <p>“寻绎”二字，寓意“寻找线索，发现价值”。公司创立之初便确立了一个朴素的理念：从客户真实需求中寻找线索，以技术和产品将线索转化为价值，为客户创造价值，实现合作共赢。这也成为寻绎信息科技一直坚持的核心企业文化。</p>
+<p>在创立寻绎之前，张俊欣从<strong>销售、售前、项目经理、开发、大数据、交付、运维到客户成功</strong>一路轮岗历练过来——既做过复杂项目的端到端交付（曾主导千万级售前竞标及跨国消费品集团、上汽通用、奥迪等头部企业的系统落地），也做过从 0 到 1 的商业化产品 Owner（独立负责过千万级流水的企业级数据产品与百万级流水的 NLP 文本引擎）。这段横跨商业、产品、技术与服务的全链路实战经历，让他既能敏锐洞察客户一线的真实痛点，又能亲手把控架构设计与工程交付。</p>
 <p>从产品设计、技术研发到运营及商业化，张俊欣持续探索以 AI 重构个人生产力，尝试一种 AI 时代的新型创业模式——让一个人借助 AI，拥有过去一支团队的执行能力。</p>
 <p>目前，其主导开发的 Zaokit AI 已形成包括 Zaokit AI PPT、Zaokit Cowork 在内的产品矩阵。Zaokit AI PPT 聚焦 AI 驱动的演示文稿生成与内容创作；Zaokit Cowork 则进一步以 AI Agent 为核心，让 AI 从“回答问题的工具”走向能够参与研究、创作、开发与交付的“数字同事”，探索人与 AI 协同工作的新方式。</p>
 <p>围绕企业级 AI 落地，寻绎已经完成 AI Gateway、AI 安全护栏、私有化 AI 算力部署及企业级 Agent 等一系列技术与产品的实际落地，覆盖大模型统一接入、安全治理、私有化算力基础设施与智能体应用，推动 AI 从概念验证和单点工具真正进入企业生产场景，成为安全、可控、可落地的生产力。</p>
+<p>与此同时，面向企业数字化与数据底座建设，寻绎打造了 <strong>Zaokit SSO（统一身份认证平台）</strong>、<strong>Zaokit OA（智能协同办公平台）</strong>、<strong>Zaokit MDM（主数据管理平台）</strong> 与 <strong>Zaokit iPaaS 数据 ETL 平台</strong> 四大企业级核心产品，帮助企业打通身份认证、协同办公、主数据治理与多源异构数据集成全链路，为智能化转型夯实数字底座。如果您有相关产品落地或定制化需求，欢迎您与我们洽谈合作。</p>
 <p>技术不断迭代，AI 的能力边界也在不断变化，但寻绎始终坚持一个方向：以客户需求为起点，以创造价值为结果，与客户共同成长。</p>
 <p>对于张俊欣而言，“一人公司”并不意味着一个人完成所有工作，而是借助 AI 重新定义个人、团队与组织之间的边界。他希望通过自己的创业实践验证一种新的可能：</p>
 </div>
@@ -54,7 +56,7 @@ faq:
 </div>
 <div class="profile-fact">
 <dt>产品与方向</dt>
-<dd><a href="https://zaokit.app">Zaokit AI PPT</a> / <a href="https://zaokit.ai">Zaokit Cowork</a> / AI Gateway / AI 安全护栏 / 私有化 AI 算力 / 企业级 Agent</dd>
+<dd><a href="https://zaokit.app">Zaokit AI PPT</a> / <a href="https://zaokit.ai">Zaokit Cowork</a> / Zaokit SSO / Zaokit OA / Zaokit MDM / Zaokit iPaaS 数据 ETL 平台 / AI Gateway / AI 安全护栏 / 私有化 AI 算力 / 企业级 Agent</dd>
 </div>
 </dl>
 </div>
@@ -87,6 +89,46 @@ faq:
 </ul>
 </div>
 </div>
+
+<h3>Zaokit 企业级数字化与数据底座产品</h3>
+<div class="expertise-grid-2col">
+<div class="expertise-card">
+<h4><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/><path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z"/></svg></span> Zaokit SSO</h4>
+<p class="card-desc">企业级统一身份认证与访问管理平台，构建零信任安全底座。</p>
+<ul>
+<li>支持 OIDC、OAuth 2.0、SAML 2.0、CAS、LDAP 等主流协议</li>
+<li>多业务系统单点登录、统一账号生命周期与组织架构同步</li>
+<li>MFA 多因素认证、细粒度 RBAC/ABAC 权限管控与安全合规审计</li>
+</ul>
+</div>
+<div class="expertise-card">
+<h4><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/><path d="M4.5 12.5A.5.5 0 0 1 5 12h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 10h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V8.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V8s1.54-1.274 1.639-1.208zM6.25 6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z"/></svg></span> Zaokit OA</h4>
+<p class="card-desc">AI 赋能的新一代智能协同办公平台，让组织流转更敏捷高效。</p>
+<ul>
+<li>可视化工作流审批引擎、低代码动态表单与灵活业务编排</li>
+<li>公文流转、项目协作、人事行政与跨部门全场景数字办公</li>
+<li>深度融合 AI Agent 能力，支持智能拟稿、摘要提炼与知识问答</li>
+</ul>
+</div>
+<div class="expertise-card">
+<h4><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Z"/><path d="M12.096 6.223A4.92 4.92 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.493 4.493 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.525 4.525 0 0 1-.813-.927C8.5 14.992 8.252 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.552 4.552 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10c.262 0 .52-.008.774-.024a4.525 4.525 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777ZM3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4Z"/></svg></span> Zaokit MDM</h4>
+<p class="card-desc">企业级主数据管理平台，打造权威、唯一、高可用的数据黄金源。</p>
+<ul>
+<li>覆盖客户、供应商、组织、物料、财务等核心主数据统一建模</li>
+<li>多源数据清洗、智能去重合并、质量校验规则与全生命周期治理</li>
+<li>标准化主数据分发与变更订阅，彻底打通 ERP、CRM、OA 等数据孤岛</li>
+</ul>
+</div>
+<div class="expertise-card">
+<h4><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"/></svg></span> Zaokit iPaaS 数据 ETL 平台</h4>
+<p class="card-desc">一站式企业级应用集成与数据 ETL 编排平台，加速数据价值流动。</p>
+<ul>
+<li>可视化实时/离线混合 ETL 数据管道编排、清洗转换与任务调度</li>
+<li>预置丰富连接器，无缝对接主流数据库、数据仓库、SaaS 与 API</li>
+<li>高吞吐增量同步、全链路数据血缘监控告警与数据资产服务化开放</li>
+</ul>
+</div>
+</div>
 </div>
 
 <div class="about-section">
@@ -94,8 +136,8 @@ faq:
 <div class="credentials-grid">
 <div class="credential-item">
 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5H5V1H1.5zM10 15V1H6v14h4zm1 0h3.5a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5H11v14z"/></svg></div>
-<h4><span class="work-years"></span>+ 年经验</h4>
-<p>软件开发与架构设计</p>
+<h4><span class="work-years"></span>+ 年全链路经验</h4>
+<p>销售/售前/PM/研发/大数据/交付/运维/客成，做过交付也做过产品</p>
 </div>
 <div class="credential-item">
 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"/><path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z"/></svg></div>
@@ -128,16 +170,17 @@ faq:
 <li>AWS DevOps 架构设计与 CI/CD 流水线</li>
 <li>容器化与 Kubernetes 集群管理</li>
 <li>基础设施即代码 (Terraform、CloudFormation)</li>
-<li>统一监控与可观测性 (Prometheus、ELK)</li>
+<li>统一监控与可观测性 (Prometheus、ELK、蓝鲸 CMDB)</li>
 </ul>
 </div>
 <div class="expertise-card">
 <h4><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/><path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/></svg></span> 微服务架构</h4>
 <ul>
 <li>Spring Cloud/Boot 微服务架构设计</li>
+<li>Go 微服务架构设计</li>
 <li>分布式系统与高可用架构</li>
 <li>企业级系统集成 (SSO、消息队列)</li>
-<li>数据平台 (BI、CDP) 建设</li>
+<li>数据平台 (BI、CDP、VDP) 与大数据 (Hadoop、Spark) 建设</li>
 </ul>
 </div>
 </div>
@@ -156,38 +199,68 @@ faq:
 <tbody>
 <tr>
 <td>AI RAG 系统与 Backend as a Service</td>
-<td>多业务线智能化</td>
-<td>知识问答、代码推理、Power BI AI Agent 等场景落地</td>
+<td>5+ 核心业务场景</td>
+<td>AI 模型与服务上线效率提升 60%，完成上海养老展问答、Policy 助手、CI/CD 代码推理、Power BI Agent 及 iOS/Android 双端 100% 闭环交付</td>
 </tr>
 <tr>
 <td>AWS DevOps 自动化平台</td>
 <td>300+ CI/CD 流水线</td>
-<td>部署效率提升 90%，故障响应缩短 90%</td>
+<td>部署效率提升 90%，故障响应缩短 90%，构建失败率下降 90%，5+ 运维与审计平台交付准时率 100%</td>
 </tr>
 <tr>
 <td>私有化大模型一体机部署</td>
-<td>软硬件集成</td>
-<td>模型上线周期缩短 40%，降低外部依赖风险</td>
+<td>软硬件全栈集成</td>
+<td>模型上线周期缩短 40%，外部算力与 API 综合成本降低 60%+，实现核心业务数据 100% 私域闭环</td>
 </tr>
 <tr>
 <td>SSO 统一身份认证</td>
 <td>50+ 供应商系统</td>
-<td>企业级统一认证体系，提升安全合规能力</td>
+<td>第三方系统接入效率提升 70%+，账号权限流转耗时缩短 80%，安全合规审计覆盖率达 100%</td>
 </tr>
 <tr>
 <td>文本数据分析引擎 TEA</td>
-<td>云原生 K8S 架构</td>
-<td>年度流水百万+，服务营销与舆情分析</td>
+<td>云原生 K8S + Go + NLP 引擎</td>
+<td>年度流水 100 万+，融合分词、实体识别 (NER)、情感分析与文本分类，百万/千万级文本批处理效率提升 3 倍+</td>
 </tr>
 <tr>
 <td>数据链接中心 DLC</td>
 <td>企业级 API 网关</td>
-<td>年度流水千万+，统一管理、监控与计费</td>
+<td>年度流水 1000 万+，服务奥迪、通用等头部 KA 客户，通过多级缓存策略降低企业外部数据调用成本 30%+</td>
 </tr>
 <tr>
 <td>智能电销机器人</td>
-<td>ASR + NLP 集成</td>
-<td>微服务架构，CI/CD 自动化部署</td>
+<td>FreeSwitch + ASR + NLP</td>
+<td>集成 FreeSwitch、科大讯飞 ASR 与 Drools 规则引擎，支撑日均 10 万+ 通外呼，意图判定准确率 85%+，人工坐席成本降低 60%</td>
+</tr>
+<tr>
+<td>车企供应链与数字化项目群</td>
+<td>10+ 核心项目售前 & 交付</td>
+<td>达成 1000 万+ 售前合同额（同比增长 20%），核心查询响应优化至 3 秒内，团队离职率低于 5%，KA 客户 0 投诉、满意度 95%</td>
+</tr>
+<tr>
+<td>VPHOTO 即时影像 & 办伴智能办公 BSS</td>
+<td>云原生高并发 + 软硬一体</td>
+<td>微服务重构降低维护成本 20%，核心性能提升 10%、延迟降低 20%，代码缺陷率下降 25%，研发交付效率提升 18%</td>
+</tr>
+<tr>
+<td>Zaokit SSO 统一身份认证平台</td>
+<td>企业级多应用矩阵</td>
+<td>支持 OIDC/SAML/OAuth2 等 5+ 标准协议，业务系统单点登录对接耗时缩短 80%，企业级权限审计覆盖率 100%</td>
+</tr>
+<tr>
+<td>Zaokit OA 智能协同办公平台</td>
+<td>全员数字化 + AI 协同</td>
+<td>低代码审批流引擎 + AI Agent 办公助手，动态表单与流程搭建周期缩短 70%，跨部门审批流转效率提升 50%+</td>
+</tr>
+<tr>
+<td>Zaokit MDM 主数据管理平台</td>
+<td>跨系统核心数据治理</td>
+<td>覆盖客商、组织、物料等 10+ 核心数据域，主数据清洗去重准确率达 99.5%+，跨系统分发同步延迟降至秒级</td>
+</tr>
+<tr>
+<td>Zaokit iPaaS 数据 ETL 平台</td>
+<td>多源异构数据集成</td>
+<td>预置 30+ 异构数据源连接器，支撑日均千万至亿级数据实时/离线同步，数据管道开发与排障效率提升 65%+</td>
 </tr>
 </tbody>
 </table>
@@ -195,22 +268,22 @@ faq:
 
 <div class="about-section">
 <h2>技术栈</h2>
-<p style="color: #6c757d; margin-bottom: 1.25rem;">覆盖从后端开发到云原生部署的完整技术体系：</p>
+<p style="color: #6c757d; margin-bottom: 1.25rem;">覆盖从前后端全栈开发到云原生部署的完整技术体系：</p>
 <div class="blog-topics">
 <div class="blog-topic">
 <div class="topic-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/></svg></div>
-<h4>后端开发</h4>
-<p>Java, Go, Python, Spring Cloud/Boot, Node.js</p>
+<h4>前后端全栈开发</h4>
+<p>Java, Go, Python, Spring Cloud/Boot, Node.js, React, Next.js, Vue, TypeScript, Tailwind CSS</p>
 </div>
 <div class="blog-topic">
 <div class="topic-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/></svg></div>
 <h4>云原生 & DevOps</h4>
-<p>K8S, Docker, AWS, Terraform, Jenkins, GitLab CI</p>
+<p>K8S, Docker, AWS, Terraform, Jenkins, GitLab CI, Prometheus, ELK</p>
 </div>
 <div class="blog-topic">
 <div class="topic-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.757.757 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/></svg></div>
 <h4>数据 & AI</h4>
-<p>向量数据库, RAG, LangChain, Elasticsearch, MongoDB</p>
+<p>向量数据库, RAG, LangChain, NLP, FreeSwitch/ASR, Hadoop/Spark, Elasticsearch, MongoDB, Kafka</p>
 </div>
 </div>
 </div>
@@ -239,6 +312,10 @@ faq:
 
 <div class="about-section">
 <h2>联系方式</h2>
+<div class="coop-banner">
+<h4><span class="coop-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/></svg></span> 欢迎您与我们洽谈合作</h4>
+<p>无论是 <strong>Zaokit SSO</strong>（统一身份认证）、<strong>Zaokit OA</strong>（智能协同办公）、<strong>Zaokit MDM</strong>（主数据管理）、<strong>Zaokit iPaaS 数据 ETL 平台</strong> 等企业级数字化底座建设，还是 <strong>Zaokit AI PPT / Zaokit Cowork</strong>、<strong>AI Gateway、安全护栏、私有化大模型算力部署与企业级 Agent 定制</strong>，我们都期待与您深入交流，从真实业务场景出发共创价值。欢迎通过下方邮箱（<a href="mailto:jason2023zhang@gmail.com">jason2023zhang@gmail.com</a>）或微信公众号联系我们洽谈合作！</p>
+</div>
 <div class="contact-grid">
 <a href="https://github.com/junxinzhang" class="contact-item" target="_blank">
 <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></div>
@@ -275,11 +352,11 @@ faq:
 </div>
 <div class="faq-item">
 <div class="faq-question">Jason Zhang 的专业背景是什么？</div>
-<div class="faq-answer">我拥有 <span class="work-years"></span> 年以上软件开发经验，专注于微服务架构设计与系统工程实践，技术覆盖 Java、Go、Python 等主流语言。近年来聚焦于大模型与 AI Agent 应用场景的工程化落地，具备端到端的产品交付能力，包括 RAG 系统开发、AI Agent 集成、私有化大模型部署等。</div>
+<div class="faq-answer">我拥有 <span class="work-years"></span> 年以上技术与管理经验，从销售、售前、项目经理、开发、大数据、交付、运维到客户成功一路轮岗过来，既做过复杂企业级项目交付，也独立做过商业化产品。技术覆盖 Java、Go、Python 及前后端全栈，曾主导智能联合办公 BSS 系统、智能电销机器人、VPHOTO 即时影像平台、汽车行业大数据平台（BI、CDP、VDP）、文本分析引擎 TEA、数据链接中心 DLC 等建设，近年来聚焦于大模型与 AI Agent 场景的端到端工程化落地。</div>
 </div>
 <div class="faq-item">
 <div class="faq-question">寻绎和 Zaokit AI 是什么？</div>
-<div class="faq-answer">上海寻绎信息科技有限公司由张俊欣于 2023 年 7 月创立，寓意“寻找线索，发现价值”。Zaokit AI 已形成包括 Zaokit AI PPT、Zaokit Cowork 在内的产品矩阵，并完成 AI Gateway、AI 安全护栏、私有化 AI 算力部署及企业级 Agent 等落地。</div>
+<div class="faq-answer">上海寻绎信息科技有限公司由张俊欣于 2023 年 7 月创立，寓意“寻找线索，发现价值”。Zaokit 已形成包括 Zaokit AI PPT、Zaokit Cowork，以及企业级数字化与数据底座产品 Zaokit SSO（统一身份认证）、Zaokit OA（智能协同办公）、Zaokit MDM（主数据管理）、Zaokit iPaaS 数据 ETL 平台在内的产品矩阵，并完成 AI Gateway、AI 安全护栏、私有化 AI 算力部署及企业级 Agent 等落地。欢迎您与我们洽谈合作。</div>
 </div>
 <div class="faq-item">
 <div class="faq-question">这个博客主要分享什么内容？</div>

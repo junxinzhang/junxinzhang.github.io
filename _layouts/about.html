@@ -192,6 +192,12 @@ layout: default
   gap: 1.25rem;
 }
 
+.expertise-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
 .expertise-card {
   background: #fff;
   border: 1px solid #e8f3ec;
@@ -220,6 +226,13 @@ layout: default
   font-size: 1.25rem;
 }
 
+.expertise-card .card-desc {
+  font-size: 0.88rem;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 0.65rem;
+}
+
 .expertise-card ul {
   list-style: none;
   padding: 0;
@@ -240,6 +253,49 @@ layout: default
   left: 0;
   color: #03a87c;
   font-weight: bold;
+}
+
+/* Cooperation Callout Banner */
+.coop-banner {
+  background: linear-gradient(135deg, #e8f3ec 0%, #f8f9fa 100%);
+  border: 1px solid rgba(3, 168, 124, 0.25);
+  border-left: 4px solid #03a87c;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.coop-banner h4 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coop-banner h4 .coop-icon {
+  color: #03a87c;
+  display: flex;
+  align-items: center;
+}
+
+.coop-banner p {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.coop-banner a {
+  color: #03a87c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.coop-banner a:hover {
+  text-decoration: underline;
 }
 
 /* Project Table */
@@ -445,6 +501,7 @@ layout: default
 
   .credentials-grid,
   .expertise-grid,
+  .expertise-grid-2col,
   .blog-topics,
   .profile-facts {
     grid-template-columns: 1fr;
@@ -593,11 +650,37 @@ layout: default
   color: #58a6ff;
 }
 
+[data-theme="dark"] .expertise-card .card-desc {
+  color: var(--text-muted, #8b949e);
+}
+
 [data-theme="dark"] .expertise-card li {
   color: var(--text-muted, #8b949e);
 }
 
 [data-theme="dark"] .expertise-card li:before {
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .coop-banner {
+  background: linear-gradient(135deg, #161b22 0%, #21262d 100%);
+  border-color: var(--border-color, #30363d);
+  border-left-color: #58a6ff;
+}
+
+[data-theme="dark"] .coop-banner h4 {
+  color: var(--text-color, #e6edf3);
+}
+
+[data-theme="dark"] .coop-banner h4 .coop-icon {
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .coop-banner p {
+  color: var(--text-muted, #8b949e);
+}
+
+[data-theme="dark"] .coop-banner a {
   color: #58a6ff;
 }
 
