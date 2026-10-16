@@ -250,6 +250,14 @@
     }
   </style>
 
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8TYFJ6Q2Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R8TYFJ6Q2Y');
+  </script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ef8e7eb1-5502-46a1-a457-bf72987453ac"></script>
 </head>
 
@@ -577,6 +585,37 @@
       })();
       document.getElementById('year').textContent = new Date().getFullYear();
     })();
+  </script>
+
+  <script>
+  (function () {
+    function trackEvent(name, params) {
+      params = params || {};
+      try { if (typeof gtag === 'function') gtag('event', name, params); } catch (e) {}
+      try { if (window.umami && typeof umami.track === 'function') umami.track(name, params); } catch (e) {}
+    }
+    function isMail(a) { var h = a.getAttribute('href') || ''; return h.indexOf('mailto:') === 0 || h.indexOf('/cdn-cgi/l/email-protection') === 0; }
+    function currentCurrency() {
+      var b = document.querySelector('[data-currency][aria-pressed="true"]');
+      return b ? b.getAttribute('data-currency') : 'USD';
+    }
+    document.addEventListener('click', function (e) {
+      var cur = e.target.closest('[data-currency]');
+      if (cur) { trackEvent('currency_switch', { currency: cur.getAttribute('data-currency') }); return; }
+      var a = e.target.closest('a');
+      if (!a) return;
+      if (isMail(a)) {
+        var plan = a.closest('.plan');
+        var tier = plan ? plan.querySelector('.plan-tier b').textContent.trim() : 'general';
+        var loc = plan ? 'pricing' : (a.closest('.hero') ? 'hero' : (a.closest('.cta') ? 'cta' : 'other'));
+        var params = { plan: tier, currency: currentCurrency(), location: loc };
+        trackEvent('consult_click', params);
+        trackEvent('generate_lead', params);
+      } else if ((a.getAttribute('href') || '') === '#pricing') {
+        trackEvent('view_pricing_click', { location: a.closest('.hero') ? 'hero' : 'nav' });
+      }
+    }, true);
+  })();
   </script>
 </body>
 

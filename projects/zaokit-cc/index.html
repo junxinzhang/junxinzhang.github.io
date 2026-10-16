@@ -23,6 +23,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <link rel="stylesheet" href="./css/style.css">
 
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8TYFJ6Q2Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R8TYFJ6Q2Y');
+  </script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="ef8e7eb1-5502-46a1-a457-bf72987453ac"></script>
 </head>
 
@@ -364,6 +372,33 @@
 
   <script src="./js/i18n.js"></script>
   <script src="./js/main.js"></script>
+
+  <script>
+  (function () {
+    function trackEvent(name, params) {
+      params = params || {};
+      try { if (typeof gtag === 'function') gtag('event', name, params); } catch (e) {}
+      try { if (window.umami && typeof umami.track === 'function') umami.track(name, params); } catch (e) {}
+    }
+    function isMail(a) { var h = a.getAttribute('href') || ''; return h.indexOf('mailto:') === 0 || h.indexOf('/cdn-cgi/l/email-protection') === 0; }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var card = a.closest('.pricing-card');
+      var plan = card ? (card.querySelector('h3') || {}).textContent : '';
+      if (isMail(a)) {
+        trackEvent('consult_click', { channel: 'email', location: a.closest('footer') ? 'footer' : 'cta' });
+        trackEvent('generate_lead', { channel: 'email' });
+      } else if (href === '#contact') {
+        trackEvent('contact_intent', { plan: (plan || 'hero').trim() });
+      } else if (href.indexOf('claudeops.zaokit.ai') !== -1) {
+        var loc = a.closest('.top-banner') ? 'top_banner' : (a.closest('.pricing-alt-banner') ? 'pricing_banner' : 'footer');
+        trackEvent('claude_ops_click', { location: loc });
+      }
+    }, true);
+  })();
+  </script>
 </body>
 
 </html>
