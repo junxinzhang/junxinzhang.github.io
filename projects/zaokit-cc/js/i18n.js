@@ -153,7 +153,7 @@ const I18N = (() => {
       'banner.text': 'New: Need dedicated Claude accounts and stable runtime environments? Explore Claude Managed Service',
       'banner.badge': 'NEW',
       'banner.action': 'Learn more →',
-      'pricing.alt.title': 'Don't need API integration? Want ready-to-use Claude environments?',
+      'pricing.alt.title': 'Don\'t need API integration? Want ready-to-use Claude environments?',
       'pricing.alt.desc': 'We provide dedicated accounts, fixed overseas runtime environments, and monthly managed operations (starting at $99/mo).',
       'pricing.alt.btn': 'Explore Claude Managed Service →',
       'footer.related.ops': 'Claude Managed Service · Dedicated Runtime',
