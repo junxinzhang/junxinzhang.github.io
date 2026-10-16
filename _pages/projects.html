@@ -343,7 +343,7 @@ changefreq: weekly
           "name": "{{ project.title }}",
           "description": "{{ project.description }}",
           "url": "{{ project.demo_url }}",
-          "codeRepository": "https://github.com/junxinzhang/{{ project.repo }}",
+          {% unless project.no_source %}"codeRepository": "https://github.com/junxinzhang/{{ project.repo }}",{% endunless %}
           "programmingLanguage": ["HTML", "CSS", "JavaScript"],
           "author": {
             "@type": "Person",
@@ -425,6 +425,11 @@ changefreq: weekly
                             </svg>
                             <span data-projects-key="buttons.official_site">{{ projects_page_default.buttons.official_site }}</span>
                         </a>
+                        {% if project.no_source %}
+                        <a href="{{ project.demo_url }}#pricing" class="project-link github">
+                            <span data-projects-key="buttons.pricing">{{ projects_page_default.buttons.pricing }}</span>
+                        </a>
+                        {% else %}
                         <a href="https://github.com/junxinzhang/{{ project.repo }}" target="_blank"
                             class="project-link github">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -434,6 +439,7 @@ changefreq: weekly
                             </svg>
                             <span data-projects-key="buttons.source_code">{{ projects_page_default.buttons.source_code }}</span>
                         </a>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}

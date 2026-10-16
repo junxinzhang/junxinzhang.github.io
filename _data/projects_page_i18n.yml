@@ -18,6 +18,7 @@ zh-hans: &projects_page_zh_hans
     official_site: "官网"
     source_code: "源码"
     view_report: "查看报告"
+    pricing: "查看价格"
   categories:
     network: "网络"
     devops: "DevOps"
@@ -27,6 +28,14 @@ zh-hans: &projects_page_zh_hans
     service: "服务"
     report: "报告"
   items:
+    claude-ops:
+      title: "Claude 代运营"
+      description: "提供确定性的稳定环境，助力您的 AI 时代。独享账号、固定纯净环境、续费与风控全托管，1x / 5x / 20x 三档按月订阅。"
+      keywords:
+        - "Claude 代运营"
+        - "账号托管"
+        - "Claude Code"
+        - "稳定环境"
     zaokit-cc:
       title: "Zaokit Claude API 服务"
       description: "企业级 Claude API 合规代理服务，100% 兼容官方接口，支持 Claude 4.7 全系列模型，提供对公结算与增值税发票。"
@@ -120,6 +129,7 @@ en: &projects_page_en
     official_site: "Official Site"
     source_code: "Source Code"
     view_report: "View Report"
+    pricing: "Pricing"
   categories:
     network: "Network"
     devops: "DevOps"
@@ -129,6 +139,14 @@ en: &projects_page_en
     service: "Service"
     report: "Report"
   items:
+    claude-ops:
+      title: "Claude Managed Service"
+      description: "A deterministic, stable Claude environment for the AI era: dedicated account, fixed clean environment, and fully managed billing and risk control. 1x / 5x / 20x monthly plans."
+      keywords:
+        - "Claude"
+        - "Managed Service"
+        - "Claude Code"
+        - "Stable Environment"
     zaokit-cc:
       title: "Zaokit Claude API Service"
       description: "Enterprise-grade Claude API proxy with full official protocol compatibility, supporting Claude 4.7 models, corporate billing, and VAT invoicing."
@@ -222,6 +240,7 @@ zh-hant:
     official_site: "官網"
     source_code: "原始碼"
     view_report: "查看報告"
+    pricing: "查看價格"
   categories:
     network: "網路"
     devops: "DevOps"
@@ -231,6 +250,14 @@ zh-hant:
     service: "服務"
     report: "報告"
   items:
+    claude-ops:
+      title: "Claude 代營運"
+      description: "提供確定性的穩定環境，助力您的 AI 時代。獨享帳號、固定純淨環境、續費與風控全託管，1x / 5x / 20x 三檔按月訂閱。"
+      keywords:
+        - "Claude 代營運"
+        - "帳號託管"
+        - "Claude Code"
+        - "穩定環境"
     zaokit-cc:
       title: "Zaokit Claude API 服務"
       description: "企業級 Claude API 合規代理服務，100% 兼容官方接口，支持 Claude 4.7 全系列模型，提供對公結算與增值稅發票。"

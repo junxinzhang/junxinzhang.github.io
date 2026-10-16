@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude 代运营 - 确定性的稳定环境，助力您的 AI 时代 | Just Jason</title>
+  <meta name="description"
+    content="Claude 代运营服务：独享账号、固定纯净环境、续费与风控全托管，提供确定性的稳定 Claude 使用环境。1x ¥450/月、5x ¥1650/月、20x ¥3300/月，覆盖个人到重度 Claude Code 团队。">
+  <meta name="keywords" content="Claude 代运营, Claude 账号托管, Claude Max, Claude Pro, Claude Code, Claude 稳定环境, Claude 国内使用">
+  <meta name="author" content="Jason Zhang">
+  <link rel="canonical" href="https://junxinzhang.com/projects/claude-ops/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Just Jason">
+  <meta property="og:title" content="Claude 代运营 - 确定性的稳定环境，助力您的 AI 时代">
+  <meta property="og:description" content="独享账号 · 固定纯净环境 · 续费风控全托管。1x / 5x / 20x 三档按月订阅。">
+  <meta property="og:url" content="https://junxinzhang.com/projects/claude-ops/">
+  <meta property="og:image" content="https://junxinzhang.com/projects/claude-ops/hero-card.svg">
+  <meta name="theme-color" content="#141210">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Claude 代运营",
+    "description": "提供确定性的稳定 Claude 使用环境：独享账号、固定纯净网络环境、续费与风控全托管。",
+    "provider": { "@type": "Person", "name": "Jason Zhang", "url": "https://junxinzhang.com/about.html" },
+    "areaServed": "CN",
+    "offers": [
+      { "@type": "Offer", "name": "1x 标准版", "price": "450", "priceCurrency": "CNY" },
+      { "@type": "Offer", "name": "5x 专业版", "price": "1650", "priceCurrency": "CNY" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "3300", "priceCurrency": "CNY" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #141210;
+      --bg-soft: #1b1815;
+      --surface: rgba(255, 255, 255, 0.035);
+      --surface-strong: rgba(255, 255, 255, 0.07);
+      --text: #ece6dd;
+      --muted: #a39a8e;
+      --primary: #d97757;
+      --primary-strong: #e8906f;
+      --primary-soft: rgba(217, 119, 87, 0.14);
+      --cream: #f5efe6;
+      --border: rgba(255, 255, 255, 0.08);
+      --radius: 18px;
+      --font: "Inter", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --serif: "Tiempos Headline", "Source Han Serif SC", "Noto Serif SC", "Songti SC", Georgia, serif;
+    }
+
+    * { box-sizing: border-box }
+    html { scroll-behavior: smooth }
+    body {
+      margin: 0; color: var(--text); background: var(--bg);
+      font-family: var(--font); line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(70vw 50vw at 15% -10%, rgba(217, 119, 87, 0.16), transparent 60%),
+        radial-gradient(50vw 40vw at 90% 15%, rgba(245, 239, 230, 0.05), transparent 55%);
+    }
+    a { color: inherit; text-decoration: none }
+    .container { width: min(1120px, 92vw); margin: 0 auto }
+
+    /* Header */
+    .site-header {
+      position: sticky; top: 0; z-index: 30;
+      backdrop-filter: blur(16px); background: rgba(20, 18, 16, 0.85);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 68px; gap: 16px }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: #fff }
+    .brand-mark {
+      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+      background: var(--primary); color: #fff;
+    }
+    .nav-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0 }
+    .nav-links a { padding: 8px 12px; border-radius: 10px; color: var(--muted); font-size: .92rem; transition: .2s }
+    .nav-links a:hover { color: #fff; background: var(--surface-strong) }
+    .nav-back { font-size: .88rem; color: var(--muted) }
+    .nav-back:hover { color: var(--primary-strong) }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 24px; border-radius: 12px; font-weight: 600; font-size: .98rem;
+      border: 1px solid transparent; cursor: pointer; transition: .2s; font-family: inherit;
+    }
+    .btn-primary { background: var(--primary); color: #fff }
+    .btn-primary:hover { background: var(--primary-strong); transform: translateY(-1px) }
+    .btn-ghost { background: var(--surface); color: var(--text); border-color: var(--border) }
+    .btn-ghost:hover { background: var(--surface-strong) }
+
+    /* Hero */
+    .hero { padding: 96px 0 72px; text-align: center }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600;
+      color: var(--primary-strong); background: var(--primary-soft); border: 1px solid rgba(217, 119, 87, .3);
+    }
+    .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #5bd18b; box-shadow: 0 0 0 4px rgba(91, 209, 139, .18) }
+    .hero h1 {
+      font-family: var(--serif); font-weight: 600; color: var(--cream);
+      font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.15; margin: 22px 0 18px; letter-spacing: -.01em;
+    }
+    .hero h1 em { font-style: normal; color: var(--primary) }
+    .hero p.lead { color: var(--muted); font-size: clamp(1.02rem, 2vw, 1.2rem); max-width: 40em; margin: 0 auto 34px }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
+    .hero-stats { display: flex; justify-content: center; gap: clamp(24px, 6vw, 72px); margin-top: 56px; flex-wrap: wrap }
+    .stat strong { display: block; font-size: 1.6rem; color: #fff; font-family: var(--serif) }
+    .stat span { color: var(--muted); font-size: .86rem }
+
+    /* Sections */
+    .section { padding: 84px 0 }
+    .section-alt { background: rgba(255, 255, 255, .015); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border) }
+    .section-head { text-align: center; margin-bottom: 44px }
+    .section-tag { color: var(--primary); font-weight: 700; letter-spacing: .1em; font-size: .78rem; text-transform: uppercase; margin: 0 }
+    .section-head h2 { font-family: var(--serif); color: var(--cream); font-size: clamp(1.6rem, 3.4vw, 2.3rem); margin: 10px 0 0; line-height: 1.3 }
+    .section-head p { color: var(--muted); margin: 12px auto 0; max-width: 42em }
+
+    .grid { display: grid; gap: 20px }
+    .grid-4 { grid-template-columns: repeat(4, 1fr) }
+    .grid-3 { grid-template-columns: repeat(3, 1fr) }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px; transition: .25s;
+    }
+    .card:hover { border-color: rgba(217, 119, 87, .35); transform: translateY(-3px) }
+    .card h3 { color: #fff; margin: 14px 0 8px; font-size: 1.08rem }
+    .card p { color: var(--muted); margin: 0; font-size: .93rem }
+    .icon {
+      width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+      background: var(--primary-soft); color: var(--primary-strong);
+    }
+    .pain .icon { background: rgba(255, 255, 255, .05); color: var(--muted) }
+
+    /* Pricing */
+    .pricing { align-items: stretch }
+    .plan { display: flex; flex-direction: column; position: relative; padding: 32px 28px }
+    .plan.featured {
+      border-color: rgba(217, 119, 87, .6);
+      background: linear-gradient(180deg, rgba(217, 119, 87, .12), rgba(217, 119, 87, .02));
+      box-shadow: 0 24px 60px rgba(217, 119, 87, .12);
+    }
+    .badge {
+      position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+      background: var(--primary); color: #fff; font-size: .78rem; font-weight: 700;
+      padding: 4px 14px; border-radius: 999px; white-space: nowrap;
+    }
+    .plan-tier { display: flex; align-items: baseline; gap: 10px }
+    .plan-tier b { font-family: var(--serif); font-size: 2.2rem; color: var(--primary-strong); line-height: 1 }
+    .plan-tier span { color: #fff; font-weight: 600 }
+    .plan-desc { color: var(--muted); font-size: .9rem; margin: 10px 0 22px; min-height: 3em }
+    .price { font-size: 2.6rem; font-weight: 800; color: #fff; line-height: 1; letter-spacing: -.02em }
+    .price small { font-size: 1rem; font-weight: 500; color: var(--muted); margin-left: 4px }
+    .price sup { font-size: 1.2rem; font-weight: 600; vertical-align: top; margin-right: 2px; position: relative; top: .35em }
+    .price-note { color: var(--muted); font-size: .82rem; margin: 8px 0 22px }
+    .features { list-style: none; padding: 0; margin: 0 0 28px; flex: 1 }
+    .features li { display: flex; gap: 10px; padding: 7px 0; font-size: .93rem; color: var(--text) }
+    .features li::before {
+      content: ""; flex: 0 0 18px; height: 18px; margin-top: 3px; border-radius: 50%;
+      background: var(--primary-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e8906f'%3E%3Cpath d='M6.4 11.2 3.2 8l1.1-1.1 2.1 2.1 5.3-5.3L12.8 4.8z'/%3E%3C/svg%3E") center/12px no-repeat;
+    }
+    .plan .btn { width: 100% }
+    .pricing-foot { text-align: center; color: var(--muted); font-size: .86rem; margin-top: 28px }
+
+    /* Steps */
+    .steps { counter-reset: step }
+    .step { counter-increment: step; position: relative }
+    .step::before {
+      content: counter(step, decimal-leading-zero);
+      font-family: var(--serif); font-size: 2rem; color: var(--primary); opacity: .85; font-weight: 600;
+    }
+
+    /* FAQ */
+    .faq { max-width: 820px; margin: 0 auto }
+    .faq details {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px 22px; margin-bottom: 12px;
+    }
+    .faq summary { cursor: pointer; color: #fff; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 16px }
+    .faq summary::-webkit-details-marker { display: none }
+    .faq summary::after { content: "+"; color: var(--primary); font-size: 1.3rem; line-height: 1 }
+    .faq details[open] summary::after { content: "−" }
+    .faq details p { color: var(--muted); margin: 12px 0 0; font-size: .94rem }
+
+    /* CTA */
+    .cta {
+      text-align: center; padding: 56px 28px; border-radius: 24px;
+      background: linear-gradient(135deg, rgba(217, 119, 87, .18), rgba(217, 119, 87, .04));
+      border: 1px solid rgba(217, 119, 87, .3);
+    }
+    .cta h2 { font-family: var(--serif); color: var(--cream); font-size: clamp(1.5rem, 3.4vw, 2.2rem); margin: 0 0 12px }
+    .cta p { color: var(--muted); margin: 0 0 28px }
+
+    footer { padding: 36px 0; color: var(--muted); font-size: .86rem; border-top: 1px solid var(--border); margin-top: 84px }
+    .foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap }
+    footer a:hover { color: var(--primary-strong) }
+
+    .toast {
+      position: fixed; left: 50%; bottom: 32px; transform: translate(-50%, 20px); opacity: 0;
+      background: #fff; color: #141210; padding: 12px 20px; border-radius: 12px; font-weight: 600;
+      transition: .25s; pointer-events: none; z-index: 50; box-shadow: 0 12px 30px rgba(0, 0, 0, .3);
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0) }
+
+    @media (max-width: 960px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr) }
+      .grid-3 { grid-template-columns: 1fr }
+      .plan.featured { order: -1 }
+      .nav-links { display: none }
+    }
+    @media (max-width: 560px) {
+      .grid-4 { grid-template-columns: 1fr }
+      .hero { padding: 64px 0 48px }
+      .section { padding: 60px 0 }
+    }
+  </style>
+
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="ef8e7eb1-5502-46a1-a457-bf72987453ac"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" id="top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg>
+        </span>
+        Claude 代运营
+      </a>
+      <ul class="nav-links">
+        <li><a href="#why">为什么需要</a></li>
+        <li><a href="#service">服务内容</a></li>
+        <li><a href="#pricing">价格方案</a></li>
+        <li><a href="#process">开通流程</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+      <a class="nav-back" href="/projects.html">← 返回解决方案</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow"><span class="dot"></span>Claude 代运营 · 按月订阅</span>
+        <h1>确定性的稳定环境，<br><em>助力您的 AI 时代</em></h1>
+        <p class="lead">
+          不再为账号风控、网络环境、海外支付和续费反复折腾。我们为您托管一套独享、稳定、可持续的 Claude 使用环境，您只需专注于用 AI 创造价值。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#pricing">查看价格方案</a>
+          <button class="btn btn-ghost" type="button" data-copy-wechat>添加微信咨询</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>独享</strong><span>一人一号，不拼车</span></div>
+          <div class="stat"><strong>固定</strong><span>纯净稳定的使用环境</span></div>
+          <div class="stat"><strong>托管</strong><span>续费与风控全包</span></div>
+          <div class="stat"><strong>1x – 20x</strong><span>三档用量按需选择</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pain points -->
+    <section class="section section-alt" id="why">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Why</p>
+          <h2>用好 Claude，难的从来不是模型本身</h2>
+          <p>真正消耗精力的，是那些与创造无关的"不确定性"。</p>
+        </div>
+        <div class="grid grid-4 pain">
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
+            <h3>账号说没就没</h3>
+            <p>环境不干净、登录地频繁变化，辛苦积累的项目和对话随时可能中断。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8.5a15 15 0 0120 0M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0"/><path d="M3 3l18 18"/></svg></div>
+            <h3>网络时好时坏</h3>
+            <p>节点频繁切换、延迟抖动，Claude Code 跑到一半断开是常态。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+            <h3>支付续费麻烦</h3>
+            <p>海外卡、订阅扣款失败、套餐升级，每个月都要花时间处理。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <h3>时间被反复消耗</h3>
+            <p>研究工具、排查问题的时间，本该用在真正的业务和创作上。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section class="section" id="service">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Service</p>
+          <h2>把不确定性交给我们，把确定性留给您</h2>
+          <p>从环境搭建到日常运维，一站式托管，开箱即用。</p>
+        </div>
+        <div class="grid grid-4">
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div>
+            <h3>独享账号</h3>
+            <p>一人一号，专属使用，不与他人共享，对话与项目数据完整可控。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>固定纯净环境</h3>
+            <p>固定且干净的使用环境，避免登录地频繁漂移，从源头降低风控概率。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
+            <h3>续费风控托管</h3>
+            <p>订阅支付、到期续费、套餐升降级全部由我们处理，您无需操心。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+            <h3>技术支持</h3>
+            <p>Claude / Claude Code 使用指导与异常排查，遇到问题有人兜底。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Pricing</p>
+          <h2>三档用量，按需选择</h2>
+          <p>倍数代表相对基础档的可用额度，可随时根据实际用量升级或降级。</p>
+        </div>
+        <div class="grid grid-3 pricing">
+          <article class="card plan">
+            <div class="plan-tier"><b>1x</b><span>标准版</span></div>
+            <p class="plan-desc">适合个人日常对话、写作与轻量编程，体验 Claude 的稳定使用。</p>
+            <div class="price"><sup>¥</sup>450<small>/ 月</small></div>
+            <p class="price-note">约 ¥15 / 天</p>
+            <ul class="features">
+              <li>基础用量额度</li>
+              <li>独享账号 + 固定纯净环境</li>
+              <li>续费与风控全托管</li>
+              <li>支持 Claude Code</li>
+              <li>工作日技术支持</li>
+            </ul>
+            <button class="btn btn-ghost" type="button" data-copy-wechat data-plan="1x 标准版">立即咨询</button>
+          </article>
+
+          <article class="card plan featured">
+            <span class="badge">最受欢迎</span>
+            <div class="plan-tier"><b>5x</b><span>专业版</span></div>
+            <p class="plan-desc">适合开发者与内容创作者，Claude Code 重度日常使用的主力选择。</p>
+            <div class="price"><sup>¥</sup>1,650<small>/ 月</small></div>
+            <p class="price-note">5 倍额度，单位成本仅 1x 的 73%</p>
+            <ul class="features">
+              <li>5 倍于标准版的用量额度</li>
+              <li>独享账号 + 固定纯净环境</li>
+              <li>续费与风控全托管</li>
+              <li>Claude Code 长时间任务更从容</li>
+              <li>优先技术支持响应</li>
+            </ul>
+            <button class="btn btn-primary" type="button" data-copy-wechat data-plan="5x 专业版">立即咨询</button>
+          </article>
+
+          <article class="card plan">
+            <div class="plan-tier"><b>20x</b><span>旗舰版</span></div>
+            <p class="plan-desc">适合多 Agent 并行、全天候高强度使用的专业用户与小团队。</p>
+            <div class="price"><sup>¥</sup>3,300<small>/ 月</small></div>
+            <p class="price-note">20 倍额度，单位成本仅 1x 的 37%</p>
+            <ul class="features">
+              <li>20 倍于标准版的用量额度</li>
+              <li>独享账号 + 固定纯净环境</li>
+              <li>续费与风控全托管</li>
+              <li>多 Agent / 多任务并行无压力</li>
+              <li>专属一对一服务通道</li>
+            </ul>
+            <button class="btn btn-ghost" type="button" data-copy-wechat data-plan="20x 旗舰版">立即咨询</button>
+          </article>
+        </div>
+        <p class="pricing-foot">价格以人民币计，按月订阅。如需对公付款或多账号团队方案，请联系咨询。</p>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Process</p>
+          <h2>四步开通，当天即用</h2>
+        </div>
+        <div class="grid grid-4 steps">
+          <div class="card step">
+            <h3>咨询沟通</h3>
+            <p>添加微信或发送邮件，说明使用场景与预期用量。</p>
+          </div>
+          <div class="card step">
+            <h3>选择方案</h3>
+            <p>根据需求推荐 1x / 5x / 20x，确认后完成付款。</p>
+          </div>
+          <div class="card step">
+            <h3>环境交付</h3>
+            <p>交付独享账号与稳定环境，并提供使用说明。</p>
+          </div>
+          <div class="card step">
+            <h3>持续运营</h3>
+            <p>续费、风控、异常处理由我们持续托管。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">FAQ</p>
+          <h2>常见问题</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>1x / 5x / 20x 有什么区别？</summary>
+            <p>三档的核心差异是可用额度：5x 和 20x 分别提供标准版 5 倍和 20 倍的用量，其他服务内容一致，高档位额外享有更高优先级的支持。</p>
+          </details>
+          <details>
+            <summary>我该选哪一档？</summary>
+            <p>日常对话、写作选 1x；每天使用 Claude Code 写代码选 5x；需要多个 Agent 并行或全天候高强度使用选 20x。不确定的话可以先从低档开始，随时升级。</p>
+          </details>
+          <details>
+            <summary>"确定性的稳定环境"具体指什么？</summary>
+            <p>指独享账号 + 固定纯净的使用环境 + 专人托管续费与风控。我们通过规范化的运营尽可能消除封号、断连、扣款失败等不确定因素，让您获得可预期的使用体验。</p>
+          </details>
+          <details>
+            <summary>可以中途升级或降级吗？</summary>
+            <p>可以。下一个计费周期即可调整档位，如需当月立即升级，联系我们按差价处理。</p>
+          </details>
+          <details>
+            <summary>出现异常怎么办？</summary>
+            <p>遇到无法使用等异常情况，第一时间联系我们，会优先排查处理，确保您的使用尽快恢复。</p>
+          </details>
+          <details>
+            <summary>支持开票或团队采购吗？</summary>
+            <p>支持团队多账号方案，对公付款与发票需求请在咨询时说明，我们会提供对应方案。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <h2>现在开始，拥有确定性的 Claude</h2>
+          <p>告诉我们您的使用场景，为您推荐最合适的方案。</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-copy-wechat>添加微信：winnielove2020</button>
+            <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2">发送邮件咨询</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© <span id="year"></span> Just Jason · Claude 代运营</span>
+      <span><a href="/projects.html">解决方案</a> · <a href="/about.html">关于</a> · <a href="/contact.html">联系</a></span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      var WECHAT = 'winnielove2020';
+      var toast = document.getElementById('toast');
+      var timer;
+      function show(msg) {
+        toast.textContent = msg;
+        toast.classList.add('show');
+        clearTimeout(timer);
+        timer = setTimeout(function () { toast.classList.remove('show'); }, 2800);
+      }
+      document.querySelectorAll('[data-copy-wechat]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var plan = btn.getAttribute('data-plan');
+          var note = '请备注：Claude 代运营' + (plan ? ' ' + plan : '');
+          var done = function () { show('微信号 ' + WECHAT + ' 已复制，' + note); };
+          if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(WECHAT).then(done, function () { alert('微信：' + WECHAT + '（' + note + '）'); });
+          } else {
+            alert('微信：' + WECHAT + '（' + note + '）');
+          }
+        });
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+
+</html>

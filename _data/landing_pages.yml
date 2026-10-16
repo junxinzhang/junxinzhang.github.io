@@ -12,6 +12,26 @@
 # - date: 创建或更新日期
 # - featured: 是否精选展示
 
+- title: Claude 代运营
+  repo: claude-ops
+  demo_url: /projects/claude-ops/
+  description: 提供确定性的稳定环境，助力您的 AI 时代。独享账号、固定纯净环境、续费与风控全托管，1x ¥450 / 5x ¥1650 / 20x ¥3300 按月订阅
+  image: /projects/claude-ops/hero-card.svg
+  category: Service
+  no_source: true
+  tech_stack:
+    - 1x ¥450/月
+    - 5x ¥1650/月
+    - 20x ¥3300/月
+  keywords:
+    - Claude 代运营
+    - Claude 账号托管
+    - Claude Code
+    - Claude Max
+    - 稳定环境
+  date: 2026-10-16
+  featured: true
+
 - title: Zaokit Claude API 服务
   repo: zaokit-cc
   demo_url: https://cc.zaokit.com
