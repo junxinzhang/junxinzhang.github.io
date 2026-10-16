@@ -9,6 +9,13 @@ const I18N = (() => {
   const locales = {
     zh: {
       'meta.title': 'Zaokit Claude API 服务 - 企业级稳定接入方案',
+      'banner.text': '全新上线：需要个人/团队独享账号与稳定运行环境？了解 Claude 代运营托管服务',
+      'banner.badge': '全新服务',
+      'banner.action': '查看详情 →',
+      'pricing.alt.title': '不打算集成 API，想要开箱即用的 Claude 环境？',
+      'pricing.alt.desc': '我们提供独享账号、固定海外运行环境、按月订阅的托管代运营服务（$99/月起）。',
+      'pricing.alt.btn': '了解 Claude 代运营 →',
+      'footer.related.ops': 'Claude 代运营 · 独享稳定环境',
       'meta.description': 'Zaokit 提供企业级 Claude API 接入服务。支持 Claude 最新全系列模型，高并发、高可用，100% 兼容官方接口，支持企业合同与正式 Invoice。',
 
       'skip': '跳到正文',
@@ -143,6 +150,13 @@ const I18N = (() => {
 
     en: {
       'meta.title': 'Zaokit Claude API — Enterprise-Grade, Reliable Access',
+      'banner.text': 'New: Need dedicated Claude accounts and stable runtime environments? Explore Claude Managed Service',
+      'banner.badge': 'NEW',
+      'banner.action': 'Learn more →',
+      'pricing.alt.title': 'Don't need API integration? Want ready-to-use Claude environments?',
+      'pricing.alt.desc': 'We provide dedicated accounts, fixed overseas runtime environments, and monthly managed operations (starting at $99/mo).',
+      'pricing.alt.btn': 'Explore Claude Managed Service →',
+      'footer.related.ops': 'Claude Managed Service · Dedicated Runtime',
       'meta.description': 'Zaokit provides enterprise-grade Claude API access. Supporting the latest Claude models with high concurrency and availability, 100% compatible with the official API, with business contracts and formal invoices.',
 
       'skip': 'Skip to content',

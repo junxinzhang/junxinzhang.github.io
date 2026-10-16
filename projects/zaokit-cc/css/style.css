@@ -353,3 +353,65 @@ img{max-width:100%;display:block}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
+
+
+/* ── Top Announcement Banner ── */
+.top-banner {
+  background: linear-gradient(90deg, rgba(212,160,84,0.18), rgba(124,92,255,0.18));
+  border-bottom: 1px solid rgba(212,160,84,0.25);
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  text-align: center;
+  position: relative;
+  z-index: 31;
+}
+.top-banner a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.top-banner a:hover {
+  text-decoration: underline;
+}
+.top-banner .badge-new {
+  background: var(--primary);
+  color: #0c0a1a;
+  font-weight: 700;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Pricing Alternative Card ── */
+.pricing-alt-banner {
+  margin-top: 36px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(212,160,84,0.06));
+  border: 1px solid rgba(212,160,84,0.3);
+  border-radius: var(--radius-lg, 16px);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.pricing-alt-info h4 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.pricing-alt-info p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.pricing-alt-banner .btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
