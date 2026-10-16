@@ -43,7 +43,13 @@
       { "@type": "Offer", "name": "20x 旗舰版", "price": "1499", "priceCurrency": "AUD" },
       { "@type": "Offer", "name": "1x 标准版", "price": "179", "priceCurrency": "NZD" },
       { "@type": "Offer", "name": "5x 专业版", "price": "699", "priceCurrency": "NZD" },
-      { "@type": "Offer", "name": "20x 旗舰版", "price": "1799", "priceCurrency": "NZD" }
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "1799", "priceCurrency": "NZD" },
+      { "@type": "Offer", "name": "1x 标准版", "price": "139", "priceCurrency": "CAD" },
+      { "@type": "Offer", "name": "5x 专业版", "price": "549", "priceCurrency": "CAD" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "1399", "priceCurrency": "CAD" },
+      { "@type": "Offer", "name": "1x 标准版", "price": "129", "priceCurrency": "SGD" },
+      { "@type": "Offer", "name": "5x 专业版", "price": "499", "priceCurrency": "SGD" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "1299", "priceCurrency": "SGD" }
     ]
   }
   </script>
@@ -185,7 +191,7 @@
     .pricing-foot { text-align: center; color: var(--muted); font-size: .86rem; margin-top: 28px }
     .currency-switch {
       display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; width: fit-content; max-width: 100%;
-      margin: -12px auto 40px; padding: 5px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+      margin: -12px auto 40px; padding: 5px; border: 1px solid var(--border); border-radius: 24px; background: var(--surface);
     }
     .currency-switch button {
       font: inherit; font-size: .86rem; color: var(--muted); background: transparent; border: 0;
@@ -373,6 +379,8 @@
           <button type="button" data-currency="EUR" aria-pressed="false">€ 欧元</button>
           <button type="button" data-currency="AUD" aria-pressed="false">A$ 澳元</button>
           <button type="button" data-currency="NZD" aria-pressed="false">NZ$ 新西兰元</button>
+          <button type="button" data-currency="CAD" aria-pressed="false">C$ 加元</button>
+          <button type="button" data-currency="SGD" aria-pressed="false">S$ 新加坡元</button>
         </div>
         <div class="grid grid-3 pricing">
           <article class="card plan">
@@ -549,7 +557,9 @@
         USD: { sym: '$', name: '美元', p: [99, 399, 999] },
         EUR: { sym: '€', name: '欧元', p: [89, 349, 899] },
         AUD: { sym: 'A$', name: '澳元', p: [149, 579, 1499] },
-        NZD: { sym: 'NZ$', name: '新西兰元', p: [179, 699, 1799] }
+        NZD: { sym: 'NZ$', name: '新西兰元', p: [179, 699, 1799] },
+        CAD: { sym: 'C$', name: '加元', p: [139, 549, 1399] },
+        SGD: { sym: 'S$', name: '新加坡元', p: [129, 499, 1299] }
       };
       var MULT = [1, 5, 20];
       function fmt(n) { return n.toLocaleString('en-US'); }
@@ -590,6 +600,8 @@
         if (/^zh/.test(lang)) return;
         if (/-au$/.test(lang)) return setCurrency('AUD');
         if (/-nz$/.test(lang)) return setCurrency('NZD');
+        if (/-ca$/.test(lang)) return setCurrency('CAD');
+        if (/-sg$/.test(lang)) return setCurrency('SGD');
         if (/^(de|fr|es|it|nl|pt-pt|fi|el|ie)/.test(lang) || /-(de|fr|es|it|nl|at|be|ie|fi|pt|gr)$/.test(lang)) return setCurrency('EUR');
         if (/^en/.test(lang)) return setCurrency('USD');
       })();
