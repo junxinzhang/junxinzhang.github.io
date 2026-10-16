@@ -31,7 +31,19 @@
     "offers": [
       { "@type": "Offer", "name": "1x 标准版", "price": "600", "priceCurrency": "CNY" },
       { "@type": "Offer", "name": "5x 专业版", "price": "2400", "priceCurrency": "CNY" },
-      { "@type": "Offer", "name": "20x 旗舰版", "price": "6300", "priceCurrency": "CNY" }
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "6300", "priceCurrency": "CNY" },
+      { "@type": "Offer", "name": "1x 标准版", "price": "99", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "5x 专业版", "price": "399", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "999", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "1x 标准版", "price": "89", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "5x 专业版", "price": "349", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "899", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "1x 标准版", "price": "149", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "5x 专业版", "price": "579", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "1499", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "1x 标准版", "price": "179", "priceCurrency": "NZD" },
+      { "@type": "Offer", "name": "5x 专业版", "price": "699", "priceCurrency": "NZD" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "1799", "priceCurrency": "NZD" }
     ]
   }
   </script>
@@ -171,6 +183,16 @@
     }
     .plan .btn { width: 100% }
     .pricing-foot { text-align: center; color: var(--muted); font-size: .86rem; margin-top: 28px }
+    .currency-switch {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; width: fit-content; max-width: 100%;
+      margin: -12px auto 40px; padding: 5px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+    }
+    .currency-switch button {
+      font: inherit; font-size: .86rem; color: var(--muted); background: transparent; border: 0;
+      padding: 7px 14px; border-radius: 999px; cursor: pointer; transition: background .2s, color .2s;
+    }
+    .currency-switch button:hover { color: var(--text) }
+    .currency-switch button[aria-pressed="true"] { background: var(--primary); color: #fff; font-weight: 600 }
 
     /* Steps */
     .steps { counter-reset: step }
@@ -345,12 +367,19 @@
           <h2>三档用量，按需选择</h2>
           <p>倍数代表相对基础档的可用额度，可随时根据实际用量升级或降级。</p>
         </div>
+        <div class="currency-switch" role="group" aria-label="选择币种">
+          <button type="button" data-currency="CNY" aria-pressed="true">¥ 人民币</button>
+          <button type="button" data-currency="USD" aria-pressed="false">$ 美元</button>
+          <button type="button" data-currency="EUR" aria-pressed="false">€ 欧元</button>
+          <button type="button" data-currency="AUD" aria-pressed="false">A$ 澳元</button>
+          <button type="button" data-currency="NZD" aria-pressed="false">NZ$ 新西兰元</button>
+        </div>
         <div class="grid grid-3 pricing">
           <article class="card plan">
             <div class="plan-tier"><b>1x</b><span>标准版</span></div>
             <p class="plan-desc">适合个人日常对话、写作与轻量编程，体验 Claude 的稳定使用。</p>
-            <div class="price"><sup>¥</sup>600<small>/ 月</small></div>
-            <p class="price-note">含 Claude 运行环境 · 约 ¥20 / 天</p>
+            <div class="price" data-plan-idx="0"><sup>¥</sup><span class="amount">600</span><small>/ 月</small></div>
+            <p class="price-note" data-note-idx="0">含 Claude 运行环境 · 约 ¥20 / 天</p>
             <ul class="features">
               <li>基础用量额度</li>
               <li>独享 Claude 账号</li>
@@ -366,8 +395,8 @@
             <span class="badge">最受欢迎</span>
             <div class="plan-tier"><b>5x</b><span>专业版</span></div>
             <p class="plan-desc">适合开发者与内容创作者，Claude Code 重度日常使用的主力选择。</p>
-            <div class="price"><sup>¥</sup>2,400<small>/ 月</small></div>
-            <p class="price-note">含 Claude 运行环境 · 5 倍额度，单位成本为 1x 的 80%</p>
+            <div class="price" data-plan-idx="1"><sup>¥</sup><span class="amount">2,400</span><small>/ 月</small></div>
+            <p class="price-note" data-note-idx="1">含 Claude 运行环境 · 5 倍额度，单位成本为 1x 的 80%</p>
             <ul class="features">
               <li>5 倍于标准版的用量额度</li>
               <li>独享 Claude 账号</li>
@@ -382,8 +411,8 @@
           <article class="card plan">
             <div class="plan-tier"><b>20x</b><span>旗舰版</span></div>
             <p class="plan-desc">适合多 Agent 并行、全天候高强度使用的专业用户与小团队。</p>
-            <div class="price"><sup>¥</sup>6,300<small>/ 月</small></div>
-            <p class="price-note">含 Claude 运行环境 · 20 倍额度，单位成本约为 1x 的 53%</p>
+            <div class="price" data-plan-idx="2"><sup>¥</sup><span class="amount">6,300</span><small>/ 月</small></div>
+            <p class="price-note" data-note-idx="2">含 Claude 运行环境 · 20 倍额度，单位成本约为 1x 的 53%</p>
             <ul class="features">
               <li>20 倍于标准版的用量额度</li>
               <li>独享 Claude 账号</li>
@@ -395,7 +424,7 @@
             <button class="btn btn-ghost" type="button" data-copy-wechat data-plan="20x 旗舰版">立即咨询</button>
           </article>
         </div>
-        <p class="pricing-foot">以上价格均含 Claude 账号与 Claude 运行环境，以人民币计，按月订阅。如需对公付款或多账号团队方案，请联系咨询。</p>
+        <p class="pricing-foot">以上价格均含 Claude 账号与 Claude 运行环境，以<span id="currency-name">人民币</span>计，按月订阅。<span id="currency-extra" hidden>外币价格参考当地消费水平定价，均不低于人民币价格按当前汇率的折算。</span>如需对公付款或多账号团队方案，请联系咨询。</p>
       </div>
     </section>
 
@@ -514,6 +543,56 @@
           }
         });
       });
+      // 多币种价格：外币参考当地消费水平定价，且均不低于人民币价格按汇率折算（2026-10 汇率）
+      var PRICES = {
+        CNY: { sym: '¥', name: '人民币', p: [600, 2400, 6300] },
+        USD: { sym: '$', name: '美元', p: [99, 399, 999] },
+        EUR: { sym: '€', name: '欧元', p: [89, 349, 899] },
+        AUD: { sym: 'A$', name: '澳元', p: [149, 579, 1499] },
+        NZD: { sym: 'NZ$', name: '新西兰元', p: [179, 699, 1799] }
+      };
+      var MULT = [1, 5, 20];
+      function fmt(n) { return n.toLocaleString('en-US'); }
+      function setCurrency(code) {
+        var c = PRICES[code] || PRICES.CNY;
+        document.querySelectorAll('[data-plan-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-plan-idx');
+          el.querySelector('sup').textContent = c.sym;
+          el.querySelector('.amount').textContent = fmt(c.p[i]);
+        });
+        document.querySelectorAll('[data-note-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-note-idx');
+          if (i === 0) {
+            var day = c.p[0] / 30;
+            el.textContent = '含 Claude 运行环境 · 约 ' + c.sym + (day >= 10 ? Math.round(day) : +day.toFixed(1)) + ' / 天';
+          } else {
+            var ratio = Math.round(c.p[i] / (c.p[0] * MULT[i]) * 100);
+            el.textContent = '含 Claude 运行环境 · ' + MULT[i] + ' 倍额度，单位成本约为 1x 的 ' + ratio + '%';
+          }
+        });
+        document.getElementById('currency-name').textContent = c.name;
+        document.getElementById('currency-extra').hidden = (code === 'CNY');
+        document.querySelectorAll('[data-currency]').forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-currency') === code ? 'true' : 'false');
+        });
+        try { localStorage.setItem('claude-ops-currency', code); } catch (e) {}
+      }
+      document.querySelectorAll('[data-currency]').forEach(function (b) {
+        b.addEventListener('click', function () { setCurrency(b.getAttribute('data-currency')); });
+      });
+      (function initCurrency() {
+        var q = (new URLSearchParams(location.search).get('currency') || '').toUpperCase();
+        if (PRICES[q]) return setCurrency(q);
+        var saved = null;
+        try { saved = localStorage.getItem('claude-ops-currency'); } catch (e) {}
+        if (saved && PRICES[saved]) return setCurrency(saved);
+        var lang = (navigator.language || '').toLowerCase();
+        if (/^zh/.test(lang)) return;
+        if (/-au$/.test(lang)) return setCurrency('AUD');
+        if (/-nz$/.test(lang)) return setCurrency('NZD');
+        if (/^(de|fr|es|it|nl|pt-pt|fi|el|ie)/.test(lang) || /-(de|fr|es|it|nl|at|be|ie|fi|pt|gr)$/.test(lang)) return setCurrency('EUR');
+        if (/^en/.test(lang)) return setCurrency('USD');
+      })();
       document.getElementById('year').textContent = new Date().getFullYear();
     })();
   </script>
