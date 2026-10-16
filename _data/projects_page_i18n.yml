@@ -1,10 +1,10 @@
 zh-hans: &projects_page_zh_hans
   meta:
-    title: "Projects Portfolio - 开源项目与落地页作品集"
-    description: "Jason Zhang 的开源项目作品集，包含 Voice Real-time Translation、企业级 DevOps 仪表盘、SD-WAN 网络监控、蓝鲸 CMDB 定制方案、AI 安全防护平台等落地页项目。专注 AI 技术、DevOps、云原生架构。"
+    title: "解决方案 - AI 与 DevOps 落地方案作品集"
+    description: "Jason Zhang 的解决方案作品集，包含 Voice Real-time Translation、企业级 DevOps 仪表盘、SD-WAN 网络监控、蓝鲸 CMDB 定制方案、AI 安全防护平台等落地页项目。专注 AI 技术、DevOps、云原生架构。"
   hero:
-    title: "Projects Portfolio"
-    subtitle: "我的开源项目和落地页作品集"
+    title: "解决方案"
+    subtitle: "AI、DevOps 与企业级落地解决方案"
   filters:
     all: "全部"
     landing: "落地页"
@@ -102,11 +102,11 @@ zh-hans: &projects_page_zh_hans
 
 en: &projects_page_en
   meta:
-    title: "Projects Portfolio - Open Source Projects and Landing Pages"
-    description: "Jason Zhang's open-source project portfolio featuring Voice Real-time Translation, enterprise DevOps dashboards, SD-WAN monitoring, BlueKing CMDB custom solutions, and AI security platforms."
+    title: "Solutions - AI and DevOps Solution Portfolio"
+    description: "Jason Zhang's solution portfolio featuring Voice Real-time Translation, enterprise DevOps dashboards, SD-WAN monitoring, BlueKing CMDB custom solutions, and AI security platforms."
   hero:
-    title: "Projects Portfolio"
-    subtitle: "My open-source projects and landing page portfolio"
+    title: "Solutions"
+    subtitle: "AI, DevOps and enterprise-ready solutions"
   filters:
     all: "All"
     landing: "Landing Pages"
@@ -204,11 +204,11 @@ en: &projects_page_en
 
 zh-hant:
   meta:
-    title: "Projects Portfolio - 開源專案與落地頁作品集"
-    description: "Jason Zhang 的開源專案作品集，包含 Voice Real-time Translation、企業級 DevOps 儀表盤、SD-WAN 網路監控、藍鯨 CMDB 定制方案、AI 安全防護平台等落地頁專案。專注 AI 技術、DevOps、雲原生架構。"
+    title: "解決方案 - AI 與 DevOps 落地方案作品集"
+    description: "Jason Zhang 的解決方案作品集，包含 Voice Real-time Translation、企業級 DevOps 儀表盤、SD-WAN 網路監控、藍鯨 CMDB 定制方案、AI 安全防護平台等落地頁專案。專注 AI 技術、DevOps、雲原生架構。"
   hero:
-    title: "Projects Portfolio"
-    subtitle: "我的開源專案與落地頁作品集"
+    title: "解決方案"
+    subtitle: "AI、DevOps 與企業級落地解決方案"
   filters:
     all: "全部"
     landing: "落地頁"
