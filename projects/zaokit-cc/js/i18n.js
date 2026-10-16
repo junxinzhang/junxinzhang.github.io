@@ -9,7 +9,7 @@ const I18N = (() => {
   const locales = {
     zh: {
       'meta.title': 'Zaokit Claude API 服务 - 企业级稳定接入方案',
-      'meta.description': 'Zaokit 提供企业级 Claude API 接入服务。支持 Claude 4.7 Opus / Sonnet / Haiku 模型，高并发、高可用，100% 兼容官方接口，支持企业合同与正式 Invoice。',
+      'meta.description': 'Zaokit 提供企业级 Claude API 接入服务。支持 Claude 最新全系列模型，高并发、高可用，100% 兼容官方接口，支持企业合同与正式 Invoice。',
 
       'skip': '跳到正文',
       'brand.aria': 'Zaokit 主页',
@@ -29,7 +29,7 @@ const I18N = (() => {
       'hero.cta.primary': '联系客户经理',
       'hero.cta.secondary': '查看计费方案',
       'hero.meta.invoice': '支持企业合同与正式 Invoice',
-      'hero.meta.models': '包含 Claude 4.7 Opus / Sonnet / Haiku',
+      'hero.meta.models': '包含 Claude 最新全系列模型',
 
       'hero.card.title': '为什么企业选择我们',
       'hero.card.1.title': '清晰透明的商务流程',
@@ -99,7 +99,7 @@ const I18N = (() => {
 
       'features.tag': '功能特性',
       'features.title': '专为开发者与工程团队准备',
-      'features.f1': '支持 Claude 4.7 Opus / Sonnet / Haiku 全系列',
+      'features.f1': '支持 Claude 最新全系列模型',
       'features.f2': '完美支持 Server-Sent Events (SSE) 流式输出响应',
       'features.f3': '支持 Function Calling (工具调用) 与 Vision 多模态输入',
       'features.f4': '通过统一计费面板实时监控 Token 消耗及账单情况',
@@ -143,7 +143,7 @@ const I18N = (() => {
 
     en: {
       'meta.title': 'Zaokit Claude API — Enterprise-Grade, Reliable Access',
-      'meta.description': 'Zaokit provides enterprise-grade Claude API access. Supporting Claude 4.7 Opus / Sonnet / Haiku with high concurrency and availability, 100% compatible with the official API, with business contracts and formal invoices.',
+      'meta.description': 'Zaokit provides enterprise-grade Claude API access. Supporting the latest Claude models with high concurrency and availability, 100% compatible with the official API, with business contracts and formal invoices.',
 
       'skip': 'Skip to content',
       'brand.aria': 'Zaokit Home',
@@ -163,7 +163,7 @@ const I18N = (() => {
       'hero.cta.primary': 'Contact Sales',
       'hero.cta.secondary': 'View Pricing',
       'hero.meta.invoice': 'Business contracts & formal invoices',
-      'hero.meta.models': 'Claude 4.7 Opus / Sonnet / Haiku',
+      'hero.meta.models': 'Latest Claude Opus / Sonnet / Haiku',
 
       'hero.card.title': 'Why enterprises choose us',
       'hero.card.1.title': 'Clear, transparent procurement',
@@ -233,7 +233,7 @@ const I18N = (() => {
 
       'features.tag': 'Features',
       'features.title': 'Built for developers & engineering teams',
-      'features.f1': 'Full Claude 4.7 Opus / Sonnet / Haiku lineup',
+      'features.f1': 'Latest Claude model lineup',
       'features.f2': 'Full Server-Sent Events (SSE) streaming support',
       'features.f3': 'Function Calling (tool use) & Vision multimodal input',
       'features.f4': 'Real-time token consumption & billing dashboard',

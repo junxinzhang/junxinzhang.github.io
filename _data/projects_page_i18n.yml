@@ -38,7 +38,7 @@ zh-hans: &projects_page_zh_hans
         - "稳定环境"
     zaokit-cc:
       title: "Zaokit Claude API 服务"
-      description: "企业级 Claude API 接入服务，100% 兼容官方接口，支持 Claude 4.7 全系列模型，支持企业合同与正式 Invoice。"
+      description: "企业级 Claude API 接入服务，100% 兼容官方接口，支持 Claude 最新全系列模型，支持企业合同与正式 Invoice。"
       keywords:
         - "Claude API"
         - "企业级 AI"
@@ -149,7 +149,7 @@ en: &projects_page_en
         - "Stable Environment"
     zaokit-cc:
       title: "Zaokit Claude API Service"
-      description: "Enterprise-grade Claude API access with full official protocol compatibility, supporting Claude 4.7 models, business contracts, and formal invoicing."
+      description: "Enterprise-grade Claude API access with full official protocol compatibility, supporting the latest Claude models, business contracts, and formal invoicing."
       keywords:
         - "Claude API"
         - "enterprise AI"
@@ -260,7 +260,7 @@ zh-hant:
         - "穩定環境"
     zaokit-cc:
       title: "Zaokit Claude API 服務"
-      description: "企業級 Claude API 接入服務，100% 兼容官方接口，支持 Claude 4.7 全系列模型，支持企業合同與正式 Invoice。"
+      description: "企業級 Claude API 接入服務，100% 兼容官方接口，支持 Claude 最新全系列模型，支持企業合同與正式 Invoice。"
       keywords:
         - "Claude API"
         - "企業級 AI"
