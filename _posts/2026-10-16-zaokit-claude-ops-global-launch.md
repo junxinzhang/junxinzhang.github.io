@@ -4,7 +4,7 @@ title: "Claude代运营上线：在不确定的环境里，买一份确定的顶
 date: 2026-10-16
 author: Jason Zhang
 categories: [AI, 创业]
-image: assets/images/cover-20261016-claudeops-launch.png
+image: assets/images/cover-20261016-claudeops-launch.webp
 tags: [featured, Claude, Claude Code, ClaudeOps, Zaokit, 代运营, 生产力, 独立开发, 思考]
 slug: zaokit-claude-ops-global-launch
 description: >
@@ -34,7 +34,7 @@ faq:
 
 今天把这套业务推向全球，原因其实非常朴素：我自己把所有该踩的坑全踩了一遍，深知这套生产力有多强，也深知为了维持这套工具正常运转，背后到底有多少恼人的消耗。
 
-![Claude代运营全局概览](/assets/images/cover-20261016-claudeops-launch.png)
+![Claude代运营全局概览](/assets/images/cover-20261016-claudeops-launch.webp)
 *Zaokit AI 澳洲启航：独享账号、固定运行环境与续费运维全托管*
 
 ---
