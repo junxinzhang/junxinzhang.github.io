@@ -1,4 +1,7 @@
 (() => {
+  /* ── i18n init ── */
+  I18N.init();
+
   const body = document.body;
   const header = document.querySelector('.site-header');
   const menuToggle = document.querySelector('.menu-toggle');

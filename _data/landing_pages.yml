@@ -15,14 +15,14 @@
 - title: Claude 代运营
   repo: claude-ops
   demo_url: /projects/claude-ops/
-  description: 提供确定性的稳定环境，助力您的 AI 时代。独享账号、含 Claude 运行环境（美国 / 新加坡 / 澳大利亚 / 新西兰 / 加拿大机房）、续费与风控全托管，1x ¥600 / 5x ¥2400 / 20x ¥6300 按月订阅
+  description: 提供确定性的稳定环境，助力您的 AI 时代。独享账号、含 Claude 运行环境（美国 / 新加坡 / 澳大利亚 / 新西兰 / 加拿大机房）、续费与账号运维全托管，1x $99 / 5x $399 / 20x $999 按月订阅
   image: /projects/claude-ops/hero-card.svg
   category: Service
   no_source: true
   tech_stack:
-    - 1x ¥600/月
-    - 5x ¥2400/月
-    - 20x ¥6300/月
+    - 1x $99/月
+    - 5x $399/月
+    - 20x $999/月
   keywords:
     - Claude 代运营
     - Claude 账号托管
@@ -35,7 +35,7 @@
 - title: Zaokit Claude API 服务
   repo: zaokit-cc
   demo_url: https://cc.zaokit.com
-  description: 企业级 Claude API 合规代理服务，100% 兼容官方接口协议，支持 Claude 4.7 全系列模型，提供对公结算与增值税发票，解决企业接入合规与报销痛点
+  description: 企业级 Claude API 接入服务，100% 兼容官方接口协议，支持 Claude 4.7 全系列模型，高并发、高可用，支持企业合同与正式 Invoice
   image: /projects/zaokit-cc/assets/hero-card.png
   category: Service
   tech_stack:
@@ -44,11 +44,9 @@
     - JavaScript
   keywords:
     - Claude API
-    - Claude 代理
+    - Claude API 接入
     - 企业级 AI
     - 大模型 API 接入
-    - Claude 发票
-    - 增值税专票
     - 商业级 API
     - Anthropic
   date: 2026-05-13
