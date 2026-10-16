@@ -426,7 +426,7 @@ Pencil 做了一件简单但革命性的事：
 如果你对 Pencil、MCP 或 AI 设计有问题或想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

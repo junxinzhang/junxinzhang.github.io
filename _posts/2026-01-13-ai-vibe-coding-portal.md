@@ -497,7 +497,7 @@ feature/add-audit-page → your-project-git-feature-add-audit-page.vercel.app
 如果你对Vibe Coding、AI编程有问题或想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

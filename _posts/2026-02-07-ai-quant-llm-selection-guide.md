@@ -462,7 +462,7 @@ Azilen Technologies在2026年1月发布了一份金融领域LLM选型指南，�
 - 开源模型在金融场景的表现怎么样？
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 ---

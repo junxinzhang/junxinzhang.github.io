@@ -300,7 +300,7 @@ OpenClaw能不能用来做量化？能，但目前更适合做"外挂"而不是"
 如果你也在琢磨AI+量化，欢迎交流：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别想听听：

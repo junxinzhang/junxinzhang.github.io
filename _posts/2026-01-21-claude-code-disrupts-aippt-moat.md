@@ -386,7 +386,7 @@ AIPPT类产品的商业逻辑曾经非常清晰：
 如果你对AI创业、护城河问题有想法或疑问：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

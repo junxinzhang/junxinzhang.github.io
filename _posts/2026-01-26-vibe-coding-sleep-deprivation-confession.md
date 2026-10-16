@@ -325,7 +325,7 @@ slug: vibe-coding-sleep-deprivation-confession
 如果你也有"凌晨三点还不想睡"的故事想分享：
 
 - 邮箱：jason2023zhang@gmAIl.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

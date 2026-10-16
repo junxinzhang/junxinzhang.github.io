@@ -526,7 +526,7 @@ Anthropic发布了一份叫"宪法"的文档。
 如果你对AI宪法、AI对齐或AI意识话题有想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

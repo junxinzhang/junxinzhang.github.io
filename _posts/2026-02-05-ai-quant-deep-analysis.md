@@ -299,7 +299,7 @@ description: "AI量化交易的本质是什么？它和传统量化有什么区�
 如果你也在思考AI量化：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别想听听：
@@ -328,7 +328,7 @@ description: "AI量化交易的本质是什么？它和传统量化有什么区�
 
 如果你对这个方向感兴趣，欢迎：
 - **留言**：在评论区分享你的想法和问题
-- **私信交流**：微信 winnielove2020
+- **私信交流**：微信 jasonzhang1616
 - **邮件联系**：jason2023zhang@gmail.com
 
 我们期待与更多志同道合的朋友一起探索AI量化的可能性。

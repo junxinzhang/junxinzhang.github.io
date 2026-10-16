@@ -511,7 +511,7 @@ Bain的分析师倾向于第二种观点：
 如果你对AI Agent、SaaS转型或软件行业有问题或想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

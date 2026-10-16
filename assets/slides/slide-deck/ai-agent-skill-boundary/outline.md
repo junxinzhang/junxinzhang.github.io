@@ -292,7 +292,7 @@ Headline: AI Agent + Skill，正在把"我不会"变成"我可以"
 Sub-headline: 设计的边界、PPT的边界、创作的边界——一个接一个地被改写
 Body:
 - 博客：junxinzhang.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 邮箱：jason2023zhang@gmail.com
 
 // VISUAL

@@ -480,7 +480,7 @@ AI 应用生命周期管理
 ## 联系方式
 
 - 📧 邮箱：jason2023zhang@gmail.com
-- 💬 微信：winnielove2020
+- 💬 微信：jasonzhang1616
 - 🌐 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

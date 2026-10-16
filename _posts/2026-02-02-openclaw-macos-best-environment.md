@@ -235,7 +235,7 @@ Apple生态的整合确实丝滑——日历同步、提醒事项、系统工具
 如果你也在用OpenClaw，欢迎交流：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别想听听：

@@ -137,7 +137,7 @@ slug: why-language-models-hallucinate
 - 期待听到您的经验和见解！
 
 **📧 邮箱**：jason2023zhang@gmail.com
-**💬 微信**：winnielove2020
+**💬 微信**：jasonzhang1616
 **🌐 技术博客**：[https://junxinzhang.com](https://junxinzhang.com)
 
 ---

@@ -1180,7 +1180,7 @@ AI很适合模式匹配，但不适合逻辑推理。
 如果你对AI的局限性、混合架构，或者技术评估有兴趣讨论：
 
 - 📧 邮箱：jason2023zhang@gmail.com
-- 💬 微信：winnielove2020
+- 💬 微信：jasonzhang1616
 - 🌐 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

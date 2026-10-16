@@ -517,7 +517,7 @@ AI能帮你做出专业的PPT，但**什么内容该放在PPT里、如何讲一�
 如果你对AI Agent、Skill生态或创作效率提升有想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

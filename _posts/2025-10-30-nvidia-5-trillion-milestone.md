@@ -426,7 +426,7 @@ AMD的生态 = 基于行业通用标准的开放生态
 如果你对英伟达的策略、AI产业的未来，或者说科技投资有兴趣讨论：
 
 - 📧 邮箱：jason2023zhang@gmail.com
-- 💬 微信：winnielove2020
+- 💬 微信：jasonzhang1616
 - 🌐 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

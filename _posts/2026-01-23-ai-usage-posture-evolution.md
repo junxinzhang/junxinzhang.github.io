@@ -497,7 +497,7 @@ Claude不知道你公司的编码规范，只能按通用最佳实践写。
 如果你对AI使用姿势、Agent技术有问题或想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

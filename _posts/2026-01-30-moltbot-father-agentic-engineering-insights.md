@@ -312,7 +312,7 @@ Peter的这场114分钟访谈，给出了一个经过实战检验的答案：
 如果你对 AI Agent 实战经验有问题或想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

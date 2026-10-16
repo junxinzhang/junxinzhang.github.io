@@ -552,7 +552,7 @@ Star一个项目、提一个Issue、贡献一行代码——你也可以成为�
 如果你对今天讨论的项目有问题或想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

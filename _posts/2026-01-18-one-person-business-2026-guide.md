@@ -640,7 +640,7 @@ Dan Koe 观察了数千个创业失败案例，发现了一个惊人的规律：
 如果你对一人公司创业有问题或想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

@@ -558,7 +558,7 @@ Prompt工程只是第一步。要构建一个**可持续运行**的多智能体�
 - 三轮辩论的实际效果如何？
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 ---

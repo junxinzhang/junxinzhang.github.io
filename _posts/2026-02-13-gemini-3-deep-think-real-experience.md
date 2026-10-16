@@ -357,7 +357,7 @@ Deep Think在数学和科学推理上碾压一切，但让它写博客，它就�
 - 对输出Token缩减有什么应对方法？
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 ---

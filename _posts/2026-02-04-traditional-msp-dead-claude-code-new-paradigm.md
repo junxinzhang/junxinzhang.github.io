@@ -304,7 +304,7 @@ AI Agent正在渗透每一个专业领域：
 如果你也在思考MSP转型或AI Agent落地：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

@@ -582,7 +582,7 @@ Clawdbot已经迈出了第一步。
 如果你对 Clawdbot 安全、AI Agent 风险有问题或想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

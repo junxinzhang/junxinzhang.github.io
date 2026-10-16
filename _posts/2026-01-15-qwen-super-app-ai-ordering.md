@@ -354,7 +354,7 @@ MCP协议正在成为行业标准。学习如何：
 如果你对AI Agent和超级App有想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 ---

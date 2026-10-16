@@ -402,7 +402,7 @@ Anthropic刚刚发布的[Cowork](https://www.anthropic.com/cowork)把这种能�
 如果你对Claude Code使用有问题或想法：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎分享你的AI助手使用经验！

@@ -370,7 +370,7 @@ faq:
 - 在新加坡过春节是什么体验？
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 ---

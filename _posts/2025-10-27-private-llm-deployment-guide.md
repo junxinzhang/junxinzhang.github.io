@@ -629,7 +629,7 @@ A：取决于任务特殊性：
 如果你正在规划企业大模型部署，或对本文中的任何内容有疑问，欢迎联系：
 
 - **📧 邮箱**：jason2023zhang@gmail.com
-- **💬 微信**：winnielove2020
+- **💬 微信**：jasonzhang1616
 - **🌐 技术博客**：[https://junxinzhang.com](https://junxinzhang.com)
 
 我特别欢迎来自以下背景的交流：

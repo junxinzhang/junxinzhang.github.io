@@ -464,7 +464,7 @@ AI时代一人公司成本模型：
 如果你也在经历类似的"军备竞赛"：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：

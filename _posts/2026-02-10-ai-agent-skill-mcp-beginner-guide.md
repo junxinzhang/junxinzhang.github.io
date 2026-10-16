@@ -502,7 +502,7 @@ AI Agent + Skill + MCP也是一样——你不需要懂底层技术，但它会�
 如果你对AI Agent、Skill或MCP有任何问题：
 
 - 邮箱：jason2023zhang@gmail.com
-- 微信：winnielove2020
+- 微信：jasonzhang1616
 - 博客：[https://junxinzhang.com](https://junxinzhang.com)
 
 特别欢迎讨论：
