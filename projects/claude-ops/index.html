@@ -258,6 +258,21 @@
     .cta h2 { font-family: var(--serif); color: var(--cream); font-size: clamp(1.5rem, 3.4vw, 2.2rem); margin: 0 0 12px }
     .cta p { color: var(--muted); margin: 0 0 28px }
 
+    .contact-tg {
+      display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap;
+      margin: 36px auto 0; padding-top: 32px; border-top: 1px solid rgba(217, 119, 87, .2); max-width: 620px; text-align: left;
+    }
+    .tg-qr img { display: block; width: 158px; height: auto; border-radius: 16px; transition: transform .2s }
+    .tg-qr:hover img { transform: scale(1.03) }
+    .tg-text { max-width: 300px }
+    .tg-text h3 { margin: 0 0 6px; color: var(--cream); font-size: 1.15rem }
+    .tg-text p { margin: 0 0 14px; color: var(--muted); font-size: .92rem }
+    .tg-link {
+      display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 10px;
+      background: #2aabee; color: #fff; font-weight: 600; font-size: .92rem; transition: .2s;
+    }
+    .tg-link:hover { background: #229ed9; transform: translateY(-1px) }
+    @media (max-width: 560px) { .contact-tg { text-align: center } .tg-text { max-width: none } }
     footer { padding: 36px 0; color: var(--muted); font-size: .86rem; border-top: 1px solid var(--border); margin-top: 84px }
     .foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap }
     footer a:hover { color: var(--primary-strong) }
@@ -326,7 +341,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#pricing">查看价格方案</a>
-          <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2">邮件咨询</a>
+          <a class="btn btn-ghost" href="mailto:support@zaokit.ai?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2">邮件咨询</a>
         </div>
         <div class="hero-stats">
           <div class="stat"><strong>独享账号</strong><span>一人一号，物理级零交叉</span></div>
@@ -491,7 +506,7 @@
               <li>工作日技术支持</li>
             </ul>
             <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/aFa28teyB0ou4Dsdga9Zm0k" target="_blank" rel="noopener">立即订阅</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%201x%20%E6%A0%87%E5%87%86%E7%89%88">有疑问？发送邮件咨询 →</a>
+            <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%201x%20%E6%A0%87%E5%87%86%E7%89%88">有疑问？发送邮件咨询 →</a>
           </article>
 
           <article class="card plan featured">
@@ -509,7 +524,7 @@
               <li>优先技术支持响应</li>
             </ul>
             <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/28E28teyBdbg3zocc69Zm0q" target="_blank" rel="noopener">立即订阅</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%205x%20%E4%B8%93%E4%B8%9A%E7%89%88">有疑问？发送邮件咨询 →</a>
+            <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%205x%20%E4%B8%93%E4%B8%9A%E7%89%88">有疑问？发送邮件咨询 →</a>
           </article>
 
           <article class="card plan">
@@ -526,7 +541,7 @@
               <li>专属一对一服务通道</li>
             </ul>
             <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/7sYcN78ad4EKb1Q7VQ9Zm0w" target="_blank" rel="noopener">立即订阅</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%2020x%20%E6%97%97%E8%88%B0%E7%89%88">有疑问？发送邮件咨询 →</a>
+            <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%2020x%20%E6%97%97%E8%88%B0%E7%89%88">有疑问？发送邮件咨询 →</a>
           </article>
         </div>
         <div class="stripe-trust">
@@ -623,7 +638,20 @@
           <p>支持 Stripe 在线订阅当天交付，或告诉我们您的使用场景获取专属建议。</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#pricing">立即选择方案订阅</a>
-            <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2">发送邮件咨询：jason2023zhang@gmail.com</a>
+            <a class="btn btn-ghost" href="mailto:support@zaokit.ai?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2">发送邮件咨询：support@zaokit.ai</a>
+          </div>
+          <div class="contact-tg">
+            <a class="tg-qr" href="https://t.me/letcode2020" target="_blank" rel="noopener" aria-label="打开 Telegram @letcode2020">
+              <img src="telegram-qr.jpg" width="158" height="210" alt="Telegram 二维码 @letcode2020" loading="lazy">
+            </a>
+            <div class="tg-text">
+              <h3>Telegram 直接聊</h3>
+              <p>扫码或点击添加，售前咨询、技术支持与 AI 资讯都在这里。</p>
+              <a class="tg-link" href="https://t.me/letcode2020" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1.1-1 .2-1.5L20.5 2.7c.9-.3 1.7.2 1.4 1.6z"/></svg>
+                @letcode2020
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -751,6 +779,11 @@
         };
         trackEvent('begin_checkout', checkoutParams);
         trackEvent('stripe_checkout_click', checkoutParams);
+        return;
+      }
+      if ((a.getAttribute('href') || '').indexOf('https://t.me/') === 0) {
+        trackEvent('telegram_click', { location: a.classList.contains('tg-qr') ? 'qr' : 'button' });
+        trackEvent('generate_lead', { plan: 'general', currency: currentCurrency(), location: 'telegram' });
         return;
       }
       if (isMail(a)) {
