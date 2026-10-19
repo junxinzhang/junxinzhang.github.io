@@ -10,6 +10,8 @@
   <meta name="keywords" content="Claude 代运营, Claude 账号托管, Claude Max, Claude Pro, Claude Code, Claude 稳定环境">
   <meta name="author" content="Jason Zhang">
   <link rel="canonical" href="https://junxinzhang.com/projects/claude-ops/">
+  <link rel="alternate" hreflang="zh-CN" href="https://claudeops.zaokit.ai/">
+  <link rel="alternate" hreflang="en" href="https://claudeops.zaokit.ai/en/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
@@ -309,6 +311,13 @@
       .hero { padding: 64px 0 48px }
       .section { padding: 60px 0 }
     }
+    .header-right { display: flex; align-items: center; gap: 14px }
+    .lang-switch {
+      font-size: .85rem; font-weight: 600; color: var(--text); padding: 6px 12px; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--surface); transition: .2s;
+    }
+    .lang-switch:hover { color: #fff; border-color: var(--primary); background: var(--primary-soft) }
+    .foot-entity { color: var(--cream) }
   </style>
 
   <!-- Google Analytics 4 -->
@@ -340,7 +349,9 @@
         <li><a href="#process">开通流程</a></li>
         <li><a href="#faq">常见问题</a></li>
       </ul>
-      <a class="nav-back" href="/projects.html">← 返回解决方案</a>
+      <div class="header-right">
+        <a class="lang-switch" href="en/" hreflang="en" lang="en">EN</a>
+      </div>
     </div>
   </header>
 
@@ -348,7 +359,7 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <span class="eyebrow"><span class="dot"></span>Claude 代运营 · 按月订阅</span>
+        <span class="eyebrow"><span class="dot"></span>澳大利亚公司运营 · 按月订阅</span>
         <h1>确定性的稳定环境，<br><em>助力您的 AI 时代</em></h1>
         <p class="lead">
           您获得的不仅仅是顶级的算力，还有顶级的 AI 技术支持与一手资讯。我们为您托管一套独享、稳定、可持续的 Claude 使用环境，您只需专注于用 AI 创造价值。
@@ -362,7 +373,7 @@
           <div class="stat"><strong>Mac 实例</strong><span>单租户物理隔离运行环境</span></div>
           <div class="stat"><strong>全托管</strong><span>续费、升级与运维全包</span></div>
           <div class="stat"><strong>5 国机房</strong><span>美国 · 新加坡 · 澳洲 · 新西兰 · 加拿大</span></div>
-          <div class="stat"><strong>1x – 20x</strong><span>三档用量按需选择</span></div>
+          <div class="stat"><strong>澳洲公司</strong><span>澳大利亚注册企业运营</span></div>
         </div>
       </div>
     </section>
@@ -603,6 +614,10 @@
         </div>
         <div class="faq">
           <details>
+            <summary>Zaokit ClaudeOps 由谁运营？</summary>
+            <p>Zaokit ClaudeOps 由澳大利亚注册公司运营，通过 Stripe 安全结算，每笔付款均自动生成正式收据与账单（Invoice）。服务支持中文与英文（<a href="en/" style="color:var(--primary-strong)">English version</a>）。</p>
+          </details>
+          <details>
             <summary>1x / 5x / 20x 有什么区别？</summary>
             <p>三档的核心差异是可用额度：5x 和 20x 分别提供标准版 5 倍和 20 倍的用量，其他服务内容一致，高档位额外享有更高优先级的支持。</p>
           </details>
@@ -676,6 +691,7 @@
     <div class="container foot">
       <div class="foot-brand">
         <strong>Claude 代运营 · Zaokit ClaudeOps</strong>
+        <span class="foot-entity">由澳大利亚注册公司运营 · 支持中文 / English</span>
         <span>联系：<a href="mailto:support@zaokit.ai">support@zaokit.ai</a></span>
         <span class="foot-copy">© <span id="year"></span> Zaokit AI · <a href="https://junxinzhang.com/about.html" target="_blank" rel="noopener">Just Jason</a></span>
       </div>

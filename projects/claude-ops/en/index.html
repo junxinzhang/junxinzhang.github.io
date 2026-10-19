@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en-AU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaokit ClaudeOps – Managed Claude on Dedicated Macs | Operated in Australia</title>
+  <meta name="description"
+    content="Zaokit ClaudeOps: a dedicated Claude account on your own single-tenant Mac, fully managed billing and operations, plus expert AI support and insights. Operated by an Australian registered company. 1x, 5x and 20x monthly plans in AUD, USD, EUR, NZD, CAD and SGD.">
+  <meta name="keywords" content="Claude managed service, Claude Code, Claude Max, dedicated Mac, Claude hosting Australia, Zaokit ClaudeOps">
+  <meta name="author" content="Zaokit AI">
+  <link rel="canonical" href="https://claudeops.zaokit.ai/en/">
+  <link rel="alternate" hreflang="en" href="https://claudeops.zaokit.ai/en/">
+  <link rel="alternate" hreflang="zh-CN" href="https://claudeops.zaokit.ai/">
+  <link rel="alternate" hreflang="x-default" href="https://claudeops.zaokit.ai/en/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content="Zaokit ClaudeOps">
+  <meta property="og:title" content="Zaokit ClaudeOps – A Reliable Claude Environment for the AI Era">
+  <meta property="og:description" content="Dedicated Claude account · Single-tenant Mac · Fully managed. Operated by an Australian registered company.">
+  <meta property="og:url" content="https://claudeops.zaokit.ai/en/">
+  <meta property="og:image" content="https://claudeops.zaokit.ai/hero-card.svg">
+  <meta name="theme-color" content="#141210">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Zaokit ClaudeOps",
+    "description": "Managed Claude environment: dedicated account, single-tenant Mac, fully managed billing and operations, with expert AI support.",
+    "provider": { "@type": "Organization", "name": "Zaokit AI", "url": "https://zaokit.app", "address": { "@type": "PostalAddress", "addressCountry": "AU" } },
+    "offers": [
+      { "@type": "Offer", "name": "1x Standard", "price": "149", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "5x Pro", "price": "579", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "20x Ultimate", "price": "1499", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "1x Standard", "price": "99", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "5x Pro", "price": "399", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "20x Ultimate", "price": "999", "priceCurrency": "USD" }
+    ]
+  }
+  </script>
+
+    <style>
+    :root {
+      --bg: #141210;
+      --bg-soft: #1b1815;
+      --surface: rgba(255, 255, 255, 0.035);
+      --surface-strong: rgba(255, 255, 255, 0.07);
+      --text: #ece6dd;
+      --muted: #a39a8e;
+      --primary: #d97757;
+      --primary-strong: #e8906f;
+      --primary-soft: rgba(217, 119, 87, 0.14);
+      --cream: #f5efe6;
+      --border: rgba(255, 255, 255, 0.08);
+      --radius: 18px;
+      --font: "Inter", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --serif: "Tiempos Headline", "Source Han Serif SC", "Noto Serif SC", "Songti SC", Georgia, serif;
+    }
+
+    * { box-sizing: border-box }
+    html { scroll-behavior: smooth }
+    body {
+      margin: 0; color: var(--text); background: var(--bg);
+      font-family: var(--font); line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(70vw 50vw at 15% -10%, rgba(217, 119, 87, 0.16), transparent 60%),
+        radial-gradient(50vw 40vw at 90% 15%, rgba(245, 239, 230, 0.05), transparent 55%);
+    }
+    a { color: inherit; text-decoration: none }
+    .container { width: min(1120px, 92vw); margin: 0 auto }
+
+    /* Header */
+    .site-header {
+      position: sticky; top: 0; z-index: 30;
+      backdrop-filter: blur(16px); background: rgba(20, 18, 16, 0.85);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 68px; gap: 16px }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: #fff }
+    .brand-mark {
+      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+      background: var(--primary); color: #fff;
+    }
+    .nav-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0 }
+    .nav-links a { padding: 8px 12px; border-radius: 10px; color: var(--muted); font-size: .92rem; transition: .2s }
+    .nav-links a:hover { color: #fff; background: var(--surface-strong) }
+    .nav-back { font-size: .88rem; color: var(--muted) }
+    .nav-back:hover { color: var(--primary-strong) }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 24px; border-radius: 12px; font-weight: 600; font-size: .98rem;
+      border: 1px solid transparent; cursor: pointer; transition: .2s; font-family: inherit;
+    }
+    .btn-primary { background: var(--primary); color: #fff }
+    .btn-primary:hover { background: var(--primary-strong); transform: translateY(-1px) }
+    .btn-ghost { background: var(--surface); color: var(--text); border-color: var(--border) }
+    .btn-ghost:hover { background: var(--surface-strong) }
+
+    /* Hero */
+    .hero { padding: 96px 0 72px; text-align: center }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 999px; font-size: .82rem; font-weight: 600;
+      color: var(--primary-strong); background: var(--primary-soft); border: 1px solid rgba(217, 119, 87, .3);
+    }
+    .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #5bd18b; box-shadow: 0 0 0 4px rgba(91, 209, 139, .18) }
+    .hero h1 {
+      font-family: var(--serif); font-weight: 600; color: var(--cream);
+      font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.15; margin: 22px 0 18px; letter-spacing: -.01em;
+    }
+    .hero h1 em {
+      font-style: normal; color: var(--primary);
+      background: linear-gradient(90deg, #d97757 0%, #f2b48f 20%, #f5efe6 35%, #e8906f 50%, #c96442 65%, #f2b48f 80%, #d97757 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: hero-flow 6s linear infinite;
+    }
+    @keyframes hero-flow { to { background-position: -200% center } }
+    @media (prefers-reduced-motion: reduce) { .hero h1 em { animation: none } }
+    .hero h1 em, .grad {
+      font-style: normal;
+    }
+    .section-head h2 .grad {
+      background: linear-gradient(90deg, #d97757, #f2b48f, #f5efe6, #e8906f, #d97757);
+      background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; animation: hero-flow 6s linear infinite;
+    }
+    .card.value-card { position: relative; border-color: rgba(217, 119, 87, .28);
+      background: linear-gradient(180deg, rgba(217, 119, 87, .08), rgba(255, 255, 255, .02)) }
+    .card.value-card .icon { background: linear-gradient(135deg, #d97757, #f2b48f); color: #1b1815 }
+    @media (prefers-reduced-motion: reduce) { .section-head h2 .grad { animation: none } }
+    .hero p.lead { color: var(--muted); font-size: clamp(1.02rem, 2vw, 1.2rem); max-width: 40em; margin: 0 auto 34px }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
+    .hero-stats { display: flex; justify-content: center; gap: clamp(24px, 6vw, 72px); margin-top: 56px; flex-wrap: wrap }
+    .stat strong { display: block; font-size: 1.6rem; color: #fff; font-family: var(--serif) }
+    .stat span { color: var(--muted); font-size: .86rem }
+
+    /* Sections */
+    .section { padding: 84px 0 }
+    .section-alt { background: rgba(255, 255, 255, .015); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border) }
+    .section-head { text-align: center; margin-bottom: 44px }
+    .section-tag { color: var(--primary); font-weight: 700; letter-spacing: .1em; font-size: .78rem; text-transform: uppercase; margin: 0 }
+    .section-head h2 { font-family: var(--serif); color: var(--cream); font-size: clamp(1.6rem, 3.4vw, 2.3rem); margin: 10px 0 0; line-height: 1.3 }
+    .section-head p { color: var(--muted); margin: 12px auto 0; max-width: 42em }
+
+    .grid { display: grid; gap: 20px }
+    .grid-4 { grid-template-columns: repeat(4, 1fr) }
+    .grid-3 { grid-template-columns: repeat(3, 1fr) }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px; transition: .25s;
+    }
+    .card:hover { border-color: rgba(217, 119, 87, .35); transform: translateY(-3px) }
+    .card h3 { color: #fff; margin: 14px 0 8px; font-size: 1.08rem }
+    .card p { color: var(--muted); margin: 0; font-size: .93rem }
+    .icon {
+      width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+      background: var(--primary-soft); color: var(--primary-strong);
+    }
+    .pain .icon { background: rgba(255, 255, 255, .05); color: var(--muted) }
+
+    /* Pricing */
+    .pricing { align-items: stretch }
+    .plan { display: flex; flex-direction: column; position: relative; padding: 32px 28px }
+    .plan.featured {
+      border-color: rgba(217, 119, 87, .6);
+      background: linear-gradient(180deg, rgba(217, 119, 87, .12), rgba(217, 119, 87, .02));
+      box-shadow: 0 24px 60px rgba(217, 119, 87, .12);
+    }
+    .badge {
+      position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+      background: var(--primary); color: #fff; font-size: .78rem; font-weight: 700;
+      padding: 4px 14px; border-radius: 999px; white-space: nowrap;
+    }
+    .plan-tier { display: flex; align-items: baseline; gap: 10px }
+    .plan-tier b { font-family: var(--serif); font-size: 2.2rem; color: var(--primary-strong); line-height: 1 }
+    .plan-tier span { color: #fff; font-weight: 600 }
+    .plan-desc { color: var(--muted); font-size: .9rem; margin: 10px 0 22px; min-height: 3em }
+    .price { font-size: 2.6rem; font-weight: 800; color: #fff; line-height: 1; letter-spacing: -.02em }
+    .price small { font-size: 1rem; font-weight: 500; color: var(--muted); margin-left: 4px }
+    .price sup { font-size: 1.2rem; font-weight: 600; vertical-align: top; margin-right: 2px; position: relative; top: .35em }
+    .price-note { color: var(--muted); font-size: .82rem; margin: 8px 0 22px }
+    .features { list-style: none; padding: 0; margin: 0 0 28px; flex: 1 }
+    .features li { display: flex; gap: 10px; padding: 7px 0; font-size: .93rem; color: var(--text) }
+    .features li::before {
+      content: ""; flex: 0 0 18px; height: 18px; margin-top: 3px; border-radius: 50%;
+      background: var(--primary-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e8906f'%3E%3Cpath d='M6.4 11.2 3.2 8l1.1-1.1 2.1 2.1 5.3-5.3L12.8 4.8z'/%3E%3C/svg%3E") center/12px no-repeat;
+    }
+    .plan .btn { width: 100% }
+    .plan-consult {
+      display: block; text-align: center; margin-top: 12px; font-size: .83rem;
+      color: var(--muted); transition: color .2s;
+    }
+    .plan-consult:hover { color: var(--primary-strong) }
+    .stripe-trust {
+      display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
+      margin-top: 28px; color: var(--muted); font-size: .86rem; text-align: center;
+    }
+    .stripe-trust svg { color: var(--primary-strong); flex-shrink: 0 }
+    .stripe-trust strong { color: var(--cream); font-weight: 600 }
+    .pricing-foot { text-align: center; color: var(--muted); font-size: .84rem; margin-top: 10px }
+    .currency-switch {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; width: fit-content; max-width: 100%;
+      margin: -12px auto 40px; padding: 5px; border: 1px solid var(--border); border-radius: 24px; background: var(--surface);
+    }
+    .currency-switch button {
+      font: inherit; font-size: .86rem; color: var(--muted); background: transparent; border: 0;
+      padding: 7px 14px; border-radius: 999px; cursor: pointer; transition: background .2s, color .2s;
+    }
+    .currency-switch button:hover { color: var(--text) }
+    .currency-switch button[aria-pressed="true"] { background: var(--primary); color: #fff; font-weight: 600 }
+
+    /* Steps */
+    .steps { counter-reset: step }
+    .step { counter-increment: step; position: relative }
+    .step::before {
+      content: counter(step, decimal-leading-zero);
+      font-family: var(--serif); font-size: 2rem; color: var(--primary); opacity: .85; font-weight: 600;
+    }
+
+    /* FAQ */
+    .faq { max-width: 820px; margin: 0 auto }
+    .faq details {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px 22px; margin-bottom: 12px;
+    }
+    .faq summary { cursor: pointer; color: #fff; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 16px }
+    .faq summary::-webkit-details-marker { display: none }
+    .faq summary::after { content: "+"; color: var(--primary); font-size: 1.3rem; line-height: 1 }
+    .faq details[open] summary::after { content: "−" }
+    .faq details p { color: var(--muted); margin: 12px 0 0; font-size: .94rem }
+
+    /* CTA */
+    .cta {
+      text-align: center; padding: 56px 28px; border-radius: 24px;
+      background: linear-gradient(135deg, rgba(217, 119, 87, .18), rgba(217, 119, 87, .04));
+      border: 1px solid rgba(217, 119, 87, .3);
+    }
+    .cta h2 { font-family: var(--serif); color: var(--cream); font-size: clamp(1.5rem, 3.4vw, 2.2rem); margin: 0 0 12px }
+    .cta p { color: var(--muted); margin: 0 0 28px }
+
+    .contact-tg {
+      display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap;
+      margin: 36px auto 0; padding-top: 32px; border-top: 1px solid rgba(217, 119, 87, .2); max-width: 620px; text-align: left;
+    }
+    .tg-qr img { display: block; width: 158px; height: auto; border-radius: 16px; transition: transform .2s }
+    .tg-qr:hover img { transform: scale(1.03) }
+    .tg-text { max-width: 300px }
+    .tg-text h3 { margin: 0 0 6px; color: var(--cream); font-size: 1.15rem }
+    .tg-text p { margin: 0 0 14px; color: var(--muted); font-size: .92rem }
+    .tg-link {
+      display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 10px;
+      background: #2aabee; color: #fff; font-weight: 600; font-size: .92rem; transition: .2s;
+    }
+    .tg-link:hover { background: #229ed9; transform: translateY(-1px) }
+    @media (max-width: 560px) { .contact-tg { text-align: center } .tg-text { max-width: none } }
+    footer { padding: 36px 0; color: var(--muted); font-size: .86rem; border-top: 1px solid var(--border); margin-top: 84px }
+    .foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap }
+    .foot-brand { display: flex; flex-direction: column; gap: 6px }
+    .foot-brand strong { color: var(--cream); font-size: .95rem }
+    .foot-brand a, .foot-col a { color: var(--text) }
+    .foot-copy { margin-top: 6px; opacity: .8 }
+    .foot-right { display: flex; gap: 48px; flex-wrap: wrap; margin-left: auto; text-align: right }
+    .foot-col h4 { margin: 0 0 10px; color: var(--cream); font-size: .85rem; font-weight: 600; letter-spacing: .04em }
+    .foot-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
+    .social { display: flex; gap: 10px; justify-content: flex-end }
+    .social a {
+      width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px;
+      background: var(--surface-strong); border: 1px solid var(--border); color: var(--muted); transition: .2s;
+    }
+    .social a:hover { color: #fff; background: var(--primary); border-color: var(--primary); transform: translateY(-2px) }
+    @media (max-width: 560px) { .foot-right { margin-left: 0; text-align: left } .social { justify-content: flex-start } }
+    footer a:hover { color: var(--primary-strong) }
+
+    .toast {
+      position: fixed; left: 50%; bottom: 32px; transform: translate(-50%, 20px); opacity: 0;
+      background: #fff; color: #141210; padding: 12px 20px; border-radius: 12px; font-weight: 600;
+      transition: .25s; pointer-events: none; z-index: 50; box-shadow: 0 12px 30px rgba(0, 0, 0, .3);
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0) }
+
+    @media (max-width: 960px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr) }
+      .grid-3 { grid-template-columns: 1fr }
+      .plan.featured { order: -1 }
+      .nav-links { display: none }
+    }
+    @media (max-width: 560px) {
+      .grid-4 { grid-template-columns: 1fr }
+      .hero { padding: 64px 0 48px }
+      .section { padding: 60px 0 }
+    }
+    .header-right { display: flex; align-items: center; gap: 14px }
+    .lang-switch {
+      font-size: .85rem; font-weight: 600; color: var(--text); padding: 6px 12px; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--surface); transition: .2s;
+    }
+    .lang-switch:hover { color: #fff; border-color: var(--primary); background: var(--primary-soft) }
+    .foot-entity { color: var(--cream) }
+    .hero-stats { gap: clamp(20px, 3.6vw, 44px) }
+  </style>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GDE6TX65P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0GDE6TX65P');
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="0731cafa-79de-46ca-bbeb-4e1bf6a04fda"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" id="top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg>
+        </span>
+        Zaokit ClaudeOps
+      </a>
+      <ul class="nav-links">
+        <li><a href="#why">Why</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#value">Beyond Compute</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a class="lang-switch" href="../" hreflang="zh-CN" lang="zh-CN">中文</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow"><span class="dot"></span>Operated in Australia · Monthly subscription</span>
+        <h1>A reliable, dedicated environment,<br><em>built for your AI era</em></h1>
+        <p class="lead">
+          You get more than top-tier compute. You get top-tier AI engineering support and first-hand insights too. We run a dedicated, stable Claude environment for you, so you can focus on creating value with AI.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#pricing">View pricing</a>
+          <a class="btn btn-ghost" href="mailto:support@zaokit.ai?subject=Zaokit%20ClaudeOps%20enquiry">Email us</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>Dedicated</strong><span>One account per customer</span></div>
+          <div class="stat"><strong>Mac</strong><span>Single-tenant physical machine</span></div>
+          <div class="stat"><strong>Managed</strong><span>Billing, upgrades and ops</span></div>
+          <div class="stat"><strong>5 regions</strong><span>AU · US · SG · NZ · CA</span></div>
+          <div class="stat"><strong>AU company</strong><span>Australian registered business</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pain points -->
+    <section class="section section-alt" id="why">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Why</p>
+          <h2>The hard part of Claude was never the model</h2>
+          <p>What really drains your energy is the uncertainty that has nothing to do with your work.</p>
+        </div>
+        <div class="grid grid-4 pain">
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
+            <h3>Painful set-up</h3>
+            <p>From account sign-up to environment configuration, you figure out every step alone, with no one to fall back on.</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8.5a15 15 0 0120 0M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0"/><path d="M3 3l18 18"/></svg></div>
+            <h3>Unstable runs</h3>
+            <p>Every local machine is different, and long Claude Code tasks get cut off halfway through.</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+            <h3>Billing hassles</h3>
+            <p>Failed payments, plan changes and renewals eat into your time every month.</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <h3>Lost time</h3>
+            <p>Hours spent researching tools and troubleshooting should go into your real work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section class="section" id="service">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Service</p>
+          <h2>Hand us the uncertainty. Keep the certainty.</h2>
+          <p>From set-up to day-to-day operations, fully managed and ready to use.</p>
+        </div>
+        <div class="grid grid-4">
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div>
+            <h3>Dedicated account</h3>
+            <p>One account, one customer. Never shared, so your conversations and project data stay under your control.</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Dedicated Mac</h3>
+            <p>Your own physical Mac in Australia, the US, Singapore, New Zealand or Canada. Single-tenant and stable for the long run.</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
+            <h3>Managed billing</h3>
+            <p>Subscriptions, renewals and plan changes are all handled by us. Nothing for you to chase.</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+            <h3>Technical support</h3>
+            <p>Guidance on Claude and Claude Code, plus troubleshooting. When something breaks, someone has your back.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value: beyond compute -->
+    <section class="section section-alt" id="value">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Beyond Compute</p>
+          <h2>What you get is <em class="grad">more than compute</em></h2>
+          <p>The account and the machine are just the start. The real edge is having experts help you use AI the right way, more deeply and earlier than others.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card value-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div>
+            <h3>Top-tier compute</h3>
+            <p>A dedicated Claude Pro / Max account with direct access to Anthropic's latest models, running on your own physical Mac so long Claude Code tasks keep going.</p>
+          </div>
+          <div class="card value-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+            <h3>Top-tier AI support</h3>
+            <p>Not just troubleshooting. From Claude Code workflows, MCP and Skills set-up to multi-agent runs and shipping real projects, guided by hands-on AI engineers.</p>
+          </div>
+          <div class="card value-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></div>
+            <h3>First-hand AI insights</h3>
+            <p>Regular updates on new features, best practices and industry news for Claude and other leading AI tools, so you adopt new capabilities first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Privacy -->
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Security &amp; Privacy</p>
+          <h2>Single-tenant by design: isolation and data ownership</h2>
+          <p>Your terminal carries private source code, API keys in environment variables, database settings and business logic. Zaokit ClaudeOps uses a strict single-tenant model so your data stays yours.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <h3>Dedicated Mac per customer</h3>
+            <p>Each customer gets their own physical Mac with a clean system. No shared multi-tenant containers, so there is no cross-customer exposure at the OS or hardware level.</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>One account, no sharing</h3>
+            <p>Your credentials, sessions, history and project files live only on your instance. Other customers have no access to any of it.</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+            <h3>You control access and encryption</h3>
+            <p>Set your own access passwords and encryption policies. Our team only monitors connectivity and manages billing, and never inspects or copies your code.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Pricing</p>
+          <h2>Three plans. Pick what fits.</h2>
+          <p>The multiplier is usage relative to the base plan. Upgrade or downgrade any time.</p>
+        </div>
+        <div class="currency-switch" role="group" aria-label="Choose currency">
+          <button type="button" data-currency="AUD" aria-pressed="true">A$ AUD</button>
+          <button type="button" data-currency="USD" aria-pressed="false">$ USD</button>
+          <button type="button" data-currency="EUR" aria-pressed="false">€ EUR</button>
+          <button type="button" data-currency="NZD" aria-pressed="false">NZ$ NZD</button>
+          <button type="button" data-currency="CAD" aria-pressed="false">C$ CAD</button>
+          <button type="button" data-currency="SGD" aria-pressed="false">S$ SGD</button>
+        </div>
+        <div class="grid grid-3 pricing">
+          <article class="card plan">
+            <div class="plan-tier"><b>1x</b><span>Standard</span></div>
+            <p class="plan-desc">For everyday chat, writing and light coding with a stable Claude.</p>
+            <div class="price" data-plan-idx="0"><sup>A$</sup><span class="amount">149</span><small>/ month</small></div>
+            <p class="price-note" data-note-idx="0">Includes Claude environment · about A$5 / day</p>
+            <ul class="features">
+              <li>Base usage allowance</li>
+              <li>Dedicated Claude account</li>
+              <li>Dedicated physical Mac (single-tenant)</li>
+              <li>Fully managed billing and ops</li>
+              <li>Claude Code ready</li>
+              <li>Business-day support</li>
+            </ul>
+            <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/aFa28teyB0ou4Dsdga9Zm0k" target="_blank" rel="noopener">Subscribe</a>
+            <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Zaokit%20ClaudeOps%20enquiry%20-%201x%20Standard">Questions? Email us →</a>
+          </article>
+
+          <article class="card plan featured">
+            <span class="badge">Most popular</span>
+            <div class="plan-tier"><b>5x</b><span>Pro</span></div>
+            <p class="plan-desc">For developers and creators who use Claude Code heavily every day.</p>
+            <div class="price" data-plan-idx="1"><sup>A$</sup><span class="amount">579</span><small>/ month</small></div>
+            <p class="price-note" data-note-idx="1">Includes Claude environment · 5x usage, unit cost about 78% of 1x</p>
+            <ul class="features">
+              <li>5x the Standard usage allowance</li>
+              <li>Dedicated Claude account</li>
+              <li>Dedicated physical Mac (single-tenant)</li>
+              <li>Fully managed billing and ops</li>
+              <li>Room for long Claude Code tasks</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/28E28teyBdbg3zocc69Zm0q" target="_blank" rel="noopener">Subscribe</a>
+            <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Zaokit%20ClaudeOps%20enquiry%20-%205x%20Pro">Questions? Email us →</a>
+          </article>
+
+          <article class="card plan">
+            <div class="plan-tier"><b>20x</b><span>Ultimate</span></div>
+            <p class="plan-desc">For power users and small teams running multiple agents around the clock.</p>
+            <div class="price" data-plan-idx="2"><sup>A$</sup><span class="amount">1,499</span><small>/ month</small></div>
+            <p class="price-note" data-note-idx="2">Includes Claude environment · 20x usage, unit cost about 50% of 1x</p>
+            <ul class="features">
+              <li>20x the Standard usage allowance</li>
+              <li>Dedicated Claude account</li>
+              <li>Dedicated physical Mac (single-tenant)</li>
+              <li>Fully managed billing and ops</li>
+              <li>Multi-agent and parallel tasks</li>
+              <li>Dedicated one-to-one channel</li>
+            </ul>
+            <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/7sYcN78ad4EKb1Q7VQ9Zm0w" target="_blank" rel="noopener">Subscribe</a>
+            <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Zaokit%20ClaudeOps%20enquiry%20-%2020x%20Ultimate">Questions? Email us →</a>
+          </article>
+        </div>
+        <div class="stripe-trust">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <span>Secure checkout by <strong>Stripe</strong> · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · Monthly, cancel any time</span>
+        </div>
+        <p class="pricing-foot">All prices include a Claude account and the Claude environment, billed monthly in <span id="currency-name">AUD</span>. Prices in each currency reflect local market levels. Need a multi-account team plan? Get in touch.</p>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section section-alt" id="process">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Process</p>
+          <h2>Four steps. Up and running the same day.</h2>
+        </div>
+        <div class="grid grid-4 steps">
+          <div class="card step">
+            <h3>Choose a plan</h3>
+            <p>Pick 1x, 5x or 20x and your currency, or email us first.</p>
+          </div>
+          <div class="card step">
+            <h3>Subscribe via Stripe</h3>
+            <p>Choose your preferred region on the secure Stripe checkout and complete your monthly subscription.</p>
+          </div>
+          <div class="card step">
+            <h3>Delivery</h3>
+            <p>The same day, we assign your dedicated Mac and account, and send your access details and guide.</p>
+          </div>
+          <div class="card step">
+            <h3>Ongoing operations</h3>
+            <p>Renewals, account maintenance and troubleshooting stay with us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">FAQ</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Who operates Zaokit ClaudeOps?</summary>
+            <p>Zaokit ClaudeOps is operated by an Australian registered company. Payments are processed securely by Stripe, and every payment comes with an official receipt and invoice.</p>
+          </details>
+          <details>
+            <summary>What is the difference between 1x, 5x and 20x?</summary>
+            <p>The main difference is usage. 5x and 20x give you 5 and 20 times the Standard allowance. Everything else is the same, and higher plans get higher-priority support.</p>
+          </details>
+          <details>
+            <summary>Which plan should I choose?</summary>
+            <p>Choose 1x for everyday chat and writing, 5x if you code with Claude Code every day, and 20x for multiple agents or heavy round-the-clock use. Not sure? Start lower and upgrade any time.</p>
+          </details>
+          <details>
+            <summary>How do I actually use it? Remote Mac or local?</summary>
+            <p><strong>Both work. Use whichever suits you:</strong><br>
+            1. <strong>Remote desktop (VNC)</strong>: connect to your dedicated Mac with macOS Screen Sharing, RealVNC, TigerVNC or similar. You get the full macOS desktop and terminal, ready to go, and long tasks keep running.<br>
+            2. <strong>Drive it from your local tools</strong>: control the remote Claude environment from your local workflow and dev tools, with no local proxy or network hassles. The remote Mac becomes your dedicated compute back end.</p>
+          </details>
+          <details>
+            <summary>How are my code and data kept secure and private?</summary>
+            <p>Every customer gets a dedicated physical Mac on a single-tenant model, with no shared containers. Your session history, source code and environment variables stay on your own instance. You set your own access passwords and encryption, and our team only handles connectivity and billing.</p>
+          </details>
+          <details>
+            <summary>Where are the machines located?</summary>
+            <p>Our machines are in Australia, the United States, Singapore, New Zealand and Canada. Pick your preferred region at checkout, and we assign you a fixed machine for the long term.</p>
+          </details>
+          <details>
+            <summary>Can I upgrade or downgrade?</summary>
+            <p>Yes. Changes apply from your next billing cycle. If you need an upgrade straight away, contact us and we will charge the difference.</p>
+          </details>
+          <details>
+            <summary>What if something goes wrong?</summary>
+            <p>Contact us straight away. We prioritise troubleshooting and get you back up and running as fast as possible.</p>
+          </details>
+          <details>
+            <summary>Which payment methods do you accept? Can I get an invoice?</summary>
+            <p>We accept online subscriptions via Stripe, including Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay and Link, billed in AUD, USD, EUR, NZD, CAD or SGD. Stripe issues an official receipt and invoice automatically. For multi-account business plans, email us.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <h2>Get a reliable Claude, starting today</h2>
+          <p>Subscribe online via Stripe for same-day delivery, or tell us your use case for tailored advice.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#pricing">Choose a plan</a>
+            <a class="btn btn-ghost" href="mailto:support@zaokit.ai?subject=Zaokit%20ClaudeOps%20enquiry">Email: support@zaokit.ai</a>
+          </div>
+          <div class="contact-tg">
+            <a class="tg-qr" href="https://t.me/letcode2020" target="_blank" rel="noopener" aria-label="Open Telegram @letcode2020">
+              <img src="../telegram-qr.jpg" width="158" height="210" alt="Telegram QR code @letcode2020" loading="lazy">
+            </a>
+            <div class="tg-text">
+              <h3>Chat on Telegram</h3>
+              <p>Scan or tap to add us for pre-sales questions, technical support and AI insights.</p>
+              <a class="tg-link" href="https://t.me/letcode2020" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1.1-1 .2-1.5L20.5 2.7c.9-.3 1.7.2 1.4 1.6z"/></svg>
+                @letcode2020
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+    <div class="container foot">
+      <div class="foot-brand">
+        <strong>Zaokit ClaudeOps</strong>
+        <span class="foot-entity">Operated by an Australian registered company · English / 中文</span>
+        <span>Contact: <a href="mailto:support@zaokit.ai">support@zaokit.ai</a></span>
+        <span class="foot-copy">© <span id="year"></span> Zaokit AI. All rights reserved.</span>
+      </div>
+      <div class="foot-right">
+        <div class="foot-col">
+          <h4>Zaokit products</h4>
+          <ul>
+            <li><a href="https://zaokit.app" target="_blank" rel="noopener">Zaokit</a></li>
+            <li><a href="https://cowork.zaokit.app" target="_blank" rel="noopener">Zaokit Cowork</a></li>
+            <li><a href="https://edu.zaokit.app" target="_blank" rel="noopener">Zaokit AI Edu</a></li>
+            <li><a href="https://cc.zaokit.app" target="_blank" rel="noopener">Zaokit CC</a></li>
+            <li><a href="https://cx.zaokit.app" target="_blank" rel="noopener">Zaokit CX</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Follow us</h4>
+          <div class="social">
+            <a href="https://discord.gg/HDjD6g5mdw" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9 0 13.6.3 18.1a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12 0l.5.4-2 1 1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.9-9.8-3.6-13.7zM8.5 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm7 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg></a>
+            <a href="https://x.com/Zaokit_AI_Agent" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2h3.4l-7.4 8.5L23 22h-6.8l-5.3-7-6.1 7H1.4l7.9-9L1 2h7l4.8 6.4zm-1.2 18h1.9L7.1 3.9H5.1z"/></svg></a>
+            <a href="https://www.youtube.com/@zaokitai" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg></a>
+            <a href="https://t.me/letcode2020" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1.1-1 .2-1.5L20.5 2.7c.9-.3 1.7.2 1.4 1.6z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      var PRICES = {
+        AUD: { sym: 'A$', name: 'AUD', p: [149, 579, 1499] },
+        USD: { sym: '$', name: 'USD', p: [99, 399, 999] },
+        EUR: { sym: '€', name: 'EUR', p: [89, 349, 899] },
+        NZD: { sym: 'NZ$', name: 'NZD', p: [179, 699, 1799] },
+        CAD: { sym: 'C$', name: 'CAD', p: [139, 549, 1399] },
+        SGD: { sym: 'S$', name: 'SGD', p: [129, 499, 1299] }
+      };
+      var STRIPE_LINKS = {
+        '1x_USD': 'https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i',
+        '1x_EUR': 'https://buy.stripe.com/fZu28t2PTdbg6LA4JE9Zm0j',
+        '1x_AUD': 'https://buy.stripe.com/aFa28teyB0ou4Dsdga9Zm0k',
+        '1x_NZD': 'https://buy.stripe.com/6oU7sN0HL5IO3zob829Zm0l',
+        '1x_CAD': 'https://buy.stripe.com/14A14pcqtdbg1rg0to9Zm0m',
+        '1x_SGD': 'https://buy.stripe.com/aFa7sN8adc7cgma6RM9Zm0n',
+        '5x_USD': 'https://buy.stripe.com/dRmcN7cqt5IO7PE3FA9Zm0o',
+        '5x_EUR': 'https://buy.stripe.com/28E14p9eh7QWc5U0to9Zm0p',
+        '5x_AUD': 'https://buy.stripe.com/28E28teyBdbg3zocc69Zm0q',
+        '5x_NZD': 'https://buy.stripe.com/14A3cxgGJfjo2vk3FA9Zm0r',
+        '5x_CAD': 'https://buy.stripe.com/dRmeVf0HL4EK1rg3FA9Zm0s',
+        '5x_SGD': 'https://buy.stripe.com/9B6dRbbmpefk9XM3FA9Zm0t',
+        '20x_USD': 'https://buy.stripe.com/4gM00lcqt2wC4Ds3FA9Zm0u',
+        '20x_EUR': 'https://buy.stripe.com/28EcN7ail4EK8TI8ZU9Zm0v',
+        '20x_AUD': 'https://buy.stripe.com/7sYcN78ad4EKb1Q7VQ9Zm0w',
+        '20x_NZD': 'https://buy.stripe.com/28EfZj4Y1gnsee25NI9Zm0x',
+        '20x_CAD': 'https://buy.stripe.com/8x25kFduxdbg9XM1xs9Zm0y',
+        '20x_SGD': 'https://buy.stripe.com/9B63cx2PT3AG5Hweke9Zm0z'
+      };
+      var MULT = [1, 5, 20];
+      function fmt(n) { return n.toLocaleString('en-AU'); }
+      function setCurrency(code) {
+        var curCode = PRICES[code] ? code : 'AUD';
+        var c = PRICES[curCode];
+        document.querySelectorAll('[data-plan-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-plan-idx');
+          el.querySelector('sup').textContent = c.sym;
+          el.querySelector('.amount').textContent = fmt(c.p[i]);
+        });
+        document.querySelectorAll('[data-note-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-note-idx');
+          if (i === 0) {
+            var day = c.p[0] / 30;
+            el.textContent = 'Includes Claude environment · about ' + c.sym + (day >= 10 ? Math.round(day) : +day.toFixed(1)) + ' / day';
+          } else {
+            var ratio = Math.round(c.p[i] / (c.p[0] * MULT[i]) * 100);
+            el.textContent = 'Includes Claude environment · ' + MULT[i] + 'x usage, unit cost about ' + ratio + '% of 1x';
+          }
+        });
+        document.querySelectorAll('[data-stripe-tier]').forEach(function (btn) {
+          var tier = btn.getAttribute('data-stripe-tier');
+          var link = STRIPE_LINKS[tier + '_' + curCode] || STRIPE_LINKS[tier + '_AUD'];
+          if (link) btn.setAttribute('href', link);
+        });
+        document.getElementById('currency-name').textContent = c.name;
+        document.querySelectorAll('[data-currency]').forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-currency') === curCode ? 'true' : 'false');
+        });
+        try { localStorage.setItem('claude-ops-currency', curCode); } catch (e) {}
+      }
+      document.querySelectorAll('[data-currency]').forEach(function (b) {
+        b.addEventListener('click', function () { setCurrency(b.getAttribute('data-currency')); });
+      });
+      (function initCurrency() {
+        var q = (new URLSearchParams(location.search).get('currency') || '').toUpperCase();
+        if (PRICES[q]) return setCurrency(q);
+        var saved = null;
+        try { saved = localStorage.getItem('claude-ops-currency'); } catch (e) {}
+        if (saved && PRICES[saved]) return setCurrency(saved);
+        var lang = (navigator.language || '').toLowerCase();
+        if (/-nz$/.test(lang)) return setCurrency('NZD');
+        if (/-ca$/.test(lang)) return setCurrency('CAD');
+        if (/-us$/.test(lang)) return setCurrency('USD');
+        if (/-sg$/.test(lang)) return setCurrency('SGD');
+        if (/^(de|fr|es|it|nl|pt-pt|fi|el|ie)/.test(lang) || /-(de|fr|es|it|nl|at|be|ie|fi|pt|gr)$/.test(lang)) return setCurrency('EUR');
+        setCurrency('AUD');
+      })();
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+
+    <script>
+  (function () {
+    function trackEvent(name, params) {
+      params = params || {};
+      try { if (typeof gtag === 'function') gtag('event', name, params); } catch (e) {}
+      try { if (window.umami && typeof umami.track === 'function') umami.track(name, params); } catch (e) {}
+    }
+    function isMail(a) { var h = a.getAttribute('href') || ''; return h.indexOf('mailto:') === 0 || h.indexOf('/cdn-cgi/l/email-protection') === 0; }
+    function currentCurrency() {
+      var b = document.querySelector('[data-currency][aria-pressed="true"]');
+      return b ? b.getAttribute('data-currency') : 'AUD';
+    }
+    document.addEventListener('click', function (e) {
+      var cur = e.target.closest('[data-currency]');
+      if (cur) { trackEvent('currency_switch', { currency: cur.getAttribute('data-currency') }); return; }
+      var a = e.target.closest('a');
+      if (!a) return;
+      if (a.hasAttribute('data-stripe-tier')) {
+        var stripeTier = a.getAttribute('data-stripe-tier');
+        var checkoutParams = {
+          plan: stripeTier,
+          currency: currentCurrency(),
+          stripe_mode: window.__CLAUDEOPS_STRIPE_MODE__ || 'live',
+          location: 'pricing'
+        };
+        trackEvent('begin_checkout', checkoutParams);
+        trackEvent('stripe_checkout_click', checkoutParams);
+        return;
+      }
+      if (a.closest('footer') && /^https?:/.test(a.getAttribute('href') || '') && (a.getAttribute('href') || '').indexOf('https://t.me/') !== 0) {
+        trackEvent('footer_outbound_click', { url: a.getAttribute('href') });
+        return;
+      }
+      if ((a.getAttribute('href') || '').indexOf('https://t.me/') === 0) {
+        trackEvent('telegram_click', { location: a.classList.contains('tg-qr') ? 'qr' : 'button' });
+        trackEvent('generate_lead', { plan: 'general', currency: currentCurrency(), location: 'telegram' });
+        return;
+      }
+      if (isMail(a)) {
+        var plan = a.closest('.plan');
+        var tier = plan ? plan.querySelector('.plan-tier b').textContent.trim() : 'general';
+        var loc = plan ? 'pricing' : (a.closest('.hero') ? 'hero' : (a.closest('.cta') ? 'cta' : 'other'));
+        var params = { plan: tier, currency: currentCurrency(), location: loc };
+        trackEvent('consult_click', params);
+        trackEvent('generate_lead', params);
+      } else if ((a.getAttribute('href') || '') === '#pricing') {
+        trackEvent('view_pricing_click', { location: a.closest('.hero') ? 'hero' : (a.closest('.cta') ? 'cta' : 'nav') });
+      }
+    }, true);
+  })();
+  </script>
+
+  <script>
+  (function () {
+    var EMAIL = 'support@zaokit.ai';
+    var toastEl = document.getElementById('toast'), timer;
+    function toast(msg) {
+      if (!toastEl) return;
+      toastEl.textContent = msg; toastEl.classList.add('show');
+      clearTimeout(timer); timer = setTimeout(function () { toastEl.classList.remove('show'); }, 3200);
+    }
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta); return ok;
+    }
+    function copyEmail() {
+      var okMsg = 'Email copied: ' + EMAIL + '. Opening your mail app…';
+      var done = function () { toast(okMsg); };
+      var fail = function () { toast(fallbackCopy(EMAIL) ? okMsg : 'Please email us at ' + EMAIL); };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(EMAIL).then(done, fail);
+      } else { fail(); }
+    }
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('a[href^="mailto:"]')) copyEmail();
+    });
+  })();
+  </script>
+</body>
+
+</html>
