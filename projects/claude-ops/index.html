@@ -274,7 +274,21 @@
     .tg-link:hover { background: #229ed9; transform: translateY(-1px) }
     @media (max-width: 560px) { .contact-tg { text-align: center } .tg-text { max-width: none } }
     footer { padding: 36px 0; color: var(--muted); font-size: .86rem; border-top: 1px solid var(--border); margin-top: 84px }
-    .foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap }
+    .foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap }
+    .foot-brand { display: flex; flex-direction: column; gap: 6px }
+    .foot-brand strong { color: var(--cream); font-size: .95rem }
+    .foot-brand a, .foot-col a { color: var(--text) }
+    .foot-copy { margin-top: 6px; opacity: .8 }
+    .foot-right { display: flex; gap: 48px; flex-wrap: wrap; margin-left: auto; text-align: right }
+    .foot-col h4 { margin: 0 0 10px; color: var(--cream); font-size: .85rem; font-weight: 600; letter-spacing: .04em }
+    .foot-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
+    .social { display: flex; gap: 10px; justify-content: flex-end }
+    .social a {
+      width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px;
+      background: var(--surface-strong); border: 1px solid var(--border); color: var(--muted); transition: .2s;
+    }
+    .social a:hover { color: #fff; background: var(--primary); border-color: var(--primary); transform: translateY(-2px) }
+    @media (max-width: 560px) { .foot-right { margin-left: 0; text-align: left } .social { justify-content: flex-start } }
     footer a:hover { color: var(--primary-strong) }
 
     .toast {
@@ -660,8 +674,33 @@
 
   <footer>
     <div class="container foot">
-      <span>© <span id="year"></span> Just Jason · Claude 代运营</span>
-      <span><a href="/projects.html">解决方案</a> · <a href="/about.html">关于</a> · <a href="/contact.html">联系</a></span>
+      <div class="foot-brand">
+        <strong>Claude 代运营 · Zaokit ClaudeOps</strong>
+        <span>运营主体：<a href="https://maxagi.com.au/" target="_blank" rel="noopener">Max AGI</a>（澳大利亚）</span>
+        <span>联系：<a href="mailto:support@zaokit.ai">support@zaokit.ai</a></span>
+        <span class="foot-copy">© <span id="year"></span> Max AGI · <a href="https://junxinzhang.com/about.html" target="_blank" rel="noopener">Just Jason</a></span>
+      </div>
+      <div class="foot-right">
+        <div class="foot-col">
+          <h4>Zaokit 产品矩阵</h4>
+          <ul>
+            <li><a href="https://zaokit.app" target="_blank" rel="noopener">Zaokit</a></li>
+            <li><a href="https://cowork.zaokit.app" target="_blank" rel="noopener">Zaokit Cowork</a></li>
+            <li><a href="https://edu.zaokit.app" target="_blank" rel="noopener">Zaokit AI Edu</a></li>
+            <li><a href="https://cc.zaokit.app" target="_blank" rel="noopener">Zaokit CC</a></li>
+            <li><a href="https://cx.zaokit.app" target="_blank" rel="noopener">Zaokit CX</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>关注我们</h4>
+          <div class="social">
+            <a href="https://discord.gg/HDjD6g5mdw" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9 0 13.6.3 18.1a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12 0l.5.4-2 1 1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.9-9.8-3.6-13.7zM8.5 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm7 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg></a>
+            <a href="https://x.com/Zaokit_AI_Agent" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2h3.4l-7.4 8.5L23 22h-6.8l-5.3-7-6.1 7H1.4l7.9-9L1 2h7l4.8 6.4zm-1.2 18h1.9L7.1 3.9H5.1z"/></svg></a>
+            <a href="https://www.youtube.com/@zaokitai" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg></a>
+            <a href="https://t.me/letcode2020" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1.1-1 .2-1.5L20.5 2.7c.9-.3 1.7.2 1.4 1.6z"/></svg></a>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -779,6 +818,10 @@
         };
         trackEvent('begin_checkout', checkoutParams);
         trackEvent('stripe_checkout_click', checkoutParams);
+        return;
+      }
+      if (a.closest('footer') && /^https?:/.test(a.getAttribute('href') || '') && (a.getAttribute('href') || '').indexOf('https://t.me/') !== 0) {
+        trackEvent('footer_outbound_click', { url: a.getAttribute('href') });
         return;
       }
       if ((a.getAttribute('href') || '').indexOf('https://t.me/') === 0) {
