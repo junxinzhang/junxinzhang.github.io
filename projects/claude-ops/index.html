@@ -841,6 +841,36 @@
     }, true);
   })();
   </script>
+  <script>
+  (function () {
+    var EMAIL = 'support@zaokit.ai';
+    var toastEl = document.getElementById('toast'), timer;
+    function toast(msg) {
+      if (!toastEl) return;
+      toastEl.textContent = msg; toastEl.classList.add('show');
+      clearTimeout(timer); timer = setTimeout(function () { toastEl.classList.remove('show'); }, 3200);
+    }
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta); return ok;
+    }
+    function copyEmail() {
+      var done = function () { toast('邮箱已复制：' + EMAIL + '，正在打开邮件客户端…'); };
+      var fail = function () { toast(fallbackCopy(EMAIL) ? '邮箱已复制：' + EMAIL + '，正在打开邮件客户端…' : '请发送邮件至：' + EMAIL); };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(EMAIL).then(done, fail);
+      } else { fail(); }
+    }
+    // 复制邮箱后不拦截默认行为，mailto 照常唤起邮件客户端
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="mailto:"]');
+      if (a) copyEmail();
+    });
+  })();
+  </script>
 </body>
 
 </html>
