@@ -185,7 +185,18 @@
       background: var(--primary-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e8906f'%3E%3Cpath d='M6.4 11.2 3.2 8l1.1-1.1 2.1 2.1 5.3-5.3L12.8 4.8z'/%3E%3C/svg%3E") center/12px no-repeat;
     }
     .plan .btn { width: 100% }
-    .pricing-foot { text-align: center; color: var(--muted); font-size: .86rem; margin-top: 28px }
+    .plan-consult {
+      display: block; text-align: center; margin-top: 12px; font-size: .83rem;
+      color: var(--muted); transition: color .2s;
+    }
+    .plan-consult:hover { color: var(--primary-strong) }
+    .stripe-trust {
+      display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
+      margin-top: 28px; color: var(--muted); font-size: .86rem; text-align: center;
+    }
+    .stripe-trust svg { color: var(--primary-strong); flex-shrink: 0 }
+    .stripe-trust strong { color: var(--cream); font-weight: 600 }
+    .pricing-foot { text-align: center; color: var(--muted); font-size: .84rem; margin-top: 10px }
     .currency-switch {
       display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; width: fit-content; max-width: 100%;
       margin: -12px auto 40px; padding: 5px; border: 1px solid var(--border); border-radius: 24px; background: var(--surface);
@@ -429,7 +440,8 @@
               <li>支持 Claude Code</li>
               <li>工作日技术支持</li>
             </ul>
-            <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%201x%20%E6%A0%87%E5%87%86%E7%89%88">立即咨询</a>
+            <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i" target="_blank" rel="noopener">立即订阅</a>
+            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%201x%20%E6%A0%87%E5%87%86%E7%89%88">有疑问？发送邮件咨询 →</a>
           </article>
 
           <article class="card plan featured">
@@ -446,7 +458,8 @@
               <li>Claude Code 长时间任务更从容</li>
               <li>优先技术支持响应</li>
             </ul>
-            <a class="btn btn-primary" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%205x%20%E4%B8%93%E4%B8%9A%E7%89%88">立即咨询</a>
+            <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/dRmcN7cqt5IO7PE3FA9Zm0o" target="_blank" rel="noopener">立即订阅</a>
+            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%205x%20%E4%B8%93%E4%B8%9A%E7%89%88">有疑问？发送邮件咨询 →</a>
           </article>
 
           <article class="card plan">
@@ -462,8 +475,13 @@
               <li>多 Agent / 多任务并行无压力</li>
               <li>专属一对一服务通道</li>
             </ul>
-            <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%2020x%20%E6%97%97%E8%88%B0%E7%89%88">立即咨询</a>
+            <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/4gM00lcqt2wC4Ds3FA9Zm0u" target="_blank" rel="noopener">立即订阅</a>
+            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%2020x%20%E6%97%97%E8%88%B0%E7%89%88">有疑问？发送邮件咨询 →</a>
           </article>
+        </div>
+        <div class="stripe-trust">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <span>由 <strong>Stripe</strong> 提供安全加密结算 · 支持 Visa / Mastercard / Amex / Apple Pay / Google Pay · 按月订阅可随时取消</span>
         </div>
         <p class="pricing-foot">以上价格均含 Claude 账号与 Claude 运行环境，以<span id="currency-name">美元</span>计，按月订阅，各币种价格参考当地消费水平制定。如需多账号团队方案，请联系咨询。</p>
       </div>
@@ -478,20 +496,20 @@
         </div>
         <div class="grid grid-4 steps">
           <div class="card step">
-            <h3>咨询沟通</h3>
-            <p>发送邮件，说明使用场景与预期用量。</p>
+            <h3>选择方案</h3>
+            <p>按使用强度选择 1x / 5x / 20x 档位与计价币种，也可先发邮件咨询。</p>
           </div>
           <div class="card step">
-            <h3>选择方案</h3>
-            <p>根据需求推荐 1x / 5x / 20x，确认后完成付款。</p>
+            <h3>Stripe 订阅</h3>
+            <p>在 Stripe 安全结账页选择偏好机房国家，完成月度订阅付款。</p>
           </div>
           <div class="card step">
             <h3>环境交付</h3>
-            <p>交付独享账号与稳定环境，并提供使用说明。</p>
+            <p>当天为您分配专属 Mac 物理实例与独享账号，发送连接凭证与使用说明。</p>
           </div>
           <div class="card step">
             <h3>持续运营</h3>
-            <p>续费、账号运维与异常处理由我们持续托管。</p>
+            <p>续费、账号运维与异常排查由我们持续托管。</p>
           </div>
         </div>
       </div>
@@ -529,7 +547,7 @@
           </details>
           <details>
             <summary>运行环境的机器部署在哪里？</summary>
-            <p>我们的机器分布在美国、新加坡、澳大利亚、新西兰和加拿大五个国家。开通时为您分配固定机器并长期使用，不随意切换；如对机器所在国家有偏好，咨询时说明即可。</p>
+            <p>我们的机器分布在美国、新加坡、澳大利亚、新西兰和加拿大五个国家。在 Stripe 结账页可直接选择您偏好的机房国家，开通时为您分配固定机器并长期使用，不随意切换。</p>
           </details>
           <details>
             <summary>可以中途升级或降级吗？</summary>
@@ -540,8 +558,8 @@
             <p>遇到无法使用等异常情况，第一时间联系我们，会优先排查处理，确保您的使用尽快恢复。</p>
           </details>
           <details>
-            <summary>支持开票或团队采购吗？</summary>
-            <p>支持团队多账号方案，发票（Invoice）需求请在咨询时说明，我们会提供对应方案。</p>
+            <summary>支持哪些付款方式？可以开具 Invoice 吗？</summary>
+            <p>支持通过 Stripe 在线订阅支付（支持 Visa、Mastercard、Amex、Apple Pay、Google Pay、Link 等主流国际支付方式，支持美元、欧元、澳元、新西兰元、加元、新加坡元计价），付款后 Stripe 自动生成正式收据与账单（Invoice）。如需企业多账号采购方案，请发送邮件联系咨询。</p>
           </details>
         </div>
       </div>
@@ -552,9 +570,10 @@
       <div class="container">
         <div class="cta">
           <h2>现在开始，拥有确定性的 Claude</h2>
-          <p>告诉我们您的使用场景，为您推荐最合适的方案。</p>
+          <p>支持 Stripe 在线订阅当天交付，或告诉我们您的使用场景获取专属建议。</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2">发送邮件咨询：jason2023zhang@gmail.com</a>
+            <a class="btn btn-primary" href="#pricing">立即选择方案订阅</a>
+            <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2">发送邮件咨询：jason2023zhang@gmail.com</a>
           </div>
         </div>
       </div>
@@ -581,10 +600,57 @@
         CAD: { sym: 'C$', name: '加元', p: [139, 549, 1399] },
         SGD: { sym: 'S$', name: '新加坡元', p: [129, 499, 1299] }
       };
+      var STRIPE_LINKS_TEST = {
+        '1x_USD': 'https://buy.stripe.com/test_3cI28t7690ou2vkb829Zm00',
+        '1x_EUR': 'https://buy.stripe.com/test_14AaEZ0HLc7cb1Q6RM9Zm01',
+        '1x_AUD': 'https://buy.stripe.com/test_7sY14p4Y17QWc5Ub829Zm02',
+        '1x_NZD': 'https://buy.stripe.com/test_7sY9AVbmp0ou7PE5NI9Zm03',
+        '1x_CAD': 'https://buy.stripe.com/test_6oUeVf1LP2wC5Hwb829Zm04',
+        '1x_SGD': 'https://buy.stripe.com/test_fZucN7gGJ6MS1rg6RM9Zm05',
+        '5x_USD': 'https://buy.stripe.com/test_aFafZj7697QW1rggsm9Zm06',
+        '5x_EUR': 'https://buy.stripe.com/test_5kQeVfail6MSfi61xs9Zm07',
+        '5x_AUD': 'https://buy.stripe.com/test_fZudRbcqt4EK1rg3FA9Zm08',
+        '5x_NZD': 'https://buy.stripe.com/test_14A5kF8adgns0nc6RM9Zm09',
+        '5x_CAD': 'https://buy.stripe.com/test_5kQ4gB3TX2wC4Ds4JE9Zm0a',
+        '5x_SGD': 'https://buy.stripe.com/test_28E8wRail4EKfi64JE9Zm0b',
+        '20x_USD': 'https://buy.stripe.com/test_dRm7sNeyB2wC5Hwcc69Zm0c',
+        '20x_EUR': 'https://buy.stripe.com/test_5kQ7sN1LP2wC5Hw8ZU9Zm0d',
+        '20x_AUD': 'https://buy.stripe.com/test_00w28tbmpc7c8TIgsm9Zm0e',
+        '20x_NZD': 'https://buy.stripe.com/test_28E7sN4Y13AG0nc7VQ9Zm0f',
+        '20x_CAD': 'https://buy.stripe.com/test_14AfZj2PTdbg7PE0to9Zm0g',
+        '20x_SGD': 'https://buy.stripe.com/test_dRmdRb9ehdbg9XMeke9Zm0h'
+      };
+      var STRIPE_LINKS_LIVE = {
+        '1x_USD': 'https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i',
+        '1x_EUR': 'https://buy.stripe.com/fZu28t2PTdbg6LA4JE9Zm0j',
+        '1x_AUD': 'https://buy.stripe.com/aFa28teyB0ou4Dsdga9Zm0k',
+        '1x_NZD': 'https://buy.stripe.com/6oU7sN0HL5IO3zob829Zm0l',
+        '1x_CAD': 'https://buy.stripe.com/14A14pcqtdbg1rg0to9Zm0m',
+        '1x_SGD': 'https://buy.stripe.com/aFa7sN8adc7cgma6RM9Zm0n',
+        '5x_USD': 'https://buy.stripe.com/dRmcN7cqt5IO7PE3FA9Zm0o',
+        '5x_EUR': 'https://buy.stripe.com/28E14p9eh7QWc5U0to9Zm0p',
+        '5x_AUD': 'https://buy.stripe.com/28E28teyBdbg3zocc69Zm0q',
+        '5x_NZD': 'https://buy.stripe.com/14A3cxgGJfjo2vk3FA9Zm0r',
+        '5x_CAD': 'https://buy.stripe.com/dRmeVf0HL4EK1rg3FA9Zm0s',
+        '5x_SGD': 'https://buy.stripe.com/9B6dRbbmpefk9XM3FA9Zm0t',
+        '20x_USD': 'https://buy.stripe.com/4gM00lcqt2wC4Ds3FA9Zm0u',
+        '20x_EUR': 'https://buy.stripe.com/28EcN7ail4EK8TI8ZU9Zm0v',
+        '20x_AUD': 'https://buy.stripe.com/7sYcN78ad4EKb1Q7VQ9Zm0w',
+        '20x_NZD': 'https://buy.stripe.com/28EfZj4Y1gnsee25NI9Zm0x',
+        '20x_CAD': 'https://buy.stripe.com/8x25kFduxdbg9XM1xs9Zm0y',
+        '20x_SGD': 'https://buy.stripe.com/9B63cx2PT3AG5Hweke9Zm0z'
+      };
+      var DEFAULT_STRIPE_MODE = 'live';
+      var envParam = (new URLSearchParams(location.search).get('stripe_env') || '').toLowerCase();
+      var activeMode = (envParam === 'live' || envParam === 'test') ? envParam : DEFAULT_STRIPE_MODE;
+      var ACTIVE_LINKS = activeMode === 'test' ? STRIPE_LINKS_TEST : STRIPE_LINKS_LIVE;
+      window.__CLAUDEOPS_STRIPE_MODE__ = activeMode;
+
       var MULT = [1, 5, 20];
       function fmt(n) { return n.toLocaleString('en-US'); }
       function setCurrency(code) {
-        var c = PRICES[code] || PRICES.USD;
+        var curCode = PRICES[code] ? code : 'USD';
+        var c = PRICES[curCode];
         document.querySelectorAll('[data-plan-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-plan-idx');
           el.querySelector('sup').textContent = c.sym;
@@ -600,11 +666,16 @@
             el.textContent = '含 Claude 运行环境 · ' + MULT[i] + ' 倍额度，单位成本约为 1x 的 ' + ratio + '%';
           }
         });
+        document.querySelectorAll('[data-stripe-tier]').forEach(function (btn) {
+          var tier = btn.getAttribute('data-stripe-tier');
+          var link = ACTIVE_LINKS[tier + '_' + curCode] || ACTIVE_LINKS[tier + '_USD'];
+          if (link) btn.setAttribute('href', link);
+        });
         document.getElementById('currency-name').textContent = c.name;
         document.querySelectorAll('[data-currency]').forEach(function (b) {
-          b.setAttribute('aria-pressed', b.getAttribute('data-currency') === code ? 'true' : 'false');
+          b.setAttribute('aria-pressed', b.getAttribute('data-currency') === curCode ? 'true' : 'false');
         });
-        try { localStorage.setItem('claude-ops-currency', code); } catch (e) {}
+        try { localStorage.setItem('claude-ops-currency', curCode); } catch (e) {}
       }
       document.querySelectorAll('[data-currency]').forEach(function (b) {
         b.addEventListener('click', function () { setCurrency(b.getAttribute('data-currency')); });
@@ -621,6 +692,7 @@
         if (/-ca$/.test(lang)) return setCurrency('CAD');
         if (/-sg$/.test(lang)) return setCurrency('SGD');
         if (/^(de|fr|es|it|nl|pt-pt|fi|el|ie)/.test(lang) || /-(de|fr|es|it|nl|at|be|ie|fi|pt|gr)$/.test(lang)) return setCurrency('EUR');
+        setCurrency('USD');
       })();
       document.getElementById('year').textContent = new Date().getFullYear();
     })();
@@ -643,6 +715,18 @@
       if (cur) { trackEvent('currency_switch', { currency: cur.getAttribute('data-currency') }); return; }
       var a = e.target.closest('a');
       if (!a) return;
+      if (a.hasAttribute('data-stripe-tier')) {
+        var stripeTier = a.getAttribute('data-stripe-tier');
+        var checkoutParams = {
+          plan: stripeTier,
+          currency: currentCurrency(),
+          stripe_mode: window.__CLAUDEOPS_STRIPE_MODE__ || 'live',
+          location: 'pricing'
+        };
+        trackEvent('begin_checkout', checkoutParams);
+        trackEvent('stripe_checkout_click', checkoutParams);
+        return;
+      }
       if (isMail(a)) {
         var plan = a.closest('.plan');
         var tier = plan ? plan.querySelector('.plan-tier b').textContent.trim() : 'general';
@@ -651,7 +735,7 @@
         trackEvent('consult_click', params);
         trackEvent('generate_lead', params);
       } else if ((a.getAttribute('href') || '') === '#pricing') {
-        trackEvent('view_pricing_click', { location: a.closest('.hero') ? 'hero' : 'nav' });
+        trackEvent('view_pricing_click', { location: a.closest('.hero') ? 'hero' : (a.closest('.cta') ? 'cta' : 'nav') });
       }
     }, true);
   })();
