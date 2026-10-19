@@ -600,27 +600,7 @@
         CAD: { sym: 'C$', name: '加元', p: [139, 549, 1399] },
         SGD: { sym: 'S$', name: '新加坡元', p: [129, 499, 1299] }
       };
-      var STRIPE_LINKS_TEST = {
-        '1x_USD': 'https://buy.stripe.com/test_3cI28t7690ou2vkb829Zm00',
-        '1x_EUR': 'https://buy.stripe.com/test_14AaEZ0HLc7cb1Q6RM9Zm01',
-        '1x_AUD': 'https://buy.stripe.com/test_7sY14p4Y17QWc5Ub829Zm02',
-        '1x_NZD': 'https://buy.stripe.com/test_7sY9AVbmp0ou7PE5NI9Zm03',
-        '1x_CAD': 'https://buy.stripe.com/test_6oUeVf1LP2wC5Hwb829Zm04',
-        '1x_SGD': 'https://buy.stripe.com/test_fZucN7gGJ6MS1rg6RM9Zm05',
-        '5x_USD': 'https://buy.stripe.com/test_aFafZj7697QW1rggsm9Zm06',
-        '5x_EUR': 'https://buy.stripe.com/test_5kQeVfail6MSfi61xs9Zm07',
-        '5x_AUD': 'https://buy.stripe.com/test_fZudRbcqt4EK1rg3FA9Zm08',
-        '5x_NZD': 'https://buy.stripe.com/test_14A5kF8adgns0nc6RM9Zm09',
-        '5x_CAD': 'https://buy.stripe.com/test_5kQ4gB3TX2wC4Ds4JE9Zm0a',
-        '5x_SGD': 'https://buy.stripe.com/test_28E8wRail4EKfi64JE9Zm0b',
-        '20x_USD': 'https://buy.stripe.com/test_dRm7sNeyB2wC5Hwcc69Zm0c',
-        '20x_EUR': 'https://buy.stripe.com/test_5kQ7sN1LP2wC5Hw8ZU9Zm0d',
-        '20x_AUD': 'https://buy.stripe.com/test_00w28tbmpc7c8TIgsm9Zm0e',
-        '20x_NZD': 'https://buy.stripe.com/test_28E7sN4Y13AG0nc7VQ9Zm0f',
-        '20x_CAD': 'https://buy.stripe.com/test_14AfZj2PTdbg7PE0to9Zm0g',
-        '20x_SGD': 'https://buy.stripe.com/test_dRmdRb9ehdbg9XMeke9Zm0h'
-      };
-      var STRIPE_LINKS_LIVE = {
+      var STRIPE_LINKS = {
         '1x_USD': 'https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i',
         '1x_EUR': 'https://buy.stripe.com/fZu28t2PTdbg6LA4JE9Zm0j',
         '1x_AUD': 'https://buy.stripe.com/aFa28teyB0ou4Dsdga9Zm0k',
@@ -640,11 +620,6 @@
         '20x_CAD': 'https://buy.stripe.com/8x25kFduxdbg9XM1xs9Zm0y',
         '20x_SGD': 'https://buy.stripe.com/9B63cx2PT3AG5Hweke9Zm0z'
       };
-      var DEFAULT_STRIPE_MODE = 'live';
-      var envParam = (new URLSearchParams(location.search).get('stripe_env') || '').toLowerCase();
-      var activeMode = (envParam === 'live' || envParam === 'test') ? envParam : DEFAULT_STRIPE_MODE;
-      var ACTIVE_LINKS = activeMode === 'test' ? STRIPE_LINKS_TEST : STRIPE_LINKS_LIVE;
-      window.__CLAUDEOPS_STRIPE_MODE__ = activeMode;
 
       var MULT = [1, 5, 20];
       function fmt(n) { return n.toLocaleString('en-US'); }
@@ -668,7 +643,7 @@
         });
         document.querySelectorAll('[data-stripe-tier]').forEach(function (btn) {
           var tier = btn.getAttribute('data-stripe-tier');
-          var link = ACTIVE_LINKS[tier + '_' + curCode] || ACTIVE_LINKS[tier + '_USD'];
+          var link = STRIPE_LINKS[tier + '_' + curCode] || STRIPE_LINKS[tier + '_USD'];
           if (link) btn.setAttribute('href', link);
         });
         document.getElementById('currency-name').textContent = c.name;
