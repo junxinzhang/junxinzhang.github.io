@@ -32,6 +32,27 @@
   date: 2026-10-16
   featured: true
 
+- title: Zaokit Local 私有化算力部署
+  repo: zaokit-local
+  demo_url: /projects/zaokit-local/
+  description: 把开源大模型部署到您自己的 Mac / Windows / Linux 设备，多机统一网关、OpenAI 兼容 API、量化与性能调优、开机自启与完整验收文档。单机 $499 / 集群 $1,199 / 企业 $2,999 一次性交付
+  image: /projects/zaokit-local/hero-card.svg
+  category: Service
+  no_source: true
+  tech_stack:
+    - 单机 $499
+    - 集群 $1,199
+    - 企业 $2,999
+  keywords:
+    - 私有化部署
+    - 本地大模型
+    - MLX
+    - Ollama
+    - vLLM
+    - OpenAI 兼容 API
+  date: 2026-10-19
+  featured: true
+
 - title: Zaokit Claude API 服务
   repo: zaokit-cc
   demo_url: https://cc.zaokit.com

@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaokit Local - 私有化算力部署与调优 · Mac / Windows / Linux | Just Jason</title>
+  <meta name="description"
+    content="Zaokit Local 私有化算力部署服务：把开源大模型部署到您自己的 Mac、Windows、Linux 设备上，多机统一网关、OpenAI 兼容 API、量化与上下文调优、开机自启与完整验收文档。单机版 $499、集群版 $1,199、企业版 $2,999，一次性交付，支持 Stripe 在线付款。">
+  <meta name="keywords" content="私有化部署, 本地大模型, 私有算力, Mac 部署大模型, MLX, Ollama, LM Studio, vLLM, llama.cpp, Qwen 本地部署, OpenAI 兼容 API, 大模型调优">
+  <meta name="author" content="Jason Zhang">
+  <link rel="canonical" href="https://local.zaokit.app/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Zaokit Local">
+  <meta property="og:title" content="Zaokit Local - 你的设备，你的模型，你的数据">
+  <meta property="og:description" content="Mac / Windows / Linux 私有化大模型部署与调优：多机统一网关、OpenAI 兼容 API、实测性能报告与完整交付文档。">
+  <meta property="og:url" content="https://local.zaokit.app/">
+  <meta property="og:image" content="https://junxinzhang.com/projects/zaokit-local/hero-card.svg">
+  <meta name="theme-color" content="#0b1215">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Zaokit Local 私有化算力部署",
+    "description": "在客户自有的 Mac、Windows、Linux 设备上部署与调优开源大模型，提供多机统一网关、OpenAI 兼容 API、性能基准与交付文档。",
+    "provider": { "@type": "Organization", "name": "Zaokit AI", "url": "https://zaokit.app" },
+    "url": "https://local.zaokit.app/",
+    "offers": [
+      { "@type": "Offer", "name": "单机版 Solo", "price": "499", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "集群版 Cluster", "price": "1199", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "企业版 Enterprise", "price": "2999", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "单机版 Solo", "price": "749", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "集群版 Cluster", "price": "1799", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "企业版 Enterprise", "price": "4499", "priceCurrency": "AUD" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b1215;
+      --bg-soft: #10191d;
+      --surface: rgba(255, 255, 255, 0.035);
+      --surface-strong: rgba(255, 255, 255, 0.07);
+      --text: #e3ece9;
+      --muted: #8fa3a0;
+      --primary: #19c39b;
+      --primary-strong: #3ee0b6;
+      --primary-soft: rgba(25, 195, 155, 0.13);
+      --accent: #7cc4ff;
+      --cream: #f1f7f5;
+      --border: rgba(255, 255, 255, 0.08);
+      --radius: 18px;
+      --font: "Inter", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box }
+    html { scroll-behavior: smooth }
+    body {
+      margin: 0; color: var(--text); background: var(--bg);
+      font-family: var(--font); line-height: 1.7; -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(70vw 50vw at 12% -10%, rgba(25, 195, 155, 0.16), transparent 60%),
+        radial-gradient(50vw 40vw at 92% 12%, rgba(124, 196, 255, 0.09), transparent 55%);
+    }
+    a { color: inherit; text-decoration: none }
+    .container { width: min(1120px, 92vw); margin: 0 auto }
+    code, .mono { font-family: var(--mono) }
+
+    /* Header */
+    .site-header {
+      position: sticky; top: 0; z-index: 30; backdrop-filter: blur(16px);
+      background: rgba(11, 18, 21, 0.85); border-bottom: 1px solid var(--border);
+    }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 68px; gap: 16px }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: #fff }
+    .brand small { font-weight: 500; color: var(--muted); font-size: .8rem }
+    .brand-mark {
+      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--primary), #0f8f72); color: #04110d;
+    }
+    .nav-links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0 }
+    .nav-links a { padding: 8px 12px; border-radius: 10px; color: var(--muted); font-size: .92rem; transition: .2s }
+    .nav-links a:hover { color: #fff; background: var(--surface-strong) }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 24px; border-radius: 12px; font-weight: 600; font-size: .98rem;
+      border: 1px solid transparent; cursor: pointer; transition: .2s; font-family: inherit;
+    }
+    .btn-primary { background: var(--primary); color: #04110d }
+    .btn-primary:hover { background: var(--primary-strong); transform: translateY(-1px) }
+    .btn-ghost { background: var(--surface); color: var(--text); border-color: var(--border) }
+    .btn-ghost:hover { background: var(--surface-strong) }
+
+    /* Hero */
+    .hero { padding: 92px 0 64px; text-align: center }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
+      font-size: .82rem; font-weight: 600; color: var(--primary-strong);
+      background: var(--primary-soft); border: 1px solid rgba(25, 195, 155, .3);
+    }
+    .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--primary-strong); box-shadow: 0 0 0 4px rgba(62, 224, 182, .18) }
+    .hero h1 {
+      font-weight: 800; color: var(--cream); font-size: clamp(2.2rem, 6vw, 3.9rem);
+      line-height: 1.15; margin: 22px 0 18px; letter-spacing: -.02em;
+    }
+    .grad {
+      font-style: normal;
+      background: linear-gradient(90deg, #19c39b 0%, #7cc4ff 30%, #f1f7f5 50%, #3ee0b6 70%, #19c39b 100%);
+      background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; animation: flow 7s linear infinite;
+    }
+    @keyframes flow { to { background-position: -200% center } }
+    @media (prefers-reduced-motion: reduce) { .grad { animation: none } }
+    .hero p.lead { color: var(--muted); font-size: clamp(1.02rem, 2vw, 1.18rem); max-width: 42em; margin: 0 auto 34px }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
+    .os-row { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 34px }
+    .os-chip {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px;
+      background: var(--surface); border: 1px solid var(--border); font-size: .9rem; color: var(--text);
+    }
+    .os-chip svg { color: var(--primary-strong) }
+
+    /* Terminal */
+    .terminal {
+      max-width: 760px; margin: 48px auto 0; text-align: left; border-radius: 16px; overflow: hidden;
+      border: 1px solid var(--border); background: #071012; box-shadow: 0 30px 80px rgba(0, 0, 0, .45);
+    }
+    .terminal-bar { display: flex; gap: 7px; padding: 12px 16px; border-bottom: 1px solid var(--border); background: rgba(255, 255, 255, .03) }
+    .terminal-bar i { width: 11px; height: 11px; border-radius: 50%; background: #3a4a4c }
+    .terminal-bar i:nth-child(1) { background: #ff5f57 } .terminal-bar i:nth-child(2) { background: #febc2e } .terminal-bar i:nth-child(3) { background: #28c840 }
+    .terminal-bar span { margin-left: 10px; font-size: .78rem; color: var(--muted); font-family: var(--mono) }
+    .terminal pre { margin: 0; padding: 20px 22px; font-family: var(--mono); font-size: .82rem; line-height: 1.75; color: #c8d6d3; overflow-x: auto }
+    .terminal .c { color: #5f7572 } .terminal .k { color: var(--primary-strong) } .terminal .s { color: #f2c48d } .terminal .o { color: var(--accent) }
+
+    /* Sections */
+    .section { padding: 84px 0 }
+    .section-alt { background: rgba(255, 255, 255, .015); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border) }
+    .section-head { text-align: center; margin-bottom: 44px }
+    .section-tag { color: var(--primary); font-weight: 700; letter-spacing: .1em; font-size: .78rem; text-transform: uppercase; margin: 0 }
+    .section-head h2 { color: var(--cream); font-size: clamp(1.6rem, 3.4vw, 2.3rem); margin: 10px 0 0; line-height: 1.3; letter-spacing: -.01em }
+    .section-head p { color: var(--muted); margin: 12px auto 0; max-width: 44em }
+
+    .grid { display: grid; gap: 20px }
+    .grid-4 { grid-template-columns: repeat(4, 1fr) }
+    .grid-3 { grid-template-columns: repeat(3, 1fr) }
+    .grid-2 { grid-template-columns: repeat(2, 1fr) }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; transition: .25s }
+    .card:hover { border-color: rgba(25, 195, 155, .35); transform: translateY(-3px) }
+    .card h3 { color: #fff; margin: 14px 0 8px; font-size: 1.08rem }
+    .card p { color: var(--muted); margin: 0; font-size: .93rem }
+    .icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--primary-soft); color: var(--primary-strong) }
+    .pain .icon { background: rgba(255, 255, 255, .05); color: var(--muted) }
+
+    /* Platforms */
+    .platform h3 { display: flex; align-items: center; gap: 10px; margin-top: 0 }
+    .platform .hw { color: var(--accent); font-size: .85rem; margin: 0 0 14px }
+    .stack { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px }
+    .stack span { font-size: .76rem; padding: 3px 9px; border-radius: 6px; background: rgba(255, 255, 255, .05); color: var(--text); font-family: var(--mono) }
+    .platform ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: .9rem }
+    .platform li { margin: 4px 0 }
+
+    /* Architecture */
+    .arch { display: grid; grid-template-columns: 1fr auto 1.2fr auto 1fr; align-items: center; gap: 14px }
+    .arch-col { display: grid; gap: 12px }
+    .arch-node {
+      padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border); background: var(--surface);
+      font-size: .9rem; color: var(--text);
+    }
+    .arch-node b { display: block; color: #fff; font-size: .95rem }
+    .arch-node span { color: var(--muted); font-size: .8rem }
+    .arch-gw { border-color: rgba(25, 195, 155, .55); background: linear-gradient(180deg, rgba(25, 195, 155, .14), rgba(25, 195, 155, .03)); text-align: center; padding: 26px 18px }
+    .arch-gw ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 6px; font-size: .84rem; color: var(--muted) }
+    .arch-arrow { color: var(--primary); font-size: 1.4rem; text-align: center }
+
+    /* Tuning */
+    .tune-list { display: grid; gap: 14px }
+    .tune { display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: start }
+    .tune h3 { margin: 4px 0 4px }
+
+    /* Case */
+    .case-wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start }
+    .bench { width: 100%; border-collapse: collapse; font-size: .9rem }
+    .bench th, .bench td { padding: 11px 12px; border-bottom: 1px solid var(--border); text-align: right }
+    .bench th:first-child, .bench td:first-child { text-align: left; color: var(--muted) }
+    .bench thead th { color: #fff; font-weight: 600; font-size: .84rem }
+    .bench td b { color: var(--primary-strong) }
+    .case-meta { color: var(--muted); font-size: .8rem; margin-top: 12px }
+    .check { list-style: none; margin: 0; padding: 0 }
+    .check li { display: flex; gap: 10px; padding: 7px 0; font-size: .93rem }
+    .check li::before, .features li::before {
+      content: ""; flex: 0 0 18px; height: 18px; margin-top: 3px; border-radius: 50%;
+      background: var(--primary-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233ee0b6'%3E%3Cpath d='M6.4 11.2 3.2 8l1.1-1.1 2.1 2.1 5.3-5.3L12.8 4.8z'/%3E%3C/svg%3E") center/12px no-repeat;
+    }
+    .big-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 18px }
+    .big-stats div { padding: 16px; border-radius: 14px; background: var(--surface); border: 1px solid var(--border) }
+    .big-stats strong { display: block; font-size: 1.7rem; color: #fff; line-height: 1.2 }
+    .big-stats span { color: var(--muted); font-size: .82rem }
+
+    /* Pricing */
+    .pricing { align-items: stretch }
+    .plan { display: flex; flex-direction: column; position: relative; padding: 32px 28px }
+    .plan.featured {
+      border-color: rgba(25, 195, 155, .6);
+      background: linear-gradient(180deg, rgba(25, 195, 155, .12), rgba(25, 195, 155, .02));
+      box-shadow: 0 24px 60px rgba(25, 195, 155, .12);
+    }
+    .badge {
+      position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+      background: var(--primary); color: #04110d; font-size: .78rem; font-weight: 700;
+      padding: 4px 14px; border-radius: 999px; white-space: nowrap;
+    }
+    .plan-tier { display: flex; align-items: baseline; gap: 10px }
+    .plan-tier b { font-size: 1.5rem; color: #fff }
+    .plan-tier span { color: var(--primary-strong); font-weight: 600; font-size: .9rem }
+    .plan-desc { color: var(--muted); font-size: .9rem; margin: 10px 0 22px; min-height: 3em }
+    .price { font-size: 2.6rem; font-weight: 800; color: #fff; line-height: 1; letter-spacing: -.02em }
+    .price small { font-size: 1rem; font-weight: 500; color: var(--muted); margin-left: 4px }
+    .price sup { font-size: 1.2rem; font-weight: 600; vertical-align: top; margin-right: 2px; position: relative; top: .35em }
+    .price-note { color: var(--muted); font-size: .82rem; margin: 8px 0 22px }
+    .features { list-style: none; padding: 0; margin: 0 0 28px; flex: 1 }
+    .features li { display: flex; gap: 10px; padding: 7px 0; font-size: .93rem; color: var(--text) }
+    .plan .btn { width: 100% }
+    .plan-consult { display: block; text-align: center; margin-top: 12px; font-size: .83rem; color: var(--muted); transition: color .2s }
+    .plan-consult:hover { color: var(--primary-strong) }
+    .addon {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+      margin-top: 24px; padding: 22px 26px; border-radius: var(--radius);
+      border: 1px dashed rgba(124, 196, 255, .4); background: rgba(124, 196, 255, .05);
+    }
+    .addon h3 { margin: 0 0 4px; color: #fff; font-size: 1.05rem }
+    .addon p { margin: 0; color: var(--muted); font-size: .9rem }
+    .addon-price { font-size: 1.6rem; font-weight: 800; color: #fff; white-space: nowrap }
+    .addon-price small { font-size: .9rem; color: var(--muted); font-weight: 500 }
+    .addon-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap }
+    .stripe-trust {
+      display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
+      margin-top: 28px; color: var(--muted); font-size: .86rem; text-align: center;
+    }
+    .stripe-trust svg { color: var(--primary-strong); flex-shrink: 0 }
+    .stripe-trust strong { color: var(--cream); font-weight: 600 }
+    .pricing-foot { text-align: center; color: var(--muted); font-size: .84rem; margin-top: 10px }
+    .currency-switch {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; width: fit-content; max-width: 100%;
+      margin: -12px auto 40px; padding: 5px; border: 1px solid var(--border); border-radius: 24px; background: var(--surface);
+    }
+    .currency-switch button {
+      font: inherit; font-size: .86rem; color: var(--muted); background: transparent; border: 0;
+      padding: 7px 14px; border-radius: 999px; cursor: pointer; transition: background .2s, color .2s;
+    }
+    .currency-switch button:hover { color: var(--text) }
+    .currency-switch button[aria-pressed="true"] { background: var(--primary); color: #04110d; font-weight: 600 }
+
+    /* Steps */
+    .steps { counter-reset: step }
+    .step { counter-increment: step }
+    .step::before { content: counter(step, decimal-leading-zero); font-size: 2rem; color: var(--primary); font-weight: 800; opacity: .85 }
+
+    /* FAQ */
+    .faq { max-width: 820px; margin: 0 auto }
+    .faq details { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; margin-bottom: 12px }
+    .faq summary { cursor: pointer; color: #fff; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 16px }
+    .faq summary::-webkit-details-marker { display: none }
+    .faq summary::after { content: "+"; color: var(--primary); font-size: 1.3rem; line-height: 1 }
+    .faq details[open] summary::after { content: "−" }
+    .faq details p { color: var(--muted); margin: 12px 0 0; font-size: .94rem }
+
+    /* CTA */
+    .cta {
+      text-align: center; padding: 56px 28px; border-radius: 24px;
+      background: linear-gradient(135deg, rgba(25, 195, 155, .18), rgba(124, 196, 255, .05));
+      border: 1px solid rgba(25, 195, 155, .3);
+    }
+    .cta h2 { color: var(--cream); font-size: clamp(1.5rem, 3.4vw, 2.2rem); margin: 0 0 12px }
+    .cta p { color: var(--muted); margin: 0 0 28px }
+    .contact-tg {
+      display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap;
+      margin: 36px auto 0; padding-top: 32px; border-top: 1px solid rgba(25, 195, 155, .2); max-width: 620px; text-align: left;
+    }
+    .tg-qr img { display: block; width: 158px; height: auto; border-radius: 16px; transition: transform .2s }
+    .tg-qr:hover img { transform: scale(1.03) }
+    .tg-text { max-width: 300px }
+    .tg-text h3 { margin: 0 0 6px; color: var(--cream); font-size: 1.15rem }
+    .tg-text p { margin: 0 0 14px; color: var(--muted); font-size: .92rem }
+    .tg-link { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 10px; background: #2aabee; color: #fff; font-weight: 600; font-size: .92rem; transition: .2s }
+    .tg-link:hover { background: #229ed9; transform: translateY(-1px) }
+
+    footer { padding: 36px 0; color: var(--muted); font-size: .86rem; border-top: 1px solid var(--border); margin-top: 84px }
+    .foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap }
+    .foot-brand { display: flex; flex-direction: column; gap: 6px }
+    .foot-brand strong { color: var(--cream); font-size: .95rem }
+    .foot-brand a, .foot-col a { color: var(--text) }
+    .foot-right { display: flex; gap: 48px; flex-wrap: wrap; margin-left: auto; text-align: right }
+    .foot-col h4 { margin: 0 0 10px; color: var(--cream); font-size: .85rem; font-weight: 600; letter-spacing: .04em }
+    .foot-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
+    footer a:hover { color: var(--primary-strong) }
+
+    .toast {
+      position: fixed; left: 50%; bottom: 32px; transform: translate(-50%, 20px); opacity: 0;
+      background: #fff; color: #0b1215; padding: 12px 20px; border-radius: 12px; font-weight: 600;
+      transition: .25s; pointer-events: none; z-index: 50; box-shadow: 0 12px 30px rgba(0, 0, 0, .3);
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0) }
+
+    @media (max-width: 960px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr) }
+      .grid-3, .grid-2, .case-wrap { grid-template-columns: 1fr }
+      .plan.featured { order: -1 }
+      .nav-links { display: none }
+      .arch { grid-template-columns: 1fr }
+      .arch-arrow { transform: rotate(90deg) }
+    }
+    @media (max-width: 560px) {
+      .grid-4 { grid-template-columns: 1fr }
+      .hero { padding: 64px 0 44px }
+      .section { padding: 60px 0 }
+      .contact-tg { text-align: center }
+      .tg-text { max-width: none }
+      .foot-right { margin-left: 0; text-align: left }
+    }
+  </style>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GDE6TX65P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0GDE6TX65P');
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" id="top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+        </span>
+        Zaokit Local <small>私有算力</small>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#why">为什么私有化</a></li>
+        <li><a href="#platforms">支持平台</a></li>
+        <li><a href="#tuning">性能调优</a></li>
+        <li><a href="#case">交付案例</a></li>
+        <li><a href="#pricing">价格方案</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow"><span class="dot"></span>私有化算力部署 · 一次交付 · 完整验收</span>
+        <h1>你的设备，你的模型，<br><em class="grad">你的数据</em></h1>
+        <p class="lead">
+          把开源大模型部署到您已有的 Mac、Windows PC 或 Linux 服务器上：多台机器合并成一个统一入口，提供 OpenAI 兼容 API。我们按您的硬件做量化与调优，交付时附实测性能报告和验收文档。数据不出局域网，也不按 Token 付费。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#pricing">查看价格方案</a>
+          <a class="btn btn-ghost" href="mailto:support@zaokit.ai?subject=Zaokit%20Local%20%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E5%92%A8%E8%AF%A2">免费评估我的硬件</a>
+        </div>
+        <div class="os-row">
+          <span class="os-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>macOS · Apple Silicon</span>
+          <span class="os-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M2 4.5l8-1.1v7.8H2zm0 15l8 1.1v-7.7H2zm9 1.2l11 1.5v-9.4H11zm0-17.4v7.9h11V1.8z"/></svg>Windows · NVIDIA</span>
+          <span class="os-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6M12 19h8"/></svg>Linux · GPU 服务器</span>
+        </div>
+
+        <div class="terminal" aria-label="调用示例">
+          <div class="terminal-bar"><i></i><i></i><i></i><span>局域网内调用 · 与 OpenAI SDK 完全兼容</span></div>
+<pre><span class="c"># 只需替换 Base URL，现有代码零改动</span>
+<span class="k">curl</span> http://<span class="o">studio.local:23000</span>/v1/chat/completions \
+  -H <span class="s">"Authorization: Bearer $ZAOKIT_API_KEY"</span> \
+  -d <span class="s">'{"model":"qwen3.5-27b","messages":[{"role":"user","content":"你好"}]}'</span>
+
+<span class="c"># → 首字 0.19s · 生成 33.5 tokens/s · 数据全程不出局域网</span></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section class="section section-alt" id="why">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Why Private</p>
+          <h2>大模型很强，但不是每份数据都适合上云</h2>
+          <p>合同、源码、客户资料、财务数据……把它们留在自己的机器里，是很多团队的底线。</p>
+        </div>
+        <div class="grid grid-4 pain">
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+            <h3>数据合规顾虑</h3>
+            <p>敏感数据发往第三方 API 存在合规与泄露风险，很多业务场景根本无法使用云端模型。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <h3>Token 账单失控</h3>
+            <p>批量处理、Agent 长任务、全员日常问答，按量计费的成本随用量线性上涨。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <h3>硬件闲置浪费</h3>
+            <p>办公室的 Mac Studio、带显卡的工作站，大部分时间算力都在空转。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg></div>
+            <h3>自己部署踩坑多</h3>
+            <p>量化选型、显存/内存规划、上下文长度、多机互联、开机自启，每一步都可能卡几天。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platforms -->
+    <section class="section" id="platforms">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Platforms</p>
+          <h2>三大平台，按硬件选最合适的推理引擎</h2>
+          <p>我们不绑定单一工具，而是根据芯片、内存与并发需求选择推理栈，并统一接入同一个网关。</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card platform">
+            <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="color:var(--primary-strong)"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>macOS</h3>
+            <p class="hw">Mac Studio · Mac mini · MacBook Pro（M1–M5 系列）</p>
+            <ul>
+              <li>MLX 4bit 量化，统一内存效率最大化</li>
+              <li>后台常驻服务开机自动加载，无需登录桌面</li>
+              <li>多台 Mac 组网，统一入口按模型名路由</li>
+              <li>可选接入 Codex / CC Switch 本地编程助手</li>
+            </ul>
+            <div class="stack"><span>MLX</span><span>LM Studio</span><span>llmster</span><span>Ollama</span><span>launchd</span></div>
+          </div>
+          <div class="card platform">
+            <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color:var(--primary-strong)"><path d="M2 4.5l8-1.1v7.8H2zm0 15l8 1.1v-7.7H2zm9 1.2l11 1.5v-9.4H11zm0-17.4v7.9h11V1.8z"/></svg>Windows</h3>
+            <p class="hw">RTX 30/40/50 系列工作站 · 游戏主机改造</p>
+            <ul>
+              <li>CUDA 加速，GGUF / EXL2 量化按显存选型</li>
+              <li>显存不足时 GPU + 内存混合卸载调优</li>
+              <li>注册为 Windows 服务，开机自启、崩溃自动拉起</li>
+              <li>防火墙与局域网访问策略一并配置</li>
+            </ul>
+            <div class="stack"><span>CUDA</span><span>llama.cpp</span><span>Ollama</span><span>LM Studio</span><span>NSSM</span></div>
+          </div>
+          <div class="card platform">
+            <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--primary-strong)"><path d="M4 17l6-6-6-6M12 19h8"/></svg>Linux</h3>
+            <p class="hw">Ubuntu / Debian / RHEL · 单卡到多卡 GPU 服务器</p>
+            <ul>
+              <li>vLLM / SGLang 高并发，连续批处理与 PagedAttention</li>
+              <li>多卡张量并行，AWQ / GPTQ / FP8 量化</li>
+              <li>Docker Compose / systemd 托管，日志与监控</li>
+              <li>适合团队级并发与 7×24 生产负载</li>
+            </ul>
+            <div class="stack"><span>vLLM</span><span>SGLang</span><span>llama.cpp</span><span>Docker</span><span>systemd</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="section section-alt" id="architecture">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Architecture</p>
+          <h2>多台设备，一个入口</h2>
+          <p>不同机器跑不同规格的模型，由统一网关负责鉴权、路由、用量与日志。调用方只需要一个地址和一把密钥。</p>
+        </div>
+        <div class="arch">
+          <div class="arch-col">
+            <div class="arch-node"><b>业务应用</b><span>OpenAI SDK / LangChain / Dify</span></div>
+            <div class="arch-node"><b>员工浏览器</b><span>Web 控制台对话</span></div>
+            <div class="arch-node"><b>编程助手</b><span>Codex · Claude Code · Cursor</span></div>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node arch-gw">
+            <b>Zaokit AI Gateway</b>
+            <span>局域网统一入口 · /v1 兼容接口</span>
+            <ul>
+              <li>账号与独立调用密钥</li>
+              <li>按模型名路由到目标机器</li>
+              <li>额度、用量与渠道日志</li>
+              <li>流式 / 多轮 / 思考开关</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-col">
+            <div class="arch-node"><b>主机 · 大模型</b><span>例：Mac Studio · 27B</span></div>
+            <div class="arch-node"><b>节点 2 · 中模型</b><span>例：Mac mini · 9B</span></div>
+            <div class="arch-node"><b>节点 3 · 轻量模型</b><span>例：Linux / Windows · 4B</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tuning -->
+    <section class="section" id="tuning">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Tuning</p>
+          <h2>不止“能跑”，而是<em class="grad">跑得快、跑得稳</em></h2>
+          <p>每一项调优都有基准测试佐证，交付时给出可复现的数据，而不是一句“已优化”。</p>
+        </div>
+        <div class="grid grid-2">
+          <div class="tune-list">
+            <div class="card tune">
+              <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+              <div><h3>模型与量化选型</h3><p>按内存/显存反推最大可用模型，在 4bit / 8bit / FP8 之间权衡质量与速度，避免爆内存与频繁换页。</p></div>
+            </div>
+            <div class="card tune">
+              <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12H3M21 6H3M21 18H3"/></svg></div>
+              <div><h3>上下文与思考模式</h3><p>按业务设定上下文窗口；默认直接回答以降低延迟，同时保留按请求开启深度思考的能力。</p></div>
+            </div>
+            <div class="card tune">
+              <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div>
+              <div><h3>并发与吞吐</h3><p>测量单请求与双请求吞吐、长提示首字延迟，给出建议的并发上限与机器分工。</p></div>
+            </div>
+          </div>
+          <div class="tune-list">
+            <div class="card tune">
+              <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.4 6.6a9 9 0 11-12.8 0M12 2v10"/></svg></div>
+              <div><h3>开机自启与无人值守</h3><p>重启后无需登录桌面即可恢复模型、网关与机器互联；关闭自动睡眠，来电自动开机。</p></div>
+            </div>
+            <div class="card tune">
+              <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div><h3>访问安全</h3><p>模型接口仅本机监听，统一由网关鉴权；无密钥请求直接拒绝，凭据独立受控交接，不写入文档。</p></div>
+            </div>
+            <div class="card tune">
+              <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/><circle cx="12" cy="12" r="10"/></svg></div>
+              <div><h3>远程运维与可选公网</h3><p>通过 ZeroTier / SSH 授权运维；如需外出访问，可选 Cloudflare Tunnel + 邮箱验证的公网入口。</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case -->
+    <section class="section section-alt" id="case">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Case Study</p>
+          <h2>真实交付：三台 Mac 组成的私有模型平台</h2>
+          <p>1 台 Mac Studio（M5 Max · 64 GB）+ 2 台 Mac mini（M4 · 24 GB），分别部署 Qwen3.5 27B / 9B / 4B，局域网统一访问。以下数据来自交付验收文档。</p>
+        </div>
+        <div class="case-wrap">
+          <div class="card">
+            <table class="bench">
+              <thead>
+                <tr><th>本地基准（MLX 4bit）</th><th>主机 27B</th><th>节点 9B</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>短提示生成速度</td><td><b>33.48</b> tok/s</td><td>21.59 tok/s</td></tr>
+                <tr><td>短提示首字延迟</td><td><b>0.19</b> s</td><td>0.52 s</td></tr>
+                <tr><td>长提示（1,691 tokens）生成</td><td>33.06 tok/s</td><td>21.30 tok/s</td></tr>
+                <tr><td>双请求合计吞吐</td><td><b>59.48</b> tok/s</td><td>37.67 tok/s</td></tr>
+                <tr><td>60 秒连续输出</td><td>1,954 TPM</td><td>1,231 TPM</td></tr>
+              </tbody>
+            </table>
+            <p class="case-meta">测试口径：温度 0，上下文 16,384，预热不计入，短提示 5 次 / 长提示 3 次取中位数。单次测试结果不构成长期性能承诺，不同硬件与模型数据会有差异。</p>
+          </div>
+          <div>
+            <div class="big-stats">
+              <div><strong>10 / 10</strong><span>验收项全部通过</span></div>
+              <div><strong>7</strong><span>模型渠道统一接入</span></div>
+              <div><strong>9 / 9</strong><span>Codex 真实文件任务通过</span></div>
+              <div><strong>12 / 12</strong><span>重启后无人登录调用通过</span></div>
+            </div>
+            <div class="card">
+              <ul class="check">
+                <li>局域网统一入口 + OpenAI 兼容 /v1 接口</li>
+                <li>模型资料、渠道、额度与日志逐项核对</li>
+                <li>三机实际重启，无桌面登录状态下自动恢复</li>
+                <li>主机预装 Codex + CC Switch，默认接入 27B</li>
+                <li>20 页交付说明书 + 证据目录 + 凭据受控交接</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deliverables -->
+    <section class="section" id="deliverables">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Deliverables</p>
+          <h2>交付的不只是“装好了”</h2>
+          <p>每个项目都有可追溯的验收记录，方便您的团队接手、审计和后续扩容。</p>
+        </div>
+        <div class="grid grid-4">
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+            <h3>交付说明书</h3>
+            <p>设备与模型清单、部署结构、地址端口、使用方法、运维与恢复步骤。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <h3>验收记录</h3>
+            <p>逐项列明检查项与实测结果，明确区分“已验证”与“未验证”。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+            <h3>性能基准报告</h3>
+            <p>TPS、首字延迟、并发吞吐、连续输出 TPM，附测试口径与原始记录。</p>
+          </div>
+          <div class="card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.6 7.6a5.5 5.5 0 11-7.8 7.8 5.5 5.5 0 017.8-7.8zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></div>
+            <h3>凭据受控交接</h3>
+            <p>管理员密码与调用密钥单独交接，不出现在任何文档或截图中。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Pricing</p>
+          <h2>一次性交付，硬件与数据永远属于您</h2>
+          <p>按设备数量与复杂度定价。无月租，无 Token 费用，部署完成后不依赖我们也能长期运行。</p>
+        </div>
+        <div class="currency-switch" role="group" aria-label="选择币种">
+          <button type="button" data-currency="AUD" aria-pressed="true">A$ 澳元</button>
+          <button type="button" data-currency="USD" aria-pressed="false">$ 美元</button>
+          <button type="button" data-currency="EUR" aria-pressed="false">€ 欧元</button>
+          <button type="button" data-currency="NZD" aria-pressed="false">NZ$ 新西兰元</button>
+          <button type="button" data-currency="CAD" aria-pressed="false">C$ 加元</button>
+          <button type="button" data-currency="SGD" aria-pressed="false">S$ 新加坡元</button>
+        </div>
+        <div class="grid grid-3 pricing">
+          <article class="card plan">
+            <div class="plan-tier"><b>单机版</b><span>Solo · 1 台设备</span></div>
+            <p class="plan-desc">个人开发者或小团队，用一台 Mac / PC / 服务器搭建私有模型服务。</p>
+            <div class="price" data-plan-idx="0"><sup>A$</sup><span class="amount">749</span><small>/ 一次性</small></div>
+            <p class="price-note" data-note-idx="0">含 1 台设备部署与调优</p>
+            <ul class="features">
+              <li>1 台设备 · Mac / Windows / Linux 任选</li>
+              <li>按硬件选型 1–2 个开源模型并量化</li>
+              <li>OpenAI 兼容 API + Web 对话界面</li>
+              <li>开机自启与局域网访问配置</li>
+              <li>基础性能测试 + 使用说明</li>
+              <li>14 天远程技术支持</li>
+            </ul>
+            <a class="btn btn-ghost" data-stripe-tier="solo" href="https://buy.stripe.com/4gMcN72PTdbgee2cc69Zm0B" target="_blank" rel="noopener">立即购买</a>
+            <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Zaokit%20Local%20%E5%92%A8%E8%AF%A2%20-%20%E5%8D%95%E6%9C%BA%E7%89%88">先确认硬件是否合适？邮件咨询 →</a>
+          </article>
+
+          <article class="card plan featured">
+            <span class="badge">最受欢迎 · 同款交付</span>
+            <div class="plan-tier"><b>集群版</b><span>Cluster · 最多 3 台</span></div>
+            <p class="plan-desc">中小企业与工作室，多台设备组成统一的私有模型平台，即上方真实案例的同款方案。</p>
+            <div class="price" data-plan-idx="1"><sup>A$</sup><span class="amount">1,799</span><small>/ 一次性</small></div>
+            <p class="price-note" data-note-idx="1">含 3 台设备 · 约 A$600 / 台</p>
+            <ul class="features">
+              <li>最多 3 台设备，跨平台混合组网</li>
+              <li>统一网关：账号、密钥、额度与日志</li>
+              <li>按模型名路由到不同机器</li>
+              <li>无人登录开机恢复 + 重启验收</li>
+              <li>完整性能基准报告（TPS / 首字 / 并发）</li>
+              <li>可选 Codex / Claude Code 本地接入</li>
+              <li>完整交付说明书与验收记录</li>
+              <li>30 天远程技术支持</li>
+            </ul>
+            <a class="btn btn-primary" data-stripe-tier="cluster" href="https://buy.stripe.com/8x2cN71LP7QWc5U1xs9Zm0H" target="_blank" rel="noopener">立即购买</a>
+            <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Zaokit%20Local%20%E5%92%A8%E8%AF%A2%20-%20%E9%9B%86%E7%BE%A4%E7%89%88">有疑问？发送邮件咨询 →</a>
+          </article>
+
+          <article class="card plan">
+            <div class="plan-tier"><b>企业版</b><span>Enterprise · 最多 8 台</span></div>
+            <p class="plan-desc">多卡 GPU 服务器、团队级高并发或有合规审计要求的生产环境。</p>
+            <div class="price" data-plan-idx="2"><sup>A$</sup><span class="amount">4,499</span><small>/ 一次性</small></div>
+            <p class="price-note" data-note-idx="2">含 8 台设备 · 约 A$562 / 台</p>
+            <ul class="features">
+              <li>最多 8 台设备或多卡 GPU 服务器</li>
+              <li>vLLM / SGLang 高并发与多卡并行</li>
+              <li>可选公网入口（Tunnel + 邮箱验证）</li>
+              <li>知识库 / RAG 接入方案设计</li>
+              <li>备份、恢复演练与运维手册</li>
+              <li>60 天支持 + 专属一对一通道</li>
+            </ul>
+            <a class="btn btn-ghost" data-stripe-tier="enterprise" href="https://buy.stripe.com/8x2fZj8ad8V00ncb829Zm0N" target="_blank" rel="noopener">立即购买</a>
+            <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Zaokit%20Local%20%E5%92%A8%E8%AF%A2%20-%20%E4%BC%81%E4%B8%9A%E7%89%88">超过 8 台或需驻场？联系定制 →</a>
+          </article>
+        </div>
+
+        <div class="addon">
+          <div>
+            <h3>可选：持续运维托管</h3>
+            <p>部署后按月托管：模型版本升级、远程巡检、故障排查与性能复测，可随时取消。</p>
+          </div>
+          <div class="addon-right">
+            <div class="addon-price" data-addon-price><span class="sym">A$</span><span class="amount">229</span><small> / 月</small></div>
+            <a class="btn btn-ghost" data-stripe-tier="care" href="https://buy.stripe.com/9B67sNbmp0ou3zo4JE9Zm0T" target="_blank" rel="noopener">订阅运维</a>
+          </div>
+        </div>
+
+        <div class="stripe-trust">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <span>由 <strong>Stripe</strong> 提供安全加密结算 · 支持 Visa / Mastercard / Amex / 银联 UnionPay / Apple Pay / Google Pay · 自动生成正式收据与 Invoice</span>
+        </div>
+        <p class="pricing-foot">以上价格以<span id="currency-name">澳元</span>计，为部署与调优服务费，不含硬件。付款后 1 个工作日内与您确认硬件清单与排期；如评估后硬件不适合部署，全额退款。</p>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Process</p>
+          <h2>四步上线，通常 3–5 个工作日</h2>
+        </div>
+        <div class="grid grid-4 steps">
+          <div class="card step">
+            <h3>硬件评估</h3>
+            <p>提供设备型号、内存/显存与使用场景，我们免费给出可跑的模型规格与预期速度。</p>
+          </div>
+          <div class="card step">
+            <h3>Stripe 下单</h3>
+            <p>选择方案在线付款，自动生成收据；我们 1 个工作日内确认排期。</p>
+          </div>
+          <div class="card step">
+            <h3>远程部署调优</h3>
+            <p>通过授权的远程连接完成安装、量化、组网、网关与开机自启配置。</p>
+          </div>
+          <div class="card step">
+            <h3>验收交付</h3>
+            <p>逐项实测验收，交付说明书、性能报告与凭据，进入支持期。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">FAQ</p>
+          <h2>常见问题</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>我的电脑能跑多大的模型？</summary>
+            <p>经验值：24 GB 统一内存的 Mac mini 可流畅运行 9B 级 4bit 模型；64 GB 的 Mac Studio 可运行 27B–32B；128 GB 以上可尝试 70B 级。Windows / Linux 主要看显存：12 GB 显卡适合 7–9B，24 GB 适合 27–32B 量化版。发送型号给我们，免费评估。</p>
+          </details>
+          <details>
+            <summary>部署后数据会经过你们的服务器吗？</summary>
+            <p>不会。模型权重与推理全部在您的设备上运行，基础方案仅限局域网访问。只有当您主动选择开启公网入口时，请求才会经过 Cloudflare 转发；我们的远程运维权限也可以在验收后由您关闭。</p>
+          </details>
+          <details>
+            <summary>需要你们到现场吗？</summary>
+            <p>不需要。全部通过授权的远程连接（屏幕共享 / SSH / ZeroTier）完成。您只需确保设备开机、联网，并在开始时配合授权一次。企业版可另行约定驻场。</p>
+          </details>
+          <details>
+            <summary>效果能和 GPT / Claude 一样吗？</summary>
+            <p>坦诚地说，本地开源模型在复杂推理上与顶级闭源模型仍有差距，但在日常问答、文档处理、代码辅助、批量数据处理等场景已足够实用，且没有调用费用和数据外泄风险。很多客户采用“敏感任务走本地、复杂任务走云端”的混合方式。</p>
+          </details>
+          <details>
+            <summary>可以混用 Mac、Windows 和 Linux 吗？</summary>
+            <p>可以。集群版和企业版支持跨平台混合组网，例如 Mac Studio 跑大模型、Windows 显卡主机跑中模型、Linux 服务器负责高并发，统一由网关按模型名称路由。</p>
+          </details>
+          <details>
+            <summary>交付后模型更新、出问题怎么办？</summary>
+            <p>支持期内免费远程排障。支持期结束后，可订阅“持续运维托管”按月获得模型升级、巡检与性能复测，也可按次付费咨询。交付说明书中包含日常运维与恢复步骤，您的团队也可自行维护。</p>
+          </details>
+          <details>
+            <summary>如何付款？能开 Invoice 吗？</summary>
+            <p>通过 Stripe 在线付款，支持 Visa、Mastercard、Amex、银联 UnionPay、Apple Pay、Google Pay，支持澳元、美元、欧元、新西兰元、加元、新加坡元计价，付款后自动生成正式收据与 Invoice。如需对公转账或合同，请邮件联系。</p>
+          </details>
+          <details>
+            <summary>硬件不合适能退款吗？</summary>
+            <p>可以。付款后我们会先做硬件确认，若评估结论是您的设备无法达到可用效果，在开始部署前全额退款。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <h2>把 AI 算力装进您自己的机房</h2>
+          <p>发送您的设备型号与使用场景，24 小时内给出免费部署评估。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#pricing">选择方案</a>
+            <a class="btn btn-ghost" href="mailto:support@zaokit.ai?subject=Zaokit%20Local%20%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E5%92%A8%E8%AF%A2">邮件咨询：support@zaokit.ai</a>
+          </div>
+          <div class="contact-tg">
+            <a class="tg-qr" href="https://t.me/letcode2020" target="_blank" rel="noopener" aria-label="打开 Telegram @letcode2020">
+              <img src="telegram-qr.jpg" width="158" height="210" alt="Telegram 二维码 @letcode2020" loading="lazy">
+            </a>
+            <div class="tg-text">
+              <h3>Telegram 直接聊</h3>
+              <p>扫码或点击添加，硬件评估、售前咨询与技术支持都在这里。</p>
+              <a class="tg-link" href="https://t.me/letcode2020" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1.1-1 .2-1.5L20.5 2.7c.9-.3 1.7.2 1.4 1.6z"/></svg>
+                @letcode2020
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div class="foot-brand">
+        <strong>Zaokit Local · 私有化算力部署</strong>
+        <span>Mac / Windows / Linux 大模型部署与调优</span>
+        <span>联系：<a href="mailto:support@zaokit.ai">support@zaokit.ai</a></span>
+        <span>© <span id="year"></span> Zaokit AI · <a href="https://junxinzhang.com/projects.html" target="_blank" rel="noopener">Just Jason</a></span>
+      </div>
+      <div class="foot-right">
+        <div class="foot-col">
+          <h4>Zaokit 产品矩阵</h4>
+          <ul>
+            <li><a href="https://zaokit.app" target="_blank" rel="noopener">Zaokit</a></li>
+            <li><a href="https://claudeops.zaokit.ai/" target="_blank" rel="noopener">Claude 代运营</a></li>
+            <li><a href="https://cc.zaokit.app" target="_blank" rel="noopener">Zaokit CC</a></li>
+            <li><a href="https://cx.zaokit.app" target="_blank" rel="noopener">Zaokit CX</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      // 定价基准：三台 Mac 集群交付实收 ¥8,500 ≈ US$1,199 / A$1,799（2026-10 汇率），其余币种参考当地消费水平取整
+      // p: [单机版, 集群版, 企业版]，care: 运维托管月费
+      var PRICES = {
+        AUD: { sym: 'A$',  name: '澳元',     p: [749, 1799, 4499], care: 229 },
+        USD: { sym: '$',   name: '美元',     p: [499, 1199, 2999], care: 149 },
+        EUR: { sym: '€',   name: '欧元',     p: [459, 1099, 2749], care: 139 },
+        NZD: { sym: 'NZ$', name: '新西兰元', p: [849, 1999, 4999], care: 259 },
+        CAD: { sym: 'C$',  name: '加元',     p: [689, 1649, 4099], care: 209 },
+        SGD: { sym: 'S$',  name: '新加坡元', p: [649, 1599, 3999], care: 199 }
+      };
+      var DEVICES = [1, 3, 8];
+
+      var STRIPE_LINKS = {
+        'solo_USD': 'https://buy.stripe.com/eVq28t0HL5IOd9Y8ZU9Zm0A',
+        'solo_AUD': 'https://buy.stripe.com/4gMcN72PTdbgee2cc69Zm0B',
+        'solo_EUR': 'https://buy.stripe.com/aFaeVf0HL7QWfi62Bw9Zm0C',
+        'solo_SGD': 'https://buy.stripe.com/eVqaEZ7698V01rg3FA9Zm0D',
+        'solo_CAD': 'https://buy.stripe.com/bJe28t625gns9XMcc69Zm0E',
+        'solo_NZD': 'https://buy.stripe.com/7sY14p1LP3AG4Dsfoi9Zm0F',
+        'cluster_USD': 'https://buy.stripe.com/eVqbJ33TX7QW8TI7VQ9Zm0G',
+        'cluster_AUD': 'https://buy.stripe.com/8x2cN71LP7QWc5U1xs9Zm0H',
+        'cluster_EUR': 'https://buy.stripe.com/00w14pcqt5IO7PE3FA9Zm0I',
+        'cluster_SGD': 'https://buy.stripe.com/9B66oJ2PT8V01rg5NI9Zm0J',
+        'cluster_CAD': 'https://buy.stripe.com/6oUbJ3bmpc7cfi63FA9Zm0K',
+        'cluster_NZD': 'https://buy.stripe.com/14AfZj769fjo0nc2Bw9Zm0L',
+        'enterprise_USD': 'https://buy.stripe.com/9B628t1LPefk4Dsfoi9Zm0M',
+        'enterprise_AUD': 'https://buy.stripe.com/8x2fZj8ad8V00ncb829Zm0N',
+        'enterprise_EUR': 'https://buy.stripe.com/8x2dRbgGJ1sy6LAdga9Zm0O',
+        'enterprise_SGD': 'https://buy.stripe.com/dRmdRb6251sy2vk6RM9Zm0P',
+        'enterprise_CAD': 'https://buy.stripe.com/28EbJ3eyB9Z46LA8ZU9Zm0Q',
+        'enterprise_NZD': 'https://buy.stripe.com/dRm5kF1LP2wC8TI2Bw9Zm0R',
+        'care_USD': 'https://buy.stripe.com/aFacN72PT6MSfi6gsm9Zm0S',
+        'care_AUD': 'https://buy.stripe.com/9B67sNbmp0ou3zo4JE9Zm0T',
+        'care_EUR': 'https://buy.stripe.com/eVq5kF7699Z48TIdga9Zm0U',
+        'care_SGD': 'https://buy.stripe.com/bJe6oJbmpefk9XMb829Zm0V',
+        'care_CAD': 'https://buy.stripe.com/5kQ00l6254EK6LAcc69Zm0W',
+        'care_NZD': 'https://buy.stripe.com/6oU28teyB9Z48TIeke9Zm0X'
+      };
+
+      function fmt(n) { return n.toLocaleString('en-US'); }
+
+      function setCurrency(code) {
+        var cur = PRICES[code] ? code : 'AUD';
+        var c = PRICES[cur];
+        document.querySelectorAll('[data-plan-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-plan-idx');
+          el.querySelector('sup').textContent = c.sym;
+          el.querySelector('.amount').textContent = fmt(c.p[i]);
+        });
+        document.querySelectorAll('[data-note-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-note-idx');
+          el.textContent = i === 0
+            ? '含 1 台设备部署与调优'
+            : '含 ' + DEVICES[i] + ' 台设备 · 约 ' + c.sym + fmt(Math.round(c.p[i] / DEVICES[i])) + ' / 台';
+        });
+        var addon = document.querySelector('[data-addon-price]');
+        if (addon) {
+          addon.querySelector('.sym').textContent = c.sym;
+          addon.querySelector('.amount').textContent = fmt(c.care);
+        }
+        document.querySelectorAll('[data-stripe-tier]').forEach(function (btn) {
+          var tier = btn.getAttribute('data-stripe-tier');
+          var link = STRIPE_LINKS[tier + '_' + cur] || STRIPE_LINKS[tier + '_AUD'];
+          if (link) btn.setAttribute('href', link);
+        });
+        document.getElementById('currency-name').textContent = c.name;
+        document.querySelectorAll('[data-currency]').forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-currency') === cur ? 'true' : 'false');
+        });
+        try { localStorage.setItem('zaokit-local-currency', cur); } catch (e) {}
+      }
+
+      document.querySelectorAll('[data-currency]').forEach(function (b) {
+        b.addEventListener('click', function () { setCurrency(b.getAttribute('data-currency')); });
+      });
+      (function initCurrency() {
+        var q = (new URLSearchParams(location.search).get('currency') || '').toUpperCase();
+        if (PRICES[q]) return setCurrency(q);
+        var saved = null;
+        try { saved = localStorage.getItem('zaokit-local-currency'); } catch (e) {}
+        if (saved && PRICES[saved]) return setCurrency(saved);
+        var lang = (navigator.language || '').toLowerCase();
+        if (/-nz$/.test(lang)) return setCurrency('NZD');
+        if (/-ca$/.test(lang)) return setCurrency('CAD');
+        if (/-us$/.test(lang)) return setCurrency('USD');
+        if (/-sg$/.test(lang)) return setCurrency('SGD');
+        if (/^(de|fr|es|it|nl|pt-pt|fi|el)/.test(lang) || /-(de|fr|es|it|nl|at|be|ie|fi|pt|gr)$/.test(lang)) return setCurrency('EUR');
+        setCurrency('AUD');
+      })();
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+
+  <script>
+  (function () {
+    function trackEvent(name, params) {
+      params = params || {};
+      try { if (typeof gtag === 'function') gtag('event', name, params); } catch (e) {}
+      try { if (window.umami && typeof umami.track === 'function') umami.track(name, params); } catch (e) {}
+    }
+    function currentCurrency() {
+      var b = document.querySelector('[data-currency][aria-pressed="true"]');
+      return b ? b.getAttribute('data-currency') : 'USD';
+    }
+    document.addEventListener('click', function (e) {
+      var cur = e.target.closest('[data-currency]');
+      if (cur) { trackEvent('currency_switch', { currency: cur.getAttribute('data-currency') }); return; }
+      var a = e.target.closest('a');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (a.hasAttribute('data-stripe-tier')) {
+        var params = { plan: a.getAttribute('data-stripe-tier'), currency: currentCurrency(), via: href.indexOf('mailto:') === 0 ? 'email' : 'stripe', location: 'pricing' };
+        trackEvent('begin_checkout', params);
+        return;
+      }
+      if (href.indexOf('https://t.me/') === 0) { trackEvent('telegram_click', { location: a.classList.contains('tg-qr') ? 'qr' : 'button' }); return; }
+      if (href.indexOf('mailto:') === 0) {
+        var loc = a.closest('.plan') ? 'pricing' : (a.closest('.hero') ? 'hero' : (a.closest('.cta') ? 'cta' : 'other'));
+        trackEvent('consult_click', { currency: currentCurrency(), location: loc });
+        trackEvent('generate_lead', { location: loc });
+      }
+    }, true);
+  })();
+  </script>
+  <script>
+  (function () {
+    var EMAIL = 'support@zaokit.ai';
+    var toastEl = document.getElementById('toast'), timer;
+    function toast(msg) {
+      toastEl.textContent = msg; toastEl.classList.add('show');
+      clearTimeout(timer); timer = setTimeout(function () { toastEl.classList.remove('show'); }, 3200);
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="mailto:"]');
+      if (!a) return;
+      var msg = '邮箱已复制：' + EMAIL + '，正在打开邮件客户端…';
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(EMAIL).then(function () { toast(msg); }, function () { toast('请发送邮件至：' + EMAIL); });
+      } else { toast('请发送邮件至：' + EMAIL); }
+    });
+  })();
+  </script>
+</body>
+
+</html>
