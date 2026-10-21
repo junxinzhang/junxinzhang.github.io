@@ -5,7 +5,7 @@ date: 2026-10-21
 author: Jason Zhang
 categories: [AI, 独立开发]
 image: assets/images/cover-20261021-openai-prompt-caching-12h.webp
-tags: [featured, AI, Agent, OpenAI, 提示缓存, Prompt Caching, 一人公司, 独立开发, 成本计算, 思考]
+tags: [featured, AI, Agent, OpenAI, 提示缓存, Prompt Caching, 一人公司, 独立开发, 成本计算, 存储, 思考]
 slug: openai-12h-cache-agent-billing
 description: >
   OpenAI 在 API 中上线 12 小时提示缓存。接续此前讨论的 Codex 500k 账本，拆解长效缓存的写入溢价、双层切片策略与调用频次平衡点。算清一人公司的 Agent 成本，把冷启动开销压到最低。
@@ -223,6 +223,18 @@ OpenAI 把 API 缓存拉长到 12 小时，以阶梯计价盘活云端显存周�
 开动 Agent 之前，数一数系统提示词长度，查一查后台任务频次，把静态指令和随路会话切成两截。
 
 算清平衡点，前缀对齐，再按下回车。
+
+---
+
+### 随口聊两句存储标的
+
+跳出代码，站在底层物理设施看：
+
+不管是 500k 上下文，还是 12 小时的 KV Cache 常驻，本质上都在吞噬高带宽显存（HBM）与海量 DRAM 颗粒。模型越往 Agent 演进，计算越离不开存储承载。
+
+我自己建了小仓位，拿着美光（MU）、闪迪概念（SNDK）和 SK海力士。作为一个天天在 AI 赛道泡着的人，我长期看好存储这条链条。
+
+日常记录，不构成投资建议。
 
 ---
 
