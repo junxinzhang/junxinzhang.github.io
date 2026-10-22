@@ -30,7 +30,7 @@ zh-hans: &projects_page_zh_hans
   items:
     claude-ops:
       title: "Claude 代运营"
-      description: "提供确定性的稳定环境，助力您的 AI 时代。独享账号、Mac 单租户物理隔离环境（美国、新加坡、澳大利亚、新西兰、加拿大机房）、续费与账号运维全托管，1x / 5x / 20x 三档按月订阅。"
+      description: "提供确定性的稳定环境，助力您的 AI 时代。独享账号、Mac 单租户物理隔离环境（美国、新加坡、日本、柬埔寨、澳大利亚、新西兰、加拿大机房）、续费与账号运维全托管，1x / 5x / 20x 三档按月订阅。"
       keywords:
         - "Claude 代运营"
         - "账号托管"
@@ -149,7 +149,7 @@ en: &projects_page_en
   items:
     claude-ops:
       title: "Claude Managed Service"
-      description: "A deterministic, stable Claude environment for the AI era: dedicated account, isolated single-tenant Mac runtime environment (servers in the US, Singapore, Australia, New Zealand and Canada), and fully managed billing and account operations. 1x / 5x / 20x monthly plans."
+      description: "A deterministic, stable Claude environment for the AI era: dedicated account, isolated single-tenant Mac runtime environment (servers in the US, Singapore, Japan, Cambodia, Australia, New Zealand and Canada), and fully managed billing and account operations. 1x / 5x / 20x monthly plans."
       keywords:
         - "Claude"
         - "Managed Service"
@@ -268,7 +268,7 @@ zh-hant:
   items:
     claude-ops:
       title: "Claude 代營運"
-      description: "提供確定性的穩定環境，助力您的 AI 時代。獨享帳號、Mac 單租戶物理隔離環境（美國、新加坡、澳洲、紐西蘭、加拿大機房）、續費與帳號運維全託管，1x / 5x / 20x 三檔按月訂閱。"
+      description: "提供確定性的穩定環境，助力您的 AI 時代。獨享帳號、Mac 單租戶物理隔離環境（美國、新加坡、日本、柬埔寨、澳洲、紐西蘭、加拿大機房）、續費與帳號運維全託管，1x / 5x / 20x 三檔按月訂閱。"
       keywords:
         - "Claude 代營運"
         - "帳號託管"

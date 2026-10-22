@@ -15,7 +15,7 @@
 - title: Claude 代运营
   repo: claude-ops
   demo_url: /projects/claude-ops/
-  description: 提供确定性的稳定环境，助力您的 AI 时代。独享账号、Mac 单租户物理隔离环境（美国 / 新加坡 / 澳大利亚 / 新西兰 / 加拿大机房）、续费与账号运维全托管，1x $99 / 5x $399 / 20x $999 按月订阅
+  description: 提供确定性的稳定环境，助力您的 AI 时代。独享账号、Mac 单租户物理隔离环境（美国 / 新加坡 / 日本 / 柬埔寨 / 澳大利亚 / 新西兰 / 加拿大机房）、续费与账号运维全托管，1x $99 / 5x $399 / 20x $999 按月订阅
   image: /projects/claude-ops/hero-card.svg
   category: Service
   no_source: true
