@@ -5,15 +5,16 @@ permalink: "/about.html"
 author: Jason Zhang
 comments: true
 name: "Jason Zhang"
-tagline: "技术与管理经验，AI 时代的一人公司实践者，上海寻绎信息科技创始人，Zaokit AI 产品负责人"
+tagline: "技术与管理经验，创业者，AI 时代的一人公司实践者，上海寻绎信息科技创始人，Zaokit AI 产品负责人"
 skills:
+  - "创业者"
   - "一人公司"
   - "Zaokit AI"
   - "AI Agent"
   - "AI Gateway"
   - "私有化算力"
   - "企业级 Agent"
-description: "张俊欣，上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人。探索 AI 时代的一人公司模式，主导 Zaokit AI PPT、Zaokit Cowork、Zaokit SSO、Zaokit OA、Zaokit MDM、Zaokit iPaaS 数据 ETL 平台，以及 AI Gateway、安全护栏、私有化算力与企业级 Agent 落地。"
+description: "张俊欣，创业者、企业级软件架构师，上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人。探索 AI 时代的一人公司模式，主导 Zaokit AI PPT、Zaokit Cowork、Zaokit SSO、Zaokit OA、Zaokit MDM、Zaokit iPaaS 数据 ETL 平台，以及 AI Gateway、安全护栏、私有化算力与企业级 Agent 落地。"
 faq:
   - question: "张俊欣是谁？"
     answer: "张俊欣是上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人及核心开发者。2023 年初投身 AI 创业，是国内较早一批生成式 AI 创业实践者，也是一人公司模式的践行者。"
