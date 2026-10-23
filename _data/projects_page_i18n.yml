@@ -30,7 +30,7 @@ zh-hans: &projects_page_zh_hans
   items:
     claude-ops:
       title: "Claude 代运营"
-      description: "面向高净值人群与核心决策者的 TOP 级 7×16 小时一对一专属服务。独享账号、高配置 Mac Studio 与高配置 Mac mini 单租户物理隔离环境（美国、新加坡、马来西亚、日本、柬埔寨、澳大利亚、新西兰、加拿大机房）、续费与账号运维全托管，1x / 5x / 20x 三档按月订阅，并提供 iCloud+ / Google Drive 2T–30T 云存储。"
+      description: "面向高净值人群与核心决策者的 TOP 级 7×16 小时一对一专属服务。独享账号、高配置 Mac Studio 与高配置 Mac mini 单租户物理隔离环境（澳大利亚、美国、新加坡、马来西亚、日本、柬埔寨、新西兰、加拿大机房）、续费与账号运维全托管，1x / 5x / 20x 三档按月订阅，并提供 iCloud+ / Google Drive 2T–30T 云存储。"
       keywords:
         - "Claude 代运营"
         - "账号托管"
@@ -149,7 +149,7 @@ en: &projects_page_en
   items:
     claude-ops:
       title: "Claude Managed Service"
-      description: "Top-tier 7×16h 1-on-1 concierge service for high-net-worth individuals & decision-makers: dedicated account, isolated single-tenant high-spec Mac Studio & Mac mini runtime environment (servers in the US, Singapore, Malaysia, Japan, Cambodia, Australia, New Zealand and Canada), fully managed billing & ops (1x / 5x / 20x monthly plans), plus iCloud+ & Google Drive 2TB–30TB storage."
+      description: "Top-tier 7×16h 1-on-1 concierge service for high-net-worth individuals & decision-makers: dedicated account, isolated single-tenant high-spec Mac Studio & Mac mini runtime environment (servers in Australia, the US, Singapore, Malaysia, Japan, Cambodia, New Zealand and Canada), fully managed billing & ops (1x / 5x / 20x monthly plans), plus iCloud+ & Google Drive 2TB–30TB storage."
       keywords:
         - "Claude"
         - "Managed Service"
@@ -268,7 +268,7 @@ zh-hant:
   items:
     claude-ops:
       title: "Claude 代營運"
-      description: "面向高淨值人群與核心決策者的 TOP 級 7×16 小時一對一專屬服務。獨享帳號、高配置 Mac Studio 與高配置 Mac mini 單租戶物理隔離環境（美國、新加坡、馬來西亞、日本、柬埔寨、澳洲、紐西蘭、加拿大機房）、續費與帳號運維全託管，1x / 5x / 20x 三檔按月訂閱，並提供 iCloud+ / Google Drive 2T–30T 雲端儲存。"
+      description: "面向高淨值人群與核心決策者的 TOP 級 7×16 小時一對一專屬服務。獨享帳號、高配置 Mac Studio 與高配置 Mac mini 單租戶物理隔離環境（澳洲、美國、新加坡、馬來西亞、日本、柬埔寨、紐西蘭、加拿大機房）、續費與帳號運維全託管，1x / 5x / 20x 三檔按月訂閱，並提供 iCloud+ / Google Drive 2T–30T 雲端儲存。"
       keywords:
         - "Claude 代營運"
         - "帳號託管"
