@@ -314,6 +314,10 @@
     .foot-right { display: flex; gap: 48px; flex-wrap: wrap; margin-left: auto; text-align: right }
     .foot-col h4 { margin: 0 0 10px; color: var(--cream); font-size: .85rem; font-weight: 600; letter-spacing: .04em }
     .foot-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
+    .foot-disclaimer {
+      margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border);
+      font-size: .75rem; color: var(--muted); opacity: .78; line-height: 1.6;
+    }
     footer a:hover { color: var(--primary-strong) }
 
     .toast {
@@ -722,7 +726,7 @@
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>2 TB</b><span>云存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">充足的储存空间，适合日常照片、视频与跨设备自动备份。</p>
-              <div class="price" data-storage-idx="0" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">13.99</span><small>/ 月</small></div>
+              <div class="price" data-storage-idx="0" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">13.99</span><small>/ 月</small></div>
               <p class="price-note">Google Drive / iCloud+ 任选 · 续费全托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>可选 Google Drive 或 iCloud+</li>
@@ -736,7 +740,7 @@
               <span class="badge">创作者首选</span>
               <div class="plan-tier"><b>6 TB</b><span>云存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">摄影师、内容创作者与高净值个人数字资产归档的理想方案。</p>
-              <div class="price" data-storage-idx="1" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">43.99</span><small>/ 月</small></div>
+              <div class="price" data-storage-idx="1" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">43.99</span><small>/ 月</small></div>
               <p class="price-note">Google Drive / iCloud+ 任选 · 续费全托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>可选 Google Drive 或 iCloud+</li>
@@ -749,7 +753,7 @@
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>12 TB</b><span>云存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">为重度专业用户与多设备全量备份准备的大容量方案。</p>
-              <div class="price" data-storage-idx="2" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">88.99</span><small>/ 月</small></div>
+              <div class="price" data-storage-idx="2" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">88.99</span><small>/ 月</small></div>
               <p class="price-note">Google Drive / iCloud+ 任选 · 续费全托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>可选 Google Drive 或 iCloud+</li>
@@ -762,7 +766,7 @@
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>30 TB</b><span>旗舰存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">面向工作室、RAW 影视母带与 AI 数据集的殿堂级云端仓库。</p>
-              <div class="price" data-storage-idx="3" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">224.99</span><small>/ 月</small></div>
+              <div class="price" data-storage-idx="3" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">224.99</span><small>/ 月</small></div>
               <p class="price-note">Google Drive / iCloud+ 任选 · 专人托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive 30TB 或双端组合</li>
@@ -889,7 +893,6 @@
         <span>Mac / Windows / Linux 大模型部署与调优</span>
         <span>联系：<a href="mailto:support@zaokit.ai">support@zaokit.ai</a></span>
         <span>© <span id="year"></span> Zaokit AI · <a href="https://junxinzhang.com/projects.html" target="_blank" rel="noopener">Just Jason</a></span>
-        <span style="display:block; margin-top:8px; font-size:.75rem; color:var(--muted); max-width:480px; line-height:1.5;">独立第三方声明：Zaokit 为独立的算力部署与 AI 工程技术顾问服务商，与 Anthropic PBC、Apple Inc. 或 Google LLC 无隶属或官方合作关系。页面所涉品牌与商标均归其各自所有者所有。</span>
       </div>
       <div class="foot-right">
         <div class="foot-col">
@@ -902,6 +905,9 @@
           </ul>
         </div>
       </div>
+    </div>
+    <div class="container foot-disclaimer">
+      独立第三方声明：Zaokit 为独立的算力部署与 AI 工程技术顾问服务商，与 Anthropic PBC、Apple Inc. 或 Google LLC 无隶属或官方合作关系。页面所涉品牌与商标均归其各自所有者所有。
     </div>
   </footer>
 

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Claude 代运营 - 以确定性的稳定环境，领航您的 AI 时代 | Just Jason</title>
   <meta name="description"
-    content="Zaokit ClaudeOps：面向高净值人群与核心决策者的 TOP 级 7×16 小时一对一专属服务。独立专属工作空间、高配置 Mac Studio 与高配置 Mac mini 物理隔离运行环境（机房分布澳大利亚、美国、新加坡、马来西亚、日本、柬埔寨、新西兰、加拿大）、账单续费与环境运维全托管，并支持 Google Drive 与 iCloud (2TB–30TB) 云存储托管。">
+    content="Zaokit ClaudeOps：面向高净值人群与核心决策者的 TOP 级 7×16 小时一对一专属服务。独立专属工作空间、高配置 Mac Studio 与高配置 Mac mini 物理隔离运行环境（澳大利亚、美国、新加坡、马来西亚、日本、柬埔寨、新西兰、加拿大 8 国本地原生宽带网络，非公共云共享机房）、账单续费与环境运维全托管，并支持 Google Drive 与 iCloud (2TB–30TB) 云存储托管。">
   <meta name="keywords" content="Claude 代运营, Claude 工作空间托管, Claude Code, Mac 云工作站, AI 工程顾问, 稳定开发环境">
   <meta name="author" content="Jason Zhang">
   <link rel="canonical" href="https://junxinzhang.com/projects/claude-ops/">
@@ -99,8 +99,8 @@
       width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
       background: var(--primary); color: #fff;
     }
-    .nav-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0 }
-    .nav-links a { padding: 8px 12px; border-radius: 10px; color: var(--muted); font-size: .92rem; transition: .2s }
+    .nav-links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; flex-wrap: nowrap }
+    .nav-links a { padding: 7px 10px; border-radius: 10px; color: var(--muted); font-size: .88rem; white-space: nowrap; transition: .2s }
     .nav-links a:hover { color: #fff; background: var(--surface-strong) }
     .nav-back { font-size: .88rem; color: var(--muted) }
     .nav-back:hover { color: var(--primary-strong) }
@@ -152,9 +152,10 @@
     @media (prefers-reduced-motion: reduce) { .section-head h2 .grad { animation: none } }
     .hero p.lead { color: var(--muted); font-size: clamp(1.02rem, 2vw, 1.2rem); max-width: 40em; margin: 0 auto 34px }
     .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
-    .hero-stats { display: flex; justify-content: center; gap: clamp(24px, 6vw, 72px); margin-top: 56px; flex-wrap: wrap }
-    .stat strong { display: block; font-size: 1.6rem; color: #fff; font-family: var(--serif) }
-    .stat span { color: var(--muted); font-size: .86rem }
+    .hero-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-top: 56px }
+    .stat { padding: 14px 10px; border-radius: 14px; background: rgba(255, 255, 255, .02); border: 1px solid rgba(255, 255, 255, .05) }
+    .stat strong { display: block; font-size: 1.38rem; color: #fff; font-family: var(--serif); white-space: nowrap; margin-bottom: 4px }
+    .stat span { display: block; color: var(--muted); font-size: .82rem; line-height: 1.45 }
 
     /* Sections */
     .section { padding: 84px 0 }
@@ -290,6 +291,10 @@
       background: var(--surface-strong); border: 1px solid var(--border); color: var(--muted); transition: .2s;
     }
     .social a:hover { color: #fff; background: var(--primary); border-color: var(--primary); transform: translateY(-2px) }
+    .foot-disclaimer {
+      margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border);
+      font-size: .75rem; color: var(--muted); opacity: .78; line-height: 1.6;
+    }
     @media (max-width: 560px) { .foot-right { margin-left: 0; text-align: left } .social { justify-content: flex-start } }
     footer a:hover { color: var(--primary-strong) }
 
@@ -303,11 +308,12 @@
     @media (max-width: 960px) {
       .grid-4 { grid-template-columns: repeat(2, 1fr) }
       .grid-3 { grid-template-columns: 1fr }
+      .hero-stats { grid-template-columns: repeat(2, 1fr) }
       .plan.featured { order: -1 }
       .nav-links { display: none }
     }
     @media (max-width: 560px) {
-      .grid-4 { grid-template-columns: 1fr }
+      .grid-4, .hero-stats { grid-template-columns: 1fr }
       .hero { padding: 64px 0 48px }
       .section { padding: 60px 0 }
     }
@@ -370,10 +376,10 @@
           <a class="btn btn-ghost" href="mailto:support@zaokit.ai?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2">邮件咨询</a>
         </div>
         <div class="hero-stats">
-          <div class="stat"><strong>专属空间</strong><span>一人一环境，物理级零交叉</span></div>
-          <div class="stat"><strong>Mac 实例</strong><span>高配置 Mac Studio / 高配置 Mac mini</span></div>
-          <div class="stat"><strong>7×16h 一对一</strong><span>高净值客户专属 TOP 级支持</span></div>
-          <div class="stat"><strong>8 国机房</strong><span>澳 · 美 · 新 · 马 · 日 · 柬 · 新西兰 · 加</span></div>
+          <div class="stat"><strong>专属空间</strong><span>一人一环境 · 物理零交叉</span></div>
+          <div class="stat"><strong>Mac 实例</strong><span>高配 Mac Studio / Mac mini</span></div>
+          <div class="stat"><strong>7×16h 一对一</strong><span>高净值客户 TOP 级支持</span></div>
+          <div class="stat"><strong>8 国原生网络</strong><span>澳·美·新·马·日·柬·新西兰·加</span></div>
           <div class="stat"><strong>澳洲公司</strong><span>澳大利亚注册企业运营</span></div>
         </div>
       </div>
@@ -429,7 +435,7 @@
           <div class="card">
             <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
             <h3>高配 Mac Studio / Mac mini</h3>
-            <p>专属高配置 Mac Studio 与高配置 Mac mini 物理实例，部署在澳大利亚、美国、新加坡、马来西亚、日本、柬埔寨、新西兰、加拿大，单租户隔离、长期稳定运行。</p>
+            <p>专属高配置 Mac Studio 与高配置 Mac mini 物理实例，部署于澳大利亚、美国、新加坡、马来西亚、日本、柬埔寨、新西兰、加拿大 8 国本地原生宽带网络环境（非公共云共享机房），单租户隔离、长期纯净稳定。</p>
           </div>
           <div class="card">
             <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
@@ -582,7 +588,7 @@
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>2 TB</b><span>云存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">充足的储存空间，适合日常照片、视频与跨设备自动备份。</p>
-              <div class="price" data-storage-idx="0" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">13.99</span><small>/ 月</small></div>
+              <div class="price" data-storage-idx="0" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">13.99</span><small>/ 月</small></div>
               <p class="price-note">Google Drive / iCloud+ 任选 · 续费全托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>可选 Google Drive 或 iCloud+</li>
@@ -596,7 +602,7 @@
               <span class="badge">创作者首选</span>
               <div class="plan-tier"><b>6 TB</b><span>云存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">摄影师、内容创作者与高净值个人数字资产归档的理想方案。</p>
-              <div class="price" data-storage-idx="1" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">43.99</span><small>/ 月</small></div>
+              <div class="price" data-storage-idx="1" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">43.99</span><small>/ 月</small></div>
               <p class="price-note">Google Drive / iCloud+ 任选 · 续费全托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>可选 Google Drive 或 iCloud+</li>
@@ -609,7 +615,7 @@
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>12 TB</b><span>云存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">为重度专业用户与多设备全量备份准备的大容量方案。</p>
-              <div class="price" data-storage-idx="2" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">88.99</span><small>/ 月</small></div>
+              <div class="price" data-storage-idx="2" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">88.99</span><small>/ 月</small></div>
               <p class="price-note">Google Drive / iCloud+ 任选 · 续费全托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>可选 Google Drive 或 iCloud+</li>
@@ -622,7 +628,7 @@
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>30 TB</b><span>旗舰存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">面向工作室、RAW 影视母带与AI 数据集的殿堂级云端仓库。</p>
-              <div class="price" data-storage-idx="3" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">224.99</span><small>/ 月</small></div>
+              <div class="price" data-storage-idx="3" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">224.99</span><small>/ 月</small></div>
               <p class="price-note">Google Drive / iCloud+ 任选 · 专人托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive 30TB 或双端组合</li>
@@ -655,7 +661,7 @@
           </div>
           <div class="card step">
             <h3>Stripe 订阅</h3>
-            <p>在 Stripe 安全结账页选择偏好机房国家，完成月度订阅付款。</p>
+            <p>在 Stripe 安全结账页选择偏好国家区域，完成月度订阅付款。</p>
           </div>
           <div class="card step">
             <h3>环境交付</h3>
@@ -704,8 +710,8 @@
             <p>每位客户均分配独立的专用高配置 Mac Studio 或高配置 Mac mini 物理级运行环境，采用单租户隔离架构，绝不使用多人混部的共享容器。您的会话历史、仓库源码与环境变量仅存储在您专属的实例中，物理上与其他用户零交叉；同时支持您自主设置访问密钥与本地加密策略，运维团队仅负责底层机器连通与账单托管，恪守零数据接触原则。</p>
           </details>
           <details>
-            <summary>运行环境的机器部署在哪里？</summary>
-            <p>我们的机器分布在澳大利亚、美国、新加坡、马来西亚、日本、柬埔寨、新西兰和加拿大八个国家。在 Stripe 结账页可直接选择您偏好的机房国家，开通时为您分配固定机器并长期使用，不随意切换。</p>
+            <summary>运行环境的机器与网络部署在哪里？</summary>
+            <p>我们的高配置 Mac Studio 与高配置 Mac mini 物理机分布在<strong>澳大利亚、美国、新加坡、马来西亚、日本、柬埔寨、新西兰和加拿大</strong>八个国家，全部接入<strong>当地原生宽带网络环境（非廉价公共云共享机房）</strong>，具备极佳的连通纯净度与长期稳定性。在 Stripe 结账页可直接选择您偏好的国家区域，开通时为您分配固定物理实例并长期独享使用，不随意切换。</p>
           </details>
           <details>
             <summary>Google Drive 和 iCloud 云存储托管是如何开通的？</summary>
@@ -762,7 +768,6 @@
         <span class="foot-entity">由澳大利亚注册公司运营 · 支持中文 / English</span>
         <span>联系：<a href="mailto:support@zaokit.ai">support@zaokit.ai</a></span>
         <span class="foot-copy">© <span id="year"></span> Zaokit AI · <a href="https://junxinzhang.com/about.html" target="_blank" rel="noopener">Just Jason</a></span>
-        <span style="display:block; margin-top:8px; font-size:.75rem; color:var(--muted); max-width:480px; line-height:1.5;">独立第三方声明：Zaokit 为独立的云工作站托管与 AI 工程技术顾问服务商，与 Anthropic PBC、Apple Inc. 或 Google LLC 无隶属、官方授权或合作关系。页面所涉 Claude、Claude Code、Mac、iCloud、Google Drive 等名称及商标均归其各自所有者所有，仅用于描述兼容环境与托管咨询范围。</span>
       </div>
       <div class="foot-right">
         <div class="foot-col">
@@ -785,6 +790,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="container foot-disclaimer">
+      独立第三方声明：Zaokit 为独立的云工作站托管与 AI 工程技术顾问服务商，与 Anthropic PBC、Apple Inc. 或 Google LLC 无隶属、官方授权或合作关系。页面所涉 Claude、Claude Code、Mac、iCloud、Google Drive 等名称及商标均归其各自所有者所有，仅用于描述兼容环境与托管咨询范围。
     </div>
   </footer>
 

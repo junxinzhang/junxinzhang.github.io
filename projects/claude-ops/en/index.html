@@ -87,8 +87,8 @@
       width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
       background: var(--primary); color: #fff;
     }
-    .nav-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0 }
-    .nav-links a { padding: 8px 12px; border-radius: 10px; color: var(--muted); font-size: .92rem; transition: .2s }
+    .nav-links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; flex-wrap: nowrap }
+    .nav-links a { padding: 7px 10px; border-radius: 10px; color: var(--muted); font-size: .88rem; white-space: nowrap; transition: .2s }
     .nav-links a:hover { color: #fff; background: var(--surface-strong) }
     .nav-back { font-size: .88rem; color: var(--muted) }
     .nav-back:hover { color: var(--primary-strong) }
@@ -140,9 +140,10 @@
     @media (prefers-reduced-motion: reduce) { .section-head h2 .grad { animation: none } }
     .hero p.lead { color: var(--muted); font-size: clamp(1.02rem, 2vw, 1.2rem); max-width: 40em; margin: 0 auto 34px }
     .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
-    .hero-stats { display: flex; justify-content: center; gap: clamp(24px, 6vw, 72px); margin-top: 56px; flex-wrap: wrap }
-    .stat strong { display: block; font-size: 1.6rem; color: #fff; font-family: var(--serif) }
-    .stat span { color: var(--muted); font-size: .86rem }
+    .hero-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-top: 56px }
+    .stat { padding: 14px 10px; border-radius: 14px; background: rgba(255, 255, 255, .02); border: 1px solid rgba(255, 255, 255, .05) }
+    .stat strong { display: block; font-size: 1.38rem; color: #fff; font-family: var(--serif); white-space: nowrap; margin-bottom: 4px }
+    .stat span { display: block; color: var(--muted); font-size: .82rem; line-height: 1.45 }
 
     /* Sections */
     .section { padding: 84px 0 }
@@ -278,6 +279,10 @@
       background: var(--surface-strong); border: 1px solid var(--border); color: var(--muted); transition: .2s;
     }
     .social a:hover { color: #fff; background: var(--primary); border-color: var(--primary); transform: translateY(-2px) }
+    .foot-disclaimer {
+      margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border);
+      font-size: .75rem; color: var(--muted); opacity: .78; line-height: 1.6;
+    }
     @media (max-width: 560px) { .foot-right { margin-left: 0; text-align: left } .social { justify-content: flex-start } }
     footer a:hover { color: var(--primary-strong) }
 
@@ -291,11 +296,12 @@
     @media (max-width: 960px) {
       .grid-4 { grid-template-columns: repeat(2, 1fr) }
       .grid-3 { grid-template-columns: 1fr }
+      .hero-stats { grid-template-columns: repeat(2, 1fr) }
       .plan.featured { order: -1 }
       .nav-links { display: none }
     }
     @media (max-width: 560px) {
-      .grid-4 { grid-template-columns: 1fr }
+      .grid-4, .hero-stats { grid-template-columns: 1fr }
       .hero { padding: 64px 0 48px }
       .section { padding: 60px 0 }
     }
@@ -306,7 +312,6 @@
     }
     .lang-switch:hover { color: #fff; border-color: var(--primary); background: var(--primary-soft) }
     .foot-entity { color: var(--cream) }
-    .hero-stats { gap: clamp(20px, 3.6vw, 44px) }
   </style>
 
   <!-- Google Analytics 4 -->
@@ -359,7 +364,7 @@
           <div class="stat"><strong>Dedicated</strong><span>Isolated workspace per client</span></div>
           <div class="stat"><strong>Mac Instance</strong><span>High-spec Mac Studio &amp; Mac mini</span></div>
           <div class="stat"><strong>7×16h 1-on-1</strong><span>Top-tier concierge support</span></div>
-          <div class="stat"><strong>8 regions</strong><span>AU · US · SG · MY · JP · KH · NZ · CA</span></div>
+          <div class="stat"><strong>8 Local Networks</strong><span>AU · US · SG · MY · JP · KH · NZ · CA</span></div>
           <div class="stat"><strong>AU company</strong><span>Australian registered business</span></div>
         </div>
       </div>
@@ -415,7 +420,7 @@
           <div class="card">
             <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
             <h3>High-spec Mac Studio &amp; mini</h3>
-            <p>Your own high-spec Mac Studio or high-spec Mac mini in Australia, the US, Singapore, Malaysia, Japan, Cambodia, New Zealand or Canada. Single-tenant and stable for the long run.</p>
+            <p>Your own high-spec Mac Studio or high-spec Mac mini on local native broadband networks in Australia, the US, Singapore, Malaysia, Japan, Cambodia, New Zealand or Canada (never cheap shared cloud data centers). Single-tenant and stable for the long run.</p>
           </div>
           <div class="card">
             <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
@@ -568,7 +573,7 @@
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>2 TB</b><span>Storage</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">Generous storage for everyday photos, videos and cross-device backups.</p>
-              <div class="price" data-storage-idx="0" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">13.99</span><small>/ mo</small></div>
+              <div class="price" data-storage-idx="0" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">13.99</span><small>/ mo</small></div>
               <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive or Apple iCloud+</li>
@@ -582,7 +587,7 @@
               <span class="badge">Creator pick</span>
               <div class="plan-tier"><b>6 TB</b><span>Storage</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">Ideal for photographers, creators and personal archive vaults.</p>
-              <div class="price" data-storage-idx="1" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">43.99</span><small>/ mo</small></div>
+              <div class="price" data-storage-idx="1" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">43.99</span><small>/ mo</small></div>
               <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive or Apple iCloud+</li>
@@ -595,7 +600,7 @@
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>12 TB</b><span>Storage</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">High-capacity vault for power users and multi-device backups.</p>
-              <div class="price" data-storage-idx="2" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">88.99</span><small>/ mo</small></div>
+              <div class="price" data-storage-idx="2" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">88.99</span><small>/ mo</small></div>
               <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive or Apple iCloud+</li>
@@ -608,7 +613,7 @@
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>30 TB</b><span>Flagship</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">Studio-grade cloud vault for RAW footage, AI datasets and long-term archives.</p>
-              <div class="price" data-storage-idx="3" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">224.99</span><small>/ mo</small></div>
+              <div class="price" data-storage-idx="3" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">224.99</span><small>/ mo</small></div>
               <p class="price-note">Google Drive or iCloud+ · Concierge ops</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive 30TB or dual-cloud combo</li>
@@ -686,8 +691,8 @@
             <p>Every customer gets a dedicated physical high-spec Mac Studio or high-spec Mac mini on a single-tenant model, with no shared containers. Your session history, source code and environment variables stay on your own instance. You set your own access passwords and encryption, and our team only handles connectivity and billing.</p>
           </details>
           <details>
-            <summary>Where are the machines located?</summary>
-            <p>Our machines are in Australia, the United States, Singapore, Malaysia, Japan, Cambodia, New Zealand and Canada. Pick your preferred region at checkout, and we assign you a fixed machine for the long term.</p>
+            <summary>Where are the machines and networks located?</summary>
+            <p>Our physical high-spec Mac Studio and Mac mini machines are located in <strong>Australia, the United States, Singapore, Malaysia, Japan, Cambodia, New Zealand and Canada</strong>, connected via <strong>local native ISP broadband networks (not shared public cloud data centers)</strong> for maximum reliability. Pick your preferred region at checkout, and we assign you a fixed machine for the long term.</p>
           </details>
           <details>
             <summary>How does Google Drive &amp; iCloud+ cloud storage work?</summary>
@@ -744,7 +749,6 @@
         <span class="foot-entity">Operated by an Australian registered company · English / 中文</span>
         <span>Contact: <a href="mailto:support@zaokit.ai">support@zaokit.ai</a></span>
         <span class="foot-copy">© <span id="year"></span> Zaokit AI. All rights reserved.</span>
-        <span style="display:block; margin-top:8px; font-size:.75rem; color:var(--muted); max-width:480px; line-height:1.5;">Disclaimer: Zaokit is an independent cloud workstation and AI engineering consultancy and is not affiliated with, endorsed by, or sponsored by Anthropic PBC, Apple Inc., or Google LLC. Claude, Claude Code, Mac, iCloud, and Google Drive are trademarks of their respective owners.</span>
       </div>
       <div class="foot-right">
         <div class="foot-col">
@@ -767,6 +771,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="container foot-disclaimer">
+      Disclaimer: Zaokit is an independent cloud workstation and AI engineering consultancy and is not affiliated with, endorsed by, or sponsored by Anthropic PBC, Apple Inc., or Google LLC. Claude, Claude Code, Mac, iCloud, and Google Drive are trademarks of their respective owners.
     </div>
   </footer>
 
