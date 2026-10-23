@@ -576,14 +576,14 @@
           <div class="section-head" style="margin-bottom: 32px;">
             <p class="section-tag">Cloud Storage · Google Drive &amp; iCloud+</p>
             <h2>高净值数字资产 · 云存储托管方案</h2>
-            <p>支持 <strong>Google Drive (Google One)</strong> 与 <strong>Apple iCloud+</strong>，全档位比 iCloud 官方价格直降 $1 / 月。独享空间、家庭共享或专属账号绑定、续费全托管，享同等 7×16 小时一对一服务。</p>
+            <p>支持 <strong>Google Drive (Google One)</strong> 与 <strong>Apple iCloud+</strong>，提供 2 TB 至 30 TB 全档位订阅。独享空间、家庭共享或专属账号绑定、续费全托管，享同等 7×16 小时一对一专属服务。</p>
           </div>
           <div class="grid grid-4 pricing">
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>2 TB</b><span>云存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">充足的储存空间，适合日常照片、视频与跨设备自动备份。</p>
               <div class="price" data-storage-idx="0" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">13.99</span><small>/ 月</small></div>
-              <p class="price-note" data-storage-note="0">官方 $9.99 · 立省 $1 / 月</p>
+              <p class="price-note">Google Drive / iCloud+ 任选 · 续费全托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>可选 Google Drive 或 iCloud+</li>
                 <li>最多支持 5 位家庭成员共享</li>
@@ -597,7 +597,7 @@
               <div class="plan-tier"><b>6 TB</b><span>云存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">摄影师、内容创作者与高净值个人数字资产归档的理想方案。</p>
               <div class="price" data-storage-idx="1" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">43.99</span><small>/ 月</small></div>
-              <p class="price-note" data-storage-note="1">官方 $29.99 · 立省 $1 / 月</p>
+              <p class="price-note">Google Drive / iCloud+ 任选 · 续费全托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>可选 Google Drive 或 iCloud+</li>
                 <li>海量原画照片与 4K 素材同步</li>
@@ -610,7 +610,7 @@
               <div class="plan-tier"><b>12 TB</b><span>云存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">为重度专业用户与多设备全量备份准备的大容量方案。</p>
               <div class="price" data-storage-idx="2" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">88.99</span><small>/ 月</small></div>
-              <p class="price-note" data-storage-note="2">官方 $59.99 · 立省 $1 / 月</p>
+              <p class="price-note">Google Drive / iCloud+ 任选 · 续费全托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>可选 Google Drive 或 iCloud+</li>
                 <li>大型工程文件与多终端镜像</li>
@@ -623,7 +623,7 @@
               <div class="plan-tier"><b>30 TB</b><span>旗舰存储</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">面向工作室、RAW 影视母带与AI 数据集的殿堂级云端仓库。</p>
               <div class="price" data-storage-idx="3" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">224.99</span><small>/ 月</small></div>
-              <p class="price-note" data-storage-note="3">官方 $149.99 · 立省 $1 / 月</p>
+              <p class="price-note">Google Drive / iCloud+ 任选 · 专人托管</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive 30TB 或双端组合</li>
                 <li>跨国团队高速协同与长久归档</li>
@@ -709,7 +709,7 @@
           </details>
           <details>
             <summary>Google Drive 和 iCloud 云存储托管是如何开通的？</summary>
-            <p>提供 2 TB（$8.99/月）、6 TB（$28.99/月）、12 TB（$58.99/月）和 30 TB（$148.99/月）四档容量，每档均比官方价格优惠 $1/月。在 Stripe 结账页可直接选择 <strong>Apple iCloud+</strong> 或 <strong>Google Drive (Google One)</strong> 并备注您的账号，由专人 7×16 小时一对一协助完成家庭共享邀请或独享账号开通，到期自动续费无需操心。</p>
+            <p>提供 2 TB（$8.99/月）、6 TB（$28.99/月）、12 TB（$58.99/月）和 30 TB（$148.99/月）四档容量。在 Stripe 结账页可直接选择 <strong>Apple iCloud+</strong> 或 <strong>Google Drive (Google One)</strong> 并备注您的账号，由专人 7×16 小时一对一协助完成家庭共享邀请或独享账号开通，到期自动续费无需操心。</p>
           </details>
           <details>
             <summary>可以中途升级或降级吗？</summary>
@@ -859,10 +859,6 @@
           var i = +el.getAttribute('data-storage-idx');
           el.querySelector('sup').textContent = c.sym;
           el.querySelector('.amount').textContent = c.s[i].toFixed(2);
-        });
-        document.querySelectorAll('[data-storage-note]').forEach(function (el) {
-          var i = +el.getAttribute('data-storage-note');
-          el.textContent = '对比 ' + c.sym + c.so[i].toFixed(2) + ' · 每月立省 ' + c.sym + '1';
         });
         document.querySelectorAll('[data-note-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-note-idx');

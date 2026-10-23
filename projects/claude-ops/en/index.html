@@ -562,14 +562,14 @@
           <div class="section-head" style="margin-bottom: 32px;">
             <p class="section-tag">Cloud Storage · Google Drive &amp; iCloud+</p>
             <h2>Managed Cloud Storage for Digital Assets</h2>
-            <p>Choose <strong>Google Drive (Google One)</strong> or <strong>Apple iCloud+</strong>, priced $1/month below official iCloud rates across every tier. Managed renewals and the same 7×16h 1-on-1 concierge support.</p>
+            <p>Choose <strong>Google Drive (Google One)</strong> or <strong>Apple iCloud+</strong> across 2 TB to 30 TB tiers, with managed renewals and the same 7×16h 1-on-1 concierge support.</p>
           </div>
           <div class="grid grid-4 pricing">
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>2 TB</b><span>Storage</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">Generous storage for everyday photos, videos and cross-device backups.</p>
               <div class="price" data-storage-idx="0" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">13.99</span><small>/ mo</small></div>
-              <p class="price-note" data-storage-note="0">vs A$14.99 · Save A$1 / mo</p>
+              <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive or Apple iCloud+</li>
                 <li>Share with up to 5 family members</li>
@@ -583,7 +583,7 @@
               <div class="plan-tier"><b>6 TB</b><span>Storage</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">Ideal for photographers, creators and personal archive vaults.</p>
               <div class="price" data-storage-idx="1" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">43.99</span><small>/ mo</small></div>
-              <p class="price-note" data-storage-note="1">vs A$44.99 · Save A$1 / mo</p>
+              <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive or Apple iCloud+</li>
                 <li>Full-res photos and 4K media sync</li>
@@ -596,7 +596,7 @@
               <div class="plan-tier"><b>12 TB</b><span>Storage</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">High-capacity vault for power users and multi-device backups.</p>
               <div class="price" data-storage-idx="2" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">88.99</span><small>/ mo</small></div>
-              <p class="price-note" data-storage-note="2">vs A$89.99 · Save A$1 / mo</p>
+              <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive or Apple iCloud+</li>
                 <li>Large project archives &amp; device mirrors</li>
@@ -609,7 +609,7 @@
               <div class="plan-tier"><b>30 TB</b><span>Flagship</span></div>
               <p class="plan-desc" style="min-height: 2.6em;">Studio-grade cloud vault for RAW footage, AI datasets and long-term archives.</p>
               <div class="price" data-storage-idx="3" style="font-size: 2.2rem;"><sup>A$</sup><span class="amount">224.99</span><small>/ mo</small></div>
-              <p class="price-note" data-storage-note="3">vs A$225.99 · Save A$1 / mo</p>
+              <p class="price-note">Google Drive or iCloud+ · Concierge ops</p>
               <ul class="features" style="font-size: .88rem;">
                 <li>Google Drive 30TB or dual-cloud combo</li>
                 <li>High-speed global team collaboration</li>
@@ -691,7 +691,7 @@
           </details>
           <details>
             <summary>How does Google Drive &amp; iCloud+ cloud storage work?</summary>
-            <p>We offer 2 TB ($8.99/mo), 6 TB ($28.99/mo), 12 TB ($58.99/mo) and 30 TB ($148.99/mo) plans—each priced $1/month below official iCloud rates. At Stripe checkout, choose <strong>Apple iCloud+</strong> or <strong>Google Drive (Google One)</strong> and note your account email; our 7×16h 1-on-1 concierge team handles activation and ongoing renewals.</p>
+            <p>We offer 2 TB ($8.99/mo), 6 TB ($28.99/mo), 12 TB ($58.99/mo) and 30 TB ($148.99/mo) plans. At Stripe checkout, choose <strong>Apple iCloud+</strong> or <strong>Google Drive (Google One)</strong> and note your account email; our 7×16h 1-on-1 concierge team handles activation and ongoing renewals.</p>
           </details>
           <details>
             <summary>Can I upgrade or downgrade?</summary>
@@ -839,10 +839,6 @@
           var i = +el.getAttribute('data-storage-idx');
           el.querySelector('sup').textContent = c.sym;
           el.querySelector('.amount').textContent = c.s[i].toFixed(2);
-        });
-        document.querySelectorAll('[data-storage-note]').forEach(function (el) {
-          var i = +el.getAttribute('data-storage-note');
-          el.textContent = 'vs ' + c.sym + c.so[i].toFixed(2) + ' · Save ' + c.sym + '1 / mo';
         });
         document.querySelectorAll('[data-note-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-note-idx');
