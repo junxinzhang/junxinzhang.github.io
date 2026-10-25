@@ -33,10 +33,10 @@
     "offers": [
       { "@type": "Offer", "name": "1x Standard", "price": "149", "priceCurrency": "AUD" },
       { "@type": "Offer", "name": "5x Pro", "price": "579", "priceCurrency": "AUD" },
-      { "@type": "Offer", "name": "20x Ultimate", "price": "1499", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "20x Ultimate", "price": "1049", "priceCurrency": "AUD", "priceValidUntil": "2026-12-31" },
       { "@type": "Offer", "name": "1x Standard", "price": "99", "priceCurrency": "USD" },
       { "@type": "Offer", "name": "5x Pro", "price": "399", "priceCurrency": "USD" },
-      { "@type": "Offer", "name": "20x Ultimate", "price": "999", "priceCurrency": "USD" }
+      { "@type": "Offer", "name": "20x Ultimate", "price": "699", "priceCurrency": "USD", "priceValidUntil": "2026-12-31" }
     ]
   }
   </script>
@@ -181,6 +181,14 @@
       position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
       background: var(--primary); color: #fff; font-size: .78rem; font-weight: 700;
       padding: 4px 14px; border-radius: 999px; white-space: nowrap;
+    }
+    .badge-promo {
+      background: #231c18; color: var(--primary-strong);
+      border: 1px solid rgba(217, 119, 87, .5);
+    }
+    .price-orig {
+      font-size: 1.05rem; font-weight: 500; color: var(--muted); opacity: .75;
+      margin-left: 8px; text-decoration: line-through;
     }
     .plan-tier { display: flex; align-items: baseline; gap: 10px }
     .plan-tier b { font-family: var(--serif); font-size: 2.2rem; color: var(--primary-strong); line-height: 1 }
@@ -545,10 +553,11 @@
           </article>
 
           <article class="card plan">
+            <span class="badge badge-promo">Year-End Promo · Until Dec 31, 2026</span>
             <div class="plan-tier"><b>20x</b><span>Ultimate</span></div>
             <p class="plan-desc">For high-net-worth clients, founders and power teams running multiple agents around the clock.</p>
-            <div class="price" data-plan-idx="2"><sup>A$</sup><span class="amount">1,499</span><small>/ month</small></div>
-            <p class="price-note" data-note-idx="2">Includes Claude environment · 20x usage, unit cost about 50% of 1x</p>
+            <div class="price" data-plan-idx="2"><sup>A$</sup><span class="amount">1,049</span><small>/ month</small><del class="price-orig" data-orig-20x>A$1,499</del></div>
+            <p class="price-note" data-note-idx="2">Promo until Dec 31, 2026 · 20x usage, unit cost about 35% of 1x</p>
             <ul class="features">
               <li>20x the Standard usage allowance</li>
               <li>Dedicated workspace configuration</li>
@@ -558,7 +567,7 @@
               <li><strong>Top-tier 7×24h</strong> private concierge channel</li>
               <li style="color: var(--primary-strong); font-weight: 600;">Complimentary Google Drive 6 TB storage included</li>
             </ul>
-            <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/7sYcN78ad4EKb1Q7VQ9Zm0w" target="_blank" rel="noopener">Subscribe</a>
+            <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/6oU00lail6MSgma6RM9Zm1n" target="_blank" rel="noopener">Subscribe</a>
             <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Zaokit%20ClaudeOps%20enquiry%20-%2020x%20Ultimate">Questions? Email us →</a>
           </article>
         </div>
@@ -786,12 +795,12 @@
   <script>
     (function () {
       var PRICES = {
-        AUD: { sym: 'A$', name: 'AUD', p: [149, 579, 1499], s: [13.99, 43.99, 88.99, 224.99], so: [14.99, 44.99, 89.99, 225.99] },
-        USD: { sym: '$', name: 'USD', p: [99, 399, 999], s: [8.99, 28.99, 58.99, 148.99], so: [9.99, 29.99, 59.99, 149.99] },
-        EUR: { sym: '€', name: 'EUR', p: [89, 349, 899], s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
-        NZD: { sym: 'NZ$', name: 'NZD', p: [179, 699, 1799], s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
-        CAD: { sym: 'C$', name: 'CAD', p: [139, 549, 1399], s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
-        SGD: { sym: 'S$', name: 'SGD', p: [129, 499, 1299], s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
+        AUD: { sym: 'A$', name: 'AUD', p: [149, 579, 1049], orig20x: 1499, s: [13.99, 43.99, 88.99, 224.99], so: [14.99, 44.99, 89.99, 225.99] },
+        USD: { sym: '$', name: 'USD', p: [99, 399, 699], orig20x: 999, s: [8.99, 28.99, 58.99, 148.99], so: [9.99, 29.99, 59.99, 149.99] },
+        EUR: { sym: '€', name: 'EUR', p: [89, 349, 629], orig20x: 899, s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
+        NZD: { sym: 'NZ$', name: 'NZD', p: [179, 699, 1199], orig20x: 1799, s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
+        CAD: { sym: 'C$', name: 'CAD', p: [139, 549, 969], orig20x: 1399, s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
+        SGD: { sym: 'S$', name: 'SGD', p: [129, 499, 899], orig20x: 1299, s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
       };
       var STRIPE_LINKS = {
         '1x_USD': 'https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i',
@@ -806,12 +815,12 @@
         '5x_NZD': 'https://buy.stripe.com/14A3cxgGJfjo2vk3FA9Zm0r',
         '5x_CAD': 'https://buy.stripe.com/dRmeVf0HL4EK1rg3FA9Zm0s',
         '5x_SGD': 'https://buy.stripe.com/9B6dRbbmpefk9XM3FA9Zm0t',
-        '20x_USD': 'https://buy.stripe.com/4gM00lcqt2wC4Ds3FA9Zm0u',
-        '20x_EUR': 'https://buy.stripe.com/28EcN7ail4EK8TI8ZU9Zm0v',
-        '20x_AUD': 'https://buy.stripe.com/7sYcN78ad4EKb1Q7VQ9Zm0w',
-        '20x_NZD': 'https://buy.stripe.com/28EfZj4Y1gnsee25NI9Zm0x',
-        '20x_CAD': 'https://buy.stripe.com/8x25kFduxdbg9XM1xs9Zm0y',
-        '20x_SGD': 'https://buy.stripe.com/9B63cx2PT3AG5Hweke9Zm0z',
+        '20x_USD': 'https://buy.stripe.com/7sYcN71LP1sy6LAeke9Zm1m',
+        '20x_EUR': 'https://buy.stripe.com/4gM8wR9eh2wCfi6cc69Zm1o',
+        '20x_AUD': 'https://buy.stripe.com/6oU00lail6MSgma6RM9Zm1n',
+        '20x_NZD': 'https://buy.stripe.com/dRm14pbmpdbg6LAfoi9Zm1r',
+        '20x_CAD': 'https://buy.stripe.com/8x26oJbmpgns1rg4JE9Zm1q',
+        '20x_SGD': 'https://buy.stripe.com/28EbJ38ad1sy0nc2Bw9Zm1p',
         '2t_USD': 'https://buy.stripe.com/4gM28tduxfjo9XMdga9Zm0Y',
         '2t_AUD': 'https://buy.stripe.com/eVq3cx4Y1c7c4Ds2Bw9Zm0Z',
         '2t_EUR': 'https://buy.stripe.com/eVq3cxcqtdbg1rg0to9Zm10',
@@ -847,6 +856,8 @@
           el.querySelector('sup').textContent = c.sym;
           el.querySelector('.amount').textContent = fmt(c.p[i]);
         });
+        var origEl = document.querySelector('[data-orig-20x]');
+        if (origEl && c.orig20x) origEl.textContent = c.sym + fmt(c.orig20x);
         document.querySelectorAll('[data-storage-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-storage-idx');
           el.querySelector('sup').textContent = c.sym;
@@ -857,6 +868,9 @@
           if (i === 0) {
             var day = c.p[0] / 30;
             el.textContent = 'Includes Claude environment · about ' + c.sym + (day >= 10 ? Math.round(day) : +day.toFixed(1)) + ' / day';
+          } else if (i === 2) {
+            var ratio2 = Math.round(c.p[2] / (c.p[0] * MULT[2]) * 100);
+            el.textContent = 'Promo until Dec 31, 2026 · 20x usage, unit cost about ' + ratio2 + '% of 1x';
           } else {
             var ratio = Math.round(c.p[i] / (c.p[0] * MULT[i]) * 100);
             el.textContent = 'Includes Claude environment · ' + MULT[i] + 'x usage, unit cost about ' + ratio + '% of 1x';

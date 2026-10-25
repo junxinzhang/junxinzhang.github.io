@@ -15,14 +15,14 @@
 - title: Claude 代运营
   repo: claude-ops
   demo_url: /projects/claude-ops/
-  description: 面向高净值人群与核心决策者的 TOP 级 7×16 小时一对一专属服务。独立专属工作空间、高配置 Mac Studio 与高配置 Mac mini 单租户物理隔离环境（澳大利亚 / 美国 / 新加坡 / 马来西亚 / 日本 / 柬埔寨 / 新西兰 / 加拿大 8 国本地原生宽带网络）、账单续费与环境运维全托管，1x $99 / 5x $399 / 20x $999 按月订阅，并提供 iCloud+ / Google Drive 2T–30T 云存储订阅
+  description: 面向高净值人群与核心决策者的 TOP 级一对一专属服务。独立专属工作空间、高配置 Mac Studio 与高配置 Mac mini 单租户物理隔离环境（澳大利亚 / 美国 / 新加坡 / 马来西亚 / 日本 / 柬埔寨 / 新西兰 / 加拿大 8 国本地原生宽带网络）、账单续费与环境运维全托管，1x $99 / 5x $399 / 20x $699（限时特惠，赠 6TB 云存储）按月订阅，并提供 iCloud+ / Google Drive 2T–30T 云存储订阅
   image: /projects/claude-ops/hero-card.svg
   category: Service
   no_source: true
   tech_stack:
     - 1x $99/月
     - 5x $399/月
-    - 20x $999/月
+    - 20x $699/月
   keywords:
     - Claude 代运营
     - AI 工作站托管

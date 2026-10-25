@@ -33,22 +33,22 @@
     "offers": [
       { "@type": "Offer", "name": "1x 标准版", "price": "99", "priceCurrency": "USD" },
       { "@type": "Offer", "name": "5x 专业版", "price": "399", "priceCurrency": "USD" },
-      { "@type": "Offer", "name": "20x 旗舰版", "price": "999", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "699", "priceCurrency": "USD", "priceValidUntil": "2026-12-31" },
       { "@type": "Offer", "name": "1x 标准版", "price": "89", "priceCurrency": "EUR" },
       { "@type": "Offer", "name": "5x 专业版", "price": "349", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "20x 旗舰版", "price": "899", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "629", "priceCurrency": "EUR", "priceValidUntil": "2026-12-31" },
       { "@type": "Offer", "name": "1x 标准版", "price": "149", "priceCurrency": "AUD" },
       { "@type": "Offer", "name": "5x 专业版", "price": "579", "priceCurrency": "AUD" },
-      { "@type": "Offer", "name": "20x 旗舰版", "price": "1499", "priceCurrency": "AUD" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "1049", "priceCurrency": "AUD", "priceValidUntil": "2026-12-31" },
       { "@type": "Offer", "name": "1x 标准版", "price": "179", "priceCurrency": "NZD" },
       { "@type": "Offer", "name": "5x 专业版", "price": "699", "priceCurrency": "NZD" },
-      { "@type": "Offer", "name": "20x 旗舰版", "price": "1799", "priceCurrency": "NZD" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "1199", "priceCurrency": "NZD", "priceValidUntil": "2026-12-31" },
       { "@type": "Offer", "name": "1x 标准版", "price": "139", "priceCurrency": "CAD" },
       { "@type": "Offer", "name": "5x 专业版", "price": "549", "priceCurrency": "CAD" },
-      { "@type": "Offer", "name": "20x 旗舰版", "price": "1399", "priceCurrency": "CAD" },
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "969", "priceCurrency": "CAD", "priceValidUntil": "2026-12-31" },
       { "@type": "Offer", "name": "1x 标准版", "price": "129", "priceCurrency": "SGD" },
       { "@type": "Offer", "name": "5x 专业版", "price": "499", "priceCurrency": "SGD" },
-      { "@type": "Offer", "name": "20x 旗舰版", "price": "1299", "priceCurrency": "SGD" }
+      { "@type": "Offer", "name": "20x 旗舰版", "price": "899", "priceCurrency": "SGD", "priceValidUntil": "2026-12-31" }
     ]
   }
   </script>
@@ -193,6 +193,14 @@
       position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
       background: var(--primary); color: #fff; font-size: .78rem; font-weight: 700;
       padding: 4px 14px; border-radius: 999px; white-space: nowrap;
+    }
+    .badge-promo {
+      background: #231c18; color: var(--primary-strong);
+      border: 1px solid rgba(217, 119, 87, .5);
+    }
+    .price-orig {
+      font-size: 1.05rem; font-weight: 500; color: var(--muted); opacity: .75;
+      margin-left: 8px; text-decoration: line-through;
     }
     .plan-tier { display: flex; align-items: baseline; gap: 10px }
     .plan-tier b { font-family: var(--serif); font-size: 2.2rem; color: var(--primary-strong); line-height: 1 }
@@ -560,10 +568,11 @@
           </article>
 
           <article class="card plan">
+            <span class="badge badge-promo">限时特惠 · 截至 2026.12.31</span>
             <div class="plan-tier"><b>20x</b><span>旗舰版</span></div>
             <p class="plan-desc">适合高净值客户、创始人及多 Agent 全天候高强度使用的核心团队。</p>
-            <div class="price" data-plan-idx="2"><sup>A$</sup><span class="amount">1,499</span><small>/ 月</small></div>
-            <p class="price-note" data-note-idx="2">含 Claude 运行环境 · 20 倍额度，单位成本约为 1x 的 50%</p>
+            <div class="price" data-plan-idx="2"><sup>A$</sup><span class="amount">1,049</span><small>/ 月</small><del class="price-orig" data-orig-20x>A$1,499</del></div>
+            <p class="price-note" data-note-idx="2">2026.12.31 前订阅特惠 · 20 倍额度，单位成本约为 1x 的 35%</p>
             <ul class="features">
               <li>20 倍于标准版的用量额度</li>
               <li>独立专属工作空间配置</li>
@@ -573,7 +582,7 @@
               <li><strong>TOP 级 7×24 小时</strong>私人顾问一对一通道</li>
               <li style="color: var(--primary-strong); font-weight: 600;">赠送 Google Drive 6 TB 云存储权益</li>
             </ul>
-            <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/7sYcN78ad4EKb1Q7VQ9Zm0w" target="_blank" rel="noopener">立即订阅</a>
+            <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/6oU00lail6MSgma6RM9Zm1n" target="_blank" rel="noopener">立即订阅</a>
             <a class="plan-consult" href="mailto:support@zaokit.ai?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%2020x%20%E6%97%97%E8%88%B0%E7%89%88">有疑问？发送邮件咨询 →</a>
           </article>
         </div>
@@ -806,12 +815,12 @@
     (function () {
       // 多币种价格：参考当地消费水平定价（2026-10 汇率），均不低于基准价折算
       var PRICES = {
-        AUD: { sym: 'A$', name: '澳元', p: [149, 579, 1499], s: [13.99, 43.99, 88.99, 224.99], so: [14.99, 44.99, 89.99, 225.99] },
-        USD: { sym: '$', name: '美元', p: [99, 399, 999], s: [8.99, 28.99, 58.99, 148.99], so: [9.99, 29.99, 59.99, 149.99] },
-        EUR: { sym: '€', name: '欧元', p: [89, 349, 899], s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
-        NZD: { sym: 'NZ$', name: '新西兰元', p: [179, 699, 1799], s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
-        CAD: { sym: 'C$', name: '加元', p: [139, 549, 1399], s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
-        SGD: { sym: 'S$', name: '新加坡元', p: [129, 499, 1299], s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
+        AUD: { sym: 'A$', name: '澳元', p: [149, 579, 1049], orig20x: 1499, s: [13.99, 43.99, 88.99, 224.99], so: [14.99, 44.99, 89.99, 225.99] },
+        USD: { sym: '$', name: '美元', p: [99, 399, 699], orig20x: 999, s: [8.99, 28.99, 58.99, 148.99], so: [9.99, 29.99, 59.99, 149.99] },
+        EUR: { sym: '€', name: '欧元', p: [89, 349, 629], orig20x: 899, s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
+        NZD: { sym: 'NZ$', name: '新西兰元', p: [179, 699, 1199], orig20x: 1799, s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
+        CAD: { sym: 'C$', name: '加元', p: [139, 549, 969], orig20x: 1399, s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
+        SGD: { sym: 'S$', name: '新加坡元', p: [129, 499, 899], orig20x: 1299, s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
       };
       var STRIPE_LINKS = {
         '1x_USD': 'https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i',
@@ -826,12 +835,12 @@
         '5x_NZD': 'https://buy.stripe.com/14A3cxgGJfjo2vk3FA9Zm0r',
         '5x_CAD': 'https://buy.stripe.com/dRmeVf0HL4EK1rg3FA9Zm0s',
         '5x_SGD': 'https://buy.stripe.com/9B6dRbbmpefk9XM3FA9Zm0t',
-        '20x_USD': 'https://buy.stripe.com/4gM00lcqt2wC4Ds3FA9Zm0u',
-        '20x_EUR': 'https://buy.stripe.com/28EcN7ail4EK8TI8ZU9Zm0v',
-        '20x_AUD': 'https://buy.stripe.com/7sYcN78ad4EKb1Q7VQ9Zm0w',
-        '20x_NZD': 'https://buy.stripe.com/28EfZj4Y1gnsee25NI9Zm0x',
-        '20x_CAD': 'https://buy.stripe.com/8x25kFduxdbg9XM1xs9Zm0y',
-        '20x_SGD': 'https://buy.stripe.com/9B63cx2PT3AG5Hweke9Zm0z',
+        '20x_USD': 'https://buy.stripe.com/7sYcN71LP1sy6LAeke9Zm1m',
+        '20x_EUR': 'https://buy.stripe.com/4gM8wR9eh2wCfi6cc69Zm1o',
+        '20x_AUD': 'https://buy.stripe.com/6oU00lail6MSgma6RM9Zm1n',
+        '20x_NZD': 'https://buy.stripe.com/dRm14pbmpdbg6LAfoi9Zm1r',
+        '20x_CAD': 'https://buy.stripe.com/8x26oJbmpgns1rg4JE9Zm1q',
+        '20x_SGD': 'https://buy.stripe.com/28EbJ38ad1sy0nc2Bw9Zm1p',
         '2t_USD': 'https://buy.stripe.com/4gM28tduxfjo9XMdga9Zm0Y',
         '2t_AUD': 'https://buy.stripe.com/eVq3cx4Y1c7c4Ds2Bw9Zm0Z',
         '2t_EUR': 'https://buy.stripe.com/eVq3cxcqtdbg1rg0to9Zm10',
@@ -868,6 +877,8 @@
           el.querySelector('sup').textContent = c.sym;
           el.querySelector('.amount').textContent = fmt(c.p[i]);
         });
+        var origEl = document.querySelector('[data-orig-20x]');
+        if (origEl && c.orig20x) origEl.textContent = c.sym + fmt(c.orig20x);
         document.querySelectorAll('[data-storage-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-storage-idx');
           el.querySelector('sup').textContent = c.sym;
@@ -878,6 +889,9 @@
           if (i === 0) {
             var day = c.p[0] / 30;
             el.textContent = '含 Claude 运行环境 · 约 ' + c.sym + (day >= 10 ? Math.round(day) : +day.toFixed(1)) + ' / 天';
+          } else if (i === 2) {
+            var ratio2 = Math.round(c.p[2] / (c.p[0] * MULT[2]) * 100);
+            el.textContent = '2026.12.31 前订阅特惠 · 20 倍额度，单位成本约为 1x 的 ' + ratio2 + '%';
           } else {
             var ratio = Math.round(c.p[i] / (c.p[0] * MULT[i]) * 100);
             el.textContent = '含 Claude 运行环境 · ' + MULT[i] + ' 倍额度，单位成本约为 1x 的 ' + ratio + '%';
