@@ -779,7 +779,7 @@
       <div class="foot-brand">
         <strong>Claude 代运营 · Zaokit ClaudeOps</strong>
         <span class="foot-entity">由澳大利亚注册公司运营 · 支持中文 / English</span>
-        <span>联系：<a href="mailto:jason2023zhang@gmail.com">jason2023zhang@gmail.com</a></span>
+        <span>联系：<a href="mailto:jason2023zhang@gmail.com">jason2023zhang@gmail.com</a>（备用：<a href="mailto:support@zaokit.ai">support@zaokit.ai</a>）</span>
         <span class="foot-copy">© <span id="year"></span> Zaokit AI · <a href="https://junxinzhang.com/about.html" target="_blank" rel="noopener">Just Jason</a></span>
       </div>
       <div class="foot-right">
@@ -997,17 +997,21 @@
       var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
       document.body.removeChild(ta); return ok;
     }
-    function copyEmail() {
-      var done = function () { toast('邮箱已复制：' + EMAIL + '，正在打开邮件客户端…'); };
-      var fail = function () { toast(fallbackCopy(EMAIL) ? '邮箱已复制：' + EMAIL + '，正在打开邮件客户端…' : '请发送邮件至：' + EMAIL); };
+    function copyEmail(addr) {
+      var target = addr || EMAIL;
+      var done = function () { toast('邮箱已复制：' + target + '，正在打开邮件客户端…'); };
+      var fail = function () { toast(fallbackCopy(target) ? '邮箱已复制：' + target + '，正在打开邮件客户端…' : '请发送邮件至：' + target); };
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(EMAIL).then(done, fail);
+        navigator.clipboard.writeText(target).then(done, fail);
       } else { fail(); }
     }
     // 复制邮箱后不拦截默认行为，mailto 照常唤起邮件客户端
     document.addEventListener('click', function (e) {
       var a = e.target.closest('a[href^="mailto:"]');
-      if (a) copyEmail();
+      if (a) {
+        var m = (a.getAttribute('href') || '').replace(/^mailto:/i, '').split('?')[0];
+        copyEmail(m);
+      }
     });
   })();
   </script>

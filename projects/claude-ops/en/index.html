@@ -760,7 +760,7 @@
       <div class="foot-brand">
         <strong>Zaokit ClaudeOps</strong>
         <span class="foot-entity">Operated by an Australian registered company · English / 中文</span>
-        <span>Contact: <a href="mailto:jason2023zhang@gmail.com">jason2023zhang@gmail.com</a></span>
+        <span>Contact: <a href="mailto:jason2023zhang@gmail.com">jason2023zhang@gmail.com</a> (Alt: <a href="mailto:support@zaokit.ai">support@zaokit.ai</a>)</span>
         <span class="foot-copy">© <span id="year"></span> Zaokit AI. All rights reserved.</span>
       </div>
       <div class="foot-right">
@@ -976,16 +976,21 @@
       var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
       document.body.removeChild(ta); return ok;
     }
-    function copyEmail() {
-      var okMsg = 'Email copied: ' + EMAIL + '. Opening your mail app…';
+    function copyEmail(addr) {
+      var target = addr || EMAIL;
+      var okMsg = 'Email copied: ' + target + '. Opening your mail app…';
       var done = function () { toast(okMsg); };
-      var fail = function () { toast(fallbackCopy(EMAIL) ? okMsg : 'Please email us at ' + EMAIL); };
+      var fail = function () { toast(fallbackCopy(target) ? okMsg : 'Please email us at ' + target); };
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(EMAIL).then(done, fail);
+        navigator.clipboard.writeText(target).then(done, fail);
       } else { fail(); }
     }
     document.addEventListener('click', function (e) {
-      if (e.target.closest('a[href^="mailto:"]')) copyEmail();
+      var a = e.target.closest('a[href^="mailto:"]');
+      if (a) {
+        var m = (a.getAttribute('href') || '').replace(/^mailto:/i, '').split('?')[0];
+        copyEmail(m);
+      }
     });
   })();
   </script>
