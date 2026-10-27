@@ -860,13 +860,16 @@ layout: default
     return '';
   }
 
-  function navOffset() {
+  function scrollOffset(el) {
     var nav = document.getElementById('MagicMenu');
-    return ((nav && nav.getBoundingClientRect().height) || 72) + 16;
+    var navHeight = (nav && nav.offsetHeight) || 60;
+    var nextScroll = el.getBoundingClientRect().top + window.pageYOffset - 16;
+    if (nav && nextScroll < window.pageYOffset - 2) return navHeight + 12;
+    return 16;
   }
 
   function scrollToHeading(el, behavior, mark) {
-    var top = el.getBoundingClientRect().top + window.pageYOffset - navOffset();
+    var top = el.getBoundingClientRect().top + window.pageYOffset - scrollOffset(el);
     var reduce = false;
     try {
       reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
