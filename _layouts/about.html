@@ -77,6 +77,16 @@ layout: default
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #03a87c;
   display: inline-block;
+  scroll-margin-top: 6rem;
+}
+
+.about-section h2.section-target {
+  animation: about-anchor-flash 1.6s ease;
+}
+
+@keyframes about-anchor-flash {
+  0% { background-color: rgba(3, 168, 124, 0.2); }
+  100% { background-color: transparent; }
 }
 
 .about-section h3 {
@@ -580,6 +590,15 @@ layout: default
   border-bottom-color: #58a6ff;
 }
 
+[data-theme="dark"] .about-section h2.section-target {
+  animation-name: about-anchor-flash-dark;
+}
+
+@keyframes about-anchor-flash-dark {
+  0% { background-color: rgba(88, 166, 255, 0.28); }
+  100% { background-color: transparent; }
+}
+
 [data-theme="dark"] .about-section h3 {
   color: var(--text-color, #e6edf3);
 }
@@ -784,6 +803,135 @@ layout: default
 <div class="about-content">
   {{ content }}
 </div>
+
+<script>
+(function () {
+  var PARAMS = ['section', 'anchor'];
+  var pendingHash = '';
+
+  function norm(value) {
+    return String(value || '')
+      .trim()
+      .toLowerCase()
+      .replace(/[\s\u3000]+/g, '')
+      .replace(/[“”"'‘’()（）\[\]【】:：,，.。!！?？]/g, '');
+  }
+
+  function headingList() {
+    return Array.prototype.slice.call(document.querySelectorAll('.about-content h2'));
+  }
+
+  function findHeading(key) {
+    var wanted = norm(key);
+    if (!wanted) return null;
+    var list = headingList();
+    var exact = [];
+    var partial = [];
+    var i, el, id, text;
+    for (i = 0; i < list.length; i++) {
+      el = list[i];
+      id = norm(el.id);
+      text = norm(el.textContent);
+      if (id === wanted || text === wanted) {
+        exact.push(el);
+        continue;
+      }
+      if (wanted.length >= 2 && (id.indexOf(wanted) !== -1 || text.indexOf(wanted) !== -1)) {
+        partial.push(el);
+      }
+    }
+    if (exact.length) return exact[0];
+    if (partial.length === 1) return partial[0];
+    return null;
+  }
+
+  function readParam() {
+    var params;
+    try {
+      params = new URLSearchParams(window.location.search);
+    } catch (e) {
+      return '';
+    }
+    var i, value;
+    for (i = 0; i < PARAMS.length; i++) {
+      value = params.get(PARAMS[i]);
+      if (value) return value;
+    }
+    return '';
+  }
+
+  function navOffset() {
+    var nav = document.getElementById('MagicMenu');
+    return ((nav && nav.getBoundingClientRect().height) || 72) + 16;
+  }
+
+  function scrollToHeading(el, behavior, mark) {
+    var top = el.getBoundingClientRect().top + window.pageYOffset - navOffset();
+    var reduce = false;
+    try {
+      reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) {}
+    window.scrollTo({
+      top: Math.max(0, top),
+      behavior: reduce ? 'auto' : (behavior || 'auto')
+    });
+    if (mark) {
+      el.classList.remove('section-target');
+      void el.offsetWidth;
+      el.classList.add('section-target');
+    }
+  }
+
+  var rawHash = '';
+  if (window.location.hash.length > 1) {
+    try {
+      rawHash = decodeURIComponent(window.location.hash.slice(1));
+    } catch (e) {
+      rawHash = window.location.hash.slice(1);
+    }
+  }
+  if (rawHash && findHeading(rawHash)) {
+    pendingHash = window.location.hash;
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+
+  function currentTarget() {
+    var fromParam = findHeading(readParam());
+    if (fromParam) return fromParam;
+    var hash = pendingHash;
+    if (!hash && window.location.hash.length > 1) hash = window.location.hash;
+    if (!hash) return null;
+    try {
+      return findHeading(decodeURIComponent(hash.slice(1)));
+    } catch (e) {
+      return findHeading(hash.slice(1));
+    }
+  }
+
+  function reveal(behavior, restoreHash, mark) {
+    var el = currentTarget();
+    if (!el) return;
+    scrollToHeading(el, behavior, mark);
+    if (restoreHash && pendingHash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search + pendingHash);
+    }
+  }
+
+  function whenReady(fn) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+    else fn();
+  }
+
+  whenReady(function () { reveal('auto', false, false); });
+  window.addEventListener('load', function () {
+    setTimeout(function () { reveal('auto', true, true); }, 60);
+  });
+  window.addEventListener('hashchange', function () {
+    pendingHash = '';
+    reveal('smooth', false, true);
+  });
+})();
+</script>
 
 <!-- Comments -->
 {% if page.comments == true %}
