@@ -29,7 +29,7 @@ faq:
 ---
 
 <div class="about-section">
-<h2>AI 时代的“一人公司”创业实践</h2>
+<h2 id="one-person-company">AI 时代的“一人公司”创业实践</h2>
 <div class="about-bio">
 <p>张俊欣，上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人及核心开发者。2023 年初投身 AI 创业，同年 7 月创立上海寻绎信息科技有限公司，是国内较早一批生成式 AI 创业实践者，也是“一人公司”模式的践行者。</p>
 <p>“寻绎”二字，寓意“寻找线索，发现价值”。公司创立之初便确立了一个朴素的理念：从客户真实需求中寻找线索，以技术和产品将线索转化为价值，为客户创造价值，实现合作共赢。这也成为寻绎信息科技一直坚持的核心企业文化。</p>
@@ -63,7 +63,7 @@ faq:
 </div>
 
 <div class="about-section">
-<h2>产品与方向</h2>
+<h2 id="products">产品与方向</h2>
 <div class="expertise-grid">
 <div class="expertise-card">
 <h4><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.757.757 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/></svg></span> Zaokit AI PPT</h4>
@@ -133,7 +133,7 @@ faq:
 </div>
 
 <div class="about-section">
-<h2>专业背景</h2>
+<h2 id="background">专业背景</h2>
 <div class="credentials-grid">
 <div class="credential-item">
 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5H5V1H1.5zM10 15V1H6v14h4zm1 0h3.5a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5H11v14z"/></svg></div>
@@ -154,7 +154,7 @@ faq:
 </div>
 
 <div class="about-section">
-<h2>核心专业领域</h2>
+<h2 id="expertise">核心专业领域</h2>
 <div class="expertise-grid">
 <div class="expertise-card">
 <h4><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"/><path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z"/></svg></span> AI & 大模型应用</h4>
@@ -188,7 +188,7 @@ faq:
 </div>
 
 <div class="about-section">
-<h2>项目经验亮点</h2>
+<h2 id="projects">项目经验亮点</h2>
 <table class="project-table">
 <thead>
 <tr>
@@ -268,7 +268,7 @@ faq:
 </div>
 
 <div class="about-section">
-<h2>技术栈</h2>
+<h2 id="stack">技术栈</h2>
 <p style="color: #6c757d; margin-bottom: 1.25rem;">覆盖从前后端全栈开发到云原生部署的完整技术体系：</p>
 <div class="blog-topics">
 <div class="blog-topic">
@@ -290,7 +290,7 @@ faq:
 </div>
 
 <div class="about-section">
-<h2>关于这个博客</h2>
+<h2 id="blog">关于这个博客</h2>
 <p style="color: #6c757d; margin-bottom: 1.25rem;">这里记录我在技术实践和职业成长过程中的深度思考：</p>
 <div class="blog-topics">
 <div class="blog-topic">
@@ -312,7 +312,7 @@ faq:
 </div>
 
 <div class="about-section">
-<h2>联系方式</h2>
+<h2 id="contact">联系方式</h2>
 <div class="coop-banner">
 <h4><span class="coop-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/></svg></span> 欢迎您与我们洽谈合作</h4>
 <p>无论是 <strong>Zaokit SSO</strong>（统一身份认证）、<strong>Zaokit OA</strong>（智能协同办公）、<strong>Zaokit MDM</strong>（主数据管理）、<strong>Zaokit iPaaS 数据 ETL 平台</strong> 等企业级数字化底座建设，还是 <strong>Zaokit AI PPT / Zaokit Cowork</strong>、<strong>AI Gateway、安全护栏、私有化大模型算力部署与企业级 Agent 定制</strong>，我们都期待与您深入交流，从真实业务场景出发共创价值。欢迎通过下方邮箱（<a href="mailto:jason2023zhang@gmail.com">jason2023zhang@gmail.com</a>）或微信公众号联系我们洽谈合作！</p>
@@ -346,7 +346,7 @@ faq:
 </div>
 
 <div class="about-section">
-<h2>常见问题 (FAQ)</h2>
+<h2 id="faq">常见问题 (FAQ)</h2>
 <div class="faq-item">
 <div class="faq-question">张俊欣是谁？</div>
 <div class="faq-answer">张俊欣是上海寻绎信息科技有限公司创始人兼 CEO、Zaokit AI 产品负责人及核心开发者。2023 年初投身 AI 创业，同年 7 月创立寻绎，是国内较早一批生成式 AI 创业实践者，也是“一人公司”模式的践行者。</div>
