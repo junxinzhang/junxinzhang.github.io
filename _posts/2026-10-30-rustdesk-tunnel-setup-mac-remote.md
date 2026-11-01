@@ -91,8 +91,8 @@ cat /opt/rustdesk-server/data/id_ed25519.pub
 
 ```toml
 [options]
-custom-rendezvous-server = '47.103.x.x'
-key = '0E9Haq4cDf+dxFq2D2eJkc8mkQdEhGy0LfpSwvda02s='
+custom-rendezvous-server = '198.51.100.x'
+key = 'YOUR_ED25519_PUBLIC_KEY_BASE64='
 direct-server = 'Y'
 enable-hwcodec = 'Y'
 enable-abr = 'N'
@@ -142,7 +142,7 @@ Mac 如果常驻 TUN 模式的代理工具，自建服务器的流量会被抓�
 
 ```bash
 GW=$(route -n get default -ifscope en0 | awk "/gateway:/ {print \$2}")
-route -n add -host 47.103.x.x "$GW"
+route -n add -host 198.51.100.x "$GW"
 ```
 
 同时把物理网卡的真实内网 IP 写进 RustDesk 配置，避免上报给中继服务器的是代理网卡的假 IP。
