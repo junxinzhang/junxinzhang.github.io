@@ -597,7 +597,15 @@
             <h2>高净值数字资产 · 云存储托管方案</h2>
             <p>支持 <strong>Google Drive (Google One)</strong> 与 <strong>Apple iCloud+</strong>，提供 2 TB 至 30 TB 全档位配置与账单托管。独立空间权限、跨设备自动同步备份、续费全托管，享同等 7×16 小时一对一专属服务。</p>
           </div>
-          <p id="storage-cny-note" class="pricing-foot" hidden style="margin: -12px 0 24px">云存储方案暂以澳元计价结算。</p>
+          <div class="currency-switch" role="group" aria-label="选择币种（云存储）" style="margin: 0 auto 32px">
+          <button type="button" data-currency="AUD" aria-pressed="true">A$ 澳元</button>
+          <button type="button" data-currency="USD" aria-pressed="false">$ 美元</button>
+          <button type="button" data-currency="EUR" aria-pressed="false">€ 欧元</button>
+          <button type="button" data-currency="NZD" aria-pressed="false">NZ$ 新西兰元</button>
+          <button type="button" data-currency="CAD" aria-pressed="false">C$ 加元</button>
+          <button type="button" data-currency="SGD" aria-pressed="false">S$ 新加坡元</button>
+          <button type="button" data-currency="CNY" aria-pressed="false">¥ 人民币</button>
+          </div>
           <div class="grid grid-4 pricing">
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>2 TB</b><span>云存储</span></div>
@@ -824,10 +832,14 @@
         EUR: { sym: '€', name: '欧元', p: [89, 349, 629], orig20x: 899, s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
         NZD: { sym: 'NZ$', name: '新西兰元', p: [179, 699, 1199], orig20x: 1799, s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
         CAD: { sym: 'C$', name: '加元', p: [139, 549, 969], orig20x: 1399, s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
-        CNY: { sym: '¥', name: '人民币', p: [719, 2899, 4999], orig20x: 7199 },
+        CNY: { sym: '¥', name: '人民币', p: [719, 2899, 4999], orig20x: 7199, s: [65, 209, 419, 1059] },
         SGD: { sym: 'S$', name: '新加坡元', p: [129, 499, 899], orig20x: 1299, s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
       };
       var STRIPE_LINKS = {
+        '2t_CNY': 'https://buy.stripe.com/3cI5kFgGJefk3zofoi9Zm1w',
+        '6t_CNY': 'https://buy.stripe.com/6oU8wR8ad0ougmafoi9Zm1x',
+        '12t_CNY': 'https://buy.stripe.com/8x228tail6MSee20to9Zm1y',
+        '30t_CNY': 'https://buy.stripe.com/fZu9AV0HLb383zoa3Y9Zm1z',
         '1x_CNY': 'https://buy.stripe.com/8x214peyB7QW7PEeke9Zm1s',
         '5x_CNY': 'https://buy.stripe.com/7sYdRbbmpb381rgb829Zm1t',
         // 20x 人民币特惠价 ¥4,999（至 2026-12-31）；原价 ¥7,199 链接：https://buy.stripe.com/6oU9AVbmpfjo7PE6RM9Zm1u
@@ -881,7 +893,6 @@
       function setCurrency(code) {
         var curCode = PRICES[code] ? code : 'AUD';
         var c = PRICES[curCode];
-        var sn = document.getElementById('storage-cny-note'); if (sn) sn.hidden = !!c.s;
         document.querySelectorAll('[data-plan-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-plan-idx');
           el.querySelector('sup').textContent = c.sym;
@@ -893,7 +904,8 @@
           var i = +el.getAttribute('data-storage-idx');
           var sc = c.s ? c : PRICES.AUD; // 云存储方案暂无人民币价格，按澳元显示与结算（链接同样回退到 _AUD）
           el.querySelector('sup').textContent = sc.sym;
-          el.querySelector('.amount').textContent = sc.s[i].toFixed(2);
+          var v = sc.s[i];
+          el.querySelector('.amount').textContent = v % 1 ? v.toFixed(2) : fmt(v);
         });
         document.querySelectorAll('[data-note-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-note-idx');
