@@ -515,6 +515,7 @@
           <button type="button" data-currency="NZD" aria-pressed="false">NZ$ NZD</button>
           <button type="button" data-currency="CAD" aria-pressed="false">C$ CAD</button>
           <button type="button" data-currency="SGD" aria-pressed="false">S$ SGD</button>
+          <button type="button" data-currency="CNY" aria-pressed="false">¥ CNY</button>
         </div>
         <div class="grid grid-3 pricing">
           <article class="card plan">
@@ -582,6 +583,7 @@
             <h2>Managed Cloud Storage for Digital Assets</h2>
             <p>Choose <strong>Google Drive (Google One)</strong> or <strong>Apple iCloud+</strong> across 2 TB to 30 TB tiers, with managed renewals and the same 7×16h 1-on-1 concierge support.</p>
           </div>
+          <p id="storage-cny-note" class="pricing-foot" hidden style="margin: -12px 0 24px">Cloud storage plans are priced and billed in AUD.</p>
           <div class="grid grid-4 pricing">
             <article class="card plan" style="padding: 26px 22px;">
               <div class="plan-tier"><b>2 TB</b><span>Storage</span></div>
@@ -724,7 +726,7 @@
           </details>
           <details>
             <summary>Which payment methods do you accept? Can I get an invoice?</summary>
-            <p>We accept online subscriptions via Stripe, including Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay and Link, billed in AUD, USD, EUR, NZD, CAD or SGD. Stripe issues an official receipt and invoice automatically. For multi-account business plans, email us.</p>
+            <p>We accept online subscriptions via Stripe, including Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay and Link, billed in AUD, USD, EUR, NZD, CAD, SGD or CNY. UnionPay cardholders can choose CNY for a smoother payment. Stripe issues an official receipt and invoice automatically. For multi-account business plans, email us.</p>
           </details>
         </div>
       </div>
@@ -803,9 +805,14 @@
         EUR: { sym: '€', name: 'EUR', p: [89, 349, 629], orig20x: 899, s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
         NZD: { sym: 'NZ$', name: 'NZD', p: [179, 699, 1199], orig20x: 1799, s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
         CAD: { sym: 'C$', name: 'CAD', p: [139, 549, 969], orig20x: 1399, s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
+        CNY: { sym: '¥', name: 'CNY', p: [719, 2899, 4999], orig20x: 7199 },
         SGD: { sym: 'S$', name: 'SGD', p: [129, 499, 899], orig20x: 1299, s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
       };
       var STRIPE_LINKS = {
+        '1x_CNY': 'https://buy.stripe.com/8x214peyB7QW7PEeke9Zm1s',
+        '5x_CNY': 'https://buy.stripe.com/7sYdRbbmpb381rgb829Zm1t',
+        // 20x 人民币特惠价 ¥4,999（至 2026-12-31）；原价 ¥7,199 链接：https://buy.stripe.com/6oU9AVbmpfjo7PE6RM9Zm1u
+        '20x_CNY': 'https://buy.stripe.com/fZubJ3eyB9Z41rg7VQ9Zm1v',
         '1x_USD': 'https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i',
         '1x_EUR': 'https://buy.stripe.com/fZu28t2PTdbg6LA4JE9Zm0j',
         '1x_AUD': 'https://buy.stripe.com/aFa28teyB0ou4Dsdga9Zm0k',
@@ -854,6 +861,7 @@
       function setCurrency(code) {
         var curCode = PRICES[code] ? code : 'AUD';
         var c = PRICES[curCode];
+        var sn = document.getElementById('storage-cny-note'); if (sn) sn.hidden = !!c.s;
         document.querySelectorAll('[data-plan-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-plan-idx');
           el.querySelector('sup').textContent = c.sym;
@@ -863,8 +871,9 @@
         if (origEl && c.orig20x) origEl.textContent = c.sym + fmt(c.orig20x);
         document.querySelectorAll('[data-storage-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-storage-idx');
-          el.querySelector('sup').textContent = c.sym;
-          el.querySelector('.amount').textContent = c.s[i].toFixed(2);
+          var sc = c.s ? c : PRICES.AUD; // 云存储方案暂无人民币价格，按澳元显示与结算（链接同样回退到 _AUD）
+          el.querySelector('sup').textContent = sc.sym;
+          el.querySelector('.amount').textContent = sc.s[i].toFixed(2);
         });
         document.querySelectorAll('[data-note-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-note-idx');
