@@ -296,6 +296,8 @@
       margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border);
       font-size: .75rem; color: var(--muted); opacity: .78; line-height: 1.6;
     }
+    .foot-legal { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 8px; font-size: .82rem }
+    .foot-legal a { color: var(--text) }
     @media (max-width: 560px) { .foot-right { margin-left: 0; text-align: left } .social { justify-content: flex-start } }
     footer a:hover { color: var(--primary-strong) }
 
@@ -647,7 +649,7 @@
           <div class="card">
             <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
             <h3>You control access and encryption</h3>
-            <p>Set your own access passwords and encryption policies. Our team only monitors connectivity and manages billing, and never inspects or copies your code.</p>
+            <p>Set your own access passwords and encryption policies. Our team handles connectivity and billing and does not actively access data in your account, except for maintenance, security incidents or troubleshooting you authorise.</p>
           </div>
         </div>
       </div>
@@ -712,8 +714,8 @@
             <span class="badge badge-promo">Year-End Promo · Until Dec 31, 2026</span>
             <div class="plan-tier"><b>20x</b><span>Ultimate</span></div>
             <p class="plan-desc">For high-net-worth clients, founders and power teams running multiple agents around the clock.</p>
-            <div class="price" data-plan-idx="2"><sup>A$</sup><span class="amount">1,049</span><small>/ month</small><del class="price-orig" data-orig-20x>A$1,499</del></div>
-            <p class="price-note" data-note-idx="2">Promo until Dec 31, 2026 · 20x usage, unit cost about 35% of 1x</p>
+            <div class="price" data-plan-idx="2"><sup>A$</sup><span class="amount">1,049</span><small>/ month</small><del class="price-orig" data-orig-20x title="Regular price">A$1,499</del></div>
+            <p class="price-note" data-note-idx="2">Promo price stays on renewal · unit cost about 35% of 1x</p>
             <ul class="features">
               <li>20x the Standard usage allowance</li>
               <li>Dedicated workspace configuration</li>
@@ -804,7 +806,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
           <span>Secure checkout by <strong>Stripe</strong> · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · Monthly, cancel any time</span>
         </div>
-        <p class="pricing-foot">All prices include a physical high-spec Mac environment (separate account on 1x / 5x, dedicated machine option on 20x), pre-configured AI toolchain, and concierge subscription &amp; billing management, billed monthly in <span id="currency-name">AUD</span>. Prices in each currency reflect local market levels. Need a multi-seat team plan? Get in touch.</p>
+        <p class="pricing-foot">All prices include a physical high-spec Mac environment (separate account on 1x / 5x, dedicated machine option on 20x), pre-configured AI toolchain, and concierge subscription &amp; billing management, billed monthly in <span id="currency-name">AUD</span>. Prices in each currency reflect local market levels. Need a multi-seat team plan? Get in touch. <span data-promo-foot>The struck-through 20x price is the regular price, which applies to new subscriptions from 1 January 2027. </span>By subscribing you agree to our <a href="terms.html" style="color:var(--primary-strong)">Terms of Service</a> and <a href="refund.html" style="color:var(--primary-strong)">Refund Policy</a>.</p>
       </div>
     </section>
 
@@ -873,7 +875,7 @@
           </details>
           <details>
             <summary>How are my code and data kept secure and private?</summary>
-            <p>On 1x / 5x, every user gets a separate macOS account with isolated files, permissions and desktop sessions, accessed only via Apple Screen Sharing so no one else can see your screen. On 20x you can enable a dedicated machine: the entire high-spec Mac Studio or Mac mini serves only you, isolated right down to the hardware. Your session history, source code and environment variables stay in your own account or machine. You set your own access passwords and encryption, and our team only handles connectivity and billing.</p>
+            <p>On 1x / 5x, every user gets a separate macOS account with isolated files, permissions and desktop sessions, accessed only via Apple Screen Sharing so no one else can see your screen. On 20x you can enable a dedicated machine: the entire high-spec Mac Studio or Mac mini serves only you, isolated right down to the hardware. Your session history, source code and environment variables stay in your own account or machine. You set your own access passwords and encryption, and our team does not actively access your data except for maintenance, security incidents or troubleshooting you authorise.</p>
           </details>
           <details>
             <summary>Where are the machines and networks located?</summary>
@@ -958,6 +960,7 @@
       </div>
     </div>
     <div class="container foot-disclaimer">
+      <div class="foot-legal"><a href="terms.html">Terms of Service</a><a href="refund.html">Refund Policy</a><a href="privacy.html">Privacy Policy</a></div>
       Disclaimer: Zaokit is an independent cloud workstation and AI engineering consultancy and is not affiliated with, endorsed by, or sponsored by Anthropic PBC, Apple Inc., or Google LLC. Claude, Claude Code, Mac, iCloud, and Google Drive are trademarks of their respective owners.
     </div>
   </footer>
@@ -1028,6 +1031,11 @@
         '30t_NZD': 'https://buy.stripe.com/7sYfZj8ad8V03zo2Bw9Zm1l'
       };
       var MULT = [1, 5, 20];
+      // 促销到期（2027-01-01 00:00 AEDT）后自动移除促销标识，避免出现过期的"限时"表述
+      var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
+      if (!PROMO_ACTIVE) {
+        document.querySelectorAll('.badge-promo, [data-orig-20x], [data-promo-foot]').forEach(function (el) { el.remove(); });
+      }
       function fmt(n) { return n.toLocaleString('en-AU'); }
       function setCurrency(code) {
         var curCode = PRICES[code] ? code : 'AUD';
@@ -1051,9 +1059,9 @@
           if (i === 0) {
             var day = c.p[0] / 30;
             el.textContent = 'Includes Claude environment · about ' + c.sym + (day >= 10 ? Math.round(day) : +day.toFixed(1)) + ' / day';
-          } else if (i === 2) {
+          } else if (i === 2 && PROMO_ACTIVE) {
             var ratio2 = Math.round(c.p[2] / (c.p[0] * MULT[2]) * 100);
-            el.textContent = 'Promo until Dec 31, 2026 · 20x usage, unit cost about ' + ratio2 + '% of 1x';
+            el.textContent = 'Promo price stays on renewal · unit cost about ' + ratio2 + '% of 1x';
           } else {
             var ratio = Math.round(c.p[i] / (c.p[0] * MULT[i]) * 100);
             el.textContent = 'Includes Claude environment · ' + MULT[i] + 'x usage, unit cost about ' + ratio + '% of 1x';
