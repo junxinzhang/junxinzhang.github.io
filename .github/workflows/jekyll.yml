@@ -62,3 +62,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          # Default 10m aborts while Pages is still syncing_files and cancels the deployment.
+          timeout: 1800000
