@@ -232,6 +232,24 @@
     }
     .currency-switch button:hover { color: var(--text) }
     .currency-switch button[aria-pressed="true"] { background: var(--primary); color: #fff; font-weight: 600 }
+    /* Compact first-screen fit for #pricing so "Subscribe" buttons stay visible on click */
+    #storage { scroll-margin-top: 32px }
+    #pricing { padding-top: 72px }
+    #pricing > .container > .section-head { margin-bottom: 14px }
+    #pricing > .container > .section-head h2 { margin-top: 4px; font-size: clamp(1.45rem, 2.6vw, 1.88rem) }
+    #pricing > .container > .section-head p { margin-top: 5px; font-size: .88rem }
+    #pricing > .container > .currency-switch { margin: 0 auto 18px; padding: 4px }
+    #pricing > .container > .currency-switch button { padding: 5px 12px; font-size: .82rem }
+    #pricing > .container > .pricing .plan { padding: 18px 22px 15px }
+    #pricing > .container > .pricing .plan-tier b { font-size: 1.82rem }
+    #pricing > .container > .pricing .plan-desc { margin: 5px 0 8px; min-height: 2.4em; font-size: .84rem; line-height: 1.42 }
+    #pricing > .container > .pricing .price { font-size: 2.1rem }
+    #pricing > .container > .pricing .price-note { margin: 4px 0 9px; font-size: .78rem; line-height: 1.38 }
+    #pricing > .container > .pricing .features { margin: 0 0 12px }
+    #pricing > .container > .pricing .features li { padding: 2.5px 0; font-size: .85rem; line-height: 1.36; gap: 8px }
+    #pricing > .container > .pricing .features li::before { flex: 0 0 15px; height: 15px; margin-top: 2px; background-size: 10px }
+    #pricing > .container > .pricing .plan .btn { padding: 10px 18px; font-size: .93rem }
+    #pricing > .container > .pricing .plan-consult { margin-top: 7px; font-size: .78rem }
 
     /* Steps */
     .steps { counter-reset: step }
@@ -1407,10 +1425,62 @@
     document.querySelectorAll('a[href="#top"]').forEach(function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault();
-        window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+        window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
         if (location.hash) history.replaceState(null, '', location.pathname + location.search);
       });
     });
+
+    function docTop(el) {
+      var y = 0;
+      while (el) { y += el.offsetTop || 0; el = el.offsetParent; }
+      return y;
+    }
+    function scrollToPricing(smooth) {
+      var sec = document.getElementById('pricing');
+      if (!sec) return;
+      sec.querySelectorAll('.mo-reveal').forEach(function (el) {
+        el.classList.remove('mo-reveal', 'mo-in');
+        el.style.transitionDelay = '';
+      });
+      var headerH = header ? header.offsetHeight : 68;
+      var headEl = sec.querySelector('.section-head') || sec;
+      var gridEl = sec.querySelector('.pricing');
+      var idealTop = docTop(headEl) - headerH - 12;
+      var targetY = idealTop;
+      if (gridEl) {
+        var plans = Array.prototype.slice.call(gridEl.querySelectorAll('.plan'));
+        if (plans.length) {
+          var checkPlans = innerWidth <= 960
+            ? [plans.reduce(function (a, b) { return docTop(a) <= docTop(b) ? a : b; })]
+            : plans;
+          var maxBtnBottom = 0;
+          checkPlans.forEach(function (p) {
+            var btn = p.querySelector('.btn');
+            if (btn) maxBtnBottom = Math.max(maxBtnBottom, docTop(btn) + btn.offsetHeight);
+          });
+          if (maxBtnBottom > 0) {
+            var neededBottom = maxBtnBottom + 16;
+            if (neededBottom - idealTop > innerHeight) {
+              targetY = neededBottom - innerHeight;
+            }
+          }
+        }
+      }
+      window.scrollTo({
+        top: Math.max(0, targetY),
+        behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant'
+      });
+    }
+    document.querySelectorAll('a[href="#pricing"]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        history.replaceState(null, '', '#pricing');
+        scrollToPricing(true);
+      });
+    });
+    if (location.hash === '#pricing') {
+      requestAnimationFrame(function () { scrollToPricing(false); });
+    }
 
     // Spotlight follows the cursor inside cards
     if (matchMedia('(hover: hover)').matches) {
