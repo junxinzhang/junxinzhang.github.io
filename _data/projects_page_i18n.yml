@@ -30,7 +30,7 @@ zh-hans: &projects_page_zh_hans
   items:
     claude-ops:
       title: "Claude 代运营"
-      description: "面向高净值人群与核心决策者的 TOP 级 7×16 小时一对一专属服务。独立专属工作空间、高配置 Mac Studio 与高配置 Mac mini 单租户物理隔离环境（澳大利亚、美国、新加坡、马来西亚、印尼、日本、柬埔寨、新西兰、加拿大 9 国本地原生宽带网络）、账单续费与环境运维全托管，1x / 5x / 20x 三档按月订阅，并提供 iCloud+ / Google Drive 2T–30T 云存储。"
+      description: "AI 让世界无界，点亮世界每一个城市，为所有人带来最先进的生产力与最 TOP 的体验。独立专属工作空间、高配置 Mac Studio 与 Mac mini 物理隔离环境（澳大利亚、美国、新加坡、马来西亚、印尼、日本、柬埔寨、新西兰、加拿大 9 国本地原生宽带算力网络）、企业精品跨境专线、最高 7×24h 一对一工程顾问全托管，支持个人 1x / 5x / 20x 与 Team / Business 团队集群订阅，并提供 iCloud+ / Google Drive 2T–30T 云存储。"
       keywords:
         - "Claude 代运营"
         - "工作空间托管"
@@ -149,7 +149,7 @@ en: &projects_page_en
   items:
     claude-ops:
       title: "Claude Managed Service"
-      description: "Top-tier 7×16h 1-on-1 concierge service for high-net-worth individuals & decision-makers: dedicated workspace, isolated single-tenant high-spec Mac Studio & Mac mini runtime environment (servers in Australia, the US, Singapore, Malaysia, Indonesia, Japan, Cambodia, New Zealand and Canada), fully managed billing & ops (1x / 5x / 20x monthly plans), plus iCloud+ & Google Drive 2TB–30TB storage."
+      description: "AI makes the world borderless — lighting up every city worldwide to bring the most advanced productivity and a top-tier experience to everyone. Isolated physical Mac Studio & Mac mini workstations across 9 native ISP regions (AU, US, SG, MY, ID, JP, KH, NZ, CA), enterprise BGP dedicated lines, up to 7×24h 1-on-1 engineering concierge, solo (1x / 5x / 20x) & Team / Business plans, plus iCloud+ & Google Drive 2TB–30TB storage."
       keywords:
         - "Claude"
         - "Managed Service"
