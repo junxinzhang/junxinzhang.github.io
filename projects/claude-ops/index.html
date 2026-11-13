@@ -109,9 +109,21 @@
       width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
       background: var(--primary); color: #fff;
     }
-    .nav-links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; flex-wrap: nowrap }
-    .nav-links a { padding: 7px 10px; border-radius: 10px; color: var(--muted); font-size: .88rem; white-space: nowrap; transition: .2s }
+    .nav-links { position: relative; display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; flex-wrap: nowrap }
+    .nav-links::after {
+      content: ""; position: absolute; left: 0; bottom: -4px; height: 2.5px;
+      width: var(--ind-w, 0px);
+      transform: translate3d(var(--ind-x, 0px), 0, 0);
+      opacity: var(--ind-o, 0);
+      border-radius: 999px;
+      background: linear-gradient(90deg, #d97757, #f5c396);
+      box-shadow: 0 0 10px rgba(232, 144, 111, .75);
+      pointer-events: none;
+      transition: transform .28s cubic-bezier(.22, 1, .36, 1), width .28s cubic-bezier(.22, 1, .36, 1), opacity .2s ease;
+    }
+    .nav-links a { position: relative; display: inline-flex; align-items: center; padding: 7px 10px; border-radius: 10px; color: var(--muted); font-size: .88rem; white-space: nowrap; transition: color .2s, background .2s }
     .nav-links a:hover { color: #fff; background: var(--surface-strong) }
+    .nav-links a.is-active { color: #fff; font-weight: 600; background: rgba(217, 119, 87, .10) }
     .nav-back { font-size: .88rem; color: var(--muted) }
     .nav-back:hover { color: var(--primary-strong) }
 
@@ -252,7 +264,8 @@
     /* Compact first-screen fit for #pricing + Modular Team/Business & Seat Upgrades */
     .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
     @media (max-width: 960px) { .grid-2 { grid-template-columns: 1fr } }
-    #storage { scroll-margin-top: 32px }
+    section[id] { scroll-margin-top: 76px }
+    #storage { scroll-margin-top: 76px }
     #pricing-enterprise { scroll-margin-top: 84px }
     #pricing { padding-top: 72px }
     #pricing > .container > .section-head { margin-bottom: 14px }
@@ -615,6 +628,7 @@
       .motion .hero .container > * { opacity: 1; animation: none }
       .motion .mo-reveal { opacity: 1; transform: none; transition: none }
       .faq details::details-content { transition: none }
+      .nav-links::after { transition: none }
       #scroll-progress { display: none }
     }
 
@@ -2236,37 +2250,130 @@
   (function () {
     var root = document.documentElement;
     var header = document.querySelector('.site-header');
+    var navList = document.querySelector('.nav-links');
     var bar = document.createElement('div'); bar.id = 'scroll-progress'; document.body.appendChild(bar);
     var ticking = false;
-    function onScroll() {
-      var max = root.scrollHeight - root.clientHeight;
-      bar.style.transform = 'scaleX(' + (max > 0 ? root.scrollTop / max : 0) + ')';
-      if (header) header.classList.toggle('scrolled', root.scrollTop > 12);
-      ticking = false;
-    }
-    addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-    onScroll();
-
-    document.querySelectorAll('a[href="#top"]').forEach(function (el) {
-      el.addEventListener('click', function (e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
-        if (location.hash) history.replaceState(null, '', location.pathname + location.search);
-      });
-    });
 
     function docTop(el) {
       var y = 0;
       while (el) { y += el.offsetTop || 0; el = el.offsetParent; }
       return y;
     }
-    function scrollToPricing(smooth) {
-      var sec = document.getElementById('pricing');
-      if (!sec) return;
-      sec.querySelectorAll('.mo-reveal').forEach(function (el) {
+
+    var navItems = [];
+    var navById = {};
+    if (navList) {
+      Array.prototype.slice.call(navList.querySelectorAll('a[href^="#"]')).forEach(function (link) {
+        var id = link.getAttribute('href').slice(1);
+        var el = id ? document.getElementById(id) : null;
+        if (el) {
+          var item = { id: id, link: link, el: el };
+          navItems.push(item);
+          navById[id] = item;
+        }
+      });
+    }
+
+    var currentNavId = null;
+    var lockedNavId = null;
+    var lockTargetY = 0;
+    var lockExpire = 0;
+
+    function applyNavIndicator(activeId, forceMeasure) {
+      if (!navList) return;
+      if (activeId === currentNavId && !forceMeasure) return;
+      currentNavId = activeId;
+      var activeItem = activeId ? navById[activeId] : null;
+      navItems.forEach(function (item) {
+        var on = item === activeItem;
+        item.link.classList.toggle('is-active', on);
+        if (on) item.link.setAttribute('aria-current', 'location');
+        else item.link.removeAttribute('aria-current');
+      });
+      if (activeItem) {
+        var link = activeItem.link;
+        var pad = 8;
+        var x = link.offsetLeft + pad;
+        var w = Math.max(16, link.offsetWidth - pad * 2);
+        navList.style.setProperty('--ind-x', x + 'px');
+        navList.style.setProperty('--ind-w', w + 'px');
+        navList.style.setProperty('--ind-o', '1');
+      } else {
+        navList.style.setProperty('--ind-o', '0');
+      }
+    }
+
+    function computeActiveNavId(scrollTop, maxScroll) {
+      if (!navItems.length) return null;
+      if (lockedNavId) {
+        if (Date.now() <= lockExpire && Math.abs(scrollTop - lockTargetY) > 8) {
+          return lockedNavId;
+        }
+        if (maxScroll > 0 && lockTargetY >= maxScroll - 4 && scrollTop >= maxScroll - 8) {
+          return lockedNavId;
+        }
+        lockedNavId = null;
+      }
+      if (maxScroll > 0 && scrollTop >= maxScroll - 20) {
+        return navItems[navItems.length - 1].id;
+      }
+      var headerH = header ? header.offsetHeight : 68;
+      var probeY = scrollTop + headerH + Math.min(140, Math.round(innerHeight * 0.2));
+      var chosen = null;
+      for (var i = 0; i < navItems.length; i++) {
+        if (docTop(navItems[i].el) <= probeY) chosen = navItems[i].id;
+      }
+      return chosen;
+    }
+
+    function clearNavLock() { lockedNavId = null; }
+    addEventListener('wheel', clearNavLock, { passive: true });
+    addEventListener('touchmove', clearNavLock, { passive: true });
+
+    function onScroll() {
+      var scrollTop = root.scrollTop;
+      var max = root.scrollHeight - root.clientHeight;
+      var activeId = computeActiveNavId(scrollTop, max);
+      bar.style.transform = 'scaleX(' + (max > 0 ? scrollTop / max : 0) + ')';
+      if (header) header.classList.toggle('scrolled', scrollTop > 12);
+      applyNavIndicator(activeId, false);
+      ticking = false;
+    }
+    addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener('resize', function () {
+      var max = root.scrollHeight - root.clientHeight;
+      applyNavIndicator(computeActiveNavId(root.scrollTop, max), true);
+    }, { passive: true });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { applyNavIndicator(currentNavId, true); });
+    }
+    onScroll();
+
+    function clearReveal(container) {
+      if (!container) return;
+      if (container.classList && container.classList.contains('mo-reveal')) {
+        container.classList.remove('mo-reveal', 'mo-in');
+        container.style.transitionDelay = '';
+      }
+      container.querySelectorAll('.mo-reveal').forEach(function (el) {
         el.classList.remove('mo-reveal', 'mo-in');
         el.style.transitionDelay = '';
       });
+    }
+
+    document.querySelectorAll('a[href="#top"]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        lockedNavId = null;
+        window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+        if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+      });
+    });
+
+    function scrollToPricing(smooth) {
+      var sec = document.getElementById('pricing');
+      if (!sec) return 0;
+      clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
       var headEl = sec.querySelector('.section-head') || sec;
       var gridEl = sec.querySelector('.pricing-solo') || sec.querySelector('.pricing');
@@ -2291,20 +2398,66 @@
           }
         }
       }
+      var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
+      var destY = Math.max(0, Math.min(targetY, maxScroll));
       window.scrollTo({
-        top: Math.max(0, targetY),
+        top: destY,
         behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant'
       });
+      return destY;
     }
-    document.querySelectorAll('a[href="#pricing"]').forEach(function (el) {
+
+    function scrollToSection(id, smooth) {
+      if (id === 'pricing') return scrollToPricing(smooth);
+      var sec = document.getElementById(id);
+      if (!sec) return null;
+      clearReveal(sec);
+      var headerH = header ? header.offsetHeight : 68;
+      var rawY;
+      if (id === 'storage') {
+        rawY = docTop(sec) - headerH - 4;
+      } else if (id === 'pricing-enterprise') {
+        rawY = docTop(sec) - headerH - 16;
+      } else {
+        var headEl = sec.querySelector('.section-head');
+        rawY = headEl ? (docTop(headEl) - headerH - 28) : (docTop(sec) - headerH - 16);
+      }
+      var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
+      var destY = Math.max(0, Math.min(rawY, maxScroll));
+      window.scrollTo({
+        top: destY,
+        behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant'
+      });
+      return destY;
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (el) {
+      var href = el.getAttribute('href');
+      if (!href || href === '#' || href === '#top') return;
+      var id = href.slice(1);
+      if (!document.getElementById(id)) return;
       el.addEventListener('click', function (e) {
         e.preventDefault();
-        history.replaceState(null, '', '#pricing');
-        scrollToPricing(true);
+        history.replaceState(null, '', '#' + id);
+        var destY = scrollToSection(id, true);
+        var spyId = navById[id] ? id : (id === 'pricing-enterprise' && navById.pricing ? 'pricing' : null);
+        if (spyId && destY !== null) {
+          lockedNavId = spyId;
+          lockTargetY = destY;
+          lockExpire = Date.now() + 1800;
+          applyNavIndicator(spyId, true);
+        }
       });
     });
-    if (location.hash === '#pricing') {
-      requestAnimationFrame(function () { scrollToPricing(false); });
+
+    if (location.hash && location.hash.length > 1) {
+      var initId = decodeURIComponent(location.hash.slice(1));
+      if (initId !== 'top' && document.getElementById(initId)) {
+        requestAnimationFrame(function () {
+          scrollToSection(initId, false);
+          onScroll();
+        });
+      }
     }
 
     // Spotlight follows the cursor inside cards
