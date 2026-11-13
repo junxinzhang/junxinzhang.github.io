@@ -3,7 +3,7 @@
  * 提供离线访问和资源缓存功能
  */
 
-const CACHE_VERSION = 'v1.0.0';
+const CACHE_VERSION = 'v1.1.0';
 const CACHE_NAME = `just-jason-${CACHE_VERSION}`;
 
 // 需要预缓存的核心资源

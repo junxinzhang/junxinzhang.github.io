@@ -1,117 +1,461 @@
-<!-- Lunr Search - Lazy loaded on user interaction -->
+<!-- Hybrid CJK + English Site Search - Lazy loaded on user interaction -->
 <style>
-    .lunrsearchresult .title {color: #d9230f;}
-    .lunrsearchresult .url {color: silver;}
-    .lunrsearchresult a {display: block; color: #777;}
-    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
-    .lunrsearchresult a:hover .title {text-decoration: underline;}
-    /* No results styling */
-    .lunrsearchresult.no-results {
-        text-align: center;
-        padding: 30px 20px;
-        color: var(--text-color, #333);
-    }
-    .no-results-icon {
-        color: var(--text-muted, #6c757d);
-        margin-bottom: 15px;
-    }
-    .no-results h5 {
-        margin-bottom: 10px;
-        color: var(--text-color, #333);
-    }
-    .no-results .suggestions {
-        text-align: left;
-        display: inline-block;
-        margin: 15px 0;
-        padding-left: 20px;
-        color: var(--text-muted, #666);
-    }
-    .no-results .suggestions li {
-        margin-bottom: 5px;
-    }
-    .no-results .badge {
-        padding: 5px 10px;
-        margin: 2px;
-        border-radius: 15px;
-        background-color: var(--light, #f8f9fa);
-        color: var(--text-color, #333);
-        text-decoration: none;
-        transition: background-color var(--transition-duration, 0.3s);
-    }
-    .no-results .badge:hover {
-        background-color: var(--primary, #03a87c);
-        color: #fff;
-    }
-    [data-theme="dark"] .no-results .badge {
-        background-color: var(--card-bg, #16213e);
-    }
-
     .nav-search-item {
         position: relative;
         display: flex;
         align-items: center;
-        gap: 0.45rem;
     }
     .nav-search-toggle {
-        border: 0;
-        background: transparent;
-        border-radius: 8px;
-        padding: 0.35rem 0.55rem !important;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.025);
+        border-radius: 999px;
+        padding: 0.28rem 0.65rem !important;
         cursor: pointer;
+        color: inherit;
+        transition: background-color 0.18s ease, border-color 0.18s ease;
+    }
+    .nav-search-toggle:hover {
+        background: rgba(3, 168, 124, 0.08);
+        border-color: rgba(3, 168, 124, 0.35);
     }
     .nav-search-toggle:focus {
         outline: 2px solid #03a87c;
         outline-offset: 2px;
     }
+    .nav-search-kbd {
+        font-size: 0.7rem;
+        font-weight: 600;
+        line-height: 1;
+        padding: 2px 5px;
+        border-radius: 4px;
+        opacity: 0.65;
+        font-family: var(--font-family-monospace, monospace);
+    }
+    [data-theme="dark"] .nav-search-toggle {
+        border-color: rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text-color, #e6edf3);
+    }
+    [data-theme="dark"] .nav-search-toggle:hover {
+        background: rgba(3, 168, 124, 0.16);
+        border-color: rgba(63, 208, 164, 0.45);
+    }
+
     .nav-search-form {
+        display: none;
         margin: 0;
-        width: 0;
-        opacity: 0;
-        overflow: hidden;
-        pointer-events: none;
-        transition: width 0.2s ease, opacity 0.2s ease;
-    }
-    .nav-search-item.expanded .nav-search-form {
-        width: 210px;
-        opacity: 1;
-        pointer-events: auto;
-    }
-    .nav-search-form .form-control {
-        min-width: 210px;
-        border-radius: 999px;
-        height: 2.15rem;
-        font-size: 0.9rem;
     }
 
     @media (max-width: 991.98px) {
         .nav-search-item {
             width: 100%;
-            margin-top: 0.35rem;
+            margin-top: 0.4rem;
         }
         .nav-search-toggle {
             display: none;
         }
         .nav-search-form {
-            width: 100% !important;
-            opacity: 1;
-            overflow: visible;
-            pointer-events: auto;
+            display: block;
+            width: 100%;
         }
         .nav-search-form .form-control {
-            min-width: 0;
             width: 100%;
+            border-radius: 999px;
+            height: 2.25rem;
+            font-size: 0.92rem;
+        }
+    }
+
+    /* Command-Palette Search Modal */
+    #lunrsearchresults {
+        display: none;
+    }
+    .jj-search-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 2050;
+        background: rgba(15, 23, 42, 0.55);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 8vh 16px 24px;
+        overflow-y: auto;
+    }
+    .jj-search-dialog {
+        width: 100%;
+        max-width: 680px;
+        background: #ffffff;
+        color: #1f2937;
+        border-radius: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 22px 50px -12px rgba(0, 0, 0, 0.28);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .jj-search-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 16px;
+        border-bottom: 1px solid #eef0f3;
+    }
+    .jj-search-icon {
+        color: #03a87c;
+        flex-shrink: 0;
+    }
+    .jj-search-input {
+        flex: 1;
+        border: 0 !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        font-size: 1.02rem;
+        line-height: 1.4;
+        color: inherit;
+        padding: 2px 0;
+        min-width: 0;
+    }
+    .jj-search-input::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    .jj-search-clear {
+        border: 0;
+        background: rgba(0, 0, 0, 0.06);
+        color: #6b7280;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0;
+        flex-shrink: 0;
+    }
+    .jj-search-clear:hover {
+        background: rgba(0, 0, 0, 0.12);
+        color: #111827;
+    }
+    .jj-search-esc {
+        border: 1px solid #e5e7eb;
+        background: #f9fafb;
+        color: #6b7280;
+        border-radius: 6px;
+        padding: 3px 7px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+    .jj-search-esc:hover {
+        background: #f3f4f6;
+        color: #111827;
+    }
+    .jj-search-meta {
+        padding: 7px 18px;
+        font-size: 0.78rem;
+        color: #6b7280;
+        background: #f9fafb;
+        border-bottom: 1px solid #eef0f3;
+    }
+    .jj-search-body {
+        max-height: min(62vh, 500px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+    .jj-search-list {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 6px !important;
+    }
+    .jj-result-item {
+        list-style: none !important;
+        margin: 2px 0;
+    }
+    .jj-result-link {
+        display: block;
+        padding: 11px 13px;
+        border-radius: 9px;
+        border-left: 3px solid transparent;
+        text-decoration: none !important;
+        color: inherit !important;
+        transition: background-color 0.12s ease, border-color 0.12s ease;
+    }
+    .jj-result-link:hover,
+    .jj-result-link.active {
+        background: rgba(3, 168, 124, 0.07);
+        border-left-color: #03a87c;
+    }
+    .jj-result-top {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 4px;
+        font-size: 0.74rem;
+    }
+    .jj-badge {
+        display: inline-block;
+        padding: 1px 7px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.7rem;
+        background: rgba(3, 168, 124, 0.12);
+        color: #028a66;
+    }
+    .jj-badge-project {
+        background: rgba(120, 50, 226, 0.12);
+        color: #6d28d9;
+    }
+    .jj-badge-report {
+        background: rgba(245, 158, 11, 0.15);
+        color: #b45309;
+    }
+    .jj-badge-page {
+        background: rgba(59, 130, 246, 0.12);
+        color: #1d4ed8;
+    }
+    .jj-result-date {
+        color: #9ca3af;
+        font-variant-numeric: tabular-nums;
+    }
+    .jj-result-tag {
+        color: #6b7280;
+        font-size: 0.72rem;
+    }
+    .jj-result-title {
+        font-size: 0.97rem;
+        font-weight: 600;
+        line-height: 1.42;
+        color: #111827;
+    }
+    .jj-result-snippet {
+        margin-top: 4px;
+        font-size: 0.83rem;
+        line-height: 1.55;
+        color: #4b5563;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    mark.search-hl {
+        background: rgba(3, 168, 124, 0.18);
+        color: #026e52;
+        font-weight: 600;
+        padding: 0 2px;
+        border-radius: 3px;
+    }
+    .jj-empty-section {
+        padding: 12px 12px 8px;
+    }
+    .jj-section-label,
+    .jj-section-divider {
+        font-size: 0.74rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: #9ca3af;
+        margin-bottom: 8px;
+    }
+    .jj-section-divider {
+        padding: 8px 12px 2px;
+        margin-bottom: 2px;
+        border-top: 1px solid #f1f3f5;
+    }
+    .jj-chips-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .jj-chips-wrap.justify-center {
+        justify-content: center;
+    }
+    .jj-chip {
+        border: 1px solid #e5e7eb;
+        background: #f9fafb;
+        color: #374151;
+        border-radius: 999px;
+        padding: 4px 11px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.15s ease;
+    }
+    .jj-chip:hover {
+        background: #03a87c;
+        border-color: #03a87c;
+        color: #ffffff;
+    }
+    .jj-no-results {
+        text-align: center;
+        padding: 32px 20px 26px;
+    }
+    .jj-no-results-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 6px;
+    }
+    .jj-no-results-hint {
+        font-size: 0.84rem;
+        color: #6b7280;
+        margin-bottom: 16px;
+    }
+    .jj-loading-row {
+        padding: 28px 16px;
+        text-align: center;
+        font-size: 0.88rem;
+        color: #6b7280;
+    }
+    .jj-search-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 16px;
+        border-top: 1px solid #eef0f3;
+        background: #f9fafb;
+        font-size: 0.74rem;
+        color: #9ca3af;
+    }
+    .jj-hydrate-status {
+        color: #03a87c;
+    }
+
+    /* Dark Mode Overrides */
+    [data-theme="dark"] .jj-search-backdrop {
+        background: rgba(2, 6, 14, 0.72);
+    }
+    [data-theme="dark"] .jj-search-dialog {
+        background: #161b22;
+        color: #e6edf3;
+        border-color: #30363d;
+        box-shadow: 0 24px 56px rgba(0, 0, 0, 0.65);
+    }
+    [data-theme="dark"] .jj-search-header {
+        border-bottom-color: #262c36;
+    }
+    [data-theme="dark"] .jj-search-icon {
+        color: #3fd0a4;
+    }
+    [data-theme="dark"] .jj-search-input {
+        color: #e6edf3;
+    }
+    [data-theme="dark"] .jj-search-input::placeholder {
+        color: #7d8590;
+    }
+    [data-theme="dark"] .jj-search-clear {
+        background: rgba(255, 255, 255, 0.08);
+        color: #8b949e;
+    }
+    [data-theme="dark"] .jj-search-clear:hover {
+        background: rgba(255, 255, 255, 0.16);
+        color: #f0f6fc;
+    }
+    [data-theme="dark"] .jj-search-esc {
+        background: #21262d;
+        border-color: #30363d;
+        color: #8b949e;
+    }
+    [data-theme="dark"] .jj-search-esc:hover {
+        background: #30363d;
+        color: #f0f6fc;
+    }
+    [data-theme="dark"] .jj-search-meta {
+        background: #0d1117;
+        border-bottom-color: #262c36;
+        color: #8b949e;
+    }
+    [data-theme="dark"] .jj-result-link:hover,
+    [data-theme="dark"] .jj-result-link.active {
+        background: rgba(63, 208, 164, 0.11);
+        border-left-color: #3fd0a4;
+    }
+    [data-theme="dark"] .jj-badge {
+        background: rgba(63, 208, 164, 0.16);
+        color: #56f0c3;
+    }
+    [data-theme="dark"] .jj-badge-project {
+        background: rgba(167, 139, 250, 0.18);
+        color: #c4b5fd;
+    }
+    [data-theme="dark"] .jj-badge-report {
+        background: rgba(251, 191, 36, 0.18);
+        color: #fcd34d;
+    }
+    [data-theme="dark"] .jj-badge-page {
+        background: rgba(96, 165, 250, 0.18);
+        color: #93c5fd;
+    }
+    [data-theme="dark"] .jj-result-title {
+        color: #f0f6fc;
+    }
+    [data-theme="dark"] .jj-result-snippet {
+        color: #9ca3af;
+    }
+    [data-theme="dark"] .jj-result-date,
+    [data-theme="dark"] .jj-result-tag {
+        color: #7d8590;
+    }
+    [data-theme="dark"] mark.search-hl {
+        background: rgba(63, 208, 164, 0.24);
+        color: #6ef7ce;
+    }
+    [data-theme="dark"] .jj-section-divider {
+        border-top-color: #262c36;
+    }
+    [data-theme="dark"] .jj-chip {
+        background: #21262d;
+        border-color: #30363d;
+        color: #c9d1d9;
+    }
+    [data-theme="dark"] .jj-chip:hover {
+        background: #03a87c;
+        border-color: #03a87c;
+        color: #ffffff;
+    }
+    [data-theme="dark"] .jj-no-results-title {
+        color: #f0f6fc;
+    }
+    [data-theme="dark"] .jj-search-footer {
+        background: #0d1117;
+        border-top-color: #262c36;
+        color: #7d8590;
+    }
+    [data-theme="dark"] .jj-hydrate-status {
+        color: #3fd0a4;
+    }
+
+    @media (max-width: 575.98px) {
+        .jj-search-backdrop {
+            padding: 10px;
+        }
+        .jj-search-body {
+            max-height: 70vh;
+        }
+        .jj-search-hint {
+            display: none;
         }
     }
 </style>
 
 <li class="nav-item nav-search-item" id="navSearchItem">
-    <button id="searchToggle" class="nav-link nav-search-toggle" type="button" aria-label="Open search"
-        aria-expanded="false" title="Search">
-        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 16 16"
+    <button id="searchToggle" class="nav-link nav-search-toggle" type="button" aria-label="Open search (Cmd+K)"
+        title="Search (⌘K / Ctrl+K)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16"
             aria-hidden="true">
             <path
                 d="M11.742 10.344a6.5 6.5 0 1 0-1.398 1.398h.001l3.85 3.85a1 1 0 0 0 1.414-1.415l-3.85-3.85zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg>
+        <span class="nav-search-kbd">⌘K</span>
     </button>
     <form class="bd-search nav-search-form" role="search"
         onSubmit="return initSearchAndRun(document.getElementById('lunrsearch').value);">
@@ -123,294 +467,99 @@
 </li>
 
 <script>
-// Lazy load search functionality
-var searchLoaded = false;
-var pendingSearch = null;
-var navSearchItem = document.getElementById('navSearchItem');
-var searchInput = document.getElementById('lunrsearch');
-var searchToggle = document.getElementById('searchToggle');
+(function () {
+    var engineLoaded = false;
+    var engineLoading = false;
+    var pendingCallbacks = [];
+    var searchToggle = document.getElementById('searchToggle');
+    var searchInput = document.getElementById('lunrsearch');
 
-function openNavbarSearch(shouldFocus) {
-    if (navSearchItem && window.innerWidth >= 992) {
-        navSearchItem.classList.add('expanded');
+    // Adapt shortcut label for non-Apple devices
+    var kbdEl = searchToggle && searchToggle.querySelector('.nav-search-kbd');
+    if (kbdEl && navigator.platform && !/Mac|iPhone|iPod|iPad/i.test(navigator.platform)) {
+        kbdEl.textContent = 'Ctrl K';
     }
+
+    function loadSearchEngine(callback) {
+        if (engineLoaded && window.JustJasonSearch) {
+            if (callback) callback();
+            return;
+        }
+        if (callback) pendingCallbacks.push(callback);
+        if (engineLoading) return;
+        engineLoading = true;
+
+        var script = document.createElement('script');
+        script.src = '{{ site.baseurl }}/assets/js/search-engine.js?v=20261113';
+        script.onload = function () {
+            engineLoaded = true;
+            engineLoading = false;
+            if (window.JustJasonSearch && window.JustJasonSearch.initBrowserSearch) {
+                window.JustJasonSearch.initBrowserSearch({ baseUrl: '{{ site.baseurl }}' });
+            }
+            var cbs = pendingCallbacks.slice();
+            pendingCallbacks = [];
+            for (var i = 0; i < cbs.length; i++) cbs[i]();
+        };
+        script.onerror = function () {
+            engineLoading = false;
+            pendingCallbacks = [];
+        };
+        document.head.appendChild(script);
+    }
+
+    function openSearch(initialTerm) {
+        loadSearchEngine(function () {
+            if (window.openSearchModal) {
+                window.openSearchModal(typeof initialTerm === 'string' ? initialTerm : undefined);
+            }
+        });
+    }
+
+    window.openNavbarSearch = function () {
+        openSearch();
+    };
+
+    window.initSearchAndRun = function (term) {
+        openSearch(term || '');
+        return false;
+    };
+
     if (searchToggle) {
-        searchToggle.setAttribute('aria-expanded', 'true');
-    }
-    if (shouldFocus && searchInput) {
-        setTimeout(function () {
-            searchInput.focus();
-        }, 100);
-    }
-}
+        searchToggle.addEventListener('mouseenter', function () {
+            loadSearchEngine();
+        }, { once: true });
 
-function closeNavbarSearch() {
-    if (window.innerWidth < 992) return;
-    if (navSearchItem) {
-        navSearchItem.classList.remove('expanded');
+        searchToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openSearch();
+        });
     }
-    if (searchToggle) {
-        searchToggle.setAttribute('aria-expanded', 'false');
+
+    if (searchInput) {
+        searchInput.addEventListener('focus', function () {
+            openSearch(searchInput.value || '');
+        });
     }
-}
 
-window.openNavbarSearch = openNavbarSearch;
-
-if (searchToggle) {
-    searchToggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var isExpanded = navSearchItem && navSearchItem.classList.contains('expanded');
-        if (isExpanded) {
-            closeNavbarSearch();
-        } else {
-            openNavbarSearch(true);
+    document.addEventListener('keydown', function (e) {
+        var isCmdK = (e.metaKey || e.ctrlKey) && e.key && e.key.toLowerCase() === 'k';
+        if (isCmdK) {
+            e.preventDefault();
+            openSearch();
+            return;
+        }
+        // Support '/' quick-open when focus is not inside an editable element
+        if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) {
+            var active = document.activeElement;
+            var tag = active ? active.tagName : '';
+            var isEditable = active && (active.isContentEditable || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT');
+            if (!isEditable) {
+                e.preventDefault();
+                openSearch();
+            }
         }
     });
-}
-
-document.addEventListener('click', function (e) {
-    if (!navSearchItem || window.innerWidth < 992) return;
-    if (!navSearchItem.contains(e.target)) {
-        closeNavbarSearch();
-    }
-});
-
-document.addEventListener('keydown', function (e) {
-    var isShortcut = (e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k';
-    if (isShortcut) {
-        e.preventDefault();
-        openNavbarSearch(true);
-    }
-    if (e.key === 'Escape' && searchInput === document.activeElement) {
-        closeNavbarSearch();
-    }
-});
-
-function initSearchAndRun(term) {
-    if (!term) return false;
-
-    if (searchLoaded) {
-        return lunr_search(term);
-    }
-
-    pendingSearch = term;
-    loadSearchLibrary();
-    return false;
-}
-
-function loadSearchLibrary() {
-    if (searchLoaded) return;
-
-    var script = document.createElement('script');
-    script.src = '{{site.baseurl}}/assets/js/lunr.js';
-    script.onload = function() {
-        initSearchIndex();
-        searchLoaded = true;
-        if (pendingSearch) {
-            lunr_search(pendingSearch);
-            pendingSearch = null;
-        }
-    };
-    document.head.appendChild(script);
-}
-
-// Pre-load on focus for better UX
-if (searchInput) {
-    searchInput.addEventListener('focus', function() {
-        if (!searchLoaded) {
-            loadSearchLibrary();
-        }
-    }, {once: true});
-}
-
-var documents = [];
-var documentsById = Object.create(null);
-var documentsLoaded = false;
-var documentsLoading = false;
-var documentLoadCallbacks = [];
-
-function setSearchDocuments(data) {
-    documents = Array.isArray(data) ? data : [];
-    documentsById = Object.create(null);
-    for (var i = 0; i < documents.length; i++) {
-        var doc = documents[i];
-        if (doc && doc.id !== undefined) {
-            documentsById[String(doc.id)] = doc;
-        }
-    }
-}
-
-function loadSearchDocuments(callback) {
-    if (documentsLoaded) {
-        if (typeof callback === 'function') callback();
-        return;
-    }
-
-    if (typeof callback === 'function') {
-        documentLoadCallbacks.push(callback);
-    }
-
-    if (documentsLoading) return;
-    documentsLoading = true;
-
-    fetch('{{site.baseurl}}/assets/data/search-documents.json', { credentials: 'same-origin' })
-        .then(function(response) {
-            if (!response.ok) {
-                throw new Error('HTTP ' + response.status);
-            }
-            return response.json();
-        })
-        .then(function(data) {
-            setSearchDocuments(data);
-        })
-        .catch(function(error) {
-            console.error('Failed to load search documents:', error);
-            setSearchDocuments([]);
-        })
-        .finally(function() {
-            documentsLoaded = true;
-            documentsLoading = false;
-            var callbacks = documentLoadCallbacks.slice();
-            documentLoadCallbacks = [];
-            callbacks.forEach(function(fn) { fn(); });
-        });
-}
-
-var idx = null;
-var indexInitialized = false;
-
-// Initialize search index with chunked processing to reduce TBT
-function initSearchIndex() {
-    if (indexInitialized) return;
-    if (!documentsLoaded) {
-        loadSearchDocuments(initSearchIndex);
-        return;
-    }
-    indexInitialized = true;
-
-    var builder = new lunr.Builder();
-    builder.ref('id');
-    builder.field('title', { boost: 10 });
-    builder.field('body', { boost: 5 });
-    builder.field('description', { boost: 8 });
-
-    // Process documents in chunks to avoid blocking main thread
-    var chunkSize = 20;
-    var currentIndex = 0;
-
-    function processChunk() {
-        var endIndex = Math.min(currentIndex + chunkSize, documents.length);
-        for (var i = currentIndex; i < endIndex; i++) {
-            builder.add(documents[i]);
-        }
-        currentIndex = endIndex;
-
-        if (currentIndex < documents.length) {
-            // Process next chunk in next idle period or with setTimeout
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(processChunk, {timeout: 100});
-            } else {
-                setTimeout(processChunk, 0);
-            }
-        } else {
-            // Build the index
-            idx = builder.build();
-            // If there's a pending search, execute it now
-            if (pendingSearch) {
-                lunr_search(pendingSearch);
-                pendingSearch = null;
-            }
-        }
-    }
-
-    // Start processing
-    processChunk();
-}
-
-function lunr_search(term) {
-    if (!idx) {
-        // Index not ready yet, store as pending
-        pendingSearch = term;
-        return false;
-    }
-
-    var resultsEl = document.getElementById('lunrsearchresults');
-    resultsEl.style.display = 'block';
-    document.body.classList.add('modal-open');
-
-    resultsEl.innerHTML = '<div id="resultsmodal" class="modal fade show d-block" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="searchResultsTitle"><div class="modal-dialog shadow-lg" role="document"><div class="modal-content"><div class="modal-header" id="modtit"><button type="button" class="close" id="btnx" data-dismiss="modal" aria-label="Close search results">&times;</button></div><div class="modal-body"><ul class="mb-0" role="list" aria-live="polite"></ul></div><div class="modal-footer"><button id="btnx-footer" type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button></div></div></div></div>';
-
-    if(term) {
-        document.getElementById('modtit').innerHTML = "<h5 class='modal-title' id='searchResultsTitle'>Search results for '" + term + "'</h5>" + document.getElementById('modtit').innerHTML;
-        var searchTerm = term + '*';
-        if (/[\u4e00-\u9fa5]/.test(term)) {
-            searchTerm = term.split('').join('* ') + '*';
-        }
-        var results = idx.search(searchTerm);
-        if(results.length > 0){
-            for (var i = 0; i < results.length; i++) {
-                var ref = results[i]['ref'];
-                var doc = documentsById[String(ref)];
-                if (!doc) continue;
-                var url = doc['url'];
-                var title = doc['title'];
-                var body = (doc['body'] || '').substring(0,160)+'...';
-                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML += "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><small><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></small></a></li>";
-            }
-        } else {
-            document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult no-results'>" +
-                "<div class='no-results-icon'>" +
-                    "<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='currentColor' viewBox='0 0 16 16'>" +
-                        "<path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/>" +
-                    "</svg>" +
-                "</div>" +
-                "<h5>未找到 \"" + term + "\" 的相关结果</h5>" +
-                "<p class='text-muted'>试试以下建议：</p>" +
-                "<ul class='suggestions'>" +
-                    "<li>检查拼写是否正确</li>" +
-                    "<li>尝试使用更通用的关键词</li>" +
-                    "<li>减少关键词数量</li>" +
-                    "<li>尝试使用同义词或相关词</li>" +
-                "</ul>" +
-                "<div class='popular-tags mt-3'>" +
-                    "<span class='text-muted'>热门标签：</span>" +
-                    "<a href='/tags.html#AI' class='badge badge-light'>AI</a> " +
-                    "<a href='/tags.html#DevOps' class='badge badge-light'>DevOps</a> " +
-                    "<a href='/tags.html#LLM' class='badge badge-light'>LLM</a> " +
-                    "<a href='/categories.html' class='badge badge-light'>浏览分类</a>" +
-                "</div>" +
-            "</li>";
-        }
-    }
-    return false;
-}
-
-// Handle modal close - Pure vanilla JS with keyboard support
-document.addEventListener('click', function(e) {
-    if (e.target && (e.target.id === 'btnx' || e.target.id === 'btnx-footer')) {
-        closeSearchModal();
-    }
-});
-
-// Close modal on Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        var resultsEl = document.getElementById('lunrsearchresults');
-        if (resultsEl && resultsEl.style.display === 'block') {
-            closeSearchModal();
-        }
-    }
-});
-
-function closeSearchModal() {
-    document.getElementById('lunrsearchresults').style.display = 'none';
-    document.body.classList.remove('modal-open');
-    // Return focus to search input, expanding desktop search first if needed
-    if (window.openNavbarSearch) {
-        window.openNavbarSearch(true);
-    } else if (searchInput) {
-        searchInput.focus();
-    }
-}
+})();
 </script>

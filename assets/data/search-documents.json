@@ -4,46 +4,121 @@ permalink: /assets/data/search-documents.json
 sitemap: false
 ---
 [
-{% assign is_first_doc = true %}
-{% for page in site.pages %}
-{% assign skip_page = false %}
-{% if page.url contains '.xml' or page.url contains 'assets' or page.noindex == true or page.sitemap == false %}
-{% assign skip_page = true %}
-{% endif %}
-{% unless skip_page %}
-{% capture page_body %}{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 500 }}{% endcapture %}
-{% assign page_absolute_url = site.url | append: site.baseurl | append: page.url %}
-{% unless is_first_doc %},{% endunless %}
+{%- assign is_first_doc = true -%}
+
+{%- for post in site.posts -%}
+  {%- assign raw_md = post.content | split: '## 相关阅读' | first | split: '### 相关阅读' | first | split: '## 延伸阅读' | first | split: '### 延伸阅读' | first | split: '## 往期推荐' | first | split: '### 往期推荐' | first | split: '## 推荐阅读' | first -%}
+  {%- assign html = raw_md | markdownify -%}
+  {%- assign headings_arr = "" | split: "" -%}
+  {%- assign h_parts = html | replace: '<h3', '<h2' | replace: '<h4', '<h2' | replace: '</h3>', '</h2>' | replace: '</h4>', '</h2>' | split: '<h2' -%}
+  {%- for hp in h_parts offset: 1 -%}
+    {%- assign h_inner = hp | split: '</h2>' | first | replace_first: '>', '|||' | split: '|||' | last | strip_html | strip_newlines | strip -%}
+    {%- if h_inner != "" -%}
+      {%- assign headings_arr = headings_arr | push: h_inner -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign pre_parts = html | split: '<pre' -%}
+  {%- capture html_no_pre -%}{{ pre_parts | first }}{%- for pp in pre_parts offset: 1 %} {{ pp | split: '</pre>' | last }}{%- endfor -%}{%- endcapture -%}
+  {%- assign clean_body = html_no_pre | replace: '</p>', ' ' | replace: '</li>', ' ' | replace: '</h2>', ' ' | replace: '</h3>', ' ' | replace: '</h4>', ' ' | replace: '</blockquote>', ' ' | replace: '</td>', ' ' | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '    ', ' ' | replace: '  ', ' ' | replace: '  ', ' ' | strip -%}
+  {%- assign clean_tags = "" | split: "" -%}
+  {%- for tg in post.tags -%}
+    {%- unless tg == "featured" or tg == "sticky" -%}
+      {%- assign clean_tags = clean_tags | push: tg -%}
+    {%- endunless -%}
+  {%- endfor -%}
+  {%- capture faq_text -%}{%- if post.faq -%}{%- for fq in post.faq -%}{{ fq.question }} {{ fq.answer }} {%- endfor -%}{%- endif -%}{%- endcapture -%}
+  {%- assign post_url = site.baseurl | append: post.url -%}
+  {%- unless is_first_doc -%},{%- endunless -%}
 {
-  "id": {{ page_absolute_url | jsonify }},
-  "url": {{ page_absolute_url | jsonify }},
-  "title": {{ page.title | default: "" | jsonify }},
+  "id": {{ post_url | jsonify }},
+  "url": {{ post_url | jsonify }},
+  "type": "post",
+  "title": {{ post.title | default: "" | jsonify }},
+  "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+  "categories": {{ post.categories | default: empty | jsonify }},
+  "tags": {{ clean_tags | jsonify }},
+  "description": {{ post.description | default: "" | strip_newlines | strip | jsonify }},
+  "headings": {{ headings_arr | join: " · " | jsonify }},
+  "faq": {{ faq_text | strip_newlines | strip | truncate: 300, "" | jsonify }},
+  "body": {{ clean_body | truncate: 380, "" | jsonify }}
+}
+  {%- assign is_first_doc = false -%}
+{%- endfor -%}
+
+{%- for item in site.data.landing_pages -%}
+  {%- if item.title and item.demo_url -%}
+    {%- assign proj_url = item.demo_url -%}
+    {%- unless proj_url contains '://' -%}
+      {%- assign proj_url = site.baseurl | append: item.demo_url -%}
+    {%- endunless -%}
+    {%- assign proj_cats = "" | split: "" -%}
+    {%- if item.category -%}{%- assign proj_cats = proj_cats | push: item.category -%}{%- endif -%}
+    {%- unless is_first_doc -%},{%- endunless -%}
+{
+  "id": {{ proj_url | jsonify }},
+  "url": {{ proj_url | jsonify }},
+  "type": "project",
+  "title": {{ item.title | jsonify }},
+  "date": {{ item.date | date: "%Y-%m-%d" | default: "" | jsonify }},
+  "categories": {{ proj_cats | jsonify }},
+  "tags": {{ item.keywords | default: empty | jsonify }},
+  "description": {{ item.description | default: "" | strip_newlines | strip | jsonify }},
+  "headings": {{ item.tech_stack | default: empty | join: " · " | jsonify }},
+  "faq": "",
+  "body": {{ item.description | default: "" | strip_newlines | strip | jsonify }}
+}
+    {%- assign is_first_doc = false -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- for page in site.data.html_pages -%}
+  {%- if page.title and page.path -%}
+    {%- assign report_url = site.baseurl | append: '/_html_pages/' | append: page.path -%}
+    {%- unless is_first_doc -%},{%- endunless -%}
+{
+  "id": {{ report_url | jsonify }},
+  "url": {{ report_url | jsonify }},
+  "type": "report",
+  "title": {{ page.title | jsonify }},
+  "date": {{ page.date | date: "%Y-%m-%d" | default: "" | jsonify }},
+  "categories": ["Report"],
+  "tags": [],
+  "description": {{ page.description | default: "" | strip_newlines | strip | jsonify }},
+  "headings": "",
+  "faq": "",
+  "body": {{ page.description | default: "" | strip_newlines | strip | jsonify }}
+}
+    {%- assign is_first_doc = false -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- for page in site.pages -%}
+  {%- assign include_page = false -%}
+  {%- if page.path contains '_pages/' and page.title and page.title != "" -%}
+    {%- assign include_page = true -%}
+    {%- if page.path contains 'category-' or page.path contains 'posts.html' or page.path contains 'categories.html' or page.path contains 'tags.html' or page.path contains 'privacy-policy' or page.path contains 'terms' or page.noindex == true -%}
+      {%- assign include_page = false -%}
+    {%- endif -%}
+  {%- endif -%}
+  {%- if include_page -%}
+    {%- assign page_html = page.content | markdownify -%}
+    {%- assign page_body = page_html | replace: '</p>', ' ' | replace: '</h2>', ' ' | replace: '</h3>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | strip | truncate: 600, "" -%}
+    {%- assign page_url = site.baseurl | append: page.url -%}
+    {%- unless is_first_doc -%},{%- endunless -%}
+{
+  "id": {{ page_url | jsonify }},
+  "url": {{ page_url | jsonify }},
+  "type": "page",
+  "title": {{ page.title | jsonify }},
+  "date": "",
+  "categories": [],
+  "tags": [],
+  "description": {{ page.description | default: "" | strip_newlines | strip | jsonify }},
+  "headings": "",
+  "faq": "",
   "body": {{ page_body | jsonify }}
 }
-{% assign is_first_doc = false %}
-{% endunless %}
-{% endfor %}
-{% for page in site.data.html_pages %}
-{% assign html_page_url = site.url | append: site.baseurl | append: '/_html_pages/' | append: page.path %}
-{% unless is_first_doc %},{% endunless %}
-{
-  "id": {{ html_page_url | jsonify }},
-  "url": {{ html_page_url | jsonify }},
-  "title": {{ page.title | default: "" | jsonify }},
-  "body": {{ page.description | default: "" | truncate: 300 | jsonify }}
-}
-{% assign is_first_doc = false %}
-{% endfor %}
-{% for page in site.posts %}
-{% capture post_body %}{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 500 }}{% endcapture %}
-{% assign post_absolute_url = site.url | append: site.baseurl | append: page.url %}
-{% unless is_first_doc %},{% endunless %}
-{
-  "id": {{ post_absolute_url | jsonify }},
-  "url": {{ post_absolute_url | jsonify }},
-  "title": {{ page.title | default: "" | jsonify }},
-  "body": {{ post_body | jsonify }}
-}
-{% assign is_first_doc = false %}
-{% endfor %}
+    {%- assign is_first_doc = false -%}
+  {%- endif -%}
+{%- endfor -%}
 ]

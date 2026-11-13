@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /assets/data/search-fulltext.json
+sitemap: false
+---
+{
+{%- assign is_first_ft = true -%}
+{%- for post in site.posts -%}
+  {%- assign raw_md = post.content | split: '## 相关阅读' | first | split: '### 相关阅读' | first | split: '## 延伸阅读' | first | split: '### 延伸阅读' | first | split: '## 往期推荐' | first | split: '### 往期推荐' | first | split: '## 推荐阅读' | first -%}
+  {%- assign html = raw_md | markdownify -%}
+  {%- assign pre_parts = html | split: '<pre' -%}
+  {%- capture html_no_pre -%}{{ pre_parts | first }}{%- for pp in pre_parts offset: 1 %} {{ pp | split: '</pre>' | last }}{%- endfor -%}{%- endcapture -%}
+  {%- assign clean_body = html_no_pre | replace: '</p>', ' ' | replace: '</li>', ' ' | replace: '</h2>', ' ' | replace: '</h3>', ' ' | replace: '</h4>', ' ' | replace: '</blockquote>', ' ' | replace: '</td>', ' ' | replace: '<br>', ' ' | replace: '<br/>', ' ' | replace: '<br />', ' ' | strip_html | strip_newlines | replace: '    ', ' ' | replace: '  ', ' ' | replace: '  ', ' ' | strip -%}
+  {%- if clean_body.size > 380 -%}
+    {%- assign post_url = site.baseurl | append: post.url -%}
+    {%- unless is_first_ft -%},{%- endunless -%}
+{{ post_url | jsonify }}:{{ clean_body | jsonify }}
+    {%- assign is_first_ft = false -%}
+  {%- endif -%}
+{%- endfor -%}
+}
