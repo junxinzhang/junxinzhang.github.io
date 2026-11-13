@@ -249,11 +249,11 @@
     @media (max-width: 960px) { .grid-2 { grid-template-columns: 1fr } }
     section[id] { scroll-margin-top: 76px }
     #storage { scroll-margin-top: 76px }
-    #pricing-enterprise { scroll-margin-top: 84px }
+    #dedicated-line, #pricing-enterprise { scroll-margin-top: 84px }
     #pricing { padding-top: 72px }
     #pricing > .container > .section-head { margin-bottom: 14px }
     #pricing > .container > .section-head h2 { margin-top: 4px; font-size: clamp(1.45rem, 2.6vw, 1.88rem) }
-    #pricing > .container > .section-head p { margin-top: 5px; font-size: .88rem }
+    #pricing > .container > .section-head p { margin-top: 5px; font-size: .88rem; max-width: 860px }
     .enterprise-jump {
       display: inline-flex; align-items: center; gap: 4px; margin-left: 6px;
       color: var(--primary-strong); font-weight: 600; white-space: nowrap;
@@ -399,6 +399,28 @@
       background: rgba(217, 119, 87, .16); border: 1px solid rgba(217, 119, 87, .38); transition: .2s;
     }
     .addon-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary) }
+    .line-addons {
+      margin-top: 24px;
+      background:
+        radial-gradient(70% 80% at 95% 0%, rgba(217, 119, 87, .12), transparent 65%),
+        linear-gradient(180deg, rgba(255, 255, 255, .035), rgba(255, 255, 255, .015));
+      border-color: rgba(232, 144, 111, .30);
+    }
+    .line-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px }
+    @media (max-width: 960px) { .line-grid { grid-template-columns: 1fr } }
+    .addon-card.addon-card-featured {
+      border-color: rgba(232, 144, 111, .42);
+      background: linear-gradient(180deg, rgba(217, 119, 87, .10), rgba(20, 18, 16, .75));
+    }
+    .addon-btn.addon-btn-primary {
+      background: var(--primary); color: #fff; border-color: var(--primary);
+      box-shadow: 0 6px 18px rgba(217, 119, 87, .32);
+    }
+    .addon-btn.addon-btn-primary:hover { background: var(--primary-strong); border-color: var(--primary-strong) }
+    .line-price-wrap { display: flex; flex-direction: column; gap: 2px }
+    .line-orig { font-size: .76rem; font-weight: 500; color: var(--muted); margin-left: 6px }
+    .line-subnote { font-size: .74rem; color: var(--muted) }
+    .line-subnote.annual-note { color: #e8b99b }
 
     /* Steps */
     .steps { counter-reset: step }
@@ -1002,6 +1024,7 @@
           <h2>Ongoing network investment<br>for a responsive remote desktop</h2>
           <p>We keep investing in hardware and premium routes: 9-country native ISP broadband with 200Mbps–500Mbps+ symmetrical speeds, paired with self-hosted relays and an enterprise BGP backbone that cut packet loss—the real enemy of remote desktops—to zero.</p>
           <ul class="net-chips"><li>200–500Mbps+ Symmetrical</li><li>Enterprise BGP backbone</li><li>Self-hosted relays</li><li>Dual-leg BBR</li><li>Apple Silicon hardware encoding</li><li>Allow-list hardening</li></ul>
+          <p style="margin: 14px 0 0; font-size: .86rem; color: var(--muted);">Included free on 20x, Team &amp; Business; 1x / 5x subscribers can add the <a href="#dedicated-line" style="color: var(--primary-strong); font-weight: 600; border-bottom: 1px dashed rgba(232, 144, 111, .5);">ClaudeOps Enterprise Dedicated Line (from $5/mo) ↓</a></p>
         </div>
         <div class="card net-card" aria-label="Measured latency and packet loss before and after optimisation">
           <div class="net-legend"><span class="lg before">Before</span><span class="lg after">After</span></div>
@@ -1255,7 +1278,7 @@
         <div class="section-head">
           <p class="section-tag">Pricing</p>
           <h2>Plans from solo to enterprise.</h2>
-          <p>Scale from individual workspaces to dedicated multi-Mac clusters. <strong>Pay annually for 10 months and get 2 months free</strong>.<a class="enterprise-jump" href="#pricing-enterprise">Team &amp; Business ↓</a></p>
+          <p>Scale from individual workspaces to dedicated multi-Mac clusters. <strong>Pay annually for 10 months and get 2 months free</strong>.<a class="enterprise-jump" href="#dedicated-line">Dedicated Line ↓</a><a class="enterprise-jump" href="#pricing-enterprise">Team &amp; Business ↓</a></p>
         </div>
         <div class="pricing-controls">
           <div class="billing-switch" role="group" aria-label="Choose billing cycle">
@@ -1329,6 +1352,42 @@
             <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/6oU00lail6MSgma6RM9Zm1n" target="_blank" rel="noopener">Subscribe</a>
             <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%2020x%20Ultimate">Questions? Email us →</a>
           </article>
+        </div>
+
+        <!-- ClaudeOps Enterprise Dedicated Line Value-Added Service -->
+        <div class="seat-addons line-addons" id="dedicated-line">
+          <div class="seat-addons-head">
+            <h3>ClaudeOps Enterprise Dedicated Line · Cross-Border Acceleration <span class="addon-pill">Complimentary on 20x / Team / Business</span></h3>
+            <p>Optional add-on for 1x &amp; 5x subscribers: route traffic over our enterprise BGP cross-border backbone with dual-leg BBR 0% packet-loss acceleration for ultra-responsive Screen Sharing &amp; Claude Code (annual billing gets 2 months free).</p>
+          </div>
+          <div class="line-grid">
+            <div class="addon-card">
+              <div>
+                <div class="addon-route"><code>1x Dedicated Line</code> <span>Standard Acceleration · For 1x Standard</span></div>
+                <p class="addon-desc">Enterprise BGP cross-border backbone + self-hosted encrypted low-latency relay + dual-leg BBR optimization, keeping daily Apple Screen Sharing, SSH &amp; light Claude Code sessions jitter-free at peak hours.</p>
+              </div>
+              <div class="addon-foot">
+                <div class="line-price-wrap">
+                  <div class="addon-price" data-line-idx="0">+<sup>A$</sup><span class="amount">8</span><small data-line-period>/ mo</small><del class="line-orig" data-line-orig="0" style="display:none"></del></div>
+                  <span class="line-subnote" data-line-note="0">24/7 BGP zero-loss acceleration · Managed with plan</span>
+                </div>
+                <a class="addon-btn" data-line-tier="line_1x" href="https://buy.stripe.com/28E3cx2PTfjo4Ds5NI9Zn0j" target="_blank" rel="noopener">Add 1x Line →</a>
+              </div>
+            </div>
+            <div class="addon-card addon-card-featured">
+              <div>
+                <div class="addon-route"><code class="to">5x Dedicated Line</code> <span>Pro Acceleration · For 5x Pro (20% lower unit cost)</span></div>
+                <p class="addon-desc">5× priority bandwidth quota + high-priority enterprise BGP QoS queue + dual-leg BBR 0% packet-loss guarantee, built for heavy real-time Claude Code sessions, large repo syncs &amp; high-FPS remote desktops.</p>
+              </div>
+              <div class="addon-foot">
+                <div class="line-price-wrap">
+                  <div class="addon-price" data-line-idx="1">+<sup>A$</sup><span class="amount">30</span><small data-line-period>/ mo</small><del class="line-orig" data-line-orig="1" style="display:none"></del></div>
+                  <span class="line-subnote" data-line-note="1">5× priority throughput · High-priority BGP QoS</span>
+                </div>
+                <a class="addon-btn addon-btn-primary" data-line-tier="line_5x" href="https://buy.stripe.com/00wcN71LP6MS8TI2Bw9Zn0w" target="_blank" rel="noopener">Add 5x Line →</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Team & Business Plans -->
@@ -1550,7 +1609,15 @@
             • <strong>20x Ultimate</strong>: Solo 20× allowance + high-spec Mac Studio / Mac mini (dedicated machine option) + <strong>7×24h</strong> private concierge + <strong>private RustDesk channel</strong> + <strong>6 TB cloud storage</strong>;<br>
             • <strong>Team (5 Seats · Dedicated Host)</strong>: Available in All-Pro (1x), All-Max (5x) or All-Ultra (20x) tiers — dedicated physical Mac host for your team, seat reassignment, consolidated billing, private RustDesk channel, 6–12 TB cloud storage &amp; 7×24h team concierge;<br>
             • <strong>Business (10 Seats · Multi-Mac Cluster)</strong>: Available in All-Pro (1x), All-Max (5x) or All-Ultra (20x) tiers — dedicated multi-Mac cluster (9-country dual-region deployment &amp; rapid migration), commercial invoicing, enterprise RustDesk relay, 12–30 TB cloud storage &amp; 7×24h VIP SLA;<br>
-            • <strong>Per-Seat Upgrade Add-ons</strong>: Start on an All-Pro or All-Max base plan and upgrade specific seats to Max (5x) or Ultra (20x) at any time via self-serve checkout (adjustable quantity 1–50 seats).</p>
+            • <strong>Per-Seat Upgrade Add-ons</strong>: Start on an All-Pro or All-Max base plan and upgrade specific seats to Max (5x) or Ultra (20x) at any time via self-serve checkout (adjustable quantity 1–50 seats);<br>
+            • <strong>ClaudeOps Enterprise Dedicated Line Add-on</strong>: Optional enterprise BGP cross-border acceleration for 1x (+$5/mo) and 5x (+$20/mo) subscribers (already complimentary on 20x, Team &amp; Business).</p>
+          </details>
+          <details>
+            <summary>What is the ClaudeOps Enterprise Dedicated Line add-on? Who needs it?</summary>
+            <p>The <strong>ClaudeOps Enterprise Dedicated Line</strong> routes your remote desktop and terminal traffic over our premium enterprise BGP cross-border backbone with self-hosted relays and dual-leg BBR congestion control, eliminating peak-hour public internet jitter and packet loss:<br>
+            • <strong>1x Dedicated Line ($5/mo · $50/yr)</strong>: Designed for 1x Standard solo subscribers running daily Apple Screen Sharing, SSH and light coding;<br>
+            • <strong>5x Dedicated Line ($20/mo · $200/yr)</strong>: Designed for 5x Pro engineering workloads with 5× priority bandwidth quota and high-priority BGP QoS (20% lower unit cost vs 1x);<br>
+            • <strong>Included Free on Flagship &amp; Team Tiers</strong>: <strong>20x Ultimate, Team and Business plans already include dedicated enterprise acceleration at no extra charge</strong>.</p>
           </details>
           <details>
             <summary>Why is Zaokit ClaudeOps priced higher than standard cloud desktops or shared accounts?</summary>
@@ -1673,15 +1740,15 @@
   <script>
     (function () {
       // 定价遵循官方 B2B 阶梯策略（Solo < Team单席 < Business单席），年付统一收 10 个月（免 2 个月）
-      // p = [1x, 5x, 20x], team = [pro, max, ultra], biz = [pro, max, ultra], upg = [pro->max, max->ultra, pro->ultra]
+      // p = [1x, 5x, 20x], team = [pro, max, ultra], biz = [pro, max, ultra], upg = [pro->max, max->ultra, pro->ultra], line = [1x, 5x]
       var PRICES = {
-        AUD: { sym: 'A$', name: 'AUD', p: [149, 579, 1049], orig20x: 1499, team: [899, 3199, 5799], biz: [1949, 6599, 11899], upg: [479, 539, 999], s: [13.99, 43.99, 88.99, 224.99], so: [14.99, 44.99, 89.99, 225.99] },
-        USD: { sym: '$', name: 'USD', p: [99, 399, 699], orig20x: 999, team: [599, 2199, 3899], biz: [1299, 4499, 7999], upg: [329, 359, 679], s: [8.99, 28.99, 58.99, 148.99], so: [9.99, 29.99, 59.99, 149.99] },
-        EUR: { sym: '€', name: 'EUR', p: [89, 349, 629], orig20x: 899, team: [539, 1949, 3499], biz: [1169, 3999, 7199], upg: [289, 329, 609], s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
-        NZD: { sym: 'NZ$', name: 'NZD', p: [179, 699, 1199], orig20x: 1799, team: [1079, 3849, 6699], biz: [2299, 7899, 13799], upg: [569, 629, 1179], s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
-        CAD: { sym: 'C$', name: 'CAD', p: [139, 549, 969], orig20x: 1399, team: [839, 2999, 5399], biz: [1799, 6199, 10999], upg: [449, 499, 939], s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
-        CNY: { sym: '¥', name: 'CNY', p: [719, 2899, 4999], orig20x: 7199, team: [4299, 15999, 27999], biz: [9199, 32999, 56999], upg: [2399, 2599, 4899], s: [65, 209, 419, 1059] },
-        SGD: { sym: 'S$', name: 'SGD', p: [129, 499, 899], orig20x: 1299, team: [779, 2749, 4999], biz: [1649, 5699, 10299], upg: [409, 469, 869], s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
+        AUD: { sym: 'A$', name: 'AUD', p: [149, 579, 1049], orig20x: 1499, team: [899, 3199, 5799], biz: [1949, 6599, 11899], upg: [479, 539, 999], line: [8, 30], s: [13.99, 43.99, 88.99, 224.99], so: [14.99, 44.99, 89.99, 225.99] },
+        USD: { sym: '$', name: 'USD', p: [99, 399, 699], orig20x: 999, team: [599, 2199, 3899], biz: [1299, 4499, 7999], upg: [329, 359, 679], line: [5, 20], s: [8.99, 28.99, 58.99, 148.99], so: [9.99, 29.99, 59.99, 149.99] },
+        EUR: { sym: '€', name: 'EUR', p: [89, 349, 629], orig20x: 899, team: [539, 1949, 3499], biz: [1169, 3999, 7199], upg: [289, 329, 609], line: [5, 19], s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
+        NZD: { sym: 'NZ$', name: 'NZD', p: [179, 699, 1199], orig20x: 1799, team: [1079, 3849, 6699], biz: [2299, 7899, 13799], upg: [569, 629, 1179], line: [10, 37], s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
+        CAD: { sym: 'C$', name: 'CAD', p: [139, 549, 969], orig20x: 1399, team: [839, 2999, 5399], biz: [1799, 6199, 10999], upg: [449, 499, 939], line: [8, 29], s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
+        CNY: { sym: '¥', name: 'CNY', p: [719, 2899, 4999], orig20x: 7199, team: [4299, 15999, 27999], biz: [9199, 32999, 56999], upg: [2399, 2599, 4899], line: [36, 139], s: [65, 209, 419, 1059] },
+        SGD: { sym: 'S$', name: 'SGD', p: [129, 499, 899], orig20x: 1299, team: [779, 2749, 4999], biz: [1649, 5699, 10299], upg: [409, 469, 869], line: [7, 26], s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
       };
       var STRIPE_LINKS = {
         '2t_CNY': 'https://buy.stripe.com/3cI5kFgGJefk3zofoi9Zm1w',
@@ -1879,7 +1946,35 @@
         'upg_pu_yr_EUR': 'https://buy.stripe.com/5kQcN70HL5IO1rg3FA9Zn0c',
         'upg_pu_yr_NZD': 'https://buy.stripe.com/28EcN7769efk7PE5NI9Zn0e',
         'upg_pu_yr_SGD': 'https://buy.stripe.com/fZufZj2PT5IOd9Ydga9Zn0g',
-        'upg_pu_yr_USD': 'https://buy.stripe.com/9B64gB0HL1sy1rg1xs9Zn0b'
+        'upg_pu_yr_USD': 'https://buy.stripe.com/9B64gB0HL1sy1rg1xs9Zn0b',
+        'line_1x_AUD': 'https://buy.stripe.com/28E3cx2PTfjo4Ds5NI9Zn0j',
+        'line_1x_CAD': 'https://buy.stripe.com/3cI8wR8ad2wC1rgfoi9Zn0h',
+        'line_1x_CNY': 'https://buy.stripe.com/00w9AV0HLb385Hwcc69Zn0m',
+        'line_1x_EUR': 'https://buy.stripe.com/cNi7sNdux9Z4c5U4JE9Zn0o',
+        'line_1x_NZD': 'https://buy.stripe.com/bJe00l3TXb381rg4JE9Zn0u',
+        'line_1x_SGD': 'https://buy.stripe.com/28E5kF4Y17QWfi68ZU9Zn0k',
+        'line_1x_USD': 'https://buy.stripe.com/dRm4gBfCFc7c2vk2Bw9Zn0i',
+        'line_1x_yr_AUD': 'https://buy.stripe.com/dRm4gB8ad9Z41rg3FA9Zn0n',
+        'line_1x_yr_CAD': 'https://buy.stripe.com/8x2fZj4Y1fjo8TI8ZU9Zn0q',
+        'line_1x_yr_CNY': 'https://buy.stripe.com/8x29AVdux6MS2vkcc69Zn0s',
+        'line_1x_yr_EUR': 'https://buy.stripe.com/4gM00l7696MS2vka3Y9Zn0t',
+        'line_1x_yr_NZD': 'https://buy.stripe.com/9B68wR4Y1gns3zo5NI9Zn0r',
+        'line_1x_yr_SGD': 'https://buy.stripe.com/aFacN73TX0ou1rg7VQ9Zn0p',
+        'line_1x_yr_USD': 'https://buy.stripe.com/5kQbJ38adb381rg3FA9Zn0l',
+        'line_5x_AUD': 'https://buy.stripe.com/00wcN71LP6MS8TI2Bw9Zn0w',
+        'line_5x_CAD': 'https://buy.stripe.com/14A00lbmpefk6LA2Bw9Zn0z',
+        'line_5x_CNY': 'https://buy.stripe.com/14A7sNbmp8V03zo5NI9Zn0A',
+        'line_5x_EUR': 'https://buy.stripe.com/aFaaEZfCF3AGc5U8ZU9Zn0x',
+        'line_5x_NZD': 'https://buy.stripe.com/7sY28tfCF7QW4Ds5NI9Zn0y',
+        'line_5x_SGD': 'https://buy.stripe.com/3cI9AVgGJ0ou0nccc69Zn0B',
+        'line_5x_USD': 'https://buy.stripe.com/4gMcN7769dbg4Ds6RM9Zn0v',
+        'line_5x_yr_AUD': 'https://buy.stripe.com/dRm4gBcqt7QWee2eke9Zn0E',
+        'line_5x_yr_CAD': 'https://buy.stripe.com/6oUfZj9eh6MSfi62Bw9Zn0G',
+        'line_5x_yr_CNY': 'https://buy.stripe.com/6oUbJ31LP3AGee22Bw9Zn0I',
+        'line_5x_yr_EUR': 'https://buy.stripe.com/9B68wRgGJgns2vkfoi9Zn0D',
+        'line_5x_yr_NZD': 'https://buy.stripe.com/8x228tbmp6MS1rg8ZU9Zn0F',
+        'line_5x_yr_SGD': 'https://buy.stripe.com/7sY4gB4Y1b381rg3FA9Zn0H',
+        'line_5x_yr_USD': 'https://buy.stripe.com/6oU00l2PT7QW2vk2Bw9Zn0C'
       };
 
       var ENT_COPY = {
@@ -2039,6 +2134,41 @@
           var ut = btn.getAttribute('data-upg-tier') + (isYear ? '_yr' : '');
           var uLink = STRIPE_LINKS[ut + '_' + curCode] || STRIPE_LINKS[ut + '_AUD'];
           if (uLink) btn.setAttribute('href', uLink);
+        });
+
+        // 3b. Enterprise Dedicated Line add-ons (1x / 5x)
+        document.querySelectorAll('[data-line-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-line-idx');
+          var lmo = c.line[i];
+          el.querySelector('sup').textContent = c.sym;
+          el.querySelector('.amount').textContent = fmt(isYear ? lmo * 10 : lmo);
+          var lPer = el.querySelector('[data-line-period]');
+          if (lPer) lPer.textContent = isYear ? '/ yr' : '/ mo';
+          var lOrig = el.querySelector('[data-line-orig]');
+          if (lOrig) {
+            if (isYear) {
+              lOrig.textContent = c.sym + fmt(lmo * 12);
+              lOrig.style.display = 'inline';
+            } else {
+              lOrig.style.display = 'none';
+            }
+          }
+        });
+        document.querySelectorAll('[data-line-note]').forEach(function (el) {
+          var i = +el.getAttribute('data-line-note');
+          var lmo = c.line[i];
+          el.classList.toggle('annual-note', isYear);
+          if (isYear) {
+            var eqL = +(lmo * 10 / 12).toFixed(1);
+            el.textContent = '10 months billed annually · ~' + c.sym + eqL + '/mo, save ' + c.sym + fmt(lmo * 2);
+          } else {
+            el.textContent = i === 0 ? '24/7 BGP zero-loss acceleration · Managed with plan' : '5× priority throughput · High-priority BGP QoS';
+          }
+        });
+        document.querySelectorAll('[data-line-tier]').forEach(function (btn) {
+          var lt = btn.getAttribute('data-line-tier') + (isYear ? '_yr' : '');
+          var lLink = STRIPE_LINKS[lt + '_' + curCode] || STRIPE_LINKS[lt + '_AUD'];
+          if (lLink) btn.setAttribute('href', lLink);
         });
 
         // 4. Cloud storage
@@ -2394,7 +2524,7 @@
       var rawY;
       if (id === 'storage') {
         rawY = docTop(sec) - headerH - 4;
-      } else if (id === 'pricing-enterprise') {
+      } else if (id === 'pricing-enterprise' || id === 'dedicated-line') {
         rawY = docTop(sec) - headerH - 16;
       } else {
         var headEl = sec.querySelector('.section-head');
@@ -2418,7 +2548,7 @@
         e.preventDefault();
         history.replaceState(null, '', '#' + id);
         var destY = scrollToSection(id, true);
-        var spyId = navById[id] ? id : (id === 'pricing-enterprise' && navById.pricing ? 'pricing' : null);
+        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line') && navById.pricing ? 'pricing' : null);
         if (spyId && destY !== null) {
           lockedNavId = spyId;
           lockTargetY = destY;
