@@ -38,8 +38,12 @@
       { "@type": "Offer", "name": "1x 标准版", "price": "99", "priceCurrency": "USD" },
       { "@type": "Offer", "name": "5x 专业版", "price": "399", "priceCurrency": "USD" },
       { "@type": "Offer", "name": "20x 旗舰版", "price": "699", "priceCurrency": "USD", "priceValidUntil": "2026-12-31" },
-      { "@type": "Offer", "name": "Team 团队版 (5 席位)", "price": "1499", "priceCurrency": "USD" },
-      { "@type": "Offer", "name": "Business 企业版 (10 席位)", "price": "2999", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Team 团队版 · Pro (5 席位)", "price": "599", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Team 团队版 · Max (5 席位)", "price": "2199", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Team 团队版 · Ultra (5 席位)", "price": "3899", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Business 企业版 · Pro (10 席位)", "price": "1299", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Business 企业版 · Max (10 席位)", "price": "4499", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Business 企业版 · Ultra (10 席位)", "price": "7999", "priceCurrency": "USD" },
       { "@type": "Offer", "name": "1x 标准版", "price": "89", "priceCurrency": "EUR" },
       { "@type": "Offer", "name": "5x 专业版", "price": "349", "priceCurrency": "EUR" },
       { "@type": "Offer", "name": "20x 旗舰版", "price": "629", "priceCurrency": "EUR", "priceValidUntil": "2026-12-31" },
@@ -245,7 +249,7 @@
     }
     .currency-switch button:hover { color: var(--text) }
     .currency-switch button[aria-pressed="true"] { background: var(--primary); color: #fff; font-weight: 600 }
-    /* Compact first-screen fit for #pricing + Annual Billing & Team/Business tiers */
+    /* Compact first-screen fit for #pricing + Modular Team/Business & Seat Upgrades */
     .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
     @media (max-width: 960px) { .grid-2 { grid-template-columns: 1fr } }
     #storage { scroll-margin-top: 32px }
@@ -264,19 +268,19 @@
       display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px;
       margin: 0 auto 18px;
     }
-    .billing-switch {
-      display: inline-flex; align-items: center; gap: 4px; padding: 4px;
+    .billing-switch, .seat-tier-switch {
+      display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 4px; padding: 4px;
       border: 1px solid rgba(217, 119, 87, .34); border-radius: 24px;
       background: linear-gradient(180deg, rgba(217, 119, 87, .09), rgba(255, 255, 255, .025));
     }
-    .billing-switch button {
+    .billing-switch button, .seat-tier-switch button {
       display: inline-flex; align-items: center; gap: 6px;
       font: inherit; font-size: .82rem; color: var(--muted); background: transparent; border: 0;
       padding: 5px 13px; border-radius: 999px; cursor: pointer; transition: background .2s, color .2s, box-shadow .2s;
       white-space: nowrap;
     }
-    .billing-switch button:hover { color: var(--text) }
-    .billing-switch button[aria-pressed="true"] {
+    .billing-switch button:hover, .seat-tier-switch button:hover { color: var(--text) }
+    .billing-switch button[aria-pressed="true"], .seat-tier-switch button[aria-pressed="true"] {
       background: var(--primary); color: #fff; font-weight: 600;
       box-shadow: 0 4px 14px rgba(217, 119, 87, .35);
     }
@@ -286,7 +290,8 @@
       background: rgba(91, 209, 139, .16); color: #6ee29d; border: 1px solid rgba(91, 209, 139, .35);
       transition: .2s;
     }
-    .billing-switch button[aria-pressed="true"] .save-badge {
+    .billing-switch button[aria-pressed="true"] .save-badge,
+    .seat-tier-switch button[aria-pressed="true"] .save-badge {
       background: rgba(255, 255, 255, .22); color: #fff; border-color: rgba(255, 255, 255, .42);
     }
     #pricing .pricing-controls .currency-switch { margin: 0; padding: 4px }
@@ -304,9 +309,9 @@
     #pricing > .container > .pricing .plan-consult { margin-top: 7px; font-size: .78rem }
 
     /* Team & Business Enterprise Cluster Row */
-    .enterprise-wrap { margin-top: 30px }
+    .enterprise-wrap { margin-top: 34px }
     .tier-divider {
-      display: flex; align-items: center; gap: 14px; margin: 0 0 26px;
+      display: flex; align-items: center; gap: 14px; margin: 0 0 14px;
       color: var(--cream); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
     }
     .tier-divider::before, .tier-divider::after {
@@ -319,6 +324,10 @@
       color: var(--primary-strong); white-space: nowrap;
     }
     @media (max-width: 560px) { .tier-divider span { white-space: normal; text-align: center } }
+    .enterprise-toolbar {
+      display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 0 0 26px; text-align: center;
+    }
+    .enterprise-toolbar p { margin: 0; font-size: .82rem; color: var(--muted) }
     .pricing-enterprise .plan { padding: 24px 26px 20px }
     .pricing-enterprise .plan-tier b { font-size: 1.95rem }
     .pricing-enterprise .plan-desc { margin: 6px 0 12px; min-height: 2.5em; font-size: .87rem; line-height: 1.48 }
@@ -344,6 +353,56 @@
         linear-gradient(180deg, rgba(217, 119, 87, .09), rgba(255, 255, 255, .02));
       box-shadow: 0 22px 54px -18px rgba(217, 119, 87, .18);
     }
+
+    /* Modular Per-Seat Upgrade Add-on Strip */
+    .seat-addons {
+      margin-top: 20px; padding: 20px 22px; border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .015));
+      border: 1px solid rgba(232, 144, 111, .22);
+    }
+    .seat-addons-head {
+      display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px;
+      margin-bottom: 14px;
+    }
+    .seat-addons-head h3 {
+      margin: 0; font-size: .98rem; color: var(--cream); display: flex; align-items: center; gap: 8px;
+    }
+    .seat-addons-head h3 .addon-pill {
+      font-size: .70rem; font-weight: 700; padding: 2px 8px; border-radius: 999px;
+      background: rgba(217, 119, 87, .18); color: var(--primary-strong); border: 1px solid rgba(217, 119, 87, .35);
+    }
+    .seat-addons-head p { margin: 0; font-size: .81rem; color: var(--muted) }
+    .addon-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px }
+    @media (max-width: 960px) { .addon-grid { grid-template-columns: 1fr } }
+    .addon-card {
+      display: flex; flex-direction: column; justify-content: space-between; gap: 10px;
+      padding: 15px 17px; border-radius: 14px;
+      background: rgba(20, 18, 16, .65); border: 1px solid var(--border);
+      transition: border-color .22s, transform .22s;
+    }
+    .addon-card:hover { border-color: rgba(232, 144, 111, .45); transform: translateY(-2px) }
+    .addon-route {
+      display: flex; align-items: center; gap: 7px; font-weight: 700; font-size: .9rem; color: #fff;
+    }
+    .addon-route code {
+      font-family: inherit; font-size: .75rem; font-weight: 700; padding: 2px 7px; border-radius: 6px;
+      background: rgba(255, 255, 255, .06); color: var(--cream);
+    }
+    .addon-route code.to { background: rgba(217, 119, 87, .20); color: var(--primary-strong) }
+    .addon-desc { margin: 4px 0 0; font-size: .79rem; color: var(--muted); line-height: 1.42 }
+    .addon-foot {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, .06);
+    }
+    .addon-price { font-weight: 800; font-size: 1.22rem; color: #fff; white-space: nowrap }
+    .addon-price sup { font-size: .75rem; font-weight: 600; margin-right: 1px; top: -.3em; position: relative }
+    .addon-price small { font-size: .74rem; font-weight: 500; color: var(--muted); margin-left: 2px }
+    .addon-btn {
+      display: inline-flex; align-items: center; gap: 4px; padding: 7px 13px; border-radius: 9px;
+      font-size: .80rem; font-weight: 600; color: var(--cream); white-space: nowrap;
+      background: rgba(217, 119, 87, .16); border: 1px solid rgba(217, 119, 87, .38); transition: .2s;
+    }
+    .addon-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary) }
 
     /* Steps */
     .steps { counter-reset: step }
@@ -705,6 +764,38 @@
       .hero-map-card, .node-aura, .map-status .live-dot { animation: none }
     }
 
+    /* User Reviews / Testimonials */
+    .review-card { display: flex; flex-direction: column; gap: 14px; padding: 24px }
+    .review-head { display: flex; align-items: center; gap: 12px }
+    .review-avatar {
+      width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+      overflow: hidden; border: 1.5px solid rgba(232, 144, 111, .45);
+      background: rgba(255, 255, 255, .04);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .28);
+    }
+    .review-avatar svg { width: 100%; height: 100%; display: block }
+    .review-author { min-width: 0; flex: 1 }
+    .review-name-row { display: flex; align-items: center; gap: 7px; flex-wrap: wrap }
+    .review-name { color: #fff; font-weight: 700; font-size: .98rem; line-height: 1.3 }
+    .review-badge {
+      font-size: .68rem; font-weight: 600; padding: 2px 7px; border-radius: 999px;
+      background: rgba(91, 209, 139, .12); color: #6ee7a0;
+      border: 1px solid rgba(91, 209, 139, .28); white-space: nowrap;
+    }
+    .review-role { color: var(--muted); font-size: .78rem; margin-top: 2px; line-height: 1.35 }
+    .review-stars { color: #f2b48f; font-size: .82rem; letter-spacing: 2px; line-height: 1 }
+    .review-quote { color: var(--cream); font-size: .92rem; line-height: 1.65; margin: 0; flex: 1 }
+    .review-foot {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, .06);
+      font-size: .75rem; color: var(--muted); opacity: .88;
+    }
+    .review-plan { color: var(--primary-strong); font-weight: 600; white-space: nowrap }
+    .reviews-note {
+      text-align: center; color: var(--muted); font-size: .8rem;
+      margin: 26px auto 0; max-width: 44em; opacity: .82;
+    }
+
   </style>
   <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion')</script>
 
@@ -733,6 +824,7 @@
         <li><a href="#service">服务内容</a></li>
         <li><a href="#value">不止算力</a></li>
         <li><a href="#security">安全与隐私</a></li>
+        <li><a href="#reviews">用户评价</a></li>
         <li><a href="#pricing">价格方案</a></li>
         <li><a href="#storage">云存储</a></li>
         <li><a href="#process">开通流程</a></li>
@@ -913,8 +1005,8 @@
         <div class="net-copy">
           <p class="section-tag">Network</p>
           <h2>持续投入网络优化，<br>只为跟手的远程体验</h2>
-          <p>我们持续投入硬件与线路成本，自建高速中继并接入精品 BGP 跨境骨干，把远程桌面最怕的丢包压到 0。</p>
-          <ul class="net-chips"><li>自建高速中继</li><li>精品 BGP 跨境骨干</li><li>双段 BBR 抗丢包</li><li>Apple Silicon 硬件编码</li><li>白名单安全加固</li></ul>
+          <p>我们持续投入硬件与线路成本，接入上下行对等 200Mbps–500Mbps+ 的 9 国本地原生宽带，并自建高速中继与企业精品 BGP 跨境骨干，把远程桌面最怕的丢包压到 0。</p>
+          <ul class="net-chips"><li>上下对等 200–500Mbps+</li><li>企业精品 BGP 骨干</li><li>自建高速中继</li><li>双段 BBR 抗丢包</li><li>Apple Silicon 硬件编码</li><li>白名单安全加固</li></ul>
         </div>
         <div class="card net-card" aria-label="网络优化前后实测对比">
           <div class="net-legend"><span class="lg before">优化前</span><span class="lg after">优化后</span></div>
@@ -960,6 +1052,205 @@
             <p>支持用户端自主设置访问密钥与配置高强度本地加密策略。运维团队仅负责底层连通性监测与续费托管，不会主动访问您账户内的数据，仅在系统维护、安全事件处置或经您授权排障时进行必要操作。</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- User Reviews -->
+    <section class="section section-alt" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Testimonials</p>
+          <h2>来自真实订阅用户的声音</h2>
+          <p>为保护客户隐私，以下展示均使用卡通头像并做匿名脱敏处理，仅保留真实使用反馈与订阅档位。</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#2b211c"/>
+                  <circle cx="32" cy="30" r="17" fill="#5c3627"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#d97757"/>
+                  <circle cx="32" cy="31" r="12" fill="#f7d5be"/>
+                  <path d="M19 29c0-9 6-14 13-14s13 5 13 14c-3-4-7-6-13-6s-10 2-13 6z" fill="#5c3627"/>
+                  <circle cx="27" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <circle cx="37" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <path d="M30.4 31h3.2" stroke="#3c2b24" stroke-width="1.4"/>
+                  <circle cx="27" cy="31" r="1.1" fill="#2b1e19"/>
+                  <circle cx="37" cy="31" r="1.1" fill="#2b1e19"/>
+                  <path d="M29 36.5c1.8 1.5 4.2 1.5 6 0" fill="none" stroke="#b85d43" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">M***</span>
+                  <span class="review-badge">已匿名 · 真实用户</span>
+                </div>
+                <div class="review-role">跨境 AI 产品负责人</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 分评价">★★★★★</div>
+            <p class="review-quote">“企业隧道真是清晰流畅，比我本地 ToDesk 还清晰！写代码、切窗口几乎感觉不到延迟，好用、速度快，虽然不便宜但绝对物超所值，妥妥顶级体验。”</p>
+            <div class="review-foot">
+              <span>来自某聊天软件</span>
+              <span class="review-plan">5x 专业版</span>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#1b232c"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#3d6b8e"/>
+                  <circle cx="32" cy="31" r="12" fill="#f4cfb6"/>
+                  <path d="M19 28c1-9 6-14 13-14 8 0 13 5 13 14-2-4-6-6-11-6-5 0-10 2-15 6z" fill="#232830"/>
+                  <path d="M18 30v-3a14 14 0 0128 0v3" fill="none" stroke="#e8906f" stroke-width="2.2"/>
+                  <rect x="16" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <rect x="44" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <path d="M29 36.8c2 1.3 4 1.3 6 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">晨*</span>
+                  <span class="review-badge">已匿名 · 真实用户</span>
+                </div>
+                <div class="review-role">资深全栈工程师</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 分评价">★★★★★</div>
+            <p class="review-quote">“之前本地折腾网络环境总是半路断线，接入 ClaudeOps 1x 标准版后，独立环境加上 Claude Code 全天候在线，感觉「天才程序员又复活了」😂。现在每天只管专心推需求，账单和网络完全不用操心。”</p>
+            <div class="review-foot">
+              <span>来自某聊天软件</span>
+              <span class="review-plan">1x 标准版</span>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#21261e"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#4f6d54"/>
+                  <circle cx="32" cy="31" r="12" fill="#efd0ba"/>
+                  <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-3-3-7-4-12-4s-9 1-12 4z" fill="#2d2622"/>
+                  <rect x="23" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <rect x="33.5" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <path d="M30.5 31h3" stroke="#2d2622" stroke-width="1.4"/>
+                  <circle cx="26.8" cy="31" r="1.1" fill="#231d19"/>
+                  <circle cx="37.2" cy="31" r="1.1" fill="#231d19"/>
+                  <path d="M29 37c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#9e5e4a" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">Kyle W.</span>
+                  <span class="review-badge">已匿名 · 真实用户</span>
+                </div>
+                <div class="review-role">量化研发主管</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 分评价">★★★★★</div>
+            <p class="review-quote">“最看重 9 国原生宽带与硬件级隔离——私有策略代码和 API Key 全跑在专属 Mac Studio 上，比自己折腾云服务器省心太多，连续跑了几个月零异常、零中断。”</p>
+            <div class="review-foot">
+              <span>澳洲主力节点 · 已匿名</span>
+              <span class="review-plan">20x 旗舰版</span>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#292118"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#c98a4b"/>
+                  <circle cx="32" cy="32" r="12" fill="#f5d3bc"/>
+                  <path d="M19 27c0-8 6-14 13-14s13 6 13 14z" fill="#e8906f"/>
+                  <rect x="18" y="25" width="28" height="4.5" rx="2.2" fill="#d97757"/>
+                  <circle cx="27.5" cy="32.5" r="1.3" fill="#231d19"/>
+                  <circle cx="36.5" cy="32.5" r="1.3" fill="#231d19"/>
+                  <path d="M29.5 37.5c1.7 1.2 3.3 1.2 5 0" fill="none" stroke="#a65f48" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">L***</span>
+                  <span class="review-badge">已匿名 · 真实用户</span>
+                </div>
+                <div class="review-role">独立开发者</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 分评价">★★★★★</div>
+            <p class="review-quote">“当天 Stripe 银联付款当天就交付了独立 macOS 账户，Claude Code 和常用开发工具链都预装好了。不想在环境配置和跨区支付上浪费时间的话，直接上车效率拉满。”</p>
+            <div class="review-foot">
+              <span>日本东京节点 · 已匿名</span>
+              <span class="review-plan">1x 标准版</span>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#271e26"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#8b5e83"/>
+                  <circle cx="32" cy="31" r="15" fill="#3a2835"/>
+                  <circle cx="32" cy="31" r="11.5" fill="#f7d6c1"/>
+                  <path d="M20 29c1-8 6-13 12-13s11 5 12 13c-3-4-7-5-12-5s-9 1-12 5z" fill="#3a2835"/>
+                  <circle cx="27.5" cy="31.5" r="1.2" fill="#281d25"/>
+                  <circle cx="36.5" cy="31.5" r="1.2" fill="#281d25"/>
+                  <path d="M29 36.5c1.8 1.4 4.2 1.4 6 0" fill="none" stroke="#b55d52" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">Sarah C.</span>
+                  <span class="review-badge">已匿名 · 真实用户</span>
+                </div>
+                <div class="review-role">管理咨询合伙人</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 分评价">★★★★★</div>
+            <p class="review-quote">“我不懂运维也不想折腾命令行，7×16 小时一对一支持非常省心。配合托管的 Google Drive 同步项目文档，出差在任何设备上连上去就能接着干活。”</p>
+            <div class="review-foot">
+              <span>新加坡节点 · 已匿名</span>
+              <span class="review-plan">5x 专业版</span>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#1e222a"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#5e6b85"/>
+                  <circle cx="32" cy="31" r="12" fill="#f2ccb2"/>
+                  <path d="M20 27c2-7 6-11 12-11s10 4 12 11c-4-2-8-3-12-3s-8 1-12 3z" fill="#1f232b"/>
+                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1f232b"/>
+                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1f232b"/>
+                  <path d="M28.5 36.2c2.2 1.8 4.8 1.8 7 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">A***</span>
+                  <span class="review-badge">已匿名 · 真实用户</span>
+                </div>
+                <div class="review-role">出海电商技术总监</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 分评价">★★★★★</div>
+            <p class="review-quote">“团队核心研发都在用，晚上挂着多 Agent 自动跑重构和测试，第二天早上直接看 PR。原生屏幕共享画质极清，Telegram 找 Jason 响应也几乎秒回。”</p>
+            <div class="review-foot">
+              <span>来自 Telegram 真实反馈</span>
+              <span class="review-plan">20x 旗舰版</span>
+            </div>
+          </article>
+        </div>
+        <p class="reviews-note">* 为严格保护客户隐私与数据安全，页面评价均采用卡通头像及匿名/脱敏署名展示。</p>
       </div>
     </section>
 
@@ -1048,44 +1339,92 @@
         <!-- Team & Business Plans -->
         <div class="enterprise-wrap" id="pricing-enterprise">
           <div class="tier-divider"><span>Team &amp; Business · 团队与企业专属物理集群方案</span></div>
+          <div class="enterprise-toolbar">
+            <div class="seat-tier-switch" role="group" aria-label="选择团队席位规格">
+              <button type="button" data-seat-tier="pro" aria-pressed="false">全员 Pro 标准版 (1x)</button>
+              <button type="button" data-seat-tier="max" aria-pressed="true">全员 Max 研发版 (5x) <span class="save-badge">主力推荐</span></button>
+              <button type="button" data-seat-tier="ultra" aria-pressed="false">全员 Ultra 旗舰版 (20x)</button>
+            </div>
+            <p>支持全员统一规格；如需定制混搭（如主创用 Ultra、研发用 Max、运营用 Pro），可先订低档底座再通过下方<strong>单席位升配包</strong>按需升级。</p>
+          </div>
           <div class="grid grid-2 pricing pricing-enterprise">
             <article class="card plan">
-              <span class="badge badge-team">含 5 席位 · 团队整机独享</span>
-              <div class="plan-tier"><b>Team</b><span>团队版</span></div>
-              <p class="plan-desc">专为初创核心团队、AI 工作室与投研开发小组打造，整台高配物理 Mac 团队独享，统一账单托管。</p>
-              <div class="price" data-plan-idx="3"><sup>A$</sup><span class="amount">2,249</span><small data-period>/ 月</small><del class="price-orig" data-orig-idx="3" style="display:none"></del></div>
-              <p class="price-note" data-note-idx="3">含 5 个独立专属席位（人均约 A$450 / 月）· 整机物理独享</p>
+              <span class="badge badge-team" data-ent-badge="team">含 5 席 Max (5x) · 团队整机独享</span>
+              <div class="plan-tier"><b>Team</b><span data-ent-sub="team">团队版 · 5 席位</span></div>
+              <p class="plan-desc">专为初创核心团队、AI 工作室与投研开发小组打造，整台高配物理 Mac 团队独享，统一账单与资产归属管理。</p>
+              <div class="price" data-ent-price="team"><sup>A$</sup><span class="amount">3,199</span><small data-period>/ 月</small><del class="price-orig" data-ent-orig="team" style="display:none"></del></div>
+              <p class="price-note" data-ent-note="team">含 5 个 Max (5x) 独立席位 · 整机物理独享 + 团队专属运维</p>
               <ul class="features">
-                <li>包含 <strong>5 个独立成员席位</strong>（每人独立 Claude 账号空间与 macOS 账户）</li>
+                <li data-ent-seat-li="team">包含 <strong>5 个 Max (5x) 专业研发席位</strong>（每人独立 Claude 空间与 macOS 账户）</li>
                 <li><strong>高配置 Mac Studio / Mac mini 整机团队独享</strong>，硬件级安全隔离</li>
-                <li>支持成员入离职席位流转、权限交接与<strong>统一团队账单托管</strong></li>
-                <li>满足全员 Claude Code 日常高强度工程研发与多任务协同</li>
+                <li>公司持有席位调配权，支持成员入离职交接与<strong>统一团队账单发票托管</strong></li>
+                <li>支持后期随时按单席位补差价升配至更高额度（Max / Ultra）</li>
                 <li><strong>7×24 小时</strong>专属团队技术顾问群一对多实时支持</li>
                 <li style="color: var(--primary-strong); font-weight: 600;">免费赠送团队自建高速 RustDesk 加密专属通道</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">免费赠送 12 TB 团队云存储权益（Google Drive / iCloud+）</li>
+                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">免费赠送 12 TB 团队云存储权益（Google Drive / iCloud+）</li>
               </ul>
-              <a class="btn btn-ghost" data-stripe-tier="team" href="https://buy.stripe.com/eVq9AVcqtefk9XM0to9Zm1V" target="_blank" rel="noopener">立即订阅 Team 版</a>
-              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%20Team%20%E5%9B%A2%E9%98%9F%E7%89%88">需增购席位或定制配置？联系团队顾问 →</a>
+              <a class="btn btn-ghost" data-ent-btn="team" href="https://buy.stripe.com/28E4gB769efk6LAgsm9Zm2C" target="_blank" rel="noopener">立即订阅 Team 版</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%20Team%20%E5%9B%A2%E9%98%9F%E7%89%88">需增购额外席位或定制配置？联系团队顾问 →</a>
             </article>
 
             <article class="card plan plan-business">
-              <span class="badge">企业旗舰 · 10 席位多机集群</span>
-              <div class="plan-tier"><b>Business</b><span>企业版</span></div>
-              <p class="plan-desc">面向科技企业、量化投研与跨境核心研发部门，多台物理 Mac 专属集群独享与 9 国跨区高可用保障。</p>
-              <div class="price" data-plan-idx="4"><sup>A$</sup><span class="amount">4,499</span><small data-period>/ 月</small><del class="price-orig" data-orig-idx="4" style="display:none"></del></div>
-              <p class="price-note" data-note-idx="4">含 10 个独立专属席位（人均约 A$450 / 月）· 多机集群独享</p>
+              <span class="badge" data-ent-badge="biz">企业旗舰 · 10 席 Max (5x) 多机集群</span>
+              <div class="plan-tier"><b>Business</b><span data-ent-sub="biz">企业版 · 10 席位</span></div>
+              <p class="plan-desc">面向高速成长的科技企业、量化投研与跨境研发部门，多台物理 Mac 专属集群独享与 9 国跨区双节点保障。</p>
+              <div class="price" data-ent-price="biz"><sup>A$</sup><span class="amount">6,599</span><small data-period>/ 月</small><del class="price-orig" data-ent-orig="biz" style="display:none"></del></div>
+              <p class="price-note" data-ent-note="biz">含 10 个 Max (5x) 独立席位 · 多机物理集群独享 + VIP 专属群</p>
               <ul class="features">
-                <li>包含 <strong>10 个独立成员席位</strong>（支持按需弹性扩容至 50+ 席位）</li>
+                <li data-ent-seat-li="biz">包含 <strong>10 个 Max (5x) 专业研发席位</strong>（支持按需弹性扩容至 50+ 席位）</li>
                 <li><strong>多台高配置 Mac Studio / Mac mini 专属物理集群独享</strong></li>
-                <li>支持 <strong>9 国双区域混合部署与热备容灾</strong> + 独享纯净原生静态商宽</li>
-                <li>统一商业账单（Commercial Invoice）、对公报销凭证与专属客户经理</li>
+                <li>支持 <strong>9 国双区域混合部署与故障快速迁移</strong> + 独享纯净原生静态商宽</li>
+                <li>统一商业形式发票（Commercial Invoice）、对公报销凭证与专属客户经理</li>
                 <li><strong>TOP 级 7×24 小时企业 VIP 专属群</strong>（优先排障与架构顾问）</li>
                 <li style="color: var(--primary-strong); font-weight: 600;">免费赠送企业级自建高速 RustDesk 独立中继专线</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">免费赠送 30 TB 企业级云存储权益（Google Drive / iCloud+）</li>
+                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">免费赠送 30 TB 企业级云存储权益（Google Drive / iCloud+）</li>
               </ul>
-              <a class="btn btn-primary" data-stripe-tier="business" href="https://buy.stripe.com/eVq7sNgGJgnsd9Y4JE9Zm29" target="_blank" rel="noopener">立即订阅 Business 版</a>
+              <a class="btn btn-primary" data-ent-btn="biz" href="https://buy.stripe.com/bJe5kFgGJ7QWb1Q2Bw9Zm3i" target="_blank" rel="noopener">立即订阅 Business 版</a>
               <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Claude%20%E4%BB%A3%E8%BF%90%E8%90%A5%E5%92%A8%E8%AF%A2%20-%20Business%20%E4%BC%81%E4%B8%9A%E7%89%88">20+ 席位或私有化专属集群？联系企业顾问 →</a>
             </article>
+          </div>
+
+          <!-- Per-Seat Self-Serve Upgrade Add-ons -->
+          <div class="seat-addons">
+            <div class="seat-addons-head">
+              <h3>单席位弹性升配包 <span class="addon-pill">支持 1–50 席自选数量</span></h3>
+              <p>已订阅 Team / Business 底座的团队，可随时为指定成员自助下单补差价升级额度（跟随上方月付/年付周期同步享年付免 2 个月优惠）。</p>
+            </div>
+            <div class="addon-grid">
+              <div class="addon-card">
+                <div>
+                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Max 5x</code> <span>席位升配</span></div>
+                  <p class="addon-desc">将团队内任意 1x 标准席位升级为 5x 专业研发席位，满足日常重度 Claude Code 开发。</p>
+                </div>
+                <div class="addon-foot">
+                  <div class="addon-price" data-upg-idx="0">+<sup>A$</sup><span class="amount">479</span><small data-upg-period>/ 席 / 月</small></div>
+                  <a class="addon-btn" data-upg-tier="upg_pm" href="https://buy.stripe.com/bJe5kFfCF6MSc5U3FA9Zm3I" target="_blank" rel="noopener">下单升配 →</a>
+                </div>
+              </div>
+              <div class="addon-card">
+                <div>
+                  <div class="addon-route"><code>Max 5x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>席位升配</span></div>
+                  <p class="addon-desc">在全员 Max 研发底座上，为创始人、CTO 或核心架构师升级至 20x 顶配多 Agent 额度。</p>
+                </div>
+                <div class="addon-foot">
+                  <div class="addon-price" data-upg-idx="1">+<sup>A$</sup><span class="amount">539</span><small data-upg-period>/ 席 / 月</small></div>
+                  <a class="addon-btn" data-upg-tier="upg_mu" href="https://buy.stripe.com/7sY3cxfCFc7c8TIcc69Zm3Y" target="_blank" rel="noopener">下单升配 →</a>
+                </div>
+              </div>
+              <div class="addon-card">
+                <div>
+                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>跨级升配</span></div>
+                  <p class="addon-desc">在全员 Pro 办公底座上，将指定核心技术负责人的席位一步到位直接升配至 20x 顶配额度。</p>
+                </div>
+                <div class="addon-foot">
+                  <div class="addon-price" data-upg-idx="2">+<sup>A$</sup><span class="amount">999</span><small data-upg-period>/ 席 / 月</small></div>
+                  <a class="addon-btn" data-upg-tier="upg_pu" href="https://buy.stripe.com/cNidRbailefk9XM7VQ9Zn05" target="_blank" rel="noopener">下单升配 →</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1214,8 +1553,17 @@
             • <strong>1x 标准版</strong>：单人基础用量额度 + Mac mini 物理环境（独立 macOS 账户隔离）+ <strong>7×8 小时</strong>一对一专属支持；<br>
             • <strong>5x 专业版</strong>：单人 5 倍用量额度 + 高配置 Mac mini 物理环境（独立 macOS 账户隔离）+ <strong>7×16 小时</strong>一对一优先支持；<br>
             • <strong>20x 旗舰版</strong>：单人 20 倍用量额度 + 高配置 Mac Studio / Mac mini（可开启整机独享）+ <strong>7×24 小时</strong>私人顾问通道 + <strong>自建高速 RustDesk 专线</strong> + <strong>6 TB 云存储</strong>；<br>
-            • <strong>Team 团队版（5 席位）</strong>：含 5 个独立成员席位 + <strong>高配物理 Mac 整机团队独享</strong> + 统一账单与席位流转管理 + <strong>自建 RustDesk 团队专线</strong> + <strong>12 TB 团队云存储</strong> + <strong>7×24 小时</strong>团队顾问群；<br>
-            • <strong>Business 企业版（10 席位）</strong>：含 10 个独立成员席位（可弹性增购）+ <strong>多台物理 Mac 专属集群独享与 9 国跨区容灾可选</strong> + 商业发票（Commercial Invoice）+ <strong>企业级 RustDesk 独立中继</strong> + <strong>30 TB 企业云存储</strong> + <strong>7×24 小时 VIP 企业响应群</strong>。</p>
+            • <strong>Team 团队版（5 席 · 整机独享）</strong>：可选全员 Pro (1x)、Max (5x) 或 Ultra (20x) 规格，配备高配物理 Mac 整机团队独享、公司级席位流转管理、自建 RustDesk 团队专线、6–12 TB 云存储与 7×24h 团队顾问群；<br>
+            • <strong>Business 企业版（10 席 · 多机集群）</strong>：可选全员 Pro (1x)、Max (5x) 或 Ultra (20x) 规格，配备多台物理 Mac 专属集群（支持 9 国双区域混合部署与快速迁移）、商业形式发票、企业级 RustDesk 独立中继、12–30 TB 云存储与 7×24h VIP 响应群；<br>
+            • <strong>单席位弹性升配包</strong>：支持先订阅 Pro 或 Max 团队底座，再通过单席位升配包（可在结账页自选席位数量）将指定成员随时升级至 Max (5x) 或 Ultra (20x)，灵活实现任意席位混搭。</p>
+          </details>
+          <details>
+            <summary>为什么 Zaokit ClaudeOps 的定价高于普通云桌面或共享方案？</summary>
+            <p>因为我们交付的是<strong>确定性的高规格物理基础设施与全托管工程服务</strong>，而非廉价的共享机房或拼单账号。每一份订阅背后都包含四项真实硬成本：<br>
+            • <strong>高配置物理 Mac 实机</strong>：全系部署于高配置 Mac Studio / Mac mini 物理机（非虚拟化云主机），具备极强的本地算力与长期稳定运行能力，20x 起支持整机独享；<br>
+            • <strong>上下对等 200Mbps–500Mbps+ 原生大带宽</strong>：9 国节点全部接入当地原生商业/住宅宽带，提供充裕的上下行对等带宽，远程屏幕共享依然高清跟手，告别共享小水管的卡顿与掉帧；<br>
+            • <strong>企业精品 BGP 跨境骨干网</strong>：自建高速中继并接入香港/亚太企业级 BGP 精品骨干，配合双段 BBR 抗丢包优化，将跨国远程延迟与丢包率压至极低水平；<br>
+            • <strong>足额官方订阅 + 7×16 / 7×24 真人运维</strong>：包含官方足额额度、账单代管、iCloud/Google Drive 云存储托管，以及工程师一对一环境调优与全天候异常排查。</p>
           </details>
           <details>
             <summary>账户隔离和整机独享有什么区别？为什么 1x / 5x 只能用 Apple 屏幕共享？</summary>
@@ -1333,15 +1681,16 @@
 
   <script>
     (function () {
-      // 多币种价格：p = [1x, 5x, 20x, Team(5席), Business(10席)] 月付价格；年付统一按 10 个月计费（免 2 个月）
+      // 定价遵循官方 B2B 阶梯策略（Solo < Team单席 < Business单席），年付统一收 10 个月（免 2 个月）
+      // p = [1x, 5x, 20x], team = [pro, max, ultra], biz = [pro, max, ultra], upg = [pro->max, max->ultra, pro->ultra]
       var PRICES = {
-        AUD: { sym: 'A$', name: '澳元', p: [149, 579, 1049, 2249, 4499], orig20x: 1499, s: [13.99, 43.99, 88.99, 224.99], so: [14.99, 44.99, 89.99, 225.99] },
-        USD: { sym: '$', name: '美元', p: [99, 399, 699, 1499, 2999], orig20x: 999, s: [8.99, 28.99, 58.99, 148.99], so: [9.99, 29.99, 59.99, 149.99] },
-        EUR: { sym: '€', name: '欧元', p: [89, 349, 629, 1349, 2699], orig20x: 899, s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
-        NZD: { sym: 'NZ$', name: '新西兰元', p: [179, 699, 1199, 2699, 5399], orig20x: 1799, s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
-        CAD: { sym: 'C$', name: '加元', p: [139, 549, 969, 2099, 4199], orig20x: 1399, s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
-        CNY: { sym: '¥', name: '人民币', p: [719, 2899, 4999, 10799, 21599], orig20x: 7199, s: [65, 209, 419, 1059] },
-        SGD: { sym: 'S$', name: '新加坡元', p: [129, 499, 899, 1949, 3899], orig20x: 1299, s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
+        AUD: { sym: 'A$', name: '澳元', p: [149, 579, 1049], orig20x: 1499, team: [899, 3199, 5799], biz: [1949, 6599, 11899], upg: [479, 539, 999], s: [13.99, 43.99, 88.99, 224.99], so: [14.99, 44.99, 89.99, 225.99] },
+        USD: { sym: '$', name: '美元', p: [99, 399, 699], orig20x: 999, team: [599, 2199, 3899], biz: [1299, 4499, 7999], upg: [329, 359, 679], s: [8.99, 28.99, 58.99, 148.99], so: [9.99, 29.99, 59.99, 149.99] },
+        EUR: { sym: '€', name: '欧元', p: [89, 349, 629], orig20x: 899, team: [539, 1949, 3499], biz: [1169, 3999, 7199], upg: [289, 329, 609], s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
+        NZD: { sym: 'NZ$', name: '新西兰元', p: [179, 699, 1199], orig20x: 1799, team: [1079, 3849, 6699], biz: [2299, 7899, 13799], upg: [569, 629, 1179], s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
+        CAD: { sym: 'C$', name: '加元', p: [139, 549, 969], orig20x: 1399, team: [839, 2999, 5399], biz: [1799, 6199, 10999], upg: [449, 499, 939], s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
+        CNY: { sym: '¥', name: '人民币', p: [719, 2899, 4999], orig20x: 7199, team: [4299, 15999, 27999], biz: [9199, 32999, 56999], upg: [2399, 2599, 4899], s: [65, 209, 419, 1059] },
+        SGD: { sym: 'S$', name: '新加坡元', p: [129, 499, 899], orig20x: 1299, team: [779, 2749, 4999], biz: [1649, 5699, 10299], upg: [409, 469, 869], s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
       };
       var STRIPE_LINKS = {
         '2t_CNY': 'https://buy.stripe.com/3cI5kFgGJefk3zofoi9Zm1w',
@@ -1414,49 +1763,182 @@
         '5x_yr_NZD': 'https://buy.stripe.com/3cI00l9eh8V00nc3FA9Zm1K',
         '5x_yr_SGD': 'https://buy.stripe.com/aFa6oJ769efkee23FA9Zm1M',
         '5x_yr_USD': 'https://buy.stripe.com/dRm28t3TX9Z40nc8ZU9Zm1I',
-        'business_AUD': 'https://buy.stripe.com/eVq7sNgGJgnsd9Y4JE9Zm29',
-        'business_CAD': 'https://buy.stripe.com/3cIcN78addbg9XMgsm9Zm2d',
-        'business_CNY': 'https://buy.stripe.com/5kQcN73TXefk2vk8ZU9Zm2f',
-        'business_EUR': 'https://buy.stripe.com/bJe00l3TXgns5Hw2Bw9Zm2b',
-        'business_NZD': 'https://buy.stripe.com/14A3cxbmp5IOfi6eke9Zm2c',
-        'business_SGD': 'https://buy.stripe.com/00w7sN4Y12wC6LAfoi9Zm2e',
-        'business_USD': 'https://buy.stripe.com/dRmfZj7694EK1rg8ZU9Zm2a',
-        'business_yr_AUD': 'https://buy.stripe.com/14A3cx0HL9Z4c5Ub829Zm2g',
-        'business_yr_CAD': 'https://buy.stripe.com/3cI3cxdux8V0b1Qfoi9Zm2k',
-        'business_yr_CNY': 'https://buy.stripe.com/4gM9AVeyBefk1rgb829Zm2m',
-        'business_yr_EUR': 'https://buy.stripe.com/aFabJ34Y17QWfi63FA9Zm2i',
-        'business_yr_NZD': 'https://buy.stripe.com/fZuaEZ4Y1b384Ds4JE9Zm2j',
-        'business_yr_SGD': 'https://buy.stripe.com/14A8wR1LP5IO7PE6RM9Zm2l',
-        'business_yr_USD': 'https://buy.stripe.com/dRmdRbfCF8V06LA3FA9Zm2h',
-        'team_AUD': 'https://buy.stripe.com/eVq9AVcqtefk9XM0to9Zm1V',
-        'team_CAD': 'https://buy.stripe.com/eVq4gB9ehgnsb1Q7VQ9Zm1Z',
-        'team_CNY': 'https://buy.stripe.com/dRm5kFdux6MS3zoeke9Zm21',
-        'team_EUR': 'https://buy.stripe.com/28E6oJ2PT3AGfi65NI9Zm1X',
-        'team_NZD': 'https://buy.stripe.com/aFafZj8ad2wC5Hw6RM9Zm1Y',
-        'team_SGD': 'https://buy.stripe.com/cNi6oJbmpfjoee25NI9Zm20',
-        'team_USD': 'https://buy.stripe.com/eVq28t769fjo3zoa3Y9Zm1W',
-        'team_yr_AUD': 'https://buy.stripe.com/eVq28t6255IOfi6cc69Zm22',
-        'team_yr_CAD': 'https://buy.stripe.com/dRm00l1LP1sy1rg2Bw9Zm26',
-        'team_yr_CNY': 'https://buy.stripe.com/bJeeVf4Y11sygma8ZU9Zm28',
-        'team_yr_EUR': 'https://buy.stripe.com/dRmdRbeyBfjo0nc1xs9Zm24',
-        'team_yr_NZD': 'https://buy.stripe.com/00w9AV6251sy8TI3FA9Zm25',
-        'team_yr_SGD': 'https://buy.stripe.com/fZuaEZ2PTb381rgb829Zm27',
-        'team_yr_USD': 'https://buy.stripe.com/6oUdRb7694EK8TI7VQ9Zm23'
+        'biz_max_AUD': 'https://buy.stripe.com/bJe5kFgGJ7QWb1Q2Bw9Zm3i',
+        'biz_max_CAD': 'https://buy.stripe.com/7sYdRbgGJb389XMcc69Zm3l',
+        'biz_max_CNY': 'https://buy.stripe.com/4gM8wRdux7QW9XMfoi9Zm3n',
+        'biz_max_EUR': 'https://buy.stripe.com/28EdRbfCF0ou8TI7VQ9Zm3j',
+        'biz_max_NZD': 'https://buy.stripe.com/cNi8wR2PT3AGc5U6RM9Zm3k',
+        'biz_max_SGD': 'https://buy.stripe.com/fZu4gB7696MSc5U8ZU9Zm3m',
+        'biz_max_USD': 'https://buy.stripe.com/4gM8wR8ad4EKgma3FA9Zm3h',
+        'biz_max_yr_AUD': 'https://buy.stripe.com/cNieVfdux3AGd9Yfoi9Zm3p',
+        'biz_max_yr_CAD': 'https://buy.stripe.com/4gM8wR0HLfjo4Dsa3Y9Zm3r',
+        'biz_max_yr_CNY': 'https://buy.stripe.com/aFa5kFailfjo8TI0to9Zm3t',
+        'biz_max_yr_EUR': 'https://buy.stripe.com/9B68wRgGJ1sy5Hwcc69Zm3q',
+        'biz_max_yr_NZD': 'https://buy.stripe.com/7sY5kFduxb388TI0to9Zm3u',
+        'biz_max_yr_SGD': 'https://buy.stripe.com/9B63cxeyB4EK9XM5NI9Zm3s',
+        'biz_max_yr_USD': 'https://buy.stripe.com/28EeVf0HLc7cc5Ucc69Zm3o',
+        'biz_pro_AUD': 'https://buy.stripe.com/bJe00l6250ou1rg8ZU9Zm34',
+        'biz_pro_CAD': 'https://buy.stripe.com/00w5kF4Y11sy8TI2Bw9Zm37',
+        'biz_pro_CNY': 'https://buy.stripe.com/00wfZj7699Z4d9Y6RM9Zm39',
+        'biz_pro_EUR': 'https://buy.stripe.com/dRmbJ38ad9Z4d9Y7VQ9Zm35',
+        'biz_pro_NZD': 'https://buy.stripe.com/28E7sN0HL5IOfi65NI9Zm36',
+        'biz_pro_SGD': 'https://buy.stripe.com/7sY7sNbmpdbg0nc3FA9Zm38',
+        'biz_pro_USD': 'https://buy.stripe.com/28E28t6259Z41rg6RM9Zm33',
+        'biz_pro_yr_AUD': 'https://buy.stripe.com/8x2dRbeyBb383zo6RM9Zm3b',
+        'biz_pro_yr_CAD': 'https://buy.stripe.com/8x2dRbail7QW7PEcc69Zm3e',
+        'biz_pro_yr_CNY': 'https://buy.stripe.com/5kQ3cxdux8V03zo7VQ9Zm3g',
+        'biz_pro_yr_EUR': 'https://buy.stripe.com/dRmbJ39eh5IOee27VQ9Zm3c',
+        'biz_pro_yr_NZD': 'https://buy.stripe.com/5kQdRbbmp2wC6LAgsm9Zm3d',
+        'biz_pro_yr_SGD': 'https://buy.stripe.com/3cI5kFduxdbg4Dscc69Zm3f',
+        'biz_pro_yr_USD': 'https://buy.stripe.com/28EaEZeyBfjo2vk5NI9Zm3a',
+        'biz_ultra_AUD': 'https://buy.stripe.com/dRm00l4Y1c7cc5U5NI9Zm3x',
+        'biz_ultra_CAD': 'https://buy.stripe.com/5kQ4gBcqt4EK1rg6RM9Zm3z',
+        'biz_ultra_CNY': 'https://buy.stripe.com/28EeVf9ehfjo2vk2Bw9Zm3C',
+        'biz_ultra_EUR': 'https://buy.stripe.com/fZu9AV7694EK6LA3FA9Zm3w',
+        'biz_ultra_NZD': 'https://buy.stripe.com/7sYaEZ8addbg7PE6RM9Zm3y',
+        'biz_ultra_SGD': 'https://buy.stripe.com/aFa4gB4Y1dbgc5U4JE9Zm3A',
+        'biz_ultra_USD': 'https://buy.stripe.com/00w5kF4Y10ou0ncb829Zm3v',
+        'biz_ultra_yr_AUD': 'https://buy.stripe.com/cNi00l8adgns5Hw1xs9Zm3D',
+        'biz_ultra_yr_CAD': 'https://buy.stripe.com/aFa8wRduxc7c6LA8ZU9Zm3G',
+        'biz_ultra_yr_CNY': 'https://buy.stripe.com/cNi8wR0HLb38fi6b829Zm3J',
+        'biz_ultra_yr_EUR': 'https://buy.stripe.com/5kQ6oJ625fjo9XMdga9Zm3E',
+        'biz_ultra_yr_NZD': 'https://buy.stripe.com/6oU8wR9eh6MS6LAb829Zm3F',
+        'biz_ultra_yr_SGD': 'https://buy.stripe.com/eVqfZjail1sy6LA3FA9Zm3H',
+        'biz_ultra_yr_USD': 'https://buy.stripe.com/8x28wR8ad7QW9XM3FA9Zm3B',
+        'team_max_AUD': 'https://buy.stripe.com/28E4gB769efk6LAgsm9Zm2C',
+        'team_max_CAD': 'https://buy.stripe.com/9B628t0HLc7cc5U5NI9Zm2F',
+        'team_max_CNY': 'https://buy.stripe.com/fZufZjcqt6MS7PE5NI9Zm2G',
+        'team_max_EUR': 'https://buy.stripe.com/5kQcN7duxc7c8TI2Bw9Zm2D',
+        'team_max_NZD': 'https://buy.stripe.com/bJe5kF8ad7QW1rgdga9Zm2E',
+        'team_max_SGD': 'https://buy.stripe.com/8x2bJ3duxfjoc5Ub829Zm2H',
+        'team_max_USD': 'https://buy.stripe.com/5kQ7sN2PT1sy7PE0to9Zm2A',
+        'team_max_yr_AUD': 'https://buy.stripe.com/4gM14pduxefk6LA3FA9Zm2K',
+        'team_max_yr_CAD': 'https://buy.stripe.com/4gMeVf9ehb387PEb829Zm2N',
+        'team_max_yr_CNY': 'https://buy.stripe.com/fZu7sNfCFb38fi61xs9Zm2O',
+        'team_max_yr_EUR': 'https://buy.stripe.com/5kQ4gB8ad3AG8TI7VQ9Zm2L',
+        'team_max_yr_NZD': 'https://buy.stripe.com/3cI5kFcqtefkee2cc69Zm2J',
+        'team_max_yr_SGD': 'https://buy.stripe.com/aFa3cx769gnsee25NI9Zm2M',
+        'team_max_yr_USD': 'https://buy.stripe.com/3cI8wR8adb389XMb829Zm2I',
+        'team_pro_AUD': 'https://buy.stripe.com/3cI4gBbmp2wCc5U3FA9Zm2t',
+        'team_pro_CAD': 'https://buy.stripe.com/cNi7sNbmp5IOd9Ygsm9Zm2p',
+        'team_pro_CNY': 'https://buy.stripe.com/14A6oJ4Y12wC9XM8ZU9Zm2w',
+        'team_pro_EUR': 'https://buy.stripe.com/5kQaEZ2PT6MSc5U0to9Zm2q',
+        'team_pro_NZD': 'https://buy.stripe.com/8x2eVfeyB7QW1rgeke9Zm2o',
+        'team_pro_SGD': 'https://buy.stripe.com/dRm7sN6251syfi6dga9Zm2r',
+        'team_pro_USD': 'https://buy.stripe.com/eVq6oJ4Y17QW2vk8ZU9Zm2n',
+        'team_pro_yr_AUD': 'https://buy.stripe.com/aFa00l3TXb384Ds4JE9Zm2u',
+        'team_pro_yr_CAD': 'https://buy.stripe.com/5kQ4gBcqt1syc5Udga9Zm2v',
+        'team_pro_yr_CNY': 'https://buy.stripe.com/28EaEZbmpefk6LAa3Y9Zm2y',
+        'team_pro_yr_EUR': 'https://buy.stripe.com/3cIdRb0HLfjo1rggsm9Zm2B',
+        'team_pro_yr_NZD': 'https://buy.stripe.com/8x214pfCF8V0b1Q2Bw9Zm2x',
+        'team_pro_yr_SGD': 'https://buy.stripe.com/9B6dRbgGJ5IOc5Ufoi9Zm2z',
+        'team_pro_yr_USD': 'https://buy.stripe.com/28E6oJ2PT8V0fi6cc69Zm2s',
+        'team_ultra_AUD': 'https://buy.stripe.com/bJe14p769c7cee2foi9Zm2Q',
+        'team_ultra_CAD': 'https://buy.stripe.com/bJeeVfdux1sy1rg5NI9Zm2W',
+        'team_ultra_CNY': 'https://buy.stripe.com/aFa5kF0HLefk2vka3Y9Zm2U',
+        'team_ultra_EUR': 'https://buy.stripe.com/7sY9AV1LPc7c0nc2Bw9Zm2R',
+        'team_ultra_NZD': 'https://buy.stripe.com/14AeVf769dbg3zodga9Zm2S',
+        'team_ultra_SGD': 'https://buy.stripe.com/dRm6oJ4Y1fjo8TI4JE9Zm2T',
+        'team_ultra_USD': 'https://buy.stripe.com/28EdRb8ad0ou3zo8ZU9Zm2P',
+        'team_ultra_yr_AUD': 'https://buy.stripe.com/dRm14p4Y17QW8TI0to9Zm2Y',
+        'team_ultra_yr_CAD': 'https://buy.stripe.com/28E8wRfCF7QW4Ds1xs9Zm30',
+        'team_ultra_yr_CNY': 'https://buy.stripe.com/cNi28t0HL6MSb1Q7VQ9Zm32',
+        'team_ultra_yr_EUR': 'https://buy.stripe.com/cNi6oJ2PT0ou4Ds8ZU9Zm2X',
+        'team_ultra_yr_NZD': 'https://buy.stripe.com/4gMeVf2PT0ou6LA7VQ9Zm2Z',
+        'team_ultra_yr_SGD': 'https://buy.stripe.com/7sYbJ3eyB6MS6LA2Bw9Zm31',
+        'team_ultra_yr_USD': 'https://buy.stripe.com/dRm6oJ9eh7QW1rgb829Zm2V',
+        'upg_mu_AUD': 'https://buy.stripe.com/7sY3cxfCFc7c8TIcc69Zm3Y',
+        'upg_mu_CAD': 'https://buy.stripe.com/fZueVffCF0ouee20to9Zm41',
+        'upg_mu_CNY': 'https://buy.stripe.com/eVqdRbeyBgns0nceke9Zm43',
+        'upg_mu_EUR': 'https://buy.stripe.com/4gMdRb3TX1sy8TIeke9Zm3Z',
+        'upg_mu_NZD': 'https://buy.stripe.com/bJe9AV3TXgns6LAfoi9Zm40',
+        'upg_mu_SGD': 'https://buy.stripe.com/dRm3cx625gns2vk0to9Zm42',
+        'upg_mu_USD': 'https://buy.stripe.com/9B6aEZail2wCee23FA9Zm3W',
+        'upg_mu_yr_AUD': 'https://buy.stripe.com/7sY9AVfCF0oud9Y5NI9Zm45',
+        'upg_mu_yr_CAD': 'https://buy.stripe.com/bJebJ3ail3AG0nceke9Zn00',
+        'upg_mu_yr_CNY': 'https://buy.stripe.com/eVq3cx4Y1dbgd9Y8ZU9Zn01',
+        'upg_mu_yr_EUR': 'https://buy.stripe.com/9B6cN74Y1dbgfi62Bw9Zm46',
+        'upg_mu_yr_NZD': 'https://buy.stripe.com/7sY00l6250ou4Dsb829Zm47',
+        'upg_mu_yr_SGD': 'https://buy.stripe.com/6oU14p0HLefk6LAfoi9Zn02',
+        'upg_mu_yr_USD': 'https://buy.stripe.com/9B6eVf2PT5IO2vkgsm9Zm44',
+        'upg_pm_AUD': 'https://buy.stripe.com/bJe5kFfCF6MSc5U3FA9Zm3I',
+        'upg_pm_CAD': 'https://buy.stripe.com/eVq14p9eh1sy8TIeke9Zm3M',
+        'upg_pm_CNY': 'https://buy.stripe.com/bJe4gBeyBfjogmacc69Zm3O',
+        'upg_pm_EUR': 'https://buy.stripe.com/14AdRbgGJc7c5Hw0to9Zm3K',
+        'upg_pm_NZD': 'https://buy.stripe.com/cNi9AVail7QW5Hw3FA9Zm3L',
+        'upg_pm_SGD': 'https://buy.stripe.com/fZu6oJ8ad1sy9XMgsm9Zm3N',
+        'upg_pm_USD': 'https://buy.stripe.com/dRmeVfeyB2wCee2cc69Zm3P',
+        'upg_pm_yr_AUD': 'https://buy.stripe.com/14A5kF0HLgnsd9Y1xs9Zm3R',
+        'upg_pm_yr_CAD': 'https://buy.stripe.com/4gMaEZ8addbgb1Qcc69Zm3U',
+        'upg_pm_yr_CNY': 'https://buy.stripe.com/dRmfZj0HL6MS3zo3FA9Zm3X',
+        'upg_pm_yr_EUR': 'https://buy.stripe.com/4gMeVfdux1sy5Hwb829Zm3S',
+        'upg_pm_yr_NZD': 'https://buy.stripe.com/14AbJ3dux5IOb1Q5NI9Zm3T',
+        'upg_pm_yr_SGD': 'https://buy.stripe.com/8x25kF3TX4EK8TI8ZU9Zm3V',
+        'upg_pm_yr_USD': 'https://buy.stripe.com/dRmdRb0HLdbgfi60to9Zm3Q',
+        'upg_pu_AUD': 'https://buy.stripe.com/cNidRbailefk9XM7VQ9Zn05',
+        'upg_pu_CAD': 'https://buy.stripe.com/8x29AVfCF8V02vk3FA9Zn07',
+        'upg_pu_CNY': 'https://buy.stripe.com/5kQ7sN1LPb38d9Ycc69Zn09',
+        'upg_pu_EUR': 'https://buy.stripe.com/00w8wR0HL3AGc5Ufoi9Zn04',
+        'upg_pu_NZD': 'https://buy.stripe.com/6oU9AV1LP2wC7PE3FA9Zn06',
+        'upg_pu_SGD': 'https://buy.stripe.com/7sYbJ39ehefkfi60to9Zn08',
+        'upg_pu_USD': 'https://buy.stripe.com/dRm14pailc7c9XM4JE9Zn03',
+        'upg_pu_yr_AUD': 'https://buy.stripe.com/14A3cx3TX2wCgmagsm9Zn0a',
+        'upg_pu_yr_CAD': 'https://buy.stripe.com/cNi3cx4Y10oub1Q0to9Zn0d',
+        'upg_pu_yr_CNY': 'https://buy.stripe.com/8x2eVf4Y13AG5Hw4JE9Zn0f',
+        'upg_pu_yr_EUR': 'https://buy.stripe.com/5kQcN70HL5IO1rg3FA9Zn0c',
+        'upg_pu_yr_NZD': 'https://buy.stripe.com/28EcN7769efk7PE5NI9Zn0e',
+        'upg_pu_yr_SGD': 'https://buy.stripe.com/fZufZj2PT5IOd9Ydga9Zn0g',
+        'upg_pu_yr_USD': 'https://buy.stripe.com/9B64gB0HL1sy1rg1xs9Zn0b'
       };
 
-      var MULT = [1, 5, 20, 30, 60];
-      var ANNUAL_TIERS = { '1x': true, '5x': true, '20x': true, 'team': true, 'business': true };
+      var ENT_COPY = {
+        pro: {
+          label: 'Pro (1x)',
+          teamBadge: '含 5 席 Pro (1x) · 团队整机独享',
+          bizBadge: '企业旗舰 · 10 席 Pro (1x) 多机集群',
+          teamSeatLi: '包含 <strong>5 个 Pro (1x) 标准成员席位</strong>（每人独立 Claude 空间与 macOS 账户）',
+          bizSeatLi: '包含 <strong>10 个 Pro (1x) 标准成员席位</strong>（支持按需弹性扩容至 50+ 席位）',
+          teamStorage: '免费赠送 6 TB 团队云存储权益（Google Drive / iCloud+）',
+          bizStorage: '免费赠送 12 TB 企业级云存储权益（Google Drive / iCloud+）'
+        },
+        max: {
+          label: 'Max (5x)',
+          teamBadge: '含 5 席 Max (5x) · 团队整机独享',
+          bizBadge: '企业旗舰 · 10 席 Max (5x) 多机集群',
+          teamSeatLi: '包含 <strong>5 个 Max (5x) 专业研发席位</strong>（每人独立 Claude 空间与 macOS 账户）',
+          bizSeatLi: '包含 <strong>10 个 Max (5x) 专业研发席位</strong>（支持按需弹性扩容至 50+ 席位）',
+          teamStorage: '免费赠送 12 TB 团队云存储权益（Google Drive / iCloud+）',
+          bizStorage: '免费赠送 30 TB 企业级云存储权益（Google Drive / iCloud+）'
+        },
+        ultra: {
+          label: 'Ultra (20x)',
+          teamBadge: '含 5 席 Ultra (20x) · 顶配整机独享',
+          bizBadge: '企业旗舰 · 10 席 Ultra (20x) 顶配集群',
+          teamSeatLi: '包含 <strong>5 个 Ultra (20x) 顶配旗舰席位</strong>（每人独立 Claude 空间与 macOS 账户）',
+          bizSeatLi: '包含 <strong>10 个 Ultra (20x) 顶配旗舰席位</strong>（支持按需弹性扩容至 50+ 席位）',
+          teamStorage: '免费赠送 12 TB 团队云存储权益（Google Drive / iCloud+）',
+          bizStorage: '免费赠送 30 TB 企业级云存储权益（Google Drive / iCloud+）'
+        }
+      };
+      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var MULT = [1, 5, 20];
+      var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
       if (!PROMO_ACTIVE) {
         document.querySelectorAll('.badge-promo, [data-promo-foot]').forEach(function (el) { el.remove(); });
       }
       var curCode = 'AUD';
       var curBilling = 'month';
+      var curSeatTier = 'max';
 
       function fmt(n) { return n.toLocaleString('en-AU'); }
       function renderPricing() {
         var c = PRICES[curCode] || PRICES.AUD;
         var isYear = curBilling === 'year';
+        var tIdx = TIER_IDX[curSeatTier] != null ? TIER_IDX[curSeatTier] : 1;
+        var ec = ENT_COPY[curSeatTier] || ENT_COPY.max;
+
+        // 1. Solo plans (1x / 5x / 20x)
         document.querySelectorAll('[data-plan-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-plan-idx');
           var mo = c.p[i];
@@ -1480,13 +1962,6 @@
             }
           }
         });
-        document.querySelectorAll('[data-storage-idx]').forEach(function (el) {
-          var i = +el.getAttribute('data-storage-idx');
-          var sc = c.s ? c : PRICES.AUD;
-          el.querySelector('sup').textContent = sc.sym;
-          var v = sc.s[i];
-          el.querySelector('.amount').textContent = v % 1 ? v.toFixed(2) : fmt(v);
-        });
         document.querySelectorAll('[data-note-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-note-idx');
           var mo = c.p[i];
@@ -1494,18 +1969,13 @@
           if (isYear) {
             var eqMo = mo * 10 / 12;
             var eqStr = eqMo >= 100 ? fmt(Math.round(eqMo)) : (+eqMo.toFixed(1)).toString();
-            var saved = mo * 2;
-            el.textContent = '年付仅收 10 个月 · 折合 ' + c.sym + eqStr + ' / 月，立省 ' + c.sym + fmt(saved);
+            el.textContent = '年付仅收 10 个月 · 折合 ' + c.sym + eqStr + ' / 月，立省 ' + c.sym + fmt(mo * 2);
           } else if (i === 0) {
             var day = c.p[0] / 30;
             el.textContent = '含 Claude 运行环境 · 约 ' + c.sym + (day >= 10 ? Math.round(day) : +day.toFixed(1)) + ' / 天';
           } else if (i === 2 && PROMO_ACTIVE) {
             var ratio2 = Math.round(c.p[2] / (c.p[0] * MULT[2]) * 100);
             el.textContent = '活动期内订阅，续费延续特惠价 · 单位成本约为 1x 的 ' + ratio2 + '%';
-          } else if (i === 3) {
-            el.textContent = '含 5 个独立专属席位（人均约 ' + c.sym + fmt(Math.round(mo / 5)) + ' / 月）· 整机物理独享';
-          } else if (i === 4) {
-            el.textContent = '含 10 个独立专属席位（人均约 ' + c.sym + fmt(Math.round(mo / 10)) + ' / 月）· 多机集群独享';
           } else {
             var ratio = Math.round(c.p[i] / (c.p[0] * MULT[i]) * 100);
             el.textContent = '含 Claude 运行环境 · ' + MULT[i] + ' 倍额度，单位成本约为 1x 的 ' + ratio + '%';
@@ -1513,10 +1983,82 @@
         });
         document.querySelectorAll('[data-stripe-tier]').forEach(function (btn) {
           var tier = btn.getAttribute('data-stripe-tier');
-          var keyPrefix = (isYear && ANNUAL_TIERS[tier]) ? (tier + '_yr') : tier;
+          var keyPrefix = (isYear && SOLO_ANNUAL[tier]) ? (tier + '_yr') : tier;
           var link = STRIPE_LINKS[keyPrefix + '_' + curCode] || STRIPE_LINKS[keyPrefix + '_AUD'];
           if (link) btn.setAttribute('href', link);
         });
+
+        // 2. Team & Business modular plans
+        ['team', 'biz'].forEach(function (kind) {
+          var entMo = c[kind][tIdx];
+          var entVal = isYear ? entMo * 10 : entMo;
+          var priceEl = document.querySelector('[data-ent-price="' + kind + '"]');
+          if (priceEl) {
+            priceEl.querySelector('sup').textContent = c.sym;
+            priceEl.querySelector('.amount').textContent = fmt(entVal);
+            var pPer = priceEl.querySelector('[data-period]');
+            if (pPer) pPer.textContent = isYear ? '/ 年' : '/ 月';
+            var origEl = priceEl.querySelector('[data-ent-orig]');
+            if (origEl) {
+              if (isYear) {
+                origEl.textContent = c.sym + fmt(entMo * 12);
+                origEl.setAttribute('title', '按月付 12 个月总价');
+                origEl.style.display = 'inline';
+              } else {
+                origEl.style.display = 'none';
+              }
+            }
+          }
+          var badgeEl = document.querySelector('[data-ent-badge="' + kind + '"]');
+          if (badgeEl) badgeEl.textContent = kind === 'team' ? ec.teamBadge : ec.bizBadge;
+          var seatLi = document.querySelector('[data-ent-seat-li="' + kind + '"]');
+          if (seatLi) seatLi.innerHTML = kind === 'team' ? ec.teamSeatLi : ec.bizSeatLi;
+          var stLi = document.querySelector('[data-ent-storage-li="' + kind + '"]');
+          if (stLi) stLi.textContent = kind === 'team' ? ec.teamStorage : ec.bizStorage;
+          var noteEl = document.querySelector('[data-ent-note="' + kind + '"]');
+          if (noteEl) {
+            noteEl.classList.toggle('annual-note', isYear);
+          if (isYear) {
+            var eqEnt = entMo * 10 / 12;
+            noteEl.textContent = '年付仅收 10 个月 · 折合 ' + c.sym + fmt(Math.round(eqEnt)) + ' / 月，立省 ' + c.sym + fmt(entMo * 2);
+          } else if (kind === 'team') {
+            noteEl.textContent = '含 5 个 ' + ec.label + ' 独立席位 · 整机物理独享 + 统一账单与运维';
+          } else {
+            noteEl.textContent = '含 10 个 ' + ec.label + ' 独立席位 · 多机物理集群独享 + VIP 专属群';
+          }
+          }
+          var entBtn = document.querySelector('[data-ent-btn="' + kind + '"]');
+          if (entBtn) {
+            var kPref = kind + '_' + curSeatTier + (isYear ? '_yr' : '');
+            var eLink = STRIPE_LINKS[kPref + '_' + curCode] || STRIPE_LINKS[kPref + '_AUD'];
+            if (eLink) entBtn.setAttribute('href', eLink);
+          }
+        });
+
+        // 3. Per-seat upgrade add-ons
+        document.querySelectorAll('[data-upg-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-upg-idx');
+          var umo = c.upg[i];
+          el.querySelector('sup').textContent = c.sym;
+          el.querySelector('.amount').textContent = fmt(isYear ? umo * 10 : umo);
+          var uPer = el.querySelector('[data-upg-period]');
+          if (uPer) uPer.textContent = isYear ? '/ 席 / 年' : '/ 席 / 月';
+        });
+        document.querySelectorAll('[data-upg-tier]').forEach(function (btn) {
+          var ut = btn.getAttribute('data-upg-tier') + (isYear ? '_yr' : '');
+          var uLink = STRIPE_LINKS[ut + '_' + curCode] || STRIPE_LINKS[ut + '_AUD'];
+          if (uLink) btn.setAttribute('href', uLink);
+        });
+
+        // 4. Cloud storage
+        document.querySelectorAll('[data-storage-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-storage-idx');
+          var sc = c.s ? c : PRICES.AUD;
+          el.querySelector('sup').textContent = sc.sym;
+          var v = sc.s[i];
+          el.querySelector('.amount').textContent = v % 1 ? v.toFixed(2) : fmt(v);
+        });
+
         var curNameEl = document.getElementById('currency-name');
         if (curNameEl) curNameEl.textContent = c.name;
         document.querySelectorAll('[data-currency]').forEach(function (b) {
@@ -1524,6 +2066,9 @@
         });
         document.querySelectorAll('[data-billing]').forEach(function (b) {
           b.setAttribute('aria-pressed', b.getAttribute('data-billing') === curBilling ? 'true' : 'false');
+        });
+        document.querySelectorAll('[data-seat-tier]').forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-seat-tier') === curSeatTier ? 'true' : 'false');
         });
       }
 
@@ -1537,12 +2082,20 @@
         renderPricing();
         try { localStorage.setItem('claude-ops-billing', curBilling); } catch (e) {}
       }
+      function setSeatTier(tier) {
+        curSeatTier = TIER_IDX[tier] != null ? tier : 'max';
+        renderPricing();
+        try { localStorage.setItem('claude-ops-seat-tier', curSeatTier); } catch (e) {}
+      }
 
       document.querySelectorAll('[data-currency]').forEach(function (b) {
         b.addEventListener('click', function () { setCurrency(b.getAttribute('data-currency')); });
       });
       document.querySelectorAll('[data-billing]').forEach(function (b) {
         b.addEventListener('click', function () { setBilling(b.getAttribute('data-billing')); });
+      });
+      document.querySelectorAll('[data-seat-tier]').forEach(function (b) {
+        b.addEventListener('click', function () { setSeatTier(b.getAttribute('data-seat-tier')); });
       });
 
       (function initPricing() {
@@ -1554,6 +2107,15 @@
           try {
             var sb = localStorage.getItem('claude-ops-billing');
             if (sb === 'year' || sb === 'month') curBilling = sb;
+          } catch (e) {}
+        }
+
+        var sq = (params.get('tier') || '').toLowerCase();
+        if (TIER_IDX[sq] != null) curSeatTier = sq;
+        else {
+          try {
+            var st = localStorage.getItem('claude-ops-seat-tier');
+            if (TIER_IDX[st] != null) curSeatTier = st;
           } catch (e) {}
         }
 
@@ -1758,14 +2320,14 @@
 
     // Prices roll in on currency change
     document.addEventListener('click', function (e) {
-      if (!e.target.closest('[data-currency], [data-billing]')) return;
-      document.querySelectorAll('.price .amount').forEach(function (el) {
+      if (!e.target.closest('[data-currency], [data-billing], [data-seat-tier]')) return;
+      document.querySelectorAll('.price .amount, .addon-price .amount').forEach(function (el) {
         el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop');
       });
     });
 
     if (!root.classList.contains('motion') || !('IntersectionObserver' in window)) return;
-    var targets = document.querySelectorAll('main .section-head, main .card, main .faq details, main .cta, main .stripe-trust, main .currency-switch, main .pricing-controls, main .tier-divider');
+    var targets = document.querySelectorAll('main .section-head, main .card, main .faq details, main .cta, main .stripe-trust, main .currency-switch, main .pricing-controls, main .tier-divider, main .enterprise-toolbar, main .seat-addons');
     targets.forEach(function (el) {
       var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
       el.classList.add('mo-reveal');

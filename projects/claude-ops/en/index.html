@@ -232,7 +232,7 @@
     }
     .currency-switch button:hover { color: var(--text) }
     .currency-switch button[aria-pressed="true"] { background: var(--primary); color: #fff; font-weight: 600 }
-    /* Compact first-screen fit for #pricing + Annual Billing & Team/Business tiers */
+    /* Compact first-screen fit for #pricing + Modular Team/Business & Seat Upgrades */
     .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
     @media (max-width: 960px) { .grid-2 { grid-template-columns: 1fr } }
     #storage { scroll-margin-top: 32px }
@@ -251,19 +251,19 @@
       display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px;
       margin: 0 auto 18px;
     }
-    .billing-switch {
-      display: inline-flex; align-items: center; gap: 4px; padding: 4px;
+    .billing-switch, .seat-tier-switch {
+      display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 4px; padding: 4px;
       border: 1px solid rgba(217, 119, 87, .34); border-radius: 24px;
       background: linear-gradient(180deg, rgba(217, 119, 87, .09), rgba(255, 255, 255, .025));
     }
-    .billing-switch button {
+    .billing-switch button, .seat-tier-switch button {
       display: inline-flex; align-items: center; gap: 6px;
       font: inherit; font-size: .82rem; color: var(--muted); background: transparent; border: 0;
       padding: 5px 13px; border-radius: 999px; cursor: pointer; transition: background .2s, color .2s, box-shadow .2s;
       white-space: nowrap;
     }
-    .billing-switch button:hover { color: var(--text) }
-    .billing-switch button[aria-pressed="true"] {
+    .billing-switch button:hover, .seat-tier-switch button:hover { color: var(--text) }
+    .billing-switch button[aria-pressed="true"], .seat-tier-switch button[aria-pressed="true"] {
       background: var(--primary); color: #fff; font-weight: 600;
       box-shadow: 0 4px 14px rgba(217, 119, 87, .35);
     }
@@ -273,7 +273,8 @@
       background: rgba(91, 209, 139, .16); color: #6ee29d; border: 1px solid rgba(91, 209, 139, .35);
       transition: .2s;
     }
-    .billing-switch button[aria-pressed="true"] .save-badge {
+    .billing-switch button[aria-pressed="true"] .save-badge,
+    .seat-tier-switch button[aria-pressed="true"] .save-badge {
       background: rgba(255, 255, 255, .22); color: #fff; border-color: rgba(255, 255, 255, .42);
     }
     #pricing .pricing-controls .currency-switch { margin: 0; padding: 4px }
@@ -291,9 +292,9 @@
     #pricing > .container > .pricing .plan-consult { margin-top: 7px; font-size: .78rem }
 
     /* Team & Business Enterprise Cluster Row */
-    .enterprise-wrap { margin-top: 30px }
+    .enterprise-wrap { margin-top: 34px }
     .tier-divider {
-      display: flex; align-items: center; gap: 14px; margin: 0 0 26px;
+      display: flex; align-items: center; gap: 14px; margin: 0 0 14px;
       color: var(--cream); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
     }
     .tier-divider::before, .tier-divider::after {
@@ -306,6 +307,10 @@
       color: var(--primary-strong); white-space: nowrap;
     }
     @media (max-width: 560px) { .tier-divider span { white-space: normal; text-align: center } }
+    .enterprise-toolbar {
+      display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 0 0 26px; text-align: center;
+    }
+    .enterprise-toolbar p { margin: 0; font-size: .82rem; color: var(--muted) }
     .pricing-enterprise .plan { padding: 24px 26px 20px }
     .pricing-enterprise .plan-tier b { font-size: 1.95rem }
     .pricing-enterprise .plan-desc { margin: 6px 0 12px; min-height: 2.5em; font-size: .87rem; line-height: 1.48 }
@@ -331,6 +336,56 @@
         linear-gradient(180deg, rgba(217, 119, 87, .09), rgba(255, 255, 255, .02));
       box-shadow: 0 22px 54px -18px rgba(217, 119, 87, .18);
     }
+
+    /* Modular Per-Seat Upgrade Add-on Strip */
+    .seat-addons {
+      margin-top: 20px; padding: 20px 22px; border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .015));
+      border: 1px solid rgba(232, 144, 111, .22);
+    }
+    .seat-addons-head {
+      display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px;
+      margin-bottom: 14px;
+    }
+    .seat-addons-head h3 {
+      margin: 0; font-size: .98rem; color: var(--cream); display: flex; align-items: center; gap: 8px;
+    }
+    .seat-addons-head h3 .addon-pill {
+      font-size: .70rem; font-weight: 700; padding: 2px 8px; border-radius: 999px;
+      background: rgba(217, 119, 87, .18); color: var(--primary-strong); border: 1px solid rgba(217, 119, 87, .35);
+    }
+    .seat-addons-head p { margin: 0; font-size: .81rem; color: var(--muted) }
+    .addon-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px }
+    @media (max-width: 960px) { .addon-grid { grid-template-columns: 1fr } }
+    .addon-card {
+      display: flex; flex-direction: column; justify-content: space-between; gap: 10px;
+      padding: 15px 17px; border-radius: 14px;
+      background: rgba(20, 18, 16, .65); border: 1px solid var(--border);
+      transition: border-color .22s, transform .22s;
+    }
+    .addon-card:hover { border-color: rgba(232, 144, 111, .45); transform: translateY(-2px) }
+    .addon-route {
+      display: flex; align-items: center; gap: 7px; font-weight: 700; font-size: .9rem; color: #fff;
+    }
+    .addon-route code {
+      font-family: inherit; font-size: .75rem; font-weight: 700; padding: 2px 7px; border-radius: 6px;
+      background: rgba(255, 255, 255, .06); color: var(--cream);
+    }
+    .addon-route code.to { background: rgba(217, 119, 87, .20); color: var(--primary-strong) }
+    .addon-desc { margin: 4px 0 0; font-size: .79rem; color: var(--muted); line-height: 1.42 }
+    .addon-foot {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, .06);
+    }
+    .addon-price { font-weight: 800; font-size: 1.22rem; color: #fff; white-space: nowrap }
+    .addon-price sup { font-size: .75rem; font-weight: 600; margin-right: 1px; top: -.3em; position: relative }
+    .addon-price small { font-size: .74rem; font-weight: 500; color: var(--muted); margin-left: 2px }
+    .addon-btn {
+      display: inline-flex; align-items: center; gap: 4px; padding: 7px 13px; border-radius: 9px;
+      font-size: .80rem; font-weight: 600; color: var(--cream); white-space: nowrap;
+      background: rgba(217, 119, 87, .16); border: 1px solid rgba(217, 119, 87, .38); transition: .2s;
+    }
+    .addon-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary) }
 
     /* Steps */
     .steps { counter-reset: step }
@@ -692,6 +747,38 @@
       .hero-map-card, .node-aura, .map-status .live-dot { animation: none }
     }
 
+    /* User Reviews / Testimonials */
+    .review-card { display: flex; flex-direction: column; gap: 14px; padding: 24px }
+    .review-head { display: flex; align-items: center; gap: 12px }
+    .review-avatar {
+      width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+      overflow: hidden; border: 1.5px solid rgba(232, 144, 111, .45);
+      background: rgba(255, 255, 255, .04);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .28);
+    }
+    .review-avatar svg { width: 100%; height: 100%; display: block }
+    .review-author { min-width: 0; flex: 1 }
+    .review-name-row { display: flex; align-items: center; gap: 7px; flex-wrap: wrap }
+    .review-name { color: #fff; font-weight: 700; font-size: .98rem; line-height: 1.3 }
+    .review-badge {
+      font-size: .68rem; font-weight: 600; padding: 2px 7px; border-radius: 999px;
+      background: rgba(91, 209, 139, .12); color: #6ee7a0;
+      border: 1px solid rgba(91, 209, 139, .28); white-space: nowrap;
+    }
+    .review-role { color: var(--muted); font-size: .78rem; margin-top: 2px; line-height: 1.35 }
+    .review-stars { color: #f2b48f; font-size: .82rem; letter-spacing: 2px; line-height: 1 }
+    .review-quote { color: var(--cream); font-size: .92rem; line-height: 1.65; margin: 0; flex: 1 }
+    .review-foot {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, .06);
+      font-size: .75rem; color: var(--muted); opacity: .88;
+    }
+    .review-plan { color: var(--primary-strong); font-weight: 600; white-space: nowrap }
+    .reviews-note {
+      text-align: center; color: var(--muted); font-size: .8rem;
+      margin: 26px auto 0; max-width: 44em; opacity: .82;
+    }
+
   </style>
   <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion')</script>
 
@@ -720,6 +807,7 @@
         <li><a href="#service">Service</a></li>
         <li><a href="#value">Beyond Compute</a></li>
         <li><a href="#security">Security</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#storage">Cloud Storage</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -897,8 +985,8 @@
         <div class="net-copy">
           <p class="section-tag">Network</p>
           <h2>Ongoing network investment<br>for a responsive remote desktop</h2>
-          <p>We keep investing in hardware and premium routes: self-hosted relays on a premium BGP backbone that cut packet loss, the real enemy of remote desktops, to zero.</p>
-          <ul class="net-chips"><li>Self-hosted relays</li><li>Premium BGP backbone</li><li>Dual-leg BBR</li><li>Apple Silicon hardware encoding</li><li>Allow-list hardening</li></ul>
+          <p>We keep investing in hardware and premium routes: 9-country native ISP broadband with 200Mbps–500Mbps+ symmetrical speeds, paired with self-hosted relays and an enterprise BGP backbone that cut packet loss—the real enemy of remote desktops—to zero.</p>
+          <ul class="net-chips"><li>200–500Mbps+ Symmetrical</li><li>Enterprise BGP backbone</li><li>Self-hosted relays</li><li>Dual-leg BBR</li><li>Apple Silicon hardware encoding</li><li>Allow-list hardening</li></ul>
         </div>
         <div class="card net-card" aria-label="Measured latency and packet loss before and after optimisation">
           <div class="net-legend"><span class="lg before">Before</span><span class="lg after">After</span></div>
@@ -944,6 +1032,205 @@
             <p>Set your own access passwords and encryption policies. Our team handles connectivity and billing and does not actively access data in your account, except for maintenance, security incidents or troubleshooting you authorise.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- User Reviews -->
+    <section class="section section-alt" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Testimonials</p>
+          <h2>What real subscribers say</h2>
+          <p>To protect client privacy, all reviews use cartoon avatars and anonymized handles while preserving real feedback and subscription tiers.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#2b211c"/>
+                  <circle cx="32" cy="30" r="17" fill="#5c3627"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#d97757"/>
+                  <circle cx="32" cy="31" r="12" fill="#f7d5be"/>
+                  <path d="M19 29c0-9 6-14 13-14s13 5 13 14c-3-4-7-6-13-6s-10 2-13 6z" fill="#5c3627"/>
+                  <circle cx="27" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <circle cx="37" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <path d="M30.4 31h3.2" stroke="#3c2b24" stroke-width="1.4"/>
+                  <circle cx="27" cy="31" r="1.1" fill="#2b1e19"/>
+                  <circle cx="37" cy="31" r="1.1" fill="#2b1e19"/>
+                  <path d="M29 36.5c1.8 1.5 4.2 1.5 6 0" fill="none" stroke="#b85d43" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">M***</span>
+                  <span class="review-badge">Anonymized · Verified</span>
+                </div>
+                <div class="review-role">Cross-border AI Product Lead</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote">"The enterprise tunnel is razor-sharp and ultra-smooth—even clearer than my local ToDesk. Coding and switching windows feel practically local. Fast, reliable, worth every penny—a top-tier experience."</p>
+            <div class="review-foot">
+              <span>Verified Chat Feedback</span>
+              <span class="review-plan">5x Pro</span>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#1b232c"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#3d6b8e"/>
+                  <circle cx="32" cy="31" r="12" fill="#f4cfb6"/>
+                  <path d="M19 28c1-9 6-14 13-14 8 0 13 5 13 14-2-4-6-6-11-6-5 0-10 2-15 6z" fill="#232830"/>
+                  <path d="M18 30v-3a14 14 0 0128 0v3" fill="none" stroke="#e8906f" stroke-width="2.2"/>
+                  <rect x="16" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <rect x="44" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <path d="M29 36.8c2 1.3 4 1.3 6 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">C***</span>
+                  <span class="review-badge">Anonymized · Verified</span>
+                </div>
+                <div class="review-role">Senior Full-Stack Engineer</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote">"My local proxies used to drop mid-session all the time. After moving to ClaudeOps 1x Standard with an isolated workspace and Claude Code running 24/7, it genuinely feels like 'the genius programmer is back' 😂. Zero billing or network headaches now."</p>
+            <div class="review-foot">
+              <span>Verified Chat Feedback</span>
+              <span class="review-plan">1x Standard</span>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#21261e"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#4f6d54"/>
+                  <circle cx="32" cy="31" r="12" fill="#efd0ba"/>
+                  <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-3-3-7-4-12-4s-9 1-12 4z" fill="#2d2622"/>
+                  <rect x="23" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <rect x="33.5" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <path d="M30.5 31h3" stroke="#2d2622" stroke-width="1.4"/>
+                  <circle cx="26.8" cy="31" r="1.1" fill="#231d19"/>
+                  <circle cx="37.2" cy="31" r="1.1" fill="#231d19"/>
+                  <path d="M29 37c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#9e5e4a" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">Kyle W.</span>
+                  <span class="review-badge">Anonymized · Verified</span>
+                </div>
+                <div class="review-role">Quant R&amp;D Lead</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote">"Native ISP networks across 9 countries plus hardware-level isolation sold me. Our proprietary code and API keys stay on a dedicated Mac Studio—months of continuous uptime with zero bans or dropouts."</p>
+            <div class="review-foot">
+              <span>Australia Node · Masked</span>
+              <span class="review-plan">20x Flagship</span>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#292118"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#c98a4b"/>
+                  <circle cx="32" cy="32" r="12" fill="#f5d3bc"/>
+                  <path d="M19 27c0-8 6-14 13-14s13 6 13 14z" fill="#e8906f"/>
+                  <rect x="18" y="25" width="28" height="4.5" rx="2.2" fill="#d97757"/>
+                  <circle cx="27.5" cy="32.5" r="1.3" fill="#231d19"/>
+                  <circle cx="36.5" cy="32.5" r="1.3" fill="#231d19"/>
+                  <path d="M29.5 37.5c1.7 1.2 3.3 1.2 5 0" fill="none" stroke="#a65f48" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">L***</span>
+                  <span class="review-badge">Anonymized · Verified</span>
+                </div>
+                <div class="review-role">Indie Developer</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote">"Same-day delivery right after Stripe checkout. My isolated macOS account came pre-configured with Claude Code and dev tools. Huge time-saver if you don't want to fight environment setup or cross-border billing."</p>
+            <div class="review-foot">
+              <span>Tokyo Node · Masked</span>
+              <span class="review-plan">1x Standard</span>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#271e26"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#8b5e83"/>
+                  <circle cx="32" cy="31" r="15" fill="#3a2835"/>
+                  <circle cx="32" cy="31" r="11.5" fill="#f7d6c1"/>
+                  <path d="M20 29c1-8 6-13 12-13s11 5 12 13c-3-4-7-5-12-5s-9 1-12 5z" fill="#3a2835"/>
+                  <circle cx="27.5" cy="31.5" r="1.2" fill="#281d25"/>
+                  <circle cx="36.5" cy="31.5" r="1.2" fill="#281d25"/>
+                  <path d="M29 36.5c1.8 1.4 4.2 1.4 6 0" fill="none" stroke="#b55d52" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">Sarah C.</span>
+                  <span class="review-badge">Anonymized · Verified</span>
+                </div>
+                <div class="review-role">Consulting Partner</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote">"I'm not an ops person and didn't want to touch CLI setups. Having 7×16h 1-on-1 support plus managed Google Drive sync means I can connect from anywhere while travelling and pick up right where I left off."</p>
+            <div class="review-foot">
+              <span>Singapore Node · Masked</span>
+              <span class="review-plan">5x Pro</span>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="review-head">
+              <div class="review-avatar" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#1e222a"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#5e6b85"/>
+                  <circle cx="32" cy="31" r="12" fill="#f2ccb2"/>
+                  <path d="M20 27c2-7 6-11 12-11s10 4 12 11c-4-2-8-3-12-3s-8 1-12 3z" fill="#1f232b"/>
+                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1f232b"/>
+                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1f232b"/>
+                  <path d="M28.5 36.2c2.2 1.8 4.8 1.8 7 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="review-author">
+                <div class="review-name-row">
+                  <span class="review-name">A***</span>
+                  <span class="review-badge">Anonymized · Verified</span>
+                </div>
+                <div class="review-role">E-commerce Tech Director</div>
+              </div>
+            </div>
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-quote">"Our core engineers run multi-agent refactors and test suites overnight and review clean PRs every morning. Native Screen Sharing is crystal clear, and Jason's Telegram support replies almost instantly."</p>
+            <div class="review-foot">
+              <span>Telegram Feedback</span>
+              <span class="review-plan">20x Flagship</span>
+            </div>
+          </article>
+        </div>
+        <p class="reviews-note">* To strictly protect client privacy and data security, all reviews are displayed with cartoon avatars and anonymized/masked names.</p>
       </div>
     </section>
 
@@ -1032,44 +1319,92 @@
         <!-- Team & Business Plans -->
         <div class="enterprise-wrap" id="pricing-enterprise">
           <div class="tier-divider"><span>Team &amp; Business · Dedicated Multi-Seat Clusters</span></div>
+          <div class="enterprise-toolbar">
+            <div class="seat-tier-switch" role="group" aria-label="Choose team seat tier">
+              <button type="button" data-seat-tier="pro" aria-pressed="false">All-Pro Seats (1x)</button>
+              <button type="button" data-seat-tier="max" aria-pressed="true">All-Max Seats (5x) <span class="save-badge">Recommended</span></button>
+              <button type="button" data-seat-tier="ultra" aria-pressed="false">All-Ultra Seats (20x)</button>
+            </div>
+            <p>Start with uniform Pro, Max or Ultra seats — or mix &amp; match any time with self-serve <strong>per-seat upgrade add-ons</strong> below.</p>
+          </div>
           <div class="grid grid-2 pricing pricing-enterprise">
             <article class="card plan">
-              <span class="badge badge-team">5 Seats · Dedicated Host</span>
-              <div class="plan-tier"><b>Team</b><span>5 Seats</span></div>
-              <p class="plan-desc">Built for startup pods, AI studios and research teams — a dedicated physical Mac host for your team with unified billing.</p>
-              <div class="price" data-plan-idx="3"><sup>A$</sup><span class="amount">2,249</span><small data-period>/ month</small><del class="price-orig" data-orig-idx="3" style="display:none"></del></div>
-              <p class="price-note" data-note-idx="3">Includes 5 isolated member seats (~A$450/seat/mo) · Dedicated Mac host</p>
+              <span class="badge badge-team" data-ent-badge="team">5 × Max (5x) Seats · Dedicated Host</span>
+              <div class="plan-tier"><b>Team</b><span data-ent-sub="team">5 Seats</span></div>
+              <p class="plan-desc">Built for startup pods, AI studios and research teams — a dedicated physical Mac host for your team with unified billing &amp; admin control.</p>
+              <div class="price" data-ent-price="team"><sup>A$</sup><span class="amount">3,199</span><small data-period>/ month</small><del class="price-orig" data-ent-orig="team" style="display:none"></del></div>
+              <p class="price-note" data-ent-note="team">Includes 5 Max (5x) isolated seats · Dedicated Mac host &amp; team ops</p>
               <ul class="features">
-                <li>Includes <strong>5 isolated member seats</strong> (separate Claude workspace &amp; macOS account per member)</li>
+                <li data-ent-seat-li="team">Includes <strong>5 Max (5x) engineering seats</strong> (separate Claude workspace &amp; macOS account per member)</li>
                 <li><strong>Dedicated high-spec Mac Studio / Mac mini host</strong> exclusively for your team</li>
-                <li>Flexible seat reassignment for onboarding/offboarding &amp; <strong>single consolidated invoice</strong></li>
-                <li>Built for heavy daily Claude Code engineering &amp; multi-agent workflows</li>
+                <li>Organisation-owned seat reassignment for onboarding/offboarding &amp; <strong>single consolidated invoice</strong></li>
+                <li>Upgrade individual seats to Max (5x) or Ultra (20x) on demand at any time</li>
                 <li><strong>7×24h</strong> dedicated team concierge group channel</li>
                 <li style="color: var(--primary-strong); font-weight: 600;">Complimentary private high-speed RustDesk team channel</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">Complimentary 12 TB team cloud storage (Google Drive / iCloud+)</li>
+                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Complimentary 12 TB team cloud storage (Google Drive / iCloud+)</li>
               </ul>
-              <a class="btn btn-ghost" data-stripe-tier="team" href="https://buy.stripe.com/eVq9AVcqtefk9XM0to9Zm1V" target="_blank" rel="noopener">Subscribe Team</a>
+              <a class="btn btn-ghost" data-ent-btn="team" href="https://buy.stripe.com/28E4gB769efk6LAgsm9Zm2C" target="_blank" rel="noopener">Subscribe Team</a>
               <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%20Team%20Plan">Need extra seats or custom specs? Talk to us →</a>
             </article>
 
             <article class="card plan plan-business">
-              <span class="badge">Enterprise · 10-Seat Cluster</span>
-              <div class="plan-tier"><b>Business</b><span>10 Seats</span></div>
-              <p class="plan-desc">For scaling tech companies, quant &amp; engineering orgs — dedicated multi-Mac physical clusters with 9-country failover.</p>
-              <div class="price" data-plan-idx="4"><sup>A$</sup><span class="amount">4,499</span><small data-period>/ month</small><del class="price-orig" data-orig-idx="4" style="display:none"></del></div>
-              <p class="price-note" data-note-idx="4">Includes 10 isolated member seats (~A$450/seat/mo) · Multi-Mac cluster</p>
+              <span class="badge" data-ent-badge="biz">Enterprise · 10 × Max (5x) Cluster</span>
+              <div class="plan-tier"><b>Business</b><span data-ent-sub="biz">10 Seats</span></div>
+              <p class="plan-desc">For scaling tech companies, quant &amp; engineering orgs — dedicated multi-Mac physical clusters with 9-country dual-region deployment.</p>
+              <div class="price" data-ent-price="biz"><sup>A$</sup><span class="amount">6,599</span><small data-period>/ month</small><del class="price-orig" data-ent-orig="biz" style="display:none"></del></div>
+              <p class="price-note" data-ent-note="biz">Includes 10 Max (5x) isolated seats · Dedicated multi-Mac cluster &amp; VIP SLA</p>
               <ul class="features">
-                <li>Includes <strong>10 isolated member seats</strong> (expandable to 50+ seats on demand)</li>
+                <li data-ent-seat-li="biz">Includes <strong>10 Max (5x) engineering seats</strong> (expandable to 50+ seats on demand)</li>
                 <li><strong>Dedicated multi-unit Mac Studio / Mac mini physical cluster</strong></li>
-                <li>Optional <strong>dual-region deployment &amp; warm failover across 9 countries</strong> + dedicated static native ISP</li>
+                <li>Supports <strong>dual-region deployment &amp; rapid migration across 9 countries</strong> + dedicated static native ISP</li>
                 <li>Consolidated commercial invoicing &amp; dedicated Customer Success Manager</li>
                 <li><strong>Top-tier 7×24h VIP enterprise SLA channel</strong> (priority ops &amp; architecture advisory)</li>
                 <li style="color: var(--primary-strong); font-weight: 600;">Complimentary dedicated enterprise RustDesk relay line</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">Complimentary 30 TB enterprise cloud storage (Google Drive / iCloud+)</li>
+                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">Complimentary 30 TB enterprise cloud storage (Google Drive / iCloud+)</li>
               </ul>
-              <a class="btn btn-primary" data-stripe-tier="business" href="https://buy.stripe.com/eVq7sNgGJgnsd9Y4JE9Zm29" target="_blank" rel="noopener">Subscribe Business</a>
+              <a class="btn btn-primary" data-ent-btn="biz" href="https://buy.stripe.com/bJe5kFgGJ7QWb1Q2Bw9Zm3i" target="_blank" rel="noopener">Subscribe Business</a>
               <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%20Business%20Plan">20+ seats or custom private cluster? Contact enterprise sales →</a>
             </article>
+          </div>
+
+          <!-- Per-Seat Self-Serve Upgrade Add-ons -->
+          <div class="seat-addons">
+            <div class="seat-addons-head">
+              <h3>Per-Seat Upgrade Add-ons <span class="addon-pill">1–50 seats adjustable at checkout</span></h3>
+              <p>Mix &amp; match tiers on any active Team or Business base plan — upgrade specific members on demand (annual add-ons also get 2 months free).</p>
+            </div>
+            <div class="addon-grid">
+              <div class="addon-card">
+                <div>
+                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Max 5x</code> <span>Upgrade</span></div>
+                  <p class="addon-desc">Upgrade any Pro (1x) team seat to Max (5x) for heavy daily Claude Code engineering.</p>
+                </div>
+                <div class="addon-foot">
+                  <div class="addon-price" data-upg-idx="0">+<sup>A$</sup><span class="amount">479</span><small data-upg-period>/ seat / mo</small></div>
+                  <a class="addon-btn" data-upg-tier="upg_pm" href="https://buy.stripe.com/bJe5kFfCF6MSc5U3FA9Zm3I" target="_blank" rel="noopener">Upgrade seat →</a>
+                </div>
+              </div>
+              <div class="addon-card">
+                <div>
+                  <div class="addon-route"><code>Max 5x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Upgrade</span></div>
+                  <p class="addon-desc">Upgrade founders, CTOs or lead architects on an All-Max plan to 20x Ultra multi-agent capacity.</p>
+                </div>
+                <div class="addon-foot">
+                  <div class="addon-price" data-upg-idx="1">+<sup>A$</sup><span class="amount">539</span><small data-upg-period>/ seat / mo</small></div>
+                  <a class="addon-btn" data-upg-tier="upg_mu" href="https://buy.stripe.com/7sY3cxfCFc7c8TIcc69Zm3Y" target="_blank" rel="noopener">Upgrade seat →</a>
+                </div>
+              </div>
+              <div class="addon-card">
+                <div>
+                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Direct</span></div>
+                  <p class="addon-desc">Jump any seat on an All-Pro base plan straight to full 20x Ultra flagship allowance.</p>
+                </div>
+                <div class="addon-foot">
+                  <div class="addon-price" data-upg-idx="2">+<sup>A$</sup><span class="amount">999</span><small data-upg-period>/ seat / mo</small></div>
+                  <a class="addon-btn" data-upg-tier="upg_pu" href="https://buy.stripe.com/cNidRbailefk9XM7VQ9Zn05" target="_blank" rel="noopener">Upgrade seat →</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1198,8 +1533,17 @@
             • <strong>1x Standard</strong>: Solo base allowance + Mac mini environment (separate macOS account) + <strong>7×8h</strong> 1-on-1 support;<br>
             • <strong>5x Pro</strong>: Solo 5× allowance + high-spec Mac mini (separate macOS account) + <strong>7×16h</strong> priority 1-on-1 support;<br>
             • <strong>20x Ultimate</strong>: Solo 20× allowance + high-spec Mac Studio / Mac mini (dedicated machine option) + <strong>7×24h</strong> private concierge + <strong>private RustDesk channel</strong> + <strong>6 TB cloud storage</strong>;<br>
-            • <strong>Team (5 Seats)</strong>: 5 isolated member seats + <strong>dedicated physical Mac host exclusively for your team</strong> + seat reassignment &amp; consolidated billing + <strong>team RustDesk channel</strong> + <strong>12 TB cloud storage</strong> + <strong>7×24h</strong> team concierge group;<br>
-            • <strong>Business (10 Seats)</strong>: 10 isolated member seats (expandable) + <strong>dedicated multi-Mac physical cluster with optional 9-country failover</strong> + commercial invoicing + <strong>enterprise RustDesk relay</strong> + <strong>30 TB cloud storage</strong> + <strong>7×24h VIP SLA group</strong>.</p>
+            • <strong>Team (5 Seats · Dedicated Host)</strong>: Available in All-Pro (1x), All-Max (5x) or All-Ultra (20x) tiers — dedicated physical Mac host for your team, seat reassignment, consolidated billing, private RustDesk channel, 6–12 TB cloud storage &amp; 7×24h team concierge;<br>
+            • <strong>Business (10 Seats · Multi-Mac Cluster)</strong>: Available in All-Pro (1x), All-Max (5x) or All-Ultra (20x) tiers — dedicated multi-Mac cluster (9-country dual-region deployment &amp; rapid migration), commercial invoicing, enterprise RustDesk relay, 12–30 TB cloud storage &amp; 7×24h VIP SLA;<br>
+            • <strong>Per-Seat Upgrade Add-ons</strong>: Start on an All-Pro or All-Max base plan and upgrade specific seats to Max (5x) or Ultra (20x) at any time via self-serve checkout (adjustable quantity 1–50 seats).</p>
+          </details>
+          <details>
+            <summary>Why is Zaokit ClaudeOps priced higher than standard cloud desktops or shared accounts?</summary>
+            <p>Because you are paying for <strong>deterministic physical infrastructure and white-glove engineering operations</strong>—not low-cost shared VPS instances or pooled logins. Every subscription covers four real infrastructure costs:<br>
+            • <strong>High-Spec Physical Mac Hardware</strong>: Real Mac Studio and Mac mini machines (never virtualized cloud VMs), delivering sustained local compute and 24/7 reliability—with full dedicated machine isolation on 20x+;<br>
+            • <strong>200Mbps–500Mbps+ Symmetrical Native Bandwidth</strong>: Local native ISP broadband across 9 countries with generous symmetrical upload/download speeds, keeping Screen Sharing crisp and responsive instead of lagging on 10–30Mbps shared pipes;<br>
+            • <strong>Enterprise BGP Backbone</strong>: Self-hosted high-speed relays over a premium HK/APAC enterprise BGP backbone with dual-leg BBR optimization, driving cross-border packet loss to zero;<br>
+            • <strong>Full Official Allowance + 7×16 / 7×24 Concierge Ops</strong>: Full official subscription allowances, managed billing, iCloud/Google Drive sync, and 1-on-1 engineering support.</p>
           </details>
           <details>
             <summary>Separate account vs dedicated machine: why is 1x / 5x limited to Apple Screen Sharing?</summary>
@@ -1313,15 +1657,16 @@
 
   <script>
     (function () {
-      // 多币种价格：p = [1x, 5x, 20x, Team(5席), Business(10席)] 月付价格；年付统一按 10 个月计费（免 2 个月）
+      // 定价遵循官方 B2B 阶梯策略（Solo < Team单席 < Business单席），年付统一收 10 个月（免 2 个月）
+      // p = [1x, 5x, 20x], team = [pro, max, ultra], biz = [pro, max, ultra], upg = [pro->max, max->ultra, pro->ultra]
       var PRICES = {
-        AUD: { sym: 'A$', name: 'AUD', p: [149, 579, 1049, 2249, 4499], orig20x: 1499, s: [13.99, 43.99, 88.99, 224.99], so: [14.99, 44.99, 89.99, 225.99] },
-        USD: { sym: '$', name: 'USD', p: [99, 399, 699, 1499, 2999], orig20x: 999, s: [8.99, 28.99, 58.99, 148.99], so: [9.99, 29.99, 59.99, 149.99] },
-        EUR: { sym: '€', name: 'EUR', p: [89, 349, 629, 1349, 2699], orig20x: 899, s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
-        NZD: { sym: 'NZ$', name: 'NZD', p: [179, 699, 1199, 2699, 5399], orig20x: 1799, s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
-        CAD: { sym: 'C$', name: 'CAD', p: [139, 549, 969, 2099, 4199], orig20x: 1399, s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
-        CNY: { sym: '¥', name: 'CNY', p: [719, 2899, 4999, 10799, 21599], orig20x: 7199, s: [65, 209, 419, 1059] },
-        SGD: { sym: 'S$', name: 'SGD', p: [129, 499, 899, 1949, 3899], orig20x: 1299, s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
+        AUD: { sym: 'A$', name: 'AUD', p: [149, 579, 1049], orig20x: 1499, team: [899, 3199, 5799], biz: [1949, 6599, 11899], upg: [479, 539, 999], s: [13.99, 43.99, 88.99, 224.99], so: [14.99, 44.99, 89.99, 225.99] },
+        USD: { sym: '$', name: 'USD', p: [99, 399, 699], orig20x: 999, team: [599, 2199, 3899], biz: [1299, 4499, 7999], upg: [329, 359, 679], s: [8.99, 28.99, 58.99, 148.99], so: [9.99, 29.99, 59.99, 149.99] },
+        EUR: { sym: '€', name: 'EUR', p: [89, 349, 629], orig20x: 899, team: [539, 1949, 3499], biz: [1169, 3999, 7199], upg: [289, 329, 609], s: [8.49, 26.99, 54.99, 138.99], so: [9.49, 27.99, 55.99, 139.99] },
+        NZD: { sym: 'NZ$', name: 'NZD', p: [179, 699, 1199], orig20x: 1799, team: [1079, 3849, 6699], biz: [2299, 7899, 13799], upg: [569, 629, 1179], s: [14.99, 47.99, 94.99, 239.99], so: [15.99, 48.99, 95.99, 240.99] },
+        CAD: { sym: 'C$', name: 'CAD', p: [139, 549, 969], orig20x: 1399, team: [839, 2999, 5399], biz: [1799, 6199, 10999], upg: [449, 499, 939], s: [12.49, 39.99, 79.99, 204.99], so: [13.49, 40.99, 80.99, 205.99] },
+        CNY: { sym: '¥', name: 'CNY', p: [719, 2899, 4999], orig20x: 7199, team: [4299, 15999, 27999], biz: [9199, 32999, 56999], upg: [2399, 2599, 4899], s: [65, 209, 419, 1059] },
+        SGD: { sym: 'S$', name: 'SGD', p: [129, 499, 899], orig20x: 1299, team: [779, 2749, 4999], biz: [1649, 5699, 10299], upg: [409, 469, 869], s: [11.99, 38.99, 78.99, 198.99], so: [12.99, 39.99, 79.99, 199.99] }
       };
       var STRIPE_LINKS = {
         '2t_CNY': 'https://buy.stripe.com/3cI5kFgGJefk3zofoi9Zm1w',
@@ -1394,49 +1739,182 @@
         '5x_yr_NZD': 'https://buy.stripe.com/3cI00l9eh8V00nc3FA9Zm1K',
         '5x_yr_SGD': 'https://buy.stripe.com/aFa6oJ769efkee23FA9Zm1M',
         '5x_yr_USD': 'https://buy.stripe.com/dRm28t3TX9Z40nc8ZU9Zm1I',
-        'business_AUD': 'https://buy.stripe.com/eVq7sNgGJgnsd9Y4JE9Zm29',
-        'business_CAD': 'https://buy.stripe.com/3cIcN78addbg9XMgsm9Zm2d',
-        'business_CNY': 'https://buy.stripe.com/5kQcN73TXefk2vk8ZU9Zm2f',
-        'business_EUR': 'https://buy.stripe.com/bJe00l3TXgns5Hw2Bw9Zm2b',
-        'business_NZD': 'https://buy.stripe.com/14A3cxbmp5IOfi6eke9Zm2c',
-        'business_SGD': 'https://buy.stripe.com/00w7sN4Y12wC6LAfoi9Zm2e',
-        'business_USD': 'https://buy.stripe.com/dRmfZj7694EK1rg8ZU9Zm2a',
-        'business_yr_AUD': 'https://buy.stripe.com/14A3cx0HL9Z4c5Ub829Zm2g',
-        'business_yr_CAD': 'https://buy.stripe.com/3cI3cxdux8V0b1Qfoi9Zm2k',
-        'business_yr_CNY': 'https://buy.stripe.com/4gM9AVeyBefk1rgb829Zm2m',
-        'business_yr_EUR': 'https://buy.stripe.com/aFabJ34Y17QWfi63FA9Zm2i',
-        'business_yr_NZD': 'https://buy.stripe.com/fZuaEZ4Y1b384Ds4JE9Zm2j',
-        'business_yr_SGD': 'https://buy.stripe.com/14A8wR1LP5IO7PE6RM9Zm2l',
-        'business_yr_USD': 'https://buy.stripe.com/dRmdRbfCF8V06LA3FA9Zm2h',
-        'team_AUD': 'https://buy.stripe.com/eVq9AVcqtefk9XM0to9Zm1V',
-        'team_CAD': 'https://buy.stripe.com/eVq4gB9ehgnsb1Q7VQ9Zm1Z',
-        'team_CNY': 'https://buy.stripe.com/dRm5kFdux6MS3zoeke9Zm21',
-        'team_EUR': 'https://buy.stripe.com/28E6oJ2PT3AGfi65NI9Zm1X',
-        'team_NZD': 'https://buy.stripe.com/aFafZj8ad2wC5Hw6RM9Zm1Y',
-        'team_SGD': 'https://buy.stripe.com/cNi6oJbmpfjoee25NI9Zm20',
-        'team_USD': 'https://buy.stripe.com/eVq28t769fjo3zoa3Y9Zm1W',
-        'team_yr_AUD': 'https://buy.stripe.com/eVq28t6255IOfi6cc69Zm22',
-        'team_yr_CAD': 'https://buy.stripe.com/dRm00l1LP1sy1rg2Bw9Zm26',
-        'team_yr_CNY': 'https://buy.stripe.com/bJeeVf4Y11sygma8ZU9Zm28',
-        'team_yr_EUR': 'https://buy.stripe.com/dRmdRbeyBfjo0nc1xs9Zm24',
-        'team_yr_NZD': 'https://buy.stripe.com/00w9AV6251sy8TI3FA9Zm25',
-        'team_yr_SGD': 'https://buy.stripe.com/fZuaEZ2PTb381rgb829Zm27',
-        'team_yr_USD': 'https://buy.stripe.com/6oUdRb7694EK8TI7VQ9Zm23'
+        'biz_max_AUD': 'https://buy.stripe.com/bJe5kFgGJ7QWb1Q2Bw9Zm3i',
+        'biz_max_CAD': 'https://buy.stripe.com/7sYdRbgGJb389XMcc69Zm3l',
+        'biz_max_CNY': 'https://buy.stripe.com/4gM8wRdux7QW9XMfoi9Zm3n',
+        'biz_max_EUR': 'https://buy.stripe.com/28EdRbfCF0ou8TI7VQ9Zm3j',
+        'biz_max_NZD': 'https://buy.stripe.com/cNi8wR2PT3AGc5U6RM9Zm3k',
+        'biz_max_SGD': 'https://buy.stripe.com/fZu4gB7696MSc5U8ZU9Zm3m',
+        'biz_max_USD': 'https://buy.stripe.com/4gM8wR8ad4EKgma3FA9Zm3h',
+        'biz_max_yr_AUD': 'https://buy.stripe.com/cNieVfdux3AGd9Yfoi9Zm3p',
+        'biz_max_yr_CAD': 'https://buy.stripe.com/4gM8wR0HLfjo4Dsa3Y9Zm3r',
+        'biz_max_yr_CNY': 'https://buy.stripe.com/aFa5kFailfjo8TI0to9Zm3t',
+        'biz_max_yr_EUR': 'https://buy.stripe.com/9B68wRgGJ1sy5Hwcc69Zm3q',
+        'biz_max_yr_NZD': 'https://buy.stripe.com/7sY5kFduxb388TI0to9Zm3u',
+        'biz_max_yr_SGD': 'https://buy.stripe.com/9B63cxeyB4EK9XM5NI9Zm3s',
+        'biz_max_yr_USD': 'https://buy.stripe.com/28EeVf0HLc7cc5Ucc69Zm3o',
+        'biz_pro_AUD': 'https://buy.stripe.com/bJe00l6250ou1rg8ZU9Zm34',
+        'biz_pro_CAD': 'https://buy.stripe.com/00w5kF4Y11sy8TI2Bw9Zm37',
+        'biz_pro_CNY': 'https://buy.stripe.com/00wfZj7699Z4d9Y6RM9Zm39',
+        'biz_pro_EUR': 'https://buy.stripe.com/dRmbJ38ad9Z4d9Y7VQ9Zm35',
+        'biz_pro_NZD': 'https://buy.stripe.com/28E7sN0HL5IOfi65NI9Zm36',
+        'biz_pro_SGD': 'https://buy.stripe.com/7sY7sNbmpdbg0nc3FA9Zm38',
+        'biz_pro_USD': 'https://buy.stripe.com/28E28t6259Z41rg6RM9Zm33',
+        'biz_pro_yr_AUD': 'https://buy.stripe.com/8x2dRbeyBb383zo6RM9Zm3b',
+        'biz_pro_yr_CAD': 'https://buy.stripe.com/8x2dRbail7QW7PEcc69Zm3e',
+        'biz_pro_yr_CNY': 'https://buy.stripe.com/5kQ3cxdux8V03zo7VQ9Zm3g',
+        'biz_pro_yr_EUR': 'https://buy.stripe.com/dRmbJ39eh5IOee27VQ9Zm3c',
+        'biz_pro_yr_NZD': 'https://buy.stripe.com/5kQdRbbmp2wC6LAgsm9Zm3d',
+        'biz_pro_yr_SGD': 'https://buy.stripe.com/3cI5kFduxdbg4Dscc69Zm3f',
+        'biz_pro_yr_USD': 'https://buy.stripe.com/28EaEZeyBfjo2vk5NI9Zm3a',
+        'biz_ultra_AUD': 'https://buy.stripe.com/dRm00l4Y1c7cc5U5NI9Zm3x',
+        'biz_ultra_CAD': 'https://buy.stripe.com/5kQ4gBcqt4EK1rg6RM9Zm3z',
+        'biz_ultra_CNY': 'https://buy.stripe.com/28EeVf9ehfjo2vk2Bw9Zm3C',
+        'biz_ultra_EUR': 'https://buy.stripe.com/fZu9AV7694EK6LA3FA9Zm3w',
+        'biz_ultra_NZD': 'https://buy.stripe.com/7sYaEZ8addbg7PE6RM9Zm3y',
+        'biz_ultra_SGD': 'https://buy.stripe.com/aFa4gB4Y1dbgc5U4JE9Zm3A',
+        'biz_ultra_USD': 'https://buy.stripe.com/00w5kF4Y10ou0ncb829Zm3v',
+        'biz_ultra_yr_AUD': 'https://buy.stripe.com/cNi00l8adgns5Hw1xs9Zm3D',
+        'biz_ultra_yr_CAD': 'https://buy.stripe.com/aFa8wRduxc7c6LA8ZU9Zm3G',
+        'biz_ultra_yr_CNY': 'https://buy.stripe.com/cNi8wR0HLb38fi6b829Zm3J',
+        'biz_ultra_yr_EUR': 'https://buy.stripe.com/5kQ6oJ625fjo9XMdga9Zm3E',
+        'biz_ultra_yr_NZD': 'https://buy.stripe.com/6oU8wR9eh6MS6LAb829Zm3F',
+        'biz_ultra_yr_SGD': 'https://buy.stripe.com/eVqfZjail1sy6LA3FA9Zm3H',
+        'biz_ultra_yr_USD': 'https://buy.stripe.com/8x28wR8ad7QW9XM3FA9Zm3B',
+        'team_max_AUD': 'https://buy.stripe.com/28E4gB769efk6LAgsm9Zm2C',
+        'team_max_CAD': 'https://buy.stripe.com/9B628t0HLc7cc5U5NI9Zm2F',
+        'team_max_CNY': 'https://buy.stripe.com/fZufZjcqt6MS7PE5NI9Zm2G',
+        'team_max_EUR': 'https://buy.stripe.com/5kQcN7duxc7c8TI2Bw9Zm2D',
+        'team_max_NZD': 'https://buy.stripe.com/bJe5kF8ad7QW1rgdga9Zm2E',
+        'team_max_SGD': 'https://buy.stripe.com/8x2bJ3duxfjoc5Ub829Zm2H',
+        'team_max_USD': 'https://buy.stripe.com/5kQ7sN2PT1sy7PE0to9Zm2A',
+        'team_max_yr_AUD': 'https://buy.stripe.com/4gM14pduxefk6LA3FA9Zm2K',
+        'team_max_yr_CAD': 'https://buy.stripe.com/4gMeVf9ehb387PEb829Zm2N',
+        'team_max_yr_CNY': 'https://buy.stripe.com/fZu7sNfCFb38fi61xs9Zm2O',
+        'team_max_yr_EUR': 'https://buy.stripe.com/5kQ4gB8ad3AG8TI7VQ9Zm2L',
+        'team_max_yr_NZD': 'https://buy.stripe.com/3cI5kFcqtefkee2cc69Zm2J',
+        'team_max_yr_SGD': 'https://buy.stripe.com/aFa3cx769gnsee25NI9Zm2M',
+        'team_max_yr_USD': 'https://buy.stripe.com/3cI8wR8adb389XMb829Zm2I',
+        'team_pro_AUD': 'https://buy.stripe.com/3cI4gBbmp2wCc5U3FA9Zm2t',
+        'team_pro_CAD': 'https://buy.stripe.com/cNi7sNbmp5IOd9Ygsm9Zm2p',
+        'team_pro_CNY': 'https://buy.stripe.com/14A6oJ4Y12wC9XM8ZU9Zm2w',
+        'team_pro_EUR': 'https://buy.stripe.com/5kQaEZ2PT6MSc5U0to9Zm2q',
+        'team_pro_NZD': 'https://buy.stripe.com/8x2eVfeyB7QW1rgeke9Zm2o',
+        'team_pro_SGD': 'https://buy.stripe.com/dRm7sN6251syfi6dga9Zm2r',
+        'team_pro_USD': 'https://buy.stripe.com/eVq6oJ4Y17QW2vk8ZU9Zm2n',
+        'team_pro_yr_AUD': 'https://buy.stripe.com/aFa00l3TXb384Ds4JE9Zm2u',
+        'team_pro_yr_CAD': 'https://buy.stripe.com/5kQ4gBcqt1syc5Udga9Zm2v',
+        'team_pro_yr_CNY': 'https://buy.stripe.com/28EaEZbmpefk6LAa3Y9Zm2y',
+        'team_pro_yr_EUR': 'https://buy.stripe.com/3cIdRb0HLfjo1rggsm9Zm2B',
+        'team_pro_yr_NZD': 'https://buy.stripe.com/8x214pfCF8V0b1Q2Bw9Zm2x',
+        'team_pro_yr_SGD': 'https://buy.stripe.com/9B6dRbgGJ5IOc5Ufoi9Zm2z',
+        'team_pro_yr_USD': 'https://buy.stripe.com/28E6oJ2PT8V0fi6cc69Zm2s',
+        'team_ultra_AUD': 'https://buy.stripe.com/bJe14p769c7cee2foi9Zm2Q',
+        'team_ultra_CAD': 'https://buy.stripe.com/bJeeVfdux1sy1rg5NI9Zm2W',
+        'team_ultra_CNY': 'https://buy.stripe.com/aFa5kF0HLefk2vka3Y9Zm2U',
+        'team_ultra_EUR': 'https://buy.stripe.com/7sY9AV1LPc7c0nc2Bw9Zm2R',
+        'team_ultra_NZD': 'https://buy.stripe.com/14AeVf769dbg3zodga9Zm2S',
+        'team_ultra_SGD': 'https://buy.stripe.com/dRm6oJ4Y1fjo8TI4JE9Zm2T',
+        'team_ultra_USD': 'https://buy.stripe.com/28EdRb8ad0ou3zo8ZU9Zm2P',
+        'team_ultra_yr_AUD': 'https://buy.stripe.com/dRm14p4Y17QW8TI0to9Zm2Y',
+        'team_ultra_yr_CAD': 'https://buy.stripe.com/28E8wRfCF7QW4Ds1xs9Zm30',
+        'team_ultra_yr_CNY': 'https://buy.stripe.com/cNi28t0HL6MSb1Q7VQ9Zm32',
+        'team_ultra_yr_EUR': 'https://buy.stripe.com/cNi6oJ2PT0ou4Ds8ZU9Zm2X',
+        'team_ultra_yr_NZD': 'https://buy.stripe.com/4gMeVf2PT0ou6LA7VQ9Zm2Z',
+        'team_ultra_yr_SGD': 'https://buy.stripe.com/7sYbJ3eyB6MS6LA2Bw9Zm31',
+        'team_ultra_yr_USD': 'https://buy.stripe.com/dRm6oJ9eh7QW1rgb829Zm2V',
+        'upg_mu_AUD': 'https://buy.stripe.com/7sY3cxfCFc7c8TIcc69Zm3Y',
+        'upg_mu_CAD': 'https://buy.stripe.com/fZueVffCF0ouee20to9Zm41',
+        'upg_mu_CNY': 'https://buy.stripe.com/eVqdRbeyBgns0nceke9Zm43',
+        'upg_mu_EUR': 'https://buy.stripe.com/4gMdRb3TX1sy8TIeke9Zm3Z',
+        'upg_mu_NZD': 'https://buy.stripe.com/bJe9AV3TXgns6LAfoi9Zm40',
+        'upg_mu_SGD': 'https://buy.stripe.com/dRm3cx625gns2vk0to9Zm42',
+        'upg_mu_USD': 'https://buy.stripe.com/9B6aEZail2wCee23FA9Zm3W',
+        'upg_mu_yr_AUD': 'https://buy.stripe.com/7sY9AVfCF0oud9Y5NI9Zm45',
+        'upg_mu_yr_CAD': 'https://buy.stripe.com/bJebJ3ail3AG0nceke9Zn00',
+        'upg_mu_yr_CNY': 'https://buy.stripe.com/eVq3cx4Y1dbgd9Y8ZU9Zn01',
+        'upg_mu_yr_EUR': 'https://buy.stripe.com/9B6cN74Y1dbgfi62Bw9Zm46',
+        'upg_mu_yr_NZD': 'https://buy.stripe.com/7sY00l6250ou4Dsb829Zm47',
+        'upg_mu_yr_SGD': 'https://buy.stripe.com/6oU14p0HLefk6LAfoi9Zn02',
+        'upg_mu_yr_USD': 'https://buy.stripe.com/9B6eVf2PT5IO2vkgsm9Zm44',
+        'upg_pm_AUD': 'https://buy.stripe.com/bJe5kFfCF6MSc5U3FA9Zm3I',
+        'upg_pm_CAD': 'https://buy.stripe.com/eVq14p9eh1sy8TIeke9Zm3M',
+        'upg_pm_CNY': 'https://buy.stripe.com/bJe4gBeyBfjogmacc69Zm3O',
+        'upg_pm_EUR': 'https://buy.stripe.com/14AdRbgGJc7c5Hw0to9Zm3K',
+        'upg_pm_NZD': 'https://buy.stripe.com/cNi9AVail7QW5Hw3FA9Zm3L',
+        'upg_pm_SGD': 'https://buy.stripe.com/fZu6oJ8ad1sy9XMgsm9Zm3N',
+        'upg_pm_USD': 'https://buy.stripe.com/dRmeVfeyB2wCee2cc69Zm3P',
+        'upg_pm_yr_AUD': 'https://buy.stripe.com/14A5kF0HLgnsd9Y1xs9Zm3R',
+        'upg_pm_yr_CAD': 'https://buy.stripe.com/4gMaEZ8addbgb1Qcc69Zm3U',
+        'upg_pm_yr_CNY': 'https://buy.stripe.com/dRmfZj0HL6MS3zo3FA9Zm3X',
+        'upg_pm_yr_EUR': 'https://buy.stripe.com/4gMeVfdux1sy5Hwb829Zm3S',
+        'upg_pm_yr_NZD': 'https://buy.stripe.com/14AbJ3dux5IOb1Q5NI9Zm3T',
+        'upg_pm_yr_SGD': 'https://buy.stripe.com/8x25kF3TX4EK8TI8ZU9Zm3V',
+        'upg_pm_yr_USD': 'https://buy.stripe.com/dRmdRb0HLdbgfi60to9Zm3Q',
+        'upg_pu_AUD': 'https://buy.stripe.com/cNidRbailefk9XM7VQ9Zn05',
+        'upg_pu_CAD': 'https://buy.stripe.com/8x29AVfCF8V02vk3FA9Zn07',
+        'upg_pu_CNY': 'https://buy.stripe.com/5kQ7sN1LPb38d9Ycc69Zn09',
+        'upg_pu_EUR': 'https://buy.stripe.com/00w8wR0HL3AGc5Ufoi9Zn04',
+        'upg_pu_NZD': 'https://buy.stripe.com/6oU9AV1LP2wC7PE3FA9Zn06',
+        'upg_pu_SGD': 'https://buy.stripe.com/7sYbJ39ehefkfi60to9Zn08',
+        'upg_pu_USD': 'https://buy.stripe.com/dRm14pailc7c9XM4JE9Zn03',
+        'upg_pu_yr_AUD': 'https://buy.stripe.com/14A3cx3TX2wCgmagsm9Zn0a',
+        'upg_pu_yr_CAD': 'https://buy.stripe.com/cNi3cx4Y10oub1Q0to9Zn0d',
+        'upg_pu_yr_CNY': 'https://buy.stripe.com/8x2eVf4Y13AG5Hw4JE9Zn0f',
+        'upg_pu_yr_EUR': 'https://buy.stripe.com/5kQcN70HL5IO1rg3FA9Zn0c',
+        'upg_pu_yr_NZD': 'https://buy.stripe.com/28EcN7769efk7PE5NI9Zn0e',
+        'upg_pu_yr_SGD': 'https://buy.stripe.com/fZufZj2PT5IOd9Ydga9Zn0g',
+        'upg_pu_yr_USD': 'https://buy.stripe.com/9B64gB0HL1sy1rg1xs9Zn0b'
       };
 
-      var MULT = [1, 5, 20, 30, 60];
-      var ANNUAL_TIERS = { '1x': true, '5x': true, '20x': true, 'team': true, 'business': true };
+      var ENT_COPY = {
+        pro: {
+          label: 'Pro (1x)',
+          teamBadge: '5 × Pro (1x) Seats · Dedicated Host',
+          bizBadge: 'Enterprise · 10 × Pro (1x) Cluster',
+          teamSeatLi: 'Includes <strong>5 Pro (1x) standard member seats</strong> (separate Claude workspace &amp; macOS account per member)',
+          bizSeatLi: 'Includes <strong>10 Pro (1x) standard member seats</strong> (expandable to 50+ seats on demand)',
+          teamStorage: 'Complimentary 6 TB team cloud storage (Google Drive / iCloud+)',
+          bizStorage: 'Complimentary 12 TB enterprise cloud storage (Google Drive / iCloud+)'
+        },
+        max: {
+          label: 'Max (5x)',
+          teamBadge: '5 × Max (5x) Seats · Dedicated Host',
+          bizBadge: 'Enterprise · 10 × Max (5x) Cluster',
+          teamSeatLi: 'Includes <strong>5 Max (5x) engineering seats</strong> (separate Claude workspace &amp; macOS account per member)',
+          bizSeatLi: 'Includes <strong>10 Max (5x) engineering seats</strong> (expandable to 50+ seats on demand)',
+          teamStorage: 'Complimentary 12 TB team cloud storage (Google Drive / iCloud+)',
+          bizStorage: 'Complimentary 30 TB enterprise cloud storage (Google Drive / iCloud+)'
+        },
+        ultra: {
+          label: 'Ultra (20x)',
+          teamBadge: '5 × Ultra (20x) Seats · Dedicated Studio',
+          bizBadge: 'Enterprise · 10 × Ultra (20x) Cluster',
+          teamSeatLi: 'Includes <strong>5 Ultra (20x) flagship seats</strong> (separate Claude workspace &amp; macOS account per member)',
+          bizSeatLi: 'Includes <strong>10 Ultra (20x) flagship seats</strong> (expandable to 50+ seats on demand)',
+          teamStorage: 'Complimentary 12 TB team cloud storage (Google Drive / iCloud+)',
+          bizStorage: 'Complimentary 30 TB enterprise cloud storage (Google Drive / iCloud+)'
+        }
+      };
+      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var MULT = [1, 5, 20];
+      var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
       if (!PROMO_ACTIVE) {
         document.querySelectorAll('.badge-promo, [data-promo-foot]').forEach(function (el) { el.remove(); });
       }
       var curCode = 'AUD';
       var curBilling = 'month';
+      var curSeatTier = 'max';
 
       function fmt(n) { return n.toLocaleString('en-AU'); }
       function renderPricing() {
         var c = PRICES[curCode] || PRICES.AUD;
         var isYear = curBilling === 'year';
+        var tIdx = TIER_IDX[curSeatTier] != null ? TIER_IDX[curSeatTier] : 1;
+        var ec = ENT_COPY[curSeatTier] || ENT_COPY.max;
+
+        // 1. Solo plans (1x / 5x / 20x)
         document.querySelectorAll('[data-plan-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-plan-idx');
           var mo = c.p[i];
@@ -1460,13 +1938,6 @@
             }
           }
         });
-        document.querySelectorAll('[data-storage-idx]').forEach(function (el) {
-          var i = +el.getAttribute('data-storage-idx');
-          var sc = c.s ? c : PRICES.AUD;
-          el.querySelector('sup').textContent = sc.sym;
-          var v = sc.s[i];
-          el.querySelector('.amount').textContent = v % 1 ? v.toFixed(2) : fmt(v);
-        });
         document.querySelectorAll('[data-note-idx]').forEach(function (el) {
           var i = +el.getAttribute('data-note-idx');
           var mo = c.p[i];
@@ -1474,18 +1945,13 @@
           if (isYear) {
             var eqMo = mo * 10 / 12;
             var eqStr = eqMo >= 100 ? fmt(Math.round(eqMo)) : (+eqMo.toFixed(1)).toString();
-            var saved = mo * 2;
-            el.textContent = '10 months billed annually · ~' + c.sym + eqStr + '/mo, save ' + c.sym + fmt(saved);
+            el.textContent = '10 months billed annually · ~' + c.sym + eqStr + '/mo, save ' + c.sym + fmt(mo * 2);
           } else if (i === 0) {
             var day = c.p[0] / 30;
             el.textContent = 'Includes Claude environment · about ' + c.sym + (day >= 10 ? Math.round(day) : +day.toFixed(1)) + ' / day';
           } else if (i === 2 && PROMO_ACTIVE) {
             var ratio2 = Math.round(c.p[2] / (c.p[0] * MULT[2]) * 100);
             el.textContent = 'Promo price stays on renewal · unit cost about ' + ratio2 + '% of 1x';
-          } else if (i === 3) {
-            el.textContent = 'Includes 5 isolated member seats (~' + c.sym + fmt(Math.round(mo / 5)) + '/seat/mo) · Dedicated Mac host';
-          } else if (i === 4) {
-            el.textContent = 'Includes 10 isolated member seats (~' + c.sym + fmt(Math.round(mo / 10)) + '/seat/mo) · Multi-Mac cluster';
           } else {
             var ratio = Math.round(c.p[i] / (c.p[0] * MULT[i]) * 100);
             el.textContent = 'Includes Claude environment · ' + MULT[i] + 'x usage, unit cost about ' + ratio + '% of 1x';
@@ -1493,10 +1959,82 @@
         });
         document.querySelectorAll('[data-stripe-tier]').forEach(function (btn) {
           var tier = btn.getAttribute('data-stripe-tier');
-          var keyPrefix = (isYear && ANNUAL_TIERS[tier]) ? (tier + '_yr') : tier;
+          var keyPrefix = (isYear && SOLO_ANNUAL[tier]) ? (tier + '_yr') : tier;
           var link = STRIPE_LINKS[keyPrefix + '_' + curCode] || STRIPE_LINKS[keyPrefix + '_AUD'];
           if (link) btn.setAttribute('href', link);
         });
+
+        // 2. Team & Business modular plans
+        ['team', 'biz'].forEach(function (kind) {
+          var entMo = c[kind][tIdx];
+          var entVal = isYear ? entMo * 10 : entMo;
+          var priceEl = document.querySelector('[data-ent-price="' + kind + '"]');
+          if (priceEl) {
+            priceEl.querySelector('sup').textContent = c.sym;
+            priceEl.querySelector('.amount').textContent = fmt(entVal);
+            var pPer = priceEl.querySelector('[data-period]');
+            if (pPer) pPer.textContent = isYear ? '/ year' : '/ month';
+            var origEl = priceEl.querySelector('[data-ent-orig]');
+            if (origEl) {
+              if (isYear) {
+                origEl.textContent = c.sym + fmt(entMo * 12);
+                origEl.setAttribute('title', '12 months billed monthly');
+                origEl.style.display = 'inline';
+              } else {
+                origEl.style.display = 'none';
+              }
+            }
+          }
+          var badgeEl = document.querySelector('[data-ent-badge="' + kind + '"]');
+          if (badgeEl) badgeEl.textContent = kind === 'team' ? ec.teamBadge : ec.bizBadge;
+          var seatLi = document.querySelector('[data-ent-seat-li="' + kind + '"]');
+          if (seatLi) seatLi.innerHTML = kind === 'team' ? ec.teamSeatLi : ec.bizSeatLi;
+          var stLi = document.querySelector('[data-ent-storage-li="' + kind + '"]');
+          if (stLi) stLi.textContent = kind === 'team' ? ec.teamStorage : ec.bizStorage;
+          var noteEl = document.querySelector('[data-ent-note="' + kind + '"]');
+          if (noteEl) {
+            noteEl.classList.toggle('annual-note', isYear);
+          if (isYear) {
+            var eqEnt = entMo * 10 / 12;
+            noteEl.textContent = '10 months billed annually · ~' + c.sym + fmt(Math.round(eqEnt)) + '/mo, save ' + c.sym + fmt(entMo * 2);
+          } else if (kind === 'team') {
+            noteEl.textContent = 'Includes 5 ' + ec.label + ' isolated seats · Dedicated Mac host & consolidated billing';
+          } else {
+            noteEl.textContent = 'Includes 10 ' + ec.label + ' isolated seats · Dedicated multi-Mac cluster & VIP SLA';
+          }
+          }
+          var entBtn = document.querySelector('[data-ent-btn="' + kind + '"]');
+          if (entBtn) {
+            var kPref = kind + '_' + curSeatTier + (isYear ? '_yr' : '');
+            var eLink = STRIPE_LINKS[kPref + '_' + curCode] || STRIPE_LINKS[kPref + '_AUD'];
+            if (eLink) entBtn.setAttribute('href', eLink);
+          }
+        });
+
+        // 3. Per-seat upgrade add-ons
+        document.querySelectorAll('[data-upg-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-upg-idx');
+          var umo = c.upg[i];
+          el.querySelector('sup').textContent = c.sym;
+          el.querySelector('.amount').textContent = fmt(isYear ? umo * 10 : umo);
+          var uPer = el.querySelector('[data-upg-period]');
+          if (uPer) uPer.textContent = isYear ? '/ seat / yr' : '/ seat / mo';
+        });
+        document.querySelectorAll('[data-upg-tier]').forEach(function (btn) {
+          var ut = btn.getAttribute('data-upg-tier') + (isYear ? '_yr' : '');
+          var uLink = STRIPE_LINKS[ut + '_' + curCode] || STRIPE_LINKS[ut + '_AUD'];
+          if (uLink) btn.setAttribute('href', uLink);
+        });
+
+        // 4. Cloud storage
+        document.querySelectorAll('[data-storage-idx]').forEach(function (el) {
+          var i = +el.getAttribute('data-storage-idx');
+          var sc = c.s ? c : PRICES.AUD;
+          el.querySelector('sup').textContent = sc.sym;
+          var v = sc.s[i];
+          el.querySelector('.amount').textContent = v % 1 ? v.toFixed(2) : fmt(v);
+        });
+
         var curNameEl = document.getElementById('currency-name');
         if (curNameEl) curNameEl.textContent = c.name;
         document.querySelectorAll('[data-currency]').forEach(function (b) {
@@ -1504,6 +2042,9 @@
         });
         document.querySelectorAll('[data-billing]').forEach(function (b) {
           b.setAttribute('aria-pressed', b.getAttribute('data-billing') === curBilling ? 'true' : 'false');
+        });
+        document.querySelectorAll('[data-seat-tier]').forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-seat-tier') === curSeatTier ? 'true' : 'false');
         });
       }
 
@@ -1517,12 +2058,20 @@
         renderPricing();
         try { localStorage.setItem('claude-ops-billing', curBilling); } catch (e) {}
       }
+      function setSeatTier(tier) {
+        curSeatTier = TIER_IDX[tier] != null ? tier : 'max';
+        renderPricing();
+        try { localStorage.setItem('claude-ops-seat-tier', curSeatTier); } catch (e) {}
+      }
 
       document.querySelectorAll('[data-currency]').forEach(function (b) {
         b.addEventListener('click', function () { setCurrency(b.getAttribute('data-currency')); });
       });
       document.querySelectorAll('[data-billing]').forEach(function (b) {
         b.addEventListener('click', function () { setBilling(b.getAttribute('data-billing')); });
+      });
+      document.querySelectorAll('[data-seat-tier]').forEach(function (b) {
+        b.addEventListener('click', function () { setSeatTier(b.getAttribute('data-seat-tier')); });
       });
 
       (function initPricing() {
@@ -1534,6 +2083,15 @@
           try {
             var sb = localStorage.getItem('claude-ops-billing');
             if (sb === 'year' || sb === 'month') curBilling = sb;
+          } catch (e) {}
+        }
+
+        var sq = (params.get('tier') || '').toLowerCase();
+        if (TIER_IDX[sq] != null) curSeatTier = sq;
+        else {
+          try {
+            var st = localStorage.getItem('claude-ops-seat-tier');
+            if (TIER_IDX[st] != null) curSeatTier = st;
           } catch (e) {}
         }
 
@@ -1739,14 +2297,14 @@
 
     // Prices roll in on currency change
     document.addEventListener('click', function (e) {
-      if (!e.target.closest('[data-currency], [data-billing]')) return;
-      document.querySelectorAll('.price .amount').forEach(function (el) {
+      if (!e.target.closest('[data-currency], [data-billing], [data-seat-tier]')) return;
+      document.querySelectorAll('.price .amount, .addon-price .amount').forEach(function (el) {
         el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop');
       });
     });
 
     if (!root.classList.contains('motion') || !('IntersectionObserver' in window)) return;
-    var targets = document.querySelectorAll('main .section-head, main .card, main .faq details, main .cta, main .stripe-trust, main .currency-switch, main .pricing-controls, main .tier-divider');
+    var targets = document.querySelectorAll('main .section-head, main .card, main .faq details, main .cta, main .stripe-trust, main .currency-switch, main .pricing-controls, main .tier-divider, main .enterprise-toolbar, main .seat-addons');
     targets.forEach(function (el) {
       var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
       el.classList.add('mo-reveal');
