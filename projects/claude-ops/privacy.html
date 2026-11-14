@@ -6,21 +6,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>隐私政策 | Zaokit ClaudeOps</title>
   <meta name="description" content="Zaokit ClaudeOps 隐私政策">
+  <link rel="canonical" href="https://claudeops.zaokit.ai/privacy.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://claudeops.zaokit.ai/privacy.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://claudeops.zaokit.ai/zh-tw/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://claudeops.zaokit.ai/en/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://claudeops.zaokit.ai/ja/privacy.html">
+  <link rel="alternate" hreflang="ko" href="https://claudeops.zaokit.ai/ko/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://claudeops.zaokit.ai/es/privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://claudeops.zaokit.ai/fr/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://claudeops.zaokit.ai/de/privacy.html">
+  <link rel="alternate" hreflang="pt" href="https://claudeops.zaokit.ai/pt/privacy.html">
+  <link rel="alternate" hreflang="it" href="https://claudeops.zaokit.ai/it/privacy.html">
+  <link rel="alternate" hreflang="ru" href="https://claudeops.zaokit.ai/ru/privacy.html">
+  <link rel="alternate" hreflang="ar" href="https://claudeops.zaokit.ai/ar/privacy.html">
+  <link rel="alternate" hreflang="id" href="https://claudeops.zaokit.ai/id/privacy.html">
+  <link rel="alternate" hreflang="ms" href="https://claudeops.zaokit.ai/ms/privacy.html">
+  <link rel="alternate" hreflang="vi" href="https://claudeops.zaokit.ai/vi/privacy.html">
+  <link rel="alternate" hreflang="th" href="https://claudeops.zaokit.ai/th/privacy.html">
+  <link rel="alternate" hreflang="hi" href="https://claudeops.zaokit.ai/hi/privacy.html">
+  <link rel="alternate" hreflang="km" href="https://claudeops.zaokit.ai/km/privacy.html">
+  <link rel="alternate" hreflang="tr" href="https://claudeops.zaokit.ai/tr/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://claudeops.zaokit.ai/en/privacy.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Zaokit ClaudeOps">
+  <meta property="og:title" content="隐私政策 | Zaokit ClaudeOps">
+  <meta property="og:description" content="Zaokit ClaudeOps 隐私政策">
+  <meta property="og:url" content="https://claudeops.zaokit.ai/privacy.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#141210">
+  <script>
+  (function () {
+    try {
+      var ua = navigator.userAgent || '';
+      if (/bot|crawl|spider|slurp|bingpreview|mediapartners|lighthouse|HeadlessChrome|facebookexternalhit|whatsapp|telegrambot|twitterbot|discordbot|applebot|baiduspider|yandex/i.test(ua)) return;
+      var VALID = ["zh-tw", "en", "ja", "ko", "es", "fr", "de", "pt", "it", "ru", "ar", "id", "ms", "vi", "th", "hi", "km", "tr"];
+      var SUFFIX = "privacy.html";
+      var params = new URLSearchParams(location.search);
+      if (params.get('nolang') === '1') return;
+      var ql = (params.get('lang') || '').toLowerCase();
+      if (ql === 'zh' || ql === 'zh-cn') {
+        try { localStorage.setItem('claude-ops-lang', 'zh'); } catch (e) {}
+        return;
+      }
+      if (VALID.indexOf(ql) !== -1) {
+        try { localStorage.setItem('claude-ops-lang', ql); } catch (e) {}
+        location.replace('./' + ql + '/' + SUFFIX + location.hash);
+        return;
+      }
+      var saved = null;
+      try { saved = localStorage.getItem('claude-ops-lang'); } catch (e) {}
+      if (saved === 'zh') return;
+      if (saved && VALID.indexOf(saved) !== -1) {
+        location.replace('./' + saved + '/' + SUFFIX + location.search + location.hash);
+        return;
+      }
+      if (document.referrer && location.origin && document.referrer.indexOf(location.origin) === 0) return;
+      var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+      for (var i = 0; i < langs.length; i++) {
+        var tag = String(langs[i] || '').toLowerCase();
+        if (!tag) continue;
+        if (tag.indexOf('zh') === 0) {
+          if (/^zh[-_](tw|hk|mo|hant)/.test(tag)) {
+            location.replace('./zh-tw/' + SUFFIX + location.search + location.hash);
+          }
+          return;
+        }
+        var p = tag.split(/[-_]/)[0];
+        if (p === 'in') p = 'id';
+        if (VALID.indexOf(p) !== -1) {
+          location.replace('./' + p + '/' + SUFFIX + location.search + location.hash);
+          return;
+        }
+      }
+    } catch (e) {}
+  })();
+  </script>
   <style>
-    :root { --bg:#141210; --text:#ece6dd; --muted:#a39a8e; --primary:#d97757; --primary-strong:#e8906f;
+    :root { --bg:#141210; --text:#ece6dd; --muted:#a39a8e; --primary:#d97757; --primary-strong:#e8906f; --primary-soft:rgba(217,119,87,.14);
       --cream:#f5efe6; --border:rgba(255,255,255,.08); --surface:rgba(255,255,255,.035);
-      --font:"Inter","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-      --serif:"Tiempos Headline","Source Han Serif SC","Noto Serif SC","Songti SC",Georgia,serif; }
+      --font:"Inter","Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",sans-serif;
+      --serif:"Tiempos Headline","Source Han Serif SC", "Noto Serif SC", "Songti SC",Georgia,serif; }
     * { box-sizing:border-box }
     body { margin:0; background:var(--bg); color:var(--text); font-family:var(--font); line-height:1.8; -webkit-font-smoothing:antialiased }
     a { color:var(--primary-strong); text-decoration:none } a:hover { text-decoration:underline }
     .container { width:min(820px,92vw); margin:0 auto }
-    .site-header { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:rgba(20,18,16,.88); border-bottom:1px solid var(--border) }
-    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; flex-wrap:wrap }
+    .site-header { position:sticky; top:0; z-index:30; backdrop-filter:blur(16px); background:rgba(20,18,16,.88); border-bottom:1px solid var(--border) }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; flex-wrap:wrap; padding:8px 0 }
     .brand { color:#fff; font-weight:700 }
-    .nav-links { display:flex; gap:18px; flex-wrap:wrap; font-size:.88rem }
+    .nav-links { display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-size:.88rem }
     .nav-links a { color:var(--muted) } .nav-links a[aria-current="page"] { color:var(--primary-strong); font-weight:600 }
     .doc { padding:56px 0 40px }
     .doc h1 { font-family:var(--serif); color:var(--cream); font-size:clamp(1.8rem,4vw,2.4rem); margin:0 0 8px }
@@ -33,31 +107,76 @@
     footer { border-top:1px solid var(--border); padding:28px 0 40px; color:var(--muted); font-size:.82rem }
     footer .links { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:8px }
     footer .links a { color:var(--muted) }
+    [dir="rtl"] .lead { border-left:1px solid var(--border); border-right:3px solid var(--primary) }
+    [dir="rtl"] .doc ul, [dir="rtl"] .doc ol { padding-left:0; padding-right:1.3em }
+
+    /* 19-Language Switcher Dropdown & Multi-Script / RTL Support */
+    .lang-switcher { position: relative; display: inline-flex; align-items: center }
+    .lang-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font: inherit; font-size: .83rem; font-weight: 600; color: var(--text);
+      padding: 6px 12px; border-radius: 999px; cursor: pointer;
+      border: 1px solid var(--border); background: var(--surface); transition: .2s;
+      white-space: nowrap; line-height: 1.2;
+    }
+    .lang-btn:hover, .lang-btn[aria-expanded="true"] {
+      color: #fff; border-color: var(--primary); background: var(--primary-soft);
+    }
+    .lang-caret { opacity: .75; transition: transform .2s ease }
+    .lang-btn[aria-expanded="true"] .lang-caret { transform: rotate(180deg) }
+    .lang-menu {
+      position: absolute; top: calc(100% + 8px); right: 0; z-index: 95;
+      width: min(340px, 90vw); max-height: min(72vh, 430px); overflow-y: auto;
+      padding: 8px; border-radius: 16px;
+      background: rgba(24, 21, 18, .97); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(232, 144, 111, .28);
+      box-shadow: 0 22px 54px rgba(0, 0, 0, .68);
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px;
+      direction: ltr; text-align: left;
+    }
+    .lang-menu[hidden] { display: none !important }
+    .lang-item {
+      display: flex; align-items: center; justify-content: space-between; gap: 6px;
+      padding: 7px 10px; border-radius: 10px; font-size: .82rem; font-weight: 500;
+      color: var(--text) !important; text-decoration: none !important;
+      transition: background .16s, color .16s; line-height: 1.35;
+    }
+    .lang-item:hover { background: rgba(255, 255, 255, .07); color: #fff !important }
+    .lang-item.active {
+      background: rgba(217, 119, 87, .20); color: #ffe0c2 !important; font-weight: 700;
+      border: 1px solid rgba(232, 144, 111, .36);
+    }
+    .lang-item .lang-check { font-size: .75rem; color: var(--primary-strong); flex-shrink: 0 }
+    @media (max-width: 390px) { .lang-menu { grid-template-columns: 1fr } }
+    [dir="rtl"] .lang-menu { right: auto; left: 0 }
+
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GDE6TX65P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0GDE6TX65P');
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="0731cafa-79de-46ca-bbeb-4e1bf6a04fda"></script>
 </head>
 
 <body>
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="./">Zaokit ClaudeOps</a>
-      <nav class="nav-links"><a href="terms.html">服务条款</a><a href="refund.html">退款政策</a><a href="privacy.html" aria-current="page">隐私政策</a><a href="en/privacy.html">English</a></nav>
+      <nav class="nav-links"><a href="terms.html">服务条款</a><a href="refund.html">退款政策</a><a href="privacy.html" aria-current="page">隐私政策</a><div class="lang-switcher"><button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="切换语言"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.7 2.6 4.2 5.9 4.2 9.5s-1.5 6.9-4.2 9.5c-2.7-2.6-4.2-5.9-4.2-9.5S9.3 5.1 12 2.5z"/></svg><span>简中</span><svg class="lang-caret" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><div class="lang-menu" role="menu" hidden><a class="lang-item active" role="menuitem" href="privacy.html" hreflang="zh-CN" lang="zh-CN" data-set-lang="zh" aria-current="page"><span dir="ltr">简体中文</span><span class="lang-check" aria-hidden="true">✓</span></a><a class="lang-item" role="menuitem" href="zh-tw/privacy.html" hreflang="zh-TW" lang="zh-TW" data-set-lang="zh-tw"><span dir="ltr">繁體中文</span></a><a class="lang-item" role="menuitem" href="en/privacy.html" hreflang="en" lang="en-AU" data-set-lang="en"><span dir="ltr">English</span></a><a class="lang-item" role="menuitem" href="ja/privacy.html" hreflang="ja" lang="ja" data-set-lang="ja"><span dir="ltr">日本語</span></a><a class="lang-item" role="menuitem" href="ko/privacy.html" hreflang="ko" lang="ko" data-set-lang="ko"><span dir="ltr">한국어</span></a><a class="lang-item" role="menuitem" href="es/privacy.html" hreflang="es" lang="es" data-set-lang="es"><span dir="ltr">Español</span></a><a class="lang-item" role="menuitem" href="fr/privacy.html" hreflang="fr" lang="fr" data-set-lang="fr"><span dir="ltr">Français</span></a><a class="lang-item" role="menuitem" href="de/privacy.html" hreflang="de" lang="de" data-set-lang="de"><span dir="ltr">Deutsch</span></a><a class="lang-item" role="menuitem" href="pt/privacy.html" hreflang="pt" lang="pt" data-set-lang="pt"><span dir="ltr">Português</span></a><a class="lang-item" role="menuitem" href="it/privacy.html" hreflang="it" lang="it" data-set-lang="it"><span dir="ltr">Italiano</span></a><a class="lang-item" role="menuitem" href="ru/privacy.html" hreflang="ru" lang="ru" data-set-lang="ru"><span dir="ltr">Русский</span></a><a class="lang-item" role="menuitem" href="ar/privacy.html" hreflang="ar" lang="ar" data-set-lang="ar"><span dir="rtl">العربية</span></a><a class="lang-item" role="menuitem" href="id/privacy.html" hreflang="id" lang="id" data-set-lang="id"><span dir="ltr">Bahasa Indonesia</span></a><a class="lang-item" role="menuitem" href="ms/privacy.html" hreflang="ms" lang="ms" data-set-lang="ms"><span dir="ltr">Bahasa Melayu</span></a><a class="lang-item" role="menuitem" href="vi/privacy.html" hreflang="vi" lang="vi" data-set-lang="vi"><span dir="ltr">Tiếng Việt</span></a><a class="lang-item" role="menuitem" href="th/privacy.html" hreflang="th" lang="th" data-set-lang="th"><span dir="ltr">ไทย</span></a><a class="lang-item" role="menuitem" href="hi/privacy.html" hreflang="hi" lang="hi" data-set-lang="hi"><span dir="ltr">हिन्दी</span></a><a class="lang-item" role="menuitem" href="km/privacy.html" hreflang="km" lang="km" data-set-lang="km"><span dir="ltr">ភាសាខ្មែរ</span></a><a class="lang-item" role="menuitem" href="tr/privacy.html" hreflang="tr" lang="tr" data-set-lang="tr"><span dir="ltr">Türkçe</span></a></div></div></nav>
     </div>
   </header>
 
   <main class="container doc">
     <h1>隐私政策</h1>
-    <p class="meta">生效日期：2026 年 11 月 3 日 · 如中英文版本存在差异，以英文版本为准。</p>
+    <p class="meta">生效日期：2026 年 11 月 3 日 · 如各语言版本存在差异，以英文版本为准。</p>
 
 <p class="lead">本政策说明我们在提供 Zaokit ClaudeOps 服务时如何收集、使用、存储与保护您的个人信息。我们参照澳大利亚《1988 年隐私法》（Privacy Act 1988）及澳大利亚隐私原则（APPs）处理个人信息。</p>
 
 <h2>1. 我们收集的信息</h2>
-<ul>
-  <li><strong>联系与账户信息</strong>：姓名或称呼、邮箱地址、结账时选择的偏好区域。</li>
-  <li><strong>付款信息</strong>：由 Stripe 处理。我们不会接触或存储您的完整银行卡号，仅可查看交易记录、收据与付款状态。</li>
-  <li><strong>服务所需信息</strong>：您为开通服务提供的第三方账号邮箱（如 Claude、Google、Apple 账号），以及我们为您分配的访问凭证。</li>
-  <li><strong>沟通记录</strong>：您通过邮件、Telegram 等渠道与我们沟通的内容。</li>
-  <li><strong>网站访问数据</strong>：通过 Google Analytics、Umami 等统计工具收集的设备、浏览器、IP 地址、访问页面等信息。</li>
-</ul>
+<ul><li><strong>联系与账户信息</strong>：姓名或称呼、邮箱地址、结账时选择的偏好区域。</li><li><strong>付款信息</strong>：由 Stripe 处理。我们不会接触或存储您的完整银行卡号，仅可查看交易记录、收据与付款状态。</li><li><strong>服务所需信息</strong>：您为开通服务提供的第三方账号邮箱（如 Claude、Google、Apple 账号），以及我们为您分配的访问凭证。</li><li><strong>沟通记录</strong>：您通过邮件、Telegram 等渠道与我们沟通的内容。</li><li><strong>网站访问数据</strong>：通过 Google Analytics、Umami 等统计工具收集的设备、浏览器、IP 地址、访问页面等信息。</li></ul>
 
 <h2>2. 信息的使用</h2>
 <p>我们仅将上述信息用于：开通与交付服务、账单与续费处理、技术支持与沟通、保障系统安全与防范滥用、履行法律义务，以及改进网站与服务。我们不会出售您的个人信息。</p>
@@ -66,21 +185,13 @@
 <p>您在运行环境中存储的文件、代码与会话内容属于您本人。我们不会主动访问这些内容，仅在系统维护、安全事件处置、法律要求或经您授权排障时进行必要操作。</p>
 
 <h2>4. 信息的共享</h2>
-<p>我们仅在以下情况向第三方提供必要信息：</p>
-<ul>
-  <li>为完成服务所必需的服务商，例如支付处理（Stripe）、网站统计、网络与基础设施服务商；</li>
-  <li>为您办理第三方订阅时，向相应服务商提供必要信息；</li>
-  <li>依据法律、法规或政府机关的合法要求。</li>
-</ul>
+<p>我们仅在以下情况向第三方提供必要信息：</p><ul><li>为完成服务所必需的服务商，例如支付处理（Stripe）、网站统计、网络与基础设施服务商；</li><li>为您办理第三方订阅时，向相应服务商提供必要信息；</li><li>依据法律、法规或政府机关的合法要求。</li></ul>
 
 <h2>5. 跨境处理</h2>
 <p>我们的运行环境分布在澳大利亚、美国、新加坡、马来西亚、印尼、日本、柬埔寨、新西兰与加拿大，Stripe 等服务商也可能在其他国家处理数据。因此，您的信息可能在您所在国家或地区之外存储或处理。我们会采取合理措施保护这些信息。</p>
 
 <h2>6. 信息保留</h2>
-<ul>
-  <li>联系、账户与账单信息：在服务期间保留，并在服务结束后按税务、会计等法律要求的期限保留。</li>
-  <li>运行环境中的数据：服务终止后，我们可能在 7 天后删除。</li>
-</ul>
+<ul><li>联系、账户与账单信息：在服务期间保留，并在服务结束后按税务、会计等法律要求的期限保留。</li><li>运行环境中的数据：服务终止后，我们可能在 7 天后删除。</li></ul>
 
 <h2>7. 信息安全</h2>
 <p>我们采取合理的技术与管理措施保护您的信息，例如访问控制与账户隔离。但互联网传输与存储无法做到绝对安全，我们无法保证信息绝对不会被未经授权地访问。</p>
@@ -105,6 +216,59 @@
       <div>© Zaokit AI · 由澳大利亚注册公司运营</div>
     </div>
   </footer>
+  <script>
+  (function () {
+    var CUR_LANG = "zh";
+    document.querySelectorAll('.lang-switcher').forEach(function (sw) {
+      var btn = sw.querySelector('.lang-btn');
+      var menu = sw.querySelector('.lang-menu');
+      if (!btn || !menu) return;
+      function closeMenu(restoreFocus) {
+        btn.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+        if (restoreFocus) btn.focus();
+      }
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        if (open) closeMenu(false);
+        else {
+          btn.setAttribute('aria-expanded', 'true');
+          menu.hidden = false;
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (!sw.contains(e.target)) closeMenu(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') closeMenu(true);
+      });
+    });
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[data-set-lang]');
+      if (!a) return;
+      var target = a.getAttribute('data-set-lang');
+      var lsOk = false;
+      if (target) {
+        try { localStorage.setItem('claude-ops-lang', target); lsOk = true; } catch (err) {}
+        try {
+          if (typeof gtag === 'function') gtag('event', 'language_switch', { from_lang: CUR_LANG, to_lang: target });
+          if (window.umami && typeof umami.track === 'function') umami.track('language_switch', { from_lang: CUR_LANG, to_lang: target });
+        } catch (err) {}
+      }
+      var baseHref = a.getAttribute('href') || '';
+      if (baseHref && baseHref.indexOf('#') === -1 && baseHref.indexOf('?') === -1 && (location.search || location.hash || (!lsOk && target === 'zh'))) {
+        e.preventDefault();
+        var sp = new URLSearchParams(location.search);
+        sp.delete('lang');
+        sp.delete('nolang');
+        if (!lsOk && target === 'zh') sp.set('lang', 'zh');
+        var qs = sp.toString();
+        location.href = baseHref + (qs ? '?' + qs : '') + location.hash;
+      }
+    });
+  })();
+  </script>
 </body>
 
 </html>

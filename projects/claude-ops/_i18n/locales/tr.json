@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "title": "Zaokit ClaudeOps — Yapay Zeka Dünyayı Sınırsız Kılar | Öncü Üretkenlik ve Üst Düzey Deneyim",
+    "description": "Zaokit ClaudeOps: Yapay zeka dünyayı sınırsız kılar — en gelişmiş üretkenliği ve üst düzey deneyimi herkese ulaştırmak için dünyadaki her şehri aydınlatıyoruz. 9 yerel İSS bölgesinde (AU, US, SG, MY, ID, JP, KH, NZ, CA) izole fiziksel Mac Studio ve Mac mini iş istasyonları, kurumsal BGP özel hatları, 7×24'e varan 1'e 1 mühendislik konsiyerj desteği ve 2TB–30TB bulut depolama.",
+    "keywords": "Zaokit ClaudeOps, Yapay Zeka Dünyayı Sınırsız Kılar, Her Şehri Aydınlatıyoruz, yönetilen Claude hizmeti, Claude Code, Mac bulut iş istasyonu, özel Mac Studio, yapay zeka mühendislik desteği",
+    "og_title": "Yapay Zeka Dünyayı Sınırsız Kılar — Öncü Üretkenlik ve Üst Düzey Deneyim | Zaokit ClaudeOps",
+    "og_description": "Dünya çapında her şehri aydınlatıyoruz · 9 yerel İSS bilgi işlem merkezi · Yüksek donanımlı fiziksel Mac iş istasyonları · Kurumsal BGP hızlandırma · 7×24'e varan 1'e 1 konsiyerj operasyon desteği.",
+    "ld_description": "Yapay zeka dünyayı sınırsız kılar — en ileri üretkenliği ve üst düzey deneyimi herkese sunmak için dünyadaki her şehri aydınlatıyoruz: 9 yerel İSS bölgesinde yüksek donanımlı fiziksel Mac Studio ve Mac mini üzerinde izole çalışma alanı, kurumsal BGP hızlandırma ve 7x24'e varan 1'e 1 konsiyerj yapay zeka mühendislik desteği.",
+    "offer_names": [
+      "1x Standard",
+      "5x Pro",
+      "20x Ultimate"
+    ]
+  },
+  "nav": {
+    "brand": "Zaokit ClaudeOps",
+    "why": "Neden",
+    "service": "Hizmet",
+    "value": "Artı Değer",
+    "security": "Güvenlik",
+    "reviews": "Yorumlar",
+    "pricing": "Fiyatlar",
+    "storage": "Depolama",
+    "process": "Süreç",
+    "faq": "SSS",
+    "lang_aria": "Dili değiştir"
+  },
+  "hero": {
+    "eyebrow": "KÜRESEL VİZYON · Yapay Zeka Her Şehri ve Her Bireyi Aydınlatsın",
+    "h1_main": "Yapay Zeka Dünyayı Sınırsız Kılar",
+    "h1_sub": "En gelişmiş üretkenliği ve en üst düzey deneyimi herkesle buluşturuyoruz",
+    "lead": "Öncü yapay zeka üretkenliği asla küçük bir azınlığın ayrıcalığı olmamalı. Sidney, Silikon Vadisi, Tokyo ve Singapur'dan Cakarta'ya kadar dünya genelinde yerel bilgi işlem merkezlerini şehir şehir aydınlatıyor; her üreticinin, geliştiricinin ve ekibin sınır tanımadan inşa edebilmesi için izole fiziksel Mac iş istasyonlarını, kurumsal BGP özel hatlarını ve 7×24'e varan 1'e 1 mühendislik desteğini bir araya getiriyoruz.",
+    "cta_primary": "Fiyatları incele",
+    "cta_secondary": "Bize yazın",
+    "mailto_enquiry_subject": "Zaokit ClaudeOps bilgi talebi",
+    "stats": [
+      {
+        "strong": "9 Ülke Aktif",
+        "span": "AU · US · SG · MY · ID · JP · KH · NZ · CA"
+      },
+      {
+        "strong": "Fiziksel Mac'ler",
+        "span": "Yüksek donanımlı Mac Studio ve Mac mini"
+      },
+      {
+        "strong": "Üst Düzey Deneyim",
+        "span": "7×8s / 7×16s / 7×24s 1'e 1 destek"
+      },
+      {
+        "strong": "İzole Alan",
+        "span": "Ayrı macOS hesabı · 20x+'ta özel cihaz"
+      },
+      {
+        "strong": "Avustralya Şirketi",
+        "span": "Avustralya tescilli · Stripe faturalandırma"
+      }
+    ]
+  },
+  "map": {
+    "status_main": "9 Ülke ve 13+ Ana Şehir Aydınlatıldı",
+    "status_em": "HER ŞEHRİ AYDINLATIYORUZ",
+    "meta_1": "Yerel İSS bilgi işlem ağı",
+    "meta_2": "Sınırsız BGP omurgası",
+    "meta_3": "Bir şehir merkezinin üzerine gelin veya tıklayın",
+    "stage_aria": "Küresel 9 ülkeli yerel İSS ağ topolojisi haritası",
+    "hud_live": "● Canlı",
+    "hud_label_city": "Metropol merkezi",
+    "hud_label_hw": "Donanım",
+    "hud_val_hw": "Mac Studio / Yüksek donanımlı mini",
+    "hud_label_route": "Omurga",
+    "pills_aria": "Bölge seçin",
+    "partner_pill": "✦ Küresel Ortak İnşa · 8 Milyar İnsanın Tamamına Hizmet",
+    "partner_copy_html": "<strong>Kendi cihazınızı getirin ve kaynaklarınızı paylaşın — gelir elde ederken başkalarının hayallerini gerçeğe dönüştürmesine ışık tutun!</strong>",
+    "partner_cta": "Cihaz Getir / Bize Katıl →",
+    "partner_mailto_subject": "Mac'imi Getiriyorum / Zaokit Küresel Bilgi İşlem Ağına Katılım",
+    "partner_mailto_body": "Merhaba Jason, kaynaklarımı paylaşmak ve Zaokit Küresel Bilgi İşlem Ağına katılmak istiyorum:\n\n1. Ülke / Şehir:\n2. İş birliği modeli (Kendi Mac'imi getirme / Yerel geniş bant düğümü / Bölgesel iş ortağı):\n3. Mac donanım özellikleri ve yerel İSS bilgileri:\n4. İletişim bilgileri:",
+    "nodes": {
+      "AU": {
+        "name": "Avustralya",
+        "pill": "Avustralya ★",
+        "short": "Avustralya",
+        "city": "Sidney · Melbourne",
+        "role": "★ Ana Merkez Üssü · Avustralya Tüzel Kişiliği",
+        "route": "HK üzerinden Premium BGP · %0 paket kaybı"
+      },
+      "US": {
+        "name": "Amerika Birleşik Devletleri",
+        "pill": "ABD",
+        "short": "ABD",
+        "city": "Silikon Vadisi · LA",
+        "role": "ABD Batı Yakası Ana Bilgi İşlem Merkezi",
+        "route": "Trans-Pasifik doğrudan hat · Yerel İSS"
+      },
+      "SG": {
+        "name": "Singapur",
+        "pill": "Singapur",
+        "short": "Singapur",
+        "city": "Singapur",
+        "role": "APAC Düşük Gecikmeli Ana Merkez",
+        "route": "Denizaltı kablo kavşağı · Ultra düşük RTT"
+      },
+      "MY": {
+        "name": "Malezya",
+        "pill": "Malezya",
+        "short": "Malezya",
+        "city": "Kuala Lumpur",
+        "role": "Güneydoğu Asya Yerel Geniş Bant Düğümü",
+        "route": "MY–SG karasal bağlantı · Temiz yerel IP"
+      },
+      "ID": {
+        "name": "Endonezya",
+        "pill": "Endonezya",
+        "short": "Endonezya",
+        "city": "Cakarta",
+        "role": "Güneydoğu Asya Takımadaları Yerel İSS Düğümü",
+        "route": "SG–Cakarta ve Indigo denizaltı hatları"
+      },
+      "JP": {
+        "name": "Japonya",
+        "pill": "Japonya",
+        "short": "Japonya",
+        "city": "Tokyo · Osaka",
+        "role": "Doğu Asya Ultra Düşük Gecikmeli Düğüm",
+        "route": "~92ms ölçülen · %0 paket kaybı"
+      },
+      "KH": {
+        "name": "Kamboçya",
+        "pill": "Kamboçya",
+        "short": "Kamboçya",
+        "city": "Phnom Penh",
+        "role": "Doğrudan Karasal Düşük RTT Düğümü",
+        "route": "~81ms doğrudan karasal hat · %0 kayıp"
+      },
+      "NZ": {
+        "name": "Yeni Zelanda",
+        "pill": "Yeni Zelanda",
+        "short": "Yeni Zelanda",
+        "city": "Auckland",
+        "role": "Güney Pasifik Temiz Yerel Düğüm",
+        "route": "Trans-Tasman ve Hawaiki denizaltı hatları"
+      },
+      "CA": {
+        "name": "Kanada",
+        "pill": "Kanada",
+        "short": "Kanada",
+        "city": "Vancouver · Toronto",
+        "role": "Kuzey Amerika Temiz Geniş Bant Düğümü",
+        "route": "Kuzey Pasifik doğrudan hat · Yüksek kararlılık"
+      }
+    }
+  },
+  "why": {
+    "tag": "Neden",
+    "h2": "Claude'un zor kısmı hiçbir zaman modelin kendisi değildi",
+    "sub": "Enerjinizi asıl tüketen şey, asıl işinizle hiçbir ilgisi olmayan belirsizliklerdir.",
+    "cards": [
+      {
+        "h3": "Zahmetli kurulum",
+        "p": "Hesap açılışından ortam yapılandırmasına kadar her adımı tek başınıza, danışacak kimse olmadan çözmek zorunda kalırsınız."
+      },
+      {
+        "h3": "Kararsız çalışma",
+        "p": "Her yerel bilgisayar farklıdır ve uzun süreli Claude Code görevleri yarı yolda kesintiye uğrar."
+      },
+      {
+        "h3": "Ödeme ve fatura pürüzleri",
+        "p": "Başarısız ödemeler, plan değişiklikleri ve yenilemeler her ay değerli vaktinizi çalar."
+      },
+      {
+        "h3": "Kaybedilen zaman",
+        "p": "Araç araştırmak ve sorun gidermek için harcanan saatler doğrudan gerçek projelerinize gitmelidir."
+      }
+    ]
+  },
+  "service": {
+    "tag": "Hizmet",
+    "h2": "Belirsizliği bize bırakın. Netliği siz koruyun.",
+    "sub": "Kurulumdan günlük operasyonlara kadar tamamen yönetilen, anında kullanıma hazır altyapı.",
+    "cards": [
+      {
+        "h3": "İzole çalışma alanı",
+        "p": "İzole dosya ve izinlere sahip size özel macOS hesabı ve çalışma alanı; ayrıca 20x planında tüm cihazı tek başınıza kullanma seçeneği. Sohbetleriniz ve proje verileriniz tamamen sizin kontrolünüzde kalır."
+      },
+      {
+        "h3": "Yüksek donanımlı Mac Studio ve mini",
+        "p": "Avustralya, ABD, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda veya Kanada'daki yerel yerleşik geniş bant ağları üzerinde (asla ucuz paylaşımlı bulut veri merkezlerinde değil) kendi yüksek donanımlı Mac Studio veya Mac mini ortamınız. Uzun vadeli kararlılık için hesap düzeyinde izolasyon (20x'te özel tahsisli cihaz)."
+      },
+      {
+        "h3": "Yönetilen faturalandırma",
+        "p": "Abonelikler, yenilemeler ve plan değişiklikleri tamamen bizim tarafımızdan yönetilir; takip etmeniz gereken hiçbir pürüz kalmaz."
+      },
+      {
+        "h3": "Kademeli 1'e 1 Konsiyerj",
+        "p": "Planınıza göre ölçeklenen doğrudan 1'e 1 mühendislik desteği: 7×8 saat (1x), 7×16 saat (5x) ve kesintisiz 7×24 özel konsiyerj (20x)."
+      }
+    ]
+  },
+  "value": {
+    "tag": "Artı Değer",
+    "h2_html": "Aldığınız şey <em class=\"grad\">salt işlem gücünden çok daha fazlası</em>",
+    "sub": "Hesap ve cihaz yalnızca başlangıçtır. Asıl rekabet avantajı, yapay zekayı doğru şekilde, daha derinlemesine ve herkesten önce kullanmanıza yardımcı olan uzmanların yanınızda olmasıdır.",
+    "cards": [
+      {
+        "h3": "Üst düzey işlem gücü ve iş istasyonu",
+        "p": "Uzun süreli Claude Code görevlerinin kesintisiz devam etmesi için yüksek donanımlı fiziksel Mac Studio veya Mac mini üzerinde çalışan, sizin için yapılandırılıp yönetilen özel yapay zeka mühendislik alanı."
+      },
+      {
+        "h3": "Üst Düzey 1'e 1 Konsiyerj",
+        "p": "Üreticiler, geliştiriciler, kurucular ve ekipler için tasarlanmış özel yapay zeka mühendislik rehberliği. Claude Code iş akışları, MCP ve Skills kurulumundan gerçek projeleri canlıya almaya kadar 7×8s / 7×16s / 7×24s doğrudan 1'e 1 destek alın."
+      },
+      {
+        "h3": "İlk elden yapay zeka içgörüleri",
+        "p": "Claude ve önde gelen diğer yapay zeka araçlarına dair yeni özellikler, en iyi pratikler ve sektör gelişmeleri hakkında düzenli güncellemelerle yeni yetenekleri ilk benimseyen siz olun."
+      }
+    ]
+  },
+  "network": {
+    "tag": "Ağ Altyapısı",
+    "h2_html": "Akıcı bir uzak masaüstü için<br>sürekli ağ yatırımı",
+    "p": "Donanıma ve birinci sınıf rotalara yatırım yapmaya devam ediyoruz: 200Mbps–500Mbps+ simetrik hızlara sahip 9 ülkeli yerel İSS geniş bant altyapısı, kendi barındırdığımız aktarım sunucuları (relay) ve uzak masaüstünün asıl düşmanı olan paket kaybını sıfıra indiren kurumsal BGP omurgasıyla birleşiyor.",
+    "chips": [
+      "200–500Mbps+ Simetrik",
+      "Kurumsal BGP omurgası",
+      "Özel barındırılan röleler",
+      "Çift bacaklı BBR",
+      "Apple Silicon donanım kodlama",
+      "İzin listesi sıkılaştırması"
+    ],
+    "addon_note_prefix": "20x, Team ve Business planlarına ücretsiz dahildir; 1x / 5x aboneleri ",
+    "addon_note_link": "ClaudeOps Kurumsal Özel Hat (ayda $5'dan başlayan) ↓",
+    "addon_note_suffix": " ekleyebilir.",
+    "card_aria": "Optimizasyon öncesi ve sonrası ölçülen gecikme ve paket kaybı",
+    "legend_before": "Önce",
+    "legend_after": "Sonra",
+    "rows": [
+      {
+        "country": "Japonya",
+        "via": "HK omurgası üzerinden",
+        "before": "128–184ms · %10 kayıp",
+        "after": "~92ms · %0 kayıp"
+      },
+      {
+        "country": "Avustralya",
+        "via": "HK omurgası üzerinden",
+        "before": "343–386ms · %25–33 kayıp",
+        "after": "~240ms · %0 kayıp"
+      },
+      {
+        "country": "Kamboçya",
+        "via": "Doğrudan kara kablosu",
+        "before": "",
+        "after": "~81ms · %0 kayıp"
+      }
+    ],
+    "foot": "Kasım 2026'da Doğu Asya'daki bir istemciden ölçülmüştür. Kendi ağınıza bağlı olarak deneyiminiz değişiklik gösterebilir."
+  },
+  "security": {
+    "tag": "Güvenlik ve Gizlilik",
+    "h2": "İki kademeli izolasyon: ayrı hesaplar ve özel tahsisli cihazlar",
+    "sub": "Terminaliniz özel kaynak kodlarını, ortam değişkenlerindeki API anahtarlarını, veritabanı ayarlarını ve iş mantığını taşır. Zaokit ClaudeOps iki kademeli izolasyon uygular: 1x / 5x planlarında her kullanıcı yalnızca Apple Screen Sharing üzerinden erişilen ayrı bir macOS hesabı alır; 20x planında ise donanım seviyesine kadar tamamen izole, size özel bir cihazı etkinleştirebilirsiniz.",
+    "cards": [
+      {
+        "h3": "20x özel cihaz: donanım düzeyinde izolasyon",
+        "p": "Özel cihaz modu etkinleştirildiğinde yüksek donanımlı Mac Studio veya Mac mini'nin tamamı yalnızca size hizmet eder. İstediğiniz yazılımı kurabilir, sistem düzeyi ayarları değiştirebilir ve RustDesk ile üçüncü taraf VNC dahil her türlü uzak masaüstü aracını kullanabilirsiniz."
+      },
+      {
+        "h3": "1x / 5x ayrı hesap izolasyonu",
+        "p": "Her kullanıcının kendine ait dosya ve izinlere sahip ayrı bir macOS hesabı vardır; böylece geçmiş ve proje dosyaları gizli kalır. Erişim yalnızca her hesaba kimsenin göremediği izole bir masaüstü oturumu sunan Apple Screen Sharing ile sağlanır."
+      },
+      {
+        "h3": "Erişim ve şifreleme sizin kontrolünüzde",
+        "p": "Kendi erişim parolalarınızı ve şifreleme politikalarınızı kendiniz belirlersiniz. Ekibimiz yalnızca bağlantı sürekliliği ve faturalandırmayla ilgilenir; bakım, güvenlik olayları veya sizin yetkilendirdiğiniz sorun giderme işlemleri dışında hesabınızdaki verilere aktif olarak erişmez."
+      }
+    ]
+  },
+  "reviews": {
+    "tag": "Müşteri Yorumları",
+    "h2": "Gerçek abonelerimiz ne diyor",
+    "sub": "Müşteri gizliliğini korumak amacıyla tüm yorumlarda karikatür avatarlar ve maskelenmiş isimler kullanılırken gerçek geri bildirimler ve abonelik kademeleri korunmuştur.",
+    "badge": "Anonimleştirilmiş · Doğrulanmış",
+    "stars_aria": "5 üzerinden 5 yıldız",
+    "items": [
+      {
+        "name": "M***",
+        "role": "Sınır Ötesi Yapay Zeka Ürün Lideri",
+        "quote": "\"Kurumsal tünel jilet gibi net ve ultra akıcı — yerel ToDesk bağlantım bile bu kadar net değildi. Kod yazmak ve pencereler arasında geçiş yapmak neredeyse kendi bilgisayarımda çalışmak gibi. Hızlı, güvenilir ve ödediğiniz her kuruşa değer; gerçekten üst düzey bir deneyim.\"",
+        "source": "Doğrulanmış Sohbet Geri Bildirimi",
+        "plan": "5x Pro"
+      },
+      {
+        "name": "C***",
+        "role": "Kıdemli Full-Stack Mühendisi",
+        "quote": "\"Yerel ağ ortamım oturumun ortasında sürekli kopuyordu. İzole çalışma alanı ve 7/24 çalışan Claude Code ile ClaudeOps 1x Standard'a geçtikten sonra gerçekten 'dahi programcı geri döndü' gibi hissediyorum 😂. Artık sıfır fatura veya ağ baş ağrısı.\"",
+        "source": "Doğrulanmış Sohbet Geri Bildirimi",
+        "plan": "1x Standard"
+      },
+      {
+        "name": "Kyle W.",
+        "role": "Kantitatif Ar-Ge Lideri",
+        "quote": "\"9 ülkedeki yerel İSS ağları ve donanım düzeyinde izolasyon beni ikna etti. Özel algoritmalarımız ve API anahtarlarımız tamamen bize ait bir Mac Studio'da duruyor — sıfır kesintiyle aylardır aralıksız çalışıyor.\"",
+        "source": "Avustralya Düğümü · Maskelenmiş",
+        "plan": "20x Flagship"
+      },
+      {
+        "name": "L***",
+        "role": "Bağımsız Geliştirici",
+        "quote": "\"Stripe ödemesinin hemen ardından aynı gün teslimat yapıldı. İzole macOS hesabım Claude Code ve geliştirici araçları önceden kurulmuş halde geldi. Ortam kurulumuyla veya yurt dışı ödeme sorunlarıyla uğraşmak istemeyenler için muazzam bir zaman tasarrufu.\"",
+        "source": "Tokyo Düğümü · Maskelenmiş",
+        "plan": "1x Standard"
+      },
+      {
+        "name": "Sarah C.",
+        "role": "Danışmanlık Ortağı",
+        "quote": "\"Altyapı uzmanı değilim ve CLI kurulumlarıyla uğraşmak istemiyordum. 7×16s 1'e 1 destek ve yönetilen Google Drive senkronizasyonu sayesinde seyahat ederken her yerden bağlanıp kaldığım yerden devam edebiliyorum.\"",
+        "source": "Singapur Düğümü · Maskelenmiş",
+        "plan": "5x Pro"
+      },
+      {
+        "name": "A***",
+        "role": "E-ticaret Teknoloji Direktörü",
+        "quote": "\"Çekirdek mühendislerimiz gece boyunca çoklu ajan refaktörleri ve test paketleri çalıştırıp her sabah tertemiz PR'ları inceliyor. Yerleşik Ekran Paylaşımı kristal netliğinde ve Jason'ın Telegram desteği neredeyse anında yanıt veriyor.\"",
+        "source": "Telegram Geri Bildirimi",
+        "plan": "20x Flagship"
+      }
+    ],
+    "note": "* Müşteri gizliliğini ve veri güvenliğini titizlikle korumak adına tüm yorumlar karikatür avatarlar ve anonimleştirilmiş/maskelenmiş isimlerle gösterilmektedir."
+  },
+  "pricing": {
+    "tag": "Fiyatlandırma",
+    "h2": "Bireyselden kurumsala uzanan planlar.",
+    "sub_html": "Bireysel çalışma alanlarından özel çoklu Mac kümelerine kadar kolayca ölçeklendirin. <strong>Yıllık ödemede 10 ay ödeyin, 2 ay ücretsiz kazanın</strong>.",
+    "jump_line": "Özel Hat ↓",
+    "jump_ent": "Ekip ve Kurumsal ↓",
+    "billing_aria": "Faturalandırma dönemini seçin",
+    "billing_month": "Aylık",
+    "billing_year": "Yıllık",
+    "billing_save_badge": "2 ay ücretsiz",
+    "currency_aria": "Para birimi seçin",
+    "currencies": {
+      "AUD": {
+        "btn": "A$ AUD",
+        "name": "AUD"
+      },
+      "USD": {
+        "btn": "$ USD",
+        "name": "USD"
+      },
+      "EUR": {
+        "btn": "€ EUR",
+        "name": "EUR"
+      },
+      "NZD": {
+        "btn": "NZ$ NZD",
+        "name": "NZD"
+      },
+      "CAD": {
+        "btn": "C$ CAD",
+        "name": "CAD"
+      },
+      "SGD": {
+        "btn": "S$ SGD",
+        "name": "SGD"
+      },
+      "CNY": {
+        "btn": "¥ CNY",
+        "name": "CNY"
+      }
+    },
+    "solo_subscribe": "Abone Ol",
+    "solo_consult": "Sorunuz mu var? Bize yazın →",
+    "solo": [
+      {
+        "tier_b": "1x",
+        "tier_span": "Standard",
+        "desc": "Kararlı bir Claude ortamıyla günlük sohbet, içerik yazımı ve hafif kodlama için.",
+        "init_note": "Claude ortamı dahil · günde yaklaşık A$5",
+        "features_html": [
+          "Temel kullanım kotası",
+          "Özel çalışma alanı yapılandırması",
+          "Fiziksel Mac mini ortamı",
+          "Tam yönetilen abonelik faturalandırması ve operasyon",
+          "Claude Code kullanıma hazır",
+          "<strong>7×8s</strong> 1'e 1 özel destek",
+          "Ayrı macOS hesabı · Apple Screen Sharing erişimi"
+        ],
+        "mailto_subject": "Zaokit ClaudeOps bilgi talebi - 1x Standard"
+      },
+      {
+        "badge": "En popüler",
+        "tier_b": "5x",
+        "tier_span": "Pro",
+        "desc": "Claude Code'u her gün yoğun biçimde kullanan geliştiriciler ve üreticiler için.",
+        "init_note": "Claude ortamı dahil · 5x kullanım, birim maliyet 1x'in yaklaşık %78'i",
+        "features_html": [
+          "Standard planın 5 katı kullanım kotası",
+          "Özel çalışma alanı yapılandırması",
+          "Yüksek donanımlı fiziksel Mac mini ortamı",
+          "Tam yönetilen abonelik faturalandırması ve operasyon",
+          "Uzun süreli Claude Code görevleri için geniş kapasite",
+          "<strong>7×16s</strong> öncelikli 1'e 1 destek",
+          "Ayrı macOS hesabı · Apple Screen Sharing erişimi"
+        ],
+        "mailto_subject": "Zaokit ClaudeOps bilgi talebi - 5x Pro"
+      },
+      {
+        "badge_promo": "Yıl Sonu Kampanyası · 31 Aralık 2026'ya Kadar",
+        "tier_b": "20x",
+        "tier_span": "Ultimate",
+        "desc": "Günün her saati birden fazla ajan çalıştıran üretken geliştiriciler, kurucular ve ileri düzey kullanıcılar için.",
+        "orig_title": "Normal fiyat",
+        "init_note": "Kampanya fiyatı yenilemede korunur · birim maliyet 1x'in yaklaşık %35'i",
+        "features_html": [
+          "Standard planın 20 katı kullanım kotası",
+          "Özel çalışma alanı yapılandırması",
+          "Yüksek donanımlı Mac Studio / Mac mini · Özel cihaz seçeneği",
+          "Tam yönetilen abonelik faturalandırması ve operasyon",
+          "Çoklu ajan ve paralel görev desteği",
+          "<strong>Üst düzey 7×24s</strong> özel konsiyerj kanalı",
+          "Ücretsiz yüksek hızlı RustDesk kanalı",
+          "Ücretsiz 6 TB Google Drive depolama alanı dahil"
+        ],
+        "mailto_subject": "Zaokit ClaudeOps bilgi talebi - 20x Ultimate"
+      }
+    ],
+    "dedicated_line": {
+      "h3_main": "ClaudeOps Kurumsal Özel Hat · Sınır Ötesi Hızlandırma",
+      "h3_pill": "20x / Team / Business planlarında ücretsiz",
+      "sub": "1x ve 5x aboneleri için isteğe bağlı eklenti: ultra tepkisel Screen Sharing ve Claude Code deneyimi için trafiğinizi çift bacaklı BBR %0 paket kaybı hızlandırmasına sahip kurumsal BGP sınır ötesi omurgamız üzerinden yönlendirin (yıllık ödemede 2 ay ücretsiz).",
+      "cards": [
+        {
+          "code": "1x Özel Hat",
+          "span": "Standart Hızlandırma · 1x Standard İçin",
+          "desc": "Kurumsal BGP sınır ötesi omurga + özel barındırılan şifreli düşük gecikmeli röle + çift bacaklı BBR optimizasyonu; yoğun saatlerde bile günlük Apple Screen Sharing, SSH ve hafif Claude Code oturumlarını takılmasız tutar.",
+          "init_note": "7/24 BGP sıfır kayıplı hızlandırma · Planla birlikte yönetilir",
+          "btn": "1x Hat Ekle →"
+        },
+        {
+          "code": "5x Özel Hat",
+          "span": "Pro Hızlandırma · 5x Pro İçin (%20 daha düşük birim maliyet)",
+          "desc": "5× öncelikli bant genişliği kotası + yüksek öncelikli kurumsal BGP QoS kuyruğu + çift bacaklı BBR %0 paket kaybı garantisi; yoğun gerçek zamanlı Claude Code oturumları, büyük repo senkronizasyonları ve yüksek FPS uzak masaüstü için tasarlandı.",
+          "init_note": "5× öncelikli kapasite · Yüksek öncelikli BGP QoS",
+          "btn": "5x Hat Ekle →"
+        }
+      ]
+    },
+    "enterprise": {
+      "divider": "Team ve Business · Özel Çok Koltuklu Kümeler",
+      "switch_aria": "Ekip koltuk kademesini seçin",
+      "tier_pro": "Tümü Pro Koltuklar (1x)",
+      "tier_max": "Tümü Max Koltuklar (5x)",
+      "tier_max_badge": "Önerilen",
+      "tier_ultra": "Tümü Ultra Koltuklar (20x)",
+      "toolbar_html": "Tek tip Pro, Max veya Ultra koltuklarla başlayın — ya da aşağıdaki self-servis <strong>koltuk başı yükseltme eklentileriyle</strong> dilediğiniz zaman karma yapı oluşturun.",
+      "team": {
+        "init_badge": "5 × Max (5x) Koltuk · Özel Ana Bilgisayar",
+        "sub": "5 Koltuk",
+        "desc": "Girişim ekipleri, yapay zeka stüdyoları ve araştırma grupları için tasarlandı — tek fatura ve merkezi yönetim kontrolüyle ekibinize tahsis edilmiş fiziksel Mac ana bilgisayarı.",
+        "init_note": "5 adet Max (5x) izole koltuk dahil · Özel Mac sunucusu ve tek fatura",
+        "init_seat_li_html": "<strong>5 adet Max (5x) mühendislik koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)",
+        "features_html": [
+          "Yalnızca ekibinize tahsis edilmiş <strong>yüksek donanımlı fiziksel Mac Studio / Mac mini ana bilgisayar</strong>",
+          "İşe giriş/çıkışlarda kurum mülkiyetinde koltuk devri ve <strong>tek konsolide fatura</strong>",
+          "Bireysel koltukları dilediğiniz an isteğe bağlı olarak Max (5x) veya Ultra (20x) kademesine yükseltme",
+          "<strong>7×24s</strong> özel ekip konsiyerj grup kanalı",
+          "Ücretsiz özel yüksek hızlı RustDesk ekip kanalı"
+        ],
+        "init_storage_li": "Ücretsiz 12 TB ekip bulut depolama alanı (Google Drive / iCloud+)",
+        "btn": "Team Planına Abone Ol",
+        "consult": "Ek koltuk veya özel donanım mı gerekiyor? Bizimle konuşun →",
+        "mailto_subject": "Zaokit ClaudeOps bilgi talebi - Team Planı"
+      },
+      "biz": {
+        "init_badge": "Kurumsal · 10 × Max (5x) Küme",
+        "sub": "10 Koltuk",
+        "desc": "Ölçeklenen teknoloji şirketleri, kantitatif finans ve mühendislik organizasyonları için — 9 ülkede çift bölgeli kurulum destekli özel çoklu Mac fiziksel kümeleri.",
+        "init_note": "10 adet Max (5x) izole koltuk dahil · Özel çoklu Mac kümesi ve VIP SLA",
+        "init_seat_li_html": "<strong>10 adet Max (5x) mühendislik koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)",
+        "features_html": [
+          "<strong>Çok üniteli özel fiziksel Mac Studio / Mac mini kümesi</strong>",
+          "<strong>9 ülkede çift bölgeli kurulum ve hızlı taşıma</strong> + özel statik yerel İSS desteği",
+          "Konsolide ticari faturalandırma ve özel Müşteri Başarı Yöneticisi",
+          "<strong>Üst düzey 7×24s VIP kurumsal SLA kanalı</strong> (öncelikli operasyon ve mimari danışmanlık)",
+          "Ücretsiz özel kurumsal RustDesk röle hattı"
+        ],
+        "init_storage_li": "Ücretsiz 30 TB kurumsal bulut depolama alanı (Google Drive / iCloud+)",
+        "btn": "Business Planına Abone Ol",
+        "consult": "20+ koltuk veya özel küme mi arıyorsunuz? Kurumsal satışla iletişime geçin →",
+        "mailto_subject": "Zaokit ClaudeOps bilgi talebi - Business Planı"
+      }
+    },
+    "seat_addons": {
+      "h3_main": "Koltuk Başı Yükseltme Eklentileri",
+      "h3_pill": "Ödeme adımında 1–50 koltuk arası ayarlanabilir",
+      "sub": "Aktif herhangi bir Team veya Business temel planında kademeleri dilediğiniz gibi karıştırın — belirli ekip üyelerini anında yükseltin (yıllık eklentilerde de 2 ay ücretsiz).",
+      "cards": [
+        {
+          "from": "Pro 1x",
+          "to": "Max 5x",
+          "tag": "Yükseltme",
+          "desc": "Yoğun günlük Claude Code mühendisliği için herhangi bir Pro (1x) ekip koltuğunu Max (5x) seviyesine yükseltin.",
+          "btn": "Koltuğu yükselt →"
+        },
+        {
+          "from": "Max 5x",
+          "to": "Ultra 20x",
+          "tag": "Yükseltme",
+          "desc": "Tümü-Max planındaki kurucuları, CTO'ları veya baş mimarları 20x Ultra çoklu ajan kapasitesine taşıyın.",
+          "btn": "Koltuğu yükselt →"
+        },
+        {
+          "from": "Pro 1x",
+          "to": "Ultra 20x",
+          "tag": "Doğrudan",
+          "desc": "Tümü-Pro temel planındaki herhangi bir koltuğu doğrudan tam 20x Ultra amiral gemisi kotasına çıkarın.",
+          "btn": "Koltuğu yükselt →"
+        }
+      ]
+    },
+    "storage": {
+      "tag": "Bulut Depolama · Google Drive ve iCloud+",
+      "h2": "Dijital Varlıklar İçin Yönetilen Bulut Depolama",
+      "sub_html": "Yönetilen yenilemeler ve aynı 7×16s 1'e 1 konsiyerj desteğiyle 2 TB'tan 30 TB'a uzanan kademelerde <strong>Google Drive (Google One)</strong> veya <strong>Apple iCloud+</strong> seçin.",
+      "currency_aria": "Para birimi seçin (bulut depolama)",
+      "per_mo": "/ ay",
+      "cards": [
+        {
+          "tier_b": "2 TB",
+          "tier_span": "Depolama",
+          "desc": "Günlük fotoğraflar, videolar ve cihazlar arası yedeklemeler için geniş depolama alanı.",
+          "note": "Google Drive veya iCloud+ · Yönetilen faturalandırma",
+          "features": [
+            "Google Drive veya Apple iCloud+",
+            "İzole erişimli özel alan",
+            "Yönetilen faturalandırma · 7×16s 1'e 1 destek"
+          ],
+          "btn": "2 TB Abone Ol"
+        },
+        {
+          "badge": "Üretici seçimi",
+          "tier_b": "6 TB",
+          "tier_span": "Depolama",
+          "desc": "Fotoğrafçılar, içerik üreticileri ve kişisel arşiv kasaları için ideal.",
+          "note": "Google Drive veya iCloud+ · Yönetilen faturalandırma",
+          "features": [
+            "Google Drive veya Apple iCloud+",
+            "Tam çözünürlüklü fotoğraf ve 4K medya senkronizasyonu",
+            "Yönetilen faturalandırma · 7×16s 1'e 1 destek"
+          ],
+          "btn": "6 TB Abone Ol"
+        },
+        {
+          "tier_b": "12 TB",
+          "tier_span": "Depolama",
+          "desc": "İleri düzey kullanıcılar ve çoklu cihaz yedeklemeleri için yüksek kapasiteli kasa.",
+          "note": "Google Drive veya iCloud+ · Yönetilen faturalandırma",
+          "features": [
+            "Google Drive veya Apple iCloud+",
+            "Büyük proje arşivleri ve cihaz yansımaları",
+            "Yönetilen faturalandırma · 7×16s 1'e 1 destek"
+          ],
+          "btn": "12 TB Abone Ol"
+        },
+        {
+          "tier_b": "30 TB",
+          "tier_span": "Amiral Gemisi",
+          "desc": "RAW çekimler, yapay zeka veri setleri ve uzun vadeli arşivler için stüdyo sınıfı bulut kasası.",
+          "note": "Google Drive veya iCloud+ · Konsiyerj operasyon",
+          "features": [
+            "Google Drive 30TB veya çift bulut kombinasyonu",
+            "Yüksek hızlı küresel ekip iş birliği",
+            "Üst düzey 7×24s özel konsiyerj"
+          ],
+          "btn": "30 TB Abone Ol"
+        }
+      ]
+    },
+    "stripe_trust_html": "<strong>Stripe</strong> ile güvenli ödeme · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · Aylık veya yıllık (2 ay ücretsiz), istediğiniz zaman iptal edin",
+    "foot_before_currency": "Tüm fiyatlara yüksek donanımlı fiziksel Mac ortamı (1x / 5x'te ayrı hesap, 20x'te özel cihaz seçeneği, Team / Business'ta özel ana bilgisayar veya çoklu Mac kümesi), önceden yapılandırılmış AI araç zinciri ve konsiyerj abonelik ve faturalandırma yönetimi dahildir; ödemeler ",
+    "foot_after_currency": " cinsinden aylık veya yıllık (12 ay için 10 ay ödemeli) olarak tahsil edilir. Her para birimindeki fiyatlar yerel piyasa düzeylerini yansıtır. ",
+    "foot_promo": "Üzeri çizili 20x fiyatı normal fiyattır ve 1 Ocak 2027'den itibaren yeni abonelikler için geçerli olacaktır. ",
+    "foot_legal_prefix": "Abone olarak ",
+    "foot_terms_link": "Hizmet Şartları",
+    "foot_legal_mid": " ve ",
+    "foot_refund_link": "İade Politikası",
+    "foot_legal_suffix": " hükümlerini kabul etmiş olursunuz."
+  },
+  "process": {
+    "tag": "Süreç",
+    "h2": "Dört adım. Aynı gün kullanıma hazır.",
+    "steps": [
+      {
+        "h3": "Bir plan seçin",
+        "p": "1x, 5x veya 20x planını ve para biriminizi seçin ya da önce bize e-posta gönderin."
+      },
+      {
+        "h3": "Stripe üzerinden abone olun",
+        "p": "Güvenli Stripe ödeme sayfasında tercih ettiğiniz bölgeyi seçin ve aylık veya yıllık aboneliğinizi tamamlayın."
+      },
+      {
+        "h3": "Teslimat",
+        "p": "Aynı gün içinde yüksek donanımlı Mac'inizi ve ayrı hesabınızı (20x'te özel cihaz) tanımlayıp erişim bilgilerinizi ve başlangıç rehberinizi gönderiyoruz."
+      },
+      {
+        "h3": "Sürekli operasyon",
+        "p": "Yenilemeler, hesap bakımı ve sorun giderme süreçlerinin tamamı bizde kalır."
+      }
+    ]
+  },
+  "faq": {
+    "tag": "SSS",
+    "h2": "Sıkça sorulan sorular",
+    "items": [
+      {
+        "q": "Zaokit ClaudeOps kimin tarafından işletiliyor?",
+        "a_html": "Zaokit ClaudeOps, Avustralya'da tescilli bir şirket tarafından işletilmektedir. Ödemeler Stripe üzerinden güvenle işlenir ve her ödemede resmi makbuz ve fatura düzenlenir."
+      },
+      {
+        "q": "1x, 5x, 20x, Team ve Business planları nasıl karşılaştırılır? Yıllık indirim var mı?",
+        "a_html": "Beş kademenin tamamı koltuk sayısını, donanım izolasyonunu, konsiyerj saatlerini ve dahil olan ayrıcalıkları ölçeklendirir — üstelik <strong>yıllık faturalandırmada her kademede yılda yalnızca 10 ay ücret alınır (2 ay ücretsiz)</strong>:<br>• <strong>1x Standard</strong>: Bireysel temel kota + Mac mini ortamı (ayrı macOS hesabı) + <strong>7×8s</strong> 1'e 1 destek;<br>• <strong>5x Pro</strong>: Bireysel 5× kota + yüksek donanımlı Mac mini (ayrı macOS hesabı) + <strong>7×16s</strong> öncelikli 1'e 1 destek;<br>• <strong>20x Ultimate</strong>: Bireysel 20× kota + yüksek donanımlı Mac Studio / Mac mini (özel cihaz seçeneği) + <strong>7×24s</strong> özel konsiyerj + <strong>özel RustDesk kanalı</strong> + <strong>6 TB bulut depolama</strong>;<br>• <strong>Team (5 Koltuk · Özel Ana Bilgisayar)</strong>: Tümü-Pro (1x), Tümü-Max (5x) veya Tümü-Ultra (20x) kademelerinde sunulur — ekibinize özel fiziksel Mac sunucusu, koltuk devri, konsolide fatura, özel RustDesk kanalı, 6–12 TB bulut depolama ve 7×24s ekip konsiyerji;<br>• <strong>Business (10 Koltuk · Çoklu Mac Kümesi)</strong>: Tümü-Pro (1x), Tümü-Max (5x) veya Tümü-Ultra (20x) kademelerinde sunulur — özel çoklu Mac kümesi (9 ülkede çift bölgeli kurulum ve hızlı taşıma), ticari faturalandırma, kurumsal RustDesk rölesi, 12–30 TB bulut depolama ve 7×24s VIP SLA;<br>• <strong>Koltuk Başı Yükseltme Eklentileri</strong>: Tümü-Pro veya Tümü-Max temel planıyla başlayıp dilediğiniz zaman self-servis ödeme üzerinden belirli koltukları Max (5x) veya Ultra (20x) seviyesine yükseltin (1–50 koltuk arası ayarlanabilir miktar);<br>• <strong>ClaudeOps Kurumsal Özel Hat Eklentisi</strong>: 1x (+$5/ay) ve 5x (+$20/ay) aboneleri için isteğe bağlı kurumsal BGP sınır ötesi hızlandırma (20x, Team ve Business planlarında halihazırda ücretsizdir)."
+      },
+      {
+        "q": "ClaudeOps Kurumsal Özel Hat eklentisi nedir? Kimler ihtiyaç duyar?",
+        "a_html": "<strong>ClaudeOps Kurumsal Özel Hat</strong>, uzak masaüstü ve terminal trafiğinizi özel barındırılan röleler ve çift bacaklı BBR tıkanıklık kontrolüyle birinci sınıf kurumsal BGP sınır ötesi omurgamız üzerinden yönlendirerek yoğun saatlerdeki genel internet dalgalanmasını ve paket kaybını ortadan kaldırır:<br>• <strong>1x Özel Hat ($5/ay · $50/yıl)</strong>: Günlük Apple Screen Sharing, SSH ve hafif kodlama yapan 1x Standard bireysel aboneleri için tasarlanmıştır;<br>• <strong>5x Özel Hat ($20/ay · $200/yıl)</strong>: 5× öncelikli bant genişliği kotası ve yüksek öncelikli BGP QoS ile 5x Pro mühendislik iş yükleri için tasarlanmıştır (1x'e kıyasla %20 daha düşük birim maliyet);<br>• <strong>Amiral Gemisi ve Ekip Planlarında Ücretsiz</strong>: <strong>20x Ultimate, Team ve Business planları özel kurumsal hızlandırmayı ek ücret olmaksızın içerir</strong>."
+      },
+      {
+        "q": "Zaokit ClaudeOps neden standart bulut masaüstlerinden veya paylaşımlı hesaplardan daha yüksek fiyatlı?",
+        "a_html": "Çünkü düşük maliyetli paylaşımlı VPS örnekleri veya ortak havuz hesapları için değil, <strong>deterministik fiziksel altyapı ve birinci sınıf mühendislik operasyonları</strong> için ödeme yapıyorsunuz. Her abonelik dört gerçek altyapı maliyetini kapsar:<br>• <strong>Yüksek Donanımlı Fiziksel Mac Donanımı</strong>: Kesintisiz yerel işlem gücü ve 7/24 güvenilirlik sunan gerçek Mac Studio ve Mac mini makineler (asla sanallaştırılmış bulut VM'leri değil) — 20x+ planlarda tam özel cihaz izolasyonuyla;<br>• <strong>200Mbps–500Mbps+ Simetrik Yerel Bant Genişliği</strong>: 9 ülkede yüksek simetrik yükleme/indirme hızlarına sahip yerel İSS geniş bant hatları; 10–30Mbps paylaşımlı hatlarda takılmak yerine Ekran Paylaşımını net ve akıcı tutar;<br>• <strong>Kurumsal BGP Omurgası</strong>: Çift bacaklı BBR optimizasyonuyla birinci sınıf HK/APAC kurumsal BGP omurgası üzerinde çalışan özel yüksek hızlı röleler sınır ötesi paket kaybını sıfıra indirir;<br>• <strong>Tam Resmi Kota + 7×16 / 7×24 Konsiyerj Operasyonu</strong>: Tam resmi abonelik kotaları, yönetilen faturalandırma, iCloud/Google Drive senkronizasyonu ve 1'e 1 mühendislik desteği."
+      },
+      {
+        "q": "Ayrı hesap ile özel cihaz arasındaki fark nedir: 1x / 5x neden yalnızca Apple Screen Sharing ile sınırlı?",
+        "a_html": "• <strong>Ayrı hesap izolasyonu (1x / 5x)</strong>: Birkaç kullanıcı yüksek donanımlı bir Mac'i paylaşır, ancak her kullanıcının kendine ait macOS hesabı, dosyaları ve izinleri vardır; kimse başkasının verilerini göremez. Her kullanıcının gizliliğini korumak amacıyla erişim, her hesap için izole bir masaüstü oturumu oluşturan <strong>Apple Screen Sharing</strong> ile sınırlandırılmıştır; böylece ekranınız ve etkinliğiniz gizli kalır.<br>• <strong>Özel tahsisli cihaz (20x'te sunulur)</strong>: Fiziksel Mac'in tamamı yalnızca size hizmet eder. Donanım, sistem ve ağ tamamen sizindir. İstediğiniz yazılımı kurabilir, sistem ayarlarını değiştirebilir ve <strong>istediğiniz uzak masaüstü aracını</strong> kullanabilirsiniz: Apple Screen Sharing, RealVNC / TigerVNC gibi üçüncü taraf VNC araçları veya özel yüksek hızlı RustDesk kanalımız (20x'te ücretsiz).<br><strong>Paylaşımlı makinelerde neden üçüncü taraf uzak erişim araçları yok?</strong> RustDesk ve çoğu üçüncü taraf VNC aracı Mac'in ana ekran oturumunu yakalar; bu da çok kullanıcılı bir makinede başkalarının masaüstünüzü görmesine veya kontrol etmesine yol açabilir. Bu araçları yalnızca özel cihaz modunda etkinleştirmemiz bilinçli bir gizlilik güvencesidir."
+      },
+      {
+        "q": "Hangi planı seçmeliyim?",
+        "a_html": "Günlük sohbet ve yazım işleri için 1x'i, her gün Claude Code ile kod geliştiriyorsanız 5x'i; çoklu ajanlar, yoğun 7/24 kullanım veya RustDesk ve tüm uzak masaüstü araçlarını destekleyen özel bir cihaz istiyorsanız 20x'i seçin. Kararsız mısınız? Alt kademeden başlayıp dilediğiniz an yükseltebilirsiniz."
+      },
+      {
+        "q": "\"Deterministik ve kararlı ortam\" pratikte ne anlama geliyor?",
+        "a_html": "Kendinize ait izole çalışma alanı + sabit yüksek donanımlı fiziksel Mac iş istasyonu + özel faturalandırma, yenileme ve günlük mühendislik operasyonu anlamına gelir. Standartlaştırılmış mühendislik süreçleri beklenmedik kopmaları, yapılandırma çakışmalarını ve başarısız yenilemeleri ortadan kaldırarak iş akışınızı öngörülebilir tutar."
+      },
+      {
+        "q": "Nasıl kullanacağım? Uzak Mac üzerinden mi yoksa yerelden mi?",
+        "a_html": "<strong>Her ikisi de çalışır; size en uygun olanı kullanabilirsiniz:</strong><br>1. <strong>Uzak masaüstü</strong>: 1x / 5x planlarında izole, güvenli ve kullanıma hazır macOS Screen Sharing ile ayrı hesabınıza giriş yapın. Özel modu etkinleştirilmiş 20x planında ise daha akıcı ve düşük gecikmeli oturumlar için RealVNC / TigerVNC gibi üçüncü taraf VNC araçlarını veya <strong>özel barındırılan yüksek hızlı RustDesk kanalımızı (20x'te ücretsiz)</strong> da kullanabilirsiniz. Her iki durumda da tam macOS masaüstüne ve terminale sahip olursunuz ve uzun görevler kesintisiz çalışmaya devam eder.<br>2. <strong>Yerel iş akışıyla kusursuz entegrasyon</strong>: Yerel ortam kurulumu veya bakım yükü olmadan doğrudan kendi yerel geliştirme araçlarınızdan uzak geliştirme ortamıyla çalışın. Uzak Mac, size özel arka uç işlem motorunuz haline gelir."
+      },
+      {
+        "q": "Kodum ve verilerim nasıl güvende ve gizli tutuluyor?",
+        "a_html": "1x / 5x planlarında her kullanıcı, başka kimsenin ekranınızı görememesi için yalnızca Apple Screen Sharing ile erişilen izole dosya, izin ve masaüstü oturumlarına sahip ayrı bir macOS hesabı alır. 20x planında ise özel bir cihaz etkinleştirebilirsiniz: yüksek donanımlı Mac Studio veya Mac mini'nin tamamı donanım seviyesine kadar izole biçimde yalnızca size hizmet eder. Oturum geçmişiniz, kaynak kodlarınız ve ortam değişkenleriniz kendi hesabınızda veya cihazınızda kalır. Erişim parolalarınızı ve şifrelemenizi kendiniz belirlersiniz; ekibimiz bakım, güvenlik olayları veya sizin yetkilendirdiğiniz sorun giderme durumları dışında verilerinize erişmez."
+      },
+      {
+        "q": "Cihazlar ve ağlar nerede bulunuyor?",
+        "a_html": "Yüksek donanımlı fiziksel Mac Studio ve Mac mini cihazlarımız <strong>Avustralya, Amerika Birleşik Devletleri, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda ve Kanada'da</strong> yer almakta olup maksimum güvenilirlik için <strong>yerel yerleşik İSS geniş bant ağları (paylaşımlı genel bulut veri merkezleri değil)</strong> üzerinden bağlanmaktadır. Ödeme adımında tercih ettiğiniz bölgeyi seçin; uzun vadeli kullanım için size sabit bir cihaz ve hesap atayalım (20x'te tüm cihaz size özeldir)."
+      },
+      {
+        "q": "Google Drive ve iCloud+ bulut depolama nasıl çalışır?",
+        "a_html": "2 TB ($8.99/ay), 6 TB ($28.99/ay), 12 TB ($58.99/ay) ve 30 TB ($148.99/ay) planları sunuyoruz. Stripe ödeme ekranında <strong>Apple iCloud+</strong> veya <strong>Google Drive (Google One)</strong> seçeneğini işaretleyip hesap e-postanızı not olarak ekleyin; 7×16s 1'e 1 konsiyerj ekibimiz aktivasyonu ve düzenli yenilemeleri yönetir."
+      },
+      {
+        "q": "Planımı yükseltebilir veya düşürebilir miyim?",
+        "a_html": "Evet. Değişiklikler bir sonraki faturalandırma döneminizden itibaren geçerli olur. Hemen yükseltmeye ihtiyacınız varsa bizimle iletişime geçin; yalnızca fiyat farkını yansıtalım."
+      },
+      {
+        "q": "Bir sorun çıkarsa ne olur?",
+        "a_html": "Hemen bizimle iletişime geçin. Sorun gidermeye öncelik veriyor ve sizi mümkün olan en kısa sürede tekrar çalışır duruma getiriyoruz."
+      },
+      {
+        "q": "Hangi ödeme yöntemlerini kabul ediyorsunuz? Fatura alabilir miyim?",
+        "a_html": "Stripe üzerinden Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay ve Link dahil çevrimiçi abonelikleri AUD, USD, EUR, NZD, CAD, SGD veya CNY cinsinden kabul ediyoruz. UnionPay kart sahipleri daha sorunsuz ödeme için CNY seçebilir. Stripe her ödemede otomatik olarak resmi makbuz ve fatura düzenler. Çok hesaplı kurumsal planlar için bize e-posta gönderin."
+      },
+      {
+        "q": "Daha fazla şehri aydınlatırken gelir elde etmek için kendi cihazımı nasıl getirebilir veya küresel bilgi işlem ağınıza nasıl katılabilirim?",
+        "a_html": "8 milyar insanın tamamına gerçekten hizmet etme hedefimize doğru ilerlerken dünyanın dört bir yanındaki iş ortaklarını yerel bilgi işlem ağımıza katılmaya içtenlikle davet ediyoruz! <strong>Kendi cihazınızı getirebilir ve kaynaklarınızı paylaşabilirsiniz — böylece gelir elde ederken başkalarının hayallerini gerçeğe dönüştürmesine ışık tutarsınız!</strong> İster boşta duran veya yüksek donanımlı fiziksel Mac donanımınız, ister şehrinizde kaliteli yerel geniş bant internetiniz ya da bölgesel geliştirici ve üretici topluluklarına erişiminiz olsun; şehrinizi ve donanım/İSS detaylarınızı belirterek dilediğiniz zaman <a href=\"mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network\" style=\"color:var(--primary-strong);font-weight:600\">jason2023zhang@gmail.com</a> adresinden bize yazın — aramıza hoş geldiniz!"
+      }
+    ]
+  },
+  "partner": {
+    "eyebrow": "KÜRESEL BİLGİ İŞLEM ORTAĞI · Dünyanın Bilgi İşlem Ağını Birlikte Kuruyoruz",
+    "h2_html": "Küresel Bilgi İşlem Ağımıza Katılın —<br><em class=\"grad\">8 Milyar İnsanın Tamamına Gerçekten Hizmet Edelim!</em>",
+    "p_html": "9 ülkede aydınlatılmış 13+ şehirden yola çıkarak saf yerel işlem gücünü ve öncü yapay zeka üretkenliğini dünyanın her köşesine taşıyoruz. <strong>Kendi cihazınızı getirebilir ve kaynaklarınızı paylaşabilirsiniz — böylece gelir elde ederken başkalarının hayallerini gerçeğe dönüştürmesine ışık tutarsınız!</strong> Nerede olursanız olun aramıza hoş geldiniz — bir sonraki şehri birlikte aydınlatmak için doğrudan bize e-posta gönderin.",
+    "chips": [
+      "✦ Kendi Mac'ini Getir · Paylaş ve Kazan",
+      "✦ Yerel Yerleşik Geniş Bant Kaynak Paylaşımı",
+      "✦ Küme Barındırma ve Bölgesel İş Ortakları"
+    ],
+    "btn": "Mac'ini Getir / Bize Yazın: jason2023zhang@gmail.com →"
+  },
+  "cta": {
+    "h2": "Yapay Zeka Dünyayı Sınırsız Kılar. Bugün Başlayın.",
+    "p": "Aydınlatılmış küresel şehirlerimizdeki geliştiricilere katılın — en gelişmiş yapay zeka üretkenliği ve üst düzey deneyimin aynı gün teslimatı için Stripe üzerinden abone olun.",
+    "btn_primary": "Plan seçin",
+    "btn_secondary": "E-posta: jason2023zhang@gmail.com",
+    "tg_qr_aria": "Telegram @letcode2020 bağlantısını aç",
+    "tg_qr_alt": "Telegram QR kodu @letcode2020",
+    "tg_h3": "Telegram'da Sohbet Edin",
+    "tg_p": "Satış öncesi sorular, teknik destek ve yapay zeka içgörüleri için bizi eklemek üzere kodu tarayın veya dokunun."
+  },
+  "footer": {
+    "brand": "Zaokit ClaudeOps",
+    "entity": "Avustralya'da tescilli bir şirket tarafından işletilmektedir · 19 Küresel Dil",
+    "contact_label": "İletişim: ",
+    "alt_label": "Alternatif: ",
+    "rights": "Tüm hakları saklıdır.",
+    "products_h4": "Zaokit ürünleri",
+    "follow_h4": "Bizi takip edin",
+    "terms": "Hizmet Şartları",
+    "refund": "İade Politikası",
+    "privacy": "Gizlilik Politikası",
+    "disclaimer": "Yasal Uyarı: Zaokit bağımsız bir bulut iş istasyonu ve yapay zeka mühendislik danışmanlığı şirketidir; Anthropic PBC, Apple Inc. veya Google LLC ile bağlantılı değildir, bu kurumlar tarafından onaylanmamış veya desteklenmemiştir. Claude, Claude Code, Mac, iCloud ve Google Drive ilgili sahiplerinin ticari markalarıdır."
+  },
+  "js": {
+    "per_month": "/ ay",
+    "per_year": "/ yıl",
+    "per_seat_mo": "/ koltuk / ay",
+    "per_seat_yr": "/ koltuk / yıl",
+    "per_mo_short": "/ ay",
+    "per_yr_short": "/ yıl",
+    "title_12mo": "Aylık faturalandırılan 12 ay",
+    "title_reg_mo": "Normal aylık fiyat",
+    "note_annual": "Yıllık faturalandırılan 10 ay · ~{sym}{eq}/ay, kazancınız {sym}{save}",
+    "note_1x_mo": "Claude ortamı dahil · günde yaklaşık {sym}{day}",
+    "note_20x_promo": "Kampanya fiyatı yenilemede korunur · birim maliyet 1x'in yaklaşık %{ratio}'i",
+    "note_mult_mo": "Claude ortamı dahil · {mult}x kullanım, birim maliyet 1x'in yaklaşık %{ratio}'i",
+    "ent_team_mo": "5 adet {label} izole koltuk dahil · Özel Mac sunucusu ve tek fatura",
+    "ent_biz_mo": "10 adet {label} izole koltuk dahil · Özel çoklu Mac kümesi ve VIP SLA",
+    "line_0_mo": "7/24 BGP sıfır kayıplı hızlandırma · Planla birlikte yönetilir",
+    "line_1_mo": "5× öncelikli kapasite · Yüksek öncelikli BGP QoS",
+    "ent_copy": {
+      "pro": {
+        "label": "Pro (1x)",
+        "teamBadge": "5 × Pro (1x) Koltuk · Özel Ana Bilgisayar",
+        "bizBadge": "Kurumsal · 10 × Pro (1x) Küme",
+        "teamSeatLi": "<strong>5 adet Pro (1x) standart üye koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)",
+        "bizSeatLi": "<strong>10 adet Pro (1x) standart üye koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)",
+        "teamStorage": "Ücretsiz 6 TB ekip bulut depolama alanı (Google Drive / iCloud+)",
+        "bizStorage": "Ücretsiz 12 TB kurumsal bulut depolama alanı (Google Drive / iCloud+)"
+      },
+      "max": {
+        "label": "Max (5x)",
+        "teamBadge": "5 × Max (5x) Koltuk · Özel Ana Bilgisayar",
+        "bizBadge": "Kurumsal · 10 × Max (5x) Küme",
+        "teamSeatLi": "<strong>5 adet Max (5x) mühendislik koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)",
+        "bizSeatLi": "<strong>10 adet Max (5x) mühendislik koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)",
+        "teamStorage": "Ücretsiz 12 TB ekip bulut depolama alanı (Google Drive / iCloud+)",
+        "bizStorage": "Ücretsiz 30 TB kurumsal bulut depolama alanı (Google Drive / iCloud+)"
+      },
+      "ultra": {
+        "label": "Ultra (20x)",
+        "teamBadge": "5 × Ultra (20x) Koltuk · Özel Studio",
+        "bizBadge": "Kurumsal · 10 × Ultra (20x) Küme",
+        "teamSeatLi": "<strong>5 adet Ultra (20x) amiral gemisi koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)",
+        "bizSeatLi": "<strong>10 adet Ultra (20x) amiral gemisi koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)",
+        "teamStorage": "Ücretsiz 12 TB ekip bulut depolama alanı (Google Drive / iCloud+)",
+        "bizStorage": "Ücretsiz 30 TB kurumsal bulut depolama alanı (Google Drive / iCloud+)"
+      }
+    },
+    "toast_copied": "E-posta kopyalandı: {email}. Posta uygulamanız açılıyor…",
+    "toast_fallback": "Lütfen bize {email} adresinden e-posta gönderin"
+  },
+  "legal_common": {
+    "back_home": "← Ana sayfaya dön",
+    "footer_copy": "© Zaokit AI · Avustralya'da tescilli bir şirket tarafından işletilmektedir"
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası | Zaokit ClaudeOps",
+    "description": "Zaokit ClaudeOps Gizlilik Politikası",
+    "h1": "Gizlilik Politikası",
+    "meta": "Yürürlük tarihi: 3 Kasım 2026. Farklı dillerdeki sürümler arasında çelişki olması halinde İngilizce sürüm geçerlidir.",
+    "lead_html": "Bu politika, Zaokit ClaudeOps hizmetini sunarken kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı, sakladığımızı ve koruduğumuzu açıklar. Kişisel bilgileri 1988 tarihli Avustralya Gizlilik Yasası (Australian Privacy Act 1988) ve Avustralya Gizlilik İlkeleri (APPs) doğrultusunda işliyoruz.",
+    "sections": [
+      {
+        "h2": "1. Topladığımız bilgiler",
+        "body_html": "<ul><li><strong>İletişim ve hesap bilgileri</strong>: adınız, e-posta adresiniz ve ödeme sırasında seçtiğiniz tercih edilen bölge.</li><li><strong>Ödeme bilgileri</strong>: Stripe tarafından işlenir. Tam kart numaranızı asla görmez veya saklamayız; yalnızca işlem kayıtlarını, makbuzları ve ödeme durumunu görebiliriz.</li><li><strong>Hizmet bilgileri</strong>: Hizmeti kurmak için bize ilettiğiniz üçüncü taraf hesap e-postaları (Claude, Google veya Apple hesapları gibi) ve size tanımladığımız erişim bilgileri.</li><li><strong>İletişimler</strong>: e-posta, Telegram veya diğer kanallar aracılığıyla bize gönderdiğiniz mesajlar.</li><li><strong>Web sitesi verileri</strong>: Google Analytics ve Umami gibi analiz araçları vasıtasıyla toplanan cihaz, tarayıcı, IP adresi ve ziyaret edilen sayfa bilgileri.</li></ul>"
+      },
+      {
+        "h2": "2. Bilgileri nasıl kullanıyoruz",
+        "body_html": "<p>Bu bilgileri yalnızca Hizmeti kurmak ve sunmak, faturalandırma ve yenilemeleri yönetmek, destek sağlamak, sistemlerimizi güvende tutmak ve kötüye kullanımı önlemek, yasal yükümlülükleri yerine getirmek ve web sitemizi ile Hizmetimizi geliştirmek amacıyla kullanırız. Kişisel bilgilerinizi satmayız.</p>"
+      },
+      {
+        "h2": "3. Ortamınızdaki veriler",
+        "body_html": "<p>Çalışma ortamınızda sakladığınız dosyalar, kodlar ve oturumlar size aittir. Bunlara aktif olarak erişmeyiz ve yalnızca sistem bakımı, güvenlik olayları, yasal gereklilikler veya sizin yetkilendirdiğiniz sorun giderme işlemleri için gerekli adımları atarız.</p>"
+      },
+      {
+        "h2": "4. Bilgi paylaşımı",
+        "body_html": "<p>Gerekli bilgileri yalnızca şu taraflarla paylaşırız:</p><ul><li>ödeme işleme (Stripe), web sitesi analitiği ve ağ ile altyapı sağlayıcıları gibi Hizmeti sunmak için ihtiyaç duyduğumuz hizmet sağlayıcılar;</li><li>adınıza abonelikleri yönetmek için gerektiği ölçüde üçüncü taraf sağlayıcılar;</li><li>yasaların zorunlu kıldığı veya hukuka uygun bir resmi talebin bulunduğu durumlarda yetkili makamlar.</li></ul>"
+      },
+      {
+        "h2": "5. Sınır ötesi veri işleme",
+        "body_html": "<p>Ortamlarımız Avustralya, Amerika Birleşik Devletleri, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda ve Kanada'da bulunmaktadır; ayrıca Stripe gibi sağlayıcılar verileri başka ülkelerde işleyebilir. Dolayısıyla bilgileriniz ülkeniz dışında saklanabilir veya işlenebilir. Bilgilerinizi korumak için makul önlemleri alıyoruz.</p>"
+      },
+      {
+        "h2": "6. Veri saklama süresi",
+        "body_html": "<ul><li>İletişim, hesap ve faturalandırma bilgileri: Hizmeti kullandığınız süre boyunca ve sonrasında vergi, muhasebe veya diğer yasaların gerektirdiği süre boyunca saklanır.</li><li>Ortamınızdaki veriler: Hizmet sona erdikten 7 gün sonra silinebilir.</li></ul>"
+      },
+      {
+        "h2": "7. Güvenlik",
+        "body_html": "<p>Bilgilerinizi korumak için erişim kontrolleri ve hesap izolasyonu gibi makul teknik ve idari tedbirler uygularız. Bununla birlikte, internet üzerinden yapılan hiçbir veri iletimi veya depolama tamamen güvenli değildir ve bilgilere hiçbir zaman yetkisiz erişilmeyeceğini garanti edemeyiz.</p>"
+      },
+      {
+        "h2": "8. Çerezler ve analitik",
+        "body_html": "<p>Web sitemiz, nasıl kullanıldığını anlamak amacıyla analiz araçları kullanır ve bu araçlar çerezleri (cookies) veya benzer teknolojileri kullanabilir. Tarayıcı ayarlarınızdan çerezleri devre dışı bırakabilir ve siteyi gezmeye devam edebilirsiniz.</p>"
+      },
+      {
+        "h2": "9. Haklarınız",
+        "body_html": "<p>Yasalar gereği saklamamız gereken durumlar haricinde kişisel bilgilerinize erişmeyi, bunları düzeltmeyi veya silmeyi bizden talep edebilirsiniz. Bilgilerinizi işleme biçimimizle ilgili bir endişeniz varsa lütfen önce bizimle iletişime geçin. Sorunu çözemezsek Avustralya Bilgi Komiserliği Ofisi'ne (OAIC) şikayette bulunabilirsiniz.</p>"
+      },
+      {
+        "h2": "10. Değişiklikler",
+        "body_html": "<p>Bu politikayı zaman zaman güncelleyebiliriz ve güncellenmiş sürümü bu sayfada yayımlarız. Önemli değişiklikleri e-posta yoluyla veya web sitemizde önceden bildiririz.</p>"
+      },
+      {
+        "h2": "11. İletişim",
+        "body_html": "<p>Gizlilikle ilgili sorularınız için <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> adresine e-posta gönderin (alternatif: <a href=\"mailto:support@zaokit.ai\">support@zaokit.ai</a>).</p>"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Hizmet Şartları | Zaokit ClaudeOps",
+    "description": "Zaokit ClaudeOps Hizmet Şartları",
+    "h1": "Hizmet Şartları",
+    "meta": "Yürürlük tarihi: 3 Kasım 2026. Farklı dillerdeki sürümler arasında çelişki olması halinde İngilizce sürüm geçerlidir.",
+    "lead_html": "Zaokit ClaudeOps'a (\"biz\", \"bize\") hoş geldiniz. Hizmete abone olarak veya hizmeti kullanarak bu Şartları, <a href=\"refund.html\">İade Politikamızı</a> ve <a href=\"privacy.html\">Gizlilik Politikamızı</a> kabul etmiş olursunuz. Kabul etmiyorsanız lütfen abone olmayın.",
+    "sections": [
+      {
+        "h2": "1. Hizmetin kapsamı",
+        "body_html": "<p>Yönetilen uzak Mac ortamları, yapay zeka çalışma alanı yapılandırması, abonelik faturalandırma yönetimi ve teknik danışmanlık (\"Hizmet\") sunuyoruz. Bağımsız bir sağlayıcıyız ve Anthropic PBC, Apple Inc. veya Google LLC ile bağlı, yetkili veya ortak değiliz.</p>"
+      },
+      {
+        "h2": "2. Üçüncü taraf hizmetleri",
+        "body_html": "<ol><li>Claude, Google Drive ve iCloud+ gibi üçüncü taraf hizmetleri, ilgili sağlayıcılar tarafından kendi şart ve politikaları çerçevesinde sunulur. Bu hesaplar sizin adınıza kaydedilir ve size aittir. Her sağlayıcının şartlarına, kullanım politikalarına ve bölgesel gerekliliklerine uymaktan ve bulunduğunuz yerde kullanımınızın yasal olmasını sağlamaktan siz sorumlusunuz.</li><li>Biz yalnızca abonelikleri ve yenilemeleri sizin adınıza yönetiriz. Herhangi bir üçüncü taraf hizmetinin erişilebilirliği, özellikleri, kullanım limitleri, model sürümleri veya politika değişiklikleri konusunda hiçbir garanti vermeyiz. \"1x / 5x / 20x\" plan çarpanları ve Team / Business koltuk yapılandırmaları yalnızca gösterge niteliğindedir. Fiili kullanım, sağlayıcının o tarihte geçerli olan kurallarına tabidir.</li><li>Bir üçüncü taraf sağlayıcı hesabınızı kısıtlar, askıya alır veya sonlandırırsa ya da ürünlerini, limitlerini veya fiyatlarını değiştirirse yardımcı olmak için makul çabayı gösteririz, ancak doğacak etkilerden sorumlu tutulamayız.</li></ol>"
+      },
+      {
+        "h2": "3. Çalışma ortamları",
+        "body_html": "<ol><li><strong>1x / 5x (çok kullanıcılı makineler)</strong>: Her kullanıcının yalnızca Apple Screen Sharing üzerinden erişilebilen ayrı bir macOS hesabı vardır. Diğer kullanıcıların hesaplarına veya verilerine erişmeye çalışmamalı; uzaktan kontrol, ekran kaydı, ağ proxy'si veya diğer kullanıcıları etkileyebilecek başka yazılımlar kurmamalısınız.</li><li><strong>20x / Team / Business (özel cihaz veya küme)</strong>: 20x özel cihaz seçeneği içerir; Team ve Business planları ise her üye için ayrı bir macOS hesabıyla yalnızca kurumunuza tahsis edilmiş fiziksel donanım veya çoklu Mac kümeleri sunar. Makul sınırlar içinde yazılım kurabilir ve sistem ayarlarını değiştirebilirsiniz; bundan kaynaklanabilecek kararlılık veya güvenlik sorunlarından siz sorumlu olursunuz.</li><li>Cihaz modeli, donanım özellikleri ve bölge mevcut kaynaklara göre tahsis edilir. Ödeme sırasında seçtiğiniz tercih edilen bölgeyi karşılamaya çalışırız ancak bunu garanti edemeyiz. Bakım, arıza müdahalesi veya kapasite nedenleriyle ortamınızı taşıyabiliriz ve acil durumlar dışında önceden bildirimde bulunmaya özen gösteririz.</li></ol>"
+      },
+      {
+        "h2": "4. Kabul edilebilir kullanım",
+        "body_html": "<p>Hizmeti şu amaçlarla kullanamazsınız:</p><ul><li>yasadışı faaliyetlerde bulunmak veya başkalarının fikri mülkiyet, gizlilik ya da diğer haklarını ihlal etmek;</li><li>istenmeyen ileti (spam) göndermek, saldırı düzenlemek, port taraması yapmak veya kötü amaçlı yazılım dağıtmak;</li><li>kripto para madenciliği yapmak veya Hizmetle ilgisi olmayan sürekli yüksek yüklü bilgi işlem çalıştırmak;</li><li>Hizmeti yeniden satmak, alt kiralamaya vermek veya erişim bilgilerinizi başkalarıyla paylaşmak;</li><li>herhangi bir üçüncü taraf sağlayıcının şartlarını veya kullanım politikalarını ihlal etmek.</li></ul><p>Bu kuralları ihlal etmeniz halinde Hizmeti ücret iadesi yapmaksızın derhal askıya alabilir veya sonlandırabiliriz.</p>"
+      },
+      {
+        "h2": "5. Destek",
+        "body_html": "<p>Her plan için gösterilen destek saatleri (7×8s / 7×16s / 7×24s), talepleri kabul ettiğimiz ve işleme aldığımız zaman dilimlerini ifade eder. Hızlı yanıt vermek için makul çabayı gösteririz ancak belirli yanıt veya çözüm süreleri taahhüt etmeyiz.</p>"
+      },
+      {
+        "h2": "6. Erişilebilirlik ve bakım",
+        "body_html": "<p>Hizmet \"olduğu gibi\" ve \"mevcut olduğu ölçüde\" sunulur. Kararlı çalışması için makul çabayı gösteririz ancak kesintisiz veya hatasız olacağını garanti etmeyiz. Planlı bakımları önceden bildirmeye çalışırız. Elektrik kesintileri, operatör arızaları, üçüncü taraf kesintileri, doğal afetler veya makul kontrolümüz dışındaki diğer olaylardan kaynaklanan kesintiler tarafımızca bir ihlal teşkil etmez.</p>"
+      },
+      {
+        "h2": "7. Veriler ve yedekleme",
+        "body_html": "<ol><li>Hesabınızdaki verilerden siz sorumlusunuz ve önemli verilerinizi düzenli olarak yedeklemelisiniz. Yasaların zorunlu kıldığı durumlar dışında veri kaybından sorumlu değiliz.</li><li>Hesabınızdaki içeriklere aktif olarak erişmeyiz; yalnızca sistem bakımı, güvenlik olayları, yasal gereklilikler veya sizin yetkilendirdiğiniz sorun giderme işlemleri için gerekli adımları atarız.</li><li>Hizmet sona erdikten 7 gün sonra hesabınızı ve verilerinizi silebiliriz. Lütfen bu süreden önce ihtiyacınız olan tüm verileri dışa aktarın.</li></ol>"
+      },
+      {
+        "h2": "8. Ücretler ve yenilemeler",
+        "body_html": "<ol><li>Hizmet aylık veya yıllık olarak faturalandırılabilir ve ödeme adımında gösterilen fiyat ve faturalandırma aralığı üzerinden Stripe aracılığıyla otomatik olarak yenilenir. Koltuk başı yükseltme eklentileri yalnızca aktif Team veya Business temel abonelikleri için geçerlidir; ClaudeOps Kurumsal Özel Hat eklentileri aktif bir temel abonelik gerektirir (20x, Team ve Business planlarına ücretsiz dahildir).</li><li>En az 30 gün önceden bildirimde bulunarak fiyatları değiştirebiliriz. Yeni fiyat yürürlüğe girmeden önce aboneliğinizi iptal edebilirsiniz.</li><li>Kampanya fiyatları yalnızca kampanya süresi içinde başlatılan abonelikler için geçerlidir. Aboneliğiniz kesintisiz aktif kaldığı sürece yenilemeler, madde 8.2 saklı kalmak kaydıyla kampanya fiyatı üzerinden ücretlendirilir. İptal edip daha sonra yeniden abone olursanız o tarihteki güncel fiyat uygulanır.</li><li>İptal ve iadeler <a href=\"refund.html\">İade Politikamız</a> kapsamındadır.</li></ol>"
+      },
+      {
+        "h2": "9. Askıya alma ve fesih",
+        "body_html": "<p>İstediğiniz zaman iptal edebilirsiniz; Hizmet mevcut faturalandırma döneminin sonuna kadar devam eder. Bu Şartları ihlal etmeniz, ödeme yapmamanız veya kullanımınızın güvenlik riski oluşturması halinde Hizmeti askıya alabilir veya sonlandırabiliriz. Ayrıca 30 gün önceden bildirimde bulunarak Hizmeti sonlandırabilir ve kullanılmayan döneme ait ödenmiş ücretleri orantılı (pro-rata) olarak iade edebiliriz.</p>"
+      },
+      {
+        "h2": "10. Sorumluluğun sınırlandırılması",
+        "body_html": "<p>Yasaların izin verdiği azami ölçüde: (a) kâr, veri, itibar veya iş kaybı dahil olmak üzere hiçbir dolaylı, arızi, özel veya sonuçsal zarardan sorumlu değiliz; ve (b) Hizmetle bağlantılı toplam sorumluluğumuz, talebe yol açan olaydan önceki bir ay içinde bize fiilen ödediğiniz ücretlerle sınırlıdır.</p><p>Bu Şartlardaki hiçbir hüküm, Avustralya Tüketici Yasası (Australian Consumer Law) kapsamında yasal olarak hariç tutulamayacak herhangi bir hakkınızı veya garantinizi hariç tutmaz, kısıtlamaz veya değiştirmez. Yasaların sorumluluğumuzu sınırlandırmamıza izin verdiği durumlarda sorumluluğumuz, hizmetlerin yeniden sağlanması veya yeniden sağlanma maliyetinin ödenmesiyle sınırlıdır.</p>"
+      },
+      {
+        "h2": "11. Şartlardaki değişiklikler",
+        "body_html": "<p>Bu Şartları zaman zaman güncelleyebiliriz ve önemli değişiklikleri e-posta yoluyla veya web sitemizde önceden bildiririz. Değişiklikler yürürlüğe girdikten sonra Hizmeti kullanmaya devam etmeniz, güncellenmiş Şartları kabul ettiğiniz anlamına gelir.</p>"
+      },
+      {
+        "h2": "12. Uygulanacak hukuk",
+        "body_html": "<p>Bu Şartlar Avustralya yasalarına tabidir.</p>"
+      },
+      {
+        "h2": "13. İletişim",
+        "body_html": "<p>Bu Şartlar hakkında sorularınız mı var? <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> adresine e-posta gönderin (alternatif: <a href=\"mailto:support@zaokit.ai\">support@zaokit.ai</a>).</p>"
+      }
+    ]
+  },
+  "refund": {
+    "title": "İade Politikası | Zaokit ClaudeOps",
+    "description": "Zaokit ClaudeOps İade ve İptal Politikası",
+    "h1": "İade Politikası",
+    "meta": "Yürürlük tarihi: 3 Kasım 2026. Farklı dillerdeki sürümler arasında çelişki olması halinde İngilizce sürüm geçerlidir.",
+    "lead_html": "Bu politika, iptal ve iadelerin nasıl işlediğini açıklar ve <a href=\"terms.html\">Hizmet Şartlarımızın</a> ayrılmaz bir parçasını oluşturur. Avustralya Tüketici Yasası kapsamında yasal olarak hariç tutulamayacak hiçbir hakkınızı ortadan kaldırmaz.",
+    "sections": [
+      {
+        "h2": "1. İptal işlemi",
+        "body_html": "<p>Hizmet aylık veya yıllık olarak faturalandırılabilir ve dilediğiniz zaman iptal edebilirsiniz. İptal sonrasında Hizmet mevcut faturalandırma döneminin (aylık veya yıllık) sonuna kadar devam eder ve yeniden yenilenmez. İptal etmek için bize e-posta göndermeniz yeterlidir.</p>"
+      },
+      {
+        "h2": "2. Teslimat öncesi",
+        "body_html": "<p>Çalışma ortamınızı ve erişim bilgilerinizi size teslim etmeden önce iptal ederseniz tam ücret iadesi yaparız.</p>"
+      },
+      {
+        "h2": "3. Teslimat sonrası",
+        "body_html": "<p>Hizmeti etkinleştirdiğimizde donanım ve koltuk kaynaklarını tahsis eder ve ilgili üçüncü taraf aboneliklerini sizin adınıza başlatırız. Bu nedenle, mevcut faturalandırma dönemine ait ücretler (indirimli yıllık ön ödemeler dahil) teslimat sonrasında genel olarak iade edilmez ve madde 4'te belirtilen durumlar veya yasaların zorunlu kıldığı haller dışında gün ya da ay bazında orantılı iadeye tabi tutulmaz.</p>"
+      },
+      {
+        "h2": "4. Bizden kaynaklanan kesintiler",
+        "body_html": "<p>Kontrolümüz dahilindeki nedenlerle Hizmet kesintisiz olarak 72 saatten uzun süre kullanılamazsa, hizmet sürenizi etkilenen gün sayısı kadar uzatırız. Bunun yerine iptal etmeyi tercih ederseniz mevcut dönemin kullanılmayan kısmı için orantılı (pro-rata) iade talep edebilirsiniz.</p>"
+      },
+      {
+        "h2": "5. Üçüncü taraflardan kaynaklanan etkiler",
+        "body_html": "<p>Politika değişiklikleri, kullanım limitleri, hesap kısıtlamaları veya servis kesintileri gibi üçüncü taraf sağlayıcılardan (Anthropic, Google ve Apple dahil) kaynaklanan durumlar kontrolümüz dışındadır ve sizin adınıza ödenmiş üçüncü taraf ücretleri iade edilmez. Sorunu çözmenize yardımcı olmak için makul her türlü çabayı gösteririz.</p>"
+      },
+      {
+        "h2": "6. Bulut depolama ve Kurumsal Özel Hat eklentileri",
+        "body_html": "<p>Bulut depolama veya ClaudeOps Kurumsal Özel Hat eklentisi etkinleştirildikten sonra mevcut döneme ait ücretler iade edilmez. İptal sonrasında eklenti mevcut dönemin sonuna kadar devam eder.</p>"
+      },
+      {
+        "h2": "7. İhlal nedeniyle fesih",
+        "body_html": "<p>Hizmetin <a href=\"terms.html\">Hizmet Şartlarımızı</a> ihlal etmeniz nedeniyle askıya alınması veya sonlandırılması durumunda herhangi bir ücret iadesi yapılmaz.</p>"
+      },
+      {
+        "h2": "8. İade talebi nasıl oluşturulur",
+        "body_html": "<ol><li>Abonelik e-posta adresinizi, Stripe makbuz numaranızı ve talep nedeninizi belirterek <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> adresine e-posta gönderin.</li><li>5 iş günü içinde size yanıt veririz.</li><li>Onaylanan iadeler orijinal ödeme yönteminize geri aktarılır. İşlem süresi bankanıza veya ödeme sağlayıcınıza bağlıdır.</li></ol>"
+      },
+      {
+        "h2": "9. Ters ibrazlar (Chargeback)",
+        "body_html": "<p>Bir tahsilatla ilgili sorunuz varsa lütfen önce bizimle iletişime geçin; hızla çözüme kavuşturalım. Bizimle iletişime geçmeden bankanız nezdinde ters ibraz (chargeback) başlatırsanız, uyuşmazlık sonuçlanana kadar ilgili hizmeti askıya alabiliriz.</p>"
+      }
+    ]
+  }
+}

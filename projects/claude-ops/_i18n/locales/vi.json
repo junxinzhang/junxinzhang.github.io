@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "title": "Zaokit ClaudeOps — AI Kết Nối Thế Giới Không Biên Giới | Năng Suất Tiên Phong & Trải Nghiệm Đỉnh Cao",
+    "description": "Zaokit ClaudeOps: AI kết nối thế giới không biên giới — thắp sáng từng thành phố trên toàn cầu để mang năng suất tiên tiến nhất và trải nghiệm đỉnh cao đến mọi người. Máy trạm vật lý Mac Studio & Mac mini biệt lập tại 9 khu vực ISP bản địa (AU, US, SG, MY, ID, JP, KH, NZ, CA), đường truyền riêng BGP doanh nghiệp, cố vấn kỹ thuật 1-kèm-1 đến 7×24h và lưu trữ đám mây 2TB–30TB.",
+    "keywords": "Zaokit ClaudeOps, AI Không Biên Giới, Thắp Sáng Mọi Thành Phố, dịch vụ quản lý Claude, Claude Code, máy trạm đám mây Mac, Mac Studio chuyên dụng, cố vấn kỹ thuật AI",
+    "og_title": "AI Kết Nối Thế Giới Không Biên Giới — Năng Suất Tiên Phong & Trải Nghiệm Đỉnh Cao | Zaokit ClaudeOps",
+    "og_description": "Thắp sáng mọi thành phố toàn cầu · 9 cụm tính toán ISP bản địa · Máy trạm vật lý Mac cấu hình cao · Tăng tốc BGP doanh nghiệp · Hỗ trợ 1-kèm-1 đến 7×24h.",
+    "ld_description": "AI kết nối thế giới không biên giới — thắp sáng từng thành phố trên toàn cầu để mang năng suất tiên tiến nhất và trải nghiệm đỉnh cao đến mọi người: không gian làm việc biệt lập trên máy vật lý Mac Studio & Mac mini cấu hình cao tại 9 khu vực ISP bản địa, tăng tốc BGP doanh nghiệp và hỗ trợ kỹ thuật AI 1-kèm-1 đến 7x24h.",
+    "offer_names": [
+      "1x Tiêu chuẩn",
+      "5x Chuyên nghiệp",
+      "20x Tối thượng"
+    ]
+  },
+  "nav": {
+    "brand": "Zaokit ClaudeOps",
+    "why": "Vì sao",
+    "service": "Dịch vụ",
+    "value": "Giá trị",
+    "security": "Bảo mật",
+    "reviews": "Đánh giá",
+    "pricing": "Bảng giá",
+    "storage": "Lưu trữ",
+    "process": "Quy trình",
+    "faq": "FAQ",
+    "lang_aria": "Chuyển đổi ngôn ngữ"
+  },
+  "hero": {
+    "eyebrow": "GLOBAL VISION · Để AI Thắp Sáng Từng Thành Phố, Từng Cá Nhân",
+    "h1_main": "AI Xóa Nhòa Mọi Biên Giới",
+    "h1_sub": "Mang năng suất tiên tiến nhất & trải nghiệm đỉnh cao đến tất cả mọi người",
+    "lead": "Năng suất AI tiên phong không bao giờ nên là đặc quyền của số ít. Từ Sydney, Thung lũng Silicon, Tokyo, Singapore đến Jakarta—chúng tôi đang thắp sáng các nút tính toán bản địa tại từng thành phố trên khắp thế giới, kết hợp máy trạm vật lý Mac biệt lập, đường truyền riêng BGP doanh nghiệp và dịch vụ đồng hành kỹ thuật 1-kèm-1 lên đến 7×24h để mọi nhà sáng tạo, lập trình viên và đội ngũ đều có thể kiến tạo không giới hạn.",
+    "cta_primary": "Xem bảng giá",
+    "cta_secondary": "Gửi email tư vấn",
+    "mailto_enquiry_subject": "Tư vấn dịch vụ Zaokit ClaudeOps",
+    "stats": [
+      {
+        "strong": "9 Quốc Gia Đã Mở",
+        "span": "AU · US · SG · MY · ID · JP · KH · NZ · CA"
+      },
+      {
+        "strong": "Mac Vật Lý Thật",
+        "span": "Mac Studio & Mac mini cấu hình cao"
+      },
+      {
+        "strong": "Trải Nghiệm Đỉnh",
+        "span": "Hỗ trợ 1-kèm-1 7×8h / 7×16h / 7×24h"
+      },
+      {
+        "strong": "Không Gian Biệt Lập",
+        "span": "Tài khoản macOS riêng · Nguyên máy ở gói 20x+"
+      },
+      {
+        "strong": "Pháp Nhân Úc",
+        "span": "Đăng ký tại Úc · Thanh toán qua Stripe"
+      }
+    ]
+  },
+  "map": {
+    "status_main": "Đã Thắp Sáng 9 Quốc Gia & Hơn 13 Thành Phố Trọng Điểm",
+    "status_em": "THẮP SÁNG MỌI THÀNH PHỐ",
+    "meta_1": "Mạng lưới tính toán ISP bản địa",
+    "meta_2": "Trục xương sống BGP xuyên biên giới",
+    "meta_3": "Di chuột hoặc nhấp vào thành phố nút",
+    "stage_aria": "Bản đồ cấu trúc mạng ISP bản địa toàn cầu tại 9 quốc gia",
+    "hud_live": "● Trực tuyến",
+    "hud_label_city": "Tâm điểm đô thị",
+    "hud_label_hw": "Phần cứng",
+    "hud_val_hw": "Mac Studio / mini cấu hình cao",
+    "hud_label_route": "Đường trục",
+    "pills_aria": "Chọn khu vực",
+    "partner_pill": "✦ Đồng Kiến Tạo Toàn Cầu · Phục Vụ Trọn Vẹn 8 Tỷ Người",
+    "partner_copy_html": "<strong>Đóng góp thiết bị của bạn &amp; chia sẻ tài nguyên — vừa tạo thu nhập bền vững, vừa thắp sáng ước mơ cho biết bao người!</strong>",
+    "partner_cta": "Đóng Góp Máy / Tham Gia Ngay →",
+    "partner_mailto_subject": "Bring My Mac / Join Zaokit Global Compute Network",
+    "partner_mailto_body": "Chào Jason, tôi muốn chia sẻ tài nguyên và tham gia Mạng lưới Tính toán Toàn cầu Zaokit:\n\n1. Quốc gia / Thành phố:\n2. Hình thức hợp tác (Đóng góp máy Mac cá nhân / Nút băng thông bản địa / Đối tác khu vực):\n3. Cấu hình máy Mac & thông tin nhà mạng ISP địa phương:\n4. Thông tin liên hệ:",
+    "nodes": {
+      "AU": {
+        "name": "Úc",
+        "pill": "Úc ★",
+        "short": "Úc",
+        "city": "Sydney · Melbourne",
+        "role": "★ Trung Tâm Trụ Sở Chính · Pháp Nhân Úc",
+        "route": "BGP cao cấp qua HK · 0% mất gói tin"
+      },
+      "US": {
+        "name": "Hoa Kỳ",
+        "pill": "Hoa Kỳ",
+        "short": "Hoa Kỳ",
+        "city": "Silicon Valley · LA",
+        "role": "Cụm Tính Toán Cốt Lõi Bờ Tây Hoa Kỳ",
+        "route": "Trực tiếp Xuyên Thái Bình Dương · ISP bản địa"
+      },
+      "SG": {
+        "name": "Singapore",
+        "pill": "Singapore",
+        "short": "Singapore",
+        "city": "Singapore",
+        "role": "Trung Tâm Độ Trễ Thấp Khu Vực APAC",
+        "route": "Giao điểm cáp quang biển · RTT siêu thấp"
+      },
+      "MY": {
+        "name": "Malaysia",
+        "pill": "Malaysia",
+        "short": "Malaysia",
+        "city": "Kuala Lumpur",
+        "role": "Nút Băng Thông Bản Địa Đông Nam Á",
+        "route": "Tuyến cáp đất liền MY–SG · IP bản địa sạch"
+      },
+      "ID": {
+        "name": "Indonesia",
+        "pill": "Indonesia",
+        "short": "Indonesia",
+        "city": "Jakarta",
+        "role": "Nút ISP Bản Địa Quần Đảo Đông Nam Á",
+        "route": "Tuyến cáp biển SG–Jakarta & Indigo"
+      },
+      "JP": {
+        "name": "Nhật Bản",
+        "pill": "Nhật Bản",
+        "short": "Nhật Bản",
+        "city": "Tokyo · Osaka",
+        "role": "Nút Độ Trễ Siêu Thấp Đông Á",
+        "route": "Đo thực tế ~92ms · 0% mất gói tin"
+      },
+      "KH": {
+        "name": "Campuchia",
+        "pill": "Campuchia",
+        "short": "Campuchia",
+        "city": "Phnom Penh",
+        "role": "Nút RTT Thấp Cáp Đất Liền Trực Tiếp",
+        "route": "Đất liền trực tiếp ~81ms · 0% mất gói"
+      },
+      "NZ": {
+        "name": "New Zealand",
+        "pill": "New Zealand",
+        "short": "New Zealand",
+        "city": "Auckland",
+        "role": "Nút Bản Địa Sạch Nam Thái Bình Dương",
+        "route": "Tuyến cáp biển Trans-Tasman & Hawaiki"
+      },
+      "CA": {
+        "name": "Canada",
+        "pill": "Canada",
+        "short": "Canada",
+        "city": "Vancouver · Toronto",
+        "role": "Nút Băng Thông Sạch Bắc Mỹ",
+        "route": "Trực tiếp Bắc Thái Bình Dương · Độ ổn định cao"
+      }
+    }
+  },
+  "why": {
+    "tag": "Vì sao",
+    "h2": "Phần khó nhất khi dùng Claude chưa bao giờ nằm ở mô hình",
+    "sub": "Thứ thực sự bào mòn năng lượng của bạn chính là những bất ổn kỹ thuật chẳng hề liên quan đến công việc chuyên môn.",
+    "cards": [
+      {
+        "h3": "Thiết lập rườm rà",
+        "p": "Từ đăng ký tài khoản đến cấu hình môi trường, bạn phải tự mày mò từng bước một mà không có ai hỗ trợ."
+      },
+      {
+        "h3": "Vận hành chập chờn",
+        "p": "Mỗi máy cục bộ lại khác nhau khiến các tác vụ Claude Code chạy dài hơi dễ bị ngắt quãng giữa chừng."
+      },
+      {
+        "h3": "Rắc rối thanh toán",
+        "p": "Lỗi thẻ thanh toán quốc tế, đổi gói cước và gia hạn hàng tháng liên tục ngốn mất thời gian quý báu của bạn."
+      },
+      {
+        "h3": "Lãng phí thời gian",
+        "p": "Hàng giờ đồng hồ tìm hiểu công cụ và xử lý lỗi môi trường lẽ ra nên được dành trọn cho sản phẩm thực tế của bạn."
+      }
+    ]
+  },
+  "service": {
+    "tag": "Dịch vụ",
+    "h2": "Hãy giao sự bất định cho chúng tôi. Giữ trọn sự chắc chắn cho bạn.",
+    "sub": "Từ khâu khởi tạo đến vận hành hàng ngày, được quản lý trọn gói và sẵn sàng sử dụng ngay.",
+    "cards": [
+      {
+        "h3": "Không gian làm việc biệt lập",
+        "p": "Tài khoản và không gian làm việc macOS riêng của bạn với tệp tin và quyền truy cập tách biệt hoàn toàn, kèm tùy chọn nguyên máy vật lý riêng ở gói 20x. Mọi hội thoại và dữ liệu dự án luôn nằm trong tầm kiểm soát của bạn."
+      },
+      {
+        "h3": "Mac Studio & mini cấu hình cao",
+        "p": "Máy vật lý Mac Studio hoặc Mac mini cấu hình cao đặt trên mạng băng thông rộng ISP bản địa tại Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand hoặc Canada (tuyệt đối không dùng trung tâm dữ liệu đám mây dùng chung giá rẻ). Cách ly cấp tài khoản (nguyên máy riêng ở gói 20x), vận hành ổn định lâu dài."
+      },
+      {
+        "h3": "Thanh toán quản lý trọn gói",
+        "p": "Đăng ký thuê bao, gia hạn định kỳ và thay đổi gói cước đều do chúng tôi xử lý trọn vẹn. Bạn không cần bận tâm theo dõi."
+      },
+      {
+        "h3": "Cố vấn 1-kèm-1 theo cấp độ",
+        "p": "Hỗ trợ kỹ thuật trực tiếp 1-kèm-1 tương ứng theo gói của bạn: 7×8h (1x), 7×16h (5x), lên đến kênh cố vấn riêng tư toàn thời gian 7×24h (20x)."
+      }
+    ]
+  },
+  "value": {
+    "tag": "Hơn cả phần cứng",
+    "h2_html": "Những gì bạn nhận được <em class=\"grad\">vượt xa năng lực tính toán</em>",
+    "sub": "Tài khoản và máy trạm chỉ là điểm khởi đầu. Lợi thế thực sự là có đội ngũ chuyên gia đồng hành giúp bạn khai thác AI đúng cách, sâu sắc hơn và đi trước người khác.",
+    "cards": [
+      {
+        "h3": "Năng lực tính toán & máy trạm hàng đầu",
+        "p": "Không gian kỹ thuật AI chuyên biệt được cấu hình sẵn và quản lý riêng cho bạn, vận hành trên máy vật lý Mac Studio hoặc Mac mini cấu hình cao để các tác vụ dài của Claude Code chạy xuyên suốt không gián đoạn."
+      },
+      {
+        "h3": "Cố vấn 1-kèm-1 đẳng cấp cao",
+        "p": "Hướng dẫn kỹ thuật AI chuyên sâu dành cho nhà sáng tạo, lập trình viên, nhà sáng lập và đội ngũ. Từ quy trình làm việc Claude Code, thiết lập MCP và Skills đến triển khai dự án thực tế với hỗ trợ trực tiếp 1-kèm-1 7×8h / 7×16h / 7×24h."
+      },
+      {
+        "h3": "Góc nhìn AI cập nhật sớm nhất",
+        "p": "Cập nhật định kỳ về tính năng mới, phương pháp tối ưu và xu hướng ngành của Claude cùng các công cụ AI hàng đầu khác, giúp bạn luôn đón đầu công nghệ mới."
+      }
+    ]
+  },
+  "network": {
+    "tag": "Hạ tầng mạng",
+    "h2_html": "Đầu tư hạ tầng mạng liên tục<br>cho trải nghiệm điều khiển từ xa mượt mà",
+    "p": "Chúng tôi không ngừng đầu tư vào phần cứng và tuyến truyền dẫn cao cấp: băng thông ISP bản địa tại 9 quốc gia với tốc độ đối xứng 200Mbps–500Mbps+, kết hợp máy chủ chuyển tiếp tự vận hành và trục BGP doanh nghiệp giúp đưa tỷ lệ mất gói tin—kẻ thù lớn nhất của màn hình từ xa—về mức 0%.",
+    "chips": [
+      "Đối xứng 200–500Mbps+",
+      "Đường trục BGP doanh nghiệp",
+      "Trạm chuyển tiếp tự chủ",
+      "Tối ưu BBR hai chiều",
+      "Mã hóa phần cứng Apple Silicon",
+      "Bảo vệ danh sách cho phép"
+    ],
+    "addon_note_prefix": "Miễn phí đi kèm ở gói 20x, Team & Business; thuê bao 1x / 5x có thể mua thêm ",
+    "addon_note_link": "Đường truyền riêng Doanh nghiệp ClaudeOps (từ $5/tháng) ↓",
+    "addon_note_suffix": "",
+    "card_aria": "Độ trễ và tỷ lệ mất gói tin đo thực tế trước và sau khi tối ưu",
+    "legend_before": "Trước tối ưu",
+    "legend_after": "Sau tối ưu",
+    "rows": [
+      {
+        "country": "Nhật Bản",
+        "via": "Qua trục HK",
+        "before": "128–184ms · 10% loss",
+        "after": "~92ms · 0% loss"
+      },
+      {
+        "country": "Úc",
+        "via": "Qua trục HK",
+        "before": "343–386ms · 25–33% loss",
+        "after": "~240ms · 0% loss"
+      },
+      {
+        "country": "Campuchia",
+        "via": "Cáp đất liền trực tiếp",
+        "before": "",
+        "after": "~81ms · 0% loss"
+      }
+    ],
+    "foot": "Đo lường từ thiết bị đầu cuối tại Đông Á, tháng 11/2026. Trải nghiệm thực tế có thể thay đổi tùy theo nhà mạng địa phương của bạn."
+  },
+  "security": {
+    "tag": "Bảo mật & Quyền riêng tư",
+    "h2": "Cách ly hai cấp độ: tài khoản tách biệt và nguyên máy vật lý riêng",
+    "sub": "Terminal của bạn chứa mã nguồn nội bộ, khóa API trong biến môi trường, cấu hình cơ sở dữ liệu và logic nghiệp vụ. Zaokit ClaudeOps áp dụng mô hình cách ly hai tầng: ở gói 1x / 5x, mỗi người dùng có một tài khoản macOS riêng biệt và chỉ truy cập qua Apple Screen Sharing; ở gói 20x, bạn có thể kích hoạt chế độ nguyên máy vật lý chuyên dụng, cách ly triệt để ngay từ tầng phần cứng.",
+    "cards": [
+      {
+        "h3": "Nguyên máy riêng 20x: cách ly cấp phần cứng",
+        "p": "Khi bật chế độ máy riêng, toàn bộ chiếc Mac Studio hoặc Mac mini cấu hình cao chỉ phục vụ duy nhất mình bạn. Toàn quyền cài đặt phần mềm, thay đổi cấu hình hệ thống và sử dụng bất kỳ công cụ điều khiển từ xa nào như RustDesk hay VNC bên thứ ba."
+      },
+      {
+        "h3": "Cách ly tài khoản riêng biệt 1x / 5x",
+        "p": "Mỗi người dùng sở hữu một tài khoản macOS độc lập với tệp tin và phân quyền riêng, đảm bảo lịch sử làm việc và dự án luôn kín đáo. Truy cập được giới hạn qua Apple Screen Sharing nhằm tạo phiên màn hình độc lập cho từng tài khoản mà không ai khác có thể nhìn thấy."
+      },
+      {
+        "h3": "Bạn toàn quyền kiểm soát truy cập và mã hóa",
+        "p": "Tự thiết lập mật khẩu truy cập và chính sách mã hóa của riêng bạn. Đội ngũ chúng tôi chỉ phụ trách kết nối và thanh toán, tuyệt đối không chủ động truy cập dữ liệu trong tài khoản của bạn trừ trường hợp bảo trì, sự cố bảo mật hoặc hỗ trợ kỹ thuật khi được bạn cho phép."
+      }
+    ]
+  },
+  "reviews": {
+    "tag": "Đánh giá thực tế",
+    "h2": "Khách hàng thực tế nói gì về chúng tôi",
+    "sub": "Để bảo vệ quyền riêng tư của khách hàng, tất cả đánh giá đều sử dụng ảnh đại diện minh họa và tên viết tắt ẩn danh, đồng thời giữ nguyên phản hồi thực tế cùng hạng gói đăng ký.",
+    "badge": "Đã ẩn danh · Đã xác thực",
+    "stars_aria": "5 trên 5 sao",
+    "items": [
+      {
+        "name": "M***",
+        "role": "Trưởng nhóm Sản phẩm AI Quốc tế",
+        "quote": "\"Đường truyền doanh nghiệp sắc nét và mượt kinh ngạc—thậm chí còn rõ hơn cả ToDesk nội mạng của tôi. Gõ code và chuyển đổi cửa sổ gần như không có độ trễ. Nhanh, ổn định, đáng từng đồng—một trải nghiệm thực sự đẳng cấp.\"",
+        "source": "Phản hồi tin nhắn xác thực",
+        "plan": "5x Pro"
+      },
+      {
+        "name": "C***",
+        "role": "Kỹ sư Full-Stack Cao cấp",
+        "quote": "\"Trước đây mạng ở nhà tôi rất hay rớt kết nối giữa chừng. Từ khi chuyển sang ClaudeOps 1x Tiêu chuẩn với không gian biệt lập và Claude Code chạy 24/7, cảm giác đúng nghĩa 'lập trình viên thiên tài hồi sinh' 😂. Giờ chẳng còn phải đau đầu vì hóa đơn hay mạng mẽo nữa.\"",
+        "source": "Phản hồi tin nhắn xác thực",
+        "plan": "1x Tiêu chuẩn"
+      },
+      {
+        "name": "Kyle W.",
+        "role": "Trưởng bộ phận R&D Định lượng",
+        "quote": "\"Mạng ISP bản địa tại 9 quốc gia cùng khả năng cách ly cấp phần cứng đã thuyết phục hoàn toàn tôi. Mã nguồn thuật toán và khóa API nội bộ nằm gọn trên một chiếc Mac Studio chuyên dụng—vận hành liên tục nhiều tháng trời không một lần gián đoạn.\"",
+        "source": "Nút Úc · Đã ẩn danh",
+        "plan": "20x Flagship"
+      },
+      {
+        "name": "L***",
+        "role": "Lập trình viên Độc lập",
+        "quote": "\"Bàn giao ngay trong ngày sau khi thanh toán qua Stripe. Tài khoản macOS biệt lập đã được cài sẵn Claude Code và trọn bộ công cụ lập trình. Cực kỳ tiết kiệm thời gian nếu bạn không muốn vật lộn với cấu hình môi trường hay thanh toán xuyên biên giới.\"",
+        "source": "Nút Tokyo · Đã ẩn danh",
+        "plan": "1x Tiêu chuẩn"
+      },
+      {
+        "name": "Sarah C.",
+        "role": "Đối tác Tư vấn Quản trị",
+        "quote": "\"Tôi không rành vận hành hệ thống và cũng ngại đụng vào dòng lệnh CLI. Nhờ hỗ trợ 1-kèm-1 7×16h kết hợp đồng bộ Google Drive trọn gói, mỗi khi đi công tác tôi có thể kết nối từ bất kỳ thiết bị nào và làm tiếp công việc ngay lập tức.\"",
+        "source": "Nút Singapore · Đã ẩn danh",
+        "plan": "5x Pro"
+      },
+      {
+        "name": "A***",
+        "role": "Giám đốc Kỹ thuật Thương mại Điện tử",
+        "quote": "\"Các kỹ sư chủ chốt của chúng tôi treo tác vụ refactor đa tác tử (multi-agent) và chạy bộ kiểm thử xuyên đêm, sáng hôm sau chỉ việc duyệt các PR sạch đẹp. Screen Sharing bản địa cực nét, còn hỗ trợ qua Telegram của Jason thì phản hồi gần như tức thì.\"",
+        "source": "Phản hồi qua Telegram",
+        "plan": "20x Flagship"
+      }
+    ],
+    "note": "* Nhằm bảo vệ nghiêm ngặt quyền riêng tư và an toàn dữ liệu khách hàng, toàn bộ đánh giá trên trang đều hiển thị bằng ảnh đại diện minh họa và tên viết tắt ẩn danh."
+  },
+  "pricing": {
+    "tag": "Bảng giá",
+    "h2": "Linh hoạt từ cá nhân đến doanh nghiệp.",
+    "sub_html": "Mở rộng linh hoạt từ không gian cá nhân đến cụm nhiều máy Mac chuyên dụng. <strong>Thanh toán theo năm chỉ tính phí 10 tháng, tặng ngay 2 tháng miễn phí</strong>.",
+    "jump_line": "Đường truyền riêng ↓",
+    "jump_ent": "Team & Business ↓",
+    "billing_aria": "Chọn chu kỳ thanh toán",
+    "billing_month": "Hàng tháng",
+    "billing_year": "Hàng năm",
+    "billing_save_badge": "Tặng 2 tháng",
+    "currency_aria": "Chọn loại tiền tệ",
+    "currencies": {
+      "AUD": {
+        "btn": "A$ AUD",
+        "name": "AUD"
+      },
+      "USD": {
+        "btn": "$ USD",
+        "name": "USD"
+      },
+      "EUR": {
+        "btn": "€ EUR",
+        "name": "EUR"
+      },
+      "NZD": {
+        "btn": "NZ$ NZD",
+        "name": "NZD"
+      },
+      "CAD": {
+        "btn": "C$ CAD",
+        "name": "CAD"
+      },
+      "SGD": {
+        "btn": "S$ SGD",
+        "name": "SGD"
+      },
+      "CNY": {
+        "btn": "¥ CNY",
+        "name": "CNY"
+      }
+    },
+    "solo_subscribe": "Đăng ký ngay",
+    "solo_consult": "Cần tư vấn? Gửi email →",
+    "solo": [
+      {
+        "tier_b": "1x",
+        "tier_span": "Tiêu chuẩn",
+        "desc": "Phù hợp cho trò chuyện hàng ngày, viết lách và lập trình nhẹ với Claude ổn định.",
+        "init_note": "Bao gồm môi trường Claude · khoảng A$5 / ngày",
+        "features_html": [
+          "Hạn mức sử dụng cơ bản",
+          "Cấu hình không gian làm việc chuyên biệt",
+          "Môi trường vật lý Mac mini",
+          "Quản lý trọn gói thanh toán thuê bao &amp; vận hành",
+          "Sẵn sàng cho Claude Code",
+          "Hỗ trợ chuyên biệt 1-kèm-1 <strong>7×8h</strong>",
+          "Tài khoản macOS riêng · Truy cập qua Apple Screen Sharing"
+        ],
+        "mailto_subject": "Tư vấn Zaokit ClaudeOps - 1x Tiêu chuẩn"
+      },
+      {
+        "badge": "Phổ biến nhất",
+        "tier_b": "5x",
+        "tier_span": "Pro",
+        "desc": "Dành cho lập trình viên và nhà sáng tạo sử dụng Claude Code cường độ cao mỗi ngày.",
+        "init_note": "Bao gồm môi trường Claude · hạn mức 5x, đơn giá ~78% so với 1x",
+        "features_html": [
+          "Gấp 5 lần hạn mức gói Tiêu chuẩn",
+          "Cấu hình không gian làm việc chuyên biệt",
+          "Môi trường vật lý Mac mini cấu hình cao",
+          "Quản lý trọn gói thanh toán thuê bao &amp; vận hành",
+          "Dư dả tài nguyên cho tác vụ Claude Code dài hơi",
+          "Hỗ trợ ưu tiên 1-kèm-1 <strong>7×16h</strong>",
+          "Tài khoản macOS riêng · Truy cập qua Apple Screen Sharing"
+        ],
+        "mailto_subject": "Tư vấn Zaokit ClaudeOps - 5x Pro"
+      },
+      {
+        "badge_promo": "Ưu đãi Cuối năm · Đến 31/12/2026",
+        "tier_b": "20x",
+        "tier_span": "Ultimate",
+        "desc": "Dành cho nhà phát triển chuyên sâu, founder và power user chạy đa tác tử suốt ngày đêm.",
+        "orig_title": "Giá niêm yết",
+        "init_note": "Giữ nguyên giá ưu đãi khi gia hạn · đơn giá chỉ ~35% so với 1x",
+        "features_html": [
+          "Gấp 20 lần hạn mức gói Tiêu chuẩn",
+          "Cấu hình không gian làm việc chuyên biệt",
+          "Mac Studio / Mac mini cấu hình cao · Tùy chọn nguyên máy riêng",
+          "Quản lý trọn gói thanh toán thuê bao &amp; vận hành",
+          "Chạy đa tác tử (multi-agent) và tác vụ song song",
+          "Kênh cố vấn riêng tư <strong>cao cấp nhất 7×24h</strong>",
+          "Tặng kèm kênh RustDesk tốc độ cao riêng",
+          "Tặng kèm 6 TB lưu trữ đám mây Google Drive"
+        ],
+        "mailto_subject": "Tư vấn Zaokit ClaudeOps - 20x Ultimate"
+      }
+    ],
+    "dedicated_line": {
+      "h3_main": "Đường Truyền Riêng Doanh Nghiệp ClaudeOps · Tăng Tốc Xuyên Biên Giới",
+      "h3_pill": "Miễn phí ở gói 20x / Team / Business",
+      "sub": "Tiện ích mở rộng tùy chọn cho thuê bao 1x & 5x: định tuyến lưu lượng qua trục xương sống BGP doanh nghiệp xuyên biên giới kết hợp tăng tốc BBR hai chiều 0% mất gói tin, mang lại trải nghiệm Screen Sharing & Claude Code siêu nhạy (thanh toán năm được tặng 2 tháng).",
+      "cards": [
+        {
+          "code": "Đường truyền riêng 1x",
+          "span": "Tăng tốc Tiêu chuẩn · Cho gói 1x Tiêu chuẩn",
+          "desc": "Trục BGP doanh nghiệp xuyên biên giới + trạm chuyển tiếp mã hóa độ trễ thấp tự vận hành + tối ưu BBR hai chiều, giữ cho các phiên Apple Screen Sharing, SSH & Claude Code hàng ngày luôn mượt mà ngay cả giờ cao điểm.",
+          "init_note": "Tăng tốc BGP 24/7 không mất gói · Quản lý theo gói chính",
+          "btn": "Thêm tuyến 1x →"
+        },
+        {
+          "code": "Đường truyền riêng 5x",
+          "span": "Tăng tốc Pro · Cho gói 5x Pro (đơn giá tiết kiệm hơn 20%)",
+          "desc": "Gấp 5× hạn mức băng thông ưu tiên + hàng đợi QoS BGP doanh nghiệp ưu tiên cao + cam kết 0% mất gói BBR hai chiều, thiết kế riêng cho phiên Claude Code thời gian thực nặng, đồng bộ repo lớn & màn hình từ xa FPS cao.",
+          "init_note": "Băng thông ưu tiên 5× · Hàng đợi QoS BGP cao cấp",
+          "btn": "Thêm tuyến 5x →"
+        }
+      ]
+    },
+    "enterprise": {
+      "divider": "Team & Business · Cụm Máy Nhiều Chỗ Ngồi Chuyên Dụng",
+      "switch_aria": "Chọn hạng chỗ ngồi cho nhóm",
+      "tier_pro": "Toàn bộ ghế Pro (1x)",
+      "tier_max": "Toàn bộ ghế Max (5x)",
+      "tier_max_badge": "Khuyên dùng",
+      "tier_ultra": "Toàn bộ ghế Ultra (20x)",
+      "toolbar_html": "Bắt đầu với các ghế đồng nhất Pro, Max hoặc Ultra — hoặc linh hoạt kết hợp bất cứ lúc nào nhờ <strong>gói nâng cấp từng ghế</strong> tự phục vụ bên dưới.",
+      "team": {
+        "init_badge": "5 × Ghế Max (5x) · Máy Chủ Riêng",
+        "sub": "5 Thành viên",
+        "desc": "Thiết kế cho nhóm startup, studio AI và nhóm nghiên cứu — một máy chủ vật lý Mac dành riêng cho đội ngũ của bạn với hóa đơn tập trung & quyền quản trị.",
+        "init_note": "Bao gồm 5 ghế Max (5x) biệt lập · Máy chủ Mac riêng & hóa đơn gộp",
+        "init_seat_li_html": "Bao gồm <strong>5 ghế kỹ thuật Max (5x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)",
+        "features_html": [
+          "<strong>Máy chủ Mac Studio / Mac mini cấu hình cao chuyên dụng</strong> dành riêng cho nhóm của bạn",
+          "Linh hoạt cấp phát lại ghế thuộc sở hữu tổ chức khi thay đổi nhân sự &amp; <strong>một hóa đơn tổng hợp duy nhất</strong>",
+          "Nâng cấp từng ghế lẻ lên Max (5x) hoặc Ultra (20x) theo nhu cầu bất kỳ lúc nào",
+          "Kênh nhóm cố vấn riêng cho đội ngũ <strong>7×24h</strong>",
+          "Tặng kèm kênh RustDesk tốc độ cao riêng cho nhóm"
+        ],
+        "init_storage_li": "Tặng kèm 12 TB lưu trữ đám mây nhóm (Google Drive / iCloud+)",
+        "btn": "Đăng ký gói Team",
+        "consult": "Cần thêm ghế hoặc cấu hình riêng? Liên hệ ngay →",
+        "mailto_subject": "Tư vấn Zaokit ClaudeOps - Gói Team"
+      },
+      "biz": {
+        "init_badge": "Enterprise · Cụm 10 × Ghế Max (5x)",
+        "sub": "10 Thành viên",
+        "desc": "Dành cho công ty công nghệ đang tăng trưởng, quỹ định lượng & khối kỹ thuật — cụm nhiều máy vật lý Mac chuyên dụng hỗ trợ triển khai kép đa vùng tại 9 quốc gia.",
+        "init_note": "Bao gồm 10 ghế Max (5x) biệt lập · Cụm nhiều máy Mac riêng & SLA VIP",
+        "init_seat_li_html": "Bao gồm <strong>10 ghế kỹ thuật Max (5x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)",
+        "features_html": [
+          "<strong>Cụm nhiều máy vật lý Mac Studio / Mac mini chuyên dụng</strong>",
+          "Hỗ trợ <strong>triển khai song song hai khu vực &amp; di chuyển nhanh trên 9 quốc gia</strong> + IP ISP bản địa tĩnh riêng",
+          "Hóa đơn thương mại tổng hợp &amp; Quản lý Thành công Khách hàng (CSM) chuyên trách",
+          "<strong>Kênh SLA VIP doanh nghiệp cao cấp 7×24h</strong> (ưu tiên vận hành &amp; tư vấn kiến trúc)",
+          "Tặng kèm tuyến relay RustDesk doanh nghiệp chuyên dụng"
+        ],
+        "init_storage_li": "Tặng kèm 30 TB lưu trữ đám mây doanh nghiệp (Google Drive / iCloud+)",
+        "btn": "Đăng ký gói Business",
+        "consult": "Từ 20+ ghế hoặc cụm máy riêng tùy chỉnh? Liên hệ bộ phận doanh nghiệp →",
+        "mailto_subject": "Tư vấn Zaokit ClaudeOps - Gói Business"
+      }
+    },
+    "seat_addons": {
+      "h3_main": "Tiện Ích Nâng Cấp Từng Ghế",
+      "h3_pill": "Tùy chỉnh 1–50 ghế khi thanh toán",
+      "sub": "Kết hợp linh hoạt các cấp độ trên mọi gói nền tảng Team hoặc Business đang hoạt động — nâng cấp đúng thành viên cần thiết theo nhu cầu (trả theo năm cũng được tặng 2 tháng).",
+      "cards": [
+        {
+          "from": "Pro 1x",
+          "to": "Max 5x",
+          "tag": "Nâng cấp",
+          "desc": "Nâng cấp bất kỳ ghế Pro (1x) nào trong nhóm lên Max (5x) cho nhu cầu lập trình Claude Code chuyên sâu hàng ngày.",
+          "btn": "Nâng cấp ghế →"
+        },
+        {
+          "from": "Max 5x",
+          "to": "Ultra 20x",
+          "tag": "Nâng cấp",
+          "desc": "Nâng cấp ghế của founder, CTO hoặc kiến trúc sư trưởng trên gói All-Max lên công suất đa tác tử Ultra 20x.",
+          "btn": "Nâng cấp ghế →"
+        },
+        {
+          "from": "Pro 1x",
+          "to": "Ultra 20x",
+          "tag": "Trực tiếp",
+          "desc": "Nâng thẳng bất kỳ ghế nào thuộc gói nền tảng All-Pro lên toàn bộ hạn mức flagship Ultra 20x.",
+          "btn": "Nâng cấp ghế →"
+        }
+      ]
+    },
+    "storage": {
+      "tag": "Lưu trữ đám mây · Google Drive & iCloud+",
+      "h2": "Lưu Trữ Đám Mây Quản Lý Trọn Gói Cho Tài Sản Số",
+      "sub_html": "Tùy chọn <strong>Google Drive (Google One)</strong> hoặc <strong>Apple iCloud+</strong> từ mức 2 TB đến 30 TB, được quản lý gia hạn tự động cùng đội ngũ cố vấn 1-kèm-1 7×16h đồng hành.",
+      "currency_aria": "Chọn tiền tệ (lưu trữ đám mây)",
+      "per_mo": "/ tháng",
+      "cards": [
+        {
+          "tier_b": "2 TB",
+          "tier_span": "Lưu trữ",
+          "desc": "Dung lượng rộng rãi cho ảnh chụp, video hàng ngày và sao lưu đa thiết bị.",
+          "note": "Google Drive hoặc iCloud+ · Gia hạn trọn gói",
+          "features": [
+            "Google Drive hoặc Apple iCloud+",
+            "Không gian riêng tư, quyền truy cập độc lập",
+            "Quản lý thanh toán · Hỗ trợ 1-kèm-1 7×16h"
+          ],
+          "btn": "Đăng ký 2 TB"
+        },
+        {
+          "badge": "Creator tin chọn",
+          "tier_b": "6 TB",
+          "tier_span": "Lưu trữ",
+          "desc": "Lý tưởng cho nhiếp ảnh gia, nhà sáng tạo nội dung và kho lưu trữ cá nhân.",
+          "note": "Google Drive hoặc iCloud+ · Gia hạn trọn gói",
+          "features": [
+            "Google Drive hoặc Apple iCloud+",
+            "Đồng bộ ảnh nguyên bản & video 4K",
+            "Quản lý thanh toán · Hỗ trợ 1-kèm-1 7×16h"
+          ],
+          "btn": "Đăng ký 6 TB"
+        },
+        {
+          "tier_b": "12 TB",
+          "tier_span": "Lưu trữ",
+          "desc": "Kho lưu trữ dung lượng lớn cho người dùng chuyên sâu và sao lưu nhiều thiết bị.",
+          "note": "Google Drive hoặc iCloud+ · Gia hạn trọn gói",
+          "features": [
+            "Google Drive hoặc Apple iCloud+",
+            "Lưu trữ dự án lớn & sao lưu toàn thiết bị",
+            "Quản lý thanh toán · Hỗ trợ 1-kèm-1 7×16h"
+          ],
+          "btn": "Đăng ký 12 TB"
+        },
+        {
+          "tier_b": "30 TB",
+          "tier_span": "Flagship",
+          "desc": "Kho đám mây chuẩn studio cho quay dựng RAW, tập dữ liệu AI và lưu trữ dài hạn.",
+          "note": "Google Drive hoặc iCloud+ · Vận hành VIP",
+          "features": [
+            "Google Drive 30TB hoặc kết hợp song song hai đám mây",
+            "Cộng tác nhóm toàn cầu tốc độ cao",
+            "Cố vấn riêng tư cao cấp 7×24h"
+          ],
+          "btn": "Đăng ký 30 TB"
+        }
+      ]
+    },
+    "stripe_trust_html": "Thanh toán bảo mật qua <strong>Stripe</strong> · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · Trả theo tháng hoặc năm (tặng 2 tháng), hủy bất kỳ lúc nào",
+    "foot_before_currency": "Tất cả mức giá đã bao gồm môi trường máy vật lý Mac cấu hình cao (tài khoản riêng ở gói 1x / 5x, tùy chọn nguyên máy riêng ở 20x, máy chủ riêng hoặc cụm nhiều máy Mac ở Team / Business), bộ công cụ AI cài đặt sẵn cùng dịch vụ quản lý thuê bao & thanh toán trọn gói, tính phí hàng tháng hoặc hàng năm (trả 10 tháng dùng 12 tháng) bằng ",
+    "foot_after_currency": ". Mức giá theo từng loại tiền tệ phản ánh mặt bằng thị trường sở tại. ",
+    "foot_promo": "Giá gạch ngang của gói 20x là giá niêm yết thông thường, sẽ áp dụng cho các đăng ký mới từ ngày 01/01/2027. ",
+    "foot_legal_prefix": "Bằng việc đăng ký, bạn đồng ý với ",
+    "foot_terms_link": "Điều khoản dịch vụ",
+    "foot_legal_mid": " và ",
+    "foot_refund_link": "Chính sách hoàn tiền",
+    "foot_legal_suffix": " của chúng tôi."
+  },
+  "process": {
+    "tag": "Quy trình",
+    "h2": "Bốn bước đơn giản. Bàn giao ngay trong ngày.",
+    "steps": [
+      {
+        "h3": "Chọn gói dịch vụ",
+        "p": "Chọn gói 1x, 5x hoặc 20x cùng loại tiền tệ phù hợp, hoặc gửi email cho chúng tôi để được tư vấn trước."
+      },
+      {
+        "h3": "Đăng ký qua Stripe",
+        "p": "Chọn khu vực mong muốn trên trang thanh toán bảo mật của Stripe và hoàn tất đăng ký theo tháng hoặc năm."
+      },
+      {
+        "h3": "Bàn giao trong ngày",
+        "p": "Ngay trong ngày, chúng tôi cấp phát máy Mac cấu hình cao cùng tài khoản riêng (nguyên máy riêng ở gói 20x) và gửi thông tin truy cập kèm hướng dẫn chi tiết."
+      },
+      {
+        "h3": "Vận hành liên tục",
+        "p": "Gia hạn định kỳ, bảo trì tài khoản và xử lý sự cố đều do đội ngũ chúng tôi đảm nhiệm."
+      }
+    ]
+  },
+  "faq": {
+    "tag": "FAQ",
+    "h2": "Câu hỏi thường gặp",
+    "items": [
+      {
+        "q": "Đơn vị nào vận hành Zaokit ClaudeOps?",
+        "a_html": "Zaokit ClaudeOps được vận hành bởi một công ty đăng ký hợp pháp tại Úc. Mọi giao dịch thanh toán đều được xử lý bảo mật qua Stripe và tự động xuất biên lai cùng hóa đơn chính thức."
+      },
+      {
+        "q": "Các gói 1x, 5x, 20x, Team và Business khác nhau như thế nào? Có ưu đãi thanh toán theo năm không?",
+        "a_html": "Cả năm cấp độ đều mở rộng linh hoạt theo số lượng chỗ ngồi, mức độ cách ly phần cứng, khung giờ hỗ trợ cố vấn và quyền lợi đi kèm — đồng thời <strong>thanh toán theo năm chỉ tính phí 10 tháng/năm (tặng 2 tháng miễn phí) cho tất cả các gói</strong>:<br>• <strong>1x Tiêu chuẩn</strong>: Hạn mức cá nhân cơ bản + môi trường Mac mini (tài khoản macOS riêng) + hỗ trợ 1-kèm-1 <strong>7×8h</strong>;<br>• <strong>5x Pro</strong>: Hạn mức cá nhân 5× + Mac mini cấu hình cao (tài khoản macOS riêng) + hỗ trợ ưu tiên 1-kèm-1 <strong>7×16h</strong>;<br>• <strong>20x Ultimate</strong>: Hạn mức cá nhân 20× + Mac Studio / Mac mini cấu hình cao (tùy chọn nguyên máy riêng) + cố vấn riêng tư <strong>7×24h</strong> + <strong>kênh RustDesk riêng</strong> + <strong>6 TB lưu trữ đám mây</strong>;<br>• <strong>Team (5 Thành viên · Máy Chủ Riêng)</strong>: Có các tùy chọn Toàn bộ Pro (1x), Toàn bộ Max (5x) hoặc Toàn bộ Ultra (20x) — máy vật lý Mac dành riêng cho nhóm, linh hoạt chuyển đổi người dùng, hóa đơn gộp, kênh RustDesk riêng, 6–12 TB lưu trữ đám mây &amp; cố vấn nhóm 7×24h;<br>• <strong>Business (10 Thành viên · Cụm Nhiều Máy Mac)</strong>: Có các tùy chọn Toàn bộ Pro (1x), Toàn bộ Max (5x) hoặc Toàn bộ Ultra (20x) — cụm nhiều máy Mac riêng (triển khai hai khu vực &amp; di chuyển nhanh tại 9 quốc gia), hóa đơn thương mại, relay RustDesk doanh nghiệp, 12–30 TB lưu trữ đám mây &amp; SLA VIP 7×24h;<br>• <strong>Tiện ích Nâng cấp Từng ghế</strong>: Khởi đầu với gói nền tảng All-Pro hoặc All-Max và tự nâng cấp các ghế cụ thể lên Max (5x) hoặc Ultra (20x) bất cứ lúc nào (điều chỉnh từ 1–50 ghế);<br>• <strong>Tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps</strong>: Tăng tốc xuyên biên giới qua BGP doanh nghiệp tùy chọn cho thuê bao 1x (+$5/tháng) và 5x (+$20/tháng) (đã miễn phí đi kèm ở gói 20x, Team &amp; Business)."
+      },
+      {
+        "q": "Tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps là gì? Ai nên sử dụng?",
+        "a_html": "<strong>Đường truyền riêng Doanh nghiệp ClaudeOps</strong> định tuyến lưu lượng màn hình từ xa và terminal của bạn qua trục xương sống BGP doanh nghiệp xuyên biên giới cao cấp kết hợp trạm chuyển tiếp tự vận hành và kiểm soát tắc nghẽn BBR hai chiều, loại bỏ hoàn toàn hiện tượng giật lag và mất gói tin trên mạng công cộng vào giờ cao điểm:<br>• <strong>Đường truyền riêng 1x ($5/tháng · $50/năm)</strong>: Dành cho thuê bao cá nhân 1x Tiêu chuẩn sử dụng Apple Screen Sharing, SSH và lập trình nhẹ hàng ngày;<br>• <strong>Đường truyền riêng 5x ($20/tháng · $200/năm)</strong>: Dành cho khối lượng công việc kỹ thuật 5x Pro với hạn mức băng thông ưu tiên gấp 5× và QoS BGP ưu tiên cao (đơn giá tiết kiệm hơn 20% so với 1x);<br>• <strong>Miễn phí trên gói Flagship &amp; Nhóm</strong>: <strong>Các gói 20x Ultimate, Team và Business đã được tích hợp sẵn đường truyền tăng tốc doanh nghiệp mà không tốn thêm chi phí</strong>."
+      },
+      {
+        "q": "Vì sao chi phí của Zaokit ClaudeOps cao hơn so với máy ảo đám mây thông thường hoặc tài khoản dùng chung?",
+        "a_html": "Bởi vì bạn đang chi trả cho <strong>hạ tầng vật lý tất định và dịch vụ vận hành kỹ thuật chuẩn chuyên gia</strong>—chứ không phải các máy ảo VPS giá rẻ hay tài khoản chia sẻ thiếu ổn định. Mỗi gói đăng ký đều bao hàm bốn khoản đầu tư hạ tầng thực tế:<br>• <strong>Phần cứng Mac vật lý cấu hình cao</strong>: Máy thật Mac Studio và Mac mini (không bao giờ dùng máy ảo hóa đám mây), đảm bảo hiệu năng tính toán bền bỉ và độ tin cậy 24/7—cách ly nguyên máy hoàn toàn từ gói 20x+;<br>• <strong>Băng thông bản địa đối xứng 200Mbps–500Mbps+</strong>: Mạng băng thông rộng ISP bản địa tại 9 quốc gia với tốc độ tải lên/tải xuống đối xứng dồi dào, giữ cho Screen Sharing luôn sắc nét và phản hồi tức thì thay vì nghẽn mạng trên đường truyền dùng chung 10–30Mbps;<br>• <strong>Đường trục BGP Doanh nghiệp</strong>: Hệ thống relay tốc độ cao tự vận hành trên trục BGP doanh nghiệp cao cấp HK/APAC cùng tối ưu BBR hai chiều, đưa tỷ lệ mất gói xuyên biên giới về 0%;<br>• <strong>Trọn vẹn hạn mức chính thức + Cố vấn 7×16 / 7×24</strong>: Đầy đủ hạn mức thuê bao chính thức, thanh toán trọn gói, đồng bộ iCloud/Google Drive và hỗ trợ kỹ thuật 1-kèm-1."
+      },
+      {
+        "q": "Tài khoản riêng so với nguyên máy chuyên dụng: tại sao gói 1x / 5x chỉ hỗ trợ Apple Screen Sharing?",
+        "a_html": "• <strong>Cách ly tài khoản riêng biệt (1x / 5x)</strong>: một số ít người dùng cùng chia sẻ một máy Mac cấu hình cao, nhưng mỗi người có tài khoản macOS, tệp tin và quyền hạn độc lập, không ai có thể xem dữ liệu của người khác. Để bảo vệ tuyệt đối quyền riêng tư cho từng người dùng, kết nối được giới hạn qua <strong>Apple Screen Sharing</strong> nhằm tạo phiên màn hình tách biệt hoàn toàn cho mỗi tài khoản.<br>• <strong>Nguyên máy chuyên dụng (có trên gói 20x)</strong>: toàn bộ chiếc Mac vật lý chỉ phục vụ duy nhất bạn. Phần cứng, hệ điều hành và mạng thuộc toàn quyền sử dụng của bạn. Tự do cài đặt mọi phần mềm, thay đổi cấu hình hệ thống và dùng <strong>bất kỳ công cụ điều khiển từ xa nào</strong>: Apple Screen Sharing, VNC bên thứ ba như RealVNC / TigerVNC, hoặc kênh RustDesk tốc độ cao tự vận hành của chúng tôi (miễn phí ở gói 20x).<br><strong>Vì sao không bật công cụ bên thứ ba trên máy dùng chung?</strong> RustDesk và đa số phần mềm VNC bên thứ ba ghi nhận phiên màn hình chính của máy Mac; trên máy nhiều người dùng, điều này có thể khiến người khác nhìn thấy hoặc điều khiển nhầm màn hình của bạn. Do đó chúng tôi chỉ kích hoạt chúng ở chế độ nguyên máy riêng như một lớp bảo vệ quyền riêng tư chủ động."
+      },
+      {
+        "q": "Tôi nên chọn gói nào cho phù hợp?",
+        "a_html": "Hãy chọn gói 1x cho nhu cầu trò chuyện và viết lách hàng ngày, gói 5x nếu bạn lập trình với Claude Code mỗi ngày, và gói 20x nếu cần chạy đa tác tử, sử dụng cường độ cao suốt ngày đêm hoặc muốn sở hữu nguyên máy riêng kèm RustDesk và các công cụ điều khiển từ xa tùy ý. Nếu còn phân vân, bạn có thể bắt đầu từ gói thấp hơn rồi nâng cấp bất cứ lúc nào."
+      },
+      {
+        "q": "\"Môi trường ổn định, tất định\" cụ thể mang lại lợi ích gì trong thực tế?",
+        "a_html": "Đó là sự kết hợp giữa không gian làm việc biệt lập của riêng bạn + một máy trạm vật lý Mac cấu hình cao cố định + dịch vụ quản lý thanh toán, gia hạn và vận hành kỹ thuật hàng ngày chuyên biệt. Quy trình vận hành chuẩn hóa giúp loại bỏ tình trạng rớt mạng bất ngờ, xung đột cấu hình hay lỗi gia hạn thẻ để luồng công việc của bạn luôn thông suốt."
+      },
+      {
+        "q": "Trong thực tế tôi sẽ sử dụng như thế nào? Điều khiển máy Mac từ xa hay làm việc từ máy cục bộ?",
+        "a_html": "<strong>Cả hai cách đều mượt mà. Bạn có thể chọn cách thuận tiện nhất:</strong><br>1. <strong>Màn hình điều khiển từ xa</strong>: ở gói 1x / 5x, đăng nhập vào tài khoản riêng qua macOS Screen Sharing—cách ly an toàn và sẵn sàng dùng ngay. Ở gói 20x bật chế độ nguyên máy riêng, bạn còn có thể dùng VNC bên thứ ba như RealVNC / TigerVNC hoặc <strong>kênh RustDesk tốc độ cao tự vận hành (miễn phí ở gói 20x)</strong> để có độ trễ thấp hơn nữa. Dù theo cách nào, bạn đều có trọn vẹn giao diện macOS cùng terminal để các tác vụ dài chạy bền bỉ.<br>2. <strong>Tích hợp liền mạch với quy trình cục bộ</strong>: kết nối trực tiếp từ bộ công cụ lập trình trên máy cá nhân tới môi trường phát triển từ xa mà không tốn công cài đặt hay bảo trì môi trường cục bộ. Chiếc Mac từ xa đóng vai trò là máy chủ tính toán chuyên dụng phía sau cho bạn."
+      },
+      {
+        "q": "Mã nguồn và dữ liệu của tôi được bảo mật và giữ riêng tư ra sao?",
+        "a_html": "Ở gói 1x / 5x, mỗi người dùng có một tài khoản macOS riêng với tệp tin, phân quyền và phiên làm việc tách biệt, chỉ truy cập qua Apple Screen Sharing nên không ai khác có thể thấy màn hình của bạn. Ở gói 20x, bạn có thể bật chế độ nguyên máy riêng: toàn bộ chiếc Mac Studio hoặc Mac mini cấu hình cao chỉ phục vụ mình bạn, cách ly ngay từ phần cứng. Lịch sử phiên, mã nguồn và biến môi trường đều nằm trong tài khoản hoặc máy riêng của bạn. Bạn tự đặt mật khẩu và mã hóa, còn đội ngũ chúng tôi không chủ động truy cập dữ liệu trừ khi bảo trì, xử lý sự cố bảo mật hoặc khắc phục lỗi theo sự cho phép của bạn."
+      },
+      {
+        "q": "Máy chủ vật lý và hạ tầng mạng được đặt ở đâu?",
+        "a_html": "Hệ thống máy vật lý Mac Studio và Mac mini cấu hình cao của chúng tôi đặt tại <strong>Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand và Canada</strong>, kết nối trực tiếp qua <strong>mạng băng thông rộng ISP bản địa (không dùng trung tâm dữ liệu đám mây công cộng dùng chung)</strong> nhằm đạt độ tin cậy tối đa. Bạn chỉ cần chọn khu vực ưu tiên khi thanh toán, chúng tôi sẽ cấp máy và tài khoản cố định lâu dài cho bạn (nguyên máy riêng ở gói 20x)."
+      },
+      {
+        "q": "Gói lưu trữ đám mây Google Drive & iCloud+ hoạt động như thế nào?",
+        "a_html": "Chúng tôi cung cấp các mức dung lượng 2 TB ($8.99/tháng), 6 TB ($28.99/tháng), 12 TB ($58.99/tháng) và 30 TB ($148.99/tháng). Khi thanh toán trên Stripe, bạn chỉ cần chọn <strong>Apple iCloud+</strong> hoặc <strong>Google Drive (Google One)</strong> và ghi chú email tài khoản của mình; đội ngũ cố vấn 1-kèm-1 7×16h sẽ kích hoạt và quản lý gia hạn xuyên suốt cho bạn."
+      },
+      {
+        "q": "Tôi có thể nâng cấp hoặc hạ cấp gói cước không?",
+        "a_html": "Hoàn toàn được. Thay đổi sẽ áp dụng từ chu kỳ thanh toán tiếp theo. Nếu bạn cần nâng cấp ngay lập tức, hãy liên hệ với chúng tôi để chỉ thanh toán phần chênh lệch."
+      },
+      {
+        "q": "Nếu gặp sự cố trong quá trình sử dụng thì sao?",
+        "a_html": "Hãy liên hệ ngay với chúng tôi. Chúng tôi luôn ưu tiên xử lý sự cố nhanh nhất có thể để công việc của bạn sớm trở lại bình thường."
+      },
+      {
+        "q": "Bạn chấp nhận những phương thức thanh toán nào? Có xuất hóa đơn không?",
+        "a_html": "Chúng tôi nhận thanh toán đăng ký trực tuyến qua Stripe, bao gồm Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay và Link, hỗ trợ các đồng tiền AUD, USD, EUR, NZD, CAD, SGD hoặc CNY. Chủ thẻ UnionPay có thể chọn CNY để giao dịch thuận lợi hơn. Hệ thống Stripe tự động gửi biên lai và hóa đơn chính thức sau mỗi lần thanh toán. Với các gói doanh nghiệp nhiều tài khoản, vui lòng gửi email cho chúng tôi."
+      },
+      {
+        "q": "Làm thế nào để đóng góp máy cá nhân hoặc tham gia mạng lưới tính toán toàn cầu để vừa có thêm thu nhập vừa thắp sáng thêm nhiều thành phố?",
+        "a_html": "Chúng tôi nồng nhiệt chào đón các đối tác trên toàn thế giới tham gia mạng lưới tính toán bản địa nhằm hướng tới mục tiêu phục vụ trọn vẹn 8 tỷ người! <strong>Bạn có thể đóng góp thiết bị của mình và chia sẻ tài nguyên — vừa tạo nguồn thu nhập cho bản thân, vừa thắp sáng cơ hội hiện thực hóa ước mơ cho người khác!</strong> Dù bạn đang có máy Mac vật lý nhàn rỗi hay cấu hình cao, đường truyền băng thông bản địa chất lượng tốt tại thành phố đang sống, hoặc kết nối cộng đồng nhà phát triển &amp; sáng tạo tại địa phương, hãy gửi email bất cứ lúc nào tới <a href=\"mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network\" style=\"color:var(--primary-strong);font-weight:600\">jason2023zhang@gmail.com</a> kèm thông tin thành phố và phần cứng/ISP của bạn—chào mừng bạn đồng hành!"
+      }
+    ]
+  },
+  "partner": {
+    "eyebrow": "GLOBAL COMPUTE PARTNER · Đồng Kiến Tạo Mạng Lưới Tính Toán Toàn Cầu",
+    "h2_html": "Tham Gia Mạng Lưới Tính Toán Toàn Cầu —<br><em class=\"grad\">Thực Sự Phục Vụ Trọn Vẹn 8 Tỷ Người!</em>",
+    "p_html": "Khởi đầu từ hơn 13 thành phố đã thắp sáng tại 9 quốc gia, chúng tôi đang đưa năng lực tính toán bản địa thuần khiết và năng suất AI tiên phong tới mọi ngóc ngách trên thế giới. <strong>Bạn có thể đóng góp thiết bị của mình và chia sẻ tài nguyên — vừa tạo thu nhập bền vững, vừa thắp sáng cơ hội ước mơ cho những người khác!</strong> Dù bạn ở bất cứ đâu, chúng tôi luôn chào đón — hãy gửi email trực tiếp để cùng nhau thắp sáng thành phố tiếp theo.",
+    "chips": [
+      "✦ Đóng Góp Máy Mac · Chia Sẻ & Tạo Thu Nhập",
+      "✦ Chia Sẻ Tài Nguyên Băng Thông Bản Địa",
+      "✦ Lưu Trữ Cụm Máy & Đối Tác Khu Vực"
+    ],
+    "btn": "Đóng Góp Máy Mac / Gửi Email: jason2023zhang@gmail.com →"
+  },
+  "cta": {
+    "h2": "AI Xóa Nhòa Mọi Biên Giới. Bắt Đầu Ngay Hôm Nay.",
+    "p": "Gia nhập cộng đồng các nhà kiến tạo tại những thành phố toàn cầu của chúng tôi — đăng ký qua Stripe để nhận bàn giao ngay trong ngày cùng năng suất AI tiên tiến nhất và trải nghiệm đỉnh cao.",
+    "btn_primary": "Chọn gói ngay",
+    "btn_secondary": "Email: jason2023zhang@gmail.com",
+    "tg_qr_aria": "Mở Telegram @letcode2020",
+    "tg_qr_alt": "Mã QR Telegram @letcode2020",
+    "tg_h3": "Trò chuyện qua Telegram",
+    "tg_p": "Quét mã hoặc chạm để kết nối với chúng tôi khi cần tư vấn trước mua, hỗ trợ kỹ thuật và cập nhật tin tức AI."
+  },
+  "footer": {
+    "brand": "Zaokit ClaudeOps",
+    "entity": "Vận hành bởi công ty đăng ký tại Úc · Hỗ trợ 19 ngôn ngữ toàn cầu",
+    "contact_label": "Liên hệ: ",
+    "alt_label": "Dự phòng: ",
+    "rights": "Bảo lưu mọi quyền.",
+    "products_h4": "Sản phẩm của Zaokit",
+    "follow_h4": "Theo dõi chúng tôi",
+    "terms": "Điều khoản dịch vụ",
+    "refund": "Chính sách hoàn tiền",
+    "privacy": "Chính sách quyền riêng tư",
+    "disclaimer": "Tuyên bố miễn trừ trách nhiệm: Zaokit là đơn vị tư vấn kỹ thuật AI và cung cấp máy trạm đám mây độc lập, không liên kết, không được chứng thực hay tài trợ bởi Anthropic PBC, Apple Inc. hoặc Google LLC. Claude, Claude Code, Mac, iCloud và Google Drive là các nhãn hiệu thuộc về chủ sở hữu tương ứng."
+  },
+  "js": {
+    "per_month": "/ tháng",
+    "per_year": "/ năm",
+    "per_seat_mo": "/ ghế / tháng",
+    "per_seat_yr": "/ ghế / năm",
+    "per_mo_short": "/ tháng",
+    "per_yr_short": "/ năm",
+    "title_12mo": "12 tháng thanh toán theo từng tháng",
+    "title_reg_mo": "Giá hàng tháng thông thường",
+    "note_annual": "Thanh toán năm chỉ tính 10 tháng · ~{sym}{eq}/tháng, tiết kiệm {sym}{save}",
+    "note_1x_mo": "Bao gồm môi trường Claude · khoảng {sym}{day} / ngày",
+    "note_20x_promo": "Giữ nguyên giá ưu đãi khi gia hạn · đơn giá ~{ratio}% so với 1x",
+    "note_mult_mo": "Bao gồm môi trường Claude · hạn mức {mult}x, đơn giá ~{ratio}% so với 1x",
+    "ent_team_mo": "Bao gồm 5 ghế {label} biệt lập · Máy chủ Mac riêng & hóa đơn gộp",
+    "ent_biz_mo": "Bao gồm 10 ghế {label} biệt lập · Cụm nhiều máy Mac riêng & SLA VIP",
+    "line_0_mo": "Tăng tốc BGP 24/7 không mất gói · Quản lý theo gói chính",
+    "line_1_mo": "Băng thông ưu tiên 5× · Hàng đợi QoS BGP cao cấp",
+    "ent_copy": {
+      "pro": {
+        "label": "Pro (1x)",
+        "teamBadge": "5 × Ghế Pro (1x) · Máy Chủ Riêng",
+        "bizBadge": "Enterprise · Cụm 10 × Ghế Pro (1x)",
+        "teamSeatLi": "Bao gồm <strong>5 ghế thành viên tiêu chuẩn Pro (1x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)",
+        "bizSeatLi": "Bao gồm <strong>10 ghế thành viên tiêu chuẩn Pro (1x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)",
+        "teamStorage": "Tặng kèm 6 TB lưu trữ đám mây nhóm (Google Drive / iCloud+)",
+        "bizStorage": "Tặng kèm 12 TB lưu trữ đám mây doanh nghiệp (Google Drive / iCloud+)"
+      },
+      "max": {
+        "label": "Max (5x)",
+        "teamBadge": "5 × Ghế Max (5x) · Máy Chủ Riêng",
+        "bizBadge": "Enterprise · Cụm 10 × Ghế Max (5x)",
+        "teamSeatLi": "Bao gồm <strong>5 ghế kỹ thuật Max (5x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)",
+        "bizSeatLi": "Bao gồm <strong>10 ghế kỹ thuật Max (5x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)",
+        "teamStorage": "Tặng kèm 12 TB lưu trữ đám mây nhóm (Google Drive / iCloud+)",
+        "bizStorage": "Tặng kèm 30 TB lưu trữ đám mây doanh nghiệp (Google Drive / iCloud+)"
+      },
+      "ultra": {
+        "label": "Ultra (20x)",
+        "teamBadge": "5 × Ghế Ultra (20x) · Studio Chuyên Dụng",
+        "bizBadge": "Enterprise · Cụm 10 × Ghế Ultra (20x)",
+        "teamSeatLi": "Bao gồm <strong>5 ghế flagship Ultra (20x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)",
+        "bizSeatLi": "Bao gồm <strong>10 ghế flagship Ultra (20x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)",
+        "teamStorage": "Tặng kèm 12 TB lưu trữ đám mây nhóm (Google Drive / iCloud+)",
+        "bizStorage": "Tặng kèm 30 TB lưu trữ đám mây doanh nghiệp (Google Drive / iCloud+)"
+      }
+    },
+    "toast_copied": "Đã sao chép email: {email}. Đang mở ứng dụng thư của bạn…",
+    "toast_fallback": "Vui lòng gửi email cho chúng tôi qua {email}"
+  },
+  "legal_common": {
+    "back_home": "← Quay lại trang chủ",
+    "footer_copy": "© Zaokit AI · Vận hành bởi công ty đăng ký tại Úc"
+  },
+  "privacy": {
+    "title": "Chính sách quyền riêng tư | Zaokit ClaudeOps",
+    "description": "Chính sách quyền riêng tư của Zaokit ClaudeOps",
+    "h1": "Chính sách quyền riêng tư",
+    "meta": "Ngày có hiệu lực: 3 tháng 11 năm 2026. Nếu có sự khác biệt giữa các phiên bản ngôn ngữ, phiên bản tiếng Anh sẽ được ưu tiên áp dụng.",
+    "lead_html": "Chính sách này giải thích cách chúng tôi thu thập, sử dụng, lưu trữ và bảo vệ thông tin cá nhân của bạn khi cung cấp dịch vụ Zaokit ClaudeOps. Chúng tôi xử lý thông tin cá nhân tuân thủ Đạo luật Quyền riêng tư Úc năm 1988 (Australian Privacy Act 1988) và Các Nguyên tắc Quyền riêng tư của Úc (APPs).",
+    "sections": [
+      {
+        "h2": "1. Thông tin chúng tôi thu thập",
+        "body_html": "<ul><li><strong>Thông tin liên hệ và tài khoản</strong>: họ tên, địa chỉ email và khu vực ưu tiên bạn chọn khi thanh toán.</li><li><strong>Thông tin thanh toán</strong>: được xử lý trực tiếp bởi Stripe. Chúng tôi không bao giờ nhìn thấy hay lưu trữ số thẻ đầy đủ của bạn; chúng tôi chỉ xem được lịch sử giao dịch, biên lai và trạng thái thanh toán.</li><li><strong>Thông tin dịch vụ</strong>: địa chỉ email tài khoản bên thứ ba mà bạn cung cấp để thiết lập Dịch vụ (chẳng hạn tài khoản Claude, Google hoặc Apple) và thông tin đăng nhập chúng tôi cấp cho bạn.</li><li><strong>Nội dung trao đổi</strong>: tin nhắn bạn gửi cho chúng tôi qua email, Telegram hoặc các kênh liên lạc khác.</li><li><strong>Dữ liệu trang web</strong>: thiết bị, trình duyệt, địa chỉ IP và các trang đã truy cập, được thu thập thông qua các công cụ phân tích như Google Analytics và Umami.</li></ul>"
+      },
+      {
+        "h2": "2. Cách chúng tôi sử dụng thông tin",
+        "body_html": "<p>Chúng tôi chỉ sử dụng các thông tin này để thiết lập và cung cấp Dịch vụ, xử lý thanh toán và gia hạn, hỗ trợ kỹ thuật, bảo vệ an toàn hệ thống và ngăn chặn lạm dụng, thực hiện nghĩa vụ pháp lý cũng như cải thiện trang web và Dịch vụ. Chúng tôi tuyệt đối không bán thông tin cá nhân của bạn.</p>"
+      },
+      {
+        "h2": "3. Dữ liệu trong môi trường làm việc của bạn",
+        "body_html": "<p>Các tệp tin, mã nguồn và phiên làm việc bạn lưu trữ trong môi trường của mình thuộc quyền sở hữu của bạn. Chúng tôi không chủ động truy cập vào dữ liệu đó và chỉ thực hiện thao tác cần thiết nhằm bảo trì hệ thống, xử lý sự cố bảo mật, tuân thủ yêu cầu pháp lý hoặc hỗ trợ khắc phục sự cố khi có sự cho phép của bạn.</p>"
+      },
+      {
+        "h2": "4. Chia sẻ thông tin",
+        "body_html": "<p>Chúng tôi chỉ chia sẻ những thông tin cần thiết với:</p><ul><li>các nhà cung cấp dịch vụ hỗ trợ vận hành Dịch vụ như cổng thanh toán (Stripe), công cụ phân tích trang web cùng các đối tác hạ tầng và mạng;</li><li>các nhà cung cấp bên thứ ba trong phạm vi cần thiết để quản lý thuê bao thay mặt bạn;</li><li>cơ quan chức năng có thẩm quyền khi pháp luật yêu cầu hoặc theo yêu cầu hợp pháp của cơ quan nhà nước.</li></ul>"
+      },
+      {
+        "h2": "5. Xử lý dữ liệu xuyên biên giới",
+        "body_html": "<p>Hệ thống môi trường của chúng tôi được đặt tại Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand và Canada, đồng thời các đối tác như Stripe có thể xử lý dữ liệu tại những quốc gia khác. Vì vậy, thông tin của bạn có thể được lưu trữ hoặc xử lý bên ngoài quốc gia bạn cư trú. Chúng tôi luôn áp dụng các biện pháp hợp lý để bảo vệ dữ liệu đó.</p>"
+      },
+      {
+        "h2": "6. Thời gian lưu trữ",
+        "body_html": "<ul><li>Thông tin liên hệ, tài khoản và thanh toán: được lưu giữ trong suốt thời gian bạn sử dụng Dịch vụ và sau đó theo đúng thời hạn mà luật thuế, kế toán hoặc quy định pháp luật liên quan yêu cầu.</li><li>Dữ liệu trong môi trường của bạn: có thể bị xóa sau 7 ngày kể từ khi Dịch vụ kết thúc.</li></ul>"
+      },
+      {
+        "h2": "7. Bảo mật",
+        "body_html": "<p>Chúng tôi áp dụng các biện pháp kỹ thuật và tổ chức hợp lý để bảo vệ thông tin của bạn, bao gồm kiểm soát truy cập và cách ly tài khoản. Tuy nhiên, không có phương thức truyền tải qua internet hay lưu trữ điện tử nào an toàn tuyệt đối 100%, vì vậy chúng tôi không thể cam kết thông tin sẽ không bao giờ bị truy cập trái phép.</p>"
+      },
+      {
+        "h2": "8. Cookie và công cụ phân tích",
+        "body_html": "<p>Trang web của chúng tôi sử dụng công cụ phân tích để hiểu rõ cách người dùng tương tác, và các công cụ này có thể dùng cookie hoặc công nghệ tương tự. Bạn có thể tắt cookie trong phần cài đặt trình duyệt mà vẫn truy cập trang web bình thường.</p>"
+      },
+      {
+        "h2": "9. Quyền của bạn",
+        "body_html": "<p>Bạn có thể yêu cầu chúng tôi cho phép truy cập, chỉnh sửa hoặc xóa thông tin cá nhân của bạn, ngoại trừ trường hợp chúng tôi phải lưu giữ theo quy định pháp luật. Nếu bạn có thắc mắc hay khiếu nại về cách chúng tôi xử lý dữ liệu, vui lòng liên hệ với chúng tôi trước. Trường hợp chưa được giải quyết thỏa đáng, bạn có thể gửi khiếu nại tới Văn phòng Ủy viên Thông tin Úc (OAIC).</p>"
+      },
+      {
+        "h2": "10. Thay đổi chính sách",
+        "body_html": "<p>Chúng tôi có thể cập nhật chính sách này theo từng thời điểm và sẽ đăng tải phiên bản mới nhất trên trang này. Đối với các thay đổi quan trọng, chúng tôi sẽ thông báo trước qua email hoặc trên trang web.</p>"
+      },
+      {
+        "h2": "11. Liên hệ",
+        "body_html": "<p>Mọi câu hỏi liên quan đến quyền riêng tư, vui lòng gửi email về <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> (email dự phòng: <a href=\"mailto:support@zaokit.ai\">support@zaokit.ai</a>).</p>"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Điều khoản dịch vụ | Zaokit ClaudeOps",
+    "description": "Điều khoản dịch vụ của Zaokit ClaudeOps",
+    "h1": "Điều khoản dịch vụ",
+    "meta": "Ngày có hiệu lực: 3 tháng 11 năm 2026. Nếu có sự khác biệt giữa các phiên bản ngôn ngữ, phiên bản tiếng Anh sẽ được ưu tiên áp dụng.",
+    "lead_html": "Chào mừng bạn đến với Zaokit ClaudeOps (\"chúng tôi\"). Khi đăng ký hoặc sử dụng dịch vụ, bạn đồng ý tuân thủ các Điều khoản này, <a href=\"refund.html\">Chính sách hoàn tiền</a> và <a href=\"privacy.html\">Chính sách quyền riêng tư</a> của chúng tôi. Nếu không đồng ý, vui lòng không đăng ký sử dụng.",
+    "sections": [
+      {
+        "h2": "1. Dịch vụ cung cấp",
+        "body_html": "<p>Chúng tôi cung cấp môi trường máy Mac từ xa được quản lý, cấu hình không gian làm việc AI, quản lý thanh toán thuê bao và tư vấn kỹ thuật (gọi chung là \"Dịch vụ\"). Chúng tôi là nhà cung cấp độc lập và không liên kết, không được ủy quyền hay hợp tác chính thức với Anthropic PBC, Apple Inc. hoặc Google LLC.</p>"
+      },
+      {
+        "h2": "2. Dịch vụ của bên thứ ba",
+        "body_html": "<ol><li>Các dịch vụ bên thứ ba như Claude, Google Drive và iCloud+ do chính các đơn vị sở hữu tương ứng cung cấp theo điều khoản và chính sách riêng của họ. Các tài khoản này được đăng ký dưới tên bạn và thuộc về bạn. Bạn có trách nhiệm tuân thủ điều khoản, chính sách sử dụng cũng như quy định khu vực của từng nhà cung cấp, đồng thời đảm bảo việc sử dụng là hợp pháp tại nơi bạn sinh sống.</li><li>Chúng tôi chỉ hỗ trợ quản lý đăng ký và gia hạn thay mặt bạn. Chúng tôi không đưa ra cam kết hay bảo đảm nào về tính sẵn sàng, tính năng, giới hạn sử dụng, phiên bản mô hình hoặc thay đổi chính sách của bất kỳ dịch vụ bên thứ ba nào. Các hệ số gói \"1x / 5x / 20x\" và cấu hình ghế Team / Business chỉ mang tính chất mô tả tham khảo; hạn mức thực tế tuân theo quy định hiện hành của nhà cung cấp tại từng thời điểm.</li><li>Trường hợp nhà cung cấp bên thứ ba giới hạn, tạm ngưng hoặc chấm dứt tài khoản của bạn, hay thay đổi sản phẩm, hạn mức hoặc giá cước, chúng tôi sẽ nỗ lực hợp lý để hỗ trợ bạn nhưng không chịu trách nhiệm pháp lý đối với hệ quả phát sinh.</li></ol>"
+      },
+      {
+        "h2": "3. Môi trường vận hành",
+        "body_html": "<ol><li><strong>Gói 1x / 5x (máy nhiều người dùng)</strong>: mỗi người dùng có một tài khoản macOS tách biệt và chỉ được phép truy cập thông qua Apple Screen Sharing. Bạn tuyệt đối không được tìm cách truy cập tài khoản hoặc dữ liệu của người dùng khác, cũng như không được cài đặt phần mềm điều khiển từ xa, quay màn hình, proxy mạng hoặc phần mềm khác có thể ảnh hưởng đến người dùng chung máy.</li><li><strong>Gói 20x / Team / Business (nguyên máy riêng hoặc cụm máy)</strong>: gói 20x có tùy chọn nguyên máy riêng; gói Team và Business cung cấp phần cứng vật lý riêng hoặc cụm nhiều máy Mac dành độc quyền cho tổ chức của bạn với tài khoản macOS riêng cho từng thành viên. Bạn có thể cài đặt phần mềm và tùy chỉnh hệ thống trong phạm vi hợp lý, đồng thời tự chịu trách nhiệm về tính ổn định và an toàn bảo mật phát sinh từ các thay đổi đó.</li><li>Dòng máy, thông số phần cứng và khu vực được phân bổ dựa trên tài nguyên sẵn có. Chúng tôi sẽ cố gắng đáp ứng khu vực ưu tiên bạn chọn lúc thanh toán nhưng không thể bảo đảm tuyệt đối trong mọi trường hợp. Chúng tôi có thể di chuyển môi trường của bạn để bảo trì, xử lý sự cố hoặc cân bằng tải và sẽ cố gắng báo trước trừ tình huống khẩn cấp.</li></ol>"
+      },
+      {
+        "h2": "4. Quy định sử dụng hợp lệ",
+        "body_html": "<p>Bạn không được sử dụng Dịch vụ để:</p><ul><li>thực hiện hành vi vi phạm pháp luật hoặc xâm phạm quyền sở hữu trí tuệ, quyền riêng tư hay quyền hợp pháp của bên thứ ba;</li><li>phát tán thư rác (spam), tấn công mạng, quét cổng (port scan) hoặc phát tán mã độc;</li><li>khai thác tiền mã hóa hoặc chạy các tác vụ tính toán tải nặng liên tục không liên quan đến Dịch vụ;</li><li>bán lại, cho thuê lại Dịch vụ hoặc chia sẻ thông tin đăng nhập của bạn cho người khác;</li><li>vi phạm điều khoản hoặc chính sách sử dụng của bất kỳ nhà cung cấp bên thứ ba nào.</li></ul><p>Nếu bạn vi phạm các quy định trên, chúng tôi có quyền tạm ngưng hoặc chấm dứt Dịch vụ ngay lập tức mà không hoàn tiền.</p>"
+      },
+      {
+        "h2": "5. Hỗ trợ kỹ thuật",
+        "body_html": "<p>Khung giờ hỗ trợ hiển thị ở từng gói (7×8h / 7×16h / 7×24h) thể hiện thời gian chúng tôi tiếp nhận và xử lý yêu cầu. Chúng tôi luôn nỗ lực phản hồi sớm nhất có thể nhưng không cam kết cứng về thời gian phản hồi hay thời gian khắc phục cụ thể.</p>"
+      },
+      {
+        "h2": "6. Tính sẵn sàng và bảo trì",
+        "body_html": "<p>Dịch vụ được cung cấp trên cơ sở \"nguyên trạng\" (\"as is\") và \"theo khả năng đáp ứng\" (\"as available\"). Chúng tôi nỗ lực hợp lý để duy trì sự ổn định nhưng không bảo đảm Dịch vụ sẽ không bao giờ gián đoạn hoặc không có lỗi. Chúng tôi sẽ cố gắng thông báo trước lịch bảo trì định kỳ. Các gián đoạn do mất điện, sự cố nhà mạng viễn thông, ngừng hoạt động từ phía bên thứ ba, thiên tai hoặc sự kiện bất khả kháng ngoài tầm kiểm soát hợp lý của chúng tôi không bị xem là vi phạm nghĩa vụ từ phía chúng tôi.</p>"
+      },
+      {
+        "h2": "7. Dữ liệu và sao lưu",
+        "body_html": "<ol><li>Bạn chịu trách nhiệm đối với dữ liệu trong tài khoản của mình và nên sao lưu các dữ liệu quan trọng định kỳ. Chúng tôi không chịu trách nhiệm về mất mát dữ liệu trừ khi pháp luật có quy định bắt buộc.</li><li>Chúng tôi không chủ động truy cập nội dung trong tài khoản của bạn và chỉ can thiệp khi thật sự cần thiết cho việc bảo trì hệ thống, xử lý sự cố bảo mật, tuân thủ pháp luật hoặc khắc phục lỗi được bạn ủy quyền.</li><li>Sau khi Dịch vụ chấm dứt, chúng tôi có thể xóa tài khoản và dữ liệu của bạn sau 7 ngày. Vui lòng chủ động sao lưu và xuất dữ liệu cần thiết trước thời hạn này.</li></ol>"
+      },
+      {
+        "h2": "8. Phí dịch vụ và gia hạn",
+        "body_html": "<ol><li>Dịch vụ có thể thanh toán theo tháng hoặc theo năm và tự động gia hạn qua Stripe theo mức giá cùng chu kỳ hiển thị lúc thanh toán. Tiện ích nâng cấp từng ghế chỉ áp dụng khi có gói nền tảng Team hoặc Business đang hoạt động; tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps yêu cầu có gói đăng ký cơ sở đang hoạt động (đã miễn phí đi kèm ở các gói 20x, Team và Business).</li><li>Chúng tôi có thể điều chỉnh mức giá khi thông báo trước ít nhất 30 ngày. Bạn có quyền hủy gia hạn trước thời điểm giá mới có hiệu lực.</li><li>Giá khuyến mãi chỉ áp dụng cho các thuê bao đăng ký mới trong thời gian diễn ra chương trình. Miễn là thuê bao của bạn duy trì liên tục không gián đoạn, các kỳ gia hạn tiếp theo vẫn giữ mức giá khuyến mãi (tuân theo mục 8.2). Nếu bạn hủy rồi đăng ký lại sau đó, mức giá hiện hành tại thời điểm đăng ký lại sẽ được áp dụng.</li><li>Việc hủy dịch vụ và hoàn tiền được quy định chi tiết trong <a href=\"refund.html\">Chính sách hoàn tiền</a> của chúng tôi.</li></ol>"
+      },
+      {
+        "h2": "9. Tạm ngưng và chấm dứt",
+        "body_html": "<p>Bạn có thể hủy đăng ký bất kỳ lúc nào và Dịch vụ sẽ tiếp tục duy trì đến hết chu kỳ thanh toán hiện tại. Chúng tôi có quyền tạm ngưng hoặc chấm dứt Dịch vụ nếu bạn vi phạm Điều khoản này, thanh toán không thành công hoặc việc sử dụng của bạn gây rủi ro mất an toàn. Chúng tôi cũng có thể ngừng cung cấp Dịch vụ bằng thông báo trước 30 ngày và hoàn trả theo tỷ lệ (pro-rata) phần phí đã đóng cho thời gian chưa sử dụng.</p>"
+      },
+      {
+        "h2": "10. Giới hạn trách nhiệm",
+        "body_html": "<p>Trong phạm vi tối đa được pháp luật cho phép: (a) chúng tôi không chịu trách nhiệm đối với bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt hay hệ quả nào, bao gồm mất lợi nhuận, dữ liệu, uy tín hoặc cơ hội kinh doanh; và (b) tổng trách nhiệm bồi thường tối đa của chúng tôi liên quan đến Dịch vụ được giới hạn ở số phí thực tế bạn đã thanh toán cho chúng tôi trong vòng một (01) tháng ngay trước sự kiện phát sinh khiếu nại.</p><p>Không điều khoản nào trong văn bản này loại trừ, hạn chế hay làm thay đổi bất kỳ quyền lợi hoặc bảo đảm tiêu dùng nào mà bạn được hưởng theo Luật Người tiêu dùng Úc (Australian Consumer Law) vốn không thể bị loại trừ theo luật định. Trong phạm vi pháp luật cho phép giới hạn trách nhiệm, trách nhiệm của chúng tôi được giới hạn ở việc cung cấp lại dịch vụ hoặc thanh toán chi phí để cung cấp lại dịch vụ đó.</p>"
+      },
+      {
+        "h2": "11. Sửa đổi Điều khoản",
+        "body_html": "<p>Chúng tôi có thể cập nhật các Điều khoản này theo thời gian và sẽ thông báo trước những thay đổi quan trọng qua email hoặc trên trang web. Việc bạn tiếp tục sử dụng Dịch vụ sau khi bản cập nhật có hiệu lực đồng nghĩa với việc bạn chấp thuận các Điều khoản mới.</p>"
+      },
+      {
+        "h2": "12. Luật điều chỉnh",
+        "body_html": "<p>Các Điều khoản này được điều chỉnh và giải thích theo pháp luật của Úc.</p>"
+      },
+      {
+        "h2": "13. Liên hệ",
+        "body_html": "<p>Nếu có câu hỏi về các Điều khoản này, vui lòng gửi email tới <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> (email dự phòng: <a href=\"mailto:support@zaokit.ai\">support@zaokit.ai</a>).</p>"
+      }
+    ]
+  },
+  "refund": {
+    "title": "Chính sách hoàn tiền | Zaokit ClaudeOps",
+    "description": "Chính sách hoàn tiền và hủy dịch vụ của Zaokit ClaudeOps",
+    "h1": "Chính sách hoàn tiền",
+    "meta": "Ngày có hiệu lực: 3 tháng 11 năm 2026. Nếu có sự khác biệt giữa các phiên bản ngôn ngữ, phiên bản tiếng Anh sẽ được ưu tiên áp dụng.",
+    "lead_html": "Chính sách này quy định cách thức hủy đăng ký và hoàn tiền, đồng thời là một phần không tách rời của <a href=\"terms.html\">Điều khoản dịch vụ</a>. Chính sách này không loại trừ bất kỳ quyền lợi hợp pháp nào của bạn theo Luật Người tiêu dùng Úc (Australian Consumer Law) vốn không thể bị loại trừ theo quy định pháp luật.",
+    "sections": [
+      {
+        "h2": "1. Hủy đăng ký",
+        "body_html": "<p>Dịch vụ có thể được thanh toán theo tháng hoặc theo năm và bạn có thể hủy bất cứ lúc nào. Sau khi hủy, Dịch vụ vẫn tiếp tục hoạt động cho đến hết chu kỳ thanh toán hiện tại (tháng hoặc năm) và sẽ không tự động gia hạn nữa. Để hủy, vui lòng gửi email cho chúng tôi.</p>"
+      },
+      {
+        "h2": "2. Trước khi bàn giao",
+        "body_html": "<p>Nếu bạn yêu cầu hủy trước khi chúng tôi bàn giao môi trường làm việc và thông tin truy cập, chúng tôi sẽ hoàn tiền đầy đủ 100%.</p>"
+      },
+      {
+        "h2": "3. Sau khi bàn giao",
+        "body_html": "<p>Ngay khi kích hoạt Dịch vụ, chúng tôi đã phân bổ tài nguyên phần cứng, chỗ ngồi và tiến hành đăng ký các thuê bao bên thứ ba liên quan thay mặt bạn. Do đó, phí dịch vụ của chu kỳ thanh toán hiện tại (bao gồm cả gói trả trước theo năm đã chiết khấu) nhìn chung không được hoàn lại sau khi đã bàn giao và không tính hoàn theo ngày hay tháng lẻ, ngoại trừ trường hợp nêu tại mục 4 hoặc khi pháp luật yêu cầu.</p>"
+      },
+      {
+        "h2": "4. Gián đoạn do lỗi từ phía chúng tôi",
+        "body_html": "<p>Nếu Dịch vụ không thể truy cập liên tục quá 72 giờ vì nguyên nhân nằm trong tầm kiểm soát của chúng tôi, chúng tôi sẽ bù thêm thời hạn sử dụng tương ứng với số ngày bị ảnh hưởng. Nếu bạn muốn hủy hẳn, bạn có thể yêu cầu hoàn tiền theo tỷ lệ (pro-rata) cho phần thời gian chưa sử dụng của chu kỳ hiện tại.</p>"
+      },
+      {
+        "h2": "5. Ảnh hưởng từ phía bên thứ ba",
+        "body_html": "<p>Những ảnh hưởng xuất phát từ các nhà cung cấp bên thứ ba (bao gồm Anthropic, Google và Apple) như thay đổi chính sách, giới hạn hạn mức sử dụng, khóa/hạn chế tài khoản hoặc sự cố ngừng dịch vụ của họ đều nằm ngoài tầm kiểm soát của chúng tôi, và khoản phí bên thứ ba đã thanh toán thay mặt bạn sẽ không thể hoàn lại. Chúng tôi sẽ nỗ lực hợp lý để hỗ trợ bạn xử lý vấn đề.</p>"
+      },
+      {
+        "h2": "6. Tiện ích lưu trữ đám mây & Đường truyền riêng Doanh nghiệp",
+        "body_html": "<p>Một khi lưu trữ đám mây hoặc tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps đã được kích hoạt, phí của chu kỳ hiện tại sẽ không được hoàn lại. Sau khi hủy gia hạn, tiện ích vẫn tiếp tục duy trì đến hết chu kỳ hiện tại.</p>"
+      },
+      {
+        "h2": "7. Chấm dứt do vi phạm điều khoản",
+        "body_html": "<p>Chúng tôi không hoàn tiền trong trường hợp Dịch vụ bị tạm ngưng hoặc chấm dứt do bạn vi phạm <a href=\"terms.html\">Điều khoản dịch vụ</a>.</p>"
+      },
+      {
+        "h2": "8. Cách gửi yêu cầu hoàn tiền",
+        "body_html": "<ol><li>Gửi email tới <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> kèm theo địa chỉ email đăng ký thuê bao, mã biên lai Stripe và lý do yêu cầu hoàn tiền.</li><li>Chúng tôi sẽ phản hồi trong vòng 5 ngày làm việc.</li><li>Khoản tiền hoàn hợp lệ sẽ được trả về phương thức thanh toán ban đầu của bạn. Thời gian tiền về tài khoản phụ thuộc vào ngân hàng hoặc đơn vị trung gian thanh toán của bạn.</li></ol>"
+      },
+      {
+        "h2": "9. Khiếu nại hoàn trả giao dịch (Chargeback)",
+        "body_html": "<p>Nếu bạn có bất kỳ thắc mắc nào về khoản phí trên sao kê, vui lòng liên hệ với chúng tôi trước để được giải quyết nhanh chóng. Trường hợp bạn tự ý mở tranh chấp hoàn tiền (chargeback) qua ngân hàng mà không liên hệ trước với chúng tôi, chúng tôi có quyền tạm ngưng dịch vụ liên quan trong suốt thời gian giải quyết tranh chấp.</p>"
+      }
+    ]
+  }
+}

@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "title": "Zaokit ClaudeOps — AI Menjadikan Dunia Tanpa Sempadan | Produktiviti Termaju & Pengalaman Terbaik",
+    "description": "Zaokit ClaudeOps: AI menjadikan dunia tanpa sempadan — menerangi setiap bandar di seluruh dunia untuk membawakan produktiviti paling maju dan pengalaman bertaraf tertinggi kepada semua. Stesen kerja fizikal Mac Studio & Mac mini terasing merentasi 9 rantau ISP tempatan asli (AU, US, SG, MY, ID, JP, KH, NZ, CA), talian khas BGP perusahaan, khidmat concierge kejuruteraan 1-ke-1 sehingga 7×24 jam, serta storan awan 2TB–30TB.",
+    "keywords": "Zaokit ClaudeOps, AI Menjadikan Dunia Tanpa Sempadan, Menerangi Setiap Bandar, perkhidmatan terurus Claude, Claude Code, stesen kerja awan Mac, Mac Studio khas, perunding kejuruteraan AI",
+    "og_title": "AI Menjadikan Dunia Tanpa Sempadan — Produktiviti Termaju & Pengalaman Terbaik | Zaokit ClaudeOps",
+    "og_description": "Menerangi setiap bandar di dunia · 9 hab pengkomputeran ISP asli · Stesen kerja fizikal Mac spesifikasi tinggi · Pecutan BGP perusahaan · Sokongan concierge 1-ke-1 sehingga 7×24 jam.",
+    "ld_description": "AI menjadikan dunia tanpa sempadan — menerangi setiap bandar di seluruh dunia untuk membawakan produktiviti paling maju dan pengalaman bertaraf tertinggi kepada semua: ruang kerja terasing pada mesin fizikal Mac Studio & Mac mini spesifikasi tinggi merentasi 9 rantau ISP asli, pecutan BGP perusahaan, dan sokongan concierge kejuruteraan AI 1-ke-1 sehingga 7x24 jam.",
+    "offer_names": [
+      "1x Standard",
+      "5x Pro",
+      "20x Ultimate"
+    ]
+  },
+  "nav": {
+    "brand": "Zaokit ClaudeOps",
+    "why": "Mengapa",
+    "service": "Servis",
+    "value": "Nilai",
+    "security": "Sekuriti",
+    "reviews": "Ulasan",
+    "pricing": "Harga",
+    "storage": "Storan",
+    "process": "Proses",
+    "faq": "FAQ",
+    "lang_aria": "Tukar bahasa"
+  },
+  "hero": {
+    "eyebrow": "GLOBAL VISION · Biar AI Menerangi Setiap Bandar, Setiap Individu",
+    "h1_main": "AI Menjadikan Dunia Tanpa Sempadan",
+    "h1_sub": "Kami membawakan produktiviti paling maju & pengalaman bertaraf tertinggi kepada semua",
+    "lead": "Produktiviti AI barisan hadapan tidak seharusnya menjadi keistimewaan segelintir pihak sahaja. Dari Sydney, Silicon Valley, Tokyo dan Singapura hingga ke Kuala Lumpur dan Jakarta—kami menerangi hab pengkomputeran asli dari bandar ke bandar di seluruh dunia, menggabungkan stesen kerja fizikal Mac yang terasing, talian khas BGP perusahaan serta bimbingan kejuruteraan 1-ke-1 sehingga 7×24 jam supaya setiap pencipta, pembangun dan pasukan boleh membina tanpa sempadan.",
+    "cta_primary": "Lihat pelan harga",
+    "cta_secondary": "E-mel kami",
+    "mailto_enquiry_subject": "Pertanyaan Zaokit ClaudeOps",
+    "stats": [
+      {
+        "strong": "9 Negara Aktif",
+        "span": "AU · US · SG · MY · ID · JP · KH · NZ · CA"
+      },
+      {
+        "strong": "Mac Fizikal",
+        "span": "Mac Studio & Mac mini spek tinggi"
+      },
+      {
+        "strong": "Pengalaman Top",
+        "span": "Bimbingan 1-ke-1 7×8j / 7×16j / 7×24j"
+      },
+      {
+        "strong": "Ruang Terasing",
+        "span": "Akaun macOS sendiri · Mesin khas pada 20x+"
+      },
+      {
+        "strong": "Entiti AU",
+        "span": "Berdaftar di Australia · Pengebilan Stripe"
+      }
+    ]
+  },
+  "map": {
+    "status_main": "9 Negara & 13+ Bandar Utama Telah Diterangi",
+    "status_em": "MENERANGI SETIAP BANDAR",
+    "meta_1": "Jaringan pengkomputeran ISP asli",
+    "meta_2": "Tulang belakang BGP rentas sempadan",
+    "meta_3": "Halakan kursor atau klik hab bandar",
+    "stage_aria": "Peta topologi rangkaian ISP asli global merentasi 9 negara",
+    "hud_live": "● Aktif",
+    "hud_label_city": "Hab metro",
+    "hud_label_hw": "Perkakasan",
+    "hud_val_hw": "Mac Studio / mini spek tinggi",
+    "hud_label_route": "Tulang belakang",
+    "pills_aria": "Pilih rantau",
+    "partner_pill": "✦ Pembinaan Bersama Global · Berkhidmat untuk 8 Bilion Manusia",
+    "partner_copy_html": "<strong>Bawa mesin anda sendiri &amp; kongsikan sumber anda — jana pendapatan sambil menerangi peluang impian buat orang lain!</strong>",
+    "partner_cta": "Bawa Mesin / Sertai Kami →",
+    "partner_mailto_subject": "Bring My Mac / Join Zaokit Global Compute Network",
+    "partner_mailto_body": "Hai Jason, saya berminat untuk berkongsi sumber dan menyertai Rangkaian Pengkomputeran Global Zaokit:\n\n1. Negara / Bandar:\n2. Mod kerjasama (Bawa Mac sendiri / Nod jalur lebar tempatan / Rakan kongsi serantau):\n3. Spesifikasi Mac & butiran ISP tempatan:\n4. Maklumat perhubungan:",
+    "nodes": {
+      "AU": {
+        "name": "Australia",
+        "pill": "Australia ★",
+        "short": "Australia",
+        "city": "Sydney · Melbourne",
+        "role": "★ Hab Ibu Pejabat Utama · Entiti Australia",
+        "route": "BGP Premium melalui HK · 0% kehilangan paket"
+      },
+      "US": {
+        "name": "Amerika Syarikat",
+        "pill": "Amerika Syarikat",
+        "short": "Amerika Syarikat",
+        "city": "Silicon Valley · LA",
+        "role": "Hab Pengkomputeran Teras Pantai Barat AS",
+        "route": "Terus Trans-Pasifik · ISP asli"
+      },
+      "SG": {
+        "name": "Singapura",
+        "pill": "Singapura",
+        "short": "Singapura",
+        "city": "Singapura",
+        "role": "Hab Teras Kependaman Rendah APAC",
+        "route": "Persimpangan kabel dasar laut · RTT ultra-rendah"
+      },
+      "MY": {
+        "name": "Malaysia",
+        "pill": "Malaysia",
+        "short": "Malaysia",
+        "city": "Kuala Lumpur",
+        "role": "Nod Jalur Lebar Asli Asia Tenggara",
+        "route": "Pautan darat MY–SG · IP asli bersih"
+      },
+      "ID": {
+        "name": "Indonesia",
+        "pill": "Indonesia",
+        "short": "Indonesia",
+        "city": "Jakarta",
+        "role": "Nod ISP Asli Kepulauan Asia Tenggara",
+        "route": "Pautan kabel dasar laut SG–Jakarta & Indigo"
+      },
+      "JP": {
+        "name": "Jepun",
+        "pill": "Jepun",
+        "short": "Jepun",
+        "city": "Tokyo · Osaka",
+        "role": "Nod Kependaman Ultra-Rendah Asia Timur",
+        "route": "Diukur ~92ms · 0% kehilangan paket"
+      },
+      "KH": {
+        "name": "Kemboja",
+        "pill": "Kemboja",
+        "short": "Kemboja",
+        "city": "Phnom Penh",
+        "role": "Nod RTT Rendah Laluan Darat Terus",
+        "route": "Laluan darat ~81ms · 0% kehilangan"
+      },
+      "NZ": {
+        "name": "New Zealand",
+        "pill": "New Zealand",
+        "short": "New Zealand",
+        "city": "Auckland",
+        "role": "Nod Asli Bersih Pasifik Selatan",
+        "route": "Pautan dasar laut Trans-Tasman & Hawaiki"
+      },
+      "CA": {
+        "name": "Kanada",
+        "pill": "Kanada",
+        "short": "Kanada",
+        "city": "Vancouver · Toronto",
+        "role": "Nod Jalur Lebar Bersih Amerika Utara",
+        "route": "Terus Pasifik Utara · Kestabilan tinggi"
+      }
+    }
+  },
+  "why": {
+    "tag": "Mengapa",
+    "h2": "Bahagian paling sukar tentang Claude bukannya model itu sendiri",
+    "sub": "Apa yang benar-benar menguras tenaga anda ialah ketidakpastian teknikal yang langsung tiada kaitan dengan kerja sebenar anda.",
+    "cards": [
+      {
+        "h3": "Persediaan yang rumit",
+        "p": "Daripada pendaftaran akaun hinggalah konfigurasi persekitaran, anda terpaksa mencari jalan sendiri bagi setiap langkah tanpa sesiapa untuk dirujuk."
+      },
+      {
+        "h3": "Operasi tidak stabil",
+        "p": "Setiap mesin tempatan berbeza keadaannya, menyebabkan tugasan panjang Claude Code sering terputus separuh jalan."
+      },
+      {
+        "h3": "Kerumitan pengebilan",
+        "p": "Bayaran gagal, pertukaran pelan dan pembaharuan bulanan memakan masa berharga anda setiap bulan."
+      },
+      {
+        "h3": "Masa terbuang",
+        "p": "Berjam-jam masa yang dihabiskan untuk mengkaji alatan dan menyelesaikan masalah teknikal sepatutnya ditumpukan kepada kerja teras anda."
+      }
+    ]
+  },
+  "service": {
+    "tag": "Perkhidmatan",
+    "h2": "Serahkan ketidakpastian kepada kami. Kekalkan kepastian milik anda.",
+    "sub": "Daripada persediaan awal hingga operasi harian, diurus sepenuhnya dan sedia terus digunakan.",
+    "cards": [
+      {
+        "h3": "Ruang kerja terasing",
+        "p": "Akaun dan ruang kerja macOS anda sendiri dengan fail serta kebenaran akses yang terasing, berserta pilihan keseluruhan mesin khas pada pelan 20x. Perbualan dan data projek kekal di bawah kawalan anda."
+      },
+      {
+        "h3": "Mac Studio & mini spek tinggi",
+        "p": "Mac Studio atau Mac mini spesifikasi tinggi di rangkaian jalur lebar ISP tempatan asli di Australia, AS, Singapura, Malaysia, Indonesia, Jepun, Kemboja, New Zealand atau Kanada (bukannya pusat data awan kongsi murahan). Pengasingan peringkat akaun (mesin khas pada 20x), stabil untuk jangka panjang."
+      },
+      {
+        "h3": "Pengebilan terurus",
+        "p": "Langganan, pembaharuan dan pertukaran pelan semuanya diuruskan oleh kami. Tiada apa yang perlu anda kejar sendiri."
+      },
+      {
+        "h3": "Concierge 1-ke-1 Berperingkat",
+        "p": "Sokongan kejuruteraan 1-ke-1 secara terus mengikut pelan anda: 7×8 jam (1x), 7×16 jam (5x), sehingga concierge peribadi sepanjang masa 7×24 jam (20x)."
+      }
+    ]
+  },
+  "value": {
+    "tag": "Lebih Daripada Kuasa Komputer",
+    "h2_html": "Apa yang anda perolehi ialah <em class=\"grad\">lebih daripada kuasa pengkomputeran</em>",
+    "sub": "Akaun dan mesin hanyalah permulaan. Kelebihan sebenar ialah bimbingan pakar yang membantu anda memanfaatkan AI dengan cara yang betul, lebih mendalam dan lebih awal berbanding orang lain.",
+    "cards": [
+      {
+        "h3": "Kuasa pengkomputeran & stesen kerja terbaik",
+        "p": "Ruang kerja kejuruteraan AI khas yang dikonfigurasikan dan diuruskan untuk anda, berjalan pada Mac Studio atau Mac mini fizikal spesifikasi tinggi supaya tugasan panjang Claude Code berjalan lancar tanpa henti."
+      },
+      {
+        "h3": "Concierge 1-ke-1 Bertaraf Tertinggi",
+        "p": "Bimbingan kejuruteraan AI khusus untuk pencipta, pembangun, pengasas dan pasukan. Daripada aliran kerja Claude Code, tetapan MCP dan Skills hinggalah pelancaran projek sebenar, dapatkan sokongan terus 1-ke-1 7×8j / 7×16j / 7×24j."
+      },
+      {
+        "h3": "Wawasan AI terkini",
+        "p": "Kemas kini berkala mengenai ciri baharu, amalan terbaik dan perkembangan industri bagi Claude serta alatan AI terkemuka lain supaya anda mengguna pakai keupayaan baharu lebih awal."
+      }
+    ]
+  },
+  "network": {
+    "tag": "Rangkaian",
+    "h2_html": "Pelaburan rangkaian berterusan<br>untuk desktop jauh yang responsif",
+    "p": "Kami terus melabur dalam perkakasan dan laluan premium: jalur lebar ISP asli di 9 negara dengan kelajuan simetri 200Mbps–500Mbps+, digandingkan dengan geganti kendiri dan tulang belakang BGP perusahaan yang mengurangkan kehilangan paket—musuh utama desktop jauh—kepada sifar.",
+    "chips": [
+      "Simetri 200–500Mbps+",
+      "Tulang belakang BGP perusahaan",
+      "Geganti hos kendiri",
+      "Dual-leg BBR",
+      "Pengekodan perkakasan Apple Silicon",
+      "Pengukuhan senarai putih"
+    ],
+    "addon_note_prefix": "Disertakan percuma pada pelan 20x, Team & Business; pelanggan 1x / 5x boleh menambah ",
+    "addon_note_link": "Talian Khas Perusahaan ClaudeOps (dari $5/bln) ↓",
+    "addon_note_suffix": "",
+    "card_aria": "Kependaman dan kehilangan paket yang diukur sebelum dan selepas pengoptimuman",
+    "legend_before": "Sebelum",
+    "legend_after": "Selepas",
+    "rows": [
+      {
+        "country": "Jepun",
+        "via": "Melalui tulang belakang HK",
+        "before": "128–184ms · 10% loss",
+        "after": "~92ms · 0% loss"
+      },
+      {
+        "country": "Australia",
+        "via": "Melalui tulang belakang HK",
+        "before": "343–386ms · 25–33% loss",
+        "after": "~240ms · 0% loss"
+      },
+      {
+        "country": "Kemboja",
+        "via": "Kabel darat terus",
+        "before": "",
+        "after": "~81ms · 0% loss"
+      }
+    ],
+    "foot": "Diukur daripada klien di Asia Timur, November 2026. Pengalaman anda mungkin berbeza mengikut rangkaian tempatan anda."
+  },
+  "security": {
+    "tag": "Keselamatan & Privasi",
+    "h2": "Pengasingan dua peringkat: akaun berasingan dan mesin khas",
+    "sub": "Terminal anda menyimpan kod sumber peribadi, kunci API dalam pemboleh ubah persekitaran, tetapan pangkalan data dan logik perniagaan. Zaokit ClaudeOps menggunakan dua peringkat pengasingan: pada pelan 1x / 5x setiap pengguna mendapat akaun macOS berasingan yang hanya diakses melalui Apple Screen Sharing; pada pelan 20x anda boleh mengaktifkan keseluruhan mesin khas yang terasing sepenuhnya sehingga ke peringkat perkakasan.",
+    "cards": [
+      {
+        "h3": "Mesin khas 20x: pengasingan peringkat perkakasan",
+        "p": "Dengan mod mesin khas diaktifkan, keseluruhan unit Mac Studio atau Mac mini spesifikasi tinggi berkhidmat hanya untuk anda. Pasang sebarang perisian, ubah tetapan peringkat sistem, dan gunakan mana-mana perisian desktop jauh termasuk RustDesk dan VNC pihak ketiga."
+      },
+      {
+        "h3": "Pengasingan akaun berasingan 1x / 5x",
+        "p": "Setiap pengguna mempunyai akaun macOS berasingan dengan fail dan kebenaran akses tersendiri supaya sejarah dan fail projek kekal peribadi. Akses adalah melalui Apple Screen Sharing sahaja, yang memberikan sesi desktop terasing untuk setiap akaun tanpa boleh dilihat oleh orang lain."
+      },
+      {
+        "h3": "Anda mengawal akses dan penyulitan",
+        "p": "Tetapkan kata laluan akses dan dasar penyulitan anda sendiri. Pasukan kami hanya menguruskan sambungan serta pengebilan dan tidak mengakses data dalam akaun anda secara aktif, kecuali bagi tujuan penyelenggaraan, insiden keselamatan atau penyelesaian masalah yang anda benarkan."
+      }
+    ]
+  },
+  "reviews": {
+    "tag": "Testimoni",
+    "h2": "Apa kata pelanggan sebenar kami",
+    "sub": "Bagi melindungi privasi klien, semua ulasan menggunakan avatar kartun dan nama samaran sambil mengekalkan maklum balas sebenar serta pelan langganan mereka.",
+    "badge": "Tanpa Nama · Disahkan",
+    "stars_aria": "5 daripada 5 bintang",
+    "items": [
+      {
+        "name": "M***",
+        "role": "Ketua Produk AI Rentas Sempadan",
+        "quote": "\"Terowong perusahaannya sangat tajam dan amat lancar—malah lebih jelas berbanding ToDesk tempatan saya. Menulis kod dan menukar tetingkap terasa seolah-olah di komputer sendiri. Pantas, boleh diharap, berbaloi setiap sen—pengalaman kelas pertama.\"",
+        "source": "Maklum Balas Sembang Disahkan",
+        "plan": "5x Pro"
+      },
+      {
+        "name": "C***",
+        "role": "Jurutera Kanan Full-Stack",
+        "quote": "\"Persekitaran rangkaian tempatan saya dahulu selalu terputus di pertengahan sesi. Selepas beralih ke ClaudeOps 1x Standard dengan ruang kerja terasing dan Claude Code berjalan 24/7, memang terasa macam 'pengaturcara genius kembali beraksi' 😂. Tiada lagi pening kepala pasal bil atau rangkaian.\"",
+        "source": "Maklum Balas Sembang Disahkan",
+        "plan": "1x Standard"
+      },
+      {
+        "name": "Kyle W.",
+        "role": "Ketua R&D Kuantitatif",
+        "quote": "\"Rangkaian ISP asli merentasi 9 negara berserta pengasingan peringkat perkakasan benar-benar meyakinkan saya. Kod proprietari dan kunci API kami kekal selamat pada Mac Studio khas—beroperasi berbulan-bulan tanpa sebarang gangguan.\"",
+        "source": "Nod Australia · Disamarkan",
+        "plan": "20x Flagship"
+      },
+      {
+        "name": "L***",
+        "role": "Pembangun Indie",
+        "quote": "\"Serahan hari yang sama sejurus selepas pembayaran Stripe. Akaun macOS terasing saya sedia dipasang dengan Claude Code dan alatan pembangunan. Sangat menjimatkan masa jika anda tidak mahu bersusah payah dengan tetapan persekitaran atau pembayaran rentas sempadan.\"",
+        "source": "Nod Tokyo · Disamarkan",
+        "plan": "1x Standard"
+      },
+      {
+        "name": "Sarah C.",
+        "role": "Rakan Kongsi Perundingan",
+        "quote": "\"Saya bukan orang teknikal operasi dan tidak mahu menyentuh tetapan CLI. Dengan sokongan 1-ke-1 7×16 jam serta penyegerakan Google Drive terurus, saya boleh bersambung dari mana-mana sahaja ketika bertugas di luar dan menyambung kerja serta-merta.\"",
+        "source": "Nod Singapura · Disamarkan",
+        "plan": "5x Pro"
+      },
+      {
+        "name": "A***",
+        "role": "Pengarah Teknologi E-dagang",
+        "quote": "\"Jurutera teras kami menjalankan pemfaktoran semula berbilang ejen dan ujian automatik semalaman, kemudian menyemak PR yang kemas setiap pagi. Paparan Screen Sharing asli sangat jelas, dan sokongan Telegram daripada Jason membalas hampir serta-merta.\"",
+        "source": "Maklum Balas Telegram",
+        "plan": "20x Flagship"
+      }
+    ],
+    "note": "* Bagi melindungi privasi klien dan keselamatan data dengan ketat, semua ulasan dipaparkan menggunakan avatar kartun serta nama yang disamarkan."
+  },
+  "pricing": {
+    "tag": "Harga",
+    "h2": "Pelan daripada individu hingga perusahaan.",
+    "sub_html": "Kembangkan daripada ruang kerja individu kepada kluster berbilang Mac khas. <strong>Bayar tahunan untuk 10 bulan dan nikmati 2 bulan percuma</strong>.",
+    "jump_line": "Talian Khas ↓",
+    "jump_ent": "Team & Business ↓",
+    "billing_aria": "Pilih kitaran pengebilan",
+    "billing_month": "Bulanan",
+    "billing_year": "Tahunan",
+    "billing_save_badge": "2 bulan percuma",
+    "currency_aria": "Pilih mata wang",
+    "currencies": {
+      "AUD": {
+        "btn": "A$ AUD",
+        "name": "AUD"
+      },
+      "USD": {
+        "btn": "$ USD",
+        "name": "USD"
+      },
+      "EUR": {
+        "btn": "€ EUR",
+        "name": "EUR"
+      },
+      "NZD": {
+        "btn": "NZ$ NZD",
+        "name": "NZD"
+      },
+      "CAD": {
+        "btn": "C$ CAD",
+        "name": "CAD"
+      },
+      "SGD": {
+        "btn": "S$ SGD",
+        "name": "SGD"
+      },
+      "CNY": {
+        "btn": "¥ CNY",
+        "name": "CNY"
+      }
+    },
+    "solo_subscribe": "Langgan",
+    "solo_consult": "Ada soalan? E-mel kami →",
+    "solo": [
+      {
+        "tier_b": "1x",
+        "tier_span": "Standard",
+        "desc": "Untuk sembang harian, penulisan dan pengekodan ringan dengan Claude yang stabil.",
+        "init_note": "Termasuk persekitaran Claude · sekitar A$5 / hari",
+        "features_html": [
+          "Kuota penggunaan asas",
+          "Konfigurasi ruang kerja khas",
+          "Persekitaran fizikal Mac mini",
+          "Pengebilan langganan &amp; operasi terurus sepenuhnya",
+          "Sedia untuk Claude Code",
+          "Sokongan khas 1-ke-1 <strong>7×8 jam</strong>",
+          "Akaun macOS berasingan · Akses Apple Screen Sharing"
+        ],
+        "mailto_subject": "Pertanyaan Zaokit ClaudeOps - 1x Standard"
+      },
+      {
+        "badge": "Paling popular",
+        "tier_b": "5x",
+        "tier_span": "Pro",
+        "desc": "Untuk pembangun dan pencipta yang menggunakan Claude Code secara intensif setiap hari.",
+        "init_note": "Termasuk persekitaran Claude · kuota 5x, kos seunit ~78% daripada 1x",
+        "features_html": [
+          "5x kuota penggunaan Standard",
+          "Konfigurasi ruang kerja khas",
+          "Persekitaran fizikal Mac mini spek tinggi",
+          "Pengebilan langganan &amp; operasi terurus sepenuhnya",
+          "Ruang selesa untuk tugasan panjang Claude Code",
+          "Sokongan keutamaan 1-ke-1 <strong>7×16 jam</strong>",
+          "Akaun macOS berasingan · Akses Apple Screen Sharing"
+        ],
+        "mailto_subject": "Pertanyaan Zaokit ClaudeOps - 5x Pro"
+      },
+      {
+        "badge_promo": "Promosi Akhir Tahun · Sehingga 31 Dis 2026",
+        "tier_b": "20x",
+        "tier_span": "Ultimate",
+        "desc": "Untuk pembina produktif, pengasas dan pengguna kuasa yang menjalankan berbilang ejen sepanjang masa.",
+        "orig_title": "Harga biasa",
+        "init_note": "Harga promosi kekal semasa pembaharuan · kos seunit ~35% daripada 1x",
+        "features_html": [
+          "20x kuota penggunaan Standard",
+          "Konfigurasi ruang kerja khas",
+          "Mac Studio / Mac mini spek tinggi · Pilihan mesin khas",
+          "Pengebilan langganan &amp; operasi terurus sepenuhnya",
+          "Berbilang ejen dan tugasan selari",
+          "Saluran concierge peribadi <strong>bertaraf tertinggi 7×24 jam</strong>",
+          "Saluran RustDesk berkelajuan tinggi percuma",
+          "Storan Google Drive 6 TB percuma disertakan"
+        ],
+        "mailto_subject": "Pertanyaan Zaokit ClaudeOps - 20x Ultimate"
+      }
+    ],
+    "dedicated_line": {
+      "h3_main": "Talian Khas Perusahaan ClaudeOps · Pecutan Rentas Sempadan",
+      "h3_pill": "Percuma pada 20x / Team / Business",
+      "sub": "Tambahan pilihan untuk pelanggan 1x & 5x: halakan trafik melalui tulang belakang rentas sempadan BGP perusahaan kami dengan pecutan dual-leg BBR 0% kehilangan paket untuk Screen Sharing & Claude Code yang ultra-responsif (pengebilan tahunan dapat 2 bulan percuma).",
+      "cards": [
+        {
+          "code": "Talian Khas 1x",
+          "span": "Pecutan Standard · Untuk 1x Standard",
+          "desc": "Tulang belakang rentas sempadan BGP perusahaan + geganti tersulit kependaman rendah kendiri + pengoptimuman dual-leg BBR, memastikan sesi harian Apple Screen Sharing, SSH & Claude Code ringan kekal lancar pada waktu puncak.",
+          "init_note": "Pecutan BGP sifar kehilangan 24/7 · Diurus bersama pelan",
+          "btn": "Tambah Talian 1x →"
+        },
+        {
+          "code": "Talian Khas 5x",
+          "span": "Pecutan Pro · Untuk 5x Pro (kos seunit 20% lebih rendah)",
+          "desc": "Kuota lebar jalur keutamaan 5× + baris gilir QoS BGP perusahaan berkeutamaan tinggi + jaminan 0% kehilangan paket dual-leg BBR, dibina untuk sesi berat Claude Code masa nyata, penyegerakan repo besar & desktop jauh FPS tinggi.",
+          "init_note": "Daya pemprosesan keutamaan 5× · QoS BGP keutamaan tinggi",
+          "btn": "Tambah Talian 5x →"
+        }
+      ]
+    },
+    "enterprise": {
+      "divider": "Team & Business · Kluster Berbilang Kerusi Khas",
+      "switch_aria": "Pilih peringkat kerusi pasukan",
+      "tier_pro": "Semua Kerusi Pro (1x)",
+      "tier_max": "Semua Kerusi Max (5x)",
+      "tier_max_badge": "Disyorkan",
+      "tier_ultra": "Semua Kerusi Ultra (20x)",
+      "toolbar_html": "Mulakan dengan kerusi seragam Pro, Max atau Ultra — atau gabung &amp; padankan bila-bila masa melalui <strong>tambahan naik taraf setiap kerusi</strong> layan diri di bawah.",
+      "team": {
+        "init_badge": "5 × Kerusi Max (5x) · Hos Khas",
+        "sub": "5 Kerusi",
+        "desc": "Dibina untuk pasukan teras pemula, studio AI dan kumpulan penyelidikan — sebuah hos fizikal Mac khas untuk pasukan anda dengan pengebilan disatukan & kawalan pentadbir.",
+        "init_note": "Termasuk 5 kerusi terasing Max (5x) · Hos Mac khas & pengebilan disatukan",
+        "init_seat_li_html": "Termasuk <strong>5 kerusi kejuruteraan Max (5x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)",
+        "features_html": [
+          "<strong>Hos Mac Studio / Mac mini spek tinggi khas</strong> eksklusif untuk pasukan anda",
+          "Penugasan semula kerusi milik organisasi untuk kemasukan/keluar ahli &amp; <strong>satu invois disatukan</strong>",
+          "Naik taraf kerusi individu ke Max (5x) atau Ultra (20x) mengikut keperluan pada bila-bila masa",
+          "Saluran kumpulan concierge khas pasukan <strong>7×24 jam</strong>",
+          "Saluran pasukan peribadi RustDesk berkelajuan tinggi percuma"
+        ],
+        "init_storage_li": "Storan awan pasukan 12 TB percuma (Google Drive / iCloud+)",
+        "btn": "Langgan Pelan Team",
+        "consult": "Perlukan kerusi tambahan atau spek tersuai? Bincang dengan kami →",
+        "mailto_subject": "Pertanyaan Zaokit ClaudeOps - Pelan Team"
+      },
+      "biz": {
+        "init_badge": "Enterprise · Kluster 10 × Max (5x)",
+        "sub": "10 Kerusi",
+        "desc": "Untuk syarikat teknologi yang berkembang pesat, firma kuantitatif & organisasi kejuruteraan — kluster fizikal berbilang Mac khas dengan penempatan dwi-rantau merentasi 9 negara.",
+        "init_note": "Termasuk 10 kerusi terasing Max (5x) · Kluster berbilang Mac khas & SLA VIP",
+        "init_seat_li_html": "Termasuk <strong>10 kerusi kejuruteraan Max (5x)</strong> (boleh dikembangkan kepada 50+ kerusi mengikut keperluan)",
+        "features_html": [
+          "<strong>Kluster fizikal berbilang unit Mac Studio / Mac mini khas</strong>",
+          "Menyokong <strong>penempatan dwi-rantau &amp; migrasi pantas merentasi 9 negara</strong> + IP ISP asli statik khas",
+          "Invois komersial disatukan &amp; Pengurus Kejayaan Pelanggan khas",
+          "<strong>Saluran SLA VIP perusahaan bertaraf tertinggi 7×24 jam</strong> (operasi keutamaan &amp; khidmat nasihat seni bina)",
+          "Talian geganti RustDesk perusahaan khas percuma"
+        ],
+        "init_storage_li": "Storan awan perusahaan 30 TB percuma (Google Drive / iCloud+)",
+        "btn": "Langgan Pelan Business",
+        "consult": "20+ kerusi atau kluster peribadi tersuai? Hubungi jualan perusahaan →",
+        "mailto_subject": "Pertanyaan Zaokit ClaudeOps - Pelan Business"
+      }
+    },
+    "seat_addons": {
+      "h3_main": "Tambahan Naik Taraf Setiap Kerusi",
+      "h3_pill": "1–50 kerusi boleh dilaraskan semasa pembayaran",
+      "sub": "Gabung & padankan peringkat pada mana-mana pelan asas Team atau Business yang aktif — naik taraf ahli tertentu mengikut keperluan (tambahan tahunan juga menikmati 2 bulan percuma).",
+      "cards": [
+        {
+          "from": "Pro 1x",
+          "to": "Max 5x",
+          "tag": "Naik taraf",
+          "desc": "Naik taraf mana-mana kerusi pasukan Pro (1x) kepada Max (5x) untuk kejuruteraan harian Claude Code yang intensif.",
+          "btn": "Naik taraf kerusi →"
+        },
+        {
+          "from": "Max 5x",
+          "to": "Ultra 20x",
+          "tag": "Naik taraf",
+          "desc": "Naik taraf pengasas, CTO atau ketua arkitek pada pelan Semua-Max kepada kapasiti berbilang ejen Ultra 20x.",
+          "btn": "Naik taraf kerusi →"
+        },
+        {
+          "from": "Pro 1x",
+          "to": "Ultra 20x",
+          "tag": "Terus",
+          "desc": "Lonjakkan mana-mana kerusi pada pelan asas Semua-Pro terus kepada kuota penuh flagship Ultra 20x.",
+          "btn": "Naik taraf kerusi →"
+        }
+      ]
+    },
+    "storage": {
+      "tag": "Storan Awan · Google Drive & iCloud+",
+      "h2": "Storan Awan Terurus untuk Aset Digital",
+      "sub_html": "Pilih <strong>Google Drive (Google One)</strong> atau <strong>Apple iCloud+</strong> daripada peringkat 2 TB hingga 30 TB, lengkap dengan pembaharuan terurus dan sokongan concierge 1-ke-1 7×16 jam yang sama.",
+      "currency_aria": "Pilih mata wang (storan awan)",
+      "per_mo": "/ bln",
+      "cards": [
+        {
+          "tier_b": "2 TB",
+          "tier_span": "Storan",
+          "desc": "Ruang storan luas untuk foto harian, video dan sandaran merentas peranti.",
+          "note": "Google Drive atau iCloud+ · Pengebilan terurus",
+          "features": [
+            "Google Drive atau Apple iCloud+",
+            "Ruang peribadi dengan akses terasing",
+            "Pengebilan terurus · Sokongan 1-ke-1 7×16j"
+          ],
+          "btn": "Langgan 2 TB"
+        },
+        {
+          "badge": "Pilihan pencipta",
+          "tier_b": "6 TB",
+          "tier_span": "Storan",
+          "desc": "Sesuai untuk jurugambar, pencipta kandungan dan peti arkib peribadi.",
+          "note": "Google Drive atau iCloud+ · Pengebilan terurus",
+          "features": [
+            "Google Drive atau Apple iCloud+",
+            "Penyegerakan foto resolusi penuh & media 4K",
+            "Pengebilan terurus · Sokongan 1-ke-1 7×16j"
+          ],
+          "btn": "Langgan 6 TB"
+        },
+        {
+          "tier_b": "12 TB",
+          "tier_span": "Storan",
+          "desc": "Bilik kebal berkapasiti tinggi untuk pengguna kuasa dan sandaran berbilang peranti.",
+          "note": "Google Drive atau iCloud+ · Pengebilan terurus",
+          "features": [
+            "Google Drive atau Apple iCloud+",
+            "Arkib projek besar & salinan cermin peranti",
+            "Pengebilan terurus · Sokongan 1-ke-1 7×16j"
+          ],
+          "btn": "Langgan 12 TB"
+        },
+        {
+          "tier_b": "30 TB",
+          "tier_span": "Flagship",
+          "desc": "Storan awan gred studio untuk rakaman RAW, set data AI dan arkib jangka panjang.",
+          "note": "Google Drive atau iCloud+ · Operasi concierge",
+          "features": [
+            "Google Drive 30TB atau gabungan dwi-awan",
+            "Kerjasama pasukan global berkelajuan tinggi",
+            "Concierge peribadi bertaraf tertinggi 7×24 jam"
+          ],
+          "btn": "Langgan 30 TB"
+        }
+      ]
+    },
+    "stripe_trust_html": "Pembayaran selamat oleh <strong>Stripe</strong> · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · Bulanan atau tahunan (2 bulan percuma), batal bila-bila masa",
+    "foot_before_currency": "Semua harga merangkumi persekitaran fizikal Mac spesifikasi tinggi (akaun berasingan pada 1x / 5x, pilihan mesin khas pada 20x, hos khas atau kluster berbilang Mac pada Team / Business), rangkaian alatan AI prakonfigurasi, serta pengurusan langganan & pengebilan concierge, dibilkan secara bulanan atau tahunan (bayar 10 bulan untuk 12 bulan) dalam ",
+    "foot_after_currency": ". Harga dalam setiap mata wang mencerminkan paras pasaran tempatan. ",
+    "foot_promo": "Harga 20x yang digaris potong ialah harga biasa, yang akan terpakai kepada langganan baharu mulai 1 Januari 2027. ",
+    "foot_legal_prefix": "Dengan melanggan, anda bersetuju dengan ",
+    "foot_terms_link": "Terma Perkhidmatan",
+    "foot_legal_mid": " dan ",
+    "foot_refund_link": "Dasar Bayaran Balik",
+    "foot_legal_suffix": " kami."
+  },
+  "process": {
+    "tag": "Proses",
+    "h2": "Empat langkah. Sedia beroperasi pada hari yang sama.",
+    "steps": [
+      {
+        "h3": "Pilih pelan",
+        "p": "Pilih pelan 1x, 5x atau 20x berserta mata wang anda, atau e-mel kami terlebih dahulu."
+      },
+      {
+        "h3": "Langgan melalui Stripe",
+        "p": "Pilih rantau pilihan anda di halaman pembayaran selamat Stripe dan lengkapkan langganan bulanan atau tahunan anda."
+      },
+      {
+        "h3": "Penyerahan",
+        "p": "Pada hari yang sama, kami memperuntukkan Mac spek tinggi dan akaun berasingan anda (mesin khas pada 20x), serta menghantar butiran akses dan panduan."
+      },
+      {
+        "h3": "Operasi berterusan",
+        "p": "Pembaharuan, penyelenggaraan akaun dan penyelesaian masalah teknikal semuanya diuruskan oleh kami."
+      }
+    ]
+  },
+  "faq": {
+    "tag": "FAQ",
+    "h2": "Soalan lazim",
+    "items": [
+      {
+        "q": "Siapakah yang mengendalikan Zaokit ClaudeOps?",
+        "a_html": "Zaokit ClaudeOps dikendalikan oleh sebuah syarikat berdaftar di Australia. Semua bayaran diproses dengan selamat oleh Stripe, dan setiap transaksi disertakan dengan resit serta invois rasmi."
+      },
+      {
+        "q": "Apakah perbandingan antara pelan 1x, 5x, 20x, Team dan Business? Adakah terdapat diskaun tahunan?",
+        "a_html": "Kelima-lima peringkat ini melaraskan bilangan kerusi, pengasingan perkakasan, waktu sokongan concierge dan manfaat tambahan — dan <strong>pengebilan tahunan hanya mengenakan caj 10 bulan setahun (2 bulan percuma) merentasi semua pelan</strong>:<br>• <strong>1x Standard</strong>: Kuota asas individu + persekitaran Mac mini (akaun macOS berasingan) + sokongan 1-ke-1 <strong>7×8 jam</strong>;<br>• <strong>5x Pro</strong>: Kuota individu 5× + Mac mini spek tinggi (akaun macOS berasingan) + sokongan keutamaan 1-ke-1 <strong>7×16 jam</strong>;<br>• <strong>20x Ultimate</strong>: Kuota individu 20× + Mac Studio / Mac mini spek tinggi (pilihan mesin khas) + concierge peribadi <strong>7×24 jam</strong> + <strong>saluran peribadi RustDesk</strong> + <strong>storan awan 6 TB</strong>;<br>• <strong>Team (5 Kerusi · Hos Khas)</strong>: Tersedia dalam peringkat Semua-Pro (1x), Semua-Max (5x) atau Semua-Ultra (20x) — hos fizikal Mac khas untuk pasukan anda, penugasan semula kerusi, pengebilan disatukan, saluran peribadi RustDesk, storan awan 6–12 TB &amp; concierge pasukan 7×24 jam;<br>• <strong>Business (10 Kerusi · Kluster Berbilang Mac)</strong>: Tersedia dalam peringkat Semua-Pro (1x), Semua-Max (5x) atau Semua-Ultra (20x) — kluster berbilang Mac khas (penempatan dwi-rantau &amp; migrasi pantas di 9 negara), invois komersial, geganti RustDesk perusahaan, storan awan 12–30 TB &amp; SLA VIP 7×24 jam;<br>• <strong>Tambahan Naik Taraf Setiap Kerusi</strong>: Mulakan pada pelan asas Semua-Pro atau Semua-Max dan naik taraf kerusi tertentu ke Max (5x) atau Ultra (20x) pada bila-bila masa melalui pembayaran layan diri (kuantiti boleh laras 1–50 kerusi);<br>• <strong>Tambahan Talian Khas Perusahaan ClaudeOps</strong>: Pecutan rentas sempadan BGP perusahaan pilihan untuk pelanggan 1x (+$5/bln) dan 5x (+$20/bln) (sudah disertakan percuma pada 20x, Team &amp; Business)."
+      },
+      {
+        "q": "Apakah tambahan Talian Khas Perusahaan ClaudeOps? Siapakah yang memerlukannya?",
+        "a_html": "<strong>Talian Khas Perusahaan ClaudeOps</strong> menghalakan trafik desktop jauh dan terminal anda melalui tulang belakang rentas sempadan BGP perusahaan premium kami dengan geganti kendiri dan kawalan kesesakan dual-leg BBR, menghapuskan gegaran (jitter) serta kehilangan paket internet awam pada waktu puncak:<br>• <strong>Talian Khas 1x ($5/bln · $50/thn)</strong>: Direka untuk pelanggan individu 1x Standard yang menjalankan Apple Screen Sharing harian, SSH dan pengekodan ringan;<br>• <strong>Talian Khas 5x ($20/bln · $200/thn)</strong>: Direka untuk beban kerja kejuruteraan 5x Pro dengan kuota lebar jalur keutamaan 5× dan QoS BGP berkeutamaan tinggi (kos seunit 20% lebih rendah berbanding 1x);<br>• <strong>Disertakan Percuma pada Pelan Flagship &amp; Pasukan</strong>: <strong>Pelan 20x Ultimate, Team dan Business sudah merangkumi pecutan khas perusahaan tanpa caj tambahan</strong>."
+      },
+      {
+        "q": "Mengapakah harga Zaokit ClaudeOps lebih tinggi berbanding desktop awan biasa atau akaun kongsi?",
+        "a_html": "Kerana anda membayar untuk <strong>infrastruktur fizikal yang deterministik dan operasi kejuruteraan bertaraf concierge</strong>—bukannya VPS kongsi kos rendah atau log masuk berkumpulan. Setiap langganan menampung empat kos infrastruktur sebenar:<br>• <strong>Perkakasan Fizikal Mac Spek Tinggi</strong>: Mesin sebenar Mac Studio dan Mac mini (bukan VM awan maya), memberikan kuasa pengkomputeran tempatan berterusan dan kebolehpercayaan 24/7—dengan pengasingan mesin khas penuh pada 20x+;<br>• <strong>Lebar Jalur Asli Simetri 200Mbps–500Mbps+</strong>: Jalur lebar ISP tempatan asli merentasi 9 negara dengan kelajuan muat naik/muat turun simetri yang luas, memastikan paparan Screen Sharing kekal tajam dan responsif berbanding talian kongsi 10–30Mbps yang perlahan;<br>• <strong>Tulang Belakang BGP Perusahaan</strong>: Geganti berkelajuan tinggi kendiri melalui tulang belakang BGP perusahaan premium HK/APAC dengan pengoptimuman dual-leg BBR, mengurangkan kehilangan paket rentas sempadan kepada sifar;<br>• <strong>Kuota Rasmi Penuh + Operasi Concierge 7×16 / 7×24</strong>: Kuota langganan rasmi penuh, pengebilan terurus, penyegerakan iCloud/Google Drive, dan sokongan kejuruteraan 1-ke-1."
+      },
+      {
+        "q": "Akaun berasingan berbanding mesin khas: mengapakah pelan 1x / 5x dihadkan kepada Apple Screen Sharing?",
+        "a_html": "• <strong>Pengasingan akaun berasingan (1x / 5x)</strong>: beberapa pengguna berkongsi satu unit Mac spek tinggi, tetapi masing-masing mempunyai akaun macOS, fail dan kebenaran akses sendiri, dan tiada sesiapa dapat melihat data pengguna lain. Bagi melindungi privasi setiap pengguna, akses dihadkan kepada <strong>Apple Screen Sharing</strong> yang mencipta sesi desktop terasing bagi setiap akaun supaya skrin dan aktiviti anda kekal peribadi.<br>• <strong>Mesin khas (tersedia pada 20x)</strong>: keseluruhan unit fizikal Mac berkhidmat hanya untuk anda. Perkakasan, sistem dan rangkaian adalah milik anda sepenuhnya. Pasang sebarang perisian, ubah tetapan peringkat sistem dan gunakan <strong>mana-mana perisian desktop jauh</strong>: Apple Screen Sharing, VNC pihak ketiga seperti RealVNC / TigerVNC, atau saluran RustDesk berkelajuan tinggi kendiri kami (percuma pada 20x).<br><strong>Mengapa tiada perisian jauh pihak ketiga pada mesin kongsi?</strong> RustDesk dan kebanyakan perisian VNC pihak ketiga merakam sesi skrin utama Mac, yang pada mesin berbilang pengguna boleh membolehkan orang lain melihat atau mengawal desktop anda. Kami hanya mengaktifkannya dalam mod mesin khas sebagai langkah perlindungan privasi yang disengajakan."
+      },
+      {
+        "q": "Pelan manakah yang patut saya pilih?",
+        "a_html": "Pilih pelan 1x untuk sembang dan penulisan harian, 5x jika anda menulis kod dengan Claude Code setiap hari, dan 20x untuk berbilang ejen, penggunaan intensif sepanjang masa, atau mesin khas dengan RustDesk dan mana-mana perisian desktop jauh. Masih kurang pasti? Mulakan dengan pelan lebih rendah dan naik taraf pada bila-bila masa."
+      },
+      {
+        "q": "Apakah maksud sebenar \"persekitaran yang deterministik dan stabil\" dalam penggunaan harian?",
+        "a_html": "Ia bermaksud ruang kerja terasing milik anda sendiri + stesen kerja fizikal Mac spesifikasi tinggi yang tetap + pengurusan pengebilan, pembaharuan dan operasi kejuruteraan harian secara khusus. Operasi kejuruteraan yang diseragamkan menghapuskan gangguan sambungan mengejut, konflik konfigurasi dan kegagalan pembaharuan supaya aliran kerja anda kekal lancar dan boleh dijangka."
+      },
+      {
+        "q": "Bagaimanakah cara menggunakannya secara praktikal? Mac jauh atau tempatan?",
+        "a_html": "<strong>Kedua-duanya berfungsi dengan baik. Gunakan cara yang paling sesuai untuk anda:</strong><br>1. <strong>Desktop jauh</strong>: pada 1x / 5x, log masuk ke akaun berasingan anda menggunakan macOS Screen Sharing yang terasing, selamat dan sedia digunakan. Pada 20x dengan mod mesin khas diaktifkan, anda juga boleh menggunakan VNC pihak ketiga seperti RealVNC / TigerVNC, atau <strong>saluran RustDesk berkelajuan tinggi kendiri kami (percuma pada 20x)</strong> untuk sesi yang lebih lancar dan kependaman lebih rendah. Dalam kedua-dua cara, anda mendapat desktop dan terminal penuh macOS, dan tugasan panjang terus berjalan.<br>2. <strong>Integrasi lancar aliran kerja tempatan</strong>: bekerjasama terus dengan persekitaran pembangunan jauh daripada aliran kerja dan alatan pembangunan tempatan anda tanpa beban persediaan atau penyelenggaraan di komputer tempatan. Mac jauh tersebut menjadi bahagian belakang pengkomputeran khas anda."
+      },
+      {
+        "q": "Bagaimanakah keselamatan dan privasi kod serta data saya dilindungi?",
+        "a_html": "Pada pelan 1x / 5x, setiap pengguna mendapat akaun macOS berasingan dengan fail, kebenaran akses dan sesi desktop yang terasing, diakses hanya melalui Apple Screen Sharing supaya tiada sesiapa dapat melihat skrin anda. Pada pelan 20x anda boleh mengaktifkan mesin khas: keseluruhan Mac Studio atau Mac mini spek tinggi berkhidmat hanya untuk anda, terasing sehingga ke peringkat perkakasan. Sejarah sesi, kod sumber dan pemboleh ubah persekitaran anda kekal di dalam akaun atau mesin anda sendiri. Anda menetapkan sendiri kata laluan akses serta penyulitan, dan pasukan kami tidak mengakses data anda secara aktif kecuali untuk penyelenggaraan, insiden keselamatan atau penyelesaian masalah yang anda benarkan."
+      },
+      {
+        "q": "Di manakah lokasi mesin dan rangkaian tersebut?",
+        "a_html": "Mesin fizikal Mac Studio dan Mac mini spesifikasi tinggi kami terletak di <strong>Australia, Amerika Syarikat, Singapura, Malaysia, Indonesia, Jepun, Kemboja, New Zealand dan Kanada</strong>, disambungkan melalui <strong>rangkaian jalur lebar ISP tempatan asli (bukannya pusat data awan awam berkongsi)</strong> demi kebolehpercayaan maksimum. Pilih rantau pilihan anda semasa pembayaran, dan kami akan memperuntukkan mesin serta akaun tetap untuk jangka panjang (keseluruhan mesin khas pada 20x)."
+      },
+      {
+        "q": "Bagaimanakah storan awan Google Drive & iCloud+ berfungsi?",
+        "a_html": "Kami menawarkan pelan 2 TB ($8.99/bln), 6 TB ($28.99/bln), 12 TB ($58.99/bln) dan 30 TB ($148.99/bln). Semasa pembayaran Stripe, pilih <strong>Apple iCloud+</strong> atau <strong>Google Drive (Google One)</strong> dan catatkan alamat e-mel akaun anda; pasukan concierge 1-ke-1 7×16 jam kami akan menguruskan pengaktifan dan pembaharuan berterusan."
+      },
+      {
+        "q": "Bolehkah saya menaik taraf atau menurunkan pelan?",
+        "a_html": "Boleh. Perubahan akan berkuat kuasa pada kitaran pengebilan anda yang seterusnya. Jika anda memerlukan naik taraf dengan segera, hubungi kami dan kami hanya akan mengenakan caj perbezaan harga."
+      },
+      {
+        "q": "Bagaimana jika berlaku sebarang masalah teknikal?",
+        "a_html": "Hubungi kami dengan segera. Kami mengutamakan penyelesaian masalah dan akan memulihkan operasi anda secepat mungkin."
+      },
+      {
+        "q": "Apakah kaedah pembayaran yang diterima? Bolehkah saya mendapatkan invois?",
+        "a_html": "Kami menerima langganan dalam talian melalui Stripe, termasuk Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay dan Link, dibilkan dalam mata wang AUD, USD, EUR, NZD, CAD, SGD atau CNY. Pemegang kad UnionPay boleh memilih CNY untuk pembayaran yang lebih lancar. Stripe mengeluarkan resit dan invois rasmi secara automatik. Untuk pelan perniagaan berbilang akaun, sila e-mel kami."
+      },
+      {
+        "q": "Bagaimanakah saya boleh membawa mesin sendiri atau menyertai rangkaian pengkomputeran global anda untuk menjana pendapatan sambil menerangi lebih banyak bandar?",
+        "a_html": "Kami mengalu-alukan rakan kongsi di seluruh dunia untuk menyertai rangkaian pengkomputeran asli kami ke arah berkhidmat kepada kesemua 8 bilion manusia! <strong>Anda boleh membawa mesin sendiri dan berkongsi sumber anda — membantu anda menjana pendapatan sambil menerangi peluang impian buat orang lain!</strong> Sama ada anda mempunyai perkakasan fizikal Mac terbiar atau berspesifikasi tinggi, jalur lebar tempatan berkualiti di bandar anda, atau jaringan komuniti pembina &amp; pencipta serantau, e-mel kami bila-bila masa di <a href=\"mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network\" style=\"color:var(--primary-strong);font-weight:600\">jason2023zhang@gmail.com</a> berserta bandar dan butiran perkakasan/ISP anda—selamat menyertai kami!"
+      }
+    ]
+  },
+  "partner": {
+    "eyebrow": "GLOBAL COMPUTE PARTNER · Membina Bersama Jaringan Pengkomputeran Dunia",
+    "h2_html": "Sertai Rangkaian Pengkomputeran Global Kami —<br><em class=\"grad\">Benar-Benar Berkhidmat untuk 8 Bilion Manusia!</em>",
+    "p_html": "Bermula daripada 13+ bandar yang telah diterangi merentasi 9 negara, kami membawakan kuasa pengkomputeran asli tulen dan produktiviti AI barisan hadapan ke seluruh pelosok dunia. <strong>Anda boleh membawa mesin sendiri dan berkongsi sumber anda — membantu anda menjana pendapatan sambil menerangi peluang impian buat orang lain!</strong> Di mana jua anda berada, kami mengalu-alukan penyertaan anda — e-mel kami terus untuk menerangi bandar seterusnya bersama-sama.",
+    "chips": [
+      "✦ Bawa Mac Anda Sendiri · Kongsi & Jana Pendapatan",
+      "✦ Perkongsian Sumber Jalur Lebar Asli Tempatan",
+      "✦ Pengehosan Kluster & Rakan Kongsi Serantau"
+    ],
+    "btn": "Bawa Mac Anda / E-mel Kami: jason2023zhang@gmail.com →"
+  },
+  "cta": {
+    "h2": "AI Menjadikan Dunia Tanpa Sempadan. Mulakan Hari Ini.",
+    "p": "Sertai para pembina di bandar-bandar global kami — langgan melalui Stripe untuk serahan pada hari yang sama bagi menikmati produktiviti AI paling maju dan pengalaman bertaraf tertinggi.",
+    "btn_primary": "Pilih pelan",
+    "btn_secondary": "E-mel: jason2023zhang@gmail.com",
+    "tg_qr_aria": "Buka Telegram @letcode2020",
+    "tg_qr_alt": "Kod QR Telegram @letcode2020",
+    "tg_h3": "Sembang di Telegram",
+    "tg_p": "Imbas atau ketik untuk menambah kami bagi pertanyaan prajualan, sokongan teknikal dan wawasan AI."
+  },
+  "footer": {
+    "brand": "Zaokit ClaudeOps",
+    "entity": "Dikendalikan oleh syarikat berdaftar di Australia · 19 Bahasa Global",
+    "contact_label": "Hubungi: ",
+    "alt_label": "Alternatif: ",
+    "rights": "Hak cipta terpelihara.",
+    "products_h4": "Produk Zaokit",
+    "follow_h4": "Ikuti kami",
+    "terms": "Terma Perkhidmatan",
+    "refund": "Dasar Bayaran Balik",
+    "privacy": "Dasar Privasi",
+    "disclaimer": "Penafian: Zaokit ialah perunding kejuruteraan AI dan stesen kerja awan bebas serta tidak bergabung dengan, disokong oleh, atau ditaja oleh Anthropic PBC, Apple Inc., atau Google LLC. Claude, Claude Code, Mac, iCloud, dan Google Drive ialah tanda dagangan pemilik masing-masing."
+  },
+  "js": {
+    "per_month": "/ bulan",
+    "per_year": "/ tahun",
+    "per_seat_mo": "/ kerusi / bln",
+    "per_seat_yr": "/ kerusi / thn",
+    "per_mo_short": "/ bln",
+    "per_yr_short": "/ thn",
+    "title_12mo": "12 bulan dibilkan secara bulanan",
+    "title_reg_mo": "Harga bulanan biasa",
+    "note_annual": "10 bulan dibilkan tahunan · ~{sym}{eq}/bln, jimat {sym}{save}",
+    "note_1x_mo": "Termasuk persekitaran Claude · sekitar {sym}{day} / hari",
+    "note_20x_promo": "Harga promosi kekal semasa pembaharuan · kos seunit ~{ratio}% daripada 1x",
+    "note_mult_mo": "Termasuk persekitaran Claude · kuota {mult}x, kos seunit ~{ratio}% daripada 1x",
+    "ent_team_mo": "Termasuk 5 kerusi terasing {label} · Hos Mac khas & pengebilan disatukan",
+    "ent_biz_mo": "Termasuk 10 kerusi terasing {label} · Kluster berbilang Mac khas & SLA VIP",
+    "line_0_mo": "Pecutan BGP sifar kehilangan 24/7 · Diurus bersama pelan",
+    "line_1_mo": "Daya pemprosesan keutamaan 5× · QoS BGP keutamaan tinggi",
+    "ent_copy": {
+      "pro": {
+        "label": "Pro (1x)",
+        "teamBadge": "5 × Kerusi Pro (1x) · Hos Khas",
+        "bizBadge": "Enterprise · Kluster 10 × Pro (1x)",
+        "teamSeatLi": "Termasuk <strong>5 kerusi ahli standard Pro (1x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)",
+        "bizSeatLi": "Termasuk <strong>10 kerusi ahli standard Pro (1x)</strong> (boleh dikembangkan kepada 50+ kerusi mengikut keperluan)",
+        "teamStorage": "Storan awan pasukan 6 TB percuma (Google Drive / iCloud+)",
+        "bizStorage": "Storan awan perusahaan 12 TB percuma (Google Drive / iCloud+)"
+      },
+      "max": {
+        "label": "Max (5x)",
+        "teamBadge": "5 × Kerusi Max (5x) · Hos Khas",
+        "bizBadge": "Enterprise · Kluster 10 × Max (5x)",
+        "teamSeatLi": "Termasuk <strong>5 kerusi kejuruteraan Max (5x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)",
+        "bizSeatLi": "Termasuk <strong>10 kerusi kejuruteraan Max (5x)</strong> (boleh dikembangkan kepada 50+ kerusi mengikut keperluan)",
+        "teamStorage": "Storan awan pasukan 12 TB percuma (Google Drive / iCloud+)",
+        "bizStorage": "Storan awan perusahaan 30 TB percuma (Google Drive / iCloud+)"
+      },
+      "ultra": {
+        "label": "Ultra (20x)",
+        "teamBadge": "5 × Kerusi Ultra (20x) · Studio Khas",
+        "bizBadge": "Enterprise · Kluster 10 × Ultra (20x)",
+        "teamSeatLi": "Termasuk <strong>5 kerusi flagship Ultra (20x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)",
+        "bizSeatLi": "Termasuk <strong>10 kerusi flagship Ultra (20x)</strong> (boleh dikembangkan kepada 50+ kerusi mengikut keperluan)",
+        "teamStorage": "Storan awan pasukan 12 TB percuma (Google Drive / iCloud+)",
+        "bizStorage": "Storan awan perusahaan 30 TB percuma (Google Drive / iCloud+)"
+      }
+    },
+    "toast_copied": "E-mel disalin: {email}. Membuka aplikasi mel anda…",
+    "toast_fallback": "Sila e-mel kami di {email}"
+  },
+  "legal_common": {
+    "back_home": "← Kembali ke laman utama",
+    "footer_copy": "© Zaokit AI · Dikendalikan oleh syarikat berdaftar di Australia"
+  },
+  "privacy": {
+    "title": "Dasar Privasi | Zaokit ClaudeOps",
+    "description": "Dasar Privasi Zaokit ClaudeOps",
+    "h1": "Dasar Privasi",
+    "meta": "Tarikh kuat kuasa: 3 November 2026. Sekiranya terdapat percanggahan antara versi bahasa yang berbeza, versi bahasa Inggeris hendaklah diguna pakai.",
+    "lead_html": "Dasar ini menerangkan cara kami mengumpul, menggunakan, menyimpan dan melindungi maklumat peribadi anda apabila menyediakan perkhidmatan Zaokit ClaudeOps. Kami mengendalikan maklumat peribadi selaras dengan Australian Privacy Act 1988 dan Australian Privacy Principles (APPs).",
+    "sections": [
+      {
+        "h2": "1. Maklumat yang kami kumpul",
+        "body_html": "<ul><li><strong>Butiran perhubungan dan akaun</strong>: nama anda, alamat e-mel dan rantau pilihan yang anda pilih semasa pembayaran.</li><li><strong>Maklumat pembayaran</strong>: diproses oleh Stripe. Kami tidak pernah melihat atau menyimpan nombor kad penuh anda; kami hanya dapat melihat rekod transaksi, resit dan status pembayaran.</li><li><strong>Maklumat perkhidmatan</strong>: alamat e-mel akaun pihak ketiga yang anda berikan untuk menyediakan Perkhidmatan (seperti akaun Claude, Google atau Apple) serta kelayakan akses yang kami keluarkan kepada anda.</li><li><strong>Komunikasi</strong>: mesej yang anda hantarkan kepada kami melalui e-mel, Telegram atau saluran lain.</li><li><strong>Data laman web</strong>: peranti, pelayar, alamat IP dan halaman yang dilawati, yang dikumpulkan melalui alatan analitik seperti Google Analytics dan Umami.</li></ul>"
+      },
+      {
+        "h2": "2. Cara kami menggunakannya",
+        "body_html": "<p>Kami menggunakan maklumat ini hanya untuk menyediakan dan menyerahkan Perkhidmatan, menguruskan pengebilan dan pembaharuan, memberi sokongan teknikal, memastikan sistem kami selamat dan mencegah penyalahgunaan, mematuhi kewajipan undang-undang, serta menambah baik laman web dan Perkhidmatan kami. Kami tidak menjual maklumat peribadi anda.</p>"
+      },
+      {
+        "h2": "3. Data dalam persekitaran anda",
+        "body_html": "<p>Fail, kod dan sesi yang anda simpan di dalam persekitaran anda adalah milik anda. Kami tidak mengaksesnya secara aktif, dan hanya mengambil tindakan yang perlu bagi penyelenggaraan sistem, insiden keselamatan, keperluan undang-undang atau penyelesaian masalah yang telah anda benarkan.</p>"
+      },
+      {
+        "h2": "4. Perkongsian maklumat",
+        "body_html": "<p>Kami hanya berkongsi maklumat yang perlu dengan:</p><ul><li>pembekal perkhidmatan yang diperlukan untuk menyampaikan Perkhidmatan, seperti pemprosesan pembayaran (Stripe), analitik laman web, serta pembekal rangkaian dan infrastruktur;</li><li>pembekal pihak ketiga, setakat yang diperlukan untuk menguruskan langganan bagi pihak anda;</li><li>pihak berkuasa, apabila dikehendaki oleh undang-undang atau permintaan kerajaan yang sah.</li></ul>"
+      },
+      {
+        "h2": "5. Pemprosesan rentas sempadan",
+        "body_html": "<p>Persekitaran kami terletak di Australia, Amerika Syarikat, Singapura, Malaysia, Indonesia, Jepun, Kemboja, New Zealand dan Kanada, dan pembekal seperti Stripe mungkin memproses data di negara lain. Oleh itu, maklumat anda mungkin disimpan atau diproses di luar negara anda. Kami mengambil langkah yang munasabah untuk melindunginya.</p>"
+      },
+      {
+        "h2": "6. Penyimpanan data",
+        "body_html": "<ul><li>Maklumat perhubungan, akaun dan pengebilan: disimpan sepanjang tempoh anda menggunakan Perkhidmatan dan selepas itu selama mana yang dikehendaki oleh undang-undang cukai, perakaunan atau undang-undang lain.</li><li>Data dalam persekitaran anda: boleh dipadamkan 7 hari selepas Perkhidmatan tamat.</li></ul>"
+      },
+      {
+        "h2": "7. Keselamatan",
+        "body_html": "<p>Kami menggunakan langkah teknikal dan organisasi yang munasabah untuk melindungi maklumat anda, seperti kawalan akses dan pengasingan akaun. Walau bagaimanapun, tiada penghantaran internet atau storan elektronik yang selamat sepenuhnya, dan kami tidak dapat menjamin bahawa maklumat tidak akan sesekali diakses tanpa kebenaran.</p>"
+      },
+      {
+        "h2": "8. Kuki dan analitik",
+        "body_html": "<p>Laman web kami menggunakan alatan analitik untuk memahami cara ia digunakan, dan alatan ini mungkin menggunakan kuki atau teknologi serupa. Anda boleh menyahaktifkan kuki dalam tetapan pelayar anda dan masih melayari laman web ini.</p>"
+      },
+      {
+        "h2": "9. Hak anda",
+        "body_html": "<p>Anda boleh meminta kami untuk mengakses, membetulkan atau memadamkan maklumat peribadi anda, kecuali di mana kami wajib menyimpannya mengikut undang-undang. Jika anda mempunyai kebimbangan mengenai cara kami mengendalikan maklumat anda, sila hubungi kami terlebih dahulu. Sekiranya kami tidak dapat menyelesaikannya, anda boleh mengemukakan aduan kepada Office of the Australian Information Commissioner (OAIC).</p>"
+      },
+      {
+        "h2": "10. Perubahan dasar",
+        "body_html": "<p>Kami mungkin mengemas kini dasar ini dari semasa ke semasa dan akan menerbitkan versi terkini di halaman ini. Kami akan memberikan notis awal bagi perubahan ketara melalui e-mel atau di laman web kami.</p>"
+      },
+      {
+        "h2": "11. Hubungi kami",
+        "body_html": "<p>Untuk pertanyaan berkaitan privasi, sila e-mel <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> (alternatif: <a href=\"mailto:support@zaokit.ai\">support@zaokit.ai</a>).</p>"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terma Perkhidmatan | Zaokit ClaudeOps",
+    "description": "Terma Perkhidmatan Zaokit ClaudeOps",
+    "h1": "Terma Perkhidmatan",
+    "meta": "Tarikh kuat kuasa: 3 November 2026. Sekiranya terdapat percanggahan antara versi bahasa yang berbeza, versi bahasa Inggeris hendaklah diguna pakai.",
+    "lead_html": "Selamat datang ke Zaokit ClaudeOps (\"kami\"). Dengan melanggan atau menggunakan perkhidmatan ini, anda bersetuju dengan Terma ini, <a href=\"refund.html\">Dasar Bayaran Balik</a> kami dan <a href=\"privacy.html\">Dasar Privasi</a> kami. Sekiranya anda tidak bersetuju, sila jangan melanggan.",
+    "sections": [
+      {
+        "h2": "1. Perkhidmatan",
+        "body_html": "<p>Kami menyediakan persekitaran Mac jauh terurus, konfigurasi ruang kerja AI, pengurusan pengebilan langganan dan perundingan teknikal (\"Perkhidmatan\"). Kami ialah pembekal bebas dan tidak bergabung dengan, diberi kuasa oleh atau bekerjasama dengan Anthropic PBC, Apple Inc. atau Google LLC.</p>"
+      },
+      {
+        "h2": "2. Perkhidmatan pihak ketiga",
+        "body_html": "<ol><li>Perkhidmatan pihak ketiga seperti Claude, Google Drive dan iCloud+ disediakan oleh pembekal masing-masing di bawah terma dan dasar mereka sendiri. Akaun-akaun ini didaftarkan atas nama anda dan menjadi milik anda. Anda bertanggungjawab untuk mematuhi terma, dasar penggunaan dan keperluan serantau setiap pembekal, serta memastikan penggunaan anda adalah sah di sisi undang-undang di lokasi anda.</li><li>Kami hanya menguruskan langganan dan pembaharuan bagi pihak anda. Kami tidak memberikan sebarang jaminan mengenai ketersediaan, ciri, had penggunaan, versi model atau perubahan dasar mana-mana perkhidmatan pihak ketiga. Pengganda pelan \"1x / 5x / 20x\" serta konfigurasi kerusi Team / Business hanyalah spesifikasi indikatif sahaja. Penggunaan sebenar tertakluk kepada peraturan pembekal pada masa tersebut.</li><li>Jika pembekal pihak ketiga menyekat, menggantung atau menamatkan akaun anda, atau mengubah produk, had atau harganya, kami akan berusaha secara munasabah untuk membantu, namun kami tidak bertanggungjawab ke atas kesannya.</li></ol>"
+      },
+      {
+        "h2": "3. Persekitaran",
+        "body_html": "<ol><li><strong>1x / 5x (mesin berbilang pengguna)</strong>: setiap pengguna mempunyai akaun macOS berasingan yang hanya boleh diakses melalui Apple Screen Sharing. Anda tidak boleh cuba mengakses akaun atau data pengguna lain, atau memasang perisian kawalan jauh, rakaman skrin, proksi rangkaian atau perisian lain yang boleh menjejaskan pengguna lain.</li><li><strong>20x / Team / Business (mesin khas atau kluster)</strong>: pelan 20x merangkumi pilihan mesin khas; pelan Team dan Business menyediakan perkakasan fizikal khas atau kluster berbilang Mac secara eksklusif untuk organisasi anda, dengan akaun macOS berasingan bagi setiap ahli. Anda boleh memasang perisian dan mengubah tetapan sistem secara munasabah, dan anda bertanggungjawab atas sebarang isu kestabilan atau keselamatan yang timbul.</li><li>Model mesin, spesifikasi dan rantau diperuntukkan berdasarkan ketersediaan sumber. Kami akan cuba memenuhi rantau pilihan yang anda pilih semasa pembayaran tetapi tidak dapat menjaminnya. Kami boleh memindahkan persekitaran anda atas sebab penyelenggaraan, pengendalian insiden atau kapasiti, dan akan cuba memberi notis awal kecuali dalam keadaan kecemasan.</li></ol>"
+      },
+      {
+        "h2": "4. Penggunaan yang dibenarkan",
+        "body_html": "<p>Anda tidak boleh menggunakan Perkhidmatan ini untuk:</p><ul><li>melakukan aktiviti yang menyalahi undang-undang atau melanggar hak harta intelek, privasi atau hak lain mana-mana pihak;</li><li>menghantar spam, melancarkan serangan siber, menjalankan imbasan port atau menyebarkan perisian hasad (malware);</li><li>melombong mata wang kripto atau menjalankan pengkomputeran beban tinggi secara berterusan yang tidak berkaitan dengan Perkhidmatan;</li><li>menjual semula atau menyewakan semula Perkhidmatan, atau berkongsi kelayakan akses anda dengan orang lain;</li><li>melanggar mana-mana terma atau dasar penggunaan pembekal pihak ketiga.</li></ul><p>Jika anda melanggar peraturan ini, kami boleh menggantung atau menamatkan Perkhidmatan dengan serta-merta tanpa bayaran balik.</p>"
+      },
+      {
+        "h2": "5. Sokongan teknikal",
+        "body_html": "<p>Waktu sokongan yang dinyatakan bagi setiap pelan (7×8j / 7×16j / 7×24j) menerangkan waktu kami menerima dan mengendalikan permintaan bantuan. Kami akan berusaha secara munasabah untuk memberi maklum balas dengan segera tetapi tidak menjanjikan tempoh respons atau penyelesaian tertentu.</p>"
+      },
+      {
+        "h2": "6. Ketersediaan dan penyelenggaraan",
+        "body_html": "<p>Perkhidmatan disediakan atas dasar \"seadanya\" (\"as is\") dan \"sebagaimana tersedia\" (\"as available\"). Kami berusaha secara munasabah untuk mengekalkan kestabilannya tetapi tidak menjamin bahawa ia tidak akan terganggu atau bebas ralat. Kami akan cuba memberikan notis awal bagi penyelenggaraan berjadual. Gangguan yang disebabkan oleh gangguan bekalan elektrik, kerosakan pengendali rangkaian, kegagalan pihak ketiga, bencana alam atau peristiwa lain di luar kawalan munasabah kami tidak dianggap sebagai pelanggaran oleh kami.</p>"
+      },
+      {
+        "h2": "7. Data dan sandaran",
+        "body_html": "<ol><li>Anda bertanggungjawab ke atas data dalam akaun anda dan hendaklah membuat sandaran data penting secara berkala. Kami tidak bertanggungjawab atas kehilangan data kecuali di mana dikehendaki oleh undang-undang.</li><li>Kami tidak mengakses kandungan dalam akaun anda secara aktif, dan hanya mengambil tindakan yang perlu untuk penyelenggaraan sistem, insiden keselamatan, keperluan undang-undang atau penyelesaian masalah yang telah anda benarkan.</li><li>Selepas Perkhidmatan tamat, kami boleh memadamkan akaun dan data anda selepas 7 hari. Sila eksport sebarang fail yang diperlukan sebelum tempoh tersebut tamat.</li></ol>"
+      },
+      {
+        "h2": "8. Yuran dan pembaharuan",
+        "body_html": "<ol><li>Perkhidmatan boleh dibilkan secara bulanan atau tahunan dan diperbaharui secara automatik melalui Stripe pada harga serta selang pengebilan yang dipaparkan semasa pembayaran. Tambahan naik taraf setiap kerusi hanya terpakai kepada langganan asas Team atau Business yang aktif; tambahan Talian Khas Perusahaan ClaudeOps memerlukan langganan asas yang aktif (disertakan tanpa caj tambahan pada pelan 20x, Team dan Business).</li><li>Kami boleh mengubah harga dengan memberikan sekurang-kurangnya 30 hari notis awal. Anda boleh membatalkan langganan sebelum harga baharu berkuat kuasa.</li><li>Harga promosi hanya terpakai kepada langganan yang dimulakan sepanjang tempoh promosi. Selagi langganan anda kekal aktif secara berterusan, pembaharuan akan dicaj pada harga promosi, tertakluk kepada klausa 8.2. Jika anda membatalkan dan melanggan semula kemudian hari, harga semasa pada waktu itu akan diguna pakai.</li><li>Pembatalan dan bayaran balik adalah tertakluk kepada <a href=\"refund.html\">Dasar Bayaran Balik</a> kami.</li></ol>"
+      },
+      {
+        "h2": "9. Penggantungan dan penamatan",
+        "body_html": "<p>Anda boleh membatalkan pada bila-bila masa dan Perkhidmatan akan diteruskan sehingga tamat tempoh pengebilan semasa. Kami boleh menggantung atau menamatkan Perkhidmatan jika anda melanggar Terma ini, gagal membuat bayaran, atau penggunaan anda menimbulkan risiko keselamatan. Kami juga boleh menghentikan Perkhidmatan dengan notis 30 hari dan memulangkan secara pro-rata sebarang yuran yang telah dibayar bagi tempoh yang belum digunakan.</p>"
+      },
+      {
+        "h2": "10. Had liabiliti",
+        "body_html": "<p>Setakat maksimum yang dibenarkan oleh undang-undang: (a) kami tidak bertanggungjawab atas sebarang kerugian tidak langsung, sampingan, khas atau berbangkit, termasuk kehilangan keuntungan, data, nama baik atau perniagaan; dan (b) jumlah keseluruhan liabiliti kami berkaitan Perkhidmatan adalah terhad kepada yuran yang benar-benar telah anda bayar kepada kami dalam tempoh satu bulan sebelum peristiwa yang menimbulkan tuntutan tersebut.</p><p>Tiada apa-apa dalam Terma ini yang mengecualikan, menyekat atau mengubah sebarang hak atau jaminan yang anda miliki di bawah Australian Consumer Law yang tidak boleh dikecualikan secara sah. Di mana undang-undang membenarkan kami menghadkan liabiliti kami, liabiliti kami adalah terhad kepada membekalkan semula perkhidmatan tersebut atau membayar kos untuk membekalkannya semula.</p>"
+      },
+      {
+        "h2": "11. Perubahan kepada Terma ini",
+        "body_html": "<p>Kami mungkin mengemas kini Terma ini dari semasa ke semasa dan akan memberikan notis awal bagi perubahan ketara melalui e-mel atau di laman web kami. Meneruskan penggunaan Perkhidmatan selepas perubahan berkuat kuasa bermakna anda menerima Terma yang telah dikemas kini.</p>"
+      },
+      {
+        "h2": "12. Undang-undang yang mentadbir",
+        "body_html": "<p>Terma ini ditadbir oleh undang-undang Australia.</p>"
+      },
+      {
+        "h2": "13. Hubungi kami",
+        "body_html": "<p>Ada soalan mengenai Terma ini? E-mel <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> (alternatif: <a href=\"mailto:support@zaokit.ai\">support@zaokit.ai</a>).</p>"
+      }
+    ]
+  },
+  "refund": {
+    "title": "Dasar Bayaran Balik | Zaokit ClaudeOps",
+    "description": "Dasar Bayaran Balik dan Pembatalan Zaokit ClaudeOps",
+    "h1": "Dasar Bayaran Balik",
+    "meta": "Tarikh kuat kuasa: 3 November 2026. Sekiranya terdapat percanggahan antara versi bahasa yang berbeza, versi bahasa Inggeris hendaklah diguna pakai.",
+    "lead_html": "Dasar ini menetapkan cara pembatalan dan bayaran balik berfungsi serta membentuk sebahagian daripada <a href=\"terms.html\">Terma Perkhidmatan</a> kami. Ia tidak mengecualikan sebarang hak yang anda miliki di bawah Australian Consumer Law yang tidak boleh dikecualikan secara sah.",
+    "sections": [
+      {
+        "h2": "1. Pembatalan",
+        "body_html": "<p>Perkhidmatan boleh dibilkan secara bulanan atau tahunan dan anda boleh membatalkannya pada bila-bila masa. Selepas anda membatalkan langganan, Perkhidmatan akan diteruskan sehingga tamat tempoh pengebilan semasa (bulanan atau tahunan) dan tidak akan diperbaharui lagi. Untuk membatalkan, sila e-mel kami.</p>"
+      },
+      {
+        "h2": "2. Sebelum penyerahan",
+        "body_html": "<p>Sekiranya anda membuat pembatalan sebelum kami menyerahkan persekitaran dan butiran akses anda, kami akan memberikan bayaran balik penuh.</p>"
+      },
+      {
+        "h2": "3. Selepas penyerahan",
+        "body_html": "<p>Apabila kami mengaktifkan Perkhidmatan, kami memperuntukkan perkakasan serta sumber kerusi dan menguruskan langganan pihak ketiga berkaitan bagi pihak anda. Atas sebab ini, yuran bagi tempoh pengebilan semasa (termasuk prabayaran tahunan berdiskaun) pada umumnya tidak boleh dikembalikan selepas penyerahan dan tidak dikira secara pro-rata mengikut hari atau bulan, kecuali seperti yang dinyatakan dalam seksyen 4 atau di mana dikehendaki oleh undang-undang.</p>"
+      },
+      {
+        "h2": "4. Gangguan yang berpunca daripada kami",
+        "body_html": "<p>Sekiranya Perkhidmatan tidak dapat diakses selama lebih daripada 72 jam berturut-turut atas sebab-sebab dalam kawalan kami, kami akan melanjutkan tempoh perkhidmatan anda mengikut bilangan hari yang terjejas. Jika anda memilih untuk membatalkan langganan, anda boleh memohon bayaran balik secara pro-rata bagi baki tempoh semasa yang belum digunakan.</p>"
+      },
+      {
+        "h2": "5. Kesan yang berpunca daripada pihak ketiga",
+        "body_html": "<p>Kesan yang berpunca daripada pembekal pihak ketiga (termasuk Anthropic, Google dan Apple), seperti perubahan dasar, had penggunaan, sekatan akaun atau gangguan perkhidmatan, berada di luar kawalan kami, dan yuran pihak ketiga yang telah dibayar bagi pihak anda tidak boleh dikembalikan. Kami akan berusaha secara munasabah untuk membantu anda menyelesaikan isu tersebut.</p>"
+      },
+      {
+        "h2": "6. Tambahan storan awan & Talian Khas Perusahaan",
+        "body_html": "<p>Sebaik sahaja storan awan atau tambahan Talian Khas Perusahaan ClaudeOps telah diaktifkan, yuran bagi tempoh semasa tidak boleh dikembalikan. Selepas pembatalan, tambahan tersebut akan terus berjalan sehingga tamat tempoh semasa.</p>"
+      },
+      {
+        "h2": "7. Penamatan akibat pelanggaran terma",
+        "body_html": "<p>Tiada bayaran balik diberikan sekiranya Perkhidmatan digantung atau ditamatkan kerana anda melanggar <a href=\"terms.html\">Terma Perkhidmatan</a> kami.</p>"
+      },
+      {
+        "h2": "8. Cara memohon bayaran balik",
+        "body_html": "<ol><li>E-mel <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> berserta alamat e-mel langganan anda, nombor resit Stripe dan sebab permohonan anda.</li><li>Kami akan memberi maklum balas dalam tempoh 5 hari bekerja.</li><li>Bayaran balik yang diluluskan akan dipulangkan ke kaedah pembayaran asal anda. Tempoh pemprosesan bergantung kepada bank atau penyedia pembayaran anda.</li></ol>"
+      },
+      {
+        "h2": "9. Caj balik (Chargeback)",
+        "body_html": "<p>Jika anda mempunyai sebarang pertanyaan mengenai sesuatu caj, sila hubungi kami terlebih dahulu dan kami akan menyelesaikannya dengan segera. Sekiranya anda memfailkan caj balik dengan pihak bank tanpa menghubungi kami terlebih dahulu, kami boleh menggantung perkhidmatan berkaitan sementara pertikaian tersebut masih berjalan.</p>"
+      }
+    ]
+  }
+}

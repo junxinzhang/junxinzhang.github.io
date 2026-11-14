@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "title": "Zaokit ClaudeOps — KI macht die Welt grenzenlos | Spitzenproduktivität & erstklassiges Erlebnis",
+    "description": "Zaokit ClaudeOps: KI macht die Welt grenzenlos — wir vernetzen Stadt für Stadt weltweit, um modernste Produktivität und ein erstklassiges Erlebnis für alle zugänglich zu machen. Isolierte physische Mac Studio & Mac mini Workstations in 9 nativen ISP-Regionen (AU, US, SG, MY, ID, JP, KH, NZ, CA), Enterprise-BGP-Standleitungen, persönlicher 1:1-Engineering-Concierge bis 7×24h und 2 TB–30 TB Cloud-Speicher.",
+    "keywords": "Zaokit ClaudeOps, KI macht die Welt grenzenlos, Jede Stadt vernetzen, Claude Managed Service, Claude Code, Mac Cloud Workstation, dedizierter Mac Studio, KI Engineering Concierge",
+    "og_title": "KI macht die Welt grenzenlos — Spitzenproduktivität & erstklassiges Erlebnis | Zaokit ClaudeOps",
+    "og_description": "Stadt für Stadt weltweit vernetzt · 9 native ISP-Compute-Hubs · Physische High-Spec-Mac-Workstations · Enterprise-BGP-Beschleunigung · Persönlicher 1:1-Concierge-Betrieb bis 7×24h.",
+    "ld_description": "KI macht die Welt grenzenlos — wir vernetzen jede Stadt weltweit, um modernste Produktivität und ein erstklassiges Erlebnis für alle bereitzustellen: isolierte Arbeitsumgebung auf physischen High-Spec Mac Studio & Mac mini Systemen in 9 nativen ISP-Regionen, Enterprise-BGP-Beschleunigung und persönlicher 1:1-KI-Engineering-Support bis 7x24h.",
+    "offer_names": [
+      "1x Standard",
+      "5x Pro",
+      "20x Ultimate"
+    ]
+  },
+  "nav": {
+    "brand": "Zaokit ClaudeOps",
+    "why": "Warum",
+    "service": "Service",
+    "value": "Mehrwert",
+    "security": "Sicherheit",
+    "reviews": "Stimmen",
+    "pricing": "Preise",
+    "storage": "Speicher",
+    "process": "Ablauf",
+    "faq": "FAQ",
+    "lang_aria": "Sprache wechseln"
+  },
+  "hero": {
+    "eyebrow": "GLOBALE VISION · Damit KI jede Stadt und jeden Menschen erreicht",
+    "h1_main": "KI macht die Welt grenzenlos",
+    "h1_sub": "Wir bringen modernste Produktivität und ein erstklassiges Erlebnis zu jedem",
+    "lead": "Spitzenproduktivität durch KI darf kein Privileg weniger sein. Von Sydney, dem Silicon Valley, Tokio und Singapur bis nach Jakarta erleuchten wir weltweit Stadt für Stadt native Compute-Standorte — mit isolierten physischen Mac-Workstations, dedizierten Enterprise-BGP-Leitungen und persönlicher 1:1-Engineering-Betreuung bis zu 7×24h, damit Kreative, Entwickler und Teams ohne Grenzen gestalten können.",
+    "cta_primary": "Preise ansehen",
+    "cta_secondary": "E-Mail senden",
+    "mailto_enquiry_subject": "Zaokit ClaudeOps Anfrage",
+    "stats": [
+      {
+        "strong": "9 Länder aktiv",
+        "span": "AU · US · SG · MY · ID · JP · KH · NZ · CA"
+      },
+      {
+        "strong": "Physische Macs",
+        "span": "High-Spec Mac Studio & Mac mini"
+      },
+      {
+        "strong": "Top-Betreuung",
+        "span": "7×8h / 7×16h / 7×24h 1:1-Concierge"
+      },
+      {
+        "strong": "Isolierter Raum",
+        "span": "Eigenes macOS-Konto · Dediziert ab 20x"
+      },
+      {
+        "strong": "AU-Gesellschaft",
+        "span": "In Australien registriert · Stripe-Zahlung"
+      }
+    ]
+  },
+  "map": {
+    "status_main": "9 Länder & über 13 Kernmetropolen aktiv",
+    "status_em": "WIR ERLEUCHTEN JEDE STADT",
+    "meta_1": "Natives ISP-Compute-Mesh",
+    "meta_2": "Grenzenloses BGP-Backbone",
+    "meta_3": "Standort berühren oder anklicken",
+    "stage_aria": "Globale Netzwerktopologie-Karte mit nativen ISPs in 9 Ländern",
+    "hud_live": "● Live",
+    "hud_label_city": "Metropol-Hub",
+    "hud_label_hw": "Hardware",
+    "hud_val_hw": "Mac Studio / High-Spec mini",
+    "hud_label_route": "Backbone",
+    "pills_aria": "Region auswählen",
+    "partner_pill": "✦ Globaler gemeinsamer Ausbau · Für alle 8 Milliarden Menschen",
+    "partner_copy_html": "<strong>Bringen Sie Ihren eigenen Mac ein &amp; teilen Sie Ihre Ressourcen — erzielen Sie Einnahmen und eröffnen Sie anderen neue Möglichkeiten!</strong>",
+    "partner_cta": "Mac einbringen / Mitmachen →",
+    "partner_mailto_subject": "Eigenen Mac einbringen / Zaokit Global Compute Network beitreten",
+    "partner_mailto_body": "Hallo Jason, ich möchte gerne meine Ressourcen teilen und dem Zaokit Global Compute Network beitreten:\n\n1. Land / Stadt:\n2. Kooperationsmodell (Eigenen Mac einbringen / Nativer Breitband-Knoten / Regionalpartner):\n3. Mac-Spezifikationen & lokaler ISP:\n4. Kontaktdaten:",
+    "nodes": {
+      "AU": {
+        "name": "Australien",
+        "pill": "Australien ★",
+        "short": "Australien",
+        "city": "Sydney · Melbourne",
+        "role": "★ Primärer Hauptsitz-Hub · Australische Gesellschaft",
+        "route": "Premium-BGP via HK · 0 % Paketverlust"
+      },
+      "US": {
+        "name": "Vereinigte Staaten",
+        "pill": "USA",
+        "short": "USA",
+        "city": "Silicon Valley · LA",
+        "role": "Kern-Compute-Hub US-Westküste",
+        "route": "Transpazifik-Direktroute · Nativer ISP"
+      },
+      "SG": {
+        "name": "Singapur",
+        "pill": "Singapur",
+        "short": "Singapur",
+        "city": "Singapur",
+        "role": "APAC-Kern-Hub mit niedrigster Latenz",
+        "route": "Seekabel-Knotenpunkt · Niedrigste RTT"
+      },
+      "MY": {
+        "name": "Malaysia",
+        "pill": "Malaysia",
+        "short": "Malaysia",
+        "city": "Kuala Lumpur",
+        "role": "Nativer Breitband-Knoten Südostasien",
+        "route": "Landverbindung MY–SG · Saubere native IP"
+      },
+      "ID": {
+        "name": "Indonesien",
+        "pill": "Indonesien",
+        "short": "Indonesien",
+        "city": "Jakarta",
+        "role": "Nativer ISP-Knoten im südostasiatischen Archipel",
+        "route": "SG–Jakarta- & Indigo-Seekabel"
+      },
+      "JP": {
+        "name": "Japan",
+        "pill": "Japan",
+        "short": "Japan",
+        "city": "Tokio · Osaka",
+        "role": "Ultra-Niedriglatenz-Knoten Ostasien",
+        "route": "~92 ms gemessen · 0 % Paketverlust"
+      },
+      "KH": {
+        "name": "Kambodscha",
+        "pill": "Kambodscha",
+        "short": "Kambodscha",
+        "city": "Phnom Penh",
+        "role": "Direkter Landkabel-Knoten mit niedriger RTT",
+        "route": "~81 ms Landkabel direkt · 0 % Verlust"
+      },
+      "NZ": {
+        "name": "Neuseeland",
+        "pill": "Neuseeland",
+        "short": "Neuseeland",
+        "city": "Auckland",
+        "role": "Sauberer nativer Knoten Südpazifik",
+        "route": "Trans-Tasman- & Hawaiki-Seekabel"
+      },
+      "CA": {
+        "name": "Kanada",
+        "pill": "Kanada",
+        "short": "Kanada",
+        "city": "Vancouver · Toronto",
+        "role": "Sauberer Breitband-Knoten Nordamerika",
+        "route": "Nordpazifik direkt · Hohe Stabilität"
+      }
+    }
+  },
+  "why": {
+    "tag": "Warum",
+    "h2": "Die Hürde bei Claude war nie das Modell selbst",
+    "sub": "Was wirklich Energie raubt, sind all die Unsicherheiten, die nichts mit Ihrer eigentlichen Arbeit zu tun haben.",
+    "cards": [
+      {
+        "h3": "Mühsame Einrichtung",
+        "p": "Von der Kontoerstellung bis zur Umgebungskonfiguration müssen Sie jeden Schritt allein lösen — ohne Rückhalt im Ernstfall."
+      },
+      {
+        "h3": "Instabile Läufe",
+        "p": "Jeder lokale Rechner verhält sich anders, und lange Claude-Code-Aufgaben brechen mitten im Lauf ab."
+      },
+      {
+        "h3": "Abrechnungsaufwand",
+        "p": "Fehlgeschlagene Zahlungen, Tarifwechsel und Verlängerungen kosten Sie Monat für Monat wertvolle Zeit."
+      },
+      {
+        "h3": "Verlorene Fokuszeit",
+        "p": "Stundenlange Tool-Recherchen und Fehlersuche sollten eigentlich direkt in Ihre produktive Arbeit fließen."
+      }
+    ]
+  },
+  "service": {
+    "tag": "Service",
+    "h2": "Überlassen Sie uns die Unsicherheit. Behalten Sie die Verlässlichkeit.",
+    "sub": "Von der Ersteinrichtung bis zum laufenden Betrieb — vollständig verwaltet und sofort einsatzbereit.",
+    "cards": [
+      {
+        "h3": "Isolierte Arbeitsumgebung",
+        "p": "Ihr eigenes macOS-Benutzerkonto und eigener Arbeitsbereich mit isolierten Dateien und Berechtigungen — sowie auf Wunsch ein komplett dedizierter Rechner bei 20x. Ihre Chats und Projektdaten bleiben unter Ihrer Kontrolle."
+      },
+      {
+        "h3": "High-Spec Mac Studio & mini",
+        "p": "Ihr eigener leistungsstarker Mac Studio oder Mac mini an lokalen nativen Breitbandanschlüssen in Australien, den USA, Singapur, Malaysia, Indonesien, Japan, Kambodscha, Neuseeland oder Kanada (niemals billige geteilte Cloud-Rechenzentren). Konto-Isolierung (dedizierte Maschine bei 20x), dauerhaft stabil."
+      },
+      {
+        "h3": "Verwaltete Abrechnung",
+        "p": "Abonnements, Verlängerungen und Tarifanpassungen übernehmen wir vollständig für Sie. Kein Nachhaken nötig."
+      },
+      {
+        "h3": "Abgestufter 1:1-Concierge",
+        "p": "Direkter persönlicher 1:1-Engineering-Support passend zu Ihrem Tarif: 7×8h (1x), 7×16h (5x) bis hin zum privaten 7×24h-Rund-um-die-Uhr-Concierge (20x)."
+      }
+    ]
+  },
+  "value": {
+    "tag": "Mehr als Rechenleistung",
+    "h2_html": "Sie erhalten <em class=\"grad\">weit mehr als nur Compute</em>",
+    "sub": "Konto und Hardware sind erst der Anfang. Der eigentliche Vorsprung entsteht, wenn Experten Ihnen helfen, KI richtig, tiefer und früher als andere einzusetzen.",
+    "cards": [
+      {
+        "h3": "Spitzen-Hardware & Workstation",
+        "p": "Eine speziell für Sie eingerichtete und betreute KI-Engineering-Umgebung auf einem physischen High-Spec Mac Studio oder Mac mini, damit umfangreiche Claude-Code-Tasks zuverlässig durchlaufen."
+      },
+      {
+        "h3": "Erstklassiger 1:1-Concierge",
+        "p": "Persönliche KI-Engineering-Begleitung für Kreative, Entwickler, Gründer und Teams. Von Claude-Code-Workflows sowie MCP- und Skills-Setup bis zum Livegang realer Projekte — mit direktem 1:1-Support über 7×8h / 7×16h / 7×24h."
+      },
+      {
+        "h3": "KI-Wissen aus erster Hand",
+        "p": "Regelmäßige Einblicke zu neuen Funktionen, Best Practices und Branchenentwicklungen rund um Claude und führende KI-Tools, damit Sie Innovationen als Erste nutzen."
+      }
+    ]
+  },
+  "network": {
+    "tag": "Netzwerk",
+    "h2_html": "Kontinuierliche Netzwerkinvestitionen<br>für einen verzögerungsfreien Remote-Desktop",
+    "p": "Wir investieren laufend in Hardware und Premium-Routen: natives ISP-Breitband in 9 Ländern mit symmetrischen 200 Mbit/s bis 500 Mbit/s+, kombiniert mit eigenen Relays und einem Enterprise-BGP-Backbone, das Paketverlust — den größten Feind jedes Remote-Desktops — auf null senkt.",
+    "chips": [
+      "200–500 Mbit/s+ symmetrisch",
+      "Enterprise-BGP-Backbone",
+      "Selbst gehostete Relays",
+      "Dual-Leg-BBR",
+      "Apple-Silicon-Hardwarecodierung",
+      "Allowlist-Härtung"
+    ],
+    "addon_note_prefix": "Bei 20x, Team & Business kostenlos enthalten; mit 1x / 5x können Sie die ",
+    "addon_note_link": "ClaudeOps Enterprise-Standleitung (ab $5/Mon.) ↓",
+    "addon_note_suffix": " hinzubuchen.",
+    "card_aria": "Gemessene Latenz und Paketverluste vor und nach der Optimierung",
+    "legend_before": "Vorher",
+    "legend_after": "Nachher",
+    "rows": [
+      {
+        "country": "Japan",
+        "via": "Über HK-Backbone",
+        "before": "128–184 ms · 10 % Verlust",
+        "after": "~92 ms · 0 % Verlust"
+      },
+      {
+        "country": "Australien",
+        "via": "Über HK-Backbone",
+        "before": "343–386 ms · 25–33 % Verlust",
+        "after": "~240 ms · 0 % Verlust"
+      },
+      {
+        "country": "Kambodscha",
+        "via": "Direktes Landkabel",
+        "before": "",
+        "after": "~81 ms · 0 % Verlust"
+      }
+    ],
+    "foot": "Gemessen von einem ostasiatischen Client im November 2026. Die tatsächlichen Werte können je nach Ihrem lokalen Netz variieren."
+  },
+  "security": {
+    "tag": "Sicherheit & Datenschutz",
+    "h2": "Zweistufige Isolierung: getrennte Konten und dedizierte Maschinen",
+    "sub": "Über Ihr Terminal laufen privater Quellcode, API-Schlüssel in Umgebungsvariablen, Datenbankkonfigurationen und Geschäftslogik. Zaokit ClaudeOps setzt auf eine zweistufige Isolierung: Bei 1x / 5x erhält jeder Nutzer ein separates macOS-Konto mit Zugriff ausschließlich über die Apple Bildschirmfreigabe; bei 20x können Sie eine komplett dedizierte Maschine aktivieren — isoliert bis auf die Hardwareebene.",
+    "cards": [
+      {
+        "h3": "Dedizierte 20x-Maschine: Isolierung auf Hardwareebene",
+        "p": "Im dedizierten Modus steht der gesamte leistungsstarke Mac Studio oder Mac mini exklusiv Ihnen zur Verfügung. Installieren Sie beliebige Software, passen Sie Systemeinstellungen an und nutzen Sie jedes Remote-Desktop-Tool, einschließlich RustDesk und Drittanbieter-VNC."
+      },
+      {
+        "h3": "Getrennte Konto-Isolierung bei 1x / 5x",
+        "p": "Jeder Nutzer verfügt über ein eigenes macOS-Konto mit getrennten Dateien und Berechtigungen, sodass Verlauf und Projektdateien geschützt bleiben. Der Zugriff erfolgt ausschließlich per Apple Bildschirmfreigabe, die für jedes Konto eine isolierte, für andere unsichtbare Desktop-Sitzung erzeugt."
+      },
+      {
+        "h3": "Sie steuern Zugriff und Verschlüsselung",
+        "p": "Legen Sie Ihre eigenen Zugangspasswörter und Verschlüsselungsrichtlinien fest. Unser Team kümmert sich um Konnektivität und Abrechnung und greift nicht aktiv auf Daten in Ihrem Konto zu — außer bei Wartung, Sicherheitsvorfällen oder von Ihnen autorisiertem Support."
+      }
+    ]
+  },
+  "reviews": {
+    "tag": "Kundenstimmen",
+    "h2": "Was echte Abonnenten berichten",
+    "sub": "Zum Schutz der Privatsphäre unserer Kunden verwenden alle Rezensionen illustrierte Avatare und anonymisierte Kürzel bei unverfälschtem Feedback und realen Tarifstufen.",
+    "badge": "Anonymisiert · Verifiziert",
+    "stars_aria": "5 von 5 Sternen",
+    "items": [
+      {
+        "name": "M***",
+        "role": "Cross-Border KI-Produktleiter",
+        "quote": "\"Der Enterprise-Tunnel ist gestochen scharf und butterweich — sogar klarer als mein lokales ToDesk. Coden und Fensterwechsel fühlen sich praktisch wie lokal an. Schnell, zuverlässig, jeden Cent wert — ein absolutes Spitzenerlebnis.\"",
+        "source": "Verifiziertes Chat-Feedback",
+        "plan": "5x Pro"
+      },
+      {
+        "name": "C***",
+        "role": "Senior Full-Stack-Ingenieur",
+        "quote": "\"Meine lokale Netzwerkumgebung ist früher ständig mitten in der Sitzung abgebrochen. Seit dem Wechsel zu ClaudeOps 1x Standard mit isoliertem Workspace und Claude Code im 24/7-Betrieb fühlt es sich echt an, als wäre ‚der geniale Programmierer zurück‘ 😂. Null Abrechnungs- oder Netzwerkstress mehr.\"",
+        "source": "Verifiziertes Chat-Feedback",
+        "plan": "1x Standard"
+      },
+      {
+        "name": "Kyle W.",
+        "role": "Leiter Quant-F&E",
+        "quote": "\"Native ISP-Netze in 9 Ländern plus Hardware-Isolierung haben mich überzeugt. Unser proprietärer Code und unsere API-Schlüssel liegen auf einem dedizierten Mac Studio — monatelange durchgehende Uptime ohne eine einzige Unterbrechung.\"",
+        "source": "Knoten Australien · Anonymisiert",
+        "plan": "20x Flagship"
+      },
+      {
+        "name": "L***",
+        "role": "Indie-Entwickler",
+        "quote": "\"Bereitstellung noch am selben Tag direkt nach dem Stripe-Checkout. Mein isoliertes macOS-Konto war bereits komplett mit Claude Code und Dev-Tools vorkonfiguriert. Enorme Zeitersparnis, wenn man keine Lust auf Setup-Frust oder Auslandsabrechnungen hat.\"",
+        "source": "Knoten Tokio · Anonymisiert",
+        "plan": "1x Standard"
+      },
+      {
+        "name": "Sarah C.",
+        "role": "Partnerin in der Unternehmensberatung",
+        "quote": "\"Ich komme nicht aus dem Ops-Bereich und wollte mich nicht mit CLI-Setups beschäftigen. Dank 7×16h 1:1-Support und verwalteter Google-Drive-Synchronisation verbinde ich mich auf Reisen von überall aus und arbeite nahtlos weiter.\"",
+        "source": "Knoten Singapur · Anonymisiert",
+        "plan": "5x Pro"
+      },
+      {
+        "name": "A***",
+        "role": "Technischer Direktor E-Commerce",
+        "quote": "\"Unsere Kerningenieure lassen über Nacht Multi-Agent-Refactorings und Test-Suites laufen und prüfen morgens saubere PRs. Die native Bildschirmfreigabe ist kristallklar, und Jasons Telegram-Support antwortet nahezu sofort.\"",
+        "source": "Telegram-Feedback",
+        "plan": "20x Flagship"
+      }
+    ],
+    "note": "* Zum strikten Schutz der Privatsphäre und Datensicherheit unserer Kunden werden alle Rezensionen mit illustrierten Avataren und anonymisierten Namen dargestellt."
+  },
+  "pricing": {
+    "tag": "Preise",
+    "h2": "Tarife für Einzelpersonen bis Enterprise.",
+    "sub_html": "Skalieren Sie vom Einzel-Workspace bis zum dedizierten Multi-Mac-Cluster. <strong>Bei jährlicher Zahlung zahlen Sie 10 Monate und erhalten 2 Monate gratis</strong>.",
+    "jump_line": "Standleitung ↓",
+    "jump_ent": "Team & Business ↓",
+    "billing_aria": "Abrechnungszeitraum wählen",
+    "billing_month": "Monatlich",
+    "billing_year": "Jährlich",
+    "billing_save_badge": "2 Monate gratis",
+    "currency_aria": "Währung wählen",
+    "currencies": {
+      "AUD": {
+        "btn": "A$ AUD",
+        "name": "AUD"
+      },
+      "USD": {
+        "btn": "$ USD",
+        "name": "USD"
+      },
+      "EUR": {
+        "btn": "€ EUR",
+        "name": "EUR"
+      },
+      "NZD": {
+        "btn": "NZ$ NZD",
+        "name": "NZD"
+      },
+      "CAD": {
+        "btn": "C$ CAD",
+        "name": "CAD"
+      },
+      "SGD": {
+        "btn": "S$ SGD",
+        "name": "SGD"
+      },
+      "CNY": {
+        "btn": "¥ CNY",
+        "name": "CNY"
+      }
+    },
+    "solo_subscribe": "Abonnieren",
+    "solo_consult": "Fragen? Schreiben Sie uns →",
+    "solo": [
+      {
+        "tier_b": "1x",
+        "tier_span": "Standard",
+        "desc": "Für tägliche Chats, Texte und leichtes Coding mit einem zuverlässig stabilen Claude.",
+        "init_note": "Inkl. Claude-Umgebung · ca. A$5 / Tag",
+        "features_html": [
+          "Basis-Nutzungskontingent",
+          "Dedizierte Workspace-Konfiguration",
+          "Physische Mac-mini-Umgebung",
+          "Vollständig verwaltete Abo-Abrechnung &amp; Betriebsführung",
+          "Sofort startklar für Claude Code",
+          "<strong>7×8h</strong> persönlicher 1:1-Support",
+          "Separates macOS-Konto · Zugriff per Apple Bildschirmfreigabe"
+        ],
+        "mailto_subject": "Zaokit ClaudeOps Anfrage - 1x Standard"
+      },
+      {
+        "badge": "Am beliebtesten",
+        "tier_b": "5x",
+        "tier_span": "Pro",
+        "desc": "Für Entwickler und Kreative, die Claude Code täglich intensiv im Produktiveinsatz nutzen.",
+        "init_note": "Inkl. Claude-Umgebung · 5x Kontingent, Stückkosten ca. 78 % von 1x",
+        "features_html": [
+          "5-faches Standard-Nutzungskontingent",
+          "Dedizierte Workspace-Konfiguration",
+          "Physische High-Spec-Mac-mini-Umgebung",
+          "Vollständig verwaltete Abo-Abrechnung &amp; Betriebsführung",
+          "Reserven für lange Claude-Code-Tasks",
+          "<strong>7×16h</strong> prioritärer 1:1-Support",
+          "Separates macOS-Konto · Zugriff per Apple Bildschirmfreigabe"
+        ],
+        "mailto_subject": "Zaokit ClaudeOps Anfrage - 5x Pro"
+      },
+      {
+        "badge_promo": "Jahresend-Aktion · Bis 31. Dez. 2026",
+        "tier_b": "20x",
+        "tier_span": "Ultimate",
+        "desc": "Für produktive Builder, Gründer und Power-User, die mehrere Agenten rund um die Uhr betreiben.",
+        "orig_title": "Regulärer Preis",
+        "init_note": "Aktionspreis bleibt bei Verlängerung · Stückkosten ca. 35 % von 1x",
+        "features_html": [
+          "20-faches Standard-Nutzungskontingent",
+          "Dedizierte Workspace-Konfiguration",
+          "High-Spec Mac Studio / Mac mini · Option auf dedizierte Maschine",
+          "Vollständig verwaltete Abo-Abrechnung &amp; Betriebsführung",
+          "Multi-Agent- und parallele Workflows",
+          "<strong>Erstklassiger 7×24h</strong> privater Concierge-Kanal",
+          "Kostenloser Highspeed-RustDesk-Kanal inklusive",
+          "Kostenlose 6 TB Google-Drive-Cloudspeicher inklusive"
+        ],
+        "mailto_subject": "Zaokit ClaudeOps Anfrage - 20x Ultimate"
+      }
+    ],
+    "dedicated_line": {
+      "h3_main": "ClaudeOps Enterprise-Standleitung · Grenzüberschreitende Beschleunigung",
+      "h3_pill": "Inklusive bei 20x / Team / Business",
+      "sub": "Optionales Add-on für 1x- & 5x-Abonnenten: Leiten Sie Ihren Datenverkehr über unser grenzüberschreitendes Enterprise-BGP-Backbone mit Dual-Leg-BBR und 0 % Paketverlust für verzögerungsfreie Bildschirmfreigabe & Claude Code (2 Monate gratis bei Jahreszahlung).",
+      "cards": [
+        {
+          "code": "1x Standleitung",
+          "span": "Standard-Beschleunigung · Für 1x Standard",
+          "desc": "Grenzüberschreitendes Enterprise-BGP-Backbone + selbst gehostetes verschlüsseltes Niedriglatenz-Relay + Dual-Leg-BBR-Optimierung — hält Apple Bildschirmfreigabe, SSH und leichte Claude-Code-Sitzungen auch zur Spitzenzeit ruckelfrei.",
+          "init_note": "24/7 verlustfreie BGP-Beschleunigung · Mit Tarif verwaltet",
+          "btn": "1x Leitung buchen →"
+        },
+        {
+          "code": "5x Standleitung",
+          "span": "Pro-Beschleunigung · Für 5x Pro (20 % geringere Stückkosten)",
+          "desc": "5× prioritäres Bandbreitenkontingent + hochpriorisierte Enterprise-BGP-QoS-Queue + Dual-Leg-BBR mit 0 %-Paketverlust-Garantie — gebaut für intensive Echtzeit-Claude-Code-Sessions, große Repo-Syncs und High-FPS-Remote-Desktops.",
+          "init_note": "5× prioritärer Durchsatz · Hochpriorisiertes BGP-QoS",
+          "btn": "5x Leitung buchen →"
+        }
+      ]
+    },
+    "enterprise": {
+      "divider": "Team & Business · Dedizierte Multi-Seat-Cluster",
+      "switch_aria": "Team-Platzstufe wählen",
+      "tier_pro": "Alle Plätze Pro (1x)",
+      "tier_max": "Alle Plätze Max (5x)",
+      "tier_max_badge": "Empfohlen",
+      "tier_ultra": "Alle Plätze Ultra (20x)",
+      "toolbar_html": "Starten Sie mit einheitlichen Pro-, Max- oder Ultra-Plätzen — oder kombinieren Sie jederzeit flexibel über die <strong>Self-Service-Platz-Upgrades</strong> weiter unten.",
+      "team": {
+        "init_badge": "5 × Max (5x)-Plätze · Dedizierter Host",
+        "sub": "5 Plätze",
+        "desc": "Entwickelt für Startup-Pods, KI-Studios und Forschungsteams — ein dedizierter physischer Mac-Host exklusiv für Ihr Team mit zentraler Abrechnung und Admin-Kontrolle.",
+        "init_note": "Inkl. 5 isolierter Max (5x)-Plätze · Dedizierter Mac-Host & Sammelrechnung",
+        "init_seat_li_html": "Inklusive <strong>5 Max (5x)-Engineering-Plätzen</strong> (eigener Claude-Workspace &amp; eigenes macOS-Konto je Mitglied)",
+        "features_html": [
+          "<strong>Dedizierter High-Spec Mac Studio / Mac mini Host</strong> exklusiv für Ihr Team",
+          "Flexible Platz-Neuzuweisung beim Onboarding/Offboarding &amp; <strong>eine konsolidierte Sammelrechnung</strong>",
+          "Einzelne Plätze jederzeit bei Bedarf auf Max (5x) oder Ultra (20x) hochstufen",
+          "<strong>7×24h</strong> dedizierter Team-Concierge-Gruppenkanal",
+          "Kostenloser privater Highspeed-RustDesk-Teamkanal"
+        ],
+        "init_storage_li": "Kostenlose 12 TB Team-Cloud-Speicher inklusive (Google Drive / iCloud+)",
+        "btn": "Team abonnieren",
+        "consult": "Mehr Plätze oder Wunsch-Konfiguration benötigt? Sprechen Sie uns an →",
+        "mailto_subject": "Zaokit ClaudeOps Anfrage - Team-Tarif"
+      },
+      "biz": {
+        "init_badge": "Enterprise · 10 × Max (5x)-Cluster",
+        "sub": "10 Plätze",
+        "desc": "Für wachsende Tech-Unternehmen, Quant-Teams und Engineering-Organisationen — dedizierte physische Multi-Mac-Cluster mit Dual-Region-Bereitstellung über 9 Länder.",
+        "init_note": "Inkl. 10 isolierter Max (5x)-Plätze · Dedizierter Multi-Mac-Cluster & VIP-SLA",
+        "init_seat_li_html": "Inklusive <strong>10 Max (5x)-Engineering-Plätzen</strong> (bei Bedarf auf 50+ Plätze erweiterbar)",
+        "features_html": [
+          "<strong>Dedizierter physischer Multi-Unit Mac Studio / Mac mini Cluster</strong>",
+          "Unterstützt <strong>Dual-Region-Bereitstellung &amp; schnelle Migration über 9 Länder</strong> + dedizierte statische native ISP-Anbindung",
+          "Konsolidierte Unternehmensrechnung &amp; persönlicher Customer Success Manager",
+          "<strong>Erstklassiger 7×24h-VIP-Enterprise-SLA-Kanal</strong> (prioritärer Betrieb &amp; Architekturberatung)",
+          "Kostenlose dedizierte Enterprise-RustDesk-Relay-Leitung"
+        ],
+        "init_storage_li": "Kostenlose 30 TB Enterprise-Cloud-Speicher inklusive (Google Drive / iCloud+)",
+        "btn": "Business abonnieren",
+        "consult": "20+ Plätze oder individueller Privat-Cluster? Enterprise-Vertrieb kontaktieren →",
+        "mailto_subject": "Zaokit ClaudeOps Anfrage - Business-Tarif"
+      }
+    },
+    "seat_addons": {
+      "h3_main": "Einzelplatz-Upgrade-Add-ons",
+      "h3_pill": "1–50 Plätze im Checkout wählbar",
+      "sub": "Kombinieren Sie Stufen flexibel auf jedem aktiven Team- oder Business-Basistarif — stufen Sie einzelne Teammitglieder bei Bedarf hoch (auch Jahres-Add-ons erhalten 2 Monate gratis).",
+      "cards": [
+        {
+          "from": "Pro 1x",
+          "to": "Max 5x",
+          "tag": "Upgrade",
+          "desc": "Stufen Sie beliebige Pro (1x)-Teamplätze für intensives tägliches Claude-Code-Engineering auf Max (5x) hoch.",
+          "btn": "Platz upgraden →"
+        },
+        {
+          "from": "Max 5x",
+          "to": "Ultra 20x",
+          "tag": "Upgrade",
+          "desc": "Erweitern Sie Gründer, CTOs oder Lead-Architekten in einem All-Max-Tarif auf volle 20x-Ultra-Multi-Agent-Kapazität.",
+          "btn": "Platz upgraden →"
+        },
+        {
+          "from": "Pro 1x",
+          "to": "Ultra 20x",
+          "tag": "Direkt",
+          "desc": "Heben Sie einzelne Plätze eines All-Pro-Basistarifs direkt auf das volle 20x-Ultra-Flaggschiff-Kontingent.",
+          "btn": "Platz upgraden →"
+        }
+      ]
+    },
+    "storage": {
+      "tag": "Cloud-Speicher · Google Drive & iCloud+",
+      "h2": "Verwalteter Cloud-Speicher für digitale Assets",
+      "sub_html": "Wählen Sie <strong>Google Drive (Google One)</strong> oder <strong>Apple iCloud+</strong> in Stufen von 2 TB bis 30 TB — inklusive verwalteter Verlängerungen und demselben persönlichen 7×16h-1:1-Concierge-Support.",
+      "currency_aria": "Währung wählen (Cloud-Speicher)",
+      "per_mo": "/ Mon.",
+      "cards": [
+        {
+          "tier_b": "2 TB",
+          "tier_span": "Speicher",
+          "desc": "Großzügiger Speicherplatz für alltägliche Fotos, Videos und geräteübergreifende Backups.",
+          "note": "Google Drive oder iCloud+ · Verwaltete Abrechnung",
+          "features": [
+            "Google Drive oder Apple iCloud+",
+            "Privater Bereich mit isoliertem Zugriff",
+            "Verwaltete Abrechnung · 7×16h 1:1-Support"
+          ],
+          "btn": "2 TB abonnieren"
+        },
+        {
+          "badge": "Creator-Tipp",
+          "tier_b": "6 TB",
+          "tier_span": "Speicher",
+          "desc": "Optimal für Fotografen, Content-Creator und umfangreiche persönliche Archive.",
+          "note": "Google Drive oder iCloud+ · Verwaltete Abrechnung",
+          "features": [
+            "Google Drive oder Apple iCloud+",
+            "Fotos in Originalauflösung und 4K-Medien-Sync",
+            "Verwaltete Abrechnung · 7×16h 1:1-Support"
+          ],
+          "btn": "6 TB abonnieren"
+        },
+        {
+          "tier_b": "12 TB",
+          "tier_span": "Speicher",
+          "desc": "Hochkapazitäts-Tresor für Power-User und Sicherungen mehrerer Geräte.",
+          "note": "Google Drive oder iCloud+ · Verwaltete Abrechnung",
+          "features": [
+            "Google Drive oder Apple iCloud+",
+            "Große Projektarchive & Geräte-Spiegelungen",
+            "Verwaltete Abrechnung · 7×16h 1:1-Support"
+          ],
+          "btn": "12 TB abonnieren"
+        },
+        {
+          "tier_b": "30 TB",
+          "tier_span": "Flagship",
+          "desc": "Cloud-Tresor auf Studio-Niveau für RAW-Filmmaterial, KI-Datensätze und Langzeitarchive.",
+          "note": "Google Drive oder iCloud+ · Concierge-Betrieb",
+          "features": [
+            "Google Drive 30 TB oder Dual-Cloud-Kombi",
+            "Schnelle globale Team-Zusammenarbeit",
+            "Erstklassiger privater 7×24h-Concierge"
+          ],
+          "btn": "30 TB abonnieren"
+        }
+      ]
+    },
+    "stripe_trust_html": "Sicherer Checkout über <strong>Stripe</strong> · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · Monatlich oder jährlich (2 Monate gratis), jederzeit kündbar",
+    "foot_before_currency": "Alle Preise beinhalten eine physische High-Spec-Mac-Umgebung (separates Konto bei 1x / 5x, Option auf dedizierte Maschine bei 20x, dedizierter Host oder Multi-Mac-Cluster bei Team / Business), eine vorkonfigurierte KI-Toolchain sowie das vollständige Concierge-Abo- und Abrechnungsmanagement, monatlich oder jährlich (10 Monate zahlen für 12) abgerechnet in ",
+    "foot_after_currency": ". Die Preise in den jeweiligen Währungen spiegeln das lokale Marktniveau wider. ",
+    "foot_promo": "Der durchgestrichene 20x-Preis ist der reguläre Preis, der ab dem 1. Januar 2027 für Neuabonnements gilt. ",
+    "foot_legal_prefix": "Mit dem Abonnieren stimmen Sie unseren ",
+    "foot_terms_link": "Nutzungsbedingungen",
+    "foot_legal_mid": " und unserer ",
+    "foot_refund_link": "Rückerstattungsrichtlinie",
+    "foot_legal_suffix": " zu."
+  },
+  "process": {
+    "tag": "Ablauf",
+    "h2": "Vier Schritte. Noch am selben Tag startklar.",
+    "steps": [
+      {
+        "h3": "Tarif auswählen",
+        "p": "Wählen Sie 1x, 5x oder 20x sowie Ihre Währung — oder schreiben Sie uns vorab per E-Mail."
+      },
+      {
+        "h3": "Über Stripe abonnieren",
+        "p": "Wählen Sie im sicheren Stripe-Checkout Ihre Wunschregion und schließen Sie Ihr Monats- oder Jahresabo ab."
+      },
+      {
+        "h3": "Bereitstellung",
+        "p": "Noch am selben Tag weisen wir Ihnen Ihren High-Spec-Mac und Ihr separates Konto zu (dedizierte Maschine bei 20x) und senden Ihnen Zugangsdaten samt Anleitung."
+      },
+      {
+        "h3": "Laufender Betrieb",
+        "p": "Verlängerungen, Kontopflege und Fehlerbehebung übernehmen dauerhaft wir für Sie."
+      }
+    ]
+  },
+  "faq": {
+    "tag": "FAQ",
+    "h2": "Häufig gestellte Fragen",
+    "items": [
+      {
+        "q": "Wer betreibt Zaokit ClaudeOps?",
+        "a_html": "Zaokit ClaudeOps wird von einem in Australien registrierten Unternehmen betrieben. Zahlungen werden sicher über Stripe abgewickelt, und zu jeder Zahlung erhalten Sie automatisch einen offiziellen Beleg sowie eine Rechnung."
+      },
+      {
+        "q": "Wie unterscheiden sich 1x, 5x, 20x, Team und Business? Gibt es einen Jahresrabatt?",
+        "a_html": "Alle fünf Stufen skalieren Plätze, Hardware-Isolierung, Concierge-Zeiten und enthaltene Zusatzleistungen — und <strong>bei jährlicher Abrechnung werden in jedem Tarif nur 10 Monate pro Jahr berechnet (2 Monate gratis)</strong>:<br>• <strong>1x Standard</strong>: Solo-Basiskontingent + Mac-mini-Umgebung (separates macOS-Konto) + <strong>7×8h</strong> 1:1-Support;<br>• <strong>5x Pro</strong>: Solo-5×-Kontingent + High-Spec Mac mini (separates macOS-Konto) + <strong>7×16h</strong> prioritärer 1:1-Support;<br>• <strong>20x Ultimate</strong>: Solo-20×-Kontingent + High-Spec Mac Studio / Mac mini (Option auf dedizierte Maschine) + <strong>7×24h</strong> privater Concierge + <strong>privater RustDesk-Kanal</strong> + <strong>6 TB Cloud-Speicher</strong>;<br>• <strong>Team (5 Plätze · Dedizierter Host)</strong>: Verfügbar als All-Pro (1x), All-Max (5x) oder All-Ultra (20x) — dedizierter physischer Mac-Host für Ihr Team, Platz-Neuzuweisung, Sammelrechnung, privater RustDesk-Kanal, 6–12 TB Cloud-Speicher &amp; 7×24h Team-Concierge;<br>• <strong>Business (10 Plätze · Multi-Mac-Cluster)</strong>: Verfügbar als All-Pro (1x), All-Max (5x) oder All-Ultra (20x) — dedizierter Multi-Mac-Cluster (Dual-Region-Bereitstellung &amp; schnelle Migration in 9 Ländern), Unternehmensrechnung, Enterprise-RustDesk-Relay, 12–30 TB Cloud-Speicher &amp; 7×24h VIP-SLA;<br>• <strong>Einzelplatz-Upgrade-Add-ons</strong>: Starten Sie mit einem All-Pro- oder All-Max-Basistarif und stufen Sie einzelne Plätze jederzeit per Self-Service-Checkout auf Max (5x) oder Ultra (20x) hoch (1–50 Plätze wählbar);<br>• <strong>ClaudeOps Enterprise-Standleitungs-Add-on</strong>: Optionale grenzüberschreitende Enterprise-BGP-Beschleunigung für 1x (+$5/Mon.) und 5x (+$20/Mon.) (bei 20x, Team &amp; Business bereits kostenlos enthalten)."
+      },
+      {
+        "q": "Was ist das ClaudeOps Enterprise-Standleitungs-Add-on und wer benötigt es?",
+        "a_html": "Die <strong>ClaudeOps Enterprise-Standleitung</strong> leitet Ihren Remote-Desktop- und Terminal-Datenverkehr über unser grenzüberschreitendes Premium-Enterprise-BGP-Backbone mit eigenen Relays und Dual-Leg-BBR-Staukontrolle und beseitigt so Jitter und Paketverluste im öffentlichen Internet zu Spitzenzeiten:<br>• <strong>1x Standleitung ($5/Mon. · $50/Jahr)</strong>: Konzipiert für 1x-Standard-Einzelabonnenten mit täglicher Nutzung von Apple Bildschirmfreigabe, SSH und leichtem Coding;<br>• <strong>5x Standleitung ($20/Mon. · $200/Jahr)</strong>: Ausgelegt für anspruchsvolle 5x-Pro-Engineering-Workloads mit 5× prioritärem Bandbreitenkontingent und hochpriorisiertem BGP-QoS (20 % niedrigere Stückkosten gegenüber 1x);<br>• <strong>Kostenlos in Flaggschiff- &amp; Team-Tarifen enthalten</strong>: <strong>In den Tarifen 20x Ultimate, Team und Business ist die dedizierte Enterprise-Beschleunigung bereits ohne Aufpreis inbegriffen</strong>."
+      },
+      {
+        "q": "Warum kostet Zaokit ClaudeOps mehr als herkömmliche Cloud-Desktops oder geteilte Zugänge?",
+        "a_html": "Weil Sie für <strong>deterministische physische Infrastruktur und erstklassigen White-Glove-Engineering-Betrieb</strong> bezahlen — nicht für billige geteilte VPS-Instanzen oder überbuchte Sammel-Logins. Jedes Abonnement deckt vier reale Infrastrukturblöcke ab:<br>• <strong>Physische High-Spec-Mac-Hardware</strong>: Echte Mac Studio und Mac mini Systeme (niemals virtualisierte Cloud-VMs) für dauerhaft konstante lokale Rechenleistung und 24/7-Zuverlässigkeit — ab 20x mit vollständiger Hardware-Isolierung auf eigener Maschine;<br>• <strong>Symmetrische native Bandbreite von 200 Mbit/s bis 500 Mbit/s+</strong>: Lokale native ISP-Breitbandanschlüsse in 9 Ländern mit hohen symmetrischen Upload-/Download-Raten, damit die Bildschirmfreigabe gestochen scharf und flüssig bleibt statt an geteilten 10–30-Mbit/s-Leitungen zu stocken;<br>• <strong>Enterprise-BGP-Backbone</strong>: Selbst gehostete Highspeed-Relays über ein Premium-Enterprise-BGP-Backbone in HK/APAC mit Dual-Leg-BBR-Optimierung für null grenzüberschreitenden Paketverlust;<br>• <strong>Volles offizielles Kontingent + 7×16 / 7×24 Concierge-Betrieb</strong>: Volle offizielle Abo-Kontingente, verwaltete Abrechnung, iCloud-/Google-Drive-Sync und persönlicher 1:1-Engineering-Support."
+      },
+      {
+        "q": "Separates Konto vs. dedizierte Maschine: Warum sind 1x / 5x auf die Apple Bildschirmfreigabe beschränkt?",
+        "a_html": "• <strong>Getrennte Konto-Isolierung (1x / 5x)</strong>: Mehrere Nutzer teilen sich einen leistungsstarken Mac, verfügen jedoch jeweils über ein eigenes macOS-Konto sowie eigene Dateien und Berechtigungen — niemand kann die Daten anderer einsehen. Zum Schutz der Privatsphäre aller Nutzer erfolgt der Zugriff ausschließlich über die <strong>Apple Bildschirmfreigabe</strong>, die je Konto eine isolierte Desktop-Sitzung aufbaut, sodass Ihr Bildschirm und Ihre Aktivitäten privat bleiben.<br>• <strong>Dedizierte Maschine (verfügbar bei 20x)</strong>: Der gesamte physische Mac dient allein Ihnen. Hardware, Betriebssystem und Netzwerk gehören vollständig Ihnen. Installieren Sie beliebige Software, ändern Sie Systemeinstellungen und nutzen Sie <strong>jedes gewünschte Remote-Desktop-Tool</strong>: Apple Bildschirmfreigabe, Drittanbieter-VNC wie RealVNC / TigerVNC oder unseren selbst gehosteten Highspeed-RustDesk-Kanal (bei 20x inklusive).<br><strong>Warum keine Drittanbieter-Remote-Tools auf geteilten Maschinen?</strong> RustDesk und die meisten Drittanbieter-VNC-Programme greifen die Hauptbildschirmsitzung des Macs ab, wodurch auf Mehrbenutzersystemen andere Ihren Desktop sehen oder steuern könnten. Daher schalten wir diese gezielt nur im dedizierten Modus frei — als bewusste Datenschutzmaßnahme."
+      },
+      {
+        "q": "Welchen Tarif sollte ich wählen?",
+        "a_html": "Wählen Sie 1x für alltägliches Chatten und Schreiben, 5x wenn Sie täglich mit Claude Code entwickeln, und 20x für parallele Multi-Agent-Workflows, intensive Rund-um-die-Uhr-Nutzung oder eine dedizierte Maschine mit RustDesk und freier Wahl des Remote-Desktop-Tools. Unsicher? Starten Sie kleiner und upgraden Sie jederzeit."
+      },
+      {
+        "q": "Was bedeutet eine „deterministische, stabile Umgebung“ konkret in der Praxis?",
+        "a_html": "Es bedeutet Ihren eigenen isolierten Arbeitsbereich + eine fest zugewiesene physische High-Spec-Mac-Workstation + dedizierte Abrechnung, Verlängerung und täglichen Engineering-Betrieb. Standardisierte Betriebsabläufe verhindern unerwartete Abbrüche, Konfigurationskonflikte und fehlgeschlagene Verlängerungen, damit Ihr Workflow jederzeit planbar bleibt."
+      },
+      {
+        "q": "Wie arbeite ich im Alltag damit? Auf dem Remote-Mac oder lokal?",
+        "a_html": "<strong>Beides funktioniert — ganz so, wie es am besten zu Ihnen passt:</strong><br>1. <strong>Remote-Desktop</strong>: Melden Sie sich bei 1x / 5x über die macOS-Bildschirmfreigabe in Ihrem separaten Konto an — isoliert, sicher und sofort einsatzbereit. Bei 20x im dedizierten Modus können Sie zusätzlich Drittanbieter-VNC wie RealVNC / TigerVNC oder unseren <strong>selbst gehosteten Highspeed-RustDesk-Kanal (bei 20x inklusive)</strong> für noch geringere Latenz nutzen. In beiden Fällen steht Ihnen der vollständige macOS-Desktop samt Terminal zur Verfügung, und lange Tasks laufen unterbrechungsfrei weiter.<br>2. <strong>Nahtlose Integration in Ihren lokalen Workflow</strong>: Verbinden Sie Ihre gewohnten lokalen Entwicklertools direkt mit der entfernten Entwicklungsumgebung — ganz ohne lokalen Einrichtungs- oder Wartungsaufwand. Der Remote-Mac fungiert dabei als Ihr dediziertes Compute-Backend."
+      },
+      {
+        "q": "Wie bleiben mein Code und meine Daten sicher und vertraulich?",
+        "a_html": "Bei 1x / 5x erhält jeder Nutzer ein separates macOS-Konto mit isolierten Dateien, Berechtigungen und Desktop-Sitzungen, zugänglich ausschließlich über die Apple Bildschirmfreigabe, sodass niemand sonst Ihren Bildschirm einsehen kann. Bei 20x können Sie eine dedizierte Maschine aktivieren: Der gesamte High-Spec Mac Studio oder Mac mini steht exklusiv für Sie bereit — isoliert bis auf die Hardware. Ihr Sitzungsverlauf, Quellcode und Ihre Umgebungsvariablen verbleiben in Ihrem eigenen Konto bzw. auf Ihrer Maschine. Sie vergeben eigene Passwörter und Verschlüsselungsrichtlinien, und unser Team greift nicht aktiv auf Ihre Daten zu — außer bei Wartung, Sicherheitsvorfällen oder von Ihnen autorisierter Fehlerbehebung."
+      },
+      {
+        "q": "Wo befinden sich die Maschinen und Netzwerke?",
+        "a_html": "Unsere physischen High-Spec Mac Studio und Mac mini Systeme stehen in <strong>Australien, den Vereinigten Staaten, Singapur, Malaysia, Indonesien, Japan, Kambodscha, Neuseeland und Kanada</strong> und sind für höchste Zuverlässigkeit über <strong>lokale native ISP-Breitbandnetze (keine geteilten Public-Cloud-Rechenzentren)</strong> angebunden. Wählen Sie beim Checkout Ihre Wunschregion aus — wir weisen Ihnen langfristig eine feste Maschine und ein festes Konto zu (komplette Maschine dediziert bei 20x)."
+      },
+      {
+        "q": "Wie funktioniert der Cloud-Speicher über Google Drive & iCloud+?",
+        "a_html": "Wir bieten Speicherpakete mit 2 TB ($8.99/Mon.), 6 TB ($28.99/Mon.), 12 TB ($58.99/Mon.) und 30 TB ($148.99/Mon.) an. Wählen Sie beim Stripe-Checkout <strong>Apple iCloud+</strong> oder <strong>Google Drive (Google One)</strong> aus und geben Sie die E-Mail-Adresse Ihres Kontos an; unser persönliches 7×16h-1:1-Concierge-Team übernimmt die Aktivierung und die laufenden Verlängerungen."
+      },
+      {
+        "q": "Kann ich meinen Tarif hoch- oder herunterstufen?",
+        "a_html": "Ja. Tarifwechsel greifen zum nächsten Abrechnungszeitraum. Wenn Sie ein sofortiges Upgrade wünschen, kontaktieren Sie uns einfach — wir berechnen dann lediglich den Differenzbetrag."
+      },
+      {
+        "q": "Was passiert, wenn ein Problem auftritt?",
+        "a_html": "Kontaktieren Sie uns umgehend. Wir behandeln Entstörungen mit höchster Priorität und sorgen dafür, dass Sie schnellstmöglich wieder produktiv arbeiten können."
+      },
+      {
+        "q": "Welche Zahlungsmethoden akzeptieren Sie? Erhalte ich eine Rechnung?",
+        "a_html": "Wir akzeptieren Online-Abonnements über Stripe — darunter Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay und Link — mit Abrechnung in AUD, USD, EUR, NZD, CAD, SGD oder CNY. UnionPay-Karteninhaber können für eine besonders reibungslose Zahlung CNY wählen. Stripe stellt automatisch einen offiziellen Zahlungsbeleg sowie eine Rechnung aus. Für Unternehmenspläne mit mehreren Konten schreiben Sie uns gerne per E-Mail."
+      },
+      {
+        "q": "Wie kann ich meinen eigenen Mac einbringen oder Ihrem globalen Compute-Netzwerk beitreten, um Einnahmen zu erzielen und weitere Städte zu vernetzen?",
+        "a_html": "Wir laden Partner weltweit herzlich ein, Teil unseres nativen Compute-Netzwerks zu werden, um gemeinsam wirklich alle 8 Milliarden Menschen zu erreichen! <strong>Sie können Ihre eigene Maschine einbringen und Ihre Ressourcen teilen — so erzielen Sie Einnahmen und eröffnen zugleich anderen die Chance, ihre Ideen zu verwirklichen!</strong> Ob Sie freie oder leistungsstarke physische Mac-Hardware besitzen, über hochwertiges lokales ISP-Breitband in Ihrer Stadt verfügen oder Entwickler- und Creator-Communities in Ihrer Region vernetzen: Schreiben Sie uns jederzeit an <a href=\"mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network\" style=\"color:var(--primary-strong);font-weight:600\">jason2023zhang@gmail.com</a> mit Angaben zu Ihrer Stadt sowie Hardware/ISP — herzlich willkommen an Bord!"
+      }
+    ]
+  },
+  "partner": {
+    "eyebrow": "GLOBALER COMPUTE-PARTNER · Gemeinsam das weltweite Compute-Mesh aufbauen",
+    "h2_html": "Werden Sie Teil unseres globalen Compute-Netzwerks —<br><em class=\"grad\">Für alle 8 Milliarden Menschen weltweit!</em>",
+    "p_html": "Ausgehend von über 13 aktiven Städten in 9 Ländern bringen wir reine native Rechenleistung und modernste KI-Produktivität in jeden Winkel der Erde. <strong>Bringen Sie Ihre eigene Maschine ein und teilen Sie Ihre Ressourcen — erzielen Sie Einnahmen, während Sie anderen neue Perspektiven eröffnen!</strong> Wo auch immer Sie zu Hause sind: Schreiben Sie uns direkt per E-Mail, um gemeinsam die nächste Stadt zu vernetzen.",
+    "chips": [
+      "✦ Eigenen Mac einbringen · Teilen & verdienen",
+      "✦ Lokales natives Breitband teilen",
+      "✦ Cluster-Hosting & Regionalpartner"
+    ],
+    "btn": "Mac einbringen / E-Mail an uns: jason2023zhang@gmail.com →"
+  },
+  "cta": {
+    "h2": "KI macht die Welt grenzenlos. Starten Sie noch heute.",
+    "p": "Schließen Sie sich Entwicklern und Machern in unseren vernetzten Metropolen weltweit an — abonnieren Sie über Stripe für die Bereitstellung modernster KI-Produktivität und eines erstklassigen Erlebnisses noch am selben Tag.",
+    "btn_primary": "Tarif auswählen",
+    "btn_secondary": "E-Mail: jason2023zhang@gmail.com",
+    "tg_qr_aria": "Telegram öffnen @letcode2020",
+    "tg_qr_alt": "Telegram-QR-Code @letcode2020",
+    "tg_h3": "Auf Telegram chatten",
+    "tg_p": "Scannen oder antippen, um uns für Beratung vor dem Kauf, technischen Support und KI-Einblicke hinzuzufügen."
+  },
+  "footer": {
+    "brand": "Zaokit ClaudeOps",
+    "entity": "Betrieben von einem in Australien registrierten Unternehmen · 19 globale Sprachen",
+    "contact_label": "Kontakt: ",
+    "alt_label": "Alternativ: ",
+    "rights": "Alle Rechte vorbehalten.",
+    "products_h4": "Zaokit Produkte",
+    "follow_h4": "Folgen Sie uns",
+    "terms": "Nutzungsbedingungen",
+    "refund": "Rückerstattungsrichtlinie",
+    "privacy": "Datenschutzerklärung",
+    "disclaimer": "Haftungsausschluss: Zaokit ist ein unabhängiges Beratungsunternehmen für Cloud-Workstations und KI-Engineering und steht in keiner Verbindung zu Anthropic PBC, Apple Inc. oder Google LLC und wird von diesen weder unterstützt noch gesponsert. Claude, Claude Code, Mac, iCloud und Google Drive sind Marken ihrer jeweiligen Eigentümer."
+  },
+  "js": {
+    "per_month": "/ Monat",
+    "per_year": "/ Jahr",
+    "per_seat_mo": "/ Platz / Mon.",
+    "per_seat_yr": "/ Platz / Jahr",
+    "per_mo_short": "/ Mon.",
+    "per_yr_short": "/ Jahr",
+    "title_12mo": "12 Monate bei monatlicher Zahlung",
+    "title_reg_mo": "Regulärer Monatspreis",
+    "note_annual": "10 Monate bei Jahreszahlung · ~{sym}{eq}/Mon., Sie sparen {sym}{save}",
+    "note_1x_mo": "Inkl. Claude-Umgebung · ca. {sym}{day} / Tag",
+    "note_20x_promo": "Aktionspreis bleibt bei Verlängerung · Stückkosten ca. {ratio} % von 1x",
+    "note_mult_mo": "Inkl. Claude-Umgebung · {mult}x Kontingent, Stückkosten ca. {ratio} % von 1x",
+    "ent_team_mo": "Inkl. 5 isolierter {label}-Plätze · Dedizierter Mac-Host & Sammelrechnung",
+    "ent_biz_mo": "Inkl. 10 isolierter {label}-Plätze · Dedizierter Multi-Mac-Cluster & VIP-SLA",
+    "line_0_mo": "24/7 verlustfreie BGP-Beschleunigung · Mit Tarif verwaltet",
+    "line_1_mo": "5× prioritärer Durchsatz · Hochpriorisiertes BGP-QoS",
+    "ent_copy": {
+      "pro": {
+        "label": "Pro (1x)",
+        "teamBadge": "5 × Pro (1x)-Plätze · Dedizierter Host",
+        "bizBadge": "Enterprise · 10 × Pro (1x)-Cluster",
+        "teamSeatLi": "Inklusive <strong>5 Pro (1x)-Standardplätzen</strong> (eigener Claude-Workspace &amp; eigenes macOS-Konto je Mitglied)",
+        "bizSeatLi": "Inklusive <strong>10 Pro (1x)-Standardplätzen</strong> (bei Bedarf auf 50+ Plätze erweiterbar)",
+        "teamStorage": "Kostenlose 6 TB Team-Cloud-Speicher inklusive (Google Drive / iCloud+)",
+        "bizStorage": "Kostenlose 12 TB Enterprise-Cloud-Speicher inklusive (Google Drive / iCloud+)"
+      },
+      "max": {
+        "label": "Max (5x)",
+        "teamBadge": "5 × Max (5x)-Plätze · Dedizierter Host",
+        "bizBadge": "Enterprise · 10 × Max (5x)-Cluster",
+        "teamSeatLi": "Inklusive <strong>5 Max (5x)-Engineering-Plätzen</strong> (eigener Claude-Workspace &amp; eigenes macOS-Konto je Mitglied)",
+        "bizSeatLi": "Inklusive <strong>10 Max (5x)-Engineering-Plätzen</strong> (bei Bedarf auf 50+ Plätze erweiterbar)",
+        "teamStorage": "Kostenlose 12 TB Team-Cloud-Speicher inklusive (Google Drive / iCloud+)",
+        "bizStorage": "Kostenlose 30 TB Enterprise-Cloud-Speicher inklusive (Google Drive / iCloud+)"
+      },
+      "ultra": {
+        "label": "Ultra (20x)",
+        "teamBadge": "5 × Ultra (20x)-Plätze · Dedizierter Studio-Host",
+        "bizBadge": "Enterprise · 10 × Ultra (20x)-Cluster",
+        "teamSeatLi": "Inklusive <strong>5 Ultra (20x)-Flaggschiff-Plätzen</strong> (eigener Claude-Workspace &amp; eigenes macOS-Konto je Mitglied)",
+        "bizSeatLi": "Inklusive <strong>10 Ultra (20x)-Flaggschiff-Plätzen</strong> (bei Bedarf auf 50+ Plätze erweiterbar)",
+        "teamStorage": "Kostenlose 12 TB Team-Cloud-Speicher inklusive (Google Drive / iCloud+)",
+        "bizStorage": "Kostenlose 30 TB Enterprise-Cloud-Speicher inklusive (Google Drive / iCloud+)"
+      }
+    },
+    "toast_copied": "E-Mail kopiert: {email}. Ihr E-Mail-Programm wird geöffnet…",
+    "toast_fallback": "Bitte schreiben Sie uns an {email}"
+  },
+  "legal_common": {
+    "back_home": "← Zurück zur Startseite",
+    "footer_copy": "© Zaokit AI · Betrieben von einem in Australien registrierten Unternehmen"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung | Zaokit ClaudeOps",
+    "description": "Datenschutzerklärung von Zaokit ClaudeOps",
+    "h1": "Datenschutzerklärung",
+    "meta": "Datum des Inkrafttretens: 3. November 2026. Bei Abweichungen zwischen verschiedenen Sprachfassungen ist die englische Fassung maßgeblich.",
+    "lead_html": "Diese Datenschutzerklärung erläutert, wie wir im Rahmen der Bereitstellung von Zaokit ClaudeOps Ihre personenbezogenen Daten erheben, nutzen, speichern und schützen. Wir verarbeiten personenbezogene Daten im Einklang mit dem australischen Privacy Act 1988 und den Australian Privacy Principles (APPs).",
+    "sections": [
+      {
+        "h2": "1. Welche Daten wir erheben",
+        "body_html": "<ul><li><strong>Kontakt- und Kontodaten</strong>: Ihr Name, Ihre E-Mail-Adresse und die beim Checkout gewählte Wunschregion.</li><li><strong>Zahlungsdaten</strong>: werden über Stripe abgewickelt. Wir sehen oder speichern niemals Ihre vollständige Kartennummer; wir erhalten lediglich Transaktionsprotokolle, Belege und den Zahlungsstatus.</li><li><strong>Servicedaten</strong>: E-Mail-Adressen von Drittanbieterkonten, die Sie zur Einrichtung des Services angeben (z. B. Claude-, Google- oder Apple-Konten), sowie die von uns bereitgestellten Zugangsdaten.</li><li><strong>Kommunikation</strong>: Nachrichten, die Sie uns per E-Mail, Telegram oder über andere Kanäle senden.</li><li><strong>Website-Daten</strong>: Gerät, Browser, IP-Adresse und besuchte Seiten, erfasst über Analysetools wie Google Analytics und Umami.</li></ul>"
+      },
+      {
+        "h2": "2. Wie wir die Daten verwenden",
+        "body_html": "<p>Wir verwenden diese Daten ausschließlich zur Einrichtung und Bereitstellung des Services, zur Abwicklung von Abrechnungen und Verlängerungen, für den Kundensupport, zur Absicherung unserer Systeme und Missbrauchsprävention, zur Erfüllung gesetzlicher Pflichten sowie zur Verbesserung unserer Website und unseres Services. Wir verkaufen Ihre personenbezogenen Daten nicht.</p>"
+      },
+      {
+        "h2": "3. Daten in Ihrer Arbeitsumgebung",
+        "body_html": "<p>Dateien, Quellcode und Sitzungen, die Sie in Ihrer Umgebung speichern, gehören Ihnen. Wir greifen nicht aktiv darauf zu und werden nur tätig, soweit dies für Systemwartung, Sicherheitsvorfälle, gesetzliche Vorgaben oder eine von Ihnen autorisierte Fehlerbehebung erforderlich ist.</p>"
+      },
+      {
+        "h2": "4. Weitergabe von Daten",
+        "body_html": "<p>Wir geben erforderliche Informationen ausschließlich weiter an:</p><ul><li>Dienstleister, die wir zur Erbringung des Services benötigen, etwa Zahlungsabwicklung (Stripe), Webanalyse sowie Netzwerk- und Infrastrukturanbieter;</li><li>Drittanbieter, soweit dies zur Verwaltung von Abonnements in Ihrem Auftrag erforderlich ist;</li><li>Behörden, sofern wir gesetzlich oder aufgrund einer rechtmäßigen behördlichen Anordnung dazu verpflichtet sind.</li></ul>"
+      },
+      {
+        "h2": "5. Grenzüberschreitende Datenverarbeitung",
+        "body_html": "<p>Unsere Umgebungen befinden sich in Australien, den Vereinigten Staaten, Singapur, Malaysia, Indonesien, Japan, Kambodscha, Neuseeland und Kanada; zudem können Dienstleister wie Stripe Daten in weiteren Ländern verarbeiten. Ihre Daten können daher außerhalb Ihres Wohnsitzlandes gespeichert oder verarbeitet werden. Wir treffen angemessene Schutzmaßnahmen.</p>"
+      },
+      {
+        "h2": "6. Speicherdauer",
+        "body_html": "<ul><li>Kontakt-, Konto- und Abrechnungsdaten: werden für die Dauer der Nutzung des Services und darüber hinaus so lange aufbewahrt, wie steuer-, handels- oder sonstige gesetzliche Aufbewahrungspflichten bestehen.</li><li>Daten in Ihrer Umgebung: können 7 Tage nach Beendigung des Services gelöscht werden.</li></ul>"
+      },
+      {
+        "h2": "7. Sicherheit",
+        "body_html": "<p>Wir setzen angemessene technische und organisatorische Maßnahmen wie Zugriffskontrollen und Konto-Isolierung ein, um Ihre Daten zu schützen. Dennoch ist keine Übertragung oder Speicherung im Internet vollständig sicher, sodass wir einen unbefugten Zugriff nicht absolut ausschließen können.</p>"
+      },
+      {
+        "h2": "8. Cookies und Analyse",
+        "body_html": "<p>Unsere Website nutzt Analysetools, um die Nutzung der Seite auszuwerten; dabei können Cookies oder ähnliche Technologien zum Einsatz kommen. Sie können Cookies in Ihren Browsereinstellungen deaktivieren und die Website weiterhin besuchen.</p>"
+      },
+      {
+        "h2": "9. Ihre Rechte",
+        "body_html": "<p>Sie können Auskunft über Ihre personenbezogenen Daten sowie deren Berichtigung oder Löschung verlangen, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Bei Fragen oder Beschwerden zum Umgang mit Ihren Daten kontaktieren Sie bitte zunächst uns. Sollte keine Einigung erzielt werden, können Sie sich an das Office of the Australian Information Commissioner (OAIC) wenden.</p>"
+      },
+      {
+        "h2": "10. Änderungen",
+        "body_html": "<p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren und veröffentlichen die jeweils gültige Fassung auf dieser Seite. Über wesentliche Änderungen informieren wir vorab per E-Mail oder auf unserer Website.</p>"
+      },
+      {
+        "h2": "11. Kontakt",
+        "body_html": "<p>Bei Fragen zum Datenschutz schreiben Sie bitte an <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> (alternativ: <a href=\"mailto:support@zaokit.ai\">support@zaokit.ai</a>).</p>"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen | Zaokit ClaudeOps",
+    "description": "Nutzungsbedingungen von Zaokit ClaudeOps",
+    "h1": "Nutzungsbedingungen",
+    "meta": "Datum des Inkrafttretens: 3. November 2026. Bei Abweichungen zwischen verschiedenen Sprachfassungen ist die englische Fassung maßgeblich.",
+    "lead_html": "Willkommen bei Zaokit ClaudeOps („wir“, „uns“). Indem Sie den Service abonnieren oder nutzen, stimmen Sie diesen Nutzungsbedingungen, unserer <a href=\"refund.html\">Rückerstattungsrichtlinie</a> und unserer <a href=\"privacy.html\">Datenschutzerklärung</a> zu. Wenn Sie nicht einverstanden sind, schließen Sie bitte kein Abonnement ab.",
+    "sections": [
+      {
+        "h2": "1. Der Service",
+        "body_html": "<p>Wir bieten verwaltete Remote-Mac-Umgebungen, KI-Workspace-Konfiguration, Abonnement- und Abrechnungsmanagement sowie technische Beratung an (der „Service“). Wir sind ein unabhängiger Anbieter und weder mit Anthropic PBC, Apple Inc. oder Google LLC verbunden noch von diesen autorisiert oder als Partner benannt.</p>"
+      },
+      {
+        "h2": "2. Dienste von Drittanbietern",
+        "body_html": "<ol><li>Drittanbieterdienste wie Claude, Google Drive und iCloud+ werden von den jeweiligen Anbietern gemäß deren eigenen Bedingungen und Richtlinien bereitgestellt. Diese Konten werden auf Ihren Namen registriert und gehören Ihnen. Sie sind selbst dafür verantwortlich, die Bedingungen, Nutzungsrichtlinien und regionalen Vorgaben jedes Anbieters einzuhalten und sicherzustellen, dass die Nutzung an Ihrem Standort rechtmäßig ist.</li><li>Wir verwalten lediglich Abonnements und Verlängerungen in Ihrem Auftrag. Wir übernehmen keine Gewähr für Verfügbarkeit, Funktionen, Nutzungslimits, Modellversionen oder Richtlinienänderungen von Drittanbieterdiensten. Die Tarifmultiplikatoren „1x / 5x / 20x“ sowie Team-/Business-Platzkonfigurationen dienen als Richtwerte; der tatsächliche Nutzungsumfang richtet sich nach den jeweils gültigen Vorgaben des Drittanbieters.</li><li>Sollte ein Drittanbieter Ihr Konto einschränken, sperren oder kündigen oder seine Produkte, Limits oder Preise ändern, unterstützen wir Sie im Rahmen des Zumutbaren, haften jedoch nicht für daraus entstehende Auswirkungen.</li></ol>"
+      },
+      {
+        "h2": "3. Arbeitsumgebungen",
+        "body_html": "<ol><li><strong>1x / 5x (Mehrbenutzer-Systeme)</strong>: Jeder Nutzer erhält ein separates macOS-Konto, auf das ausschließlich per Apple Bildschirmfreigabe zugegriffen werden kann. Es ist untersagt, auf Konten oder Daten anderer Nutzer zuzugreifen oder Fernsteuerungs-, Bildschirmaufnahme-, Netzwerk-Proxy- oder sonstige Software zu installieren, die andere Nutzer beeinträchtigen könnte.</li><li><strong>20x / Team / Business (dedizierte Maschine oder Cluster)</strong>: 20x umfasst die Option auf eine dedizierte Maschine; Team- und Business-Tarife stellen dedizierte physische Hardware bzw. Multi-Mac-Cluster exklusiv für Ihre Organisation mit eigenem macOS-Konto je Mitglied bereit. Sie dürfen im vernünftigen Rahmen Software installieren und Systemeinstellungen ändern und tragen die Verantwortung für daraus resultierende Stabilitäts- oder Sicherheitsfolgen.</li><li>Rechnermodell, Ausstattung und Region werden nach Ressourcenverfügbarkeit zugeteilt. Wir bemühen uns, Ihre beim Checkout gewählte Wunschregion zu berücksichtigen, können dies jedoch nicht garantieren. Aus Gründen der Wartung, Störungsbehebung oder Kapazitätsplanung können wir Ihre Umgebung migrieren und kündigen dies außer in Notfällen nach Möglichkeit vorab an.</li></ol>"
+      },
+      {
+        "h2": "4. Zulässige Nutzung",
+        "body_html": "<p>Sie dürfen den Service nicht verwenden, um:</p><ul><li>rechtswidrige Handlungen vorzunehmen oder Schutzrechte, Datenschutzrechte oder sonstige Rechte Dritter zu verletzen;</li><li>Spam zu versenden, Angriffe auszuführen, Port-Scans durchzuführen oder Schadsoftware zu verbreiten;</li><li>Kryptowährungen zu schürfen oder dauerhafte Hochlast-Berechnungen ohne Bezug zum Service auszuführen;</li><li>den Service weiterzuverkaufen, unterzuvermieten oder Ihre Zugangsdaten mit Dritten zu teilen;</li><li>gegen Bedingungen oder Nutzungsrichtlinien von Drittanbietern zu verstoßen.</li></ul><p>Bei Verstößen gegen diese Regeln können wir den Service fristlos und ohne Rückerstattung sperren oder kündigen.</p>"
+      },
+      {
+        "h2": "5. Support",
+        "body_html": "<p>Die je Tarif angegebenen Supportzeiten (7×8h / 7×16h / 7×24h) bezeichnen die Zeiträume, in denen wir Anfragen entgegennehmen und bearbeiten. Wir bemühen uns nach Kräften um schnelle Rückmeldung, sichern jedoch keine festen Reaktions- oder Lösungszeiten zu.</p>"
+      },
+      {
+        "h2": "6. Verfügbarkeit und Wartung",
+        "body_html": "<p>Der Service wird „wie besehen“ und „nach Verfügbarkeit“ bereitgestellt. Wir bemühen uns im angemessenen Rahmen um einen stabilen Betrieb, garantieren jedoch keine ununterbrochene oder fehlerfreie Verfügbarkeit. Geplante Wartungsarbeiten kündigen wir nach Möglichkeit vorab an. Unterbrechungen infolge von Stromausfällen, Netzbetreiberstörungen, Ausfällen bei Drittanbietern, Naturereignissen oder sonstigen Umständen außerhalb unseres zumutbaren Einflussbereichs stellen keine Vertragsverletzung unsererseits dar.</p>"
+      },
+      {
+        "h2": "7. Daten und Sicherungen",
+        "body_html": "<ol><li>Sie sind für die Daten in Ihrem Konto selbst verantwortlich und sollten wichtige Daten regelmäßig sichern. Für Datenverluste haften wir nur, soweit dies gesetzlich zwingend vorgeschrieben ist.</li><li>Wir greifen nicht aktiv auf Inhalte in Ihrem Konto zu und handeln nur, soweit dies für Systemwartung, Sicherheitsvorfälle, gesetzliche Pflichten oder von Ihnen autorisierte Fehlerbehebung erforderlich ist.</li><li>Nach Vertragsende können wir Ihr Konto und Ihre Daten nach Ablauf von 7 Tagen löschen. Bitte exportieren Sie benötigte Daten rechtzeitig vorher.</li></ol>"
+      },
+      {
+        "h2": "8. Gebühren und Verlängerungen",
+        "body_html": "<ol><li>Der Service kann monatlich oder jährlich abgerechnet werden und verlängert sich automatisch über Stripe zum beim Checkout ausgewiesenen Preis und Abrechnungsintervall. Einzelplatz-Upgrade-Add-ons gelten nur für aktive Team- oder Business-Basisabonnements; ClaudeOps Enterprise-Standleitungs-Add-ons setzen ein aktives Basisabonnement voraus (in den Tarifen 20x, Team und Business ohne Aufpreis enthalten).</li><li>Preisänderungen kündigen wir mindestens 30 Tage im Voraus an. Sie können vor Inkrafttreten des neuen Preises kündigen.</li><li>Aktionspreise gelten ausschließlich für während des Aktionszeitraums abgeschlossene Abonnements. Solange Ihr Abonnement ununterbrochen aktiv bleibt, erfolgen Verlängerungen zum Aktionspreis vorbehaltlich Ziffer 8.2. Nach einer Kündigung und späteren Neubuchung gilt der dann aktuelle Preis.</li><li>Kündigung und Rückerstattungen richten sich nach unserer <a href=\"refund.html\">Rückerstattungsrichtlinie</a>.</li></ol>"
+      },
+      {
+        "h2": "9. Sperrung und Kündigung",
+        "body_html": "<p>Sie können jederzeit kündigen; der Service läuft dann bis zum Ende des aktuellen Abrechnungszeitraums weiter. Wir können den Service sperren oder beenden, wenn Sie gegen diese Bedingungen verstoßen, Zahlungen ausbleiben oder Ihre Nutzung ein Sicherheitsrisiko darstellt. Zudem können wir den Service mit einer Frist von 30 Tagen einstellen und bereits gezahlte Entgelte für den nicht genutzten Zeitraum anteilig erstatten.</p>"
+      },
+      {
+        "h2": "10. Haftungsbeschränkung",
+        "body_html": "<p>Soweit gesetzlich zulässig: (a) haften wir nicht für mittelbare, beiläufige, besondere oder Folgeschäden, einschließlich entgangenen Gewinns, Datenverlusts, Verlusts von Firmenwert oder Betriebsunterbrechung; und (b) ist unsere Gesamthaftung im Zusammenhang mit dem Service auf die Gebühren begrenzt, die Sie in dem einen Monat vor dem haftungsbegründenden Ereignis tatsächlich an uns gezahlt haben.</p><p>Nichts in diesen Nutzungsbedingungen schließt Rechte oder Garantien aus, die Ihnen nach dem Australian Consumer Law zustehen und gesetzlich nicht ausgeschlossen werden können, noch werden diese eingeschränkt oder geändert. Soweit eine Haftungsbeschränkung gesetzlich zulässig ist, beschränkt sich unsere Haftung auf die erneute Erbringung der Leistungen oder die Erstattung der Kosten für deren erneute Bereitstellung.</p>"
+      },
+      {
+        "h2": "11. Änderungen dieser Nutzungsbedingungen",
+        "body_html": "<p>Wir können diese Nutzungsbedingungen von Zeit zu Zeit aktualisieren und kündigen wesentliche Änderungen vorab per E-Mail oder auf unserer Website an. Durch die weitere Nutzung des Services nach Inkrafttreten der Änderungen stimmen Sie den aktualisierten Bedingungen zu.</p>"
+      },
+      {
+        "h2": "12. Anwendbares Recht",
+        "body_html": "<p>Diese Nutzungsbedingungen unterliegen dem Recht von Australien.</p>"
+      },
+      {
+        "h2": "13. Kontakt",
+        "body_html": "<p>Fragen zu diesen Nutzungsbedingungen? Schreiben Sie an <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> (alternativ: <a href=\"mailto:support@zaokit.ai\">support@zaokit.ai</a>).</p>"
+      }
+    ]
+  },
+  "refund": {
+    "title": "Rückerstattungsrichtlinie | Zaokit ClaudeOps",
+    "description": "Rückerstattungs- und Kündigungsrichtlinie von Zaokit ClaudeOps",
+    "h1": "Rückerstattungsrichtlinie",
+    "meta": "Datum des Inkrafttretens: 3. November 2026. Bei Abweichungen zwischen verschiedenen Sprachfassungen ist die englische Fassung maßgeblich.",
+    "lead_html": "Diese Richtlinie regelt Kündigungen und Rückerstattungen und ist Bestandteil unserer <a href=\"terms.html\">Nutzungsbedingungen</a>. Gesetzlich unabdingbare Rechte nach dem Australian Consumer Law bleiben hiervon unberührt.",
+    "sections": [
+      {
+        "h2": "1. Kündigung",
+        "body_html": "<p>Der Service kann monatlich oder jährlich abgerechnet werden und ist jederzeit kündbar. Nach Ihrer Kündigung läuft der Service bis zum Ende des laufenden Abrechnungszeitraums (monatlich oder jährlich) weiter und verlängert sich anschließend nicht mehr. Zur Kündigung senden Sie uns bitte eine E-Mail.</p>"
+      },
+      {
+        "h2": "2. Vor der Bereitstellung",
+        "body_html": "<p>Wenn Sie kündigen, bevor wir Ihre Arbeitsumgebung und Zugangsdaten bereitgestellt haben, erhalten Sie eine vollständige Rückerstattung.</p>"
+      },
+      {
+        "h2": "3. Nach der Bereitstellung",
+        "body_html": "<p>Mit Aktivierung des Services reservieren wir Hardware- und Platzressourcen und richten in Ihrem Auftrag die zugehörigen Drittanbieter-Abonnements ein. Daher sind Gebühren für den laufenden Abrechnungszeitraum (einschließlich rabattierter Jahresvorauszahlungen) nach erfolgter Bereitstellung grundsätzlich nicht erstattungsfähig und werden weder tage- noch monatsweise anteilig verrechnet — vorbehaltlich Abschnitt 4 oder zwingender gesetzlicher Vorschriften.</p>"
+      },
+      {
+        "h2": "4. Durch uns verursachte Ausfälle",
+        "body_html": "<p>Ist der Service aus von uns zu vertretenden Gründen länger als 72 aufeinanderfolgende Stunden nicht verfügbar, verlängern wir Ihren Leistungszeitraum um die Anzahl der betroffenen Tage. Möchten Sie stattdessen kündigen, können Sie eine anteilige Rückerstattung für den nicht genutzten Teil des laufenden Zeitraums verlangen.</p>"
+      },
+      {
+        "h2": "5. Auswirkungen durch Drittanbieter",
+        "body_html": "<p>Einflüsse seitens Drittanbietern (einschließlich Anthropic, Google und Apple) — wie Richtlinienänderungen, Nutzungslimits, Kontoeinschränkungen oder Störungen — liegen außerhalb unseres Einflussbereichs; bereits in Ihrem Namen gezahlte Drittanbietergebühren sind nicht erstattungsfähig. Wir unterstützen Sie jedoch nach besten Kräften bei der Klärung.</p>"
+      },
+      {
+        "h2": "6. Cloud-Speicher- & Enterprise-Standleitungs-Add-ons",
+        "body_html": "<p>Sobald ein Cloud-Speicher-Paket oder ein ClaudeOps Enterprise-Standleitungs-Add-on aktiviert wurde, sind die Gebühren für den laufenden Zeitraum nicht erstattungsfähig. Nach einer Kündigung bleibt das Add-on bis zum Ende des aktuellen Abrechnungszeitraums aktiv.</p>"
+      },
+      {
+        "h2": "7. Kündigung bei Vertragsverstoß",
+        "body_html": "<p>Eine Rückerstattung ist ausgeschlossen, wenn der Service aufgrund eines Verstoßes gegen unsere <a href=\"terms.html\">Nutzungsbedingungen</a> gesperrt oder gekündigt wird.</p>"
+      },
+      {
+        "h2": "8. So beantragen Sie eine Rückerstattung",
+        "body_html": "<ol><li>Senden Sie eine E-Mail an <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> mit Ihrer Abonnement-E-Mail-Adresse, der Stripe-Belegnummer und dem Grund Ihrer Anfrage.</li><li>Wir antworten innerhalb von 5 Werktagen.</li><li>Genehmigte Rückerstattungen erfolgen auf Ihr ursprüngliches Zahlungsmittel. Die Bearbeitungsdauer hängt von Ihrer Bank bzw. Ihrem Zahlungsdienstleister ab.</li></ol>"
+      },
+      {
+        "h2": "9. Rückbuchungen (Chargebacks)",
+        "body_html": "<p>Bei Fragen zu einer Abbuchung kontaktieren Sie bitte zuerst uns — wir klären das Anliegen schnell und unkompliziert. Reichen Sie ohne vorherige Kontaktaufnahme eine Rückbuchung bei Ihrer Bank ein, können wir den betreffenden Service für die Dauer des Verfahrens sperren.</p>"
+      }
+    ]
+  }
+}

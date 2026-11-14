@@ -6,21 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service | Zaokit ClaudeOps</title>
   <meta name="description" content="Zaokit ClaudeOps Terms of Service">
+  <link rel="canonical" href="https://claudeops.zaokit.ai/en/terms.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://claudeops.zaokit.ai/terms.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://claudeops.zaokit.ai/zh-tw/terms.html">
+  <link rel="alternate" hreflang="en" href="https://claudeops.zaokit.ai/en/terms.html">
+  <link rel="alternate" hreflang="ja" href="https://claudeops.zaokit.ai/ja/terms.html">
+  <link rel="alternate" hreflang="ko" href="https://claudeops.zaokit.ai/ko/terms.html">
+  <link rel="alternate" hreflang="es" href="https://claudeops.zaokit.ai/es/terms.html">
+  <link rel="alternate" hreflang="fr" href="https://claudeops.zaokit.ai/fr/terms.html">
+  <link rel="alternate" hreflang="de" href="https://claudeops.zaokit.ai/de/terms.html">
+  <link rel="alternate" hreflang="pt" href="https://claudeops.zaokit.ai/pt/terms.html">
+  <link rel="alternate" hreflang="it" href="https://claudeops.zaokit.ai/it/terms.html">
+  <link rel="alternate" hreflang="ru" href="https://claudeops.zaokit.ai/ru/terms.html">
+  <link rel="alternate" hreflang="ar" href="https://claudeops.zaokit.ai/ar/terms.html">
+  <link rel="alternate" hreflang="id" href="https://claudeops.zaokit.ai/id/terms.html">
+  <link rel="alternate" hreflang="ms" href="https://claudeops.zaokit.ai/ms/terms.html">
+  <link rel="alternate" hreflang="vi" href="https://claudeops.zaokit.ai/vi/terms.html">
+  <link rel="alternate" hreflang="th" href="https://claudeops.zaokit.ai/th/terms.html">
+  <link rel="alternate" hreflang="hi" href="https://claudeops.zaokit.ai/hi/terms.html">
+  <link rel="alternate" hreflang="km" href="https://claudeops.zaokit.ai/km/terms.html">
+  <link rel="alternate" hreflang="tr" href="https://claudeops.zaokit.ai/tr/terms.html">
+  <link rel="alternate" hreflang="x-default" href="https://claudeops.zaokit.ai/en/terms.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content="Zaokit ClaudeOps">
+  <meta property="og:title" content="Terms of Service | Zaokit ClaudeOps">
+  <meta property="og:description" content="Zaokit ClaudeOps Terms of Service">
+  <meta property="og:url" content="https://claudeops.zaokit.ai/en/terms.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#141210">
   <style>
-    :root { --bg:#141210; --text:#ece6dd; --muted:#a39a8e; --primary:#d97757; --primary-strong:#e8906f;
+    :root { --bg:#141210; --text:#ece6dd; --muted:#a39a8e; --primary:#d97757; --primary-strong:#e8906f; --primary-soft:rgba(217,119,87,.14);
       --cream:#f5efe6; --border:rgba(255,255,255,.08); --surface:rgba(255,255,255,.035);
-      --font:"Inter","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-      --serif:"Tiempos Headline","Source Han Serif SC","Noto Serif SC","Songti SC",Georgia,serif; }
+      --font:"Inter","Noto Sans SC", "PingFang SC",sans-serif;
+      --serif:"Tiempos Headline","Source Han Serif SC", "Noto Serif SC",Georgia,serif; }
     * { box-sizing:border-box }
     body { margin:0; background:var(--bg); color:var(--text); font-family:var(--font); line-height:1.8; -webkit-font-smoothing:antialiased }
     a { color:var(--primary-strong); text-decoration:none } a:hover { text-decoration:underline }
     .container { width:min(820px,92vw); margin:0 auto }
-    .site-header { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:rgba(20,18,16,.88); border-bottom:1px solid var(--border) }
-    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; flex-wrap:wrap }
+    .site-header { position:sticky; top:0; z-index:30; backdrop-filter:blur(16px); background:rgba(20,18,16,.88); border-bottom:1px solid var(--border) }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; flex-wrap:wrap; padding:8px 0 }
     .brand { color:#fff; font-weight:700 }
-    .nav-links { display:flex; gap:18px; flex-wrap:wrap; font-size:.88rem }
+    .nav-links { display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-size:.88rem }
     .nav-links a { color:var(--muted) } .nav-links a[aria-current="page"] { color:var(--primary-strong); font-weight:600 }
     .doc { padding:56px 0 40px }
     .doc h1 { font-family:var(--serif); color:var(--cream); font-size:clamp(1.8rem,4vw,2.4rem); margin:0 0 8px }
@@ -33,20 +60,71 @@
     footer { border-top:1px solid var(--border); padding:28px 0 40px; color:var(--muted); font-size:.82rem }
     footer .links { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:8px }
     footer .links a { color:var(--muted) }
+    [dir="rtl"] .lead { border-left:1px solid var(--border); border-right:3px solid var(--primary) }
+    [dir="rtl"] .doc ul, [dir="rtl"] .doc ol { padding-left:0; padding-right:1.3em }
+
+    /* 19-Language Switcher Dropdown & Multi-Script / RTL Support */
+    .lang-switcher { position: relative; display: inline-flex; align-items: center }
+    .lang-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font: inherit; font-size: .83rem; font-weight: 600; color: var(--text);
+      padding: 6px 12px; border-radius: 999px; cursor: pointer;
+      border: 1px solid var(--border); background: var(--surface); transition: .2s;
+      white-space: nowrap; line-height: 1.2;
+    }
+    .lang-btn:hover, .lang-btn[aria-expanded="true"] {
+      color: #fff; border-color: var(--primary); background: var(--primary-soft);
+    }
+    .lang-caret { opacity: .75; transition: transform .2s ease }
+    .lang-btn[aria-expanded="true"] .lang-caret { transform: rotate(180deg) }
+    .lang-menu {
+      position: absolute; top: calc(100% + 8px); right: 0; z-index: 95;
+      width: min(340px, 90vw); max-height: min(72vh, 430px); overflow-y: auto;
+      padding: 8px; border-radius: 16px;
+      background: rgba(24, 21, 18, .97); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(232, 144, 111, .28);
+      box-shadow: 0 22px 54px rgba(0, 0, 0, .68);
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px;
+      direction: ltr; text-align: left;
+    }
+    .lang-menu[hidden] { display: none !important }
+    .lang-item {
+      display: flex; align-items: center; justify-content: space-between; gap: 6px;
+      padding: 7px 10px; border-radius: 10px; font-size: .82rem; font-weight: 500;
+      color: var(--text) !important; text-decoration: none !important;
+      transition: background .16s, color .16s; line-height: 1.35;
+    }
+    .lang-item:hover { background: rgba(255, 255, 255, .07); color: #fff !important }
+    .lang-item.active {
+      background: rgba(217, 119, 87, .20); color: #ffe0c2 !important; font-weight: 700;
+      border: 1px solid rgba(232, 144, 111, .36);
+    }
+    .lang-item .lang-check { font-size: .75rem; color: var(--primary-strong); flex-shrink: 0 }
+    @media (max-width: 390px) { .lang-menu { grid-template-columns: 1fr } }
+    [dir="rtl"] .lang-menu { right: auto; left: 0 }
+
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GDE6TX65P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0GDE6TX65P');
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="0731cafa-79de-46ca-bbeb-4e1bf6a04fda"></script>
 </head>
 
 <body>
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="./">Zaokit ClaudeOps</a>
-      <nav class="nav-links"><a href="terms.html" aria-current="page">Terms of Service</a><a href="refund.html">Refund Policy</a><a href="privacy.html">Privacy Policy</a><a href="../terms.html">中文</a></nav>
+      <nav class="nav-links"><a href="terms.html" aria-current="page">Terms of Service</a><a href="refund.html">Refund Policy</a><a href="privacy.html">Privacy Policy</a><div class="lang-switcher"><button type="button" class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Switch language"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.7 2.6 4.2 5.9 4.2 9.5s-1.5 6.9-4.2 9.5c-2.7-2.6-4.2-5.9-4.2-9.5S9.3 5.1 12 2.5z"/></svg><span>EN</span><svg class="lang-caret" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><div class="lang-menu" role="menu" hidden><a class="lang-item" role="menuitem" href="../terms.html" hreflang="zh-CN" lang="zh-CN" data-set-lang="zh"><span dir="ltr">简体中文</span></a><a class="lang-item" role="menuitem" href="../zh-tw/terms.html" hreflang="zh-TW" lang="zh-TW" data-set-lang="zh-tw"><span dir="ltr">繁體中文</span></a><a class="lang-item active" role="menuitem" href="terms.html" hreflang="en" lang="en-AU" data-set-lang="en" aria-current="page"><span dir="ltr">English</span><span class="lang-check" aria-hidden="true">✓</span></a><a class="lang-item" role="menuitem" href="../ja/terms.html" hreflang="ja" lang="ja" data-set-lang="ja"><span dir="ltr">日本語</span></a><a class="lang-item" role="menuitem" href="../ko/terms.html" hreflang="ko" lang="ko" data-set-lang="ko"><span dir="ltr">한국어</span></a><a class="lang-item" role="menuitem" href="../es/terms.html" hreflang="es" lang="es" data-set-lang="es"><span dir="ltr">Español</span></a><a class="lang-item" role="menuitem" href="../fr/terms.html" hreflang="fr" lang="fr" data-set-lang="fr"><span dir="ltr">Français</span></a><a class="lang-item" role="menuitem" href="../de/terms.html" hreflang="de" lang="de" data-set-lang="de"><span dir="ltr">Deutsch</span></a><a class="lang-item" role="menuitem" href="../pt/terms.html" hreflang="pt" lang="pt" data-set-lang="pt"><span dir="ltr">Português</span></a><a class="lang-item" role="menuitem" href="../it/terms.html" hreflang="it" lang="it" data-set-lang="it"><span dir="ltr">Italiano</span></a><a class="lang-item" role="menuitem" href="../ru/terms.html" hreflang="ru" lang="ru" data-set-lang="ru"><span dir="ltr">Русский</span></a><a class="lang-item" role="menuitem" href="../ar/terms.html" hreflang="ar" lang="ar" data-set-lang="ar"><span dir="rtl">العربية</span></a><a class="lang-item" role="menuitem" href="../id/terms.html" hreflang="id" lang="id" data-set-lang="id"><span dir="ltr">Bahasa Indonesia</span></a><a class="lang-item" role="menuitem" href="../ms/terms.html" hreflang="ms" lang="ms" data-set-lang="ms"><span dir="ltr">Bahasa Melayu</span></a><a class="lang-item" role="menuitem" href="../vi/terms.html" hreflang="vi" lang="vi" data-set-lang="vi"><span dir="ltr">Tiếng Việt</span></a><a class="lang-item" role="menuitem" href="../th/terms.html" hreflang="th" lang="th" data-set-lang="th"><span dir="ltr">ไทย</span></a><a class="lang-item" role="menuitem" href="../hi/terms.html" hreflang="hi" lang="hi" data-set-lang="hi"><span dir="ltr">हिन्दी</span></a><a class="lang-item" role="menuitem" href="../km/terms.html" hreflang="km" lang="km" data-set-lang="km"><span dir="ltr">ភាសាខ្មែរ</span></a><a class="lang-item" role="menuitem" href="../tr/terms.html" hreflang="tr" lang="tr" data-set-lang="tr"><span dir="ltr">Türkçe</span></a></div></div></nav>
     </div>
   </header>
 
   <main class="container doc">
     <h1>Terms of Service</h1>
-    <p class="meta">Effective date: 3 November 2026. If the English and Chinese versions differ, the English version prevails.</p>
+    <p class="meta">Effective date: 3 November 2026. If versions in different languages differ, the English version prevails.</p>
 
 <p class="lead">Welcome to Zaokit ClaudeOps ("we", "us"). By subscribing to or using the service, you agree to these Terms, our <a href="refund.html">Refund Policy</a> and our <a href="privacy.html">Privacy Policy</a>. If you do not agree, please do not subscribe.</p>
 
@@ -54,29 +132,13 @@
 <p>We provide managed remote Mac environments, AI workspace configuration, subscription billing management and technical consulting (the "Service"). We are an independent provider and are not affiliated with, authorised by or partnered with Anthropic PBC, Apple Inc. or Google LLC.</p>
 
 <h2>2. Third-party services</h2>
-<ol>
-  <li>Third-party services such as Claude, Google Drive and iCloud+ are provided by their respective providers under their own terms and policies. These accounts are registered in your name and belong to you. You are responsible for complying with each provider's terms, usage policies and regional requirements, and for making sure your use is lawful where you are.</li>
-  <li>We only manage subscriptions and renewals on your behalf. We make no guarantee about the availability, features, usage limits, model versions or policy changes of any third-party service. The "1x / 5x / 20x" plan multipliers and Team / Business seat configurations are indicative specifications only. Actual usage is subject to the provider's rules at the time.</li>
-  <li>If a third-party provider restricts, suspends or terminates your account, or changes its products, limits or prices, we will make reasonable efforts to help, but we are not liable for the impact.</li>
-</ol>
+<ol><li>Third-party services such as Claude, Google Drive and iCloud+ are provided by their respective providers under their own terms and policies. These accounts are registered in your name and belong to you. You are responsible for complying with each provider's terms, usage policies and regional requirements, and for making sure your use is lawful where you are.</li><li>We only manage subscriptions and renewals on your behalf. We make no guarantee about the availability, features, usage limits, model versions or policy changes of any third-party service. The "1x / 5x / 20x" plan multipliers and Team / Business seat configurations are indicative specifications only. Actual usage is subject to the provider's rules at the time.</li><li>If a third-party provider restricts, suspends or terminates your account, or changes its products, limits or prices, we will make reasonable efforts to help, but we are not liable for the impact.</li></ol>
 
 <h2>3. Environments</h2>
-<ol>
-  <li><strong>1x / 5x (multi-user machines)</strong>: each user has a separate macOS account, accessible only via Apple Screen Sharing. You must not attempt to access other users' accounts or data, or install remote control, screen recording, network proxy or other software that may affect other users.</li>
-  <li><strong>20x / Team / Business (dedicated machine or cluster)</strong>: 20x includes a dedicated machine option; Team and Business plans provide dedicated physical hardware or multi-Mac clusters exclusively for your organisation, with a separate macOS account per member. You may install software and change system settings within reason, and you are responsible for any resulting stability or security issues.</li>
-  <li>Machine model, specification and region are allocated based on available resources. We will try to honour the preferred region you select at checkout but cannot guarantee it. We may migrate your environment for maintenance, incident handling or capacity reasons, and will try to give notice in advance except in emergencies.</li>
-</ol>
+<ol><li><strong>1x / 5x (multi-user machines)</strong>: each user has a separate macOS account, accessible only via Apple Screen Sharing. You must not attempt to access other users' accounts or data, or install remote control, screen recording, network proxy or other software that may affect other users.</li><li><strong>20x / Team / Business (dedicated machine or cluster)</strong>: 20x includes a dedicated machine option; Team and Business plans provide dedicated physical hardware or multi-Mac clusters exclusively for your organisation, with a separate macOS account per member. You may install software and change system settings within reason, and you are responsible for any resulting stability or security issues.</li><li>Machine model, specification and region are allocated based on available resources. We will try to honour the preferred region you select at checkout but cannot guarantee it. We may migrate your environment for maintenance, incident handling or capacity reasons, and will try to give notice in advance except in emergencies.</li></ol>
 
 <h2>4. Acceptable use</h2>
-<p>You must not use the Service to:</p>
-<ul>
-  <li>engage in unlawful activity or infringe the intellectual property, privacy or other rights of others;</li>
-  <li>send spam, launch attacks, run port scans or distribute malware;</li>
-  <li>mine cryptocurrency or run sustained high-load computing unrelated to the Service;</li>
-  <li>resell or sublet the Service, or share your access credentials with others;</li>
-  <li>breach any third-party provider's terms or usage policies.</li>
-</ul>
-<p>If you breach these rules, we may suspend or terminate the Service immediately without refund.</p>
+<p>You must not use the Service to:</p><ul><li>engage in unlawful activity or infringe the intellectual property, privacy or other rights of others;</li><li>send spam, launch attacks, run port scans or distribute malware;</li><li>mine cryptocurrency or run sustained high-load computing unrelated to the Service;</li><li>resell or sublet the Service, or share your access credentials with others;</li><li>breach any third-party provider's terms or usage policies.</li></ul><p>If you breach these rules, we may suspend or terminate the Service immediately without refund.</p>
 
 <h2>5. Support</h2>
 <p>The support hours shown for each plan (7×8h / 7×16h / 7×24h) describe when we accept and handle requests. We will make reasonable efforts to respond promptly but do not commit to specific response or resolution times.</p>
@@ -85,26 +147,16 @@
 <p>The Service is provided on an "as is" and "as available" basis. We make reasonable efforts to keep it stable but do not guarantee it will be uninterrupted or error-free. We will try to give advance notice of planned maintenance. Interruptions caused by power outages, network carrier faults, third-party outages, natural disasters or other events beyond our reasonable control are not a breach by us.</p>
 
 <h2>7. Data and backups</h2>
-<ol>
-  <li>You are responsible for the data in your account and should back up important data regularly. We are not liable for data loss except where required by law.</li>
-  <li>We do not actively access content in your account, and only take necessary action for system maintenance, security incidents, legal requirements or troubleshooting you have authorised.</li>
-  <li>After the Service ends, we may delete your account and data after 7 days. Please export anything you need before then.</li>
-</ol>
+<ol><li>You are responsible for the data in your account and should back up important data regularly. We are not liable for data loss except where required by law.</li><li>We do not actively access content in your account, and only take necessary action for system maintenance, security incidents, legal requirements or troubleshooting you have authorised.</li><li>After the Service ends, we may delete your account and data after 7 days. Please export anything you need before then.</li></ol>
 
 <h2>8. Fees and renewals</h2>
-<ol>
-  <li>The Service may be billed monthly or annually and renews automatically via Stripe at the price and billing interval shown at checkout. Per-seat upgrade add-ons apply only to active Team or Business base subscriptions; ClaudeOps Enterprise Dedicated Line add-ons require an active base subscription (included at no extra charge on 20x, Team and Business plans).</li>
-  <li>We may change prices with at least 30 days' notice. You may cancel before the new price takes effect.</li>
-  <li>Promotional prices apply only to subscriptions started during the promotion period. While your subscription remains continuously active, renewals are charged at the promotional price, subject to clause 8.2. If you cancel and later resubscribe, the then-current price applies.</li>
-  <li>Cancellation and refunds are covered by our <a href="refund.html">Refund Policy</a>.</li>
-</ol>
+<ol><li>The Service may be billed monthly or annually and renews automatically via Stripe at the price and billing interval shown at checkout. Per-seat upgrade add-ons apply only to active Team or Business base subscriptions; ClaudeOps Enterprise Dedicated Line add-ons require an active base subscription (included at no extra charge on 20x, Team and Business plans).</li><li>We may change prices with at least 30 days' notice. You may cancel before the new price takes effect.</li><li>Promotional prices apply only to subscriptions started during the promotion period. While your subscription remains continuously active, renewals are charged at the promotional price, subject to clause 8.2. If you cancel and later resubscribe, the then-current price applies.</li><li>Cancellation and refunds are covered by our <a href="refund.html">Refund Policy</a>.</li></ol>
 
 <h2>9. Suspension and termination</h2>
 <p>You may cancel at any time and the Service continues until the end of the current billing period. We may suspend or terminate the Service if you breach these Terms, fail to pay, or your use creates a security risk. We may also discontinue the Service with 30 days' notice and refund, on a pro-rata basis, any fees paid for the unused period.</p>
 
 <h2>10. Limitation of liability</h2>
-<p>To the maximum extent permitted by law: (a) we are not liable for any indirect, incidental, special or consequential loss, including loss of profit, data, goodwill or business; and (b) our total liability in connection with the Service is limited to the fees you actually paid us in the one month before the event giving rise to the claim.</p>
-<p>Nothing in these Terms excludes, restricts or modifies any right or guarantee you have under the Australian Consumer Law that cannot lawfully be excluded. Where the law allows us to limit our liability, our liability is limited to supplying the services again or paying the cost of having them supplied again.</p>
+<p>To the maximum extent permitted by law: (a) we are not liable for any indirect, incidental, special or consequential loss, including loss of profit, data, goodwill or business; and (b) our total liability in connection with the Service is limited to the fees you actually paid us in the one month before the event giving rise to the claim.</p><p>Nothing in these Terms excludes, restricts or modifies any right or guarantee you have under the Australian Consumer Law that cannot lawfully be excluded. Where the law allows us to limit our liability, our liability is limited to supplying the services again or paying the cost of having them supplied again.</p>
 
 <h2>11. Changes to these Terms</h2>
 <p>We may update these Terms from time to time and will give advance notice of material changes by email or on our website. Continuing to use the Service after changes take effect means you accept the updated Terms.</p>
@@ -123,6 +175,59 @@
       <div>© Zaokit AI · Operated by an Australian registered company</div>
     </div>
   </footer>
+  <script>
+  (function () {
+    var CUR_LANG = "en";
+    document.querySelectorAll('.lang-switcher').forEach(function (sw) {
+      var btn = sw.querySelector('.lang-btn');
+      var menu = sw.querySelector('.lang-menu');
+      if (!btn || !menu) return;
+      function closeMenu(restoreFocus) {
+        btn.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+        if (restoreFocus) btn.focus();
+      }
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        if (open) closeMenu(false);
+        else {
+          btn.setAttribute('aria-expanded', 'true');
+          menu.hidden = false;
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (!sw.contains(e.target)) closeMenu(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') closeMenu(true);
+      });
+    });
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[data-set-lang]');
+      if (!a) return;
+      var target = a.getAttribute('data-set-lang');
+      var lsOk = false;
+      if (target) {
+        try { localStorage.setItem('claude-ops-lang', target); lsOk = true; } catch (err) {}
+        try {
+          if (typeof gtag === 'function') gtag('event', 'language_switch', { from_lang: CUR_LANG, to_lang: target });
+          if (window.umami && typeof umami.track === 'function') umami.track('language_switch', { from_lang: CUR_LANG, to_lang: target });
+        } catch (err) {}
+      }
+      var baseHref = a.getAttribute('href') || '';
+      if (baseHref && baseHref.indexOf('#') === -1 && baseHref.indexOf('?') === -1 && (location.search || location.hash || (!lsOk && target === 'zh'))) {
+        e.preventDefault();
+        var sp = new URLSearchParams(location.search);
+        sp.delete('lang');
+        sp.delete('nolang');
+        if (!lsOk && target === 'zh') sp.set('lang', 'zh');
+        var qs = sp.toString();
+        location.href = baseHref + (qs ? '?' + qs : '') + location.hash;
+      }
+    });
+  })();
+  </script>
 </body>
 
 </html>

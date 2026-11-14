@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "title": "Zaokit ClaudeOps — AI Membuat Dunia Tanpa Batas | Produktivitas Terdepan & Pengalaman Terbaik",
+    "description": "Zaokit ClaudeOps: AI membuat dunia tanpa batas — menyalakan setiap kota di seluruh dunia untuk menghadirkan produktivitas paling maju dan pengalaman kelas atas bagi semua orang. Workstation fisik Mac Studio & Mac mini terisolasi di 9 wilayah ISP lokal asli (AU, US, SG, MY, ID, JP, KH, NZ, CA), jalur khusus BGP enterprise, concierge engineering 1-on-1 hingga 7×24 jam, serta penyimpanan cloud 2TB–30TB.",
+    "keywords": "Zaokit ClaudeOps, AI Membuat Dunia Tanpa Batas, Menyalakan Setiap Kota, layanan terkelola Claude, Claude Code, cloud workstation Mac, Mac Studio khusus, konsultan AI engineering",
+    "og_title": "AI Membuat Dunia Tanpa Batas — Produktivitas Terdepan & Pengalaman Terbaik | Zaokit ClaudeOps",
+    "og_description": "Menyalakan setiap kota di dunia · 9 hub komputasi ISP lokal asli · Workstation fisik Mac spesifikasi tinggi · Akselerasi BGP enterprise · Dukungan concierge 1-on-1 hingga 7×24 jam.",
+    "ld_description": "AI membuat dunia tanpa batas — menyalakan setiap kota di seluruh dunia untuk menghadirkan produktivitas paling maju dan pengalaman kelas atas bagi semua orang: ruang kerja terisolasi di mesin fisik Mac Studio & Mac mini spesifikasi tinggi di 9 wilayah ISP lokal asli, akselerasi BGP enterprise, dan dukungan concierge AI engineering 1-on-1 hingga 7x24 jam.",
+    "offer_names": [
+      "1x Standar",
+      "5x Pro",
+      "20x Ultimate"
+    ]
+  },
+  "nav": {
+    "brand": "Zaokit ClaudeOps",
+    "why": "Mengapa",
+    "service": "Layanan",
+    "value": "Nilai Lebih",
+    "security": "Keamanan",
+    "reviews": "Ulasan",
+    "pricing": "Harga",
+    "storage": "Cloud",
+    "process": "Proses",
+    "faq": "FAQ",
+    "lang_aria": "Ganti bahasa"
+  },
+  "hero": {
+    "eyebrow": "GLOBAL VISION · Biarkan AI Menyalakan Setiap Kota, Setiap Individu",
+    "h1_main": "AI Membuat Dunia Tanpa Batas",
+    "h1_sub": "Menghadirkan produktivitas paling maju & pengalaman kelas atas bagi semua orang",
+    "lead": "Produktivitas AI terdepan tidak seharusnya menjadi hak istimewa segelintir orang. Dari Sydney, Silicon Valley, Tokyo, dan Singapura hingga Jakarta—kami menyalakan hub komputasi asli kota demi kota di seluruh dunia, memadukan workstation fisik Mac yang terisolasi, jalur khusus BGP enterprise, serta pendampingan engineering 1-on-1 hingga 7×24 jam agar setiap kreator, developer, dan tim dapat berkarya tanpa batas.",
+    "cta_primary": "Lihat harga",
+    "cta_secondary": "Kirim email",
+    "mailto_enquiry_subject": "Pertanyaan Zaokit ClaudeOps",
+    "stats": [
+      {
+        "strong": "9 Negara Aktif",
+        "span": "AU · US · SG · MY · ID · JP · KH · NZ · CA"
+      },
+      {
+        "strong": "Mac Fisik Asli",
+        "span": "Mac Studio & Mac mini spek tinggi"
+      },
+      {
+        "strong": "Layanan Terbaik",
+        "span": "Pendampingan 1-on-1 7×8j / 7×16j / 7×24j"
+      },
+      {
+        "strong": "Ruang Terisolasi",
+        "span": "Akun macOS sendiri · Mesin khusus di 20x+"
+      },
+      {
+        "strong": "Entitas AU",
+        "span": "Terdaftar di Australia · Pembayaran Stripe"
+      }
+    ]
+  },
+  "map": {
+    "status_main": "9 Negara & 13+ Kota Utama Telah Menyala",
+    "status_em": "MENYALAKAN SETIAP KOTA",
+    "meta_1": "Mesh komputasi ISP lokal asli",
+    "meta_2": "Backbone BGP lintas batas",
+    "meta_3": "Arahkan kursor atau klik kota hub",
+    "stage_aria": "Peta topologi jaringan ISP asli global di 9 negara",
+    "hud_live": "● Aktif",
+    "hud_label_city": "Hub metro",
+    "hud_label_hw": "Perangkat keras",
+    "hud_val_hw": "Mac Studio / mini spek tinggi",
+    "hud_label_route": "Backbone",
+    "pills_aria": "Pilih wilayah",
+    "partner_pill": "✦ Kolaborasi Global · Melayani Seluruh 8 Miliar Manusia",
+    "partner_copy_html": "<strong>Bawa perangkat Anda sendiri &amp; bagikan sumber daya — raih penghasilan sambil menyalakan peluang impian bagi orang lain!</strong>",
+    "partner_cta": "Bawa Perangkat / Gabung Kami →",
+    "partner_mailto_subject": "Bring My Mac / Join Zaokit Global Compute Network",
+    "partner_mailto_body": "Halo Jason, saya tertarik berbagi sumber daya dan bergabung dengan Jaringan Komputasi Global Zaokit:\n\n1. Negara / Kota:\n2. Mode kolaborasi (Bawa Mac sendiri / Node broadband lokal / Mitra regional):\n3. Spesifikasi Mac & detail ISP lokal:\n4. Kontak yang dapat dihubungi:",
+    "nodes": {
+      "AU": {
+        "name": "Australia",
+        "pill": "Australia ★",
+        "short": "Australia",
+        "city": "Sydney · Melbourne",
+        "role": "★ Hub Kantor Pusat Utama · Entitas Australia",
+        "route": "BGP Premium via HK · 0% packet loss"
+      },
+      "US": {
+        "name": "Amerika Serikat",
+        "pill": "Amerika Serikat",
+        "short": "Amerika Serikat",
+        "city": "Silicon Valley · LA",
+        "role": "Hub Komputasi Inti Pantai Barat AS",
+        "route": "Langsung Trans-Pasifik · ISP lokal asli"
+      },
+      "SG": {
+        "name": "Singapura",
+        "pill": "Singapura",
+        "short": "Singapura",
+        "city": "Singapura",
+        "role": "Hub Inti Latensi Rendah APAC",
+        "route": "Simpul kabel bawah laut · RTT ultra-rendah"
+      },
+      "MY": {
+        "name": "Malaysia",
+        "pill": "Malaysia",
+        "short": "Malaysia",
+        "city": "Kuala Lumpur",
+        "role": "Node Broadband Lokal Asia Tenggara",
+        "route": "Jalur darat MY–SG · IP lokal bersih"
+      },
+      "ID": {
+        "name": "Indonesia",
+        "pill": "Indonesia",
+        "short": "Indonesia",
+        "city": "Jakarta",
+        "role": "Node ISP Lokal Nusantara Asia Tenggara",
+        "route": "Kabel bawah laut SG–Jakarta & Indigo"
+      },
+      "JP": {
+        "name": "Jepang",
+        "pill": "Jepang",
+        "short": "Jepang",
+        "city": "Tokyo · Osaka",
+        "role": "Node Latensi Ultra-Rendah Asia Timur",
+        "route": "Terukur ~92ms · 0% packet loss"
+      },
+      "KH": {
+        "name": "Kamboja",
+        "pill": "Kamboja",
+        "short": "Kamboja",
+        "city": "Phnom Penh",
+        "role": "Node RTT Rendah Jalur Darat Langsung",
+        "route": "Jalur darat ~81ms · 0% packet loss"
+      },
+      "NZ": {
+        "name": "Selandia Baru",
+        "pill": "Selandia Baru",
+        "short": "Selandia Baru",
+        "city": "Auckland",
+        "role": "Node Lokal Bersih Pasifik Selatan",
+        "route": "Kabel bawah laut Trans-Tasman & Hawaiki"
+      },
+      "CA": {
+        "name": "Kanada",
+        "pill": "Kanada",
+        "short": "Kanada",
+        "city": "Vancouver · Toronto",
+        "role": "Node Broadband Bersih Amerika Utara",
+        "route": "Langsung Pasifik Utara · Stabilitas tinggi"
+      }
+    }
+  },
+  "why": {
+    "tag": "Mengapa",
+    "h2": "Bagian tersulit dari Claude bukanlah modelnya",
+    "sub": "Yang benar-benar menguras energi Anda adalah ketidakpastian teknis yang sama sekali tidak berkaitan dengan pekerjaan inti Anda.",
+    "cards": [
+      {
+        "h3": "Setup yang rumit",
+        "p": "Mulai dari pendaftaran akun hingga konfigurasi environment, setiap langkah harus Anda cari tahu sendiri tanpa tempat bertanya."
+      },
+      {
+        "h3": "Eksekusi tidak stabil",
+        "p": "Kondisi tiap mesin lokal berbeda-beda, membuat tugas panjang Claude Code sering terputus di tengah jalan."
+      },
+      {
+        "h3": "Repotnya penagihan",
+        "p": "Pembayaran gagal, perubahan paket, dan perpanjangan bulanan terus menyita waktu produktif Anda."
+      },
+      {
+        "h3": "Waktu terbuang",
+        "p": "Jam kerja yang habis untuk riset tool dan troubleshooting seharusnya bisa difokuskan pada karya nyata Anda."
+      }
+    ]
+  },
+  "service": {
+    "tag": "Layanan",
+    "h2": "Serahkan ketidakpastian pada kami. Pegang kepastiannya.",
+    "sub": "Dari penyiapan awal hingga operasional harian, dikelola sepenuhnya dan siap langsung dipakai.",
+    "cards": [
+      {
+        "h3": "Ruang kerja terisolasi",
+        "p": "Akun dan ruang kerja macOS milik Anda sendiri dengan file serta izin akses yang terisolasi, ditambah opsi mesin khusus penuh pada paket 20x. Riwayat percakapan dan data proyek tetap sepenuhnya dalam kendali Anda."
+      },
+      {
+        "h3": "Mac Studio & mini spek tinggi",
+        "p": "Mac Studio atau Mac mini spesifikasi tinggi di jaringan broadband ISP lokal asli di Australia, AS, Singapura, Malaysia, Indonesia, Jepang, Kamboja, Selandia Baru, atau Kanada (bukan pusat data cloud bersama yang murahan). Isolasi tingkat akun (mesin khusus di 20x), stabil untuk jangka panjang."
+      },
+      {
+        "h3": "Penagihan terkelola",
+        "p": "Langganan, perpanjangan otomatis, dan perubahan paket semuanya kami urus. Tidak ada yang perlu Anda kejar sendiri."
+      },
+      {
+        "h3": "Concierge 1-on-1 Bertingkat",
+        "p": "Dukungan engineering langsung 1-on-1 sesuai paket Anda: 7×8 jam (1x), 7×16 jam (5x), hingga concierge privat penuh 7×24 jam nonstop (20x)."
+      }
+    ]
+  },
+  "value": {
+    "tag": "Nilai Lebih",
+    "h2_html": "Yang Anda dapatkan <em class=\"grad\">lebih dari sekadar komputasi</em>",
+    "sub": "Akun dan perangkat hanyalah permulaan. Keunggulan sesungguhnya adalah didampingi praktisi ahli agar Anda dapat memanfaatkan AI secara tepat, lebih mendalam, dan lebih cepat dibanding yang lain.",
+    "cards": [
+      {
+        "h3": "Komputasi & workstation kelas atas",
+        "p": "Ruang kerja AI engineering khusus yang dikonfigurasi dan dikelola untuk Anda, berjalan di Mac Studio atau Mac mini fisik spesifikasi tinggi sehingga tugas panjang Claude Code terus berjalan tanpa henti."
+      },
+      {
+        "h3": "Concierge 1-on-1 Kelas Atas",
+        "p": "Pendampingan AI engineering khusus untuk kreator, developer, founder, dan tim. Mulai dari alur kerja Claude Code, konfigurasi MCP dan Skills hingga peluncuran proyek nyata, dapatkan dukungan langsung 1-on-1 7×8j / 7×16j / 7×24j."
+      },
+      {
+        "h3": "Wawasan AI tangan pertama",
+        "p": "Pembaruan rutin seputar fitur baru, praktik terbaik, dan perkembangan industri untuk Claude serta tool AI terkemuka lainnya agar Anda selalu menjadi yang pertama mengadopsi kapabilitas baru."
+      }
+    ]
+  },
+  "network": {
+    "tag": "Jaringan",
+    "h2_html": "Investasi jaringan berkelanjutan<br>demi remote desktop yang responsif",
+    "p": "Kami terus berinvestasi pada perangkat keras dan rute premium: broadband ISP asli di 9 negara dengan kecepatan simetris 200Mbps–500Mbps+, dipadukan dengan relay mandiri dan backbone BGP enterprise yang menekan packet loss—musuh utama remote desktop—hingga nol.",
+    "chips": [
+      "Simetris 200–500Mbps+",
+      "Backbone BGP enterprise",
+      "Relay kelola mandiri",
+      "Dual-leg BBR",
+      "Hardware encoding Apple Silicon",
+      "Pengamanan allow-list"
+    ],
+    "addon_note_prefix": "Termasuk gratis pada paket 20x, Team & Business; pelanggan 1x / 5x dapat menambahkan ",
+    "addon_note_link": "Jalur Khusus Enterprise ClaudeOps (mulai $5/bln) ↓",
+    "addon_note_suffix": "",
+    "card_aria": "Latensi dan packet loss terukur sebelum dan sesudah optimasi",
+    "legend_before": "Sebelum",
+    "legend_after": "Sesudah",
+    "rows": [
+      {
+        "country": "Jepang",
+        "via": "Via backbone HK",
+        "before": "128–184ms · 10% loss",
+        "after": "~92ms · 0% loss"
+      },
+      {
+        "country": "Australia",
+        "via": "Via backbone HK",
+        "before": "343–386ms · 25–33% loss",
+        "after": "~240ms · 0% loss"
+      },
+      {
+        "country": "Kamboja",
+        "via": "Kabel darat langsung",
+        "before": "",
+        "after": "~81ms · 0% loss"
+      }
+    ],
+    "foot": "Diukur dari klien di Asia Timur, November 2026. Pengalaman aktual dapat berbeda tergantung jaringan lokal Anda."
+  },
+  "security": {
+    "tag": "Keamanan & Privasi",
+    "h2": "Isolasi dua tingkat: akun terpisah dan mesin khusus",
+    "sub": "Terminal Anda menyimpan kode sumber privat, API key di variabel environment, konfigurasi database, dan logika bisnis. Zaokit ClaudeOps menerapkan dua tingkat isolasi: pada paket 1x / 5x setiap pengguna mendapatkan akun macOS terpisah yang hanya diakses melalui Apple Screen Sharing; pada paket 20x Anda dapat mengaktifkan satu mesin fisik khusus penuh yang terisolasi hingga ke tingkat perangkat keras.",
+    "cards": [
+      {
+        "h3": "Mesin khusus 20x: isolasi tingkat perangkat keras",
+        "p": "Saat mode khusus diaktifkan, seluruh unit Mac Studio atau Mac mini spesifikasi tinggi hanya melayani Anda seorang. Instal aplikasi apa pun, ubah pengaturan tingkat sistem, dan gunakan aplikasi remote desktop apa pun termasuk RustDesk maupun VNC pihak ketiga."
+      },
+      {
+        "h3": "Isolasi akun terpisah 1x / 5x",
+        "p": "Setiap pengguna memiliki akun macOS terpisah dengan file dan izin aksesnya sendiri sehingga riwayat serta proyek tetap privat. Akses dibatasi hanya melalui Apple Screen Sharing, yang memberikan sesi desktop terisolasi untuk tiap akun dan tidak dapat dilihat siapa pun."
+      },
+      {
+        "h3": "Anda memegang kendali akses dan enkripsi",
+        "p": "Tetapkan kata sandi akses dan kebijakan enkripsi Anda sendiri. Tim kami hanya menangani konektivitas serta penagihan dan tidak mengakses data di akun Anda secara aktif, kecuali untuk pemeliharaan, insiden keamanan, atau troubleshooting atas persetujuan Anda."
+      }
+    ]
+  },
+  "reviews": {
+    "tag": "Testimoni",
+    "h2": "Apa kata pelanggan nyata kami",
+    "sub": "Demi melindungi privasi klien, seluruh ulasan menampilkan avatar kartun dan identitas yang disamarkan, dengan tetap mempertahankan masukan asli serta tingkatan paket langganan.",
+    "badge": "Anonim · Terverifikasi",
+    "stars_aria": "5 dari 5 bintang",
+    "items": [
+      {
+        "name": "M***",
+        "role": "Lead Produk AI Lintas Negara",
+        "quote": "\"Tunnel enterprise-nya sangat tajam dan super mulus—bahkan lebih jernih dari ToDesk lokal saya. Menulis kode dan berpindah jendela terasa seperti di mesin lokal. Cepat, andal, sepadan dengan setiap sen—pengalaman kelas atas.\"",
+        "source": "Masukan Chat Terverifikasi",
+        "plan": "5x Pro"
+      },
+      {
+        "name": "C***",
+        "role": "Senior Full-Stack Engineer",
+        "quote": "\"Jaringan lokal saya dulu sering putus di tengah sesi. Setelah pindah ke ClaudeOps 1x Standar dengan ruang kerja terisolasi dan Claude Code yang menyala 24/7, rasanya benar-benar seperti 'programmer jenius hidup kembali' 😂. Tidak ada lagi pusing soal tagihan atau jaringan.\"",
+        "source": "Masukan Chat Terverifikasi",
+        "plan": "1x Standar"
+      },
+      {
+        "name": "Kyle W.",
+        "role": "Kepala R&D Kuantitatif",
+        "quote": "\"Jaringan ISP asli di 9 negara plus isolasi tingkat perangkat keras langsung meyakinkan saya. Kode strategi internal dan API key kami tersimpan aman di Mac Studio khusus—berjalan berbulan-bulan nonstop tanpa satu pun gangguan.\"",
+        "source": "Node Australia · Disamarkan",
+        "plan": "20x Flagship"
+      },
+      {
+        "name": "L***",
+        "role": "Indie Developer",
+        "quote": "\"Langsung aktif di hari yang sama setelah checkout via Stripe. Akun macOS terisolasi saya sudah terpasang Claude Code dan dev tools lengkap. Sangat menghemat waktu kalau tidak mau repot urus setup environment atau pembayaran lintas negara.\"",
+        "source": "Node Tokyo · Disamarkan",
+        "plan": "1x Standar"
+      },
+      {
+        "name": "Sarah C.",
+        "role": "Partner Konsultan Manajemen",
+        "quote": "\"Saya bukan orang teknis ops dan enggan mengutak-atik CLI. Dengan dukungan 1-on-1 7×16 jam plus sinkronisasi Google Drive terkelola, saya bisa terhubung dari mana saja saat dinas luar kota dan langsung melanjutkan pekerjaan.\"",
+        "source": "Node Singapura · Disamarkan",
+        "plan": "5x Pro"
+      },
+      {
+        "name": "A***",
+        "role": "Direktur Teknologi E-commerce",
+        "quote": "\"Engineer inti kami menjalankan refactoring multi-agent dan test suite semalaman, lalu tinggal meninjau PR yang rapi keesokan paginya. Kualitas Screen Sharing bawaan sangat jernih, dan dukungan Telegram dari Jason membalas nyaris seketika.\"",
+        "source": "Masukan Telegram",
+        "plan": "20x Flagship"
+      }
+    ],
+    "note": "* Untuk melindungi privasi klien dan keamanan data secara ketat, seluruh ulasan ditampilkan dengan avatar kartun serta nama yang dianonimkan/disamarkan."
+  },
+  "pricing": {
+    "tag": "Harga",
+    "h2": "Pilihan paket dari individu hingga enterprise.",
+    "sub_html": "Skalakan dari ruang kerja personal hingga klaster multi-Mac khusus. <strong>Bayar tahunan cukup 10 bulan dan dapatkan gratis 2 bulan</strong>.",
+    "jump_line": "Jalur Khusus ↓",
+    "jump_ent": "Team & Business ↓",
+    "billing_aria": "Pilih siklus penagihan",
+    "billing_month": "Bulanan",
+    "billing_year": "Tahunan",
+    "billing_save_badge": "Gratis 2 bulan",
+    "currency_aria": "Pilih mata uang",
+    "currencies": {
+      "AUD": {
+        "btn": "A$ AUD",
+        "name": "AUD"
+      },
+      "USD": {
+        "btn": "$ USD",
+        "name": "USD"
+      },
+      "EUR": {
+        "btn": "€ EUR",
+        "name": "EUR"
+      },
+      "NZD": {
+        "btn": "NZ$ NZD",
+        "name": "NZD"
+      },
+      "CAD": {
+        "btn": "C$ CAD",
+        "name": "CAD"
+      },
+      "SGD": {
+        "btn": "S$ SGD",
+        "name": "SGD"
+      },
+      "CNY": {
+        "btn": "¥ CNY",
+        "name": "CNY"
+      }
+    },
+    "solo_subscribe": "Berlangganan",
+    "solo_consult": "Ada pertanyaan? Kirim email →",
+    "solo": [
+      {
+        "tier_b": "1x",
+        "tier_span": "Standar",
+        "desc": "Untuk percakapan harian, penulisan, dan coding ringan dengan Claude yang stabil.",
+        "init_note": "Termasuk environment Claude · sekitar A$5 / hari",
+        "features_html": [
+          "Kuota penggunaan dasar",
+          "Konfigurasi ruang kerja khusus",
+          "Environment fisik Mac mini",
+          "Penagihan langganan &amp; operasional terkelola penuh",
+          "Siap pakai dengan Claude Code",
+          "Dukungan khusus 1-on-1 <strong>7×8 jam</strong>",
+          "Akun macOS terpisah · Akses Apple Screen Sharing"
+        ],
+        "mailto_subject": "Pertanyaan Zaokit ClaudeOps - 1x Standar"
+      },
+      {
+        "badge": "Paling populer",
+        "tier_b": "5x",
+        "tier_span": "Pro",
+        "desc": "Untuk developer dan kreator yang menggunakan Claude Code secara intensif setiap hari.",
+        "init_note": "Termasuk environment Claude · kuota 5x, biaya per unit ~78% dari 1x",
+        "features_html": [
+          "5x kuota penggunaan Standar",
+          "Konfigurasi ruang kerja khusus",
+          "Environment fisik Mac mini spek tinggi",
+          "Penagihan langganan &amp; operasional terkelola penuh",
+          "Leluasa untuk tugas panjang Claude Code",
+          "Dukungan prioritas 1-on-1 <strong>7×16 jam</strong>",
+          "Akun macOS terpisah · Akses Apple Screen Sharing"
+        ],
+        "mailto_subject": "Pertanyaan Zaokit ClaudeOps - 5x Pro"
+      },
+      {
+        "badge_promo": "Promo Akhir Tahun · Hingga 31 Des 2026",
+        "tier_b": "20x",
+        "tier_span": "Ultimate",
+        "desc": "Untuk builder produktif, founder, dan power user yang menjalankan banyak agent sepanjang waktu.",
+        "orig_title": "Harga normal",
+        "init_note": "Harga promo tetap berlaku saat perpanjangan · biaya per unit ~35% dari 1x",
+        "features_html": [
+          "20x kuota penggunaan Standar",
+          "Konfigurasi ruang kerja khusus",
+          "Mac Studio / Mac mini spek tinggi · Opsi mesin khusus",
+          "Penagihan langganan &amp; operasional terkelola penuh",
+          "Multi-agent dan eksekusi tugas paralel",
+          "Kanal concierge privat <strong>kelas atas 7×24 jam</strong>",
+          "Gratis kanal RustDesk berkecepatan tinggi",
+          "Gratis penyimpanan Google Drive 6 TB"
+        ],
+        "mailto_subject": "Pertanyaan Zaokit ClaudeOps - 20x Ultimate"
+      }
+    ],
+    "dedicated_line": {
+      "h3_main": "Jalur Khusus Enterprise ClaudeOps · Akselerasi Lintas Negara",
+      "h3_pill": "Gratis di 20x / Team / Business",
+      "sub": "Add-on opsional untuk pelanggan 1x & 5x: arahkan trafik melalui backbone lintas negara BGP enterprise kami dengan akselerasi dual-leg BBR 0% packet-loss demi Screen Sharing & Claude Code yang super responsif (tagihan tahunan gratis 2 bulan).",
+      "cards": [
+        {
+          "code": "Jalur Khusus 1x",
+          "span": "Akselerasi Standar · Untuk 1x Standar",
+          "desc": "Backbone lintas negara BGP enterprise + relay terenkripsi latensi rendah mandiri + optimasi dual-leg BBR, menjaga sesi harian Apple Screen Sharing, SSH & Claude Code ringan tetap bebas lag pada jam sibuk.",
+          "init_note": "Akselerasi BGP 24/7 tanpa loss · Dikelola bersama paket",
+          "btn": "Tambah Jalur 1x →"
+        },
+        {
+          "code": "Jalur Khusus 5x",
+          "span": "Akselerasi Pro · Untuk 5x Pro (biaya unit 20% lebih hemat)",
+          "desc": "Kuota bandwidth prioritas 5× + antrean QoS BGP enterprise prioritas tinggi + jaminan 0% packet-loss dual-leg BBR, dirancang untuk sesi berat Claude Code real-time, sinkronisasi repo besar & remote desktop FPS tinggi.",
+          "init_note": "Throughput prioritas 5× · QoS BGP prioritas tinggi",
+          "btn": "Tambah Jalur 5x →"
+        }
+      ]
+    },
+    "enterprise": {
+      "divider": "Team & Business · Klaster Multi-Kursi Khusus",
+      "switch_aria": "Pilih tingkatan kursi tim",
+      "tier_pro": "Semua Kursi Pro (1x)",
+      "tier_max": "Semua Kursi Max (5x)",
+      "tier_max_badge": "Direkomendasikan",
+      "tier_ultra": "Semua Kursi Ultra (20x)",
+      "toolbar_html": "Mulai dengan kursi seragam Pro, Max, atau Ultra — atau padu padankan kapan saja lewat <strong>add-on upgrade per kursi</strong> mandiri di bawah.",
+      "team": {
+        "init_badge": "5 × Kursi Max (5x) · Host Khusus",
+        "sub": "5 Kursi",
+        "desc": "Dirancang untuk tim inti startup, studio AI, dan tim riset — satu host Mac fisik khusus untuk tim Anda dengan penagihan terpadu & kendali admin.",
+        "init_note": "Termasuk 5 kursi terisolasi Max (5x) · Host Mac khusus & penagihan terpadu",
+        "init_seat_li_html": "Termasuk <strong>5 kursi engineering Max (5x)</strong> (ruang kerja Claude &amp; akun macOS terpisah per anggota)",
+        "features_html": [
+          "<strong>Host Mac Studio / Mac mini spek tinggi khusus</strong> eksklusif untuk tim Anda",
+          "Pengalihan kursi milik organisasi untuk onboarding/offboarding &amp; <strong>satu faktur gabungan</strong>",
+          "Upgrade kursi tertentu ke Max (5x) atau Ultra (20x) sesuai kebutuhan kapan saja",
+          "Kanal grup concierge khusus tim <strong>7×24 jam</strong>",
+          "Gratis kanal privat RustDesk berkecepatan tinggi untuk tim"
+        ],
+        "init_storage_li": "Gratis penyimpanan cloud tim 12 TB (Google Drive / iCloud+)",
+        "btn": "Langganan Team",
+        "consult": "Butuh kursi tambahan atau spek khusus? Hubungi kami →",
+        "mailto_subject": "Pertanyaan Zaokit ClaudeOps - Paket Team"
+      },
+      "biz": {
+        "init_badge": "Enterprise · Klaster 10 × Max (5x)",
+        "sub": "10 Kursi",
+        "desc": "Untuk perusahaan teknologi yang berkembang, firma kuantitatif & organisasi engineering — klaster fisik multi-Mac khusus dengan deployment lintas 2 wilayah di 9 negara.",
+        "init_note": "Termasuk 10 kursi terisolasi Max (5x) · Klaster multi-Mac khusus & SLA VIP",
+        "init_seat_li_html": "Termasuk <strong>10 kursi engineering Max (5x)</strong> (dapat diperluas hingga 50+ kursi sesuai kebutuhan)",
+        "features_html": [
+          "<strong>Klaster fisik multi-unit Mac Studio / Mac mini khusus</strong>",
+          "Mendukung <strong>deployment dua wilayah &amp; migrasi cepat di 9 negara</strong> + IP ISP asli statis khusus",
+          "Faktur komersial gabungan &amp; Customer Success Manager khusus",
+          "<strong>Kanal SLA VIP enterprise kelas atas 7×24 jam</strong> (prioritas ops &amp; konsultasi arsitektur)",
+          "Gratis jalur relay RustDesk enterprise khusus"
+        ],
+        "init_storage_li": "Gratis penyimpanan cloud enterprise 30 TB (Google Drive / iCloud+)",
+        "btn": "Langganan Business",
+        "consult": "20+ kursi atau klaster privat kustom? Hubungi tim enterprise →",
+        "mailto_subject": "Pertanyaan Zaokit ClaudeOps - Paket Business"
+      }
+    },
+    "seat_addons": {
+      "h3_main": "Add-on Upgrade Per Kursi",
+      "h3_pill": "1–50 kursi dapat diatur saat checkout",
+      "sub": "Padu padankan tingkatan pada paket dasar Team atau Business yang aktif — upgrade anggota tertentu sesuai kebutuhan (add-on tahunan juga gratis 2 bulan).",
+      "cards": [
+        {
+          "from": "Pro 1x",
+          "to": "Max 5x",
+          "tag": "Upgrade",
+          "desc": "Upgrade kursi tim Pro (1x) mana pun ke Max (5x) untuk kebutuhan engineering Claude Code harian yang intensif.",
+          "btn": "Upgrade kursi →"
+        },
+        {
+          "from": "Max 5x",
+          "to": "Ultra 20x",
+          "tag": "Upgrade",
+          "desc": "Upgrade founder, CTO, atau lead architect pada paket Semua-Max ke kapasitas multi-agent Ultra 20x.",
+          "btn": "Upgrade kursi →"
+        },
+        {
+          "from": "Pro 1x",
+          "to": "Ultra 20x",
+          "tag": "Langsung",
+          "desc": "Naikkan kursi mana pun pada paket dasar Semua-Pro langsung ke kuota flagship penuh Ultra 20x.",
+          "btn": "Upgrade kursi →"
+        }
+      ]
+    },
+    "storage": {
+      "tag": "Penyimpanan Cloud · Google Drive & iCloud+",
+      "h2": "Penyimpanan Cloud Terkelola untuk Aset Digital",
+      "sub_html": "Pilih <strong>Google Drive (Google One)</strong> atau <strong>Apple iCloud+</strong> dari kapasitas 2 TB hingga 30 TB, lengkap dengan perpanjangan terkelola dan dukungan concierge 1-on-1 7×16 jam yang sama.",
+      "currency_aria": "Pilih mata uang (penyimpanan cloud)",
+      "per_mo": "/ bln",
+      "cards": [
+        {
+          "tier_b": "2 TB",
+          "tier_span": "Storage",
+          "desc": "Ruang lega untuk foto harian, video, dan pencadangan lintas perangkat.",
+          "note": "Google Drive atau iCloud+ · Penagihan terkelola",
+          "features": [
+            "Google Drive atau Apple iCloud+",
+            "Ruang privat dengan akses terisolasi",
+            "Penagihan terkelola · Dukungan 1-on-1 7×16j"
+          ],
+          "btn": "Langganan 2 TB"
+        },
+        {
+          "badge": "Pilihan kreator",
+          "tier_b": "6 TB",
+          "tier_span": "Storage",
+          "desc": "Ideal untuk fotografer, kreator konten, dan brankas arsip pribadi.",
+          "note": "Google Drive atau iCloud+ · Penagihan terkelola",
+          "features": [
+            "Google Drive atau Apple iCloud+",
+            "Sinkronisasi foto resolusi penuh & media 4K",
+            "Penagihan terkelola · Dukungan 1-on-1 7×16j"
+          ],
+          "btn": "Langganan 6 TB"
+        },
+        {
+          "tier_b": "12 TB",
+          "tier_span": "Storage",
+          "desc": "Penyimpanan kapasitas besar untuk power user dan pencadangan banyak perangkat.",
+          "note": "Google Drive atau iCloud+ · Penagihan terkelola",
+          "features": [
+            "Google Drive atau Apple iCloud+",
+            "Arsip proyek besar & mirror perangkat",
+            "Penagihan terkelola · Dukungan 1-on-1 7×16j"
+          ],
+          "btn": "Langganan 12 TB"
+        },
+        {
+          "tier_b": "30 TB",
+          "tier_span": "Flagship",
+          "desc": "Brankas cloud kelas studio untuk rekaman RAW, dataset AI, dan arsip jangka panjang.",
+          "note": "Google Drive atau iCloud+ · Layanan concierge",
+          "features": [
+            "Google Drive 30TB atau kombinasi dual-cloud",
+            "Kolaborasi tim global berkecepatan tinggi",
+            "Concierge privat kelas atas 7×24 jam"
+          ],
+          "btn": "Langganan 30 TB"
+        }
+      ]
+    },
+    "stripe_trust_html": "Pembayaran aman melalui <strong>Stripe</strong> · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · Bulanan atau tahunan (gratis 2 bulan), batalkan kapan saja",
+    "foot_before_currency": "Semua harga sudah mencakup environment fisik Mac spesifikasi tinggi (akun terpisah di 1x / 5x, opsi mesin khusus di 20x, host khusus atau klaster multi-Mac di Team / Business), toolchain AI siap pakai, serta pengelolaan langganan & penagihan concierge, ditagihkan bulanan atau tahunan (bayar 10 bulan untuk 12 bulan) dalam ",
+    "foot_after_currency": ". Harga di setiap mata uang menyesuaikan tingkat pasar setempat. ",
+    "foot_promo": "Harga coret pada 20x adalah harga normal yang berlaku untuk langganan baru mulai 1 Januari 2027. ",
+    "foot_legal_prefix": "Dengan berlangganan, Anda menyetujui ",
+    "foot_terms_link": "Ketentuan Layanan",
+    "foot_legal_mid": " dan ",
+    "foot_refund_link": "Kebijakan Pengembalian Dana",
+    "foot_legal_suffix": " kami."
+  },
+  "process": {
+    "tag": "Proses",
+    "h2": "Empat langkah. Aktif di hari yang sama.",
+    "steps": [
+      {
+        "h3": "Pilih paket",
+        "p": "Pilih 1x, 5x, atau 20x beserta mata uang pilihan Anda, atau hubungi kami via email terlebih dahulu."
+      },
+      {
+        "h3": "Langganan via Stripe",
+        "p": "Pilih wilayah preferensi Anda di halaman checkout Stripe yang aman dan selesaikan langganan bulanan atau tahunan."
+      },
+      {
+        "h3": "Penyerahan akses",
+        "p": "Di hari yang sama, kami mengalokasikan Mac spek tinggi dan akun terpisah Anda (mesin khusus di 20x), lalu mengirimkan detail akses beserta panduannya."
+      },
+      {
+        "h3": "Operasional berkelanjutan",
+        "p": "Perpanjangan, pemeliharaan akun, dan troubleshooting sepenuhnya kami tangani."
+      }
+    ]
+  },
+  "faq": {
+    "tag": "FAQ",
+    "h2": "Pertanyaan yang sering diajukan",
+    "items": [
+      {
+        "q": "Siapa yang mengoperasikan Zaokit ClaudeOps?",
+        "a_html": "Zaokit ClaudeOps dioperasikan oleh perusahaan yang terdaftar secara resmi di Australia. Seluruh pembayaran diproses dengan aman melalui Stripe, dan setiap transaksi dilengkapi tanda terima serta faktur resmi."
+      },
+      {
+        "q": "Bagaimana perbandingan paket 1x, 5x, 20x, Team, dan Business? Apakah ada diskon tahunan?",
+        "a_html": "Kelima tingkatan paket menyesuaikan jumlah kursi, tingkat isolasi perangkat keras, jam layanan concierge, serta fasilitas tambahan — dan <strong>penagihan tahunan cukup membayar 10 bulan per tahun (gratis 2 bulan) di semua tingkatan</strong>:<br>• <strong>1x Standar</strong>: Kuota dasar individu + environment Mac mini (akun macOS terpisah) + dukungan 1-on-1 <strong>7×8 jam</strong>;<br>• <strong>5x Pro</strong>: Kuota individu 5× + Mac mini spek tinggi (akun macOS terpisah) + dukungan prioritas 1-on-1 <strong>7×16 jam</strong>;<br>• <strong>20x Ultimate</strong>: Kuota individu 20× + Mac Studio / Mac mini spek tinggi (opsi mesin khusus) + concierge privat <strong>7×24 jam</strong> + <strong>kanal privat RustDesk</strong> + <strong>penyimpanan cloud 6 TB</strong>;<br>• <strong>Team (5 Kursi · Host Khusus)</strong>: Tersedia dalam tingkatan Semua-Pro (1x), Semua-Max (5x), atau Semua-Ultra (20x) — host fisik Mac khusus untuk tim Anda, pengalihan kursi anggota, penagihan terpadu, kanal privat RustDesk, penyimpanan cloud 6–12 TB &amp; concierge tim 7×24 jam;<br>• <strong>Business (10 Kursi · Klaster Multi-Mac)</strong>: Tersedia dalam tingkatan Semua-Pro (1x), Semua-Max (5x), atau Semua-Ultra (20x) — klaster multi-Mac khusus (deployment dua wilayah &amp; migrasi cepat di 9 negara), faktur komersial, relay RustDesk enterprise, penyimpanan cloud 12–30 TB &amp; SLA VIP 7×24 jam;<br>• <strong>Add-on Upgrade Per Kursi</strong>: Mulai dari paket dasar Semua-Pro atau Semua-Max lalu upgrade kursi tertentu ke Max (5x) atau Ultra (20x) kapan saja melalui checkout mandiri (jumlah 1–50 kursi dapat disesuaikan);<br>• <strong>Add-on Jalur Khusus Enterprise ClaudeOps</strong>: Akselerasi lintas negara BGP enterprise opsional bagi pelanggan 1x (+$5/bln) dan 5x (+$20/bln) (sudah termasuk gratis pada 20x, Team &amp; Business)."
+      },
+      {
+        "q": "Apa itu add-on Jalur Khusus Enterprise ClaudeOps? Siapa yang membutuhkannya?",
+        "a_html": "<strong>Jalur Khusus Enterprise ClaudeOps</strong> mengarahkan trafik remote desktop dan terminal Anda melalui backbone lintas negara BGP enterprise premium kami dengan relay mandiri dan kontrol kongesti dual-leg BBR, menghilangkan jitter serta packet loss internet publik pada jam sibuk:<br>• <strong>Jalur Khusus 1x ($5/bln · $50/thn)</strong>: Dirancang untuk pelanggan individu 1x Standar yang menjalankan Apple Screen Sharing harian, SSH, dan coding ringan;<br>• <strong>Jalur Khusus 5x ($20/bln · $200/thn)</strong>: Dirancang untuk beban kerja engineering 5x Pro dengan kuota bandwidth prioritas 5× dan QoS BGP prioritas tinggi (biaya per unit 20% lebih hemat dibanding 1x);<br>• <strong>Gratis di Paket Flagship &amp; Tim</strong>: <strong>Paket 20x Ultimate, Team, dan Business sudah mencakup akselerasi khusus enterprise tanpa biaya tambahan</strong>."
+      },
+      {
+        "q": "Mengapa harga Zaokit ClaudeOps lebih tinggi dibandingkan cloud desktop biasa atau akun bersama?",
+        "a_html": "Karena Anda membayar untuk <strong>infrastruktur fisik yang deterministik dan operasional engineering kelas concierge</strong>—bukan VPS bersama berbiaya murah atau akun patungan. Setiap langganan mencakup empat komponen infrastruktur nyata:<br>• <strong>Perangkat Keras Mac Fisik Spek Tinggi</strong>: Mesin Mac Studio dan Mac mini asli (bukan VM cloud tervirtualisasi), memberikan performa komputasi lokal yang konsisten dan keandalan 24/7—dengan isolasi mesin khusus penuh di 20x+;<br>• <strong>Bandwidth Lokal Simetris 200Mbps–500Mbps+</strong>: Broadband ISP lokal asli di 9 negara dengan kecepatan unggah/unduh simetris yang besar, menjaga tampilan Screen Sharing tetap tajam dan responsif alih-alih tersendat di pipa bersama 10–30Mbps;<br>• <strong>Backbone BGP Enterprise</strong>: Relay berkecepatan tinggi yang dikelola sendiri di atas backbone BGP enterprise premium HK/APAC dengan optimasi dual-leg BBR, menekan packet loss lintas negara hingga nol;<br>• <strong>Kuota Resmi Penuh + Operasional Concierge 7×16 / 7×24</strong>: Kuota langganan resmi penuh, penagihan terkelola, sinkronisasi iCloud/Google Drive, serta dukungan engineering 1-on-1."
+      },
+      {
+        "q": "Akun terpisah vs mesin khusus: mengapa paket 1x / 5x dibatasi hanya untuk Apple Screen Sharing?",
+        "a_html": "• <strong>Isolasi akun terpisah (1x / 5x)</strong>: beberapa pengguna berbagi satu unit Mac spek tinggi, namun masing-masing memiliki akun macOS, file, dan izin akses sendiri sehingga tidak seorang pun dapat melihat data pengguna lain. Demi melindungi privasi setiap pengguna, akses dibatasi pada <strong>Apple Screen Sharing</strong> yang membentuk sesi desktop terisolasi untuk tiap akun sehingga layar dan aktivitas Anda tetap privat.<br>• <strong>Mesin khusus (tersedia di 20x)</strong>: seluruh unit Mac fisik hanya melayani Anda seorang. Perangkat keras, sistem, dan jaringan sepenuhnya milik Anda. Anda bebas menginstal aplikasi apa pun, mengubah pengaturan sistem, dan menggunakan <strong>aplikasi remote desktop apa pun</strong>: Apple Screen Sharing, VNC pihak ketiga seperti RealVNC / TigerVNC, atau kanal RustDesk berkecepatan tinggi kami (gratis di 20x).<br><strong>Mengapa aplikasi remote pihak ketiga tidak diaktifkan di mesin bersama?</strong> RustDesk dan sebagian besar VNC pihak ketiga menangkap sesi layar utama Mac, yang pada mesin multi-pengguna berisiko membuat orang lain melihat atau mengendalikan desktop Anda. Karena itu fitur tersebut hanya kami aktifkan pada mode mesin khusus sebagai perlindungan privasi yang disengaja."
+      },
+      {
+        "q": "Paket mana yang sebaiknya saya pilih?",
+        "a_html": "Pilih 1x untuk chat dan penulisan harian, 5x jika Anda menulis kode dengan Claude Code setiap hari, dan 20x untuk menjalankan banyak agent sekaligus, pemakaian intensif 24 jam, atau jika membutuhkan mesin khusus dengan RustDesk dan aplikasi remote desktop bebas. Masih ragu? Mulai dari paket lebih rendah dan upgrade kapan saja."
+      },
+      {
+        "q": "Apa arti praktis dari \"environment yang deterministik dan stabil\"?",
+        "a_html": "Artinya ruang kerja terisolasi milik Anda sendiri + workstation Mac fisik spesifikasi tinggi yang tetap + pengelolaan tagihan, perpanjangan, dan operasional engineering harian secara khusus. Operasional engineering yang terstandarisasi menghilangkan putus koneksi mendadak, konflik konfigurasi, maupun gagal bayar perpanjangan sehingga alur kerja Anda selalu terprediksi."
+      },
+      {
+        "q": "Bagaimana cara menggunakannya sehari-hari? Lewat Mac jarak jauh atau dari lokal?",
+        "a_html": "<strong>Keduanya bisa. Gunakan cara yang paling nyaman bagi Anda:</strong><br>1. <strong>Remote desktop</strong>: pada 1x / 5x, masuk ke akun terpisah Anda melalui macOS Screen Sharing yang terisolasi, aman, dan siap pakai. Pada 20x dengan mode mesin khusus aktif, Anda juga bisa memakai VNC pihak ketiga seperti RealVNC / TigerVNC, atau <strong>kanal RustDesk berkecepatan tinggi kami (gratis di 20x)</strong> untuk sesi yang lebih mulus dan berlatensi lebih rendah. Dengan cara mana pun Anda memperoleh desktop dan terminal macOS penuh, sementara tugas panjang tetap berjalan.<br>2. <strong>Integrasi mulus dengan alur kerja lokal</strong>: berkolaborasi langsung dengan environment pengembangan jarak jauh dari alur kerja dan dev tools lokal Anda tanpa beban setup maupun pemeliharaan di perangkat lokal. Mac jarak jauh berfungsi sebagai backend komputasi khusus Anda."
+      },
+      {
+        "q": "Bagaimana keamanan dan privasi kode serta data saya dijaga?",
+        "a_html": "Pada 1x / 5x, setiap pengguna memperoleh akun macOS terpisah dengan file, izin akses, dan sesi desktop yang terisolasi, serta hanya diakses lewat Apple Screen Sharing sehingga tidak ada orang lain yang dapat melihat layar Anda. Pada 20x Anda dapat mengaktifkan mesin khusus: seluruh Mac Studio atau Mac mini spek tinggi hanya melayani Anda, terisolasi hingga ke perangkat keras. Riwayat sesi, kode sumber, dan variabel environment tersimpan di akun atau mesin Anda sendiri. Anda mengatur sendiri kata sandi akses serta enkripsi, dan tim kami tidak mengakses data Anda secara aktif kecuali untuk pemeliharaan, insiden keamanan, atau troubleshooting yang Anda setujui."
+      },
+      {
+        "q": "Di mana lokasi mesin dan jaringannya?",
+        "a_html": "Mesin fisik Mac Studio dan Mac mini spesifikasi tinggi kami berlokasi di <strong>Australia, Amerika Serikat, Singapura, Malaysia, Indonesia, Jepang, Kamboja, Selandia Baru, dan Kanada</strong>, terhubung melalui <strong>jaringan broadband ISP lokal asli (bukan pusat data public cloud bersama)</strong> demi keandalan maksimal. Pilih wilayah preferensi Anda saat checkout, dan kami akan mengalokasikan mesin serta akun tetap untuk penggunaan jangka panjang (satu mesin penuh khusus pada 20x)."
+      },
+      {
+        "q": "Bagaimana cara kerja penyimpanan cloud Google Drive & iCloud+?",
+        "a_html": "Kami menyediakan paket 2 TB ($8.99/bln), 6 TB ($28.99/bln), 12 TB ($58.99/bln), dan 30 TB ($148.99/bln). Saat checkout di Stripe, pilih <strong>Apple iCloud+</strong> atau <strong>Google Drive (Google One)</strong> lalu cantumkan email akun Anda; tim concierge 1-on-1 7×16 jam kami akan mengurus aktivasi serta perpanjangan rutinnya."
+      },
+      {
+        "q": "Apakah saya bisa upgrade atau downgrade paket?",
+        "a_html": "Bisa. Perubahan berlaku mulai siklus penagihan berikutnya. Jika Anda membutuhkan upgrade segera, hubungi kami dan Anda cukup membayar selisihnya."
+      },
+      {
+        "q": "Bagaimana jika terjadi kendala teknis?",
+        "a_html": "Segera hubungi kami. Kami memprioritaskan troubleshooting dan memastikan layanan Anda kembali berjalan normal secepat mungkin."
+      },
+      {
+        "q": "Metode pembayaran apa saja yang diterima? Apakah saya mendapat faktur resmi?",
+        "a_html": "Kami menerima pembayaran langganan online melalui Stripe, termasuk Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay, dan Link, dalam mata uang AUD, USD, EUR, NZD, CAD, SGD, atau CNY. Pemegang kartu UnionPay dapat memilih CNY agar transaksi lebih lancar. Stripe menerbitkan tanda terima dan faktur resmi secara otomatis. Untuk paket bisnis multi-akun, silakan kirim email kepada kami."
+      },
+      {
+        "q": "Bagaimana cara membawa perangkat sendiri atau bergabung ke jaringan komputasi global untuk meraih penghasilan sambil menyalakan lebih banyak kota?",
+        "a_html": "Kami mengundang dengan hangat mitra di seluruh dunia untuk bergabung dalam jaringan komputasi asli kami demi benar-benar melayani seluruh 8 miliar manusia! <strong>Anda dapat membawa perangkat sendiri dan membagikan sumber daya — membantu Anda meraih penghasilan sekaligus menyalakan peluang impian bagi orang lain!</strong> Baik Anda memiliki perangkat keras Mac fisik menganggur maupun spesifikasi tinggi, broadband lokal berkualitas di kota Anda, atau jaringan komunitas builder &amp; kreator regional, kirimkan email kapan saja ke <a href=\"mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network\" style=\"color:var(--primary-strong);font-weight:600\">jason2023zhang@gmail.com</a> beserta kota dan detail perangkat/ISP Anda—selamat bergabung!"
+      }
+    ]
+  },
+  "partner": {
+    "eyebrow": "GLOBAL COMPUTE PARTNER · Membangun Bersama Mesh Komputasi Dunia",
+    "h2_html": "Bergabung dengan Jaringan Komputasi Global Kami —<br><em class=\"grad\">Benar-Benar Melayani Seluruh 8 Miliar Manusia!</em>",
+    "p_html": "Berawal dari 13+ kota yang telah menyala di 9 negara, kami menghadirkan komputasi asli murni dan produktivitas AI terdepan ke setiap penjuru dunia. <strong>Anda dapat membawa perangkat sendiri dan membagikan sumber daya — membantu Anda meraih penghasilan sambil menyalakan peluang impian bagi orang lain!</strong> Di mana pun Anda berada, selamat bergabung — kirim email kepada kami untuk menyalakan kota berikutnya bersama-sama.",
+    "chips": [
+      "✦ Bawa Mac Sendiri · Berbagi & Berpenghasilan",
+      "✦ Berbagi Sumber Daya Broadband Lokal Asli",
+      "✦ Hosting Klaster & Mitra Regional"
+    ],
+    "btn": "Bawa Mac Anda / Kirim Email: jason2023zhang@gmail.com →"
+  },
+  "cta": {
+    "h2": "AI Membuat Dunia Tanpa Batas. Mulai Hari Ini.",
+    "p": "Bergabunglah bersama para builder di kota-kota global kami — berlangganan via Stripe untuk penyerahan akses di hari yang sama dan nikmati produktivitas AI paling maju serta pengalaman terbaik.",
+    "btn_primary": "Pilih paket",
+    "btn_secondary": "Email: jason2023zhang@gmail.com",
+    "tg_qr_aria": "Buka Telegram @letcode2020",
+    "tg_qr_alt": "Kode QR Telegram @letcode2020",
+    "tg_h3": "Chat di Telegram",
+    "tg_p": "Pindai atau ketuk untuk menghubungi kami terkait konsultasi pra-penjualan, dukungan teknis, dan wawasan AI."
+  },
+  "footer": {
+    "brand": "Zaokit ClaudeOps",
+    "entity": "Dioperasikan oleh perusahaan terdaftar di Australia · 19 Bahasa Global",
+    "contact_label": "Kontak: ",
+    "alt_label": "Alternatif: ",
+    "rights": "Hak cipta dilindungi undang-undang.",
+    "products_h4": "Produk Zaokit",
+    "follow_h4": "Ikuti kami",
+    "terms": "Ketentuan Layanan",
+    "refund": "Kebijakan Pengembalian Dana",
+    "privacy": "Kebijakan Privasi",
+    "disclaimer": "Penafian: Zaokit adalah penyedia cloud workstation dan konsultasi AI engineering independen serta tidak berafiliasi dengan, didukung oleh, atau disponsori oleh Anthropic PBC, Apple Inc., maupun Google LLC. Claude, Claude Code, Mac, iCloud, dan Google Drive adalah merek dagang dari pemiliknya masing-masing."
+  },
+  "js": {
+    "per_month": "/ bulan",
+    "per_year": "/ tahun",
+    "per_seat_mo": "/ kursi / bln",
+    "per_seat_yr": "/ kursi / thn",
+    "per_mo_short": "/ bln",
+    "per_yr_short": "/ thn",
+    "title_12mo": "12 bulan ditagihkan bulanan",
+    "title_reg_mo": "Harga bulanan normal",
+    "note_annual": "Tagihan tahunan 10 bulan · ~{sym}{eq}/bln, hemat {sym}{save}",
+    "note_1x_mo": "Termasuk environment Claude · sekitar {sym}{day} / hari",
+    "note_20x_promo": "Harga promo tetap saat perpanjangan · biaya unit ~{ratio}% dari 1x",
+    "note_mult_mo": "Termasuk environment Claude · kuota {mult}x, biaya unit ~{ratio}% dari 1x",
+    "ent_team_mo": "Termasuk 5 kursi terisolasi {label} · Host Mac khusus & tagihan terpadu",
+    "ent_biz_mo": "Termasuk 10 kursi terisolasi {label} · Klaster multi-Mac khusus & SLA VIP",
+    "line_0_mo": "Akselerasi BGP 24/7 tanpa loss · Dikelola bersama paket",
+    "line_1_mo": "Throughput prioritas 5× · QoS BGP prioritas tinggi",
+    "ent_copy": {
+      "pro": {
+        "label": "Pro (1x)",
+        "teamBadge": "5 × Kursi Pro (1x) · Host Khusus",
+        "bizBadge": "Enterprise · Klaster 10 × Pro (1x)",
+        "teamSeatLi": "Termasuk <strong>5 kursi anggota standar Pro (1x)</strong> (ruang kerja Claude &amp; akun macOS terpisah per anggota)",
+        "bizSeatLi": "Termasuk <strong>10 kursi anggota standar Pro (1x)</strong> (dapat diperluas hingga 50+ kursi sesuai kebutuhan)",
+        "teamStorage": "Gratis penyimpanan cloud tim 6 TB (Google Drive / iCloud+)",
+        "bizStorage": "Gratis penyimpanan cloud enterprise 12 TB (Google Drive / iCloud+)"
+      },
+      "max": {
+        "label": "Max (5x)",
+        "teamBadge": "5 × Kursi Max (5x) · Host Khusus",
+        "bizBadge": "Enterprise · Klaster 10 × Max (5x)",
+        "teamSeatLi": "Termasuk <strong>5 kursi engineering Max (5x)</strong> (ruang kerja Claude &amp; akun macOS terpisah per anggota)",
+        "bizSeatLi": "Termasuk <strong>10 kursi engineering Max (5x)</strong> (dapat diperluas hingga 50+ kursi sesuai kebutuhan)",
+        "teamStorage": "Gratis penyimpanan cloud tim 12 TB (Google Drive / iCloud+)",
+        "bizStorage": "Gratis penyimpanan cloud enterprise 30 TB (Google Drive / iCloud+)"
+      },
+      "ultra": {
+        "label": "Ultra (20x)",
+        "teamBadge": "5 × Kursi Ultra (20x) · Studio Khusus",
+        "bizBadge": "Enterprise · Klaster 10 × Ultra (20x)",
+        "teamSeatLi": "Termasuk <strong>5 kursi flagship Ultra (20x)</strong> (ruang kerja Claude &amp; akun macOS terpisah per anggota)",
+        "bizSeatLi": "Termasuk <strong>10 kursi flagship Ultra (20x)</strong> (dapat diperluas hingga 50+ kursi sesuai kebutuhan)",
+        "teamStorage": "Gratis penyimpanan cloud tim 12 TB (Google Drive / iCloud+)",
+        "bizStorage": "Gratis penyimpanan cloud enterprise 30 TB (Google Drive / iCloud+)"
+      }
+    },
+    "toast_copied": "Email disalin: {email}. Membuka aplikasi email Anda…",
+    "toast_fallback": "Silakan kirim email ke {email}"
+  },
+  "legal_common": {
+    "back_home": "← Kembali ke beranda",
+    "footer_copy": "© Zaokit AI · Dioperasikan oleh perusahaan terdaftar di Australia"
+  },
+  "privacy": {
+    "title": "Kebijakan Privasi | Zaokit ClaudeOps",
+    "description": "Kebijakan Privasi Zaokit ClaudeOps",
+    "h1": "Kebijakan Privasi",
+    "meta": "Tanggal berlaku: 3 November 2026. Apabila terdapat perbedaan antara versi bahasa yang berbeda, versi bahasa Inggris yang berlaku.",
+    "lead_html": "Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi Anda saat menyediakan layanan Zaokit ClaudeOps. Kami mengelola informasi pribadi sesuai dengan Australian Privacy Act 1988 dan Australian Privacy Principles (APPs).",
+    "sections": [
+      {
+        "h2": "1. Informasi yang kami kumpulkan",
+        "body_html": "<ul><li><strong>Detail kontak dan akun</strong>: nama Anda, alamat email, serta wilayah preferensi yang Anda pilih saat checkout.</li><li><strong>Informasi pembayaran</strong>: diproses oleh Stripe. Kami tidak pernah melihat atau menyimpan nomor kartu lengkap Anda; kami hanya dapat melihat catatan transaksi, tanda terima, dan status pembayaran.</li><li><strong>Informasi layanan</strong>: alamat email akun pihak ketiga yang Anda berikan untuk penyiapan Layanan (seperti akun Claude, Google, atau Apple) serta kredensial akses yang kami terbitkan untuk Anda.</li><li><strong>Komunikasi</strong>: pesan yang Anda kirimkan kepada kami melalui email, Telegram, atau kanal lainnya.</li><li><strong>Data situs web</strong>: perangkat, browser, alamat IP, dan halaman yang dikunjungi, yang dikumpulkan melalui alat analitik seperti Google Analytics dan Umami.</li></ul>"
+      },
+      {
+        "h2": "2. Cara kami menggunakannya",
+        "body_html": "<p>Kami menggunakan informasi ini semata-mata untuk menyiapkan dan menyerahkan Layanan, menangani penagihan serta perpanjangan, memberikan dukungan teknis, menjaga keamanan sistem dan mencegah penyalahgunaan, memenuhi kewajiban hukum, serta meningkatkan kualitas situs web dan Layanan kami. Kami tidak menjual informasi pribadi Anda.</p>"
+      },
+      {
+        "h2": "3. Data di dalam environment Anda",
+        "body_html": "<p>File, kode, dan sesi yang Anda simpan di dalam environment Anda adalah milik Anda sepenuhnya. Kami tidak mengaksesnya secara aktif, dan hanya mengambil tindakan yang diperlukan untuk pemeliharaan sistem, penanganan insiden keamanan, kepatuhan hukum, atau troubleshooting yang telah Anda setujui.</p>"
+      },
+      {
+        "h2": "4. Pembagian informasi",
+        "body_html": "<p>Kami hanya membagikan informasi yang diperlukan kepada:</p><ul><li>penyedia layanan yang kami perlukan untuk menyelenggarakan Layanan, seperti pemrosesan pembayaran (Stripe), analitik situs web, serta penyedia jaringan dan infrastruktur;</li><li>penyedia pihak ketiga, sejauh diperlukan untuk mengelola langganan atas nama Anda;</li><li>otoritas berwenang, apabila diwajibkan oleh hukum atau permintaan resmi pemerintah yang sah.</li></ul>"
+      },
+      {
+        "h2": "5. Pemrosesan lintas batas negara",
+        "body_html": "<p>Environment kami berlokasi di Australia, Amerika Serikat, Singapura, Malaysia, Indonesia, Jepang, Kamboja, Selandia Baru, dan Kanada, dan penyedia seperti Stripe dapat memproses data di negara lain. Oleh karena itu, informasi Anda dapat disimpan atau diproses di luar negara tempat tinggal Anda. Kami mengambil langkah-langkah yang wajar untuk melindunginya.</p>"
+      },
+      {
+        "h2": "6. Penyimpanan data",
+        "body_html": "<ul><li>Informasi kontak, akun, dan penagihan: disimpan selama Anda menggunakan Layanan dan setelahnya sepanjang diwajibkan oleh peraturan perpajakan, akuntansi, atau hukum lainnya.</li><li>Data di dalam environment Anda: dapat dihapus 7 hari setelah Layanan berakhir.</li></ul>"
+      },
+      {
+        "h2": "7. Keamanan",
+        "body_html": "<p>Kami menerapkan langkah-langkah teknis dan organisasional yang wajar untuk melindungi informasi Anda, seperti pembatasan akses dan isolasi akun. Namun, tidak ada transmisi internet atau penyimpanan elektronik yang sepenuhnya bebas risiko, sehingga kami tidak dapat menjamin bahwa informasi tidak akan pernah diakses tanpa izin.</p>"
+      },
+      {
+        "h2": "8. Cookie dan analitik",
+        "body_html": "<p>Situs web kami menggunakan alat analitik untuk memahami pola penggunaan situs, dan alat tersebut dapat menggunakan cookie atau teknologi serupa. Anda dapat menonaktifkan cookie melalui pengaturan browser dan tetap mengakses situs ini.</p>"
+      },
+      {
+        "h2": "9. Hak Anda",
+        "body_html": "<p>Anda dapat meminta kami untuk mengakses, memperbarui, atau menghapus informasi pribadi Anda, kecuali apabila kami diwajibkan menyimpannya menurut hukum. Jika Anda memiliki keluhan terkait cara kami menangani informasi Anda, silakan hubungi kami terlebih dahulu. Apabila kami belum dapat menyelesaikannya, Anda dapat mengajukan pengaduan ke Office of the Australian Information Commissioner (OAIC).</p>"
+      },
+      {
+        "h2": "10. Perubahan kebijakan",
+        "body_html": "<p>Kami dapat memperbarui kebijakan ini dari waktu ke waktu dan akan mempublikasikan versi terbaru di halaman ini. Untuk perubahan yang bersifat material, kami akan memberikan pemberitahuan sebelumnya melalui email atau di situs web kami.</p>"
+      },
+      {
+        "h2": "11. Kontak",
+        "body_html": "<p>Untuk pertanyaan seputar privasi, kirim email ke <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> (alternatif: <a href=\"mailto:support@zaokit.ai\">support@zaokit.ai</a>).</p>"
+      }
+    ]
+  },
+  "terms": {
+    "title": "Ketentuan Layanan | Zaokit ClaudeOps",
+    "description": "Ketentuan Layanan Zaokit ClaudeOps",
+    "h1": "Ketentuan Layanan",
+    "meta": "Tanggal berlaku: 3 November 2026. Apabila terdapat perbedaan antara versi bahasa yang berbeda, versi bahasa Inggris yang berlaku.",
+    "lead_html": "Selamat datang di Zaokit ClaudeOps (\"kami\"). Dengan berlangganan atau menggunakan layanan ini, Anda menyetujui Ketentuan ini, <a href=\"refund.html\">Kebijakan Pengembalian Dana</a>, serta <a href=\"privacy.html\">Kebijakan Privasi</a> kami. Apabila Anda tidak setuju, mohon jangan berlangganan.",
+    "sections": [
+      {
+        "h2": "1. Layanan",
+        "body_html": "<p>Kami menyediakan environment Mac jarak jauh terkelola, konfigurasi ruang kerja AI, pengelolaan penagihan langganan, dan konsultasi teknis (\"Layanan\"). Kami adalah penyedia independen dan tidak berafiliasi dengan, diberi wewenang oleh, atau bermitra dengan Anthropic PBC, Apple Inc., maupun Google LLC.</p>"
+      },
+      {
+        "h2": "2. Layanan pihak ketiga",
+        "body_html": "<ol><li>Layanan pihak ketiga seperti Claude, Google Drive, dan iCloud+ disediakan oleh masing-masing penyelenggara berdasarkan ketentuan dan kebijakan mereka sendiri. Akun-akun tersebut didaftarkan atas nama Anda dan menjadi milik Anda. Anda bertanggung jawab untuk mematuhi ketentuan, kebijakan penggunaan, serta persyaratan wilayah dari tiap penyedia, dan memastikan penggunaan Anda sah menurut hukum di wilayah Anda.</li><li>Kami hanya mengelola langganan dan perpanjangan atas nama Anda. Kami tidak memberikan jaminan atas ketersediaan, fitur, batas penggunaan, versi model, maupun perubahan kebijakan dari layanan pihak ketiga mana pun. Pengali paket \"1x / 5x / 20x\" serta konfigurasi kursi Team / Business hanyalah spesifikasi indikatif. Penggunaan aktual tunduk pada aturan penyedia yang berlaku saat itu.</li><li>Apabila penyedia pihak ketiga membatasi, menangguhkan, atau menghentikan akun Anda, atau mengubah produk, batas kuota, maupun harganya, kami akan berupaya secara wajar untuk membantu, namun kami tidak bertanggung jawab atas dampak yang timbul.</li></ol>"
+      },
+      {
+        "h2": "3. Environment",
+        "body_html": "<ol><li><strong>1x / 5x (mesin multi-pengguna)</strong>: setiap pengguna memperoleh akun macOS terpisah yang hanya dapat diakses melalui Apple Screen Sharing. Anda dilarang mencoba mengakses akun atau data pengguna lain, ataupun menginstal aplikasi kendali jarak jauh, perekam layar, proxy jaringan, atau perangkat lunak lain yang dapat memengaruhi pengguna lain.</li><li><strong>20x / Team / Business (mesin khusus atau klaster)</strong>: paket 20x mencakup opsi mesin khusus; paket Team dan Business menyediakan perangkat keras fisik khusus atau klaster multi-Mac secara eksklusif untuk organisasi Anda dengan akun macOS terpisah per anggota. Anda diperkenankan menginstal perangkat lunak dan mengubah pengaturan sistem secara wajar, serta bertanggung jawab atas stabilitas maupun risiko keamanan yang diakibatkannya.</li><li>Model mesin, spesifikasi, dan wilayah dialokasikan berdasarkan ketersediaan sumber daya. Kami akan berupaya memenuhi wilayah preferensi yang Anda pilih saat checkout, namun tidak dapat menjaminnya secara mutlak. Kami dapat memigrasikan environment Anda demi pemeliharaan, penanganan insiden, atau penyesuaian kapasitas, dan akan berusaha memberi pemberitahuan sebelumnya kecuali dalam keadaan darurat.</li></ol>"
+      },
+      {
+        "h2": "4. Penggunaan yang dapat diterima",
+        "body_html": "<p>Anda dilarang menggunakan Layanan untuk:</p><ul><li>melakukan aktivitas melanggar hukum atau melanggar hak kekayaan intelektual, privasi, maupun hak pihak lain;</li><li>mengirim spam, melancarkan serangan siber, melakukan pemindaian port (port scan), atau menyebarkan malware;</li><li>menambang aset kripto atau menjalankan komputasi beban tinggi terus-menerus yang tidak berkaitan dengan Layanan;</li><li>menjual kembali atau menyewakan kembali Layanan, atau membagikan kredensial akses Anda kepada pihak lain;</li><li>melanggar ketentuan atau kebijakan penggunaan penyedia pihak ketiga mana pun.</li></ul><p>Apabila Anda melanggar aturan ini, kami berhak menangguhkan atau menghentikan Layanan seketika tanpa pengembalian dana.</p>"
+      },
+      {
+        "h2": "5. Dukungan teknis",
+        "body_html": "<p>Jam dukungan yang tertera pada setiap paket (7×8 jam / 7×16 jam / 7×24 jam) menunjukkan waktu kami menerima dan menangani permintaan bantuan. Kami akan berupaya secara wajar untuk merespons dengan cepat, namun tidak menjanjikan batas waktu respons atau penyelesaian tertentu.</p>"
+      },
+      {
+        "h2": "6. Ketersediaan dan pemeliharaan",
+        "body_html": "<p>Layanan disediakan sebagaimana adanya (\"as is\") dan sebagaimana tersedia (\"as available\"). Kami melakukan upaya wajar untuk menjaga stabilitasnya, namun tidak menjamin Layanan akan bebas gangguan atau bebas kesalahan setiap saat. Kami akan berusaha memberikan pemberitahuan lebih awal untuk pemeliharaan terjadwal. Gangguan akibat pemadaman listrik, kendala operator jaringan, gangguan pihak ketiga, bencana alam, atau peristiwa lain di luar kendali wajar kami bukan merupakan pelanggaran oleh kami.</p>"
+      },
+      {
+        "h2": "7. Data dan pencadangan",
+        "body_html": "<ol><li>Anda bertanggung jawab atas data di dalam akun Anda dan disarankan mencadangkan data penting secara berkala. Kami tidak bertanggung jawab atas kehilangan data kecuali diwajibkan oleh hukum.</li><li>Kami tidak mengakses konten di akun Anda secara aktif, dan hanya mengambil tindakan yang diperlukan untuk pemeliharaan sistem, insiden keamanan, kewajiban hukum, atau troubleshooting yang Anda setujui.</li><li>Setelah Layanan berakhir, kami dapat menghapus akun beserta data Anda setelah 7 hari. Harap ekspor seluruh data yang Anda perlukan sebelum batas waktu tersebut.</li></ol>"
+      },
+      {
+        "h2": "8. Biaya dan perpanjangan",
+        "body_html": "<ol><li>Layanan dapat ditagihkan secara bulanan atau tahunan dan diperpanjang secara otomatis melalui Stripe sesuai harga serta interval penagihan yang ditampilkan saat checkout. Add-on upgrade per kursi hanya berlaku untuk langganan dasar Team atau Business yang aktif; add-on Jalur Khusus Enterprise ClaudeOps memerlukan langganan dasar aktif (sudah termasuk tanpa biaya tambahan pada paket 20x, Team, dan Business).</li><li>Kami dapat menyesuaikan harga dengan pemberitahuan minimal 30 hari sebelumnya. Anda dapat membatalkan langganan sebelum harga baru berlaku.</li><li>Harga promosi hanya berlaku bagi langganan yang dimulai selama periode promosi. Selama langganan Anda tetap aktif tanpa terputus, perpanjangan akan dikenakan harga promosi dengan tetap tunduk pada klausul 8.2. Jika Anda membatalkan lalu berlangganan kembali di kemudian hari, harga yang berlaku saat itu akan diterapkan.</li><li>Ketentuan pembatalan dan pengembalian dana diatur dalam <a href=\"refund.html\">Kebijakan Pengembalian Dana</a> kami.</li></ol>"
+      },
+      {
+        "h2": "9. Penangguhan dan penghentian",
+        "body_html": "<p>Anda dapat membatalkan kapan saja dan Layanan akan tetap berjalan hingga akhir periode penagihan saat ini. Kami dapat menangguhkan atau menghentikan Layanan apabila Anda melanggar Ketentuan ini, gagal melakukan pembayaran, atau penggunaan Anda menimbulkan risiko keamanan. Kami juga dapat menghentikan penyediaan Layanan dengan pemberitahuan 30 hari sebelumnya serta mengembalikan biaya secara proporsional (pro-rata) untuk sisa periode yang belum terpakai.</p>"
+      },
+      {
+        "h2": "10. Batasan tanggung jawab",
+        "body_html": "<p>Sejauh diizinkan secara maksimal oleh hukum: (a) kami tidak bertanggung jawab atas kerugian tidak langsung, insidental, khusus, atau konsekuensial, termasuk kehilangan keuntungan, data, reputasi, atau peluang bisnis; dan (b) total tanggung jawab kami sehubungan dengan Layanan dibatasi sebesar biaya yang benar-benar telah Anda bayarkan kepada kami dalam satu bulan sebelum peristiwa yang menimbulkan klaim.</p><p>Tidak ada ketentuan dalam dokumen ini yang mengecualikan, membatasi, atau mengubah hak maupun jaminan konsumen yang Anda miliki berdasarkan Australian Consumer Law yang secara hukum tidak dapat dikecualikan. Apabila hukum mengizinkan pembatasan tanggung jawab kami, tanggung jawab kami dibatasi pada penyediaan ulang layanan atau penggantian biaya untuk menyediakan ulang layanan tersebut.</p>"
+      },
+      {
+        "h2": "11. Perubahan Ketentuan",
+        "body_html": "<p>Kami dapat memperbarui Ketentuan ini dari waktu ke waktu dan akan memberikan pemberitahuan sebelumnya atas perubahan material melalui email atau di situs web kami. Melanjutkan penggunaan Layanan setelah perubahan berlaku berarti Anda menyetujui Ketentuan yang telah diperbarui.</p>"
+      },
+      {
+        "h2": "12. Hukum yang mengatur",
+        "body_html": "<p>Ketentuan ini diatur oleh dan ditafsirkan berdasarkan hukum negara Australia.</p>"
+      },
+      {
+        "h2": "13. Kontak",
+        "body_html": "<p>Ada pertanyaan mengenai Ketentuan ini? Kirim email ke <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> (alternatif: <a href=\"mailto:support@zaokit.ai\">support@zaokit.ai</a>).</p>"
+      }
+    ]
+  },
+  "refund": {
+    "title": "Kebijakan Pengembalian Dana | Zaokit ClaudeOps",
+    "description": "Kebijakan Pengembalian Dana dan Pembatalan Zaokit ClaudeOps",
+    "h1": "Kebijakan Pengembalian Dana",
+    "meta": "Tanggal berlaku: 3 November 2026. Apabila terdapat perbedaan antara versi bahasa yang berbeda, versi bahasa Inggris yang berlaku.",
+    "lead_html": "Kebijakan ini menjelaskan mekanisme pembatalan serta pengembalian dana dan merupakan bagian yang tidak terpisahkan dari <a href=\"terms.html\">Ketentuan Layanan</a> kami. Kebijakan ini tidak mengecualikan hak konsumen apa pun yang Anda miliki berdasarkan Australian Consumer Law yang secara hukum tidak dapat dikecualikan.",
+    "sections": [
+      {
+        "h2": "1. Pembatalan",
+        "body_html": "<p>Layanan dapat ditagihkan secara bulanan atau tahunan dan Anda dapat membatalkannya kapan saja. Setelah dibatalkan, Layanan tetap aktif hingga akhir periode penagihan berjalan (bulanan atau tahunan) dan tidak akan diperpanjang lagi. Untuk membatalkan, silakan kirim email kepada kami.</p>"
+      },
+      {
+        "h2": "2. Sebelum penyerahan akses",
+        "body_html": "<p>Apabila Anda membatalkan pesanan sebelum kami menyerahkan environment dan detail akses Anda, kami akan memberikan pengembalian dana penuh (100%).</p>"
+      },
+      {
+        "h2": "3. Setelah penyerahan akses",
+        "body_html": "<p>Saat mengaktifkan Layanan, kami mengalokasikan perangkat keras serta sumber daya kursi dan mengatur langganan pihak ketiga terkait atas nama Anda. Oleh karena itu, biaya untuk periode penagihan berjalan (termasuk pembayaran di muka tahunan berdiskon) pada umumnya tidak dapat dikembalikan setelah akses diserahkan dan tidak dihitung secara pro-rata harian maupun bulanan, kecuali sebagaimana diatur pada bagian 4 atau apabila diwajibkan oleh hukum.</p>"
+      },
+      {
+        "h2": "4. Gangguan yang disebabkan oleh kami",
+        "body_html": "<p>Apabila Layanan tidak dapat diakses selama lebih dari 72 jam berturut-turut karena alasan yang berada dalam kendali kami, kami akan memperpanjang masa aktif layanan Anda sejumlah hari yang terdampak. Jika Anda memilih untuk membatalkan, Anda dapat mengajukan pengembalian dana pro-rata untuk sisa periode berjalan yang belum terpakai.</p>"
+      },
+      {
+        "h2": "5. Dampak dari pihak ketiga",
+        "body_html": "<p>Dampak yang disebabkan oleh penyedia pihak ketiga (termasuk Anthropic, Google, dan Apple), seperti perubahan kebijakan, batas kuota penggunaan, pembatasan akun, atau gangguan layanan mereka, berada di luar kendali kami, dan biaya pihak ketiga yang telah dibayarkan atas nama Anda tidak dapat dikembalikan. Kami akan melakukan upaya wajar untuk membantu Anda menyelesaikan kendala tersebut.</p>"
+      },
+      {
+        "h2": "6. Add-on penyimpanan cloud & Jalur Khusus Enterprise",
+        "body_html": "<p>Setelah penyimpanan cloud atau add-on Jalur Khusus Enterprise ClaudeOps diaktifkan, biaya untuk periode berjalan tidak dapat dikembalikan. Setelah dibatalkan, add-on tetap berjalan hingga akhir periode berjalan.</p>"
+      },
+      {
+        "h2": "7. Penghentian akibat pelanggaran",
+        "body_html": "<p>Pengembalian dana tidak diberikan apabila Layanan ditangguhkan atau dihentikan karena Anda melanggar <a href=\"terms.html\">Ketentuan Layanan</a> kami.</p>"
+      },
+      {
+        "h2": "8. Cara mengajukan pengembalian dana",
+        "body_html": "<ol><li>Kirim email ke <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> dengan menyertakan email langganan Anda, nomor tanda terima Stripe, dan alasan pengajuan.</li><li>Kami akan membalas dalam waktu 5 hari kerja.</li><li>Pengembalian dana yang disetujui akan dikembalikan ke metode pembayaran awal Anda. Waktu pemrosesan bergantung pada bank atau penyedia pembayaran Anda.</li></ol>"
+      },
+      {
+        "h2": "9. Sanggahan transaksi (Chargeback)",
+        "body_html": "<p>Jika Anda memiliki pertanyaan mengenai suatu tagihan, mohon hubungi kami terlebih dahulu dan kami akan menyelesaikannya dengan cepat. Apabila Anda mengajukan chargeback melalui bank tanpa menghubungi kami lebih dulu, kami dapat menangguhkan layanan terkait selama sengketa masih berlangsung.</p>"
+      }
+    ]
+  }
+}

@@ -160,3 +160,4 @@ exclude:
   - Gemfile.lock
   - vendor
   - .github
+  - projects/claude-ops/_i18n
