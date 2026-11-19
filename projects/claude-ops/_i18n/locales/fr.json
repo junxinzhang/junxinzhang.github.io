@@ -917,5 +917,111 @@
         "body_html": "<p>Pour toute question concernant un prélèvement, veuillez nous contacter en priorité afin que nous réglions rapidement la situation. Si vous initiez une rétrofacturation auprès de votre banque sans nous avoir contactés au préalable, nous pourrons suspendre le service concerné tant que le litige est en cours.</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "De l’installation à l’exploitation quotidienne, tout est infogéré et prêt à l’emploi. Votre propre Mac Studio ou Mac mini haute performance sur des réseaux haut débit FAI locaux natifs en Australie, aux États-Unis, à Singapour, en Malaisie, en Indonésie, au Japon, au Cambodge, en Nouvelle-Zélande ou au Canada (jamais dans des datacenters cloud mutualisés à bas coût).",
+    "hero_cta_solo": "Offres Individuelles →",
+    "hero_cta_ent": "Équipes & Entreprises →",
+    "hero_consult": "Besoin d'un cluster sur mesure ? Écrivez-nous →",
+    "pillars_tag": "Service",
+    "pillars_h2": "Confiez-nous l'infrastructure, le réseau et l'exploitation",
+    "pillars_sub": "De l’installation à l’exploitation quotidienne, tout est infogéré et prêt à l’emploi.",
+    "pillars": [
+      {
+        "h3": "Mac Studio et mini haute perf.",
+        "p": "Votre propre Mac Studio ou Mac mini haute performance sur des réseaux haut débit FAI locaux natifs en Australie, aux États-Unis, à Singapour, en Malaisie, en Indonésie, au Japon, au Cambodge, en Nouvelle-Zélande ou au Canada (jamais dans des datacenters cloud mutualisés à bas coût). Isolation par compte (machine dédiée sur 20x), stable sur la durée.",
+        "chips": [
+          "Mac physiques",
+          "Espace isolé"
+        ]
+      },
+      {
+        "h3": "Backbone BGP entreprise",
+        "p": "Nous investissons en continu dans le matériel et les routes premium : fibre FAI native dans 9 pays avec débits symétriques de 200 Mbit/s à 500 Mbit/s+, couplée à nos propres relais et à un backbone BGP entreprise qui ramène à zéro la perte de paquets — le véritable ennemi du bureau à distance.",
+        "chips": [
+          "200–500 Mbit/s+ symétriques",
+          "BBR double segment"
+        ]
+      },
+      {
+        "h3": "Conciergerie 1-à-1 d’excellence",
+        "p": "Un accompagnement d’ingénierie IA pensé pour les créateurs, développeurs, fondateurs et équipes. Des workflows Claude Code à la configuration de MCP et Skills jusqu’à la mise en production, profitez d’un support direct 1-à-1 7×8h / 7×16h / 7×24h.",
+        "chips": [
+          "Facturation gérée",
+          "Suivi d’élite"
+        ]
+      }
+    ],
+    "finder_label": "Guide rapide · Choisissez votre profil :",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "Individuel & Créateur",
+    "tab_solo_sub": "1 utilisateur · 3 formules claires",
+    "tab_ent_title": "Équipes & Entreprises",
+    "tab_ent_sub": "5–100+ postes · Macs dédiés · Facture unique",
+    "solo_fit": [
+      "Pour les échanges quotidiens, la rédaction et le développement léger avec un Claude stable.",
+      "Pour les développeurs et créateurs qui utilisent intensivement Claude Code au quotidien.",
+      "Pour les bâtisseurs prolifiques, fondateurs et utilisateurs intensifs orchestrant plusieurs agents 24h/24."
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "5 sièges",
+    "ent_fit_biz": "10 sièges",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "Sur devis",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "Contacter un architecte →",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "Ligne Dédiée Entreprise ClaudeOps · Accélération Transfrontalière",
+    "drawer_line_hint": "Option pour les abonnés 1x et 5x : acheminez votre trafic via notre backbone BGP entreprise transfrontalier avec accélération BBR double segment et 0 % de perte de paquets pour un Partage d’écran et un Claude Code ultra-réactifs (2 mois offerts en annuel).",
+    "drawer_line_cta": "Voir les options",
+    "drawer_upg_title": "Options de Mise à Niveau par Siège",
+    "drawer_upg_hint": "Panachez les niveaux sur tout forfait Team ou Business actif — mettez à niveau des membres précis à la demande (2 mois offerts également en facturation annuelle).",
+    "drawer_upg_cta": "Voir les options",
+    "drawer_storage_title": "Stockage Cloud Infogéré pour Vos Actifs Numériques",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "Voir les options",
+    "drawer_close_cta": "Masquer",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "Isolation à deux niveaux : comptes séparés et machines dédiées",
+    "trust_sub": "Pour protéger la vie privée de nos clients, tous les avis utilisent des avatars illustrés et des identifiants anonymisés tout en conservant des retours et des formules authentiques.",
+    "faq_more_open": "Afficher {count} autres questions",
+    "faq_more_close": "Réduire"
   }
 }

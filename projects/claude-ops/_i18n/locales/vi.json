@@ -917,5 +917,111 @@
         "body_html": "<p>Nếu bạn có bất kỳ thắc mắc nào về khoản phí trên sao kê, vui lòng liên hệ với chúng tôi trước để được giải quyết nhanh chóng. Trường hợp bạn tự ý mở tranh chấp hoàn tiền (chargeback) qua ngân hàng mà không liên hệ trước với chúng tôi, chúng tôi có quyền tạm ngưng dịch vụ liên quan trong suốt thời gian giải quyết tranh chấp.</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "Từ khâu khởi tạo đến vận hành hàng ngày, được quản lý trọn gói và sẵn sàng sử dụng ngay. Máy vật lý Mac Studio hoặc Mac mini cấu hình cao đặt trên mạng băng thông rộng ISP bản địa tại Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand hoặc Canada (tuyệt đối không dùng trung tâm dữ liệu đám mây dùng chung giá rẻ).",
+    "hero_cta_solo": "Gói Cá nhân →",
+    "hero_cta_ent": "Nhóm & Doanh nghiệp →",
+    "hero_consult": "Cần cụm máy riêng theo yêu cầu? Gửi email tư vấn →",
+    "pillars_tag": "Dịch vụ",
+    "pillars_h2": "Hãy để môi trường, mạng và vận hành cho chúng tôi — bạn chỉ cần sáng tạo",
+    "pillars_sub": "Từ khâu khởi tạo đến vận hành hàng ngày, được quản lý trọn gói và sẵn sàng sử dụng ngay.",
+    "pillars": [
+      {
+        "h3": "Mac Studio & mini cấu hình cao",
+        "p": "Máy vật lý Mac Studio hoặc Mac mini cấu hình cao đặt trên mạng băng thông rộng ISP bản địa tại Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand hoặc Canada (tuyệt đối không dùng trung tâm dữ liệu đám mây dùng chung giá rẻ). Cách ly cấp tài khoản (nguyên máy riêng ở gói 20x), vận hành ổn định lâu dài.",
+        "chips": [
+          "Mac Vật Lý Thật",
+          "Không Gian Biệt Lập"
+        ]
+      },
+      {
+        "h3": "Đường trục BGP doanh nghiệp",
+        "p": "Chúng tôi không ngừng đầu tư vào phần cứng và tuyến truyền dẫn cao cấp: băng thông ISP bản địa tại 9 quốc gia với tốc độ đối xứng 200Mbps–500Mbps+, kết hợp máy chủ chuyển tiếp tự vận hành và trục BGP doanh nghiệp giúp đưa tỷ lệ mất gói tin—kẻ thù lớn nhất của màn hình từ xa—về mức 0%.",
+        "chips": [
+          "Đối xứng 200–500Mbps+",
+          "Tối ưu BBR hai chiều"
+        ]
+      },
+      {
+        "h3": "Cố vấn 1-kèm-1 đẳng cấp cao",
+        "p": "Hướng dẫn kỹ thuật AI chuyên sâu dành cho nhà sáng tạo, lập trình viên, nhà sáng lập và đội ngũ. Từ quy trình làm việc Claude Code, thiết lập MCP và Skills đến triển khai dự án thực tế với hỗ trợ trực tiếp 1-kèm-1 7×8h / 7×16h / 7×24h.",
+        "chips": [
+          "Thanh toán quản lý trọn gói",
+          "Trải Nghiệm Đỉnh"
+        ]
+      }
+    ],
+    "finder_label": "Chọn nhanh 3 giây · Chọn nhu cầu của bạn:",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "Cá nhân / Nhà phát triển",
+    "tab_solo_sub": "1 người dùng · 3 gói rõ ràng",
+    "tab_ent_title": "Nhóm & Doanh nghiệp",
+    "tab_ent_sub": "5–100+ chỗ · Mac vật lý riêng · Hóa đơn gộp",
+    "solo_fit": [
+      "Phù hợp cho trò chuyện hàng ngày, viết lách và lập trình nhẹ với Claude ổn định.",
+      "Dành cho lập trình viên và nhà sáng tạo sử dụng Claude Code cường độ cao mỗi ngày.",
+      "Dành cho nhà phát triển chuyên sâu, founder và power user chạy đa tác tử suốt ngày đêm."
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "5 Thành viên",
+    "ent_fit_biz": "10 Thành viên",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "Tùy chỉnh",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "Liên hệ cố vấn doanh nghiệp →",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "Đường Truyền Riêng Doanh Nghiệp ClaudeOps · Tăng Tốc Xuyên Biên Giới",
+    "drawer_line_hint": "Tiện ích mở rộng tùy chọn cho thuê bao 1x & 5x: định tuyến lưu lượng qua trục xương sống BGP doanh nghiệp xuyên biên giới kết hợp tăng tốc BBR hai chiều 0% mất gói tin, mang lại trải nghiệm Screen Sharing & Claude Code siêu nhạy (thanh toán năm được tặng 2 tháng).",
+    "drawer_line_cta": "Xem tùy chọn",
+    "drawer_upg_title": "Tiện Ích Nâng Cấp Từng Ghế",
+    "drawer_upg_hint": "Kết hợp linh hoạt các cấp độ trên mọi gói nền tảng Team hoặc Business đang hoạt động — nâng cấp đúng thành viên cần thiết theo nhu cầu (trả theo năm cũng được tặng 2 tháng).",
+    "drawer_upg_cta": "Xem tùy chọn",
+    "drawer_storage_title": "Lưu Trữ Đám Mây Quản Lý Trọn Gói Cho Tài Sản Số",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "Xem tùy chọn",
+    "drawer_close_cta": "Thu gọn",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "Cách ly hai cấp độ: tài khoản tách biệt và nguyên máy vật lý riêng",
+    "trust_sub": "Để bảo vệ quyền riêng tư của khách hàng, tất cả đánh giá đều sử dụng ảnh đại diện minh họa và tên viết tắt ẩn danh, đồng thời giữ nguyên phản hồi thực tế cùng hạng gói đăng ký.",
+    "faq_more_open": "Xem thêm {count} câu hỏi khác",
+    "faq_more_close": "Thu gọn câu hỏi"
   }
 }

@@ -995,16 +995,263 @@
     .map-hud-row b { white-space: normal; min-width: 0; line-height: 1.35 }
     @media (max-width: 1180px) {
       .nav-links { gap: 2px }
-      .nav-links a { padding: 6px 7px; font-size: .81rem }
+      .nav-links a { padding: 6px 9px; font-size: .84rem }
     }
-    @media (max-width: 1030px) {
+    @media (max-width: 920px) {
       .nav-links { display: none }
     }
+
+    /* ===== Streamlined 6-Floor UX & Focused Pricing Architecture ===== */
+    .hero { padding: 54px 0 58px }
+    .hero p.lead { max-width: 44em; margin: 0 auto 24px; font-size: clamp(.98rem, 1.65vw, 1.12rem); line-height: 1.68 }
+    .btn-ent-hero {
+      background: rgba(217, 119, 87, .10); color: var(--cream);
+      border: 1px solid rgba(232, 144, 111, .42);
+    }
+    .btn-ent-hero:hover {
+      background: rgba(217, 119, 87, .20); border-color: rgba(242, 180, 143, .75);
+      color: #fff; transform: translateY(-1px);
+    }
+    .hero-sub-link { margin-top: 14px; font-size: .84rem; color: var(--muted) }
+    .hero-sub-link a {
+      color: var(--muted); border-bottom: 1px dashed rgba(255, 255, 255, .22);
+      padding-bottom: 1px; transition: color .2s, border-color .2s;
+    }
+    .hero-sub-link a:hover { color: var(--primary-strong); border-color: var(--primary-strong) }
+    .hero-map-wrap { margin-top: 30px }
+
+    /* Floor 2: 3 Merged Core Capability Pillars */
+    .pillar-card { display: flex; flex-direction: column; padding: 26px 26px 22px }
+    .pillar-card p { flex: 1; line-height: 1.65 }
+    .pillar-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .06) }
+    .pillar-chip {
+      font-size: .75rem; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+      color: var(--primary-strong); background: rgba(217, 119, 87, .12); border: 1px solid rgba(217, 119, 87, .26);
+    }
+
+    /* Floor 3: Pricing Quick-Finder + Audience Segmented Tabs + Clean Cards */
+    #pricing { padding: 72px 0 76px }
+    #pricing > .container > .section-head { margin-bottom: 22px }
+    #pricing > .container > .section-head h2 { font-size: clamp(1.65rem, 3.2vw, 2.25rem) }
+    #pricing > .container > .section-head p { font-size: .95rem; margin-top: 8px }
+
+    .quick-finder {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 10px;
+      max-width: 980px; margin: 0 auto 20px; padding: 11px 16px; border-radius: 16px;
+      background: rgba(255, 255, 255, .025); border: 1px solid rgba(255, 255, 255, .07);
+    }
+    .qf-label { font-size: .82rem; font-weight: 600; color: var(--cream); margin-right: 4px }
+    .qf-btn {
+      font: inherit; font-size: .80rem; font-weight: 500; color: var(--text);
+      padding: 6px 13px; border-radius: 999px; cursor: pointer;
+      background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .10);
+      transition: .2s; white-space: nowrap;
+    }
+    .qf-btn:hover { color: #fff; border-color: rgba(232, 144, 111, .5); background: rgba(217, 119, 87, .12) }
+    .qf-btn.active {
+      color: #fff; font-weight: 600; background: rgba(217, 119, 87, .24);
+      border-color: var(--primary-strong); box-shadow: 0 4px 16px rgba(217, 119, 87, .25);
+    }
+    .finder-tip {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      max-width: 880px; margin: -6px auto 20px; padding: 11px 18px; border-radius: 13px;
+      background: linear-gradient(90deg, rgba(217, 119, 87, .18), rgba(242, 180, 143, .08));
+      border: 1px solid rgba(232, 144, 111, .42); color: var(--cream); font-size: .86rem; line-height: 1.5;
+    }
+    .finder-tip[hidden] { display: none !important }
+    .finder-tip-close {
+      background: transparent; border: 0; color: var(--muted); font-size: 1.15rem;
+      line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px; flex-shrink: 0;
+    }
+    .finder-tip-close:hover { color: #fff; background: rgba(255, 255, 255, .08) }
+
+    .audience-tabs {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+      max-width: 680px; margin: 0 auto 20px; padding: 6px; border-radius: 20px;
+      background: rgba(255, 255, 255, .03); border: 1px solid rgba(255, 255, 255, .09);
+    }
+    .aud-tab {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 12px 18px; border-radius: 14px; border: 1px solid transparent;
+      background: transparent; color: var(--muted); cursor: pointer; font-family: inherit;
+      text-align: left; transition: .22s;
+    }
+    .aud-tab:hover { color: var(--cream); background: rgba(255, 255, 255, .035) }
+    .aud-tab[aria-selected="true"] {
+      background: linear-gradient(135deg, rgba(217, 119, 87, .24), rgba(217, 119, 87, .10));
+      border-color: rgba(232, 144, 111, .58); color: #fff;
+      box-shadow: 0 10px 28px -10px rgba(217, 119, 87, .45);
+    }
+    .aud-icon {
+      width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0;
+      background: rgba(255, 255, 255, .05); color: var(--muted); transition: .22s;
+    }
+    .aud-tab[aria-selected="true"] .aud-icon { background: var(--primary); color: #fff }
+    .aud-txt strong { display: block; font-size: .96rem; font-weight: 700; color: inherit; line-height: 1.25 }
+    .aud-txt span { display: block; font-size: .76rem; color: var(--muted); margin-top: 2px; line-height: 1.3 }
+    .aud-tab[aria-selected="true"] .aud-txt span { color: #f2d5be }
+    @media (max-width: 600px) {
+      .audience-tabs { grid-template-columns: 1fr }
+      .qf-btn { white-space: normal; text-align: center }
+    }
+
+    .pricing-panel[hidden] { display: none !important }
+    .pricing-controls { margin: 0 auto 26px; gap: 12px }
+
+    /* Comfortable, breathable plan cards */
+    #pricing .pricing-solo .plan,
+    #pricing .pricing-enterprise .plan { padding: 28px 25px 24px }
+    #pricing .pricing-solo .plan-tier b,
+    #pricing .pricing-enterprise .plan-tier b { font-size: 2rem }
+    #pricing .pricing-solo .price,
+    #pricing .pricing-enterprise .price { font-size: 2.3rem }
+    #pricing .pricing-solo .features li { padding: 5px 0; font-size: .89rem; line-height: 1.45 }
+    #pricing .pricing-solo .plan .btn,
+    #pricing .pricing-enterprise .plan .btn { padding: 12px 20px; font-size: .95rem }
+
+    .plan-fit {
+      margin: 10px 0 12px; padding: 6px 11px; border-radius: 9px;
+      background: rgba(217, 119, 87, .10); border-left: 3px solid var(--primary);
+      color: #f5dcc8; font-size: .80rem; font-weight: 600; line-height: 1.4;
+    }
+    .plan.plan-recommended {
+      outline: 2px solid #ffd7b3; outline-offset: 2px;
+      box-shadow: 0 0 0 6px rgba(217, 119, 87, .20), 0 26px 60px -16px rgba(217, 119, 87, .42) !important;
+    }
+
+    /* Enterprise 2-step clarity + 3rd Custom Cluster Card */
+    .enterprise-wrap { margin-top: 0 }
+    .ent-step-bar {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      margin: 0 auto 22px; padding: 16px 20px; border-radius: 16px;
+      background: rgba(255, 255, 255, .025); border: 1px solid rgba(232, 144, 111, .20);
+      text-align: center;
+    }
+    .ent-step-title { font-size: .85rem; font-weight: 700; color: var(--cream); letter-spacing: .02em }
+    .ent-step2-label {
+      text-align: center; font-size: .84rem; font-weight: 700; color: var(--muted);
+      margin: 0 0 20px; letter-spacing: .02em;
+    }
+    .plan.plan-custom {
+      border-style: dashed; border-color: rgba(242, 180, 143, .38);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .01));
+    }
+    .badge-custom {
+      background: #1f1b18; color: #e5d5c5; border: 1px solid rgba(255, 255, 255, .20);
+    }
+    .price-custom {
+      font-family: var(--serif); font-size: 1.95rem !important; font-weight: 700; color: var(--cream);
+      line-height: 1.15; letter-spacing: -.01em;
+    }
+
+    /* Collapsible Optional Add-on Drawers (Dedicated Line, Seat Upgrades, Cloud Storage) */
+    .addon-drawer {
+      margin-top: 22px; border-radius: 18px; overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .012));
+      border: 1px solid rgba(232, 144, 111, .24); transition: border-color .2s;
+    }
+    .addon-drawer:hover { border-color: rgba(232, 144, 111, .45) }
+    .addon-drawer[open] { border-color: rgba(232, 144, 111, .48); background: rgba(255, 255, 255, .025) }
+    .addon-drawer > summary {
+      list-style: none; cursor: pointer; padding: 16px 22px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      user-select: none;
+    }
+    .addon-drawer > summary::-webkit-details-marker { display: none }
+    .drawer-sum-left { display: flex; align-items: flex-start; gap: 12px; min-width: 0 }
+    .drawer-ic {
+      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0;
+      background: rgba(217, 119, 87, .15); color: var(--primary-strong); margin-top: 2px;
+    }
+    .drawer-titles { min-width: 0 }
+    .drawer-title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px }
+    .drawer-title-row strong { color: var(--cream); font-size: .95rem; font-weight: 700 }
+    .drawer-pill {
+      font-size: .71rem; font-weight: 700; padding: 2px 9px; border-radius: 999px;
+      background: rgba(91, 209, 139, .14); color: #7ce6a6; border: 1px solid rgba(91, 209, 139, .30);
+      white-space: nowrap;
+    }
+    .drawer-hint { display: block; margin-top: 3px; font-size: .81rem; color: var(--muted); line-height: 1.45 }
+    .drawer-toggle-pill {
+      display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;
+      padding: 7px 14px; border-radius: 999px; font-size: .80rem; font-weight: 600;
+      color: var(--primary-strong); background: rgba(217, 119, 87, .12);
+      border: 1px solid rgba(217, 119, 87, .32); transition: .2s; white-space: nowrap;
+    }
+    .addon-drawer > summary:hover .drawer-toggle-pill { background: var(--primary); color: #fff; border-color: var(--primary) }
+    .drawer-toggle-pill i { font-style: normal; transition: transform .22s ease; display: inline-block }
+    .addon-drawer .when-open { display: none }
+    .addon-drawer[open] .when-closed { display: none }
+    .addon-drawer[open] .when-open { display: inline }
+    .addon-drawer[open] .drawer-toggle-pill i { transform: rotate(180deg) }
+    .drawer-body { padding: 4px 22px 22px; border-top: 1px solid rgba(255, 255, 255, .06) }
+    .drawer-body-lead { margin: 14px 0 16px; font-size: .84rem; color: var(--muted); line-height: 1.55 }
+    .storage-drawer { margin-top: 16px; border-color: rgba(255, 255, 255, .12) }
+    @media (max-width: 680px) {
+      .addon-drawer > summary { flex-direction: column; align-items: flex-start; gap: 10px }
+      .drawer-toggle-pill { align-self: flex-start }
+    }
+
+    /* Floor 4: Merged Security + Network Proof + Curated 3 Reviews */
+    .trust-split {
+      display: grid; grid-template-columns: 1.08fr .92fr; gap: 24px; align-items: stretch;
+    }
+    .sec-stack { display: grid; gap: 14px }
+    .sec-compact-card {
+      display: flex; align-items: flex-start; gap: 16px; padding: 20px 22px;
+    }
+    .sec-compact-card .icon { flex-shrink: 0; width: 40px; height: 40px; margin-top: 2px }
+    .sec-compact-card h3 { margin: 0 0 5px; font-size: 1.02rem }
+    .sec-compact-card p { font-size: .88rem; line-height: 1.58 }
+    .net-proof-box { display: flex; flex-direction: column; justify-content: space-between; padding: 24px 26px }
+    .net-proof-head h3 { margin: 0 0 6px; color: var(--cream); font-size: 1.08rem }
+    .net-proof-head p { margin: 0 0 14px; font-size: .86rem; color: var(--muted); line-height: 1.55 }
+    .net-proof-box .net-chips { margin-bottom: 16px }
+    .trust-reviews { margin-top: 36px; padding-top: 34px; border-top: 1px solid var(--border) }
+    .trust-reviews-title {
+      text-align: center; font-size: .82rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--primary-strong); margin: 0 0 20px;
+    }
+    @media (max-width: 960px) { .trust-split { grid-template-columns: 1fr } }
+
+    /* Floor 5: Focused Top-6 FAQ + Expand More */
+    .faq-more {
+      background: transparent !important; border: 0 !important; padding: 0 !important; margin-top: 6px !important;
+    }
+    .faq-more > summary {
+      justify-content: center !important; width: fit-content; margin: 10px auto 0;
+      padding: 9px 20px; border-radius: 999px; font-size: .85rem; font-weight: 600;
+      color: var(--primary-strong) !important; background: rgba(217, 119, 87, .10);
+      border: 1px solid rgba(217, 119, 87, .30); transition: .2s;
+    }
+    .faq-more > summary:hover { background: rgba(217, 119, 87, .20); color: #fff !important }
+    .faq-more > summary::after { content: "▾" !important; font-size: .9rem !important; margin-left: 6px }
+    .faq-more[open] > summary::after { content: "▴" !important }
+    .faq-more .when-open { display: none }
+    .faq-more[open] .when-closed { display: none }
+    .faq-more[open] .when-open { display: inline }
+    .faq-more-list { margin-top: 14px }
+
+    /* Floor 6: Buyer CTA First, Compact Secondary Partner Strip Below */
+    .partner-banner.partner-compact {
+      margin: 26px 0 0; padding: 28px 30px; text-align: left;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .partner-compact-copy { flex: 1 1 480px; min-width: 0 }
+    .partner-compact h3 {
+      font-family: var(--serif); color: var(--cream); font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+      line-height: 1.35; margin: 10px 0 8px;
+    }
+    .partner-compact p { margin: 0 0 14px; font-size: .88rem; line-height: 1.6; max-width: none }
+    .partner-compact .partner-chips { justify-content: flex-start; margin: 0 }
+
     /* RTL Directional Overrides */
     [dir="rtl"] .hero-map-wrap { text-align: right }
     [dir="rtl"] .map-stage { direction: ltr; text-align: left }
     [dir="rtl"] .map-hud { direction: rtl; text-align: right }
     [dir="rtl"] .map-hud-row b { text-align: left }
+    [dir="rtl"] .aud-tab { text-align: right }
+    [dir="rtl"] .plan-fit { border-left: 0; border-right: 3px solid var(--primary) }
     [dir="rtl"] .enterprise-jump { margin-left: 0; margin-right: 6px }
     [dir="rtl"] .price small { margin-left: 0; margin-right: 4px }
     [dir="rtl"] .price sup { margin-right: 0; margin-left: 2px }
@@ -1018,6 +1265,7 @@
     [dir="rtl"] .nb-fill { inset: 0 0 0 auto }
     [dir="rtl"] .nb em { padding-left: 0; padding-right: 8px }
     [dir="rtl"] .contact-tg { text-align: right }
+    [dir="rtl"] .partner-banner.partner-compact { text-align: right }
     [dir="rtl"] .foot-right { margin-left: 0; margin-right: auto; text-align: left }
     [dir="rtl"] .social { justify-content: flex-start }
     [dir="rtl"] #scroll-progress { transform-origin: 100% 50% }
@@ -1051,13 +1299,9 @@
         Zaokit ClaudeOps
       </a>
       <ul class="nav-links">
-        <li><a href="#why">도입 이유</a></li>
         <li><a href="#service">서비스</a></li>
-        <li><a href="#value">핵심 가치</a></li>
-        <li><a href="#security">보안</a></li>
-        <li><a href="#reviews">이용 후기</a></li>
         <li><a href="#pricing">요금제</a></li>
-        <li><a href="#storage">스토리지</a></li>
+        <li><a href="#security">보안</a></li>
         <li><a href="#process">이용 절차</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -1068,18 +1312,25 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Floor 1: Hero & Global Compute Topology -->
     <section class="hero">
       <div class="container">
         <span class="eyebrow"><span class="dot"></span>GLOBAL VISION · AI로 전 세계 모든 도시와 모든 개인의 가능성을 밝히다</span>
         <h1>AI가 세상을 경계 없이 연결합니다<span class="h1-sub"><em>모든 이에게 가장 앞선 생산성과 최상의 경험을 선사합니다</em></span></h1>
         <p class="lead">
-          최첨단 AI 생산성은 소수만의 특권이어서는 안 됩니다. 시드니, 실리콘밸리, 도쿄, 싱가포르에서 자카르타까지 — 우리는 전 세계 도시마다 순수 네이티브 연산 거점을 하나씩 밝히며, 완벽히 격리된 물리 Mac 워크스테이션, 엔터프라이즈 BGP 전용선, 최대 365일 24시간 1:1 엔지니어링 케어를 결합해 모든 크리에이터와 개발자, 팀이 경계 없이 창작할 수 있도록 돕습니다.
+          전 세계 9개국 현지 네이티브 회선 기반 전용 물리 Mac 워크스테이션 + 기업용 BGP 가속 전용선 + 최대 7×24h 1:1 AI 엔지니어 컨시어지. 당일 개통 즉시 사용.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#pricing">요금제 보기</a>
-          <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%8F%84%EC%9E%85%20%EB%AC%B8%EC%9D%98">이메일 문의</a>
+          <a class="btn btn-primary" href="#pricing" data-goto-audience="solo">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0114 0"/></svg>
+            개인 개발자 플랜 →
+          </a>
+          <a class="btn btn-ent-hero" href="#pricing-enterprise" data-goto-audience="enterprise">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h2m4 0h2M8 13h2m4 0h2M10 20v-3h4v3"/></svg>
+            팀 및 기업 플랜 →
+          </a>
         </div>
+        <div class="hero-sub-link"><a href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%8F%84%EC%9E%85%20%EB%AC%B8%EC%9D%98">맞춤 구성이 필요하신가요? 엔지니어에게 이메일 문의 →</a></div>
 
         <div class="hero-map-wrap">
           <div class="hero-map-card" id="global-map">
@@ -1126,13 +1377,6 @@
             <div class="map-pills" role="tablist" aria-label="리전 선택">
               <button type="button" class="map-pill active" data-pick-node="AU"><i></i><span>호주</span><code>AU</code></button><button type="button" class="map-pill" data-pick-node="US"><i></i><span>미국</span><code>US</code></button><button type="button" class="map-pill" data-pick-node="SG"><i></i><span>싱가포르</span><code>SG</code></button><button type="button" class="map-pill" data-pick-node="MY"><i></i><span>말레이시아</span><code>MY</code></button><button type="button" class="map-pill" data-pick-node="ID"><i></i><span>인도네시아</span><code>ID</code></button><button type="button" class="map-pill" data-pick-node="JP"><i></i><span>일본</span><code>JP</code></button><button type="button" class="map-pill" data-pick-node="KH"><i></i><span>캄보디아</span><code>KH</code></button><button type="button" class="map-pill" data-pick-node="NZ"><i></i><span>뉴질랜드</span><code>NZ</code></button><button type="button" class="map-pill" data-pick-node="CA"><i></i><span>캐나다</span><code>CA</code></button>
             </div>
-            <div class="map-partner-bar">
-              <div class="map-partner-copy">
-                <span class="partner-pill">✦ 글로벌 공동 구축 · 전 세계 80억 인구를 향하여</span>
-                <span><strong>보유하신 장비를 연결하고 자원을 공유해 보세요 — 수익을 창출하는 동시에 다른 누군가의 꿈에 가능성의 불빛을 밝힐 수 있습니다!</strong></span>
-              </div>
-              <a class="partner-cta-btn" href="mailto:jason2023zhang@gmail.com?subject=Mac%20%EC%9E%A5%EB%B9%84%20%EA%B3%B5%EC%9C%A0%20/%20Zaokit%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%97%B0%EC%82%B0%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%20%ED%95%A9%EB%A5%98%20%EB%AC%B8%EC%9D%98&amp;body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%20Jason%20%EB%8B%98%2C%20%EC%9E%90%EC%9B%90%EC%9D%84%20%EA%B3%B5%EC%9C%A0%ED%95%98%EC%97%AC%20Zaokit%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%97%B0%EC%82%B0%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%97%90%20%ED%95%A8%EA%BB%98%ED%95%98%EA%B3%A0%20%EC%8B%B6%EC%8A%B5%EB%8B%88%EB%8B%A4%3A%0A%0A1.%20%EA%B5%AD%EA%B0%80%20/%20%EB%8F%84%EC%8B%9C%3A%0A2.%20%ED%98%91%EB%A0%A5%20%EB%B0%A9%EC%8B%9D%20%28%EB%B3%B4%EC%9C%A0%20Mac%20%EC%9E%A5%EB%B9%84%20%EA%B3%B5%EC%9C%A0%20/%20%ED%98%84%EC%A7%80%20%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C%20%EC%B4%88%EA%B3%A0%EC%86%8D%20%EC%9D%B8%ED%84%B0%EB%84%B7%20%EB%85%B8%EB%93%9C%20/%20%EC%A7%80%EC%97%AD%20%ED%8C%8C%ED%8A%B8%EB%84%88%29%3A%0A3.%20Mac%20%EC%82%AC%EC%96%91%20%EB%B0%8F%20%ED%98%84%EC%A7%80%20ISP%20%EC%A0%95%EB%B3%B4%3A%0A4.%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A">장비 공유 / 파트너 합류 →</a>
-            </div>
           </div>
         </div>
         <div class="hero-stats">
@@ -1145,364 +1389,82 @@
       </div>
     </section>
 
-    <!-- Pain points -->
-    <section class="section section-alt" id="why">
+    <!-- Floor 2: 3 Merged Core Capability Pillars -->
+    <section class="section section-alt" id="service">
       <div class="container">
         <div class="section-head">
-          <p class="section-tag">Why</p>
-          <h2>Claude 활용이 어려운 이유는 모델 자체가 아닙니다</h2>
-          <p>진짜 에너지를 소모시키는 것은 본업과 무관한 수많은 &#x27;불확실성&#x27;입니다.</p>
-        </div>
-        <div class="grid grid-4 pain">
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
-            <h3>까다로운 초기 구축</h3>
-            <p>계정 준비부터 개발 환경 세팅까지 모든 과정을 혼자 부딪혀야 하며, 문제가 생겨도 의지할 곳이 없습니다.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8.5a15 15 0 0120 0M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0"/><path d="M3 3l18 18"/></svg></div>
-            <h3>불안정한 실행 환경</h3>
-            <p>로컬 PC마다 환경이 달라 장시간 돌아가는 Claude Code 작업이 중간에 끊기는 일이 빈번합니다.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-            <h3>번거로운 결제·갱신</h3>
-            <p>해외 결제 실패, 플랜 변경, 매달 돌아오는 구독 갱신 처리에 소중한 시간을 빼앗깁니다.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-            <h3>본업 시간의 손실</h3>
-            <p>도구를 찾아 헤매고 오류를 잡는 데 쓰는 시간은 본래 핵심 제품 개발과 창작에 집중되어야 합니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service -->
-    <section class="section" id="service">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Service</p>
-          <h2>불확실성은 저희에게 맡기고, 확실한 결과만 가져가세요</h2>
-          <p>초기 환경 구축부터 일상 운영·유지보수까지 올인원 매니지드로 즉시 사용 가능합니다.</p>
-        </div>
-        <div class="grid grid-4">
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div>
-            <h3>독립 격리 워크스페이스</h3>
-            <p>사용자마다 파일과 권한이 완벽히 분리된 개별 macOS 계정과 전용 워크스페이스를 제공합니다. 20x 플랜에서는 물리 장비 단독 사용 옵션도 지원해 대화 기록과 프로젝트 데이터를 안전하게 통제할 수 있습니다.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
-            <h3>고사양 Mac Studio &amp; mini</h3>
-            <p>호주·미국·싱가포르·말레이시아·인도네시아·일본·캄보디아·뉴질랜드·캐나다 9개국 현지 네이티브 초고속 인터넷망에 배치된 고사양 물리 Mac Studio 및 Mac mini를 제공합니다(저가형 공유 클라우드 데이터센터가 아닙니다). 장기적으로 깨끗하고 안정적인 환경을 보장합니다.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
-            <h3>구독·청구 통합 대행</h3>
-            <p>구독 결제, 만기 갱신, 플랜 변경을 모두 저희가 전담 처리하므로 신경 쓰실 일이 전혀 없습니다.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-            <h3>단계별 1:1 전담 컨시어지</h3>
-            <p>플랜에 맞춰 7×8시간(1x), 7×16시간(5x)부터 최대 365일 24시간 프라이빗 컨시어지(20x)까지 1:1 엔지니어링 기술 지원을 제공합니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Value: beyond compute -->
-    <section class="section section-alt" id="value">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Beyond Compute</p>
-          <h2>얻게 되는 가치는 <em class="grad">단순한 연산력 그 이상</em>입니다</h2>
-          <p>계정과 장비는 시작일 뿐입니다. 진짜 격차는 전문가와 함께 AI를 남들보다 더 올바르고, 깊이 있게, 한발 앞서 활용하는 데서 만들어집니다.</p>
+          <p class="section-tag">Core Capabilities</p>
+          <h2>환경 구축·네트워크·운영은 맡기고 창작과 개발에만 집중하세요</h2>
+          <p>설정 번거로움, 장시간 작업 끊김, 해외 결제 문제를 한 번에 해결하는 3대 핵심 가치.</p>
         </div>
         <div class="grid grid-3">
-          <div class="card value-card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div>
-            <h3>최상급 연산 환경과 워크스테이션</h3>
-            <p>물리 고사양 Mac Studio 및 Mac mini 위에서 사전 최적화·관리되는 전용 AI 엔지니어링 워크스페이스를 제공하여 장시간 Claude Code 작업도 끊김 없이 완주합니다.</p>
-          </div>
-          <div class="card value-card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
-            <h3>최고 수준의 1:1 엔지니어링 컨시어지</h3>
-            <p>크리에이터, 개발자, 창업자, 팀 모두를 위한 전담 AI 엔지니어링 가이드. Claude Code 워크플로 설계, MCP 및 Skills 세팅부터 실제 프로젝트 배포까지 7×8h / 7×16h / 7×24h 1:1 밀착 지원을 받으세요.</p>
-          </div>
-          <div class="card value-card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></div>
-            <h3>가장 빠른 실전 AI 인사이트</h3>
-            <p>Claude를 비롯한 주요 AI 도구의 신규 기능, 베스트 프랙티스, 업계 동향을 정기적으로 공유해 새로운 역량을 가장 먼저 실무에 도입할 수 있습니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Network optimisation -->
-    <section class="section net-section" id="network">
-      <div class="container net-grid">
-        <div class="net-copy">
-          <p class="section-tag">Network</p>
-          <h2>쾌적한 원격 데스크톱을 위한<br>지속적인 네트워크 인프라 투자</h2>
-          <p>저희는 하드웨어와 프리미엄 회선에 아낌없이 투자합니다. 상·하향 대칭 200Mbps–500Mbps+ 속도의 9개국 현지 네이티브 ISP 회선에 자체 구축 중계 서버와 엔터프라이즈 BGP 백본을 결합하여, 원격 데스크톱의 가장 큰 적인 패킷 손실률을 0%로 낮췄습니다.</p>
-          <ul class="net-chips"><li>대칭형 200–500Mbps+</li><li>엔터프라이즈 BGP 백본</li><li>자체 구축 고속 릴레이</li><li>듀얼 구간 BBR 제어</li><li>Apple Silicon 하드웨어 인코딩</li><li>화이트리스트 보안 강화</li></ul>
-          <p style="margin: 14px 0 0; font-size: .86rem; color: var(--muted);">20x, Team 및 Business 플랜에는 무료 포함되며, 1x / 5x 구독자는 <a href="#dedicated-line" style="color: var(--primary-strong); font-weight: 600; border-bottom: 1px dashed rgba(232, 144, 111, .5);">ClaudeOps 엔터프라이즈 전용선(월 $5부터) ↓</a> 옵션을 추가할 수 있습니다.</p>
-        </div>
-        <div class="card net-card" aria-label="네트워크 최적화 전후 실측 지연 시간 및 패킷 손실률 비교">
-          <div class="net-legend"><span class="lg before">최적화 전</span><span class="lg after">최적화 후</span></div>
-              <div class="net-row">
-                <div class="net-node"><strong>일본</strong><span>홍콩 백본 경유</span></div>
-                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:39.0%"></span><em>128–184ms · 손실 10%</em></div><div class="nb after"><span class="nb-fill" style="--w:23.0%"></span><em>~92ms · 손실 0%</em></div></div>
-              </div>
-              <div class="net-row">
-                <div class="net-node"><strong>호주</strong><span>홍콩 백본 경유</span></div>
-                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:91.2%"></span><em>343–386ms · 손실 25–33%</em></div><div class="nb after"><span class="nb-fill" style="--w:60.0%"></span><em>~240ms · 손실 0%</em></div></div>
-              </div>
-              <div class="net-row">
-                <div class="net-node"><strong>캄보디아</strong><span>육상 광케이블 직결</span></div>
-                <div class="net-bars"><div class="nb after"><span class="nb-fill" style="--w:20.2%"></span><em>~81ms · 손실 0%</em></div></div>
-              </div>
-          <p class="net-foot">2026년 11월 동아시아 클라이언트 기준 실측치이며, 실제 체감 품질은 사용자의 네트워크 환경에 따라 달라질 수 있습니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Security & Privacy -->
-    <section class="section" id="security">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Security &amp; Privacy</p>
-          <h2>2단계 격리 아키텍처: 개별 계정 분리와 단독 장비 독점</h2>
-          <p>개발 터미널에는 비공개 소스 코드, 환경 변수의 민감한 API 키, 데이터베이스 설정과 핵심 비즈니스 로직이 오갑니다. Zaokit ClaudeOps는 2단계 격리 체계를 적용합니다. 1x / 5x는 사용자마다 독립된 macOS 계정을 부여하고 Apple 기본 화면 공유로만 접속하며, 20x는 하드웨어 경계까지 완전히 분리된 단독 물리 장비를 활성화할 수 있습니다.</p>
-        </div>
-        <div class="grid grid-3">
-          <div class="card">
+          <div class="card value-card pillar-card">
             <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-            <h3>20x 단독 물리 장비: 하드웨어 수준 격리</h3>
-            <p>단독 모드를 활성화하면 고사양 Mac Studio 또는 Mac mini 한 대 전체가 오직 회원님만을 위해 작동합니다. 원하는 소프트웨어 설치와 시스템 설정 변경이 자유로우며, RustDesk 및 서드파티 VNC 등 모든 원격 데스크톱 도구를 사용할 수 있습니다.</p>
+            <h3>9개국 물리 Mac 실기기 &amp; 2단계 격리</h3>
+            <p>고사양 Mac Studio / Mac mini 실기기를 현지 네이티브 ISP에 배치. 1x/5x 독립 macOS 계정 격리 및 20x·팀 플랜 단독 하드웨어 독점 지원.</p>
+            <div class="pillar-chips"><span class="pillar-chip">물리 Mac 실기기</span><span class="pillar-chip">계정 / 장비 단독 격리</span></div>
           </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-            <h3>1x / 5x 개별 계정 분리 격리</h3>
-            <p>모든 사용자에게 별도의 macOS 계정, 파일 디렉터리 및 권한이 부여되어 작업 이력과 프로젝트 파일이 철저히 보호됩니다. 접속은 계정별 독립 데스크톱 세션을 생성하는 Apple 화면 공유(Screen Sharing)로만 제한되어 타인이 화면을 절대 볼 수 없습니다.</p>
+          <div class="card value-card pillar-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div>
+            <h3>패킷 손실 0% 글로벌 가속 네트워크</h3>
+            <p>대칭형 200–500Mbps+ 대역폭과 자체 릴레이 및 기업용 BGP 듀얼 BBR 최적화로 원격 데스크톱과 Claude Code 장시간 작업이 끊기지 않습니다.</p>
+            <div class="pillar-chips"><span class="pillar-chip">200–500Mbps+ 대칭형</span><span class="pillar-chip">기업용 BGP 전용선</span></div>
           </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
-            <h3>접근 제어 및 암호화 권한 완벽 보장</h3>
-            <p>접속 비밀번호와 로컬 암호화 정책을 직접 설정할 수 있습니다. 운영팀은 네트워크 연결 상태 모니터링과 청구 대행만 담당하며, 시스템 점검·보안 사고 대응 또는 회원님이 승인한 장애 조치 외에는 계정 내 데이터에 임의로 접근하지 않습니다.</p>
+          <div class="card value-card pillar-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+            <h3>결제 풀 매니지드 + 1:1 전담 컨시어지</h3>
+            <p>환경 사전 세팅, 구독 갱신 및 업그레이드 일괄 대행. Claude Code, MCP/Skills 세팅부터 실무 적용까지 7×8h~7×24h 1:1 기술 지원.</p>
+            <div class="pillar-chips"><span class="pillar-chip">갱신·결제 완전 대행</span><span class="pillar-chip">최대 7×24h 1:1 지원</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- User Reviews -->
-    <section class="section section-alt" id="reviews">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Testimonials</p>
-          <h2>실제 구독자들의 생생한 후기</h2>
-          <p>고객 프라이버시 보호를 위해 모든 후기는 일러스트 아바타와 익명 처리된 닉네임으로 표시되며, 실제 피드백과 구독 등급을 그대로 담았습니다.</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#2b211c"/>
-                  <circle cx="32" cy="30" r="17" fill="#5c3627"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#d97757"/>
-                  <circle cx="32" cy="31" r="12" fill="#f7d5be"/>
-                  <path d="M19 29c0-9 6-14 13-14s13 5 13 14c-3-4-7-6-13-6s-10 2-13 6z" fill="#5c3627"/>
-                  <circle cx="27" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
-                  <circle cx="37" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
-                  <path d="M30.4 31h3.2" stroke="#3c2b24" stroke-width="1.4"/>
-                  <circle cx="27" cy="31" r="1.1" fill="#2b1e19"/>
-                  <circle cx="37" cy="31" r="1.1" fill="#2b1e19"/>
-                  <path d="M29 36.5c1.8 1.5 4.2 1.5 6 0" fill="none" stroke="#b85d43" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">M***</span>
-                  <span class="review-badge">익명 처리 · 인증된 구독자</span>
-                </div>
-                <div class="review-role">글로벌 AI 프로덕트 리드</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="별점 5점 만점">★★★★★</div>
-            <p class="review-quote">&quot;엔터프라이즈 전용선 화질이 놀라울 정도로 선명하고 매끄럽습니다. 로컬에서 쓰던 ToDesk보다 훨씬 깨끗하고, 코딩이나 창 전환 시 지연이 거의 느껴지지 않아 마치 내 PC에서 작업하는 느낌입니다. 돈값이 전혀 아깝지 않은 최상의 경험입니다.&quot;</p>
-            <div class="review-foot">
-              <span>메신저 실제 후기</span>
-              <span class="review-plan">5x 프로</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#1b232c"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#3d6b8e"/>
-                  <circle cx="32" cy="31" r="12" fill="#f4cfb6"/>
-                  <path d="M19 28c1-9 6-14 13-14 8 0 13 5 13 14-2-4-6-6-11-6-5 0-10 2-15 6z" fill="#232830"/>
-                  <path d="M18 30v-3a14 14 0 0128 0v3" fill="none" stroke="#e8906f" stroke-width="2.2"/>
-                  <rect x="16" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
-                  <rect x="44" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
-                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1e2228"/>
-                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1e2228"/>
-                  <path d="M29 36.8c2 1.3 4 1.3 6 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">C***</span>
-                  <span class="review-badge">익명 처리 · 인증된 구독자</span>
-                </div>
-                <div class="review-role">시니어 풀스택 엔지니어</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="별점 5점 만점">★★★★★</div>
-            <p class="review-quote">&quot;예전엔 로컬 네트워크 문제로 작업 도중 세션이 자꾸 끊겼는데, ClaudeOps 1x 스탠다드로 옮긴 뒤 독립 워크스페이스에서 Claude Code가 24시간 돌아가니 진짜 &#x27;천재 개발자가 부활한&#x27; 기분입니다 😂. 결제나 네트워크 스트레스가 완전히 사라졌어요.&quot;</p>
-            <div class="review-foot">
-              <span>메신저 실제 후기</span>
-              <span class="review-plan">1x 스탠다드</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#21261e"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#4f6d54"/>
-                  <circle cx="32" cy="31" r="12" fill="#efd0ba"/>
-                  <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-3-3-7-4-12-4s-9 1-12 4z" fill="#2d2622"/>
-                  <rect x="23" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
-                  <rect x="33.5" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
-                  <path d="M30.5 31h3" stroke="#2d2622" stroke-width="1.4"/>
-                  <circle cx="26.8" cy="31" r="1.1" fill="#231d19"/>
-                  <circle cx="37.2" cy="31" r="1.1" fill="#231d19"/>
-                  <path d="M29 37c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#9e5e4a" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">Kyle W.</span>
-                  <span class="review-badge">익명 처리 · 인증된 구독자</span>
-                </div>
-                <div class="review-role">퀀트 R&amp;D 총괄</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="별점 5점 만점">★★★★★</div>
-            <p class="review-quote">&quot;9개국 네이티브 ISP 네트워크와 하드웨어 수준 격리가 결정적인 선택 이유였습니다. 독자 알고리즘 코드와 API 키를 전용 Mac Studio에서 안전하게 운용하며 몇 달째 단 한 번의 중단 없이 무결점으로 가동 중입니다.&quot;</p>
-            <div class="review-foot">
-              <span>호주 노드 · 익명</span>
-              <span class="review-plan">20x 플래그십</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#292118"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#c98a4b"/>
-                  <circle cx="32" cy="32" r="12" fill="#f5d3bc"/>
-                  <path d="M19 27c0-8 6-14 13-14s13 6 13 14z" fill="#e8906f"/>
-                  <rect x="18" y="25" width="28" height="4.5" rx="2.2" fill="#d97757"/>
-                  <circle cx="27.5" cy="32.5" r="1.3" fill="#231d19"/>
-                  <circle cx="36.5" cy="32.5" r="1.3" fill="#231d19"/>
-                  <path d="M29.5 37.5c1.7 1.2 3.3 1.2 5 0" fill="none" stroke="#a65f48" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">L***</span>
-                  <span class="review-badge">익명 처리 · 인증된 구독자</span>
-                </div>
-                <div class="review-role">인디 개발자</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="별점 5점 만점">★★★★★</div>
-            <p class="review-quote">&quot;Stripe 결제 당일에 바로 독립 macOS 계정을 전달받았고, Claude Code와 주요 개발 도구까지 모두 세팅되어 있었습니다. 환경 구축이나 해외 결제 문제로 시간 낭비하기 싫다면 무조건 추천합니다.&quot;</p>
-            <div class="review-foot">
-              <span>도쿄 노드 · 익명</span>
-              <span class="review-plan">1x 스탠다드</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#271e26"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#8b5e83"/>
-                  <circle cx="32" cy="31" r="15" fill="#3a2835"/>
-                  <circle cx="32" cy="31" r="11.5" fill="#f7d6c1"/>
-                  <path d="M20 29c1-8 6-13 12-13s11 5 12 13c-3-4-7-5-12-5s-9 1-12 5z" fill="#3a2835"/>
-                  <circle cx="27.5" cy="31.5" r="1.2" fill="#281d25"/>
-                  <circle cx="36.5" cy="31.5" r="1.2" fill="#281d25"/>
-                  <path d="M29 36.5c1.8 1.4 4.2 1.4 6 0" fill="none" stroke="#b55d52" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">Sarah C.</span>
-                  <span class="review-badge">익명 처리 · 인증된 구독자</span>
-                </div>
-                <div class="review-role">컨설팅 파트너</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="별점 5점 만점">★★★★★</div>
-            <p class="review-quote">&quot;인프라 운영이나 CLI 설정을 잘 몰라도 7×16시간 1:1 지원과 매니지드 Google Drive 동기화 덕분에 정말 편합니다. 출장 중 어디서든 어떤 기기로 접속해도 바로하던 업무를 이어갈 수 있어요.&quot;</p>
-            <div class="review-foot">
-              <span>싱가포르 노드 · 익명</span>
-              <span class="review-plan">5x 프로</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#1e222a"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#5e6b85"/>
-                  <circle cx="32" cy="31" r="12" fill="#f2ccb2"/>
-                  <path d="M20 27c2-7 6-11 12-11s10 4 12 11c-4-2-8-3-12-3s-8 1-12 3z" fill="#1f232b"/>
-                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1f232b"/>
-                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1f232b"/>
-                  <path d="M28.5 36.2c2.2 1.8 4.8 1.8 7 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">A***</span>
-                  <span class="review-badge">익명 처리 · 인증된 구독자</span>
-                </div>
-                <div class="review-role">이커머스 기술 이사</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="별점 5점 만점">★★★★★</div>
-            <p class="review-quote">&quot;핵심 개발진이 밤새 멀티 에이전트로 리팩터링과 테스트 스위트를 돌려놓고 다음 날 아침 깔끔한 PR만 리뷰합니다. 기본 화면 공유 화질도 훌륭하고 Telegram으로 문의하면 Jason 님이 거의 즉시 답변해 줍니다.&quot;</p>
-            <div class="review-foot">
-              <span>Telegram 피드백</span>
-              <span class="review-plan">20x 플래그십</span>
-            </div>
-          </article>
-        </div>
-        <p class="reviews-note">* 고객 개인정보 및 데이터 보안을 철저히 보호하기 위해 모든 후기는 일러스트 아바타와 익명/마스킹 처리된 이름으로 게시됩니다.</p>
-      </div>
-    </section>
-
-    <!-- Pricing -->
+    <!-- Floor 3: Focused Pricing & Decision Center -->
     <section class="section" id="pricing">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">Pricing</p>
           <h2>개인부터 엔터프라이즈까지 유연한 요금제</h2>
-          <p>개인 워크스페이스부터 전용 멀티 Mac 클러스터까지 자유롭게 확장하세요. <strong>연간 결제 시 10개월 요금으로 2개월 무료 혜택</strong>을 드립니다.<a class="enterprise-jump" href="#dedicated-line">엔터프라이즈 전용선 ↓</a><a class="enterprise-jump" href="#pricing-enterprise">Team &amp; Business ↓</a></p>
+          <p>개인 워크스페이스부터 전용 멀티 Mac 클러스터까지 자유롭게 확장하세요. <strong>연간 결제 시 10개월 요금으로 2개월 무료 혜택</strong>을 드립니다.</p>
         </div>
+
+        <!-- 3-Second Scenario Quick-Finder -->
+        <div class="quick-finder" role="group" aria-label="3초 플랜 추천 · 사용 목적을 선택하세요:">
+          <span class="qf-label">✦ 3초 플랜 추천 · 사용 목적을 선택하세요:</span>
+            <button type="button" class="qf-btn" data-scenario="solo-dev">개인 주력 코딩 / 개발</button>
+            <button type="button" class="qf-btn" data-scenario="solo-max">24h 멀티 에이전트 / 장비 독점</button>
+            <button type="button" class="qf-btn" data-scenario="team-rd">3–10인 핵심 개발팀</button>
+            <button type="button" class="qf-btn" data-scenario="ent-custom">15인 이상 엔터프라이즈 클러스터</button>
+        </div>
+        <div class="finder-tip" id="finder-tip" role="status" aria-live="polite" hidden>
+          <span id="finder-tip-text"></span>
+          <button type="button" class="finder-tip-close" id="finder-tip-close" aria-label="Close">×</button>
+        </div>
+
+        <!-- Primary Audience Segmented Tabs: Individual vs Team/Enterprise -->
+        <div class="audience-tabs" role="tablist">
+          <button type="button" class="aud-tab" role="tab" id="tab-btn-solo" data-audience-tab="solo" aria-selected="true" aria-controls="panel-solo">
+            <span class="aud-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0114 0"/></svg>
+            </span>
+            <span class="aud-txt">
+              <strong>개인 개발자 / 크리에이터</strong>
+              <span>1인 전용 · 명확한 3가지 플랜</span>
+            </span>
+          </button>
+          <button type="button" class="aud-tab" role="tab" id="tab-btn-ent" data-audience-tab="enterprise" aria-selected="false" aria-controls="pricing-enterprise">
+            <span class="aud-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h2m4 0h2M8 13h2m4 0h2M10 20v-3h4v3"/></svg>
+            </span>
+            <span class="aud-txt">
+              <strong>팀 &amp; 엔터프라이즈 클러스터</strong>
+              <span>5–100+인 · 전용 장비 · 통합 인보이스</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Unified Billing Cycle & Currency Switcher -->
         <div class="pricing-controls">
           <div class="billing-switch" role="group" aria-label="결제 주기 선택">
             <button type="button" data-billing="month" aria-pressed="true">월간 결제</button>
@@ -1518,264 +1480,322 @@
             <button type="button" data-currency="CNY" aria-pressed="false">¥ CNY</button>
           </div>
         </div>
-        <div class="grid grid-3 pricing pricing-solo">
-          <article class="card plan">
-            <div class="plan-tier"><b>1x</b><span>스탠다드</span></div>
-            <p class="plan-desc">일상적인 대화, 글쓰기, 가벼운 코딩을 안정적인 Claude 환경에서 이용하고 싶은 분께 적합합니다.</p>
-            <div class="price" data-plan-idx="0"><sup>$</sup><span class="amount">99</span><small data-period>/ 월</small><del class="price-orig" data-orig-idx="0" style="display:none"></del></div>
-            <p class="price-note" data-note-idx="0">Claude 실행 환경 포함 · 하루 약 $3.3</p>
-            <ul class="features">
-              <li>기본 사용량 제공</li>
-              <li>전용 워크스페이스 환경 구성</li>
-              <li>물리 Mac mini 실행 환경</li>
-              <li>구독 청구 및 인프라 운영 올인원 대행</li>
-              <li>Claude Code 완벽 지원</li>
-              <li><strong>7×8시간</strong> 1:1 전담 기술 지원</li>
-              <li>개별 macOS 계정 격리 · Apple 화면 공유 접속</li>
-            </ul>
-            <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i" target="_blank" rel="noopener">구독하기</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%201x%20%EC%8A%A4%ED%83%A0%EB%8B%A4%EB%93%9C">궁금한 점이 있으신가요? 이메일 문의 →</a>
-          </article>
 
-          <article class="card plan featured">
-            <span class="badge">가장 인기</span>
-            <div class="plan-tier"><b>5x</b><span>프로</span></div>
-            <p class="plan-desc">매일 Claude Code를 집중적으로 활용하는 개발자와 크리에이터를 위한 주력 플랜입니다.</p>
-            <div class="price" data-plan-idx="1"><sup>$</sup><span class="amount">399</span><small data-period>/ 월</small><del class="price-orig" data-orig-idx="1" style="display:none"></del></div>
-            <p class="price-note" data-note-idx="1">Claude 실행 환경 포함 · 5배 사용량, 단위 비용은 1x의 약 81%</p>
-            <ul class="features">
-              <li>스탠다드 대비 5배 사용량 제공</li>
-              <li>전용 워크스페이스 환경 구성</li>
-              <li>고사양 물리 Mac mini 실행 환경</li>
-              <li>구독 청구 및 인프라 운영 올인원 대행</li>
-              <li>장시간 Claude Code 작업도 여유롭게 수행</li>
-              <li><strong>7×16시간</strong> 우선순위 1:1 지원</li>
-              <li>개별 macOS 계정 격리 · Apple 화면 공유 접속</li>
-            </ul>
-            <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/dRmcN7cqt5IO7PE3FA9Zm0o" target="_blank" rel="noopener">구독하기</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%205x%20%ED%94%84%EB%A1%9C">궁금한 점이 있으신가요? 이메일 문의 →</a>
-          </article>
+        <!-- Panel 1: Individual Plans (1x / 5x / 20x + Collapsible Dedicated Line) -->
+        <div class="pricing-panel" id="panel-solo" role="tabpanel" aria-labelledby="tab-btn-solo">
+          <div class="grid grid-3 pricing pricing-solo">
+            <article class="card plan" data-plan-card="1x">
+              <div class="plan-tier"><b>1x</b><span>스탠다드</span></div>
+              <div class="plan-fit">추천 대상: 일상 대화 · 글쓰기 · 가벼운 코딩</div>
+              <p class="plan-desc">일상적인 대화, 글쓰기, 가벼운 코딩을 안정적인 Claude 환경에서 이용하고 싶은 분께 적합합니다.</p>
+              <div class="price" data-plan-idx="0"><sup>$</sup><span class="amount">99</span><small data-period>/ 월</small><del class="price-orig" data-orig-idx="0" style="display:none"></del></div>
+              <p class="price-note" data-note-idx="0">Claude 실행 환경 포함 · 하루 약 $3.3</p>
+              <ul class="features">
+                <li>기본 사용량 제공</li>
+                <li>전용 워크스페이스 환경 구성</li>
+                <li>물리 Mac mini 실행 환경</li>
+                <li>구독 청구 및 인프라 운영 올인원 대행</li>
+                <li>Claude Code 완벽 지원</li>
+                <li><strong>7×8시간</strong> 1:1 전담 기술 지원</li>
+                <li>개별 macOS 계정 격리 · Apple 화면 공유 접속</li>
+              </ul>
+              <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i" target="_blank" rel="noopener">구독하기</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%201x%20%EC%8A%A4%ED%83%A0%EB%8B%A4%EB%93%9C">궁금한 점이 있으신가요? 이메일 문의 →</a>
+            </article>
 
-          <article class="card plan">
-            <span class="badge badge-promo">연말 프로모션 · 2026.12.31까지</span>
-            <div class="plan-tier"><b>20x</b><span>얼티밋</span></div>
-            <p class="plan-desc">24시간 내내 멀티 에이전트를 병렬 구동하는 창업자, 헤비 빌더 및 파워 유저를 위한 최상위 플랜입니다.</p>
-            <div class="price" data-plan-idx="2"><sup>$</sup><span class="amount">699</span><small data-period>/ 월</small><del class="price-orig" data-orig-idx="2" data-orig-20x title="정상 월간 요금">$999</del></div>
-            <p class="price-note" data-note-idx="2">갱신 시에도 프로모션 가격 유지 · 단위 비용은 1x의 약 35%</p>
-            <ul class="features">
-              <li>스탠다드 대비 20배 사용량 제공</li>
-              <li>전용 워크스페이스 환경 구성</li>
-              <li>고사양 Mac Studio / Mac mini · 단독 장비 독점 옵션</li>
-              <li>구독 청구 및 인프라 운영 올인원 대행</li>
-              <li>멀티 에이전트 및 대규모 병렬 작업 지원</li>
-              <li><strong>최고 등급 7×24시간</strong> 프라이빗 컨시어지 채널</li>
-              <li style="color: var(--primary-strong); font-weight: 600;">자체 구축 고속 RustDesk 전용 채널 무료 제공</li>
-              <li style="color: var(--primary-strong); font-weight: 600;">Google Drive 6 TB 클라우드 스토리지 무료 포함</li>
-            </ul>
-            <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/7sYcN71LP1sy6LAeke9Zm1m" target="_blank" rel="noopener">구독하기</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%2020x%20%EC%96%BC%ED%8B%B0%EB%B0%8B">궁금한 점이 있으신가요? 이메일 문의 →</a>
-          </article>
-        </div>
+            <article class="card plan featured" data-plan-card="5x">
+              <span class="badge">가장 인기</span>
+              <div class="plan-tier"><b>5x</b><span>프로</span></div>
+              <div class="plan-fit">추천 대상: 매일 Claude Code를 집중 사용하는 주력 개발자 (개인 80% 선택)</div>
+              <p class="plan-desc">매일 Claude Code를 집중적으로 활용하는 개발자와 크리에이터를 위한 주력 플랜입니다.</p>
+              <div class="price" data-plan-idx="1"><sup>$</sup><span class="amount">399</span><small data-period>/ 월</small><del class="price-orig" data-orig-idx="1" style="display:none"></del></div>
+              <p class="price-note" data-note-idx="1">Claude 실행 환경 포함 · 5배 사용량, 단위 비용은 1x의 약 81%</p>
+              <ul class="features">
+                <li>스탠다드 대비 5배 사용량 제공</li>
+                <li>전용 워크스페이스 환경 구성</li>
+                <li>고사양 물리 Mac mini 실행 환경</li>
+                <li>구독 청구 및 인프라 운영 올인원 대행</li>
+                <li>장시간 Claude Code 작업도 여유롭게 수행</li>
+                <li><strong>7×16시간</strong> 우선순위 1:1 지원</li>
+                <li>개별 macOS 계정 격리 · Apple 화면 공유 접속</li>
+              </ul>
+              <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/dRmcN7cqt5IO7PE3FA9Zm0o" target="_blank" rel="noopener">구독하기</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%205x%20%ED%94%84%EB%A1%9C">궁금한 점이 있으신가요? 이메일 문의 →</a>
+            </article>
 
-        <!-- ClaudeOps Enterprise Dedicated Line Value-Added Service -->
-        <div class="seat-addons line-addons" id="dedicated-line">
-          <div class="seat-addons-head">
-            <h3>ClaudeOps 엔터프라이즈 전용선 · 글로벌 가속 애드온 <span class="addon-pill">20x / Team / Business 무료 포함</span></h3>
-            <p>1x 및 5x 구독자를 위한 선택형 애드온: 엔터프라이즈 BGP 글로벌 백본과 듀얼 구간 BBR 패킷 손실 0% 가속 경로를 통해 피크 시간대에도 끊김 없이 즉각 반응하는 화면 공유와 Claude Code 환경을 제공합니다(연간 결제 시 2개월 무료).</p>
+            <article class="card plan" data-plan-card="20x">
+              <span class="badge badge-promo">연말 프로모션 · 2026.12.31까지</span>
+              <div class="plan-tier"><b>20x</b><span>얼티밋</span></div>
+              <div class="plan-fit">추천 대상: 24/7 멀티 에이전트 병렬 실행 · 물리 Mac 단독 독점</div>
+              <p class="plan-desc">24시간 내내 멀티 에이전트를 병렬 구동하는 창업자, 헤비 빌더 및 파워 유저를 위한 최상위 플랜입니다.</p>
+              <div class="price" data-plan-idx="2"><sup>$</sup><span class="amount">699</span><small data-period>/ 월</small><del class="price-orig" data-orig-idx="2" data-orig-20x title="정상 월간 요금">$999</del></div>
+              <p class="price-note" data-note-idx="2">갱신 시에도 프로모션 가격 유지 · 단위 비용은 1x의 약 35%</p>
+              <ul class="features">
+                <li>스탠다드 대비 20배 사용량 제공</li>
+                <li>전용 워크스페이스 환경 구성</li>
+                <li>고사양 Mac Studio / Mac mini · 단독 장비 독점 옵션</li>
+                <li>구독 청구 및 인프라 운영 올인원 대행</li>
+                <li>멀티 에이전트 및 대규모 병렬 작업 지원</li>
+                <li><strong>최고 등급 7×24시간</strong> 프라이빗 컨시어지 채널</li>
+                <li style="color: var(--primary-strong); font-weight: 600;">자체 구축 고속 RustDesk 전용 채널 무료 제공</li>
+                <li style="color: var(--primary-strong); font-weight: 600;">Google Drive 6 TB 클라우드 스토리지 무료 포함</li>
+              </ul>
+              <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/7sYcN71LP1sy6LAeke9Zm1m" target="_blank" rel="noopener">구독하기</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%2020x%20%EC%96%BC%ED%8B%B0%EB%B0%8B">궁금한 점이 있으신가요? 이메일 문의 →</a>
+            </article>
           </div>
-          <div class="line-grid">
-            <div class="addon-card">
-              <div>
-                <div class="addon-route"><code>1x 전용선</code> <span>스탠다드 가속 · 1x 스탠다드 전용</span></div>
-                <p class="addon-desc">엔터프라이즈 BGP 글로벌 백본 + 자체 암호화 저지연 릴레이 + 듀얼 구간 BBR 최적화로 피크 시간대에도 일상적인 Apple 화면 공유, SSH 및 가벼운 Claude Code 세션을 흔들림 없이 유지합니다.</p>
-              </div>
-              <div class="addon-foot">
-                <div class="line-price-wrap">
-                  <div class="addon-price" data-line-idx="0">+<sup>$</sup><span class="amount">5</span><small data-line-period>/ 월</small><del class="line-orig" data-line-orig="0" style="display:none"></del></div>
-                  <span class="line-subnote" data-line-note="0">24시간 BGP 무손실 가속 · 기본 플랜과 통합 관리</span>
+
+          <details class="addon-drawer" id="dedicated-line">
+            <summary>
+              <span class="drawer-sum-left">
+                <span class="drawer-ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>
+                </span>
+                <span class="drawer-titles">
+                  <span class="drawer-title-row">
+                    <strong>선택 추가 옵션: ClaudeOps 기업용 BGP 가속 전용선</strong>
+                    <span class="drawer-pill">20x / Team / Business 무료 포함</span>
+                  </span>
+                  <span class="drawer-hint">1x / 5x 사용자의 해외 원격 화면 공유 및 SSH 패킷 손실 0% 보장 (20x 플랜 무료 포함)</span>
+                </span>
+              </span>
+              <span class="drawer-toggle-pill"><span class="when-closed">옵션 보기</span><span class="when-open">접기</span> <i>▾</i></span>
+            </summary>
+            <div class="drawer-body">
+              <p class="drawer-body-lead">1x 및 5x 구독자를 위한 선택형 애드온: 엔터프라이즈 BGP 글로벌 백본과 듀얼 구간 BBR 패킷 손실 0% 가속 경로를 통해 피크 시간대에도 끊김 없이 즉각 반응하는 화면 공유와 Claude Code 환경을 제공합니다(연간 결제 시 2개월 무료).</p>
+              <div class="line-grid">
+                <div class="addon-card">
+                  <div>
+                    <div class="addon-route"><code>1x 전용선</code> <span>스탠다드 가속 · 1x 스탠다드 전용</span></div>
+                    <p class="addon-desc">엔터프라이즈 BGP 글로벌 백본 + 자체 암호화 저지연 릴레이 + 듀얼 구간 BBR 최적화로 피크 시간대에도 일상적인 Apple 화면 공유, SSH 및 가벼운 Claude Code 세션을 흔들림 없이 유지합니다.</p>
+                  </div>
+                  <div class="addon-foot">
+                    <div class="line-price-wrap">
+                      <div class="addon-price" data-line-idx="0">+<sup>$</sup><span class="amount">5</span><small data-line-period>/ 월</small><del class="line-orig" data-line-orig="0" style="display:none"></del></div>
+                      <span class="line-subnote" data-line-note="0">24시간 BGP 무손실 가속 · 기본 플랜과 통합 관리</span>
+                    </div>
+                    <a class="addon-btn" data-line-tier="line_1x" href="https://buy.stripe.com/dRm4gBfCFc7c2vk2Bw9Zn0i" target="_blank" rel="noopener">1x 전용선 추가 →</a>
+                  </div>
                 </div>
-                <a class="addon-btn" data-line-tier="line_1x" href="https://buy.stripe.com/dRm4gBfCFc7c2vk2Bw9Zn0i" target="_blank" rel="noopener">1x 전용선 추가 →</a>
+                <div class="addon-card addon-card-featured">
+                  <div>
+                    <div class="addon-route"><code class="to">5x 전용선</code> <span>프로 가속 · 5x 프로 전용 (단가 20% 절감)</span></div>
+                    <p class="addon-desc">5배 우선 대역폭 할당량 + 고우선순위 엔터프라이즈 BGP QoS 큐 + 듀얼 구간 BBR 패킷 손실 0% 보장으로 대규모 저장소 동기화, 실시간 Claude Code 집중 코딩 및 고주사율 원격 데스크톱에 최적화되어 있습니다.</p>
+                  </div>
+                  <div class="addon-foot">
+                    <div class="line-price-wrap">
+                      <div class="addon-price" data-line-idx="1">+<sup>$</sup><span class="amount">20</span><small data-line-period>/ 월</small><del class="line-orig" data-line-orig="1" style="display:none"></del></div>
+                      <span class="line-subnote" data-line-note="1">5배 우선 처리량 · 고우선순위 BGP QoS</span>
+                    </div>
+                    <a class="addon-btn addon-btn-primary" data-line-tier="line_5x" href="https://buy.stripe.com/4gMcN7769dbg4Ds6RM9Zn0v" target="_blank" rel="noopener">5x 전용선 추가 →</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="addon-card addon-card-featured">
-              <div>
-                <div class="addon-route"><code class="to">5x 전용선</code> <span>프로 가속 · 5x 프로 전용 (단가 20% 절감)</span></div>
-                <p class="addon-desc">5배 우선 대역폭 할당량 + 고우선순위 엔터프라이즈 BGP QoS 큐 + 듀얼 구간 BBR 패킷 손실 0% 보장으로 대규모 저장소 동기화, 실시간 Claude Code 집중 코딩 및 고주사율 원격 데스크톱에 최적화되어 있습니다.</p>
-              </div>
-              <div class="addon-foot">
-                <div class="line-price-wrap">
-                  <div class="addon-price" data-line-idx="1">+<sup>$</sup><span class="amount">20</span><small data-line-period>/ 월</small><del class="line-orig" data-line-orig="1" style="display:none"></del></div>
-                  <span class="line-subnote" data-line-note="1">5배 우선 처리량 · 고우선순위 BGP QoS</span>
-                </div>
-                <a class="addon-btn addon-btn-primary" data-line-tier="line_5x" href="https://buy.stripe.com/4gMcN7769dbg4Ds6RM9Zn0v" target="_blank" rel="noopener">5x 전용선 추가 →</a>
-              </div>
-            </div>
-          </div>
+          </details>
         </div>
 
-        <!-- Team & Business Plans -->
-        <div class="enterprise-wrap" id="pricing-enterprise">
-          <div class="tier-divider"><span>Team &amp; Business · 팀 및 기업 전용 멀티 시트 클러스터</span></div>
-          <div class="enterprise-toolbar">
+        <!-- Panel 2: Team & Enterprise Clusters (Team 5 / Business 10 / Custom 15+ + Collapsible Seat Upgrades) -->
+        <div class="pricing-panel enterprise-wrap" id="pricing-enterprise" role="tabpanel" aria-labelledby="tab-btn-ent" hidden>
+          <div class="ent-step-bar">
+            <span class="ent-step-title">Step 1: 팀 기본 좌석 사양 선택</span>
             <div class="seat-tier-switch" role="group" aria-label="팀 좌석 등급 선택">
               <button type="button" data-seat-tier="pro" aria-pressed="false">전원 Pro 좌석 (1x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">전원 Max 좌석 (5x) <span class="save-badge">추천</span></button>
               <button type="button" data-seat-tier="ultra" aria-pressed="false">전원 Ultra 좌석 (20x)</button>
             </div>
-            <p>전원 동일한 Pro, Max 또는 Ultra 좌석으로 시작하거나, 아래의 셀프서비스 <strong>좌석별 업그레이드 애드온</strong>으로 언제든 팀원별 맞춤 조합을 구성할 수 있습니다.</p>
           </div>
-          <div class="grid grid-2 pricing pricing-enterprise">
-            <article class="card plan">
-              <span class="badge badge-team" data-ent-badge="team">Max (5x) 5좌석 · 전용 호스트</span>
-              <div class="plan-tier"><b>Team</b><span data-ent-sub="team">5 좌석</span></div>
-              <p class="plan-desc">스타트업 핵심 조직, AI 스튜디오 및 리서치 팀을 위한 설계 — 통합 청구와 관리자 권한을 갖춘 팀 전용 물리 Mac 호스트를 제공합니다.</p>
-              <div class="price" data-ent-price="team"><sup>$</sup><span class="amount">2,199</span><small data-period>/ 월</small><del class="price-orig" data-ent-orig="team" style="display:none"></del></div>
-              <p class="price-note" data-ent-note="team">격리된 Max (5x) 좌석 5개 포함 · 전용 Mac 호스트 및 통합 청구</p>
-              <ul class="features">
-                <li data-ent-seat-li="team"><strong>Max (5x) 엔지니어링 좌석 5개</strong> 포함 (구성원별 독립 Claude 워크스페이스 &amp; macOS 계정 부여)</li>
-                <li>팀만을 위한 <strong>전용 고사양 물리 Mac Studio / Mac mini 호스트 독점</strong></li>
-                <li>입·퇴사 시 조직 소유 좌석 재배정 지원 및 <strong>단일 통합 인보이스 발행</strong></li>
-                <li>필요 시 개별 좌석을 언제든 Max (5x) 또는 Ultra (20x)로 온디맨드 업그레이드 가능</li>
-                <li><strong>7×24시간</strong> 팀 전용 컨시어지 그룹 채널 지원</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">프라이빗 고속 RustDesk 팀 전용 채널 무료 제공</li>
-                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">팀용 12 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)</li>
-              </ul>
-              <a class="btn btn-ghost" data-ent-btn="team" href="https://buy.stripe.com/5kQ7sN2PT1sy7PE0to9Zm2A" target="_blank" rel="noopener">Team 플랜 구독</a>
-              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%20Team%20%ED%94%8C%EB%9E%9C">추가 좌석이나 맞춤 사양이 필요하신가요? 상담하기 →</a>
-            </article>
+          <p class="ent-step2-label">Step 2: 팀 인원에 맞는 전용 클러스터 규모 선택</p>
+          <div class="grid grid-3 pricing pricing-enterprise">
+              <article class="card plan" data-plan-card="team">
+                <span class="badge badge-team" data-ent-badge="team">Max (5x) 5좌석 · 전용 호스트</span>
+                <div class="plan-tier"><b>Team</b><span data-ent-sub="team">5 좌석</span></div>
+                <div class="plan-fit">추천 대상: 3–5인 스타트업 핵심팀 및 AI 스튜디오</div>
+                <p class="plan-desc">스타트업 핵심 조직, AI 스튜디오 및 리서치 팀을 위한 설계 — 통합 청구와 관리자 권한을 갖춘 팀 전용 물리 Mac 호스트를 제공합니다.</p>
+                <div class="price" data-ent-price="team"><sup>$</sup><span class="amount">2,199</span><small data-period>/ 월</small><del class="price-orig" data-ent-orig="team" style="display:none"></del></div>
+                <p class="price-note" data-ent-note="team">격리된 Max (5x) 좌석 5개 포함 · 전용 Mac 호스트 및 통합 청구</p>
+                <ul class="features">
+                  <li data-ent-seat-li="team"><strong>Max (5x) 엔지니어링 좌석 5개</strong> 포함 (구성원별 독립 Claude 워크스페이스 &amp; macOS 계정 부여)</li>
+                  <li>팀만을 위한 <strong>전용 고사양 물리 Mac Studio / Mac mini 호스트 독점</strong></li>
+                  <li>입·퇴사 시 조직 소유 좌석 재배정 지원 및 <strong>단일 통합 인보이스 발행</strong></li>
+                  <li>필요 시 개별 좌석을 언제든 Max (5x) 또는 Ultra (20x)로 온디맨드 업그레이드 가능</li>
+                  <li><strong>7×24시간</strong> 팀 전용 컨시어지 그룹 채널 지원</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;">프라이빗 고속 RustDesk 팀 전용 채널 무료 제공</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">팀용 12 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)</li>
+                </ul>
+                <a class="btn btn-ghost" data-ent-btn="team" href="https://buy.stripe.com/5kQ7sN2PT1sy7PE0to9Zm2A" target="_blank" rel="noopener">Team 플랜 구독</a>
+                <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%20Team%20%ED%94%8C%EB%9E%9C">추가 좌석이나 맞춤 사양이 필요하신가요? 상담하기 →</a>
+              </article>
 
-            <article class="card plan plan-business">
-              <span class="badge" data-ent-badge="biz">엔터프라이즈 · Max (5x) 10좌석 클러스터</span>
-              <div class="plan-tier"><b>Business</b><span data-ent-sub="biz">10 좌석</span></div>
-              <p class="plan-desc">빠르게 성장하는 테크 기업, 퀀트 및 대규모 엔지니어링 조직을 위한 플랜 — 9개국 듀얼 리전 배포를 지원하는 전용 멀티 Mac 물리 클러스터.</p>
-              <div class="price" data-ent-price="biz"><sup>$</sup><span class="amount">4,499</span><small data-period>/ 월</small><del class="price-orig" data-ent-orig="biz" style="display:none"></del></div>
-              <p class="price-note" data-ent-note="biz">격리된 Max (5x) 좌석 10개 포함 · 전용 멀티 Mac 클러스터 및 VIP SLA</p>
-              <ul class="features">
-                <li data-ent-seat-li="biz"><strong>Max (5x) 엔지니어링 좌석 10개</strong> 포함 (필요 시 50좌석 이상 유연 확장 가능)</li>
-                <li><strong>전용 멀티 유닛 Mac Studio / Mac mini 물리 클러스터 독점</strong></li>
-                <li><strong>9개국 듀얼 리전 배포 및 신속한 장애 마이그레이션</strong> + 전용 고정 네이티브 ISP 회선 지원</li>
-                <li>통합 상업 인보이스(Commercial Invoice) 발행 및 전담 고객 성공 매니저 배정</li>
-                <li><strong>최고 등급 7×24시간 VIP 엔터프라이즈 SLA 채널</strong> (우선 운영 지원 &amp; 아키텍처 자문)</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">엔터프라이즈 전용 고속 RustDesk 독립 릴레이 회선 무료 제공</li>
-                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">엔터프라이즈용 30 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)</li>
-              </ul>
-              <a class="btn btn-primary" data-ent-btn="biz" href="https://buy.stripe.com/4gM8wR8ad4EKgma3FA9Zm3h" target="_blank" rel="noopener">Business 플랜 구독</a>
-              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%20Business%20%ED%94%8C%EB%9E%9C">20좌석 이상 또는 프라이빗 클러스터 구축 문의 →</a>
-            </article>
+              <article class="card plan plan-business" data-plan-card="biz">
+                <span class="badge" data-ent-badge="biz">엔터프라이즈 · Max (5x) 10좌석 클러스터</span>
+                <div class="plan-tier"><b>Business</b><span data-ent-sub="biz">10 좌석</span></div>
+                <div class="plan-fit">추천 대상: 6–12인 테크 기업 및 퀀트·R&amp;D 부서</div>
+                <p class="plan-desc">빠르게 성장하는 테크 기업, 퀀트 및 대규모 엔지니어링 조직을 위한 플랜 — 9개국 듀얼 리전 배포를 지원하는 전용 멀티 Mac 물리 클러스터.</p>
+                <div class="price" data-ent-price="biz"><sup>$</sup><span class="amount">4,499</span><small data-period>/ 월</small><del class="price-orig" data-ent-orig="biz" style="display:none"></del></div>
+                <p class="price-note" data-ent-note="biz">격리된 Max (5x) 좌석 10개 포함 · 전용 멀티 Mac 클러스터 및 VIP SLA</p>
+                <ul class="features">
+                  <li data-ent-seat-li="biz"><strong>Max (5x) 엔지니어링 좌석 10개</strong> 포함 (필요 시 50좌석 이상 유연 확장 가능)</li>
+                  <li><strong>전용 멀티 유닛 Mac Studio / Mac mini 물리 클러스터 독점</strong></li>
+                  <li><strong>9개국 듀얼 리전 배포 및 신속한 장애 마이그레이션</strong> + 전용 고정 네이티브 ISP 회선 지원</li>
+                  <li>통합 상업 인보이스(Commercial Invoice) 발행 및 전담 고객 성공 매니저 배정</li>
+                  <li><strong>최고 등급 7×24시간 VIP 엔터프라이즈 SLA 채널</strong> (우선 운영 지원 &amp; 아키텍처 자문)</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;">엔터프라이즈 전용 고속 RustDesk 독립 릴레이 회선 무료 제공</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">엔터프라이즈용 30 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)</li>
+                </ul>
+                <a class="btn btn-primary" data-ent-btn="biz" href="https://buy.stripe.com/4gM8wR8ad4EKgma3FA9Zm3h" target="_blank" rel="noopener">Business 플랜 구독</a>
+                <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%20Business%20%ED%94%8C%EB%9E%9C">20좌석 이상 또는 프라이빗 클러스터 구축 문의 →</a>
+              </article>
+
+              <article class="card plan plan-custom" data-plan-card="custom">
+                <span class="badge badge-custom">15–100+석 · 아키텍트 맞춤 설계</span>
+                <div class="plan-tier"><b>Custom</b><span>프라이빗 클러스터</span></div>
+                <div class="plan-fit">추천 대상: 중대형 R&amp;D 센터 · 혼합 좌석 배분 · 맞춤형 보안 규정</div>
+                <p class="plan-desc">부서별 Pro / Max / Ultra 자유 혼합 구성과 다국가 이중화 Mac Studio 전용 클러스터를 설계해 드립니다.</p>
+                <div class="price price-custom">맞춤 견적</div>
+                <p class="price-note">15석 이상 · 전담 아키텍트 1:1 견적</p>
+                <ul class="features">
+                  <li>15–100+석 Pro / Max / Ultra 비율 자유 혼합 구성</li>
+                  <li>다중 고사양 Mac Studio 전용 클러스터 및 멀티리전 재해복구</li>
+                  <li>전용 비즈니스 고정 회선 IP 및 독립 고속 릴레이 게이트웨이</li>
+                  <li>통합 상업 인보이스(Commercial Invoice) 및 맞춤 SLA</li>
+                  <li>7×24h 엔터프라이즈 전담 기술팀 실시간 채널 지원</li>
+                </ul>
+                <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88%20%ED%94%84%EB%9D%BC%EC%9D%B4%EB%B9%97%20%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%20%EB%AC%B8%EC%9D%98%20%2815%EC%84%9D%20%EC%9D%B4%EC%83%81%29">기업 전담 컨설턴트 문의 →</a>
+                <span class="plan-consult">당일 회신 · 무료 아키텍처 설계 및 견적 제공</span>
+              </article>
           </div>
 
-          <!-- Per-Seat Self-Serve Upgrade Add-ons -->
-          <div class="seat-addons">
-            <div class="seat-addons-head">
-              <h3>좌석별 유연 업그레이드 애드온 <span class="addon-pill">결제 페이지에서 1–50좌석 수량 조절</span></h3>
-              <p>이용 중인 Team 또는 Business 기본 플랜 위에서 특정 구성원의 좌석만 온디맨드로 업그레이드해 자유롭게 조합하세요(연간 애드온 역시 2개월 무료 적용).</p>
+          <details class="addon-drawer" id="seat-addons-drawer">
+            <summary>
+              <span class="drawer-sum-left">
+                <span class="drawer-ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span class="drawer-titles">
+                  <span class="drawer-title-row">
+                    <strong>일부 팀원만 상위 사양이 필요한가요? 좌석별 차액 업그레이드</strong>
+                    <span class="drawer-pill">결제 페이지에서 1–50좌석 수량 조절</span>
+                  </span>
+                  <span class="drawer-hint">Team / Business 구독 팀에서 특정 핵심 인원만 Max 또는 Ultra로 개별 업그레이드</span>
+                </span>
+              </span>
+              <span class="drawer-toggle-pill"><span class="when-closed">업그레이드 보기</span><span class="when-open">접기</span> <i>▾</i></span>
+            </summary>
+            <div class="drawer-body">
+              <p class="drawer-body-lead">이용 중인 Team 또는 Business 기본 플랜 위에서 특정 구성원의 좌석만 온디맨드로 업그레이드해 자유롭게 조합하세요(연간 애드온 역시 2개월 무료 적용).</p>
+              <div class="addon-grid">
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Max 5x</code> <span>업그레이드</span></div>
+                      <p class="addon-desc">팀 내 Pro (1x) 좌석을 Max (5x)로 업그레이드하여 일일 고강도 Claude Code 엔지니어링을 지원합니다.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ 좌석 / 월</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_pm" href="https://buy.stripe.com/dRmeVfeyB2wCee2cc69Zm3P" target="_blank" rel="noopener">좌석 업그레이드 →</a>
+                    </div>
+                  </div>
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Max 5x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>업그레이드</span></div>
+                      <p class="addon-desc">전원 Max 플랜에서 창업자, CTO 또는 리드 아키텍트 좌석을 20x Ultra 멀티 에이전트 용량으로 격상합니다.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ 좌석 / 월</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_mu" href="https://buy.stripe.com/9B6aEZail2wCee23FA9Zm3W" target="_blank" rel="noopener">좌석 업그레이드 →</a>
+                    </div>
+                  </div>
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>다이렉트</span></div>
+                      <p class="addon-desc">전원 Pro 기본 플랜의 특정 좌석을 한 번에 최상위 20x Ultra 플래그십 한도로 직행 업그레이드합니다.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ 좌석 / 월</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_pu" href="https://buy.stripe.com/dRm14pailc7c9XM4JE9Zn03" target="_blank" rel="noopener">좌석 업그레이드 →</a>
+                    </div>
+                  </div>
+              </div>
             </div>
-            <div class="addon-grid">
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Max 5x</code> <span>업그레이드</span></div>
-                  <p class="addon-desc">팀 내 Pro (1x) 좌석을 Max (5x)로 업그레이드하여 일일 고강도 Claude Code 엔지니어링을 지원합니다.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ 좌석 / 월</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_pm" href="https://buy.stripe.com/dRmeVfeyB2wCee2cc69Zm3P" target="_blank" rel="noopener">좌석 업그레이드 →</a>
-                </div>
-              </div>
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Max 5x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>업그레이드</span></div>
-                  <p class="addon-desc">전원 Max 플랜에서 창업자, CTO 또는 리드 아키텍트 좌석을 20x Ultra 멀티 에이전트 용량으로 격상합니다.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ 좌석 / 월</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_mu" href="https://buy.stripe.com/9B6aEZail2wCee23FA9Zm3W" target="_blank" rel="noopener">좌석 업그레이드 →</a>
-                </div>
-              </div>
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>다이렉트</span></div>
-                  <p class="addon-desc">전원 Pro 기본 플랜의 특정 좌석을 한 번에 최상위 20x Ultra 플래그십 한도로 직행 업그레이드합니다.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ 좌석 / 월</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_pu" href="https://buy.stripe.com/dRm14pailc7c9XM4JE9Zn03" target="_blank" rel="noopener">좌석 업그레이드 →</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          </details>
         </div>
 
-        <!-- Cloud Storage (Google Drive & iCloud) -->
-        <div id="storage" style="margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--border);">
-          <div class="section-head" style="margin-bottom: 32px;">
-            <p class="section-tag">Cloud Storage · Google Drive &amp; iCloud+</p>
-            <h2>디지털 자산을 위한 매니지드 클라우드 스토리지</h2>
-            <p><strong>Google Drive (Google One)</strong> 또는 <strong>Apple iCloud+</strong> 중 원하는 서비스를 2 TB부터 30 TB까지 선택하세요. 갱신 대행은 물론 동일한 7×16시간 1:1 컨시어지 지원이 함께 제공됩니다.</p>
-          </div>
-          <div class="currency-switch" role="group" aria-label="결제 통화 선택 (클라우드 스토리지)" style="margin: 0 auto 32px">
-            <button type="button" data-currency="AUD" aria-pressed="false">A$ AUD</button>
-            <button type="button" data-currency="USD" aria-pressed="true">$ USD</button>
-            <button type="button" data-currency="EUR" aria-pressed="false">€ EUR</button>
-            <button type="button" data-currency="NZD" aria-pressed="false">NZ$ NZD</button>
-            <button type="button" data-currency="CAD" aria-pressed="false">C$ CAD</button>
-            <button type="button" data-currency="SGD" aria-pressed="false">S$ SGD</button>
-            <button type="button" data-currency="CNY" aria-pressed="false">¥ CNY</button>
-          </div>
-          <div class="grid grid-4 pricing">
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>2 TB</b><span>스토리지</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">일상 사진, 동영상 및 기기 간 자동 백업에 넉넉한 기본 용량입니다.</p>
-              <div class="price" data-storage-idx="0" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">8.99</span><small>/ 월</small></div>
-              <p class="price-note">Google Drive 또는 iCloud+ · 청구 통합 관리</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive 또는 Apple iCloud+ 선택</li>
-                <li>격리된 권한의 프라이빗 전용 공간</li>
-                <li>갱신 대행 · 7×16h 1:1 전담 지원</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="2t" href="https://buy.stripe.com/4gM28tduxfjo9XMdga9Zm0Y" target="_blank" rel="noopener">2 TB 구독하기</a>
-            </article>
+        <!-- Shared Optional Collapsible Add-on: Cloud Storage (2TB - 30TB) -->
+        <details class="addon-drawer storage-drawer" id="storage">
+          <summary>
+            <span class="drawer-sum-left">
+              <span class="drawer-ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 116.71-9h1.79a4.5 4.5 0 110 9z"/></svg>
+              </span>
+              <span class="drawer-titles">
+                <span class="drawer-title-row">
+                  <strong>선택 부가서비스: Google Drive / Apple iCloud+ 전용 스토리지 관리 (2TB–30TB)</strong>
+                  <span class="drawer-pill">20x 6TB 무료 · 팀/기업 6–30TB 무료</span>
+                </span>
+                <span class="drawer-hint">독립 계정 공간 격리 · 자동 백업 및 갱신 완전 대행</span>
+              </span>
+            </span>
+            <span class="drawer-toggle-pill"><span class="when-closed">4개 용량 보기</span><span class="when-open">접기</span> <i>▾</i></span>
+          </summary>
+          <div class="drawer-body">
+            <p class="drawer-body-lead"><strong>Google Drive (Google One)</strong> 또는 <strong>Apple iCloud+</strong> 중 원하는 서비스를 2 TB부터 30 TB까지 선택하세요. 갱신 대행은 물론 동일한 7×16시간 1:1 컨시어지 지원이 함께 제공됩니다.</p>
+            <div class="grid grid-4 pricing">
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>2 TB</b><span>스토리지</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">일상 사진, 동영상 및 기기 간 자동 백업에 넉넉한 기본 용량입니다.</p>
+                <div class="price" data-storage-idx="0" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">8.99</span><small>/ 월</small></div>
+                <p class="price-note">Google Drive 또는 iCloud+ · 청구 통합 관리</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive 또는 Apple iCloud+ 선택</li>
+                  <li>격리된 권한의 프라이빗 전용 공간</li>
+                  <li>갱신 대행 · 7×16h 1:1 전담 지원</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="2t" href="https://buy.stripe.com/4gM28tduxfjo9XMdga9Zm0Y" target="_blank" rel="noopener">2 TB 구독하기</a>
+              </article>
 
-            <article class="card plan featured" style="padding: 26px 22px;">
-              <span class="badge">크리에이터 추천</span>
-              <div class="plan-tier"><b>6 TB</b><span>스토리지</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">포토그래퍼, 콘텐츠 크리에이터 및 개인 아카이브 장기 보관에 이상적입니다.</p>
-              <div class="price" data-storage-idx="1" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">28.99</span><small>/ 월</small></div>
-              <p class="price-note">Google Drive 또는 iCloud+ · 청구 통합 관리</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive 또는 Apple iCloud+ 선택</li>
-                <li>원본 고해상도 사진 및 4K 미디어 동기화</li>
-                <li>갱신 대행 · 7×16h 1:1 전담 지원</li>
-              </ul>
-              <a class="btn btn-primary" data-stripe-tier="6t" href="https://buy.stripe.com/6oU9AV0HL4EKgmaeke9Zm14" target="_blank" rel="noopener">6 TB 구독하기</a>
-            </article>
+              <article class="card plan featured" style="padding: 24px 20px;">
+                <span class="badge">크리에이터 추천</span>
+                <div class="plan-tier"><b>6 TB</b><span>스토리지</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">포토그래퍼, 콘텐츠 크리에이터 및 개인 아카이브 장기 보관에 이상적입니다.</p>
+                <div class="price" data-storage-idx="1" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">28.99</span><small>/ 월</small></div>
+                <p class="price-note">Google Drive 또는 iCloud+ · 청구 통합 관리</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive 또는 Apple iCloud+ 선택</li>
+                  <li>원본 고해상도 사진 및 4K 미디어 동기화</li>
+                  <li>갱신 대행 · 7×16h 1:1 전담 지원</li>
+                </ul>
+                <a class="btn btn-primary" data-stripe-tier="6t" href="https://buy.stripe.com/6oU9AV0HL4EKgmaeke9Zm14" target="_blank" rel="noopener">6 TB 구독하기</a>
+              </article>
 
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>12 TB</b><span>스토리지</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">파워 유저와 다중 기기 전체 백업을 위한 대용량 클라우드 금고입니다.</p>
-              <div class="price" data-storage-idx="2" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">58.99</span><small>/ 월</small></div>
-              <p class="price-note">Google Drive 또는 iCloud+ · 청구 통합 관리</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive 또는 Apple iCloud+ 선택</li>
-                <li>대규모 프로젝트 아카이브 및 기기 미러링</li>
-                <li>갱신 대행 · 7×16h 1:1 전담 지원</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="12t" href="https://buy.stripe.com/14A8wRail2wC3zo5NI9Zm1a" target="_blank" rel="noopener">12 TB 구독하기</a>
-            </article>
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>12 TB</b><span>스토리지</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">파워 유저와 다중 기기 전체 백업을 위한 대용량 클라우드 금고입니다.</p>
+                <div class="price" data-storage-idx="2" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">58.99</span><small>/ 월</small></div>
+                <p class="price-note">Google Drive 또는 iCloud+ · 청구 통합 관리</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive 또는 Apple iCloud+ 선택</li>
+                  <li>대규모 프로젝트 아카이브 및 기기 미러링</li>
+                  <li>갱신 대행 · 7×16h 1:1 전담 지원</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="12t" href="https://buy.stripe.com/14A8wRail2wC3zo5NI9Zm1a" target="_blank" rel="noopener">12 TB 구독하기</a>
+              </article>
 
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>30 TB</b><span>플래그십</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">RAW 영상 원본, AI 데이터셋 및 영구 보존을 위한 스튜디오급 클라우드 볼트입니다.</p>
-              <div class="price" data-storage-idx="3" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">148.99</span><small>/ 월</small></div>
-              <p class="price-note">Google Drive 또는 iCloud+ · 전담 컨시어지 운영</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive 30TB 또는 듀얼 클라우드 구성</li>
-                <li>글로벌 팀 초고속 협업 및 장기 아카이빙</li>
-                <li>최고 등급 7×24h 프라이빗 컨시어지</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="30t" href="https://buy.stripe.com/dRm14pbmp9Z4ee22Bw9Zm1g" target="_blank" rel="noopener">30 TB 구독하기</a>
-            </article>
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>30 TB</b><span>플래그십</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">RAW 영상 원본, AI 데이터셋 및 영구 보존을 위한 스튜디오급 클라우드 볼트입니다.</p>
+                <div class="price" data-storage-idx="3" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">148.99</span><small>/ 월</small></div>
+                <p class="price-note">Google Drive 또는 iCloud+ · 전담 컨시어지 운영</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive 30TB 또는 듀얼 클라우드 구성</li>
+                  <li>글로벌 팀 초고속 협업 및 장기 아카이빙</li>
+                  <li>최고 등급 7×24h 프라이빗 컨시어지</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="30t" href="https://buy.stripe.com/dRm14pbmp9Z4ee22Bw9Zm1g" target="_blank" rel="noopener">30 TB 구독하기</a>
+              </article>
+            </div>
           </div>
-        </div>
+        </details>
+
         <div class="stripe-trust">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
           <span><strong>Stripe</strong> 보안 결제 지원 · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · 월간 또는 연간(2개월 무료) 선택 가능, 언제든 해지 가능</span>
@@ -1784,8 +1804,170 @@
       </div>
     </section>
 
-    <!-- Process -->
-    <section class="section section-alt" id="process">
+    <!-- Floor 4: Security Isolation + Network Proof + Curated 3 User Stories -->
+    <section class="section section-alt" id="security">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Security, Network &amp; Proof</p>
+          <h2>하드웨어급 보안 격리 · 패킷 손실 0% 실측 · 실제 구독자 후기</h2>
+          <p>모든 구독은 실제 물리 Mac 하드웨어, 기업용 BGP 백본 및 검증된 엔지니어링 운영으로 뒷받침됩니다.</p>
+        </div>
+        <div class="trust-split">
+          <div class="sec-stack">
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <div>
+                <h3>20x 단독 물리 장비: 하드웨어 수준 격리</h3>
+                <p>단독 모드를 활성화하면 고사양 Mac Studio 또는 Mac mini 한 대 전체가 오직 회원님만을 위해 작동합니다. 원하는 소프트웨어 설치와 시스템 설정 변경이 자유로우며, RustDesk 및 서드파티 VNC 등 모든 원격 데스크톱 도구를 사용할 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+              <div>
+                <h3>1x / 5x 개별 계정 분리 격리</h3>
+                <p>모든 사용자에게 별도의 macOS 계정, 파일 디렉터리 및 권한이 부여되어 작업 이력과 프로젝트 파일이 철저히 보호됩니다. 접속은 계정별 독립 데스크톱 세션을 생성하는 Apple 화면 공유(Screen Sharing)로만 제한되어 타인이 화면을 절대 볼 수 없습니다.</p>
+              </div>
+            </div>
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+              <div>
+                <h3>접근 제어 및 암호화 권한 완벽 보장</h3>
+                <p>접속 비밀번호와 로컬 암호화 정책을 직접 설정할 수 있습니다. 운영팀은 네트워크 연결 상태 모니터링과 청구 대행만 담당하며, 시스템 점검·보안 사고 대응 또는 회원님이 승인한 장애 조치 외에는 계정 내 데이터에 임의로 접근하지 않습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card net-card net-proof-box" id="network" aria-label="네트워크 최적화 전후 실측 지연 시간 및 패킷 손실률 비교">
+            <div class="net-proof-head">
+              <h3>쾌적한 원격 데스크톱을 위한 · 지속적인 네트워크 인프라 투자</h3>
+              <p>저희는 하드웨어와 프리미엄 회선에 아낌없이 투자합니다. 상·하향 대칭 200Mbps–500Mbps+ 속도의 9개국 현지 네이티브 ISP 회선에 자체 구축 중계 서버와 엔터프라이즈 BGP 백본을 결합하여, 원격 데스크톱의 가장 큰 적인 패킷 손실률을 0%로 낮췄습니다.</p>
+              <ul class="net-chips"><li>대칭형 200–500Mbps+</li><li>엔터프라이즈 BGP 백본</li><li>자체 구축 고속 릴레이</li><li>듀얼 구간 BBR 제어</li><li>Apple Silicon 하드웨어 인코딩</li><li>화이트리스트 보안 강화</li></ul>
+            </div>
+            <div>
+              <div class="net-legend"><span class="lg before">최적화 전</span><span class="lg after">최적화 후</span></div>
+              <div class="net-row">
+                <div class="net-node"><strong>일본</strong><span>홍콩 백본 경유</span></div>
+                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:39.0%"></span><em>128–184ms · 손실 10%</em></div><div class="nb after"><span class="nb-fill" style="--w:23.0%"></span><em>~92ms · 손실 0%</em></div></div>
+              </div>
+              <div class="net-row">
+                <div class="net-node"><strong>호주</strong><span>홍콩 백본 경유</span></div>
+                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:91.2%"></span><em>343–386ms · 손실 25–33%</em></div><div class="nb after"><span class="nb-fill" style="--w:60.0%"></span><em>~240ms · 손실 0%</em></div></div>
+              </div>
+              <div class="net-row">
+                <div class="net-node"><strong>캄보디아</strong><span>육상 광케이블 직결</span></div>
+                <div class="net-bars"><div class="nb after"><span class="nb-fill" style="--w:20.2%"></span><em>~81ms · 손실 0%</em></div></div>
+              </div>
+              <p class="net-foot">2026년 11월 동아시아 클라이언트 기준 실측치이며, 실제 체감 품질은 사용자의 네트워크 환경에 따라 달라질 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-reviews" id="reviews">
+          <p class="trust-reviews-title">★ 실제 구독자들의 생생한 후기</p>
+          <div class="grid grid-3">
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#1b232c"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#3d6b8e"/>
+                  <circle cx="32" cy="31" r="12" fill="#f4cfb6"/>
+                  <path d="M19 28c1-9 6-14 13-14 8 0 13 5 13 14-2-4-6-6-11-6-5 0-10 2-15 6z" fill="#232830"/>
+                  <path d="M18 30v-3a14 14 0 0128 0v3" fill="none" stroke="#e8906f" stroke-width="2.2"/>
+                  <rect x="16" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <rect x="44" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <path d="M29 36.8c2 1.3 4 1.3 6 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">C***</span>
+                    <span class="review-badge">익명 처리 · 인증된 구독자</span>
+                  </div>
+                  <div class="review-role">시니어 풀스택 엔지니어</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="별점 5점 만점">★★★★★</div>
+              <p class="review-quote">&quot;예전엔 로컬 네트워크 문제로 작업 도중 세션이 자꾸 끊겼는데, ClaudeOps 1x 스탠다드로 옮긴 뒤 독립 워크스페이스에서 Claude Code가 24시간 돌아가니 진짜 &#x27;천재 개발자가 부활한&#x27; 기분입니다 😂. 결제나 네트워크 스트레스가 완전히 사라졌어요.&quot;</p>
+              <div class="review-foot">
+                <span>메신저 실제 후기</span>
+                <span class="review-plan">1x 스탠다드</span>
+              </div>
+            </article>
+
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#2b211c"/>
+                  <circle cx="32" cy="30" r="17" fill="#5c3627"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#d97757"/>
+                  <circle cx="32" cy="31" r="12" fill="#f7d5be"/>
+                  <path d="M19 29c0-9 6-14 13-14s13 5 13 14c-3-4-7-6-13-6s-10 2-13 6z" fill="#5c3627"/>
+                  <circle cx="27" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <circle cx="37" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <path d="M30.4 31h3.2" stroke="#3c2b24" stroke-width="1.4"/>
+                  <circle cx="27" cy="31" r="1.1" fill="#2b1e19"/>
+                  <circle cx="37" cy="31" r="1.1" fill="#2b1e19"/>
+                  <path d="M29 36.5c1.8 1.5 4.2 1.5 6 0" fill="none" stroke="#b85d43" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">M***</span>
+                    <span class="review-badge">익명 처리 · 인증된 구독자</span>
+                  </div>
+                  <div class="review-role">글로벌 AI 프로덕트 리드</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="별점 5점 만점">★★★★★</div>
+              <p class="review-quote">&quot;엔터프라이즈 전용선 화질이 놀라울 정도로 선명하고 매끄럽습니다. 로컬에서 쓰던 ToDesk보다 훨씬 깨끗하고, 코딩이나 창 전환 시 지연이 거의 느껴지지 않아 마치 내 PC에서 작업하는 느낌입니다. 돈값이 전혀 아깝지 않은 최상의 경험입니다.&quot;</p>
+              <div class="review-foot">
+                <span>메신저 실제 후기</span>
+                <span class="review-plan">5x 프로</span>
+              </div>
+            </article>
+
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#21261e"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#4f6d54"/>
+                  <circle cx="32" cy="31" r="12" fill="#efd0ba"/>
+                  <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-3-3-7-4-12-4s-9 1-12 4z" fill="#2d2622"/>
+                  <rect x="23" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <rect x="33.5" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <path d="M30.5 31h3" stroke="#2d2622" stroke-width="1.4"/>
+                  <circle cx="26.8" cy="31" r="1.1" fill="#231d19"/>
+                  <circle cx="37.2" cy="31" r="1.1" fill="#231d19"/>
+                  <path d="M29 37c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#9e5e4a" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">Kyle W.</span>
+                    <span class="review-badge">익명 처리 · 인증된 구독자</span>
+                  </div>
+                  <div class="review-role">퀀트 R&amp;D 총괄</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="별점 5점 만점">★★★★★</div>
+              <p class="review-quote">&quot;9개국 네이티브 ISP 네트워크와 하드웨어 수준 격리가 결정적인 선택 이유였습니다. 독자 알고리즘 코드와 API 키를 전용 Mac Studio에서 안전하게 운용하며 몇 달째 단 한 번의 중단 없이 무결점으로 가동 중입니다.&quot;</p>
+              <div class="review-foot">
+                <span>호주 노드 · 익명</span>
+                <span class="review-plan">20x 플래그십</span>
+              </div>
+            </article>
+          </div>
+          <p class="reviews-note">* 고객 개인정보 및 데이터 보안을 철저히 보호하기 위해 모든 후기는 일러스트 아바타와 익명/마스킹 처리된 이름으로 게시됩니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floor 5: 4-Step Same-Day Onboarding & Focused Top-6 FAQ -->
+    <section class="section" id="process">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">Process</p>
@@ -1812,8 +1994,7 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
+    <section class="section section-alt" id="faq">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">FAQ</p>
@@ -1821,8 +2002,8 @@
         </div>
         <div class="faq">
           <details>
-            <summary>Zaokit ClaudeOps는 누가 운영하나요?</summary>
-            <p>Zaokit ClaudeOps는 호주에 정식 등록된 법인이 운영합니다. 모든 결제는 Stripe를 통해 안전하게 처리되며, 결제마다 공식 영수증과 인보이스(Invoice)가 자동 발급됩니다.</p>
+            <summary>어떤 플랜을 선택해야 할까요?</summary>
+            <p>일상적인 대화와 글쓰기 위주라면 1x, 매일 Claude Code로 개발한다면 5x, 멀티 에이전트 구동·24시간 고강도 작업 또는 RustDesk 등 원하는 원격 도구를 쓰는 단독 물리 장비가 필요하다면 20x를 선택하세요. 고민되신다면 하위 플랜으로 시작해 언제든 업그레이드하실 수 있습니다.</p>
           </details>
           <details>
             <summary>1x, 5x, 20x, Team, Business 플랜의 차이점은 무엇인가요? 연간 할인 혜택이 있나요?</summary>
@@ -1833,81 +2014,71 @@
             <p><strong>ClaudeOps 엔터프라이즈 전용선</strong>은 원격 데스크톱 및 터미널 트래픽을 당사의 프리미엄 엔터프라이즈 BGP 글로벌 백본, 자체 구축 릴레이, 듀얼 구간 BBR 혼잡 제어 경로로 우회시켜 피크 시간대 공용 인터넷의 지연 흔들림과 패킷 손실을 제거합니다:<br>• <strong>1x 전용선 (월 $5 · 연 $50)</strong>: 일상적인 Apple 화면 공유, SSH 및 가벼운 코딩을 수행하는 1x 스탠다드 개인 구독자용;<br>• <strong>5x 전용선 (월 $20 · 연 $200)</strong>: 5배 우선 대역폭 할당량과 고우선순위 BGP QoS가 적용된 5x 프로 엔지니어링 워크로드용(1x 대비 단가 20% 절감);<br>• <strong>상위 및 팀 플랜 무료 포함</strong>: <strong>20x 얼티밋, Team 및 Business 플랜에는 추가 비용 없이 전용선 가속이 기본 포함되어 있습니다</strong>.</p>
           </details>
           <details>
-            <summary>일반 클라우드 데스크톱이나 공유 계정보다 가격이 높은 이유는 무엇인가요?</summary>
-            <p>저가형 공유 VPS나 돌려 쓰는 공유 로그인 계정이 아닌, <strong>결정론적 물리 인프라와 화이트글러브 엔지니어링 운영 서비스</strong>를 제공하기 때문입니다. 모든 구독에는 네 가지 실제 인프라 원가가 반영되어 있습니다:<br>• <strong>고사양 물리 Mac 하드웨어</strong>: 가상화된 클라우드 VM이 아닌 실제 Mac Studio와 Mac mini 실장비를 사용하여 지속적인 로컬 연산 성능과 24시간 안정성을 보장하며, 20x 이상은 완전한 단독 장비 격리를 지원합니다;<br>• <strong>200Mbps–500Mbps+ 대칭형 현지 네이티브 대역폭</strong>: 9개국 현지 네이티브 ISP 브로드밴드의 넉넉한 상·하향 대칭 속도로 10–30Mbps 공유 회선의 끊김 없이 선명하고 즉각적인 화면 공유를 구현합니다;<br>• <strong>엔터프라이즈 BGP 백본망</strong>: 홍콩/APAC 프리미엄 엔터프라이즈 BGP 백본 위 자체 고속 릴레이와 듀얼 구간 BBR 최적화로 글로벌 패킷 손실률을 제로 수준으로 억제합니다;<br>• <strong>정식 전체 한도 + 7×16 / 7×24 전담 컨시어지 운영</strong>: 공식 구독 한도 전체, 청구 대행, iCloud/Google Drive 동기화 및 1:1 엔지니어링 기술 지원이 모두 포함됩니다.</p>
-          </details>
-          <details>
             <summary>개별 계정 격리와 단독 장비의 차이는 무엇인가요? 왜 1x / 5x는 Apple 화면 공유만 허용되나요?</summary>
             <p>• <strong>개별 계정 격리 (1x / 5x)</strong>: 여러 사용자가 한 대의 고사양 Mac을 함께 사용하지만, 각자 독립된 macOS 계정, 파일 및 권한을 가지므로 타인의 데이터를 절대 볼 수 없습니다. 모든 사용자의 프라이버시를 보호하기 위해 접속은 계정마다 분리된 데스크톱 세션을 생성하는 <strong>Apple 화면 공유(Screen Sharing)</strong>로만 제한되어 화면과 작업 내역이 안전하게 보호됩니다.<br>• <strong>단독 물리 장비 (20x에서 지원)</strong>: 물리 Mac 전체가 오직 회원님 한 사람만을 위해 작동하며 하드웨어, 시스템, 네트워크를 완전히 독점합니다. 어떤 소프트웨어든 자유롭게 설치하고 시스템 설정을 변경할 수 있으며, Apple 화면 공유, RealVNC / TigerVNC 등 서드파티 VNC, 당사의 자체 고속 RustDesk 전용 채널(20x 무료 포함) 등 <strong>모든 원격 데스크톱 도구</strong>를 사용할 수 있습니다.<br><strong>공유 장비에서 서드파티 원격 도구를 제한하는 이유:</strong> RustDesk와 대부분의 서드파티 VNC 도구는 Mac의 메인 화면 세션을 캡처하므로 다중 사용자 장비에서는 타인이 회원님의 화면을 보거나 제어할 위험이 있습니다. 따라서 단독 모드에서만 이를 허용하며, 이는 철저한 프라이버시 보호를 위한 설계입니다.</p>
-          </details>
-          <details>
-            <summary>어떤 플랜을 선택해야 할까요?</summary>
-            <p>일상적인 대화와 글쓰기 위주라면 1x, 매일 Claude Code로 개발한다면 5x, 멀티 에이전트 구동·24시간 고강도 작업 또는 RustDesk 등 원하는 원격 도구를 쓰는 단독 물리 장비가 필요하다면 20x를 선택하세요. 고민되신다면 하위 플랜으로 시작해 언제든 업그레이드하실 수 있습니다.</p>
-          </details>
-          <details>
-            <summary>&quot;결정론적이고 안정적인 환경&quot;이란 실제로 무엇을 의미하나요?</summary>
-            <p>독립된 전용 워크스페이스 + 고정 배정된 고사양 물리 Mac 워크스테이션 + 전담 청구·갱신 및 일상 엔지니어링 운영을 의미합니다. 표준화된 엔지니어링 운영을 통해 예기치 않은 접속 끊김, 환경 설정 충돌, 결제 갱신 실패를 제거하여 언제나 예측 가능한 작업 흐름을 유지해 드립니다.</p>
           </details>
           <details>
             <summary>실제로 어떻게 사용하나요? 원격 Mac 접속인가요, 로컬 연동인가요?</summary>
             <p><strong>두 가지 방식 모두 완벽히 지원하므로 편한 방식을 선택하시면 됩니다:</strong><br>1. <strong>원격 데스크톱 접속</strong>: 1x / 5x에서는 macOS 기본 화면 공유로 분리된 개별 계정에 안전하고 간편하게 로그인합니다. 단독 모드가 활성화된 20x에서는 RealVNC / TigerVNC 같은 서드파티 VNC나 더 매끄럽고 지연이 적은 <strong>자체 구축 고속 RustDesk 채널(20x 무료 포함)</strong>도 이용할 수 있습니다. 어느 쪽이든 완전한 macOS 데스크톱과 터미널을 제공하며 장시간 작업도 중단 없이 계속 실행됩니다.<br>2. <strong>로컬 개발 워크플로와의 원활한 연동</strong>: 로컬 환경 구축이나 유지보수 부담 없이 평소 쓰시는 로컬 개발 도구 및 워크플로에서 원격 개발 환경과 직접 협업하며 원격 Mac을 전용 연산 백엔드로 활용할 수 있습니다.</p>
           </details>
           <details>
-            <summary>내 코드와 데이터의 보안 및 프라이버시는 어떻게 보호되나요?</summary>
-            <p>1x / 5x에서는 모든 사용자에게 파일, 권한, 데스크톱 세션이 격리된 별도의 macOS 계정이 부여되며 Apple 화면 공유로만 접속하므로 타인이 화면을 볼 수 없습니다. 20x에서는 단독 물리 장비를 활성화해 고사양 Mac Studio 또는 Mac mini 전체를 하드웨어 수준까지 완전 격리하여 독점 사용할 수 있습니다. 세션 기록, 소스 코드, 환경 변수는 오직 회원님의 계정 또는 전용 장비에만 저장됩니다. 접근 비밀번호와 암호화 정책을 직접 설정할 수 있으며, 당사 운영팀은 유지보수·보안 사고 대응 또는 회원님이 승인한 장애 해결 외에는 데이터를 임의로 열람하지 않습니다.</p>
-          </details>
-          <details>
-            <summary>물리 장비와 네트워크는 어느 국가에 위치해 있나요?</summary>
-            <p>당사의 고사양 물리 Mac Studio 및 Mac mini 장비는 <strong>호주, 미국, 싱가포르, 말레이시아, 인도네시아, 일본, 캄보디아, 뉴질랜드, 캐나다</strong> 9개국에 배치되어 있으며, 최고의 안정성을 위해 <strong>현지 네이티브 ISP 초고속 인터넷망(공유 퍼블릭 클라우드 데이터센터가 아님)</strong>에 연결되어 있습니다. 결제 시 선호 리전을 선택하시면 장기적으로 고정된 장비와 계정을 배정해 드립니다(20x는 장비 전체 단독 배정).</p>
-          </details>
-          <details>
-            <summary>Google Drive 및 iCloud+ 클라우드 스토리지는 어떻게 이용하나요?</summary>
-            <p>2 TB(월 $8.99), 6 TB(월 $28.99), 12 TB(월 $58.99), 30 TB(월 $148.99) 플랜을 제공합니다. Stripe 결제 시 <strong>Apple iCloud+</strong> 또는 <strong>Google Drive (Google One)</strong>를 선택하고 계정 이메일을 기재해 주시면, 7×16시간 1:1 컨시어지 팀이 개통부터 정기 갱신 관리까지 모두 전담해 드립니다.</p>
-          </details>
-          <details>
-            <summary>이용 중 플랜을 업그레이드하거나 다운그레이드할 수 있나요?</summary>
-            <p>네, 가능합니다. 변경 사항은 다음 결제 주기부터 적용되며, 즉시 업그레이드가 필요한 경우 연락 주시면 차액 정산으로 바로 처리해 드립니다.</p>
-          </details>
-          <details>
-            <summary>사용 중 문제가 발생하면 어떻게 하나요?</summary>
-            <p>즉시 저희에게 연락해 주세요. 최우선으로 원인을 파악하고 조치하여 최대한 빠르게 정상 업무로 복귀하실 수 있도록 지원합니다.</p>
-          </details>
-          <details>
             <summary>어떤 결제 수단을 지원하며 인보이스(영수증) 발급이 가능한가요?</summary>
             <p>Stripe를 통한 온라인 정기 결제를 지원하며 Visa, Mastercard, Amex, UnionPay(은련), Apple Pay, Google Pay, Link를 사용하실 수 있습니다. 결제 통화는 AUD, USD, EUR, NZD, CAD, SGD, CNY를 지원합니다(UnionPay 카드 소지자는 CNY를 선택하시면 더욱 원활하게 결제됩니다). 결제 시 Stripe에서 공식 영수증과 인보이스(Invoice)가 자동 발급됩니다. 기업용 다중 계정 도입은 이메일로 문의해 주세요.</p>
           </details>
-          <details>
-            <summary>보유 장비를 연결하거나 글로벌 연산 네트워크에 합류해 수익을 내면서 더 많은 도시를 밝히려면 어떻게 해야 하나요?</summary>
-            <p>전 세계 80억 인구 모두에게 서비스를 제공한다는 비전을 향해, 당사의 네이티브 연산 네트워크에 함께할 글로벌 파트너분들을 진심으로 환영합니다! <strong>보유하신 장비를 연결하고 자원을 공유함으로써 수익을 창출하는 동시에 다른 이들의 꿈에 가능성을 밝혀줄 수 있습니다!</strong> 유휴 상태이거나 고사양인 물리 Mac 장비를 보유하고 계시거나, 거주 도시에 우수한 현지 네이티브 초고속 인터넷 환경을 갖추고 계시거나, 지역 개발자·크리에이터 커뮤니티 네트워크를 보유하고 계신다면 언제든 <a href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network" style="color:var(--primary-strong);font-weight:600">jason2023zhang@gmail.com</a>으로 도시 및 장비/ISP 정보를 보내주세요 — 합류를 환영합니다!</p>
+          <details class="faq-more">
+            <summary><span class="when-closed">나머지 9개 질문 더 보기</span><span class="when-open">질문 접기</span></summary>
+            <div class="faq-more-list">
+              <details>
+                <summary>Zaokit ClaudeOps는 누가 운영하나요?</summary>
+                <p>Zaokit ClaudeOps는 호주에 정식 등록된 법인이 운영합니다. 모든 결제는 Stripe를 통해 안전하게 처리되며, 결제마다 공식 영수증과 인보이스(Invoice)가 자동 발급됩니다.</p>
+              </details>
+              <details>
+                <summary>일반 클라우드 데스크톱이나 공유 계정보다 가격이 높은 이유는 무엇인가요?</summary>
+                <p>저가형 공유 VPS나 돌려 쓰는 공유 로그인 계정이 아닌, <strong>결정론적 물리 인프라와 화이트글러브 엔지니어링 운영 서비스</strong>를 제공하기 때문입니다. 모든 구독에는 네 가지 실제 인프라 원가가 반영되어 있습니다:<br>• <strong>고사양 물리 Mac 하드웨어</strong>: 가상화된 클라우드 VM이 아닌 실제 Mac Studio와 Mac mini 실장비를 사용하여 지속적인 로컬 연산 성능과 24시간 안정성을 보장하며, 20x 이상은 완전한 단독 장비 격리를 지원합니다;<br>• <strong>200Mbps–500Mbps+ 대칭형 현지 네이티브 대역폭</strong>: 9개국 현지 네이티브 ISP 브로드밴드의 넉넉한 상·하향 대칭 속도로 10–30Mbps 공유 회선의 끊김 없이 선명하고 즉각적인 화면 공유를 구현합니다;<br>• <strong>엔터프라이즈 BGP 백본망</strong>: 홍콩/APAC 프리미엄 엔터프라이즈 BGP 백본 위 자체 고속 릴레이와 듀얼 구간 BBR 최적화로 글로벌 패킷 손실률을 제로 수준으로 억제합니다;<br>• <strong>정식 전체 한도 + 7×16 / 7×24 전담 컨시어지 운영</strong>: 공식 구독 한도 전체, 청구 대행, iCloud/Google Drive 동기화 및 1:1 엔지니어링 기술 지원이 모두 포함됩니다.</p>
+              </details>
+              <details>
+                <summary>&quot;결정론적이고 안정적인 환경&quot;이란 실제로 무엇을 의미하나요?</summary>
+                <p>독립된 전용 워크스페이스 + 고정 배정된 고사양 물리 Mac 워크스테이션 + 전담 청구·갱신 및 일상 엔지니어링 운영을 의미합니다. 표준화된 엔지니어링 운영을 통해 예기치 않은 접속 끊김, 환경 설정 충돌, 결제 갱신 실패를 제거하여 언제나 예측 가능한 작업 흐름을 유지해 드립니다.</p>
+              </details>
+              <details>
+                <summary>내 코드와 데이터의 보안 및 프라이버시는 어떻게 보호되나요?</summary>
+                <p>1x / 5x에서는 모든 사용자에게 파일, 권한, 데스크톱 세션이 격리된 별도의 macOS 계정이 부여되며 Apple 화면 공유로만 접속하므로 타인이 화면을 볼 수 없습니다. 20x에서는 단독 물리 장비를 활성화해 고사양 Mac Studio 또는 Mac mini 전체를 하드웨어 수준까지 완전 격리하여 독점 사용할 수 있습니다. 세션 기록, 소스 코드, 환경 변수는 오직 회원님의 계정 또는 전용 장비에만 저장됩니다. 접근 비밀번호와 암호화 정책을 직접 설정할 수 있으며, 당사 운영팀은 유지보수·보안 사고 대응 또는 회원님이 승인한 장애 해결 외에는 데이터를 임의로 열람하지 않습니다.</p>
+              </details>
+              <details>
+                <summary>물리 장비와 네트워크는 어느 국가에 위치해 있나요?</summary>
+                <p>당사의 고사양 물리 Mac Studio 및 Mac mini 장비는 <strong>호주, 미국, 싱가포르, 말레이시아, 인도네시아, 일본, 캄보디아, 뉴질랜드, 캐나다</strong> 9개국에 배치되어 있으며, 최고의 안정성을 위해 <strong>현지 네이티브 ISP 초고속 인터넷망(공유 퍼블릭 클라우드 데이터센터가 아님)</strong>에 연결되어 있습니다. 결제 시 선호 리전을 선택하시면 장기적으로 고정된 장비와 계정을 배정해 드립니다(20x는 장비 전체 단독 배정).</p>
+              </details>
+              <details>
+                <summary>Google Drive 및 iCloud+ 클라우드 스토리지는 어떻게 이용하나요?</summary>
+                <p>2 TB(월 $8.99), 6 TB(월 $28.99), 12 TB(월 $58.99), 30 TB(월 $148.99) 플랜을 제공합니다. Stripe 결제 시 <strong>Apple iCloud+</strong> 또는 <strong>Google Drive (Google One)</strong>를 선택하고 계정 이메일을 기재해 주시면, 7×16시간 1:1 컨시어지 팀이 개통부터 정기 갱신 관리까지 모두 전담해 드립니다.</p>
+              </details>
+              <details>
+                <summary>이용 중 플랜을 업그레이드하거나 다운그레이드할 수 있나요?</summary>
+                <p>네, 가능합니다. 변경 사항은 다음 결제 주기부터 적용되며, 즉시 업그레이드가 필요한 경우 연락 주시면 차액 정산으로 바로 처리해 드립니다.</p>
+              </details>
+              <details>
+                <summary>사용 중 문제가 발생하면 어떻게 하나요?</summary>
+                <p>즉시 저희에게 연락해 주세요. 최우선으로 원인을 파악하고 조치하여 최대한 빠르게 정상 업무로 복귀하실 수 있도록 지원합니다.</p>
+              </details>
+              <details>
+                <summary>보유 장비를 연결하거나 글로벌 연산 네트워크에 합류해 수익을 내면서 더 많은 도시를 밝히려면 어떻게 해야 하나요?</summary>
+                <p>전 세계 80억 인구 모두에게 서비스를 제공한다는 비전을 향해, 당사의 네이티브 연산 네트워크에 함께할 글로벌 파트너분들을 진심으로 환영합니다! <strong>보유하신 장비를 연결하고 자원을 공유함으로써 수익을 창출하는 동시에 다른 이들의 꿈에 가능성을 밝혀줄 수 있습니다!</strong> 유휴 상태이거나 고사양인 물리 Mac 장비를 보유하고 계시거나, 거주 도시에 우수한 현지 네이티브 초고속 인터넷 환경을 갖추고 계시거나, 지역 개발자·크리에이터 커뮤니티 네트워크를 보유하고 계신다면 언제든 <a href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network" style="color:var(--primary-strong);font-weight:600">jason2023zhang@gmail.com</a>으로 도시 및 장비/ISP 정보를 보내주세요 — 합류를 환영합니다!</p>
+              </details>
+            </div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Global Partner & CTA -->
+    <!-- Floor 6: Buyer CTA First + Secondary Global Compute Partner Strip -->
     <section class="section">
       <div class="container">
-        <div class="partner-banner" id="partner">
-          <span class="eyebrow"><span class="dot"></span>GLOBAL COMPUTE PARTNER · 전 세계 연산 메시 공동 구축</span>
-          <h2>글로벌 연산 네트워크에 합류하세요 —<br><em class="grad">전 세계 80억 인구를 진정으로 연결합니다!</em></h2>
-          <p>
-            9개국 13개 이상의 점등된 핵심 도시에서 출발하여, 우리는 순수 네이티브 연산력과 최첨단 AI 생산성을 세계 곳곳으로 넓혀가고 있습니다. <strong>보유하신 장비를 연결하고 자원을 공유해 보세요 — 수익을 창출하는 동시에 다른 누군가의 꿈에 가능성의 불빛을 밝힐 수 있습니다!</strong> 어디에 계시든 환영합니다. 지금 바로 이메일을 보내 다음 도시를 함께 밝혀 주세요.
-          </p>
-          <ul class="partner-chips">
-            <li>✦ 보유 Mac 장비 연결 · 자원 공유 및 수익 창출</li>
-            <li>✦ 현지 네이티브 브로드밴드 인프라 공유</li>
-            <li>✦ 클러스터 호스팅 &amp; 지역 파트너십</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:jason2023zhang@gmail.com?subject=Mac%20%EC%9E%A5%EB%B9%84%20%EA%B3%B5%EC%9C%A0%20/%20Zaokit%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%97%B0%EC%82%B0%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%20%ED%95%A9%EB%A5%98%20%EB%AC%B8%EC%9D%98&amp;body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%20Jason%20%EB%8B%98%2C%20%EC%9E%90%EC%9B%90%EC%9D%84%20%EA%B3%B5%EC%9C%A0%ED%95%98%EC%97%AC%20Zaokit%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%97%B0%EC%82%B0%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%97%90%20%ED%95%A8%EA%BB%98%ED%95%98%EA%B3%A0%20%EC%8B%B6%EC%8A%B5%EB%8B%88%EB%8B%A4%3A%0A%0A1.%20%EA%B5%AD%EA%B0%80%20/%20%EB%8F%84%EC%8B%9C%3A%0A2.%20%ED%98%91%EB%A0%A5%20%EB%B0%A9%EC%8B%9D%20%28%EB%B3%B4%EC%9C%A0%20Mac%20%EC%9E%A5%EB%B9%84%20%EA%B3%B5%EC%9C%A0%20/%20%ED%98%84%EC%A7%80%20%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C%20%EC%B4%88%EA%B3%A0%EC%86%8D%20%EC%9D%B8%ED%84%B0%EB%84%B7%20%EB%85%B8%EB%93%9C%20/%20%EC%A7%80%EC%97%AD%20%ED%8C%8C%ED%8A%B8%EB%84%88%29%3A%0A3.%20Mac%20%EC%82%AC%EC%96%91%20%EB%B0%8F%20%ED%98%84%EC%A7%80%20ISP%20%EC%A0%95%EB%B3%B4%3A%0A4.%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A">장비 공유 / 이메일 문의: jason2023zhang@gmail.com →</a>
-          </div>
-        </div>
-
         <div class="cta">
           <h2>AI가 세상을 경계 없이 연결합니다. 오늘 바로 시작하세요.</h2>
           <p>전 세계 점등된 도시의 빌더들과 함께하세요 — Stripe 구독으로 당일 즉시 인도받아 가장 앞선 AI 생산성과 최상의 경험을 누리실 수 있습니다.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pricing">플랜 선택하기</a>
+            <a class="btn btn-primary" href="#pricing" data-goto-audience="solo">개인 개발자 플랜 →</a>
+            <a class="btn btn-ent-hero" href="#pricing-enterprise" data-goto-audience="enterprise">팀 및 기업 플랜 →</a>
             <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%8F%84%EC%9E%85%20%EB%AC%B8%EC%9D%98">이메일: jason2023zhang@gmail.com</a>
           </div>
           <div class="contact-tg">
@@ -1922,6 +2093,22 @@
                 @letcode2020
               </a>
             </div>
+          </div>
+        </div>
+
+        <div class="partner-banner partner-compact" id="partner">
+          <div class="partner-compact-copy">
+            <span class="eyebrow"><span class="dot"></span>GLOBAL COMPUTE PARTNER · 전 세계 연산 메시 공동 구축</span>
+            <h3>글로벌 연산 네트워크에 합류하세요 — <em class="grad">전 세계 80억 인구를 진정으로 연결합니다!</em></h3>
+            <p>9개국 13개 이상의 점등된 핵심 도시에서 출발하여, 우리는 순수 네이티브 연산력과 최첨단 AI 생산성을 세계 곳곳으로 넓혀가고 있습니다. <strong>보유하신 장비를 연결하고 자원을 공유해 보세요 — 수익을 창출하는 동시에 다른 누군가의 꿈에 가능성의 불빛을 밝힐 수 있습니다!</strong> 어디에 계시든 환영합니다. 지금 바로 이메일을 보내 다음 도시를 함께 밝혀 주세요.</p>
+            <ul class="partner-chips">
+              <li>✦ 보유 Mac 장비 연결 · 자원 공유 및 수익 창출</li>
+              <li>✦ 현지 네이티브 브로드밴드 인프라 공유</li>
+              <li>✦ 클러스터 호스팅 &amp; 지역 파트너십</li>
+            </ul>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Mac%20%EC%9E%A5%EB%B9%84%20%EA%B3%B5%EC%9C%A0%20/%20Zaokit%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%97%B0%EC%82%B0%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%20%ED%95%A9%EB%A5%98%20%EB%AC%B8%EC%9D%98&amp;body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%20Jason%20%EB%8B%98%2C%20%EC%9E%90%EC%9B%90%EC%9D%84%20%EA%B3%B5%EC%9C%A0%ED%95%98%EC%97%AC%20Zaokit%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%97%B0%EC%82%B0%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%97%90%20%ED%95%A8%EA%BB%98%ED%95%98%EA%B3%A0%20%EC%8B%B6%EC%8A%B5%EB%8B%88%EB%8B%A4%3A%0A%0A1.%20%EA%B5%AD%EA%B0%80%20/%20%EB%8F%84%EC%8B%9C%3A%0A2.%20%ED%98%91%EB%A0%A5%20%EB%B0%A9%EC%8B%9D%20%28%EB%B3%B4%EC%9C%A0%20Mac%20%EC%9E%A5%EB%B9%84%20%EA%B3%B5%EC%9C%A0%20/%20%ED%98%84%EC%A7%80%20%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C%20%EC%B4%88%EA%B3%A0%EC%86%8D%20%EC%9D%B8%ED%84%B0%EB%84%B7%20%EB%85%B8%EB%93%9C%20/%20%EC%A7%80%EC%97%AD%20%ED%8C%8C%ED%8A%B8%EB%84%88%29%3A%0A3.%20Mac%20%EC%82%AC%EC%96%91%20%EB%B0%8F%20%ED%98%84%EC%A7%80%20ISP%20%EC%A0%95%EB%B3%B4%3A%0A4.%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A">장비 공유 / 이메일 문의: jason2023zhang@gmail.com →</a>
           </div>
         </div>
       </div>
@@ -2493,6 +2680,91 @@
       });
     }
 
+    var FINDER_TIPS = {"solo-dev": "추천: [개인 5x Pro] 매일 Claude Code를 집중 사용하는 개발자에게 최고 가성비. 해외 원격 연결 시 아래 전용선 추가를 권장합니다.", "solo-max": "추천: [개인 20x Ultimate] 물리 Mac 1대 완전 독점 가능, 기업 전용선 및 6TB 클라우드 스토리지 무료 포함.", "team-rd": "추천: [Team 5석 / Business 10석] 전용 물리 클러스터, 통합 인보이스, 전용선 및 12–30TB 스토리지 무료 제공.", "ent-custom": "추천: [Custom 프라이빗 클러스터] 15–100+석 혼합 구성, 멀티 리전 이중화 및 기업 맞춤 SLA 계약 지원."};
+    var panelSolo = document.getElementById('panel-solo');
+    var panelEnt = document.getElementById('pricing-enterprise');
+    var finderTip = document.getElementById('finder-tip');
+    var finderTipText = document.getElementById('finder-tip-text');
+    var finderTipClose = document.getElementById('finder-tip-close');
+
+    function setAudience(aud) {
+      var isEnt = aud === 'enterprise';
+      if (panelSolo) {
+        panelSolo.hidden = isEnt;
+        if (!isEnt) clearReveal(panelSolo);
+      }
+      if (panelEnt) {
+        panelEnt.hidden = !isEnt;
+        if (isEnt) clearReveal(panelEnt);
+      }
+      document.querySelectorAll('[data-audience-tab]').forEach(function (btn) {
+        btn.setAttribute('aria-selected', btn.getAttribute('data-audience-tab') === (isEnt ? 'enterprise' : 'solo') ? 'true' : 'false');
+      });
+    }
+
+    function clearScenarioHighlight() {
+      document.querySelectorAll('.qf-btn').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.plan-recommended').forEach(function (p) { p.classList.remove('plan-recommended'); });
+      if (finderTip) finderTip.hidden = true;
+    }
+
+    function applyScenario(sid) {
+      document.querySelectorAll('.qf-btn').forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-scenario') === sid);
+      });
+      document.querySelectorAll('.plan-recommended').forEach(function (p) { p.classList.remove('plan-recommended'); });
+      var targetCards = [];
+      if (sid === 'solo-dev') {
+        setAudience('solo');
+        targetCards = ['5x'];
+      } else if (sid === 'solo-max') {
+        setAudience('solo');
+        targetCards = ['20x'];
+      } else if (sid === 'team-rd') {
+        setAudience('enterprise');
+        targetCards = ['biz', 'team'];
+      } else if (sid === 'ent-custom') {
+        setAudience('enterprise');
+        targetCards = ['custom'];
+      }
+      targetCards.forEach(function (ck) {
+        var el = document.querySelector('[data-plan-card="' + ck + '"]');
+        if (el) el.classList.add('plan-recommended');
+      });
+      if (finderTip && finderTipText && FINDER_TIPS[sid]) {
+        finderTipText.textContent = '💡 ' + FINDER_TIPS[sid];
+        finderTip.hidden = false;
+      }
+    }
+
+    document.querySelectorAll('[data-audience-tab]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        clearScenarioHighlight();
+        setAudience(btn.getAttribute('data-audience-tab'));
+      });
+    });
+
+    document.querySelectorAll('[data-scenario]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var sid = btn.getAttribute('data-scenario');
+        if (btn.classList.contains('active')) {
+          clearScenarioHighlight();
+        } else {
+          applyScenario(sid);
+        }
+      });
+    });
+
+    if (finderTipClose) {
+      finderTipClose.addEventListener('click', clearScenarioHighlight);
+    }
+
+    document.querySelectorAll('details').forEach(function (det) {
+      det.addEventListener('toggle', function () {
+        if (det.open) clearReveal(det);
+      });
+    });
+
     document.querySelectorAll('a[href="#top"]').forEach(function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault();
@@ -2508,30 +2780,9 @@
       clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
       var headEl = sec.querySelector('.section-head') || sec;
-      var gridEl = sec.querySelector('.pricing-solo') || sec.querySelector('.pricing');
       var idealTop = docTop(headEl) - headerH - 12;
-      var targetY = idealTop;
-      if (gridEl) {
-        var plans = Array.prototype.slice.call(gridEl.querySelectorAll('.plan'));
-        if (plans.length) {
-          var checkPlans = innerWidth <= 960
-            ? [plans.reduce(function (a, b) { return docTop(a) <= docTop(b) ? a : b; })]
-            : plans;
-          var maxBtnBottom = 0;
-          checkPlans.forEach(function (p) {
-            var btn = p.querySelector('.btn');
-            if (btn) maxBtnBottom = Math.max(maxBtnBottom, docTop(btn) + btn.offsetHeight);
-          });
-          if (maxBtnBottom > 0) {
-            var neededBottom = maxBtnBottom + 16;
-            if (neededBottom - idealTop > innerHeight) {
-              targetY = neededBottom - innerHeight;
-            }
-          }
-        }
-      }
       var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
-      var destY = Math.max(0, Math.min(targetY, maxScroll));
+      var destY = Math.max(0, Math.min(idealTop, maxScroll));
       window.scrollTo({
         top: destY,
         behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant'
@@ -2541,19 +2792,28 @@
 
     function scrollToSection(id, smooth) {
       if (id === 'pricing') return scrollToPricing(smooth);
+      if (id === 'pricing-enterprise') {
+        setAudience('enterprise');
+        return scrollToPricing(smooth);
+      }
+      if (id === 'dedicated-line') {
+        setAudience('solo');
+        var dlDet = document.getElementById('dedicated-line');
+        if (dlDet) { dlDet.open = true; clearReveal(dlDet); }
+      } else if (id === 'seat-addons-drawer') {
+        setAudience('enterprise');
+        var saDet = document.getElementById('seat-addons-drawer');
+        if (saDet) { saDet.open = true; clearReveal(saDet); }
+      } else if (id === 'storage') {
+        var stDet = document.getElementById('storage');
+        if (stDet) { stDet.open = true; clearReveal(stDet); }
+      }
       var sec = document.getElementById(id);
       if (!sec) return null;
       clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
-      var rawY;
-      if (id === 'storage') {
-        rawY = docTop(sec) - headerH - 4;
-      } else if (id === 'pricing-enterprise' || id === 'dedicated-line') {
-        rawY = docTop(sec) - headerH - 16;
-      } else {
-        var headEl = sec.querySelector('.section-head');
-        rawY = headEl ? (docTop(headEl) - headerH - 28) : (docTop(sec) - headerH - 16);
-      }
+      var headEl = sec.querySelector('.section-head');
+      var rawY = headEl ? (docTop(headEl) - headerH - 24) : (docTop(sec) - headerH - 16);
       var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
       var destY = Math.max(0, Math.min(rawY, maxScroll));
       window.scrollTo({
@@ -2570,9 +2830,14 @@
       if (!document.getElementById(id)) return;
       el.addEventListener('click', function (e) {
         e.preventDefault();
+        var gotoAud = el.getAttribute('data-goto-audience');
+        if (gotoAud) {
+          clearScenarioHighlight();
+          setAudience(gotoAud);
+        }
         history.replaceState(null, '', '#' + id);
         var destY = scrollToSection(id, true);
-        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line') && navById.pricing ? 'pricing' : null);
+        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line' || id === 'storage') && navById.pricing ? 'pricing' : null);
         if (spyId && destY !== null) {
           lockedNavId = spyId;
           lockTargetY = destY;
@@ -2581,6 +2846,14 @@
         }
       });
     });
+
+    (function initAudienceFromUrl() {
+      var sp = new URLSearchParams(location.search);
+      var tabQ = (sp.get('tab') || '').toLowerCase();
+      if (tabQ === 'enterprise' || tabQ === 'team' || location.hash === '#pricing-enterprise') {
+        setAudience('enterprise');
+      }
+    })();
 
     if (location.hash && location.hash.length > 1) {
       var initId = decodeURIComponent(location.hash.slice(1));
@@ -2610,7 +2883,7 @@
     });
 
     if (!root.classList.contains('motion') || !('IntersectionObserver' in window)) return;
-    var targets = document.querySelectorAll('main .section-head, main .card, main .faq details, main .cta, main .stripe-trust, main .currency-switch, main .pricing-controls, main .tier-divider, main .enterprise-toolbar, main .seat-addons');
+    var targets = document.querySelectorAll('main .section-head, #service .card, #panel-solo > .pricing > .card, #security .card, #process .card, main .faq > details, main .cta, main .stripe-trust, main .audience-tabs, main .quick-finder, main .pricing-controls');
     targets.forEach(function (el) {
       var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
       el.classList.add('mo-reveal');

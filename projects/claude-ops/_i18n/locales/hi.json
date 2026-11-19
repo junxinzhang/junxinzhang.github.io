@@ -917,5 +917,111 @@
         "body_html": "<p>यदि किसी शुल्क के बारे में आपका कोई प्रश्न है, तो कृपया पहले हमसे संपर्क करें और हम इसे तुरंत सुलझाएँगे। यदि आप हमसे संपर्क किए बिना अपने बैंक में चार्जबैक दर्ज करते हैं, तो विवाद खुला रहने तक हम संबंधित सेवा को निलंबित कर सकते हैं।</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "सेटअप से लेकर रोज़मर्रा के संचालन तक, पूरी तरह मैनेज्ड और तुरंत उपयोग के लिए तैयार। ऑस्ट्रेलिया, अमेरिका, सिंगापुर, मलेशिया, इंडोनेशिया, जापान, कंबोडिया, न्यूज़ीलैंड या कनाडा में स्थानीय नेटिव ब्रॉडबैंड नेटवर्क पर आपका अपना हाई-स्पेक Mac Studio या Mac mini (सस्ते शेयर्ड क्लाउड डेटा सेंटर कभी नहीं)। अकाउंट-स्तर आइसोलेशन (20x पर डेडिकेटेड मशीन), लंबे समय तक स्थिर।.",
+    "hero_cta_solo": "व्यक्तिगत प्लान →",
+    "hero_cta_ent": "टीम और एंटरप्राइज़ →",
+    "hero_consult": "कस्टम क्लस्टर चाहिए? हमारे इंजीनियर को ईमेल करें →",
+    "pillars_tag": "सेवाएँ",
+    "pillars_h2": "सेटअप, नेटवर्क और ऑप्स हम पर छोड़ें — आप सिर्फ़ निर्माण पर ध्यान दें",
+    "pillars_sub": "सेटअप से लेकर रोज़मर्रा के संचालन तक, पूरी तरह मैनेज्ड और तुरंत उपयोग के लिए तैयार।",
+    "pillars": [
+      {
+        "h3": "हाई-स्पेक Mac Studio और mini",
+        "p": "ऑस्ट्रेलिया, अमेरिका, सिंगापुर, मलेशिया, इंडोनेशिया, जापान, कंबोडिया, न्यूज़ीलैंड या कनाडा में स्थानीय नेटिव ब्रॉडबैंड नेटवर्क पर आपका अपना हाई-स्पेक Mac Studio या Mac mini (सस्ते शेयर्ड क्लाउड डेटा सेंटर कभी नहीं)। अकाउंट-स्तर आइसोलेशन (20x पर डेडिकेटेड मशीन), लंबे समय तक स्थिर।",
+        "chips": [
+          "फ़िज़िकल Mac",
+          "आइसोलेटेड स्पेस"
+        ]
+      },
+      {
+        "h3": "एंटरप्राइज़ BGP बैकबोन",
+        "p": "हम हार्डवेयर और प्रीमियम रूट्स में लगातार निवेश करते हैं: 200Mbps–500Mbps+ सिमेट्रिकल स्पीड वाला 9 देशों का नेटिव ISP ब्रॉडबैंड, सेल्फ़-होस्टेड रिले और एंटरप्राइज़ BGP बैकबोन — जो रिमोट डेस्कटॉप के सबसे बड़े दुश्मन यानी पैकेट लॉस को शून्य पर ले आते हैं।",
+        "chips": [
+          "200–500Mbps+ सिमेट्रिकल स्पीड",
+          "डुअल-लेग BBR"
+        ]
+      },
+      {
+        "h3": "शीर्ष-स्तरीय 1-ऑन-1 कंसीयज",
+        "p": "क्रिएटर्स, डेवलपर्स, फ़ाउंडर्स और टीमों के लिए विशेष AI इंजीनियरिंग मार्गदर्शन। Claude Code वर्कफ़्लो, MCP और Skills सेटअप से लेकर रियल प्रोजेक्ट शिप करने तक, 7×8h / 7×16h / 7×24h सीधा 1-ऑन-1 सपोर्ट पाएँ।",
+        "chips": [
+          "मैनेज्ड बिलिंग",
+          "शीर्ष अनुभव"
+        ]
+      }
+    ],
+    "finder_label": "3-सेकंड प्लान फ़ाइंडर · अपनी ज़रूरत चुनें:",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "व्यक्तिगत डेवलपर / क्रिएटर",
+    "tab_solo_sub": "1 यूज़र · 3 स्पष्ट प्लान",
+    "tab_ent_title": "टीम और एंटरप्राइज़",
+    "tab_ent_sub": "5–100+ सीटें · समर्पित Mac · एकीकृत इनवॉइस",
+    "solo_fit": [
+      "स्थिर Claude वातावरण के साथ रोज़मर्रा की चैट, लेखन और हल्की कोडिंग के लिए।",
+      "उन डेवलपर्स और क्रिएटर्स के लिए जो हर दिन भारी मात्रा में Claude Code का उपयोग करते हैं।",
+      "चौबीसों घंटे मल्टीपल एजेंट्स चलाने वाले बिल्डर्स, फ़ाउंडर्स और पावर यूज़र्स के लिए।"
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "5 सीटें",
+    "ent_fit_biz": "10 सीटें",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "कस्टम",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "एंटरप्राइज़ सलाहकार से संपर्क करें →",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "ClaudeOps एंटरप्राइज़ डेडिकेटेड लाइन · क्रॉस-बॉर्डर एक्सेलेरेशन",
+    "drawer_line_hint": "1x और 5x सब्सक्राइबर्स के लिए वैकल्पिक ऐड-ऑन: अल्ट्रा-रिस्पॉन्सिव Screen Sharing और Claude Code के लिए अपने ट्रैफ़िक को डुअल-लेग BBR 0% पैकेट-लॉस एक्सेलेरेशन वाले हमारे एंटरप्राइज़ BGP क्रॉस-बॉर्डर बैकबोन से रूट करें (वार्षिक बिलिंग पर 2 महीने मुफ़्त)।",
+    "drawer_line_cta": "विकल्प देखें",
+    "drawer_upg_title": "प्रति-सीट अपग्रेड ऐड-ऑन",
+    "drawer_upg_hint": "किसी भी सक्रिय Team या Business बेस प्लान पर टियर्स को मिलाएँ — ज़रूरत के अनुसार चुनिंदा सदस्यों को अपग्रेड करें (वार्षिक ऐड-ऑन पर भी 2 महीने मुफ़्त मिलते हैं)।",
+    "drawer_upg_cta": "विकल्प देखें",
+    "drawer_storage_title": "डिजिटल एसेट्स के लिए मैनेज्ड क्लाउड स्टोरेज",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "विकल्प देखें",
+    "drawer_close_cta": "छुपाएँ",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "दो-स्तरीय आइसोलेशन: अलग अकाउंट और डेडिकेटेड मशीनें",
+    "trust_sub": "क्लाइंट की गोपनीयता बनाए रखने के लिए सभी समीक्षाओं में कार्टून अवतार और मास्क किए गए नामों का उपयोग किया गया है, जबकि वास्तविक फ़ीडबैक और प्लान टियर जस के तस रखे गए हैं।",
+    "faq_more_open": "अन्य {count} प्रश्न देखें",
+    "faq_more_close": "कम दिखाएँ"
   }
 }

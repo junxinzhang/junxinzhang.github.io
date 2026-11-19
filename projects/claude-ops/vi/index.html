@@ -995,16 +995,263 @@
     .map-hud-row b { white-space: normal; min-width: 0; line-height: 1.35 }
     @media (max-width: 1180px) {
       .nav-links { gap: 2px }
-      .nav-links a { padding: 6px 7px; font-size: .81rem }
+      .nav-links a { padding: 6px 9px; font-size: .84rem }
     }
-    @media (max-width: 1030px) {
+    @media (max-width: 920px) {
       .nav-links { display: none }
     }
+
+    /* ===== Streamlined 6-Floor UX & Focused Pricing Architecture ===== */
+    .hero { padding: 54px 0 58px }
+    .hero p.lead { max-width: 44em; margin: 0 auto 24px; font-size: clamp(.98rem, 1.65vw, 1.12rem); line-height: 1.68 }
+    .btn-ent-hero {
+      background: rgba(217, 119, 87, .10); color: var(--cream);
+      border: 1px solid rgba(232, 144, 111, .42);
+    }
+    .btn-ent-hero:hover {
+      background: rgba(217, 119, 87, .20); border-color: rgba(242, 180, 143, .75);
+      color: #fff; transform: translateY(-1px);
+    }
+    .hero-sub-link { margin-top: 14px; font-size: .84rem; color: var(--muted) }
+    .hero-sub-link a {
+      color: var(--muted); border-bottom: 1px dashed rgba(255, 255, 255, .22);
+      padding-bottom: 1px; transition: color .2s, border-color .2s;
+    }
+    .hero-sub-link a:hover { color: var(--primary-strong); border-color: var(--primary-strong) }
+    .hero-map-wrap { margin-top: 30px }
+
+    /* Floor 2: 3 Merged Core Capability Pillars */
+    .pillar-card { display: flex; flex-direction: column; padding: 26px 26px 22px }
+    .pillar-card p { flex: 1; line-height: 1.65 }
+    .pillar-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .06) }
+    .pillar-chip {
+      font-size: .75rem; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+      color: var(--primary-strong); background: rgba(217, 119, 87, .12); border: 1px solid rgba(217, 119, 87, .26);
+    }
+
+    /* Floor 3: Pricing Quick-Finder + Audience Segmented Tabs + Clean Cards */
+    #pricing { padding: 72px 0 76px }
+    #pricing > .container > .section-head { margin-bottom: 22px }
+    #pricing > .container > .section-head h2 { font-size: clamp(1.65rem, 3.2vw, 2.25rem) }
+    #pricing > .container > .section-head p { font-size: .95rem; margin-top: 8px }
+
+    .quick-finder {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 10px;
+      max-width: 980px; margin: 0 auto 20px; padding: 11px 16px; border-radius: 16px;
+      background: rgba(255, 255, 255, .025); border: 1px solid rgba(255, 255, 255, .07);
+    }
+    .qf-label { font-size: .82rem; font-weight: 600; color: var(--cream); margin-right: 4px }
+    .qf-btn {
+      font: inherit; font-size: .80rem; font-weight: 500; color: var(--text);
+      padding: 6px 13px; border-radius: 999px; cursor: pointer;
+      background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .10);
+      transition: .2s; white-space: nowrap;
+    }
+    .qf-btn:hover { color: #fff; border-color: rgba(232, 144, 111, .5); background: rgba(217, 119, 87, .12) }
+    .qf-btn.active {
+      color: #fff; font-weight: 600; background: rgba(217, 119, 87, .24);
+      border-color: var(--primary-strong); box-shadow: 0 4px 16px rgba(217, 119, 87, .25);
+    }
+    .finder-tip {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      max-width: 880px; margin: -6px auto 20px; padding: 11px 18px; border-radius: 13px;
+      background: linear-gradient(90deg, rgba(217, 119, 87, .18), rgba(242, 180, 143, .08));
+      border: 1px solid rgba(232, 144, 111, .42); color: var(--cream); font-size: .86rem; line-height: 1.5;
+    }
+    .finder-tip[hidden] { display: none !important }
+    .finder-tip-close {
+      background: transparent; border: 0; color: var(--muted); font-size: 1.15rem;
+      line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px; flex-shrink: 0;
+    }
+    .finder-tip-close:hover { color: #fff; background: rgba(255, 255, 255, .08) }
+
+    .audience-tabs {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+      max-width: 680px; margin: 0 auto 20px; padding: 6px; border-radius: 20px;
+      background: rgba(255, 255, 255, .03); border: 1px solid rgba(255, 255, 255, .09);
+    }
+    .aud-tab {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 12px 18px; border-radius: 14px; border: 1px solid transparent;
+      background: transparent; color: var(--muted); cursor: pointer; font-family: inherit;
+      text-align: left; transition: .22s;
+    }
+    .aud-tab:hover { color: var(--cream); background: rgba(255, 255, 255, .035) }
+    .aud-tab[aria-selected="true"] {
+      background: linear-gradient(135deg, rgba(217, 119, 87, .24), rgba(217, 119, 87, .10));
+      border-color: rgba(232, 144, 111, .58); color: #fff;
+      box-shadow: 0 10px 28px -10px rgba(217, 119, 87, .45);
+    }
+    .aud-icon {
+      width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0;
+      background: rgba(255, 255, 255, .05); color: var(--muted); transition: .22s;
+    }
+    .aud-tab[aria-selected="true"] .aud-icon { background: var(--primary); color: #fff }
+    .aud-txt strong { display: block; font-size: .96rem; font-weight: 700; color: inherit; line-height: 1.25 }
+    .aud-txt span { display: block; font-size: .76rem; color: var(--muted); margin-top: 2px; line-height: 1.3 }
+    .aud-tab[aria-selected="true"] .aud-txt span { color: #f2d5be }
+    @media (max-width: 600px) {
+      .audience-tabs { grid-template-columns: 1fr }
+      .qf-btn { white-space: normal; text-align: center }
+    }
+
+    .pricing-panel[hidden] { display: none !important }
+    .pricing-controls { margin: 0 auto 26px; gap: 12px }
+
+    /* Comfortable, breathable plan cards */
+    #pricing .pricing-solo .plan,
+    #pricing .pricing-enterprise .plan { padding: 28px 25px 24px }
+    #pricing .pricing-solo .plan-tier b,
+    #pricing .pricing-enterprise .plan-tier b { font-size: 2rem }
+    #pricing .pricing-solo .price,
+    #pricing .pricing-enterprise .price { font-size: 2.3rem }
+    #pricing .pricing-solo .features li { padding: 5px 0; font-size: .89rem; line-height: 1.45 }
+    #pricing .pricing-solo .plan .btn,
+    #pricing .pricing-enterprise .plan .btn { padding: 12px 20px; font-size: .95rem }
+
+    .plan-fit {
+      margin: 10px 0 12px; padding: 6px 11px; border-radius: 9px;
+      background: rgba(217, 119, 87, .10); border-left: 3px solid var(--primary);
+      color: #f5dcc8; font-size: .80rem; font-weight: 600; line-height: 1.4;
+    }
+    .plan.plan-recommended {
+      outline: 2px solid #ffd7b3; outline-offset: 2px;
+      box-shadow: 0 0 0 6px rgba(217, 119, 87, .20), 0 26px 60px -16px rgba(217, 119, 87, .42) !important;
+    }
+
+    /* Enterprise 2-step clarity + 3rd Custom Cluster Card */
+    .enterprise-wrap { margin-top: 0 }
+    .ent-step-bar {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      margin: 0 auto 22px; padding: 16px 20px; border-radius: 16px;
+      background: rgba(255, 255, 255, .025); border: 1px solid rgba(232, 144, 111, .20);
+      text-align: center;
+    }
+    .ent-step-title { font-size: .85rem; font-weight: 700; color: var(--cream); letter-spacing: .02em }
+    .ent-step2-label {
+      text-align: center; font-size: .84rem; font-weight: 700; color: var(--muted);
+      margin: 0 0 20px; letter-spacing: .02em;
+    }
+    .plan.plan-custom {
+      border-style: dashed; border-color: rgba(242, 180, 143, .38);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .01));
+    }
+    .badge-custom {
+      background: #1f1b18; color: #e5d5c5; border: 1px solid rgba(255, 255, 255, .20);
+    }
+    .price-custom {
+      font-family: var(--serif); font-size: 1.95rem !important; font-weight: 700; color: var(--cream);
+      line-height: 1.15; letter-spacing: -.01em;
+    }
+
+    /* Collapsible Optional Add-on Drawers (Dedicated Line, Seat Upgrades, Cloud Storage) */
+    .addon-drawer {
+      margin-top: 22px; border-radius: 18px; overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .012));
+      border: 1px solid rgba(232, 144, 111, .24); transition: border-color .2s;
+    }
+    .addon-drawer:hover { border-color: rgba(232, 144, 111, .45) }
+    .addon-drawer[open] { border-color: rgba(232, 144, 111, .48); background: rgba(255, 255, 255, .025) }
+    .addon-drawer > summary {
+      list-style: none; cursor: pointer; padding: 16px 22px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      user-select: none;
+    }
+    .addon-drawer > summary::-webkit-details-marker { display: none }
+    .drawer-sum-left { display: flex; align-items: flex-start; gap: 12px; min-width: 0 }
+    .drawer-ic {
+      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0;
+      background: rgba(217, 119, 87, .15); color: var(--primary-strong); margin-top: 2px;
+    }
+    .drawer-titles { min-width: 0 }
+    .drawer-title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px }
+    .drawer-title-row strong { color: var(--cream); font-size: .95rem; font-weight: 700 }
+    .drawer-pill {
+      font-size: .71rem; font-weight: 700; padding: 2px 9px; border-radius: 999px;
+      background: rgba(91, 209, 139, .14); color: #7ce6a6; border: 1px solid rgba(91, 209, 139, .30);
+      white-space: nowrap;
+    }
+    .drawer-hint { display: block; margin-top: 3px; font-size: .81rem; color: var(--muted); line-height: 1.45 }
+    .drawer-toggle-pill {
+      display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;
+      padding: 7px 14px; border-radius: 999px; font-size: .80rem; font-weight: 600;
+      color: var(--primary-strong); background: rgba(217, 119, 87, .12);
+      border: 1px solid rgba(217, 119, 87, .32); transition: .2s; white-space: nowrap;
+    }
+    .addon-drawer > summary:hover .drawer-toggle-pill { background: var(--primary); color: #fff; border-color: var(--primary) }
+    .drawer-toggle-pill i { font-style: normal; transition: transform .22s ease; display: inline-block }
+    .addon-drawer .when-open { display: none }
+    .addon-drawer[open] .when-closed { display: none }
+    .addon-drawer[open] .when-open { display: inline }
+    .addon-drawer[open] .drawer-toggle-pill i { transform: rotate(180deg) }
+    .drawer-body { padding: 4px 22px 22px; border-top: 1px solid rgba(255, 255, 255, .06) }
+    .drawer-body-lead { margin: 14px 0 16px; font-size: .84rem; color: var(--muted); line-height: 1.55 }
+    .storage-drawer { margin-top: 16px; border-color: rgba(255, 255, 255, .12) }
+    @media (max-width: 680px) {
+      .addon-drawer > summary { flex-direction: column; align-items: flex-start; gap: 10px }
+      .drawer-toggle-pill { align-self: flex-start }
+    }
+
+    /* Floor 4: Merged Security + Network Proof + Curated 3 Reviews */
+    .trust-split {
+      display: grid; grid-template-columns: 1.08fr .92fr; gap: 24px; align-items: stretch;
+    }
+    .sec-stack { display: grid; gap: 14px }
+    .sec-compact-card {
+      display: flex; align-items: flex-start; gap: 16px; padding: 20px 22px;
+    }
+    .sec-compact-card .icon { flex-shrink: 0; width: 40px; height: 40px; margin-top: 2px }
+    .sec-compact-card h3 { margin: 0 0 5px; font-size: 1.02rem }
+    .sec-compact-card p { font-size: .88rem; line-height: 1.58 }
+    .net-proof-box { display: flex; flex-direction: column; justify-content: space-between; padding: 24px 26px }
+    .net-proof-head h3 { margin: 0 0 6px; color: var(--cream); font-size: 1.08rem }
+    .net-proof-head p { margin: 0 0 14px; font-size: .86rem; color: var(--muted); line-height: 1.55 }
+    .net-proof-box .net-chips { margin-bottom: 16px }
+    .trust-reviews { margin-top: 36px; padding-top: 34px; border-top: 1px solid var(--border) }
+    .trust-reviews-title {
+      text-align: center; font-size: .82rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--primary-strong); margin: 0 0 20px;
+    }
+    @media (max-width: 960px) { .trust-split { grid-template-columns: 1fr } }
+
+    /* Floor 5: Focused Top-6 FAQ + Expand More */
+    .faq-more {
+      background: transparent !important; border: 0 !important; padding: 0 !important; margin-top: 6px !important;
+    }
+    .faq-more > summary {
+      justify-content: center !important; width: fit-content; margin: 10px auto 0;
+      padding: 9px 20px; border-radius: 999px; font-size: .85rem; font-weight: 600;
+      color: var(--primary-strong) !important; background: rgba(217, 119, 87, .10);
+      border: 1px solid rgba(217, 119, 87, .30); transition: .2s;
+    }
+    .faq-more > summary:hover { background: rgba(217, 119, 87, .20); color: #fff !important }
+    .faq-more > summary::after { content: "▾" !important; font-size: .9rem !important; margin-left: 6px }
+    .faq-more[open] > summary::after { content: "▴" !important }
+    .faq-more .when-open { display: none }
+    .faq-more[open] .when-closed { display: none }
+    .faq-more[open] .when-open { display: inline }
+    .faq-more-list { margin-top: 14px }
+
+    /* Floor 6: Buyer CTA First, Compact Secondary Partner Strip Below */
+    .partner-banner.partner-compact {
+      margin: 26px 0 0; padding: 28px 30px; text-align: left;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .partner-compact-copy { flex: 1 1 480px; min-width: 0 }
+    .partner-compact h3 {
+      font-family: var(--serif); color: var(--cream); font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+      line-height: 1.35; margin: 10px 0 8px;
+    }
+    .partner-compact p { margin: 0 0 14px; font-size: .88rem; line-height: 1.6; max-width: none }
+    .partner-compact .partner-chips { justify-content: flex-start; margin: 0 }
+
     /* RTL Directional Overrides */
     [dir="rtl"] .hero-map-wrap { text-align: right }
     [dir="rtl"] .map-stage { direction: ltr; text-align: left }
     [dir="rtl"] .map-hud { direction: rtl; text-align: right }
     [dir="rtl"] .map-hud-row b { text-align: left }
+    [dir="rtl"] .aud-tab { text-align: right }
+    [dir="rtl"] .plan-fit { border-left: 0; border-right: 3px solid var(--primary) }
     [dir="rtl"] .enterprise-jump { margin-left: 0; margin-right: 6px }
     [dir="rtl"] .price small { margin-left: 0; margin-right: 4px }
     [dir="rtl"] .price sup { margin-right: 0; margin-left: 2px }
@@ -1018,6 +1265,7 @@
     [dir="rtl"] .nb-fill { inset: 0 0 0 auto }
     [dir="rtl"] .nb em { padding-left: 0; padding-right: 8px }
     [dir="rtl"] .contact-tg { text-align: right }
+    [dir="rtl"] .partner-banner.partner-compact { text-align: right }
     [dir="rtl"] .foot-right { margin-left: 0; margin-right: auto; text-align: left }
     [dir="rtl"] .social { justify-content: flex-start }
     [dir="rtl"] #scroll-progress { transform-origin: 100% 50% }
@@ -1051,13 +1299,9 @@
         Zaokit ClaudeOps
       </a>
       <ul class="nav-links">
-        <li><a href="#why">Vì sao</a></li>
         <li><a href="#service">Dịch vụ</a></li>
-        <li><a href="#value">Giá trị</a></li>
-        <li><a href="#security">Bảo mật</a></li>
-        <li><a href="#reviews">Đánh giá</a></li>
         <li><a href="#pricing">Bảng giá</a></li>
-        <li><a href="#storage">Lưu trữ</a></li>
+        <li><a href="#security">Bảo mật</a></li>
         <li><a href="#process">Quy trình</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -1068,18 +1312,25 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Floor 1: Hero & Global Compute Topology -->
     <section class="hero">
       <div class="container">
         <span class="eyebrow"><span class="dot"></span>GLOBAL VISION · Để AI Thắp Sáng Từng Thành Phố, Từng Cá Nhân</span>
         <h1>AI Xóa Nhòa Mọi Biên Giới<span class="h1-sub"><em>Mang năng suất tiên tiến nhất &amp; trải nghiệm đỉnh cao đến tất cả mọi người</em></span></h1>
         <p class="lead">
-          Năng suất AI tiên phong không bao giờ nên là đặc quyền của số ít. Từ Sydney, Thung lũng Silicon, Tokyo, Singapore đến Jakarta—chúng tôi đang thắp sáng các nút tính toán bản địa tại từng thành phố trên khắp thế giới, kết hợp máy trạm vật lý Mac biệt lập, đường truyền riêng BGP doanh nghiệp và dịch vụ đồng hành kỹ thuật 1-kèm-1 lên đến 7×24h để mọi nhà sáng tạo, lập trình viên và đội ngũ đều có thể kiến tạo không giới hạn.
+          Từ khâu khởi tạo đến vận hành hàng ngày, được quản lý trọn gói và sẵn sàng sử dụng ngay. Máy vật lý Mac Studio hoặc Mac mini cấu hình cao đặt trên mạng băng thông rộng ISP bản địa tại Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand hoặc Canada (tuyệt đối không dùng trung tâm dữ liệu đám mây dùng chung giá rẻ).
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#pricing">Xem bảng giá</a>
-          <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20d%E1%BB%8Bch%20v%E1%BB%A5%20Zaokit%20ClaudeOps">Gửi email tư vấn</a>
+          <a class="btn btn-primary" href="#pricing" data-goto-audience="solo">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0114 0"/></svg>
+            Gói Cá nhân →
+          </a>
+          <a class="btn btn-ent-hero" href="#pricing-enterprise" data-goto-audience="enterprise">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h2m4 0h2M8 13h2m4 0h2M10 20v-3h4v3"/></svg>
+            Nhóm &amp; Doanh nghiệp →
+          </a>
         </div>
+        <div class="hero-sub-link"><a href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20d%E1%BB%8Bch%20v%E1%BB%A5%20Zaokit%20ClaudeOps">Cần cụm máy riêng theo yêu cầu? Gửi email tư vấn →</a></div>
 
         <div class="hero-map-wrap">
           <div class="hero-map-card" id="global-map">
@@ -1126,13 +1377,6 @@
             <div class="map-pills" role="tablist" aria-label="Chọn khu vực">
               <button type="button" class="map-pill active" data-pick-node="AU"><i></i><span>Úc</span><code>AU</code></button><button type="button" class="map-pill" data-pick-node="US"><i></i><span>Hoa Kỳ</span><code>US</code></button><button type="button" class="map-pill" data-pick-node="SG"><i></i><span>Singapore</span><code>SG</code></button><button type="button" class="map-pill" data-pick-node="MY"><i></i><span>Malaysia</span><code>MY</code></button><button type="button" class="map-pill" data-pick-node="ID"><i></i><span>Indonesia</span><code>ID</code></button><button type="button" class="map-pill" data-pick-node="JP"><i></i><span>Nhật Bản</span><code>JP</code></button><button type="button" class="map-pill" data-pick-node="KH"><i></i><span>Campuchia</span><code>KH</code></button><button type="button" class="map-pill" data-pick-node="NZ"><i></i><span>New Zealand</span><code>NZ</code></button><button type="button" class="map-pill" data-pick-node="CA"><i></i><span>Canada</span><code>CA</code></button>
             </div>
-            <div class="map-partner-bar">
-              <div class="map-partner-copy">
-                <span class="partner-pill">✦ Đồng Kiến Tạo Toàn Cầu · Phục Vụ Trọn Vẹn 8 Tỷ Người</span>
-                <span><strong>Đóng góp thiết bị của bạn &amp; chia sẻ tài nguyên — vừa tạo thu nhập bền vững, vừa thắp sáng ước mơ cho biết bao người!</strong></span>
-              </div>
-              <a class="partner-cta-btn" href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20/%20Join%20Zaokit%20Global%20Compute%20Network&amp;body=Ch%C3%A0o%20Jason%2C%20t%C3%B4i%20mu%E1%BB%91n%20chia%20s%E1%BA%BB%20t%C3%A0i%20nguy%C3%AAn%20v%C3%A0%20tham%20gia%20M%E1%BA%A1ng%20l%C6%B0%E1%BB%9Bi%20T%C3%ADnh%20to%C3%A1n%20To%C3%A0n%20c%E1%BA%A7u%20Zaokit%3A%0A%0A1.%20Qu%E1%BB%91c%20gia%20/%20Th%C3%A0nh%20ph%E1%BB%91%3A%0A2.%20H%C3%ACnh%20th%E1%BB%A9c%20h%E1%BB%A3p%20t%C3%A1c%20%28%C4%90%C3%B3ng%20g%C3%B3p%20m%C3%A1y%20Mac%20c%C3%A1%20nh%C3%A2n%20/%20N%C3%BAt%20b%C4%83ng%20th%C3%B4ng%20b%E1%BA%A3n%20%C4%91%E1%BB%8Ba%20/%20%C4%90%E1%BB%91i%20t%C3%A1c%20khu%20v%E1%BB%B1c%29%3A%0A3.%20C%E1%BA%A5u%20h%C3%ACnh%20m%C3%A1y%20Mac%20%26%20th%C3%B4ng%20tin%20nh%C3%A0%20m%E1%BA%A1ng%20ISP%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng%3A%0A4.%20Th%C3%B4ng%20tin%20li%C3%AAn%20h%E1%BB%87%3A">Đóng Góp Máy / Tham Gia Ngay →</a>
-            </div>
           </div>
         </div>
         <div class="hero-stats">
@@ -1145,364 +1389,82 @@
       </div>
     </section>
 
-    <!-- Pain points -->
-    <section class="section section-alt" id="why">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Vì sao</p>
-          <h2>Phần khó nhất khi dùng Claude chưa bao giờ nằm ở mô hình</h2>
-          <p>Thứ thực sự bào mòn năng lượng của bạn chính là những bất ổn kỹ thuật chẳng hề liên quan đến công việc chuyên môn.</p>
-        </div>
-        <div class="grid grid-4 pain">
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
-            <h3>Thiết lập rườm rà</h3>
-            <p>Từ đăng ký tài khoản đến cấu hình môi trường, bạn phải tự mày mò từng bước một mà không có ai hỗ trợ.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8.5a15 15 0 0120 0M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0"/><path d="M3 3l18 18"/></svg></div>
-            <h3>Vận hành chập chờn</h3>
-            <p>Mỗi máy cục bộ lại khác nhau khiến các tác vụ Claude Code chạy dài hơi dễ bị ngắt quãng giữa chừng.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-            <h3>Rắc rối thanh toán</h3>
-            <p>Lỗi thẻ thanh toán quốc tế, đổi gói cước và gia hạn hàng tháng liên tục ngốn mất thời gian quý báu của bạn.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-            <h3>Lãng phí thời gian</h3>
-            <p>Hàng giờ đồng hồ tìm hiểu công cụ và xử lý lỗi môi trường lẽ ra nên được dành trọn cho sản phẩm thực tế của bạn.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service -->
-    <section class="section" id="service">
+    <!-- Floor 2: 3 Merged Core Capability Pillars -->
+    <section class="section section-alt" id="service">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">Dịch vụ</p>
-          <h2>Hãy giao sự bất định cho chúng tôi. Giữ trọn sự chắc chắn cho bạn.</h2>
+          <h2>Hãy để môi trường, mạng và vận hành cho chúng tôi — bạn chỉ cần sáng tạo</h2>
           <p>Từ khâu khởi tạo đến vận hành hàng ngày, được quản lý trọn gói và sẵn sàng sử dụng ngay.</p>
         </div>
-        <div class="grid grid-4">
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div>
-            <h3>Không gian làm việc biệt lập</h3>
-            <p>Tài khoản và không gian làm việc macOS riêng của bạn với tệp tin và quyền truy cập tách biệt hoàn toàn, kèm tùy chọn nguyên máy vật lý riêng ở gói 20x. Mọi hội thoại và dữ liệu dự án luôn nằm trong tầm kiểm soát của bạn.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="grid grid-3">
+          <div class="card value-card pillar-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
             <h3>Mac Studio &amp; mini cấu hình cao</h3>
             <p>Máy vật lý Mac Studio hoặc Mac mini cấu hình cao đặt trên mạng băng thông rộng ISP bản địa tại Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand hoặc Canada (tuyệt đối không dùng trung tâm dữ liệu đám mây dùng chung giá rẻ). Cách ly cấp tài khoản (nguyên máy riêng ở gói 20x), vận hành ổn định lâu dài.</p>
+            <div class="pillar-chips"><span class="pillar-chip">Mac Vật Lý Thật</span><span class="pillar-chip">Không Gian Biệt Lập</span></div>
           </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
-            <h3>Thanh toán quản lý trọn gói</h3>
-            <p>Đăng ký thuê bao, gia hạn định kỳ và thay đổi gói cước đều do chúng tôi xử lý trọn vẹn. Bạn không cần bận tâm theo dõi.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-            <h3>Cố vấn 1-kèm-1 theo cấp độ</h3>
-            <p>Hỗ trợ kỹ thuật trực tiếp 1-kèm-1 tương ứng theo gói của bạn: 7×8h (1x), 7×16h (5x), lên đến kênh cố vấn riêng tư toàn thời gian 7×24h (20x).</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Value: beyond compute -->
-    <section class="section section-alt" id="value">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Hơn cả phần cứng</p>
-          <h2>Những gì bạn nhận được <em class="grad">vượt xa năng lực tính toán</em></h2>
-          <p>Tài khoản và máy trạm chỉ là điểm khởi đầu. Lợi thế thực sự là có đội ngũ chuyên gia đồng hành giúp bạn khai thác AI đúng cách, sâu sắc hơn và đi trước người khác.</p>
-        </div>
-        <div class="grid grid-3">
-          <div class="card value-card">
+          <div class="card value-card pillar-card">
             <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div>
-            <h3>Năng lực tính toán &amp; máy trạm hàng đầu</h3>
-            <p>Không gian kỹ thuật AI chuyên biệt được cấu hình sẵn và quản lý riêng cho bạn, vận hành trên máy vật lý Mac Studio hoặc Mac mini cấu hình cao để các tác vụ dài của Claude Code chạy xuyên suốt không gián đoạn.</p>
+            <h3>Đường trục BGP doanh nghiệp</h3>
+            <p>Chúng tôi không ngừng đầu tư vào phần cứng và tuyến truyền dẫn cao cấp: băng thông ISP bản địa tại 9 quốc gia với tốc độ đối xứng 200Mbps–500Mbps+, kết hợp máy chủ chuyển tiếp tự vận hành và trục BGP doanh nghiệp giúp đưa tỷ lệ mất gói tin—kẻ thù lớn nhất của màn hình từ xa—về mức 0%.</p>
+            <div class="pillar-chips"><span class="pillar-chip">Đối xứng 200–500Mbps+</span><span class="pillar-chip">Tối ưu BBR hai chiều</span></div>
           </div>
-          <div class="card value-card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+          <div class="card value-card pillar-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
             <h3>Cố vấn 1-kèm-1 đẳng cấp cao</h3>
             <p>Hướng dẫn kỹ thuật AI chuyên sâu dành cho nhà sáng tạo, lập trình viên, nhà sáng lập và đội ngũ. Từ quy trình làm việc Claude Code, thiết lập MCP và Skills đến triển khai dự án thực tế với hỗ trợ trực tiếp 1-kèm-1 7×8h / 7×16h / 7×24h.</p>
-          </div>
-          <div class="card value-card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></div>
-            <h3>Góc nhìn AI cập nhật sớm nhất</h3>
-            <p>Cập nhật định kỳ về tính năng mới, phương pháp tối ưu và xu hướng ngành của Claude cùng các công cụ AI hàng đầu khác, giúp bạn luôn đón đầu công nghệ mới.</p>
+            <div class="pillar-chips"><span class="pillar-chip">Thanh toán quản lý trọn gói</span><span class="pillar-chip">Trải Nghiệm Đỉnh</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Network optimisation -->
-    <section class="section net-section" id="network">
-      <div class="container net-grid">
-        <div class="net-copy">
-          <p class="section-tag">Hạ tầng mạng</p>
-          <h2>Đầu tư hạ tầng mạng liên tục<br>cho trải nghiệm điều khiển từ xa mượt mà</h2>
-          <p>Chúng tôi không ngừng đầu tư vào phần cứng và tuyến truyền dẫn cao cấp: băng thông ISP bản địa tại 9 quốc gia với tốc độ đối xứng 200Mbps–500Mbps+, kết hợp máy chủ chuyển tiếp tự vận hành và trục BGP doanh nghiệp giúp đưa tỷ lệ mất gói tin—kẻ thù lớn nhất của màn hình từ xa—về mức 0%.</p>
-          <ul class="net-chips"><li>Đối xứng 200–500Mbps+</li><li>Đường trục BGP doanh nghiệp</li><li>Trạm chuyển tiếp tự chủ</li><li>Tối ưu BBR hai chiều</li><li>Mã hóa phần cứng Apple Silicon</li><li>Bảo vệ danh sách cho phép</li></ul>
-          <p style="margin: 14px 0 0; font-size: .86rem; color: var(--muted);">Miễn phí đi kèm ở gói 20x, Team &amp; Business; thuê bao 1x / 5x có thể mua thêm <a href="#dedicated-line" style="color: var(--primary-strong); font-weight: 600; border-bottom: 1px dashed rgba(232, 144, 111, .5);">Đường truyền riêng Doanh nghiệp ClaudeOps (từ $5/tháng) ↓</a></p>
-        </div>
-        <div class="card net-card" aria-label="Độ trễ và tỷ lệ mất gói tin đo thực tế trước và sau khi tối ưu">
-          <div class="net-legend"><span class="lg before">Trước tối ưu</span><span class="lg after">Sau tối ưu</span></div>
-              <div class="net-row">
-                <div class="net-node"><strong>Nhật Bản</strong><span>Qua trục HK</span></div>
-                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:39.0%"></span><em>128–184ms · 10% loss</em></div><div class="nb after"><span class="nb-fill" style="--w:23.0%"></span><em>~92ms · 0% loss</em></div></div>
-              </div>
-              <div class="net-row">
-                <div class="net-node"><strong>Úc</strong><span>Qua trục HK</span></div>
-                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:91.2%"></span><em>343–386ms · 25–33% loss</em></div><div class="nb after"><span class="nb-fill" style="--w:60.0%"></span><em>~240ms · 0% loss</em></div></div>
-              </div>
-              <div class="net-row">
-                <div class="net-node"><strong>Campuchia</strong><span>Cáp đất liền trực tiếp</span></div>
-                <div class="net-bars"><div class="nb after"><span class="nb-fill" style="--w:20.2%"></span><em>~81ms · 0% loss</em></div></div>
-              </div>
-          <p class="net-foot">Đo lường từ thiết bị đầu cuối tại Đông Á, tháng 11/2026. Trải nghiệm thực tế có thể thay đổi tùy theo nhà mạng địa phương của bạn.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Security & Privacy -->
-    <section class="section" id="security">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Bảo mật &amp; Quyền riêng tư</p>
-          <h2>Cách ly hai cấp độ: tài khoản tách biệt và nguyên máy vật lý riêng</h2>
-          <p>Terminal của bạn chứa mã nguồn nội bộ, khóa API trong biến môi trường, cấu hình cơ sở dữ liệu và logic nghiệp vụ. Zaokit ClaudeOps áp dụng mô hình cách ly hai tầng: ở gói 1x / 5x, mỗi người dùng có một tài khoản macOS riêng biệt và chỉ truy cập qua Apple Screen Sharing; ở gói 20x, bạn có thể kích hoạt chế độ nguyên máy vật lý chuyên dụng, cách ly triệt để ngay từ tầng phần cứng.</p>
-        </div>
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-            <h3>Nguyên máy riêng 20x: cách ly cấp phần cứng</h3>
-            <p>Khi bật chế độ máy riêng, toàn bộ chiếc Mac Studio hoặc Mac mini cấu hình cao chỉ phục vụ duy nhất mình bạn. Toàn quyền cài đặt phần mềm, thay đổi cấu hình hệ thống và sử dụng bất kỳ công cụ điều khiển từ xa nào như RustDesk hay VNC bên thứ ba.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-            <h3>Cách ly tài khoản riêng biệt 1x / 5x</h3>
-            <p>Mỗi người dùng sở hữu một tài khoản macOS độc lập với tệp tin và phân quyền riêng, đảm bảo lịch sử làm việc và dự án luôn kín đáo. Truy cập được giới hạn qua Apple Screen Sharing nhằm tạo phiên màn hình độc lập cho từng tài khoản mà không ai khác có thể nhìn thấy.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
-            <h3>Bạn toàn quyền kiểm soát truy cập và mã hóa</h3>
-            <p>Tự thiết lập mật khẩu truy cập và chính sách mã hóa của riêng bạn. Đội ngũ chúng tôi chỉ phụ trách kết nối và thanh toán, tuyệt đối không chủ động truy cập dữ liệu trong tài khoản của bạn trừ trường hợp bảo trì, sự cố bảo mật hoặc hỗ trợ kỹ thuật khi được bạn cho phép.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- User Reviews -->
-    <section class="section section-alt" id="reviews">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Đánh giá thực tế</p>
-          <h2>Khách hàng thực tế nói gì về chúng tôi</h2>
-          <p>Để bảo vệ quyền riêng tư của khách hàng, tất cả đánh giá đều sử dụng ảnh đại diện minh họa và tên viết tắt ẩn danh, đồng thời giữ nguyên phản hồi thực tế cùng hạng gói đăng ký.</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#2b211c"/>
-                  <circle cx="32" cy="30" r="17" fill="#5c3627"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#d97757"/>
-                  <circle cx="32" cy="31" r="12" fill="#f7d5be"/>
-                  <path d="M19 29c0-9 6-14 13-14s13 5 13 14c-3-4-7-6-13-6s-10 2-13 6z" fill="#5c3627"/>
-                  <circle cx="27" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
-                  <circle cx="37" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
-                  <path d="M30.4 31h3.2" stroke="#3c2b24" stroke-width="1.4"/>
-                  <circle cx="27" cy="31" r="1.1" fill="#2b1e19"/>
-                  <circle cx="37" cy="31" r="1.1" fill="#2b1e19"/>
-                  <path d="M29 36.5c1.8 1.5 4.2 1.5 6 0" fill="none" stroke="#b85d43" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">M***</span>
-                  <span class="review-badge">Đã ẩn danh · Đã xác thực</span>
-                </div>
-                <div class="review-role">Trưởng nhóm Sản phẩm AI Quốc tế</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 trên 5 sao">★★★★★</div>
-            <p class="review-quote">&quot;Đường truyền doanh nghiệp sắc nét và mượt kinh ngạc—thậm chí còn rõ hơn cả ToDesk nội mạng của tôi. Gõ code và chuyển đổi cửa sổ gần như không có độ trễ. Nhanh, ổn định, đáng từng đồng—một trải nghiệm thực sự đẳng cấp.&quot;</p>
-            <div class="review-foot">
-              <span>Phản hồi tin nhắn xác thực</span>
-              <span class="review-plan">5x Pro</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#1b232c"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#3d6b8e"/>
-                  <circle cx="32" cy="31" r="12" fill="#f4cfb6"/>
-                  <path d="M19 28c1-9 6-14 13-14 8 0 13 5 13 14-2-4-6-6-11-6-5 0-10 2-15 6z" fill="#232830"/>
-                  <path d="M18 30v-3a14 14 0 0128 0v3" fill="none" stroke="#e8906f" stroke-width="2.2"/>
-                  <rect x="16" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
-                  <rect x="44" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
-                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1e2228"/>
-                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1e2228"/>
-                  <path d="M29 36.8c2 1.3 4 1.3 6 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">C***</span>
-                  <span class="review-badge">Đã ẩn danh · Đã xác thực</span>
-                </div>
-                <div class="review-role">Kỹ sư Full-Stack Cao cấp</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 trên 5 sao">★★★★★</div>
-            <p class="review-quote">&quot;Trước đây mạng ở nhà tôi rất hay rớt kết nối giữa chừng. Từ khi chuyển sang ClaudeOps 1x Tiêu chuẩn với không gian biệt lập và Claude Code chạy 24/7, cảm giác đúng nghĩa &#x27;lập trình viên thiên tài hồi sinh&#x27; 😂. Giờ chẳng còn phải đau đầu vì hóa đơn hay mạng mẽo nữa.&quot;</p>
-            <div class="review-foot">
-              <span>Phản hồi tin nhắn xác thực</span>
-              <span class="review-plan">1x Tiêu chuẩn</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#21261e"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#4f6d54"/>
-                  <circle cx="32" cy="31" r="12" fill="#efd0ba"/>
-                  <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-3-3-7-4-12-4s-9 1-12 4z" fill="#2d2622"/>
-                  <rect x="23" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
-                  <rect x="33.5" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
-                  <path d="M30.5 31h3" stroke="#2d2622" stroke-width="1.4"/>
-                  <circle cx="26.8" cy="31" r="1.1" fill="#231d19"/>
-                  <circle cx="37.2" cy="31" r="1.1" fill="#231d19"/>
-                  <path d="M29 37c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#9e5e4a" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">Kyle W.</span>
-                  <span class="review-badge">Đã ẩn danh · Đã xác thực</span>
-                </div>
-                <div class="review-role">Trưởng bộ phận R&amp;D Định lượng</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 trên 5 sao">★★★★★</div>
-            <p class="review-quote">&quot;Mạng ISP bản địa tại 9 quốc gia cùng khả năng cách ly cấp phần cứng đã thuyết phục hoàn toàn tôi. Mã nguồn thuật toán và khóa API nội bộ nằm gọn trên một chiếc Mac Studio chuyên dụng—vận hành liên tục nhiều tháng trời không một lần gián đoạn.&quot;</p>
-            <div class="review-foot">
-              <span>Nút Úc · Đã ẩn danh</span>
-              <span class="review-plan">20x Flagship</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#292118"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#c98a4b"/>
-                  <circle cx="32" cy="32" r="12" fill="#f5d3bc"/>
-                  <path d="M19 27c0-8 6-14 13-14s13 6 13 14z" fill="#e8906f"/>
-                  <rect x="18" y="25" width="28" height="4.5" rx="2.2" fill="#d97757"/>
-                  <circle cx="27.5" cy="32.5" r="1.3" fill="#231d19"/>
-                  <circle cx="36.5" cy="32.5" r="1.3" fill="#231d19"/>
-                  <path d="M29.5 37.5c1.7 1.2 3.3 1.2 5 0" fill="none" stroke="#a65f48" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">L***</span>
-                  <span class="review-badge">Đã ẩn danh · Đã xác thực</span>
-                </div>
-                <div class="review-role">Lập trình viên Độc lập</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 trên 5 sao">★★★★★</div>
-            <p class="review-quote">&quot;Bàn giao ngay trong ngày sau khi thanh toán qua Stripe. Tài khoản macOS biệt lập đã được cài sẵn Claude Code và trọn bộ công cụ lập trình. Cực kỳ tiết kiệm thời gian nếu bạn không muốn vật lộn với cấu hình môi trường hay thanh toán xuyên biên giới.&quot;</p>
-            <div class="review-foot">
-              <span>Nút Tokyo · Đã ẩn danh</span>
-              <span class="review-plan">1x Tiêu chuẩn</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#271e26"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#8b5e83"/>
-                  <circle cx="32" cy="31" r="15" fill="#3a2835"/>
-                  <circle cx="32" cy="31" r="11.5" fill="#f7d6c1"/>
-                  <path d="M20 29c1-8 6-13 12-13s11 5 12 13c-3-4-7-5-12-5s-9 1-12 5z" fill="#3a2835"/>
-                  <circle cx="27.5" cy="31.5" r="1.2" fill="#281d25"/>
-                  <circle cx="36.5" cy="31.5" r="1.2" fill="#281d25"/>
-                  <path d="M29 36.5c1.8 1.4 4.2 1.4 6 0" fill="none" stroke="#b55d52" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">Sarah C.</span>
-                  <span class="review-badge">Đã ẩn danh · Đã xác thực</span>
-                </div>
-                <div class="review-role">Đối tác Tư vấn Quản trị</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 trên 5 sao">★★★★★</div>
-            <p class="review-quote">&quot;Tôi không rành vận hành hệ thống và cũng ngại đụng vào dòng lệnh CLI. Nhờ hỗ trợ 1-kèm-1 7×16h kết hợp đồng bộ Google Drive trọn gói, mỗi khi đi công tác tôi có thể kết nối từ bất kỳ thiết bị nào và làm tiếp công việc ngay lập tức.&quot;</p>
-            <div class="review-foot">
-              <span>Nút Singapore · Đã ẩn danh</span>
-              <span class="review-plan">5x Pro</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#1e222a"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#5e6b85"/>
-                  <circle cx="32" cy="31" r="12" fill="#f2ccb2"/>
-                  <path d="M20 27c2-7 6-11 12-11s10 4 12 11c-4-2-8-3-12-3s-8 1-12 3z" fill="#1f232b"/>
-                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1f232b"/>
-                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1f232b"/>
-                  <path d="M28.5 36.2c2.2 1.8 4.8 1.8 7 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">A***</span>
-                  <span class="review-badge">Đã ẩn danh · Đã xác thực</span>
-                </div>
-                <div class="review-role">Giám đốc Kỹ thuật Thương mại Điện tử</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 trên 5 sao">★★★★★</div>
-            <p class="review-quote">&quot;Các kỹ sư chủ chốt của chúng tôi treo tác vụ refactor đa tác tử (multi-agent) và chạy bộ kiểm thử xuyên đêm, sáng hôm sau chỉ việc duyệt các PR sạch đẹp. Screen Sharing bản địa cực nét, còn hỗ trợ qua Telegram của Jason thì phản hồi gần như tức thì.&quot;</p>
-            <div class="review-foot">
-              <span>Phản hồi qua Telegram</span>
-              <span class="review-plan">20x Flagship</span>
-            </div>
-          </article>
-        </div>
-        <p class="reviews-note">* Nhằm bảo vệ nghiêm ngặt quyền riêng tư và an toàn dữ liệu khách hàng, toàn bộ đánh giá trên trang đều hiển thị bằng ảnh đại diện minh họa và tên viết tắt ẩn danh.</p>
-      </div>
-    </section>
-
-    <!-- Pricing -->
+    <!-- Floor 3: Focused Pricing & Decision Center -->
     <section class="section" id="pricing">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">Bảng giá</p>
           <h2>Linh hoạt từ cá nhân đến doanh nghiệp.</h2>
-          <p>Mở rộng linh hoạt từ không gian cá nhân đến cụm nhiều máy Mac chuyên dụng. <strong>Thanh toán theo năm chỉ tính phí 10 tháng, tặng ngay 2 tháng miễn phí</strong>.<a class="enterprise-jump" href="#dedicated-line">Đường truyền riêng ↓</a><a class="enterprise-jump" href="#pricing-enterprise">Team &amp; Business ↓</a></p>
+          <p>Mở rộng linh hoạt từ không gian cá nhân đến cụm nhiều máy Mac chuyên dụng. <strong>Thanh toán theo năm chỉ tính phí 10 tháng, tặng ngay 2 tháng miễn phí</strong>.</p>
         </div>
+
+        <!-- 3-Second Scenario Quick-Finder -->
+        <div class="quick-finder" role="group" aria-label="Chọn nhanh 3 giây · Chọn nhu cầu của bạn:">
+          <span class="qf-label">✦ Chọn nhanh 3 giây · Chọn nhu cầu của bạn:</span>
+            <button type="button" class="qf-btn" data-scenario="solo-dev">Solo daily coding &amp; shipping</button>
+            <button type="button" class="qf-btn" data-scenario="solo-max">24/7 multi-agent / Dedicated Mac</button>
+            <button type="button" class="qf-btn" data-scenario="team-rd">3–10 person engineering team</button>
+            <button type="button" class="qf-btn" data-scenario="ent-custom">15+ seat custom enterprise cluster</button>
+        </div>
+        <div class="finder-tip" id="finder-tip" role="status" aria-live="polite" hidden>
+          <span id="finder-tip-text"></span>
+          <button type="button" class="finder-tip-close" id="finder-tip-close" aria-label="Close">×</button>
+        </div>
+
+        <!-- Primary Audience Segmented Tabs: Individual vs Team/Enterprise -->
+        <div class="audience-tabs" role="tablist">
+          <button type="button" class="aud-tab" role="tab" id="tab-btn-solo" data-audience-tab="solo" aria-selected="true" aria-controls="panel-solo">
+            <span class="aud-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0114 0"/></svg>
+            </span>
+            <span class="aud-txt">
+              <strong>Cá nhân / Nhà phát triển</strong>
+              <span>1 người dùng · 3 gói rõ ràng</span>
+            </span>
+          </button>
+          <button type="button" class="aud-tab" role="tab" id="tab-btn-ent" data-audience-tab="enterprise" aria-selected="false" aria-controls="pricing-enterprise">
+            <span class="aud-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h2m4 0h2M8 13h2m4 0h2M10 20v-3h4v3"/></svg>
+            </span>
+            <span class="aud-txt">
+              <strong>Nhóm &amp; Doanh nghiệp</strong>
+              <span>5–100+ chỗ · Mac vật lý riêng · Hóa đơn gộp</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Unified Billing Cycle & Currency Switcher -->
         <div class="pricing-controls">
           <div class="billing-switch" role="group" aria-label="Chọn chu kỳ thanh toán">
             <button type="button" data-billing="month" aria-pressed="true">Hàng tháng</button>
@@ -1518,264 +1480,322 @@
             <button type="button" data-currency="CNY" aria-pressed="false">¥ CNY</button>
           </div>
         </div>
-        <div class="grid grid-3 pricing pricing-solo">
-          <article class="card plan">
-            <div class="plan-tier"><b>1x</b><span>Tiêu chuẩn</span></div>
-            <p class="plan-desc">Phù hợp cho trò chuyện hàng ngày, viết lách và lập trình nhẹ với Claude ổn định.</p>
-            <div class="price" data-plan-idx="0"><sup>$</sup><span class="amount">99</span><small data-period>/ tháng</small><del class="price-orig" data-orig-idx="0" style="display:none"></del></div>
-            <p class="price-note" data-note-idx="0">Bao gồm môi trường Claude · khoảng $3.3 / ngày</p>
-            <ul class="features">
-              <li>Hạn mức sử dụng cơ bản</li>
-              <li>Cấu hình không gian làm việc chuyên biệt</li>
-              <li>Môi trường vật lý Mac mini</li>
-              <li>Quản lý trọn gói thanh toán thuê bao &amp; vận hành</li>
-              <li>Sẵn sàng cho Claude Code</li>
-              <li>Hỗ trợ chuyên biệt 1-kèm-1 <strong>7×8h</strong></li>
-              <li>Tài khoản macOS riêng · Truy cập qua Apple Screen Sharing</li>
-            </ul>
-            <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i" target="_blank" rel="noopener">Đăng ký ngay</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20Zaokit%20ClaudeOps%20-%201x%20Ti%C3%AAu%20chu%E1%BA%A9n">Cần tư vấn? Gửi email →</a>
-          </article>
 
-          <article class="card plan featured">
-            <span class="badge">Phổ biến nhất</span>
-            <div class="plan-tier"><b>5x</b><span>Pro</span></div>
-            <p class="plan-desc">Dành cho lập trình viên và nhà sáng tạo sử dụng Claude Code cường độ cao mỗi ngày.</p>
-            <div class="price" data-plan-idx="1"><sup>$</sup><span class="amount">399</span><small data-period>/ tháng</small><del class="price-orig" data-orig-idx="1" style="display:none"></del></div>
-            <p class="price-note" data-note-idx="1">Bao gồm môi trường Claude · hạn mức 5x, đơn giá ~81% so với 1x</p>
-            <ul class="features">
-              <li>Gấp 5 lần hạn mức gói Tiêu chuẩn</li>
-              <li>Cấu hình không gian làm việc chuyên biệt</li>
-              <li>Môi trường vật lý Mac mini cấu hình cao</li>
-              <li>Quản lý trọn gói thanh toán thuê bao &amp; vận hành</li>
-              <li>Dư dả tài nguyên cho tác vụ Claude Code dài hơi</li>
-              <li>Hỗ trợ ưu tiên 1-kèm-1 <strong>7×16h</strong></li>
-              <li>Tài khoản macOS riêng · Truy cập qua Apple Screen Sharing</li>
-            </ul>
-            <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/dRmcN7cqt5IO7PE3FA9Zm0o" target="_blank" rel="noopener">Đăng ký ngay</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20Zaokit%20ClaudeOps%20-%205x%20Pro">Cần tư vấn? Gửi email →</a>
-          </article>
+        <!-- Panel 1: Individual Plans (1x / 5x / 20x + Collapsible Dedicated Line) -->
+        <div class="pricing-panel" id="panel-solo" role="tabpanel" aria-labelledby="tab-btn-solo">
+          <div class="grid grid-3 pricing pricing-solo">
+            <article class="card plan" data-plan-card="1x">
+              <div class="plan-tier"><b>1x</b><span>Tiêu chuẩn</span></div>
+              <div class="plan-fit">Phù hợp cho trò chuyện hàng ngày, viết lách và lập trình nhẹ với Claude ổn định.</div>
+              <p class="plan-desc">Phù hợp cho trò chuyện hàng ngày, viết lách và lập trình nhẹ với Claude ổn định.</p>
+              <div class="price" data-plan-idx="0"><sup>$</sup><span class="amount">99</span><small data-period>/ tháng</small><del class="price-orig" data-orig-idx="0" style="display:none"></del></div>
+              <p class="price-note" data-note-idx="0">Bao gồm môi trường Claude · khoảng $3.3 / ngày</p>
+              <ul class="features">
+                <li>Hạn mức sử dụng cơ bản</li>
+                <li>Cấu hình không gian làm việc chuyên biệt</li>
+                <li>Môi trường vật lý Mac mini</li>
+                <li>Quản lý trọn gói thanh toán thuê bao &amp; vận hành</li>
+                <li>Sẵn sàng cho Claude Code</li>
+                <li>Hỗ trợ chuyên biệt 1-kèm-1 <strong>7×8h</strong></li>
+                <li>Tài khoản macOS riêng · Truy cập qua Apple Screen Sharing</li>
+              </ul>
+              <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i" target="_blank" rel="noopener">Đăng ký ngay</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20Zaokit%20ClaudeOps%20-%201x%20Ti%C3%AAu%20chu%E1%BA%A9n">Cần tư vấn? Gửi email →</a>
+            </article>
 
-          <article class="card plan">
-            <span class="badge badge-promo">Ưu đãi Cuối năm · Đến 31/12/2026</span>
-            <div class="plan-tier"><b>20x</b><span>Ultimate</span></div>
-            <p class="plan-desc">Dành cho nhà phát triển chuyên sâu, founder và power user chạy đa tác tử suốt ngày đêm.</p>
-            <div class="price" data-plan-idx="2"><sup>$</sup><span class="amount">699</span><small data-period>/ tháng</small><del class="price-orig" data-orig-idx="2" data-orig-20x title="Giá hàng tháng thông thường">$999</del></div>
-            <p class="price-note" data-note-idx="2">Giữ nguyên giá ưu đãi khi gia hạn · đơn giá ~35% so với 1x</p>
-            <ul class="features">
-              <li>Gấp 20 lần hạn mức gói Tiêu chuẩn</li>
-              <li>Cấu hình không gian làm việc chuyên biệt</li>
-              <li>Mac Studio / Mac mini cấu hình cao · Tùy chọn nguyên máy riêng</li>
-              <li>Quản lý trọn gói thanh toán thuê bao &amp; vận hành</li>
-              <li>Chạy đa tác tử (multi-agent) và tác vụ song song</li>
-              <li>Kênh cố vấn riêng tư <strong>cao cấp nhất 7×24h</strong></li>
-              <li style="color: var(--primary-strong); font-weight: 600;">Tặng kèm kênh RustDesk tốc độ cao riêng</li>
-              <li style="color: var(--primary-strong); font-weight: 600;">Tặng kèm 6 TB lưu trữ đám mây Google Drive</li>
-            </ul>
-            <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/7sYcN71LP1sy6LAeke9Zm1m" target="_blank" rel="noopener">Đăng ký ngay</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20Zaokit%20ClaudeOps%20-%2020x%20Ultimate">Cần tư vấn? Gửi email →</a>
-          </article>
-        </div>
+            <article class="card plan featured" data-plan-card="5x">
+              <span class="badge">Phổ biến nhất</span>
+              <div class="plan-tier"><b>5x</b><span>Pro</span></div>
+              <div class="plan-fit">Dành cho lập trình viên và nhà sáng tạo sử dụng Claude Code cường độ cao mỗi ngày.</div>
+              <p class="plan-desc">Dành cho lập trình viên và nhà sáng tạo sử dụng Claude Code cường độ cao mỗi ngày.</p>
+              <div class="price" data-plan-idx="1"><sup>$</sup><span class="amount">399</span><small data-period>/ tháng</small><del class="price-orig" data-orig-idx="1" style="display:none"></del></div>
+              <p class="price-note" data-note-idx="1">Bao gồm môi trường Claude · hạn mức 5x, đơn giá ~81% so với 1x</p>
+              <ul class="features">
+                <li>Gấp 5 lần hạn mức gói Tiêu chuẩn</li>
+                <li>Cấu hình không gian làm việc chuyên biệt</li>
+                <li>Môi trường vật lý Mac mini cấu hình cao</li>
+                <li>Quản lý trọn gói thanh toán thuê bao &amp; vận hành</li>
+                <li>Dư dả tài nguyên cho tác vụ Claude Code dài hơi</li>
+                <li>Hỗ trợ ưu tiên 1-kèm-1 <strong>7×16h</strong></li>
+                <li>Tài khoản macOS riêng · Truy cập qua Apple Screen Sharing</li>
+              </ul>
+              <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/dRmcN7cqt5IO7PE3FA9Zm0o" target="_blank" rel="noopener">Đăng ký ngay</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20Zaokit%20ClaudeOps%20-%205x%20Pro">Cần tư vấn? Gửi email →</a>
+            </article>
 
-        <!-- ClaudeOps Enterprise Dedicated Line Value-Added Service -->
-        <div class="seat-addons line-addons" id="dedicated-line">
-          <div class="seat-addons-head">
-            <h3>Đường Truyền Riêng Doanh Nghiệp ClaudeOps · Tăng Tốc Xuyên Biên Giới <span class="addon-pill">Miễn phí ở gói 20x / Team / Business</span></h3>
-            <p>Tiện ích mở rộng tùy chọn cho thuê bao 1x &amp; 5x: định tuyến lưu lượng qua trục xương sống BGP doanh nghiệp xuyên biên giới kết hợp tăng tốc BBR hai chiều 0% mất gói tin, mang lại trải nghiệm Screen Sharing &amp; Claude Code siêu nhạy (thanh toán năm được tặng 2 tháng).</p>
+            <article class="card plan" data-plan-card="20x">
+              <span class="badge badge-promo">Ưu đãi Cuối năm · Đến 31/12/2026</span>
+              <div class="plan-tier"><b>20x</b><span>Ultimate</span></div>
+              <div class="plan-fit">Dành cho nhà phát triển chuyên sâu, founder và power user chạy đa tác tử suốt ngày đêm.</div>
+              <p class="plan-desc">Dành cho nhà phát triển chuyên sâu, founder và power user chạy đa tác tử suốt ngày đêm.</p>
+              <div class="price" data-plan-idx="2"><sup>$</sup><span class="amount">699</span><small data-period>/ tháng</small><del class="price-orig" data-orig-idx="2" data-orig-20x title="Giá hàng tháng thông thường">$999</del></div>
+              <p class="price-note" data-note-idx="2">Giữ nguyên giá ưu đãi khi gia hạn · đơn giá ~35% so với 1x</p>
+              <ul class="features">
+                <li>Gấp 20 lần hạn mức gói Tiêu chuẩn</li>
+                <li>Cấu hình không gian làm việc chuyên biệt</li>
+                <li>Mac Studio / Mac mini cấu hình cao · Tùy chọn nguyên máy riêng</li>
+                <li>Quản lý trọn gói thanh toán thuê bao &amp; vận hành</li>
+                <li>Chạy đa tác tử (multi-agent) và tác vụ song song</li>
+                <li>Kênh cố vấn riêng tư <strong>cao cấp nhất 7×24h</strong></li>
+                <li style="color: var(--primary-strong); font-weight: 600;">Tặng kèm kênh RustDesk tốc độ cao riêng</li>
+                <li style="color: var(--primary-strong); font-weight: 600;">Tặng kèm 6 TB lưu trữ đám mây Google Drive</li>
+              </ul>
+              <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/7sYcN71LP1sy6LAeke9Zm1m" target="_blank" rel="noopener">Đăng ký ngay</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20Zaokit%20ClaudeOps%20-%2020x%20Ultimate">Cần tư vấn? Gửi email →</a>
+            </article>
           </div>
-          <div class="line-grid">
-            <div class="addon-card">
-              <div>
-                <div class="addon-route"><code>Đường truyền riêng 1x</code> <span>Tăng tốc Tiêu chuẩn · Cho gói 1x Tiêu chuẩn</span></div>
-                <p class="addon-desc">Trục BGP doanh nghiệp xuyên biên giới + trạm chuyển tiếp mã hóa độ trễ thấp tự vận hành + tối ưu BBR hai chiều, giữ cho các phiên Apple Screen Sharing, SSH &amp; Claude Code hàng ngày luôn mượt mà ngay cả giờ cao điểm.</p>
-              </div>
-              <div class="addon-foot">
-                <div class="line-price-wrap">
-                  <div class="addon-price" data-line-idx="0">+<sup>$</sup><span class="amount">5</span><small data-line-period>/ tháng</small><del class="line-orig" data-line-orig="0" style="display:none"></del></div>
-                  <span class="line-subnote" data-line-note="0">Tăng tốc BGP 24/7 không mất gói · Quản lý theo gói chính</span>
+
+          <details class="addon-drawer" id="dedicated-line">
+            <summary>
+              <span class="drawer-sum-left">
+                <span class="drawer-ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>
+                </span>
+                <span class="drawer-titles">
+                  <span class="drawer-title-row">
+                    <strong>Đường Truyền Riêng Doanh Nghiệp ClaudeOps · Tăng Tốc Xuyên Biên Giới</strong>
+                    <span class="drawer-pill">Miễn phí ở gói 20x / Team / Business</span>
+                  </span>
+                  <span class="drawer-hint">Tiện ích mở rộng tùy chọn cho thuê bao 1x &amp; 5x: định tuyến lưu lượng qua trục xương sống BGP doanh nghiệp xuyên biên giới kết hợp tăng tốc BBR hai chiều 0% mất gói tin, mang lại trải nghiệm Screen Sharing &amp; Claude Code siêu nhạy (thanh toán năm được tặng 2 tháng).</span>
+                </span>
+              </span>
+              <span class="drawer-toggle-pill"><span class="when-closed">Xem tùy chọn</span><span class="when-open">Thu gọn</span> <i>▾</i></span>
+            </summary>
+            <div class="drawer-body">
+              <p class="drawer-body-lead">Tiện ích mở rộng tùy chọn cho thuê bao 1x &amp; 5x: định tuyến lưu lượng qua trục xương sống BGP doanh nghiệp xuyên biên giới kết hợp tăng tốc BBR hai chiều 0% mất gói tin, mang lại trải nghiệm Screen Sharing &amp; Claude Code siêu nhạy (thanh toán năm được tặng 2 tháng).</p>
+              <div class="line-grid">
+                <div class="addon-card">
+                  <div>
+                    <div class="addon-route"><code>Đường truyền riêng 1x</code> <span>Tăng tốc Tiêu chuẩn · Cho gói 1x Tiêu chuẩn</span></div>
+                    <p class="addon-desc">Trục BGP doanh nghiệp xuyên biên giới + trạm chuyển tiếp mã hóa độ trễ thấp tự vận hành + tối ưu BBR hai chiều, giữ cho các phiên Apple Screen Sharing, SSH &amp; Claude Code hàng ngày luôn mượt mà ngay cả giờ cao điểm.</p>
+                  </div>
+                  <div class="addon-foot">
+                    <div class="line-price-wrap">
+                      <div class="addon-price" data-line-idx="0">+<sup>$</sup><span class="amount">5</span><small data-line-period>/ tháng</small><del class="line-orig" data-line-orig="0" style="display:none"></del></div>
+                      <span class="line-subnote" data-line-note="0">Tăng tốc BGP 24/7 không mất gói · Quản lý theo gói chính</span>
+                    </div>
+                    <a class="addon-btn" data-line-tier="line_1x" href="https://buy.stripe.com/dRm4gBfCFc7c2vk2Bw9Zn0i" target="_blank" rel="noopener">Thêm tuyến 1x →</a>
+                  </div>
                 </div>
-                <a class="addon-btn" data-line-tier="line_1x" href="https://buy.stripe.com/dRm4gBfCFc7c2vk2Bw9Zn0i" target="_blank" rel="noopener">Thêm tuyến 1x →</a>
+                <div class="addon-card addon-card-featured">
+                  <div>
+                    <div class="addon-route"><code class="to">Đường truyền riêng 5x</code> <span>Tăng tốc Pro · Cho gói 5x Pro (đơn giá tiết kiệm hơn 20%)</span></div>
+                    <p class="addon-desc">Gấp 5× hạn mức băng thông ưu tiên + hàng đợi QoS BGP doanh nghiệp ưu tiên cao + cam kết 0% mất gói BBR hai chiều, thiết kế riêng cho phiên Claude Code thời gian thực nặng, đồng bộ repo lớn &amp; màn hình từ xa FPS cao.</p>
+                  </div>
+                  <div class="addon-foot">
+                    <div class="line-price-wrap">
+                      <div class="addon-price" data-line-idx="1">+<sup>$</sup><span class="amount">20</span><small data-line-period>/ tháng</small><del class="line-orig" data-line-orig="1" style="display:none"></del></div>
+                      <span class="line-subnote" data-line-note="1">Băng thông ưu tiên 5× · Hàng đợi QoS BGP cao cấp</span>
+                    </div>
+                    <a class="addon-btn addon-btn-primary" data-line-tier="line_5x" href="https://buy.stripe.com/4gMcN7769dbg4Ds6RM9Zn0v" target="_blank" rel="noopener">Thêm tuyến 5x →</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="addon-card addon-card-featured">
-              <div>
-                <div class="addon-route"><code class="to">Đường truyền riêng 5x</code> <span>Tăng tốc Pro · Cho gói 5x Pro (đơn giá tiết kiệm hơn 20%)</span></div>
-                <p class="addon-desc">Gấp 5× hạn mức băng thông ưu tiên + hàng đợi QoS BGP doanh nghiệp ưu tiên cao + cam kết 0% mất gói BBR hai chiều, thiết kế riêng cho phiên Claude Code thời gian thực nặng, đồng bộ repo lớn &amp; màn hình từ xa FPS cao.</p>
-              </div>
-              <div class="addon-foot">
-                <div class="line-price-wrap">
-                  <div class="addon-price" data-line-idx="1">+<sup>$</sup><span class="amount">20</span><small data-line-period>/ tháng</small><del class="line-orig" data-line-orig="1" style="display:none"></del></div>
-                  <span class="line-subnote" data-line-note="1">Băng thông ưu tiên 5× · Hàng đợi QoS BGP cao cấp</span>
-                </div>
-                <a class="addon-btn addon-btn-primary" data-line-tier="line_5x" href="https://buy.stripe.com/4gMcN7769dbg4Ds6RM9Zn0v" target="_blank" rel="noopener">Thêm tuyến 5x →</a>
-              </div>
-            </div>
-          </div>
+          </details>
         </div>
 
-        <!-- Team & Business Plans -->
-        <div class="enterprise-wrap" id="pricing-enterprise">
-          <div class="tier-divider"><span>Team &amp; Business · Cụm Máy Nhiều Chỗ Ngồi Chuyên Dụng</span></div>
-          <div class="enterprise-toolbar">
+        <!-- Panel 2: Team & Enterprise Clusters (Team 5 / Business 10 / Custom 15+ + Collapsible Seat Upgrades) -->
+        <div class="pricing-panel enterprise-wrap" id="pricing-enterprise" role="tabpanel" aria-labelledby="tab-btn-ent" hidden>
+          <div class="ent-step-bar">
+            <span class="ent-step-title">Step 1: Choose default per-seat compute tier</span>
             <div class="seat-tier-switch" role="group" aria-label="Chọn hạng chỗ ngồi cho nhóm">
               <button type="button" data-seat-tier="pro" aria-pressed="false">Toàn bộ ghế Pro (1x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">Toàn bộ ghế Max (5x) <span class="save-badge">Khuyên dùng</span></button>
               <button type="button" data-seat-tier="ultra" aria-pressed="false">Toàn bộ ghế Ultra (20x)</button>
             </div>
-            <p>Bắt đầu với các ghế đồng nhất Pro, Max hoặc Ultra — hoặc linh hoạt kết hợp bất cứ lúc nào nhờ <strong>gói nâng cấp từng ghế</strong> tự phục vụ bên dưới.</p>
           </div>
-          <div class="grid grid-2 pricing pricing-enterprise">
-            <article class="card plan">
-              <span class="badge badge-team" data-ent-badge="team">5 × Ghế Max (5x) · Máy Chủ Riêng</span>
-              <div class="plan-tier"><b>Team</b><span data-ent-sub="team">5 Thành viên</span></div>
-              <p class="plan-desc">Thiết kế cho nhóm startup, studio AI và nhóm nghiên cứu — một máy chủ vật lý Mac dành riêng cho đội ngũ của bạn với hóa đơn tập trung &amp; quyền quản trị.</p>
-              <div class="price" data-ent-price="team"><sup>$</sup><span class="amount">2,199</span><small data-period>/ tháng</small><del class="price-orig" data-ent-orig="team" style="display:none"></del></div>
-              <p class="price-note" data-ent-note="team">Bao gồm 5 ghế Max (5x) biệt lập · Máy chủ Mac riêng &amp; hóa đơn gộp</p>
-              <ul class="features">
-                <li data-ent-seat-li="team">Bao gồm <strong>5 ghế kỹ thuật Max (5x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)</li>
-                <li><strong>Máy chủ Mac Studio / Mac mini cấu hình cao chuyên dụng</strong> dành riêng cho nhóm của bạn</li>
-                <li>Linh hoạt cấp phát lại ghế thuộc sở hữu tổ chức khi thay đổi nhân sự &amp; <strong>một hóa đơn tổng hợp duy nhất</strong></li>
-                <li>Nâng cấp từng ghế lẻ lên Max (5x) hoặc Ultra (20x) theo nhu cầu bất kỳ lúc nào</li>
-                <li>Kênh nhóm cố vấn riêng cho đội ngũ <strong>7×24h</strong></li>
-                <li style="color: var(--primary-strong); font-weight: 600;">Tặng kèm kênh RustDesk tốc độ cao riêng cho nhóm</li>
-                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Tặng kèm 12 TB lưu trữ đám mây nhóm (Google Drive / iCloud+)</li>
-              </ul>
-              <a class="btn btn-ghost" data-ent-btn="team" href="https://buy.stripe.com/5kQ7sN2PT1sy7PE0to9Zm2A" target="_blank" rel="noopener">Đăng ký gói Team</a>
-              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20Zaokit%20ClaudeOps%20-%20G%C3%B3i%20Team">Cần thêm ghế hoặc cấu hình riêng? Liên hệ ngay →</a>
-            </article>
+          <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
+          <div class="grid grid-3 pricing pricing-enterprise">
+              <article class="card plan" data-plan-card="team">
+                <span class="badge badge-team" data-ent-badge="team">5 × Ghế Max (5x) · Máy Chủ Riêng</span>
+                <div class="plan-tier"><b>Team</b><span data-ent-sub="team">5 Thành viên</span></div>
+                <div class="plan-fit">5 Thành viên</div>
+                <p class="plan-desc">Thiết kế cho nhóm startup, studio AI và nhóm nghiên cứu — một máy chủ vật lý Mac dành riêng cho đội ngũ của bạn với hóa đơn tập trung &amp; quyền quản trị.</p>
+                <div class="price" data-ent-price="team"><sup>$</sup><span class="amount">2,199</span><small data-period>/ tháng</small><del class="price-orig" data-ent-orig="team" style="display:none"></del></div>
+                <p class="price-note" data-ent-note="team">Bao gồm 5 ghế Max (5x) biệt lập · Máy chủ Mac riêng &amp; hóa đơn gộp</p>
+                <ul class="features">
+                  <li data-ent-seat-li="team">Bao gồm <strong>5 ghế kỹ thuật Max (5x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)</li>
+                  <li><strong>Máy chủ Mac Studio / Mac mini cấu hình cao chuyên dụng</strong> dành riêng cho nhóm của bạn</li>
+                  <li>Linh hoạt cấp phát lại ghế thuộc sở hữu tổ chức khi thay đổi nhân sự &amp; <strong>một hóa đơn tổng hợp duy nhất</strong></li>
+                  <li>Nâng cấp từng ghế lẻ lên Max (5x) hoặc Ultra (20x) theo nhu cầu bất kỳ lúc nào</li>
+                  <li>Kênh nhóm cố vấn riêng cho đội ngũ <strong>7×24h</strong></li>
+                  <li style="color: var(--primary-strong); font-weight: 600;">Tặng kèm kênh RustDesk tốc độ cao riêng cho nhóm</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Tặng kèm 12 TB lưu trữ đám mây nhóm (Google Drive / iCloud+)</li>
+                </ul>
+                <a class="btn btn-ghost" data-ent-btn="team" href="https://buy.stripe.com/5kQ7sN2PT1sy7PE0to9Zm2A" target="_blank" rel="noopener">Đăng ký gói Team</a>
+                <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20Zaokit%20ClaudeOps%20-%20G%C3%B3i%20Team">Cần thêm ghế hoặc cấu hình riêng? Liên hệ ngay →</a>
+              </article>
 
-            <article class="card plan plan-business">
-              <span class="badge" data-ent-badge="biz">Enterprise · Cụm 10 × Ghế Max (5x)</span>
-              <div class="plan-tier"><b>Business</b><span data-ent-sub="biz">10 Thành viên</span></div>
-              <p class="plan-desc">Dành cho công ty công nghệ đang tăng trưởng, quỹ định lượng &amp; khối kỹ thuật — cụm nhiều máy vật lý Mac chuyên dụng hỗ trợ triển khai kép đa vùng tại 9 quốc gia.</p>
-              <div class="price" data-ent-price="biz"><sup>$</sup><span class="amount">4,499</span><small data-period>/ tháng</small><del class="price-orig" data-ent-orig="biz" style="display:none"></del></div>
-              <p class="price-note" data-ent-note="biz">Bao gồm 10 ghế Max (5x) biệt lập · Cụm nhiều máy Mac riêng &amp; SLA VIP</p>
-              <ul class="features">
-                <li data-ent-seat-li="biz">Bao gồm <strong>10 ghế kỹ thuật Max (5x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)</li>
-                <li><strong>Cụm nhiều máy vật lý Mac Studio / Mac mini chuyên dụng</strong></li>
-                <li>Hỗ trợ <strong>triển khai song song hai khu vực &amp; di chuyển nhanh trên 9 quốc gia</strong> + IP ISP bản địa tĩnh riêng</li>
-                <li>Hóa đơn thương mại tổng hợp &amp; Quản lý Thành công Khách hàng (CSM) chuyên trách</li>
-                <li><strong>Kênh SLA VIP doanh nghiệp cao cấp 7×24h</strong> (ưu tiên vận hành &amp; tư vấn kiến trúc)</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">Tặng kèm tuyến relay RustDesk doanh nghiệp chuyên dụng</li>
-                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">Tặng kèm 30 TB lưu trữ đám mây doanh nghiệp (Google Drive / iCloud+)</li>
-              </ul>
-              <a class="btn btn-primary" data-ent-btn="biz" href="https://buy.stripe.com/4gM8wR8ad4EKgma3FA9Zm3h" target="_blank" rel="noopener">Đăng ký gói Business</a>
-              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20Zaokit%20ClaudeOps%20-%20G%C3%B3i%20Business">Từ 20+ ghế hoặc cụm máy riêng tùy chỉnh? Liên hệ bộ phận doanh nghiệp →</a>
-            </article>
+              <article class="card plan plan-business" data-plan-card="biz">
+                <span class="badge" data-ent-badge="biz">Enterprise · Cụm 10 × Ghế Max (5x)</span>
+                <div class="plan-tier"><b>Business</b><span data-ent-sub="biz">10 Thành viên</span></div>
+                <div class="plan-fit">10 Thành viên</div>
+                <p class="plan-desc">Dành cho công ty công nghệ đang tăng trưởng, quỹ định lượng &amp; khối kỹ thuật — cụm nhiều máy vật lý Mac chuyên dụng hỗ trợ triển khai kép đa vùng tại 9 quốc gia.</p>
+                <div class="price" data-ent-price="biz"><sup>$</sup><span class="amount">4,499</span><small data-period>/ tháng</small><del class="price-orig" data-ent-orig="biz" style="display:none"></del></div>
+                <p class="price-note" data-ent-note="biz">Bao gồm 10 ghế Max (5x) biệt lập · Cụm nhiều máy Mac riêng &amp; SLA VIP</p>
+                <ul class="features">
+                  <li data-ent-seat-li="biz">Bao gồm <strong>10 ghế kỹ thuật Max (5x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)</li>
+                  <li><strong>Cụm nhiều máy vật lý Mac Studio / Mac mini chuyên dụng</strong></li>
+                  <li>Hỗ trợ <strong>triển khai song song hai khu vực &amp; di chuyển nhanh trên 9 quốc gia</strong> + IP ISP bản địa tĩnh riêng</li>
+                  <li>Hóa đơn thương mại tổng hợp &amp; Quản lý Thành công Khách hàng (CSM) chuyên trách</li>
+                  <li><strong>Kênh SLA VIP doanh nghiệp cao cấp 7×24h</strong> (ưu tiên vận hành &amp; tư vấn kiến trúc)</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;">Tặng kèm tuyến relay RustDesk doanh nghiệp chuyên dụng</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">Tặng kèm 30 TB lưu trữ đám mây doanh nghiệp (Google Drive / iCloud+)</li>
+                </ul>
+                <a class="btn btn-primary" data-ent-btn="biz" href="https://buy.stripe.com/4gM8wR8ad4EKgma3FA9Zm3h" target="_blank" rel="noopener">Đăng ký gói Business</a>
+                <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20Zaokit%20ClaudeOps%20-%20G%C3%B3i%20Business">Từ 20+ ghế hoặc cụm máy riêng tùy chỉnh? Liên hệ bộ phận doanh nghiệp →</a>
+              </article>
+
+              <article class="card plan plan-custom" data-plan-card="custom">
+                <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
+                <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
+                <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <div class="price price-custom">Tùy chỉnh</div>
+                <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
+                <ul class="features">
+                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
+                  <li>Dedicated static native business ISP &amp; private relay gateway</li>
+                  <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
+                  <li>7×24h dedicated enterprise engineering concierge channel</li>
+                </ul>
+                <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20Custom%20Enterprise%20Cluster%20Enquiry%20%2815%2B%20Seats%29">Liên hệ cố vấn doanh nghiệp →</a>
+                <span class="plan-consult">Same-day response · Free cluster sizing &amp; quote</span>
+              </article>
           </div>
 
-          <!-- Per-Seat Self-Serve Upgrade Add-ons -->
-          <div class="seat-addons">
-            <div class="seat-addons-head">
-              <h3>Tiện Ích Nâng Cấp Từng Ghế <span class="addon-pill">Tùy chỉnh 1–50 ghế khi thanh toán</span></h3>
-              <p>Kết hợp linh hoạt các cấp độ trên mọi gói nền tảng Team hoặc Business đang hoạt động — nâng cấp đúng thành viên cần thiết theo nhu cầu (trả theo năm cũng được tặng 2 tháng).</p>
+          <details class="addon-drawer" id="seat-addons-drawer">
+            <summary>
+              <span class="drawer-sum-left">
+                <span class="drawer-ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span class="drawer-titles">
+                  <span class="drawer-title-row">
+                    <strong>Tiện Ích Nâng Cấp Từng Ghế</strong>
+                    <span class="drawer-pill">Tùy chỉnh 1–50 ghế khi thanh toán</span>
+                  </span>
+                  <span class="drawer-hint">Kết hợp linh hoạt các cấp độ trên mọi gói nền tảng Team hoặc Business đang hoạt động — nâng cấp đúng thành viên cần thiết theo nhu cầu (trả theo năm cũng được tặng 2 tháng).</span>
+                </span>
+              </span>
+              <span class="drawer-toggle-pill"><span class="when-closed">Xem tùy chọn</span><span class="when-open">Thu gọn</span> <i>▾</i></span>
+            </summary>
+            <div class="drawer-body">
+              <p class="drawer-body-lead">Kết hợp linh hoạt các cấp độ trên mọi gói nền tảng Team hoặc Business đang hoạt động — nâng cấp đúng thành viên cần thiết theo nhu cầu (trả theo năm cũng được tặng 2 tháng).</p>
+              <div class="addon-grid">
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Max 5x</code> <span>Nâng cấp</span></div>
+                      <p class="addon-desc">Nâng cấp bất kỳ ghế Pro (1x) nào trong nhóm lên Max (5x) cho nhu cầu lập trình Claude Code chuyên sâu hàng ngày.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ ghế / tháng</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_pm" href="https://buy.stripe.com/dRmeVfeyB2wCee2cc69Zm3P" target="_blank" rel="noopener">Nâng cấp ghế →</a>
+                    </div>
+                  </div>
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Max 5x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Nâng cấp</span></div>
+                      <p class="addon-desc">Nâng cấp ghế của founder, CTO hoặc kiến trúc sư trưởng trên gói All-Max lên công suất đa tác tử Ultra 20x.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ ghế / tháng</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_mu" href="https://buy.stripe.com/9B6aEZail2wCee23FA9Zm3W" target="_blank" rel="noopener">Nâng cấp ghế →</a>
+                    </div>
+                  </div>
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Trực tiếp</span></div>
+                      <p class="addon-desc">Nâng thẳng bất kỳ ghế nào thuộc gói nền tảng All-Pro lên toàn bộ hạn mức flagship Ultra 20x.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ ghế / tháng</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_pu" href="https://buy.stripe.com/dRm14pailc7c9XM4JE9Zn03" target="_blank" rel="noopener">Nâng cấp ghế →</a>
+                    </div>
+                  </div>
+              </div>
             </div>
-            <div class="addon-grid">
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Max 5x</code> <span>Nâng cấp</span></div>
-                  <p class="addon-desc">Nâng cấp bất kỳ ghế Pro (1x) nào trong nhóm lên Max (5x) cho nhu cầu lập trình Claude Code chuyên sâu hàng ngày.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ ghế / tháng</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_pm" href="https://buy.stripe.com/dRmeVfeyB2wCee2cc69Zm3P" target="_blank" rel="noopener">Nâng cấp ghế →</a>
-                </div>
-              </div>
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Max 5x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Nâng cấp</span></div>
-                  <p class="addon-desc">Nâng cấp ghế của founder, CTO hoặc kiến trúc sư trưởng trên gói All-Max lên công suất đa tác tử Ultra 20x.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ ghế / tháng</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_mu" href="https://buy.stripe.com/9B6aEZail2wCee23FA9Zm3W" target="_blank" rel="noopener">Nâng cấp ghế →</a>
-                </div>
-              </div>
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Trực tiếp</span></div>
-                  <p class="addon-desc">Nâng thẳng bất kỳ ghế nào thuộc gói nền tảng All-Pro lên toàn bộ hạn mức flagship Ultra 20x.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ ghế / tháng</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_pu" href="https://buy.stripe.com/dRm14pailc7c9XM4JE9Zn03" target="_blank" rel="noopener">Nâng cấp ghế →</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          </details>
         </div>
 
-        <!-- Cloud Storage (Google Drive & iCloud) -->
-        <div id="storage" style="margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--border);">
-          <div class="section-head" style="margin-bottom: 32px;">
-            <p class="section-tag">Lưu trữ đám mây · Google Drive &amp; iCloud+</p>
-            <h2>Lưu Trữ Đám Mây Quản Lý Trọn Gói Cho Tài Sản Số</h2>
-            <p>Tùy chọn <strong>Google Drive (Google One)</strong> hoặc <strong>Apple iCloud+</strong> từ mức 2 TB đến 30 TB, được quản lý gia hạn tự động cùng đội ngũ cố vấn 1-kèm-1 7×16h đồng hành.</p>
-          </div>
-          <div class="currency-switch" role="group" aria-label="Chọn tiền tệ (lưu trữ đám mây)" style="margin: 0 auto 32px">
-            <button type="button" data-currency="AUD" aria-pressed="false">A$ AUD</button>
-            <button type="button" data-currency="USD" aria-pressed="true">$ USD</button>
-            <button type="button" data-currency="EUR" aria-pressed="false">€ EUR</button>
-            <button type="button" data-currency="NZD" aria-pressed="false">NZ$ NZD</button>
-            <button type="button" data-currency="CAD" aria-pressed="false">C$ CAD</button>
-            <button type="button" data-currency="SGD" aria-pressed="false">S$ SGD</button>
-            <button type="button" data-currency="CNY" aria-pressed="false">¥ CNY</button>
-          </div>
-          <div class="grid grid-4 pricing">
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>2 TB</b><span>Lưu trữ</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">Dung lượng rộng rãi cho ảnh chụp, video hàng ngày và sao lưu đa thiết bị.</p>
-              <div class="price" data-storage-idx="0" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">8.99</span><small>/ tháng</small></div>
-              <p class="price-note">Google Drive hoặc iCloud+ · Gia hạn trọn gói</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive hoặc Apple iCloud+</li>
-                <li>Không gian riêng tư, quyền truy cập độc lập</li>
-                <li>Quản lý thanh toán · Hỗ trợ 1-kèm-1 7×16h</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="2t" href="https://buy.stripe.com/4gM28tduxfjo9XMdga9Zm0Y" target="_blank" rel="noopener">Đăng ký 2 TB</a>
-            </article>
+        <!-- Shared Optional Collapsible Add-on: Cloud Storage (2TB - 30TB) -->
+        <details class="addon-drawer storage-drawer" id="storage">
+          <summary>
+            <span class="drawer-sum-left">
+              <span class="drawer-ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 116.71-9h1.79a4.5 4.5 0 110 9z"/></svg>
+              </span>
+              <span class="drawer-titles">
+                <span class="drawer-title-row">
+                  <strong>Lưu Trữ Đám Mây Quản Lý Trọn Gói Cho Tài Sản Số</strong>
+                  <span class="drawer-pill">6TB free on 20x · 6–30TB free on Team/Biz</span>
+                </span>
+                <span class="drawer-hint">Private isolated space · Cross-device auto-sync &amp; managed renewals</span>
+              </span>
+            </span>
+            <span class="drawer-toggle-pill"><span class="when-closed">Xem tùy chọn</span><span class="when-open">Thu gọn</span> <i>▾</i></span>
+          </summary>
+          <div class="drawer-body">
+            <p class="drawer-body-lead">Tùy chọn <strong>Google Drive (Google One)</strong> hoặc <strong>Apple iCloud+</strong> từ mức 2 TB đến 30 TB, được quản lý gia hạn tự động cùng đội ngũ cố vấn 1-kèm-1 7×16h đồng hành.</p>
+            <div class="grid grid-4 pricing">
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>2 TB</b><span>Lưu trữ</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">Dung lượng rộng rãi cho ảnh chụp, video hàng ngày và sao lưu đa thiết bị.</p>
+                <div class="price" data-storage-idx="0" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">8.99</span><small>/ tháng</small></div>
+                <p class="price-note">Google Drive hoặc iCloud+ · Gia hạn trọn gói</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive hoặc Apple iCloud+</li>
+                  <li>Không gian riêng tư, quyền truy cập độc lập</li>
+                  <li>Quản lý thanh toán · Hỗ trợ 1-kèm-1 7×16h</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="2t" href="https://buy.stripe.com/4gM28tduxfjo9XMdga9Zm0Y" target="_blank" rel="noopener">Đăng ký 2 TB</a>
+              </article>
 
-            <article class="card plan featured" style="padding: 26px 22px;">
-              <span class="badge">Creator tin chọn</span>
-              <div class="plan-tier"><b>6 TB</b><span>Lưu trữ</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">Lý tưởng cho nhiếp ảnh gia, nhà sáng tạo nội dung và kho lưu trữ cá nhân.</p>
-              <div class="price" data-storage-idx="1" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">28.99</span><small>/ tháng</small></div>
-              <p class="price-note">Google Drive hoặc iCloud+ · Gia hạn trọn gói</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive hoặc Apple iCloud+</li>
-                <li>Đồng bộ ảnh nguyên bản &amp; video 4K</li>
-                <li>Quản lý thanh toán · Hỗ trợ 1-kèm-1 7×16h</li>
-              </ul>
-              <a class="btn btn-primary" data-stripe-tier="6t" href="https://buy.stripe.com/6oU9AV0HL4EKgmaeke9Zm14" target="_blank" rel="noopener">Đăng ký 6 TB</a>
-            </article>
+              <article class="card plan featured" style="padding: 24px 20px;">
+                <span class="badge">Creator tin chọn</span>
+                <div class="plan-tier"><b>6 TB</b><span>Lưu trữ</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">Lý tưởng cho nhiếp ảnh gia, nhà sáng tạo nội dung và kho lưu trữ cá nhân.</p>
+                <div class="price" data-storage-idx="1" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">28.99</span><small>/ tháng</small></div>
+                <p class="price-note">Google Drive hoặc iCloud+ · Gia hạn trọn gói</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive hoặc Apple iCloud+</li>
+                  <li>Đồng bộ ảnh nguyên bản &amp; video 4K</li>
+                  <li>Quản lý thanh toán · Hỗ trợ 1-kèm-1 7×16h</li>
+                </ul>
+                <a class="btn btn-primary" data-stripe-tier="6t" href="https://buy.stripe.com/6oU9AV0HL4EKgmaeke9Zm14" target="_blank" rel="noopener">Đăng ký 6 TB</a>
+              </article>
 
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>12 TB</b><span>Lưu trữ</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">Kho lưu trữ dung lượng lớn cho người dùng chuyên sâu và sao lưu nhiều thiết bị.</p>
-              <div class="price" data-storage-idx="2" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">58.99</span><small>/ tháng</small></div>
-              <p class="price-note">Google Drive hoặc iCloud+ · Gia hạn trọn gói</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive hoặc Apple iCloud+</li>
-                <li>Lưu trữ dự án lớn &amp; sao lưu toàn thiết bị</li>
-                <li>Quản lý thanh toán · Hỗ trợ 1-kèm-1 7×16h</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="12t" href="https://buy.stripe.com/14A8wRail2wC3zo5NI9Zm1a" target="_blank" rel="noopener">Đăng ký 12 TB</a>
-            </article>
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>12 TB</b><span>Lưu trữ</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">Kho lưu trữ dung lượng lớn cho người dùng chuyên sâu và sao lưu nhiều thiết bị.</p>
+                <div class="price" data-storage-idx="2" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">58.99</span><small>/ tháng</small></div>
+                <p class="price-note">Google Drive hoặc iCloud+ · Gia hạn trọn gói</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive hoặc Apple iCloud+</li>
+                  <li>Lưu trữ dự án lớn &amp; sao lưu toàn thiết bị</li>
+                  <li>Quản lý thanh toán · Hỗ trợ 1-kèm-1 7×16h</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="12t" href="https://buy.stripe.com/14A8wRail2wC3zo5NI9Zm1a" target="_blank" rel="noopener">Đăng ký 12 TB</a>
+              </article>
 
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>30 TB</b><span>Flagship</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">Kho đám mây chuẩn studio cho quay dựng RAW, tập dữ liệu AI và lưu trữ dài hạn.</p>
-              <div class="price" data-storage-idx="3" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">148.99</span><small>/ tháng</small></div>
-              <p class="price-note">Google Drive hoặc iCloud+ · Vận hành VIP</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive 30TB hoặc kết hợp song song hai đám mây</li>
-                <li>Cộng tác nhóm toàn cầu tốc độ cao</li>
-                <li>Cố vấn riêng tư cao cấp 7×24h</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="30t" href="https://buy.stripe.com/dRm14pbmp9Z4ee22Bw9Zm1g" target="_blank" rel="noopener">Đăng ký 30 TB</a>
-            </article>
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>30 TB</b><span>Flagship</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">Kho đám mây chuẩn studio cho quay dựng RAW, tập dữ liệu AI và lưu trữ dài hạn.</p>
+                <div class="price" data-storage-idx="3" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">148.99</span><small>/ tháng</small></div>
+                <p class="price-note">Google Drive hoặc iCloud+ · Vận hành VIP</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive 30TB hoặc kết hợp song song hai đám mây</li>
+                  <li>Cộng tác nhóm toàn cầu tốc độ cao</li>
+                  <li>Cố vấn riêng tư cao cấp 7×24h</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="30t" href="https://buy.stripe.com/dRm14pbmp9Z4ee22Bw9Zm1g" target="_blank" rel="noopener">Đăng ký 30 TB</a>
+              </article>
+            </div>
           </div>
-        </div>
+        </details>
+
         <div class="stripe-trust">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
           <span>Thanh toán bảo mật qua <strong>Stripe</strong> · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · Trả theo tháng hoặc năm (tặng 2 tháng), hủy bất kỳ lúc nào</span>
@@ -1784,8 +1804,170 @@
       </div>
     </section>
 
-    <!-- Process -->
-    <section class="section section-alt" id="process">
+    <!-- Floor 4: Security Isolation + Network Proof + Curated 3 User Stories -->
+    <section class="section section-alt" id="security">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Security, Network &amp; Proof</p>
+          <h2>Cách ly hai cấp độ: tài khoản tách biệt và nguyên máy vật lý riêng</h2>
+          <p>Để bảo vệ quyền riêng tư của khách hàng, tất cả đánh giá đều sử dụng ảnh đại diện minh họa và tên viết tắt ẩn danh, đồng thời giữ nguyên phản hồi thực tế cùng hạng gói đăng ký.</p>
+        </div>
+        <div class="trust-split">
+          <div class="sec-stack">
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <div>
+                <h3>Nguyên máy riêng 20x: cách ly cấp phần cứng</h3>
+                <p>Khi bật chế độ máy riêng, toàn bộ chiếc Mac Studio hoặc Mac mini cấu hình cao chỉ phục vụ duy nhất mình bạn. Toàn quyền cài đặt phần mềm, thay đổi cấu hình hệ thống và sử dụng bất kỳ công cụ điều khiển từ xa nào như RustDesk hay VNC bên thứ ba.</p>
+              </div>
+            </div>
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+              <div>
+                <h3>Cách ly tài khoản riêng biệt 1x / 5x</h3>
+                <p>Mỗi người dùng sở hữu một tài khoản macOS độc lập với tệp tin và phân quyền riêng, đảm bảo lịch sử làm việc và dự án luôn kín đáo. Truy cập được giới hạn qua Apple Screen Sharing nhằm tạo phiên màn hình độc lập cho từng tài khoản mà không ai khác có thể nhìn thấy.</p>
+              </div>
+            </div>
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+              <div>
+                <h3>Bạn toàn quyền kiểm soát truy cập và mã hóa</h3>
+                <p>Tự thiết lập mật khẩu truy cập và chính sách mã hóa của riêng bạn. Đội ngũ chúng tôi chỉ phụ trách kết nối và thanh toán, tuyệt đối không chủ động truy cập dữ liệu trong tài khoản của bạn trừ trường hợp bảo trì, sự cố bảo mật hoặc hỗ trợ kỹ thuật khi được bạn cho phép.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card net-card net-proof-box" id="network" aria-label="Độ trễ và tỷ lệ mất gói tin đo thực tế trước và sau khi tối ưu">
+            <div class="net-proof-head">
+              <h3>Đầu tư hạ tầng mạng liên tục · cho trải nghiệm điều khiển từ xa mượt mà</h3>
+              <p>Chúng tôi không ngừng đầu tư vào phần cứng và tuyến truyền dẫn cao cấp: băng thông ISP bản địa tại 9 quốc gia với tốc độ đối xứng 200Mbps–500Mbps+, kết hợp máy chủ chuyển tiếp tự vận hành và trục BGP doanh nghiệp giúp đưa tỷ lệ mất gói tin—kẻ thù lớn nhất của màn hình từ xa—về mức 0%.</p>
+              <ul class="net-chips"><li>Đối xứng 200–500Mbps+</li><li>Đường trục BGP doanh nghiệp</li><li>Trạm chuyển tiếp tự chủ</li><li>Tối ưu BBR hai chiều</li><li>Mã hóa phần cứng Apple Silicon</li><li>Bảo vệ danh sách cho phép</li></ul>
+            </div>
+            <div>
+              <div class="net-legend"><span class="lg before">Trước tối ưu</span><span class="lg after">Sau tối ưu</span></div>
+              <div class="net-row">
+                <div class="net-node"><strong>Nhật Bản</strong><span>Qua trục HK</span></div>
+                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:39.0%"></span><em>128–184ms · 10% loss</em></div><div class="nb after"><span class="nb-fill" style="--w:23.0%"></span><em>~92ms · 0% loss</em></div></div>
+              </div>
+              <div class="net-row">
+                <div class="net-node"><strong>Úc</strong><span>Qua trục HK</span></div>
+                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:91.2%"></span><em>343–386ms · 25–33% loss</em></div><div class="nb after"><span class="nb-fill" style="--w:60.0%"></span><em>~240ms · 0% loss</em></div></div>
+              </div>
+              <div class="net-row">
+                <div class="net-node"><strong>Campuchia</strong><span>Cáp đất liền trực tiếp</span></div>
+                <div class="net-bars"><div class="nb after"><span class="nb-fill" style="--w:20.2%"></span><em>~81ms · 0% loss</em></div></div>
+              </div>
+              <p class="net-foot">Đo lường từ thiết bị đầu cuối tại Đông Á, tháng 11/2026. Trải nghiệm thực tế có thể thay đổi tùy theo nhà mạng địa phương của bạn.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-reviews" id="reviews">
+          <p class="trust-reviews-title">★ Khách hàng thực tế nói gì về chúng tôi</p>
+          <div class="grid grid-3">
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#1b232c"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#3d6b8e"/>
+                  <circle cx="32" cy="31" r="12" fill="#f4cfb6"/>
+                  <path d="M19 28c1-9 6-14 13-14 8 0 13 5 13 14-2-4-6-6-11-6-5 0-10 2-15 6z" fill="#232830"/>
+                  <path d="M18 30v-3a14 14 0 0128 0v3" fill="none" stroke="#e8906f" stroke-width="2.2"/>
+                  <rect x="16" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <rect x="44" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <path d="M29 36.8c2 1.3 4 1.3 6 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">C***</span>
+                    <span class="review-badge">Đã ẩn danh · Đã xác thực</span>
+                  </div>
+                  <div class="review-role">Kỹ sư Full-Stack Cao cấp</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="5 trên 5 sao">★★★★★</div>
+              <p class="review-quote">&quot;Trước đây mạng ở nhà tôi rất hay rớt kết nối giữa chừng. Từ khi chuyển sang ClaudeOps 1x Tiêu chuẩn với không gian biệt lập và Claude Code chạy 24/7, cảm giác đúng nghĩa &#x27;lập trình viên thiên tài hồi sinh&#x27; 😂. Giờ chẳng còn phải đau đầu vì hóa đơn hay mạng mẽo nữa.&quot;</p>
+              <div class="review-foot">
+                <span>Phản hồi tin nhắn xác thực</span>
+                <span class="review-plan">1x Tiêu chuẩn</span>
+              </div>
+            </article>
+
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#2b211c"/>
+                  <circle cx="32" cy="30" r="17" fill="#5c3627"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#d97757"/>
+                  <circle cx="32" cy="31" r="12" fill="#f7d5be"/>
+                  <path d="M19 29c0-9 6-14 13-14s13 5 13 14c-3-4-7-6-13-6s-10 2-13 6z" fill="#5c3627"/>
+                  <circle cx="27" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <circle cx="37" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <path d="M30.4 31h3.2" stroke="#3c2b24" stroke-width="1.4"/>
+                  <circle cx="27" cy="31" r="1.1" fill="#2b1e19"/>
+                  <circle cx="37" cy="31" r="1.1" fill="#2b1e19"/>
+                  <path d="M29 36.5c1.8 1.5 4.2 1.5 6 0" fill="none" stroke="#b85d43" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">M***</span>
+                    <span class="review-badge">Đã ẩn danh · Đã xác thực</span>
+                  </div>
+                  <div class="review-role">Trưởng nhóm Sản phẩm AI Quốc tế</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="5 trên 5 sao">★★★★★</div>
+              <p class="review-quote">&quot;Đường truyền doanh nghiệp sắc nét và mượt kinh ngạc—thậm chí còn rõ hơn cả ToDesk nội mạng của tôi. Gõ code và chuyển đổi cửa sổ gần như không có độ trễ. Nhanh, ổn định, đáng từng đồng—một trải nghiệm thực sự đẳng cấp.&quot;</p>
+              <div class="review-foot">
+                <span>Phản hồi tin nhắn xác thực</span>
+                <span class="review-plan">5x Pro</span>
+              </div>
+            </article>
+
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#21261e"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#4f6d54"/>
+                  <circle cx="32" cy="31" r="12" fill="#efd0ba"/>
+                  <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-3-3-7-4-12-4s-9 1-12 4z" fill="#2d2622"/>
+                  <rect x="23" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <rect x="33.5" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <path d="M30.5 31h3" stroke="#2d2622" stroke-width="1.4"/>
+                  <circle cx="26.8" cy="31" r="1.1" fill="#231d19"/>
+                  <circle cx="37.2" cy="31" r="1.1" fill="#231d19"/>
+                  <path d="M29 37c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#9e5e4a" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">Kyle W.</span>
+                    <span class="review-badge">Đã ẩn danh · Đã xác thực</span>
+                  </div>
+                  <div class="review-role">Trưởng bộ phận R&amp;D Định lượng</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="5 trên 5 sao">★★★★★</div>
+              <p class="review-quote">&quot;Mạng ISP bản địa tại 9 quốc gia cùng khả năng cách ly cấp phần cứng đã thuyết phục hoàn toàn tôi. Mã nguồn thuật toán và khóa API nội bộ nằm gọn trên một chiếc Mac Studio chuyên dụng—vận hành liên tục nhiều tháng trời không một lần gián đoạn.&quot;</p>
+              <div class="review-foot">
+                <span>Nút Úc · Đã ẩn danh</span>
+                <span class="review-plan">20x Flagship</span>
+              </div>
+            </article>
+          </div>
+          <p class="reviews-note">* Nhằm bảo vệ nghiêm ngặt quyền riêng tư và an toàn dữ liệu khách hàng, toàn bộ đánh giá trên trang đều hiển thị bằng ảnh đại diện minh họa và tên viết tắt ẩn danh.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floor 5: 4-Step Same-Day Onboarding & Focused Top-6 FAQ -->
+    <section class="section" id="process">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">Quy trình</p>
@@ -1812,8 +1994,7 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
+    <section class="section section-alt" id="faq">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">FAQ</p>
@@ -1821,8 +2002,8 @@
         </div>
         <div class="faq">
           <details>
-            <summary>Đơn vị nào vận hành Zaokit ClaudeOps?</summary>
-            <p>Zaokit ClaudeOps được vận hành bởi một công ty đăng ký hợp pháp tại Úc. Mọi giao dịch thanh toán đều được xử lý bảo mật qua Stripe và tự động xuất biên lai cùng hóa đơn chính thức.</p>
+            <summary>Tôi nên chọn gói nào cho phù hợp?</summary>
+            <p>Hãy chọn gói 1x cho nhu cầu trò chuyện và viết lách hàng ngày, gói 5x nếu bạn lập trình với Claude Code mỗi ngày, và gói 20x nếu cần chạy đa tác tử, sử dụng cường độ cao suốt ngày đêm hoặc muốn sở hữu nguyên máy riêng kèm RustDesk và các công cụ điều khiển từ xa tùy ý. Nếu còn phân vân, bạn có thể bắt đầu từ gói thấp hơn rồi nâng cấp bất cứ lúc nào.</p>
           </details>
           <details>
             <summary>Các gói 1x, 5x, 20x, Team và Business khác nhau như thế nào? Có ưu đãi thanh toán theo năm không?</summary>
@@ -1833,81 +2014,71 @@
             <p><strong>Đường truyền riêng Doanh nghiệp ClaudeOps</strong> định tuyến lưu lượng màn hình từ xa và terminal của bạn qua trục xương sống BGP doanh nghiệp xuyên biên giới cao cấp kết hợp trạm chuyển tiếp tự vận hành và kiểm soát tắc nghẽn BBR hai chiều, loại bỏ hoàn toàn hiện tượng giật lag và mất gói tin trên mạng công cộng vào giờ cao điểm:<br>• <strong>Đường truyền riêng 1x ($5/tháng · $50/năm)</strong>: Dành cho thuê bao cá nhân 1x Tiêu chuẩn sử dụng Apple Screen Sharing, SSH và lập trình nhẹ hàng ngày;<br>• <strong>Đường truyền riêng 5x ($20/tháng · $200/năm)</strong>: Dành cho khối lượng công việc kỹ thuật 5x Pro với hạn mức băng thông ưu tiên gấp 5× và QoS BGP ưu tiên cao (đơn giá tiết kiệm hơn 20% so với 1x);<br>• <strong>Miễn phí trên gói Flagship &amp; Nhóm</strong>: <strong>Các gói 20x Ultimate, Team và Business đã được tích hợp sẵn đường truyền tăng tốc doanh nghiệp mà không tốn thêm chi phí</strong>.</p>
           </details>
           <details>
-            <summary>Vì sao chi phí của Zaokit ClaudeOps cao hơn so với máy ảo đám mây thông thường hoặc tài khoản dùng chung?</summary>
-            <p>Bởi vì bạn đang chi trả cho <strong>hạ tầng vật lý tất định và dịch vụ vận hành kỹ thuật chuẩn chuyên gia</strong>—chứ không phải các máy ảo VPS giá rẻ hay tài khoản chia sẻ thiếu ổn định. Mỗi gói đăng ký đều bao hàm bốn khoản đầu tư hạ tầng thực tế:<br>• <strong>Phần cứng Mac vật lý cấu hình cao</strong>: Máy thật Mac Studio và Mac mini (không bao giờ dùng máy ảo hóa đám mây), đảm bảo hiệu năng tính toán bền bỉ và độ tin cậy 24/7—cách ly nguyên máy hoàn toàn từ gói 20x+;<br>• <strong>Băng thông bản địa đối xứng 200Mbps–500Mbps+</strong>: Mạng băng thông rộng ISP bản địa tại 9 quốc gia với tốc độ tải lên/tải xuống đối xứng dồi dào, giữ cho Screen Sharing luôn sắc nét và phản hồi tức thì thay vì nghẽn mạng trên đường truyền dùng chung 10–30Mbps;<br>• <strong>Đường trục BGP Doanh nghiệp</strong>: Hệ thống relay tốc độ cao tự vận hành trên trục BGP doanh nghiệp cao cấp HK/APAC cùng tối ưu BBR hai chiều, đưa tỷ lệ mất gói xuyên biên giới về 0%;<br>• <strong>Trọn vẹn hạn mức chính thức + Cố vấn 7×16 / 7×24</strong>: Đầy đủ hạn mức thuê bao chính thức, thanh toán trọn gói, đồng bộ iCloud/Google Drive và hỗ trợ kỹ thuật 1-kèm-1.</p>
-          </details>
-          <details>
             <summary>Tài khoản riêng so với nguyên máy chuyên dụng: tại sao gói 1x / 5x chỉ hỗ trợ Apple Screen Sharing?</summary>
             <p>• <strong>Cách ly tài khoản riêng biệt (1x / 5x)</strong>: một số ít người dùng cùng chia sẻ một máy Mac cấu hình cao, nhưng mỗi người có tài khoản macOS, tệp tin và quyền hạn độc lập, không ai có thể xem dữ liệu của người khác. Để bảo vệ tuyệt đối quyền riêng tư cho từng người dùng, kết nối được giới hạn qua <strong>Apple Screen Sharing</strong> nhằm tạo phiên màn hình tách biệt hoàn toàn cho mỗi tài khoản.<br>• <strong>Nguyên máy chuyên dụng (có trên gói 20x)</strong>: toàn bộ chiếc Mac vật lý chỉ phục vụ duy nhất bạn. Phần cứng, hệ điều hành và mạng thuộc toàn quyền sử dụng của bạn. Tự do cài đặt mọi phần mềm, thay đổi cấu hình hệ thống và dùng <strong>bất kỳ công cụ điều khiển từ xa nào</strong>: Apple Screen Sharing, VNC bên thứ ba như RealVNC / TigerVNC, hoặc kênh RustDesk tốc độ cao tự vận hành của chúng tôi (miễn phí ở gói 20x).<br><strong>Vì sao không bật công cụ bên thứ ba trên máy dùng chung?</strong> RustDesk và đa số phần mềm VNC bên thứ ba ghi nhận phiên màn hình chính của máy Mac; trên máy nhiều người dùng, điều này có thể khiến người khác nhìn thấy hoặc điều khiển nhầm màn hình của bạn. Do đó chúng tôi chỉ kích hoạt chúng ở chế độ nguyên máy riêng như một lớp bảo vệ quyền riêng tư chủ động.</p>
-          </details>
-          <details>
-            <summary>Tôi nên chọn gói nào cho phù hợp?</summary>
-            <p>Hãy chọn gói 1x cho nhu cầu trò chuyện và viết lách hàng ngày, gói 5x nếu bạn lập trình với Claude Code mỗi ngày, và gói 20x nếu cần chạy đa tác tử, sử dụng cường độ cao suốt ngày đêm hoặc muốn sở hữu nguyên máy riêng kèm RustDesk và các công cụ điều khiển từ xa tùy ý. Nếu còn phân vân, bạn có thể bắt đầu từ gói thấp hơn rồi nâng cấp bất cứ lúc nào.</p>
-          </details>
-          <details>
-            <summary>&quot;Môi trường ổn định, tất định&quot; cụ thể mang lại lợi ích gì trong thực tế?</summary>
-            <p>Đó là sự kết hợp giữa không gian làm việc biệt lập của riêng bạn + một máy trạm vật lý Mac cấu hình cao cố định + dịch vụ quản lý thanh toán, gia hạn và vận hành kỹ thuật hàng ngày chuyên biệt. Quy trình vận hành chuẩn hóa giúp loại bỏ tình trạng rớt mạng bất ngờ, xung đột cấu hình hay lỗi gia hạn thẻ để luồng công việc của bạn luôn thông suốt.</p>
           </details>
           <details>
             <summary>Trong thực tế tôi sẽ sử dụng như thế nào? Điều khiển máy Mac từ xa hay làm việc từ máy cục bộ?</summary>
             <p><strong>Cả hai cách đều mượt mà. Bạn có thể chọn cách thuận tiện nhất:</strong><br>1. <strong>Màn hình điều khiển từ xa</strong>: ở gói 1x / 5x, đăng nhập vào tài khoản riêng qua macOS Screen Sharing—cách ly an toàn và sẵn sàng dùng ngay. Ở gói 20x bật chế độ nguyên máy riêng, bạn còn có thể dùng VNC bên thứ ba như RealVNC / TigerVNC hoặc <strong>kênh RustDesk tốc độ cao tự vận hành (miễn phí ở gói 20x)</strong> để có độ trễ thấp hơn nữa. Dù theo cách nào, bạn đều có trọn vẹn giao diện macOS cùng terminal để các tác vụ dài chạy bền bỉ.<br>2. <strong>Tích hợp liền mạch với quy trình cục bộ</strong>: kết nối trực tiếp từ bộ công cụ lập trình trên máy cá nhân tới môi trường phát triển từ xa mà không tốn công cài đặt hay bảo trì môi trường cục bộ. Chiếc Mac từ xa đóng vai trò là máy chủ tính toán chuyên dụng phía sau cho bạn.</p>
           </details>
           <details>
-            <summary>Mã nguồn và dữ liệu của tôi được bảo mật và giữ riêng tư ra sao?</summary>
-            <p>Ở gói 1x / 5x, mỗi người dùng có một tài khoản macOS riêng với tệp tin, phân quyền và phiên làm việc tách biệt, chỉ truy cập qua Apple Screen Sharing nên không ai khác có thể thấy màn hình của bạn. Ở gói 20x, bạn có thể bật chế độ nguyên máy riêng: toàn bộ chiếc Mac Studio hoặc Mac mini cấu hình cao chỉ phục vụ mình bạn, cách ly ngay từ phần cứng. Lịch sử phiên, mã nguồn và biến môi trường đều nằm trong tài khoản hoặc máy riêng của bạn. Bạn tự đặt mật khẩu và mã hóa, còn đội ngũ chúng tôi không chủ động truy cập dữ liệu trừ khi bảo trì, xử lý sự cố bảo mật hoặc khắc phục lỗi theo sự cho phép của bạn.</p>
-          </details>
-          <details>
-            <summary>Máy chủ vật lý và hạ tầng mạng được đặt ở đâu?</summary>
-            <p>Hệ thống máy vật lý Mac Studio và Mac mini cấu hình cao của chúng tôi đặt tại <strong>Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand và Canada</strong>, kết nối trực tiếp qua <strong>mạng băng thông rộng ISP bản địa (không dùng trung tâm dữ liệu đám mây công cộng dùng chung)</strong> nhằm đạt độ tin cậy tối đa. Bạn chỉ cần chọn khu vực ưu tiên khi thanh toán, chúng tôi sẽ cấp máy và tài khoản cố định lâu dài cho bạn (nguyên máy riêng ở gói 20x).</p>
-          </details>
-          <details>
-            <summary>Gói lưu trữ đám mây Google Drive &amp; iCloud+ hoạt động như thế nào?</summary>
-            <p>Chúng tôi cung cấp các mức dung lượng 2 TB ($8.99/tháng), 6 TB ($28.99/tháng), 12 TB ($58.99/tháng) và 30 TB ($148.99/tháng). Khi thanh toán trên Stripe, bạn chỉ cần chọn <strong>Apple iCloud+</strong> hoặc <strong>Google Drive (Google One)</strong> và ghi chú email tài khoản của mình; đội ngũ cố vấn 1-kèm-1 7×16h sẽ kích hoạt và quản lý gia hạn xuyên suốt cho bạn.</p>
-          </details>
-          <details>
-            <summary>Tôi có thể nâng cấp hoặc hạ cấp gói cước không?</summary>
-            <p>Hoàn toàn được. Thay đổi sẽ áp dụng từ chu kỳ thanh toán tiếp theo. Nếu bạn cần nâng cấp ngay lập tức, hãy liên hệ với chúng tôi để chỉ thanh toán phần chênh lệch.</p>
-          </details>
-          <details>
-            <summary>Nếu gặp sự cố trong quá trình sử dụng thì sao?</summary>
-            <p>Hãy liên hệ ngay với chúng tôi. Chúng tôi luôn ưu tiên xử lý sự cố nhanh nhất có thể để công việc của bạn sớm trở lại bình thường.</p>
-          </details>
-          <details>
             <summary>Bạn chấp nhận những phương thức thanh toán nào? Có xuất hóa đơn không?</summary>
             <p>Chúng tôi nhận thanh toán đăng ký trực tuyến qua Stripe, bao gồm Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay và Link, hỗ trợ các đồng tiền AUD, USD, EUR, NZD, CAD, SGD hoặc CNY. Chủ thẻ UnionPay có thể chọn CNY để giao dịch thuận lợi hơn. Hệ thống Stripe tự động gửi biên lai và hóa đơn chính thức sau mỗi lần thanh toán. Với các gói doanh nghiệp nhiều tài khoản, vui lòng gửi email cho chúng tôi.</p>
           </details>
-          <details>
-            <summary>Làm thế nào để đóng góp máy cá nhân hoặc tham gia mạng lưới tính toán toàn cầu để vừa có thêm thu nhập vừa thắp sáng thêm nhiều thành phố?</summary>
-            <p>Chúng tôi nồng nhiệt chào đón các đối tác trên toàn thế giới tham gia mạng lưới tính toán bản địa nhằm hướng tới mục tiêu phục vụ trọn vẹn 8 tỷ người! <strong>Bạn có thể đóng góp thiết bị của mình và chia sẻ tài nguyên — vừa tạo nguồn thu nhập cho bản thân, vừa thắp sáng cơ hội hiện thực hóa ước mơ cho người khác!</strong> Dù bạn đang có máy Mac vật lý nhàn rỗi hay cấu hình cao, đường truyền băng thông bản địa chất lượng tốt tại thành phố đang sống, hoặc kết nối cộng đồng nhà phát triển &amp; sáng tạo tại địa phương, hãy gửi email bất cứ lúc nào tới <a href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network" style="color:var(--primary-strong);font-weight:600">jason2023zhang@gmail.com</a> kèm thông tin thành phố và phần cứng/ISP của bạn—chào mừng bạn đồng hành!</p>
+          <details class="faq-more">
+            <summary><span class="when-closed">Xem thêm 9 câu hỏi khác</span><span class="when-open">Thu gọn câu hỏi</span></summary>
+            <div class="faq-more-list">
+              <details>
+                <summary>Đơn vị nào vận hành Zaokit ClaudeOps?</summary>
+                <p>Zaokit ClaudeOps được vận hành bởi một công ty đăng ký hợp pháp tại Úc. Mọi giao dịch thanh toán đều được xử lý bảo mật qua Stripe và tự động xuất biên lai cùng hóa đơn chính thức.</p>
+              </details>
+              <details>
+                <summary>Vì sao chi phí của Zaokit ClaudeOps cao hơn so với máy ảo đám mây thông thường hoặc tài khoản dùng chung?</summary>
+                <p>Bởi vì bạn đang chi trả cho <strong>hạ tầng vật lý tất định và dịch vụ vận hành kỹ thuật chuẩn chuyên gia</strong>—chứ không phải các máy ảo VPS giá rẻ hay tài khoản chia sẻ thiếu ổn định. Mỗi gói đăng ký đều bao hàm bốn khoản đầu tư hạ tầng thực tế:<br>• <strong>Phần cứng Mac vật lý cấu hình cao</strong>: Máy thật Mac Studio và Mac mini (không bao giờ dùng máy ảo hóa đám mây), đảm bảo hiệu năng tính toán bền bỉ và độ tin cậy 24/7—cách ly nguyên máy hoàn toàn từ gói 20x+;<br>• <strong>Băng thông bản địa đối xứng 200Mbps–500Mbps+</strong>: Mạng băng thông rộng ISP bản địa tại 9 quốc gia với tốc độ tải lên/tải xuống đối xứng dồi dào, giữ cho Screen Sharing luôn sắc nét và phản hồi tức thì thay vì nghẽn mạng trên đường truyền dùng chung 10–30Mbps;<br>• <strong>Đường trục BGP Doanh nghiệp</strong>: Hệ thống relay tốc độ cao tự vận hành trên trục BGP doanh nghiệp cao cấp HK/APAC cùng tối ưu BBR hai chiều, đưa tỷ lệ mất gói xuyên biên giới về 0%;<br>• <strong>Trọn vẹn hạn mức chính thức + Cố vấn 7×16 / 7×24</strong>: Đầy đủ hạn mức thuê bao chính thức, thanh toán trọn gói, đồng bộ iCloud/Google Drive và hỗ trợ kỹ thuật 1-kèm-1.</p>
+              </details>
+              <details>
+                <summary>&quot;Môi trường ổn định, tất định&quot; cụ thể mang lại lợi ích gì trong thực tế?</summary>
+                <p>Đó là sự kết hợp giữa không gian làm việc biệt lập của riêng bạn + một máy trạm vật lý Mac cấu hình cao cố định + dịch vụ quản lý thanh toán, gia hạn và vận hành kỹ thuật hàng ngày chuyên biệt. Quy trình vận hành chuẩn hóa giúp loại bỏ tình trạng rớt mạng bất ngờ, xung đột cấu hình hay lỗi gia hạn thẻ để luồng công việc của bạn luôn thông suốt.</p>
+              </details>
+              <details>
+                <summary>Mã nguồn và dữ liệu của tôi được bảo mật và giữ riêng tư ra sao?</summary>
+                <p>Ở gói 1x / 5x, mỗi người dùng có một tài khoản macOS riêng với tệp tin, phân quyền và phiên làm việc tách biệt, chỉ truy cập qua Apple Screen Sharing nên không ai khác có thể thấy màn hình của bạn. Ở gói 20x, bạn có thể bật chế độ nguyên máy riêng: toàn bộ chiếc Mac Studio hoặc Mac mini cấu hình cao chỉ phục vụ mình bạn, cách ly ngay từ phần cứng. Lịch sử phiên, mã nguồn và biến môi trường đều nằm trong tài khoản hoặc máy riêng của bạn. Bạn tự đặt mật khẩu và mã hóa, còn đội ngũ chúng tôi không chủ động truy cập dữ liệu trừ khi bảo trì, xử lý sự cố bảo mật hoặc khắc phục lỗi theo sự cho phép của bạn.</p>
+              </details>
+              <details>
+                <summary>Máy chủ vật lý và hạ tầng mạng được đặt ở đâu?</summary>
+                <p>Hệ thống máy vật lý Mac Studio và Mac mini cấu hình cao của chúng tôi đặt tại <strong>Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand và Canada</strong>, kết nối trực tiếp qua <strong>mạng băng thông rộng ISP bản địa (không dùng trung tâm dữ liệu đám mây công cộng dùng chung)</strong> nhằm đạt độ tin cậy tối đa. Bạn chỉ cần chọn khu vực ưu tiên khi thanh toán, chúng tôi sẽ cấp máy và tài khoản cố định lâu dài cho bạn (nguyên máy riêng ở gói 20x).</p>
+              </details>
+              <details>
+                <summary>Gói lưu trữ đám mây Google Drive &amp; iCloud+ hoạt động như thế nào?</summary>
+                <p>Chúng tôi cung cấp các mức dung lượng 2 TB ($8.99/tháng), 6 TB ($28.99/tháng), 12 TB ($58.99/tháng) và 30 TB ($148.99/tháng). Khi thanh toán trên Stripe, bạn chỉ cần chọn <strong>Apple iCloud+</strong> hoặc <strong>Google Drive (Google One)</strong> và ghi chú email tài khoản của mình; đội ngũ cố vấn 1-kèm-1 7×16h sẽ kích hoạt và quản lý gia hạn xuyên suốt cho bạn.</p>
+              </details>
+              <details>
+                <summary>Tôi có thể nâng cấp hoặc hạ cấp gói cước không?</summary>
+                <p>Hoàn toàn được. Thay đổi sẽ áp dụng từ chu kỳ thanh toán tiếp theo. Nếu bạn cần nâng cấp ngay lập tức, hãy liên hệ với chúng tôi để chỉ thanh toán phần chênh lệch.</p>
+              </details>
+              <details>
+                <summary>Nếu gặp sự cố trong quá trình sử dụng thì sao?</summary>
+                <p>Hãy liên hệ ngay với chúng tôi. Chúng tôi luôn ưu tiên xử lý sự cố nhanh nhất có thể để công việc của bạn sớm trở lại bình thường.</p>
+              </details>
+              <details>
+                <summary>Làm thế nào để đóng góp máy cá nhân hoặc tham gia mạng lưới tính toán toàn cầu để vừa có thêm thu nhập vừa thắp sáng thêm nhiều thành phố?</summary>
+                <p>Chúng tôi nồng nhiệt chào đón các đối tác trên toàn thế giới tham gia mạng lưới tính toán bản địa nhằm hướng tới mục tiêu phục vụ trọn vẹn 8 tỷ người! <strong>Bạn có thể đóng góp thiết bị của mình và chia sẻ tài nguyên — vừa tạo nguồn thu nhập cho bản thân, vừa thắp sáng cơ hội hiện thực hóa ước mơ cho người khác!</strong> Dù bạn đang có máy Mac vật lý nhàn rỗi hay cấu hình cao, đường truyền băng thông bản địa chất lượng tốt tại thành phố đang sống, hoặc kết nối cộng đồng nhà phát triển &amp; sáng tạo tại địa phương, hãy gửi email bất cứ lúc nào tới <a href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network" style="color:var(--primary-strong);font-weight:600">jason2023zhang@gmail.com</a> kèm thông tin thành phố và phần cứng/ISP của bạn—chào mừng bạn đồng hành!</p>
+              </details>
+            </div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Global Partner & CTA -->
+    <!-- Floor 6: Buyer CTA First + Secondary Global Compute Partner Strip -->
     <section class="section">
       <div class="container">
-        <div class="partner-banner" id="partner">
-          <span class="eyebrow"><span class="dot"></span>GLOBAL COMPUTE PARTNER · Đồng Kiến Tạo Mạng Lưới Tính Toán Toàn Cầu</span>
-          <h2>Tham Gia Mạng Lưới Tính Toán Toàn Cầu —<br><em class="grad">Thực Sự Phục Vụ Trọn Vẹn 8 Tỷ Người!</em></h2>
-          <p>
-            Khởi đầu từ hơn 13 thành phố đã thắp sáng tại 9 quốc gia, chúng tôi đang đưa năng lực tính toán bản địa thuần khiết và năng suất AI tiên phong tới mọi ngóc ngách trên thế giới. <strong>Bạn có thể đóng góp thiết bị của mình và chia sẻ tài nguyên — vừa tạo thu nhập bền vững, vừa thắp sáng cơ hội ước mơ cho những người khác!</strong> Dù bạn ở bất cứ đâu, chúng tôi luôn chào đón — hãy gửi email trực tiếp để cùng nhau thắp sáng thành phố tiếp theo.
-          </p>
-          <ul class="partner-chips">
-            <li>✦ Đóng Góp Máy Mac · Chia Sẻ &amp; Tạo Thu Nhập</li>
-            <li>✦ Chia Sẻ Tài Nguyên Băng Thông Bản Địa</li>
-            <li>✦ Lưu Trữ Cụm Máy &amp; Đối Tác Khu Vực</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20/%20Join%20Zaokit%20Global%20Compute%20Network&amp;body=Ch%C3%A0o%20Jason%2C%20t%C3%B4i%20mu%E1%BB%91n%20chia%20s%E1%BA%BB%20t%C3%A0i%20nguy%C3%AAn%20v%C3%A0%20tham%20gia%20M%E1%BA%A1ng%20l%C6%B0%E1%BB%9Bi%20T%C3%ADnh%20to%C3%A1n%20To%C3%A0n%20c%E1%BA%A7u%20Zaokit%3A%0A%0A1.%20Qu%E1%BB%91c%20gia%20/%20Th%C3%A0nh%20ph%E1%BB%91%3A%0A2.%20H%C3%ACnh%20th%E1%BB%A9c%20h%E1%BB%A3p%20t%C3%A1c%20%28%C4%90%C3%B3ng%20g%C3%B3p%20m%C3%A1y%20Mac%20c%C3%A1%20nh%C3%A2n%20/%20N%C3%BAt%20b%C4%83ng%20th%C3%B4ng%20b%E1%BA%A3n%20%C4%91%E1%BB%8Ba%20/%20%C4%90%E1%BB%91i%20t%C3%A1c%20khu%20v%E1%BB%B1c%29%3A%0A3.%20C%E1%BA%A5u%20h%C3%ACnh%20m%C3%A1y%20Mac%20%26%20th%C3%B4ng%20tin%20nh%C3%A0%20m%E1%BA%A1ng%20ISP%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng%3A%0A4.%20Th%C3%B4ng%20tin%20li%C3%AAn%20h%E1%BB%87%3A">Đóng Góp Máy Mac / Gửi Email: jason2023zhang@gmail.com →</a>
-          </div>
-        </div>
-
         <div class="cta">
           <h2>AI Xóa Nhòa Mọi Biên Giới. Bắt Đầu Ngay Hôm Nay.</h2>
           <p>Gia nhập cộng đồng các nhà kiến tạo tại những thành phố toàn cầu của chúng tôi — đăng ký qua Stripe để nhận bàn giao ngay trong ngày cùng năng suất AI tiên tiến nhất và trải nghiệm đỉnh cao.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pricing">Chọn gói ngay</a>
+            <a class="btn btn-primary" href="#pricing" data-goto-audience="solo">Gói Cá nhân →</a>
+            <a class="btn btn-ent-hero" href="#pricing-enterprise" data-goto-audience="enterprise">Nhóm &amp; Doanh nghiệp →</a>
             <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=T%C6%B0%20v%E1%BA%A5n%20d%E1%BB%8Bch%20v%E1%BB%A5%20Zaokit%20ClaudeOps">Email: jason2023zhang@gmail.com</a>
           </div>
           <div class="contact-tg">
@@ -1922,6 +2093,22 @@
                 @letcode2020
               </a>
             </div>
+          </div>
+        </div>
+
+        <div class="partner-banner partner-compact" id="partner">
+          <div class="partner-compact-copy">
+            <span class="eyebrow"><span class="dot"></span>GLOBAL COMPUTE PARTNER · Đồng Kiến Tạo Mạng Lưới Tính Toán Toàn Cầu</span>
+            <h3>Tham Gia Mạng Lưới Tính Toán Toàn Cầu — <em class="grad">Thực Sự Phục Vụ Trọn Vẹn 8 Tỷ Người!</em></h3>
+            <p>Khởi đầu từ hơn 13 thành phố đã thắp sáng tại 9 quốc gia, chúng tôi đang đưa năng lực tính toán bản địa thuần khiết và năng suất AI tiên phong tới mọi ngóc ngách trên thế giới. <strong>Bạn có thể đóng góp thiết bị của mình và chia sẻ tài nguyên — vừa tạo thu nhập bền vững, vừa thắp sáng cơ hội ước mơ cho những người khác!</strong> Dù bạn ở bất cứ đâu, chúng tôi luôn chào đón — hãy gửi email trực tiếp để cùng nhau thắp sáng thành phố tiếp theo.</p>
+            <ul class="partner-chips">
+              <li>✦ Đóng Góp Máy Mac · Chia Sẻ &amp; Tạo Thu Nhập</li>
+              <li>✦ Chia Sẻ Tài Nguyên Băng Thông Bản Địa</li>
+              <li>✦ Lưu Trữ Cụm Máy &amp; Đối Tác Khu Vực</li>
+            </ul>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20/%20Join%20Zaokit%20Global%20Compute%20Network&amp;body=Ch%C3%A0o%20Jason%2C%20t%C3%B4i%20mu%E1%BB%91n%20chia%20s%E1%BA%BB%20t%C3%A0i%20nguy%C3%AAn%20v%C3%A0%20tham%20gia%20M%E1%BA%A1ng%20l%C6%B0%E1%BB%9Bi%20T%C3%ADnh%20to%C3%A1n%20To%C3%A0n%20c%E1%BA%A7u%20Zaokit%3A%0A%0A1.%20Qu%E1%BB%91c%20gia%20/%20Th%C3%A0nh%20ph%E1%BB%91%3A%0A2.%20H%C3%ACnh%20th%E1%BB%A9c%20h%E1%BB%A3p%20t%C3%A1c%20%28%C4%90%C3%B3ng%20g%C3%B3p%20m%C3%A1y%20Mac%20c%C3%A1%20nh%C3%A2n%20/%20N%C3%BAt%20b%C4%83ng%20th%C3%B4ng%20b%E1%BA%A3n%20%C4%91%E1%BB%8Ba%20/%20%C4%90%E1%BB%91i%20t%C3%A1c%20khu%20v%E1%BB%B1c%29%3A%0A3.%20C%E1%BA%A5u%20h%C3%ACnh%20m%C3%A1y%20Mac%20%26%20th%C3%B4ng%20tin%20nh%C3%A0%20m%E1%BA%A1ng%20ISP%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng%3A%0A4.%20Th%C3%B4ng%20tin%20li%C3%AAn%20h%E1%BB%87%3A">Đóng Góp Máy Mac / Gửi Email: jason2023zhang@gmail.com →</a>
           </div>
         </div>
       </div>
@@ -2493,6 +2680,91 @@
       });
     }
 
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var panelSolo = document.getElementById('panel-solo');
+    var panelEnt = document.getElementById('pricing-enterprise');
+    var finderTip = document.getElementById('finder-tip');
+    var finderTipText = document.getElementById('finder-tip-text');
+    var finderTipClose = document.getElementById('finder-tip-close');
+
+    function setAudience(aud) {
+      var isEnt = aud === 'enterprise';
+      if (panelSolo) {
+        panelSolo.hidden = isEnt;
+        if (!isEnt) clearReveal(panelSolo);
+      }
+      if (panelEnt) {
+        panelEnt.hidden = !isEnt;
+        if (isEnt) clearReveal(panelEnt);
+      }
+      document.querySelectorAll('[data-audience-tab]').forEach(function (btn) {
+        btn.setAttribute('aria-selected', btn.getAttribute('data-audience-tab') === (isEnt ? 'enterprise' : 'solo') ? 'true' : 'false');
+      });
+    }
+
+    function clearScenarioHighlight() {
+      document.querySelectorAll('.qf-btn').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.plan-recommended').forEach(function (p) { p.classList.remove('plan-recommended'); });
+      if (finderTip) finderTip.hidden = true;
+    }
+
+    function applyScenario(sid) {
+      document.querySelectorAll('.qf-btn').forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-scenario') === sid);
+      });
+      document.querySelectorAll('.plan-recommended').forEach(function (p) { p.classList.remove('plan-recommended'); });
+      var targetCards = [];
+      if (sid === 'solo-dev') {
+        setAudience('solo');
+        targetCards = ['5x'];
+      } else if (sid === 'solo-max') {
+        setAudience('solo');
+        targetCards = ['20x'];
+      } else if (sid === 'team-rd') {
+        setAudience('enterprise');
+        targetCards = ['biz', 'team'];
+      } else if (sid === 'ent-custom') {
+        setAudience('enterprise');
+        targetCards = ['custom'];
+      }
+      targetCards.forEach(function (ck) {
+        var el = document.querySelector('[data-plan-card="' + ck + '"]');
+        if (el) el.classList.add('plan-recommended');
+      });
+      if (finderTip && finderTipText && FINDER_TIPS[sid]) {
+        finderTipText.textContent = '💡 ' + FINDER_TIPS[sid];
+        finderTip.hidden = false;
+      }
+    }
+
+    document.querySelectorAll('[data-audience-tab]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        clearScenarioHighlight();
+        setAudience(btn.getAttribute('data-audience-tab'));
+      });
+    });
+
+    document.querySelectorAll('[data-scenario]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var sid = btn.getAttribute('data-scenario');
+        if (btn.classList.contains('active')) {
+          clearScenarioHighlight();
+        } else {
+          applyScenario(sid);
+        }
+      });
+    });
+
+    if (finderTipClose) {
+      finderTipClose.addEventListener('click', clearScenarioHighlight);
+    }
+
+    document.querySelectorAll('details').forEach(function (det) {
+      det.addEventListener('toggle', function () {
+        if (det.open) clearReveal(det);
+      });
+    });
+
     document.querySelectorAll('a[href="#top"]').forEach(function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault();
@@ -2508,30 +2780,9 @@
       clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
       var headEl = sec.querySelector('.section-head') || sec;
-      var gridEl = sec.querySelector('.pricing-solo') || sec.querySelector('.pricing');
       var idealTop = docTop(headEl) - headerH - 12;
-      var targetY = idealTop;
-      if (gridEl) {
-        var plans = Array.prototype.slice.call(gridEl.querySelectorAll('.plan'));
-        if (plans.length) {
-          var checkPlans = innerWidth <= 960
-            ? [plans.reduce(function (a, b) { return docTop(a) <= docTop(b) ? a : b; })]
-            : plans;
-          var maxBtnBottom = 0;
-          checkPlans.forEach(function (p) {
-            var btn = p.querySelector('.btn');
-            if (btn) maxBtnBottom = Math.max(maxBtnBottom, docTop(btn) + btn.offsetHeight);
-          });
-          if (maxBtnBottom > 0) {
-            var neededBottom = maxBtnBottom + 16;
-            if (neededBottom - idealTop > innerHeight) {
-              targetY = neededBottom - innerHeight;
-            }
-          }
-        }
-      }
       var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
-      var destY = Math.max(0, Math.min(targetY, maxScroll));
+      var destY = Math.max(0, Math.min(idealTop, maxScroll));
       window.scrollTo({
         top: destY,
         behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant'
@@ -2541,19 +2792,28 @@
 
     function scrollToSection(id, smooth) {
       if (id === 'pricing') return scrollToPricing(smooth);
+      if (id === 'pricing-enterprise') {
+        setAudience('enterprise');
+        return scrollToPricing(smooth);
+      }
+      if (id === 'dedicated-line') {
+        setAudience('solo');
+        var dlDet = document.getElementById('dedicated-line');
+        if (dlDet) { dlDet.open = true; clearReveal(dlDet); }
+      } else if (id === 'seat-addons-drawer') {
+        setAudience('enterprise');
+        var saDet = document.getElementById('seat-addons-drawer');
+        if (saDet) { saDet.open = true; clearReveal(saDet); }
+      } else if (id === 'storage') {
+        var stDet = document.getElementById('storage');
+        if (stDet) { stDet.open = true; clearReveal(stDet); }
+      }
       var sec = document.getElementById(id);
       if (!sec) return null;
       clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
-      var rawY;
-      if (id === 'storage') {
-        rawY = docTop(sec) - headerH - 4;
-      } else if (id === 'pricing-enterprise' || id === 'dedicated-line') {
-        rawY = docTop(sec) - headerH - 16;
-      } else {
-        var headEl = sec.querySelector('.section-head');
-        rawY = headEl ? (docTop(headEl) - headerH - 28) : (docTop(sec) - headerH - 16);
-      }
+      var headEl = sec.querySelector('.section-head');
+      var rawY = headEl ? (docTop(headEl) - headerH - 24) : (docTop(sec) - headerH - 16);
       var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
       var destY = Math.max(0, Math.min(rawY, maxScroll));
       window.scrollTo({
@@ -2570,9 +2830,14 @@
       if (!document.getElementById(id)) return;
       el.addEventListener('click', function (e) {
         e.preventDefault();
+        var gotoAud = el.getAttribute('data-goto-audience');
+        if (gotoAud) {
+          clearScenarioHighlight();
+          setAudience(gotoAud);
+        }
         history.replaceState(null, '', '#' + id);
         var destY = scrollToSection(id, true);
-        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line') && navById.pricing ? 'pricing' : null);
+        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line' || id === 'storage') && navById.pricing ? 'pricing' : null);
         if (spyId && destY !== null) {
           lockedNavId = spyId;
           lockTargetY = destY;
@@ -2581,6 +2846,14 @@
         }
       });
     });
+
+    (function initAudienceFromUrl() {
+      var sp = new URLSearchParams(location.search);
+      var tabQ = (sp.get('tab') || '').toLowerCase();
+      if (tabQ === 'enterprise' || tabQ === 'team' || location.hash === '#pricing-enterprise') {
+        setAudience('enterprise');
+      }
+    })();
 
     if (location.hash && location.hash.length > 1) {
       var initId = decodeURIComponent(location.hash.slice(1));
@@ -2610,7 +2883,7 @@
     });
 
     if (!root.classList.contains('motion') || !('IntersectionObserver' in window)) return;
-    var targets = document.querySelectorAll('main .section-head, main .card, main .faq details, main .cta, main .stripe-trust, main .currency-switch, main .pricing-controls, main .tier-divider, main .enterprise-toolbar, main .seat-addons');
+    var targets = document.querySelectorAll('main .section-head, #service .card, #panel-solo > .pricing > .card, #security .card, #process .card, main .faq > details, main .cta, main .stripe-trust, main .audience-tabs, main .quick-finder, main .pricing-controls');
     targets.forEach(function (el) {
       var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
       el.classList.add('mo-reveal');

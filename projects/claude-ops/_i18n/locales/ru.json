@@ -917,5 +917,111 @@
         "body_html": "<p>Если у вас возникли вопросы по списанию средств, пожалуйста, сначала напишите нам — мы оперативно разберёмся и решим проблему. При подаче запроса на чарджбэк в банк без предварительного обращения к нам мы оставляем за собой право приостановить оказание соответствующих услуг на время рассмотрения спора.</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "От первичного развёртывания до ежедневной эксплуатации — всё настроено под ключ и готово к работе. Физические станции Mac Studio и Mac mini высокой конфигурации в нативных сетях местных провайдеров Австралии, США, Сингапура, Малайзии, Индонезии, Японии, Камбоджи, Новой Зеландии и Канады (никаких дешёвых публичных VPS-дата-центров).",
+    "hero_cta_solo": "Индивидуальные планы →",
+    "hero_cta_ent": "Команды и Бизнес →",
+    "hero_consult": "Нужен кастомный кластер? Напишите нам →",
+    "pillars_tag": "Сервис",
+    "pillars_h2": "Оставьте настройку, сеть и поддержку нам — сосредоточьтесь на задачах",
+    "pillars_sub": "От первичного развёртывания до ежедневной эксплуатации — всё настроено под ключ и готово к работе.",
+    "pillars": [
+      {
+        "h3": "Мощные Mac Studio и Mac mini",
+        "p": "Физические станции Mac Studio и Mac mini высокой конфигурации в нативных сетях местных провайдеров Австралии, США, Сингапура, Малайзии, Индонезии, Японии, Камбоджи, Новой Зеландии и Канады (никаких дешёвых публичных VPS-дата-центров). Изоляция на уровне аккаунта (или выделенный Mac на 20x) и долгосрочная стабильность.",
+        "chips": [
+          "Физические Mac",
+          "Полная изоляция"
+        ]
+      },
+      {
+        "h3": "Корпоративная магистраль BGP",
+        "p": "Мы постоянно инвестируем в оборудование и магистральные маршруты: нативные провайдеры в 9 странах с симметричным каналом 200–500+ Мбит/с, собственные ретрансляторы и корпоративное BGP-ядро сводят потерю пакетов — главного врага удалённого рабочего стола — к нулю.",
+        "chips": [
+          "Симметричные 200–500+ Мбит/с",
+          "Двухплечевой BBR"
+        ]
+      },
+      {
+        "h3": "Инженерный консьерж 1-на-1",
+        "p": "Персональное инженерное сопровождение для создателей, разработчиков, основателей и команд. От построения процессов в Claude Code, настройки MCP и Skills до вывода реальных проектов в продакшен — прямая поддержка 7×8 / 7×16 / 7×24.",
+        "chips": [
+          "Полное ведение подписок",
+          "Топовый сервис"
+        ]
+      }
+    ],
+    "finder_label": "Быстрый подбор · Выберите ваш сценарий:",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "Для одного разработчика",
+    "tab_solo_sub": "1 пользователь · 3 понятных тарифа",
+    "tab_ent_title": "Команды и Корпорации",
+    "tab_ent_sub": "5–100+ мест · Выделенные Mac · Единый счёт",
+    "solo_fit": [
+      "Для ежедневных диалогов, работы с текстами и лёгкого кодинга в стабильной среде Claude.",
+      "Для разработчиков и создателей контента, интенсивно использующих Claude Code каждый день.",
+      "Для активных создателей, фаундеров и инженеров, круглосуточно запускающих несколько агентов параллельно."
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "5 мест",
+    "ent_fit_biz": "10 мест",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "По запросу",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "Связаться с корпоративным консультантом →",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "Выделенная бизнес-линия ClaudeOps · Трансграничное ускорение",
+    "drawer_line_hint": "Дополнительная опция для тарифов 1x и 5x: маршрутизация трафика через нашу корпоративную трансграничную магистраль BGP с двухплечевым ускорением BBR и 0% потерь пакетов для идеальной отзывчивости Screen Sharing и Claude Code (при оплате за год — 2 месяца бесплатно).",
+    "drawer_line_cta": "Открыть опции",
+    "drawer_upg_title": "Пакеты повышения отдельных мест",
+    "drawer_upg_hint": "Гибко комбинируйте уровни на любом активном базовом плане Team или Business — повышайте лимиты для нужных сотрудников в любой момент (при годовой оплате также действуют 2 месяца бесплатно).",
+    "drawer_upg_cta": "Открыть опции",
+    "drawer_storage_title": "Управляемое облачное хранилище для цифровых активов",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "Открыть опции",
+    "drawer_close_cta": "Свернуть",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "Двухуровневая изоляция: раздельные аккаунты и выделенные машины",
+    "trust_sub": "Для защиты конфиденциальности клиентов все отзывы опубликованы с иллюстративными аватарами и обезличенными именами с сохранением реального опыта и тарифов.",
+    "faq_more_open": "Показать ещё {count} вопросов",
+    "faq_more_close": "Свернуть вопросы"
   }
 }

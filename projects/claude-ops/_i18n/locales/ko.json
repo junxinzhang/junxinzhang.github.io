@@ -917,5 +917,111 @@
         "body_html": "<p>청구 내역에 문의가 있으시면 먼저 당사로 연락해 주십시오. 신속히 확인하여 해결해 드리겠습니다. 사전 협의 없이 카드사에 차지백(지불거절)을 접수하시는 경우 분쟁 처리 기간 동안 관련 서비스가 일시정지될 수 있습니다.</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "전 세계 9개국 현지 네이티브 회선 기반 전용 물리 Mac 워크스테이션 + 기업용 BGP 가속 전용선 + 최대 7×24h 1:1 AI 엔지니어 컨시어지. 당일 개통 즉시 사용.",
+    "hero_cta_solo": "개인 개발자 플랜 →",
+    "hero_cta_ent": "팀 및 기업 플랜 →",
+    "hero_consult": "맞춤 구성이 필요하신가요? 엔지니어에게 이메일 문의 →",
+    "pillars_tag": "Core Capabilities",
+    "pillars_h2": "환경 구축·네트워크·운영은 맡기고 창작과 개발에만 집중하세요",
+    "pillars_sub": "설정 번거로움, 장시간 작업 끊김, 해외 결제 문제를 한 번에 해결하는 3대 핵심 가치.",
+    "pillars": [
+      {
+        "h3": "9개국 물리 Mac 실기기 & 2단계 격리",
+        "p": "고사양 Mac Studio / Mac mini 실기기를 현지 네이티브 ISP에 배치. 1x/5x 독립 macOS 계정 격리 및 20x·팀 플랜 단독 하드웨어 독점 지원.",
+        "chips": [
+          "물리 Mac 실기기",
+          "계정 / 장비 단독 격리"
+        ]
+      },
+      {
+        "h3": "패킷 손실 0% 글로벌 가속 네트워크",
+        "p": "대칭형 200–500Mbps+ 대역폭과 자체 릴레이 및 기업용 BGP 듀얼 BBR 최적화로 원격 데스크톱과 Claude Code 장시간 작업이 끊기지 않습니다.",
+        "chips": [
+          "200–500Mbps+ 대칭형",
+          "기업용 BGP 전용선"
+        ]
+      },
+      {
+        "h3": "결제 풀 매니지드 + 1:1 전담 컨시어지",
+        "p": "환경 사전 세팅, 구독 갱신 및 업그레이드 일괄 대행. Claude Code, MCP/Skills 세팅부터 실무 적용까지 7×8h~7×24h 1:1 기술 지원.",
+        "chips": [
+          "갱신·결제 완전 대행",
+          "최대 7×24h 1:1 지원"
+        ]
+      }
+    ],
+    "finder_label": "3초 플랜 추천 · 사용 목적을 선택하세요:",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "개인 주력 코딩 / 개발",
+        "tip": "추천: [개인 5x Pro] 매일 Claude Code를 집중 사용하는 개발자에게 최고 가성비. 해외 원격 연결 시 아래 전용선 추가를 권장합니다."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24h 멀티 에이전트 / 장비 독점",
+        "tip": "추천: [개인 20x Ultimate] 물리 Mac 1대 완전 독점 가능, 기업 전용선 및 6TB 클라우드 스토리지 무료 포함."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10인 핵심 개발팀",
+        "tip": "추천: [Team 5석 / Business 10석] 전용 물리 클러스터, 통합 인보이스, 전용선 및 12–30TB 스토리지 무료 제공."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15인 이상 엔터프라이즈 클러스터",
+        "tip": "추천: [Custom 프라이빗 클러스터] 15–100+석 혼합 구성, 멀티 리전 이중화 및 기업 맞춤 SLA 계약 지원."
+      }
+    ],
+    "tab_solo_title": "개인 개발자 / 크리에이터",
+    "tab_solo_sub": "1인 전용 · 명확한 3가지 플랜",
+    "tab_ent_title": "팀 & 엔터프라이즈 클러스터",
+    "tab_ent_sub": "5–100+인 · 전용 장비 · 통합 인보이스",
+    "solo_fit": [
+      "추천 대상: 일상 대화 · 글쓰기 · 가벼운 코딩",
+      "추천 대상: 매일 Claude Code를 집중 사용하는 주력 개발자 (개인 80% 선택)",
+      "추천 대상: 24/7 멀티 에이전트 병렬 실행 · 물리 Mac 단독 독점"
+    ],
+    "ent_step1": "Step 1: 팀 기본 좌석 사양 선택",
+    "ent_step2": "Step 2: 팀 인원에 맞는 전용 클러스터 규모 선택",
+    "ent_fit_team": "추천 대상: 3–5인 스타트업 핵심팀 및 AI 스튜디오",
+    "ent_fit_biz": "추천 대상: 6–12인 테크 기업 및 퀀트·R&D 부서",
+    "custom_card": {
+      "badge": "15–100+석 · 아키텍트 맞춤 설계",
+      "tier_b": "Custom",
+      "tier_span": "프라이빗 클러스터",
+      "fit": "추천 대상: 중대형 R&D 센터 · 혼합 좌석 배분 · 맞춤형 보안 규정",
+      "desc": "부서별 Pro / Max / Ultra 자유 혼합 구성과 다국가 이중화 Mac Studio 전용 클러스터를 설계해 드립니다.",
+      "price_text": "맞춤 견적",
+      "price_sub": "15석 이상 · 전담 아키텍트 1:1 견적",
+      "features": [
+        "15–100+석 Pro / Max / Ultra 비율 자유 혼합 구성",
+        "다중 고사양 Mac Studio 전용 클러스터 및 멀티리전 재해복구",
+        "전용 비즈니스 고정 회선 IP 및 독립 고속 릴레이 게이트웨이",
+        "통합 상업 인보이스(Commercial Invoice) 및 맞춤 SLA",
+        "7×24h 엔터프라이즈 전담 기술팀 실시간 채널 지원"
+      ],
+      "btn": "기업 전담 컨설턴트 문의 →",
+      "consult": "당일 회신 · 무료 아키텍처 설계 및 견적 제공",
+      "mailto_subject": "Zaokit 엔터프라이즈 프라이빗 클러스터 문의 (15석 이상)"
+    },
+    "drawer_line_title": "선택 추가 옵션: ClaudeOps 기업용 BGP 가속 전용선",
+    "drawer_line_hint": "1x / 5x 사용자의 해외 원격 화면 공유 및 SSH 패킷 손실 0% 보장 (20x 플랜 무료 포함)",
+    "drawer_line_cta": "옵션 보기",
+    "drawer_upg_title": "일부 팀원만 상위 사양이 필요한가요? 좌석별 차액 업그레이드",
+    "drawer_upg_hint": "Team / Business 구독 팀에서 특정 핵심 인원만 Max 또는 Ultra로 개별 업그레이드",
+    "drawer_upg_cta": "업그레이드 보기",
+    "drawer_storage_title": "선택 부가서비스: Google Drive / Apple iCloud+ 전용 스토리지 관리 (2TB–30TB)",
+    "drawer_storage_pill": "20x 6TB 무료 · 팀/기업 6–30TB 무료",
+    "drawer_storage_hint": "독립 계정 공간 격리 · 자동 백업 및 갱신 완전 대행",
+    "drawer_storage_cta": "4개 용량 보기",
+    "drawer_close_cta": "접기",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "하드웨어급 보안 격리 · 패킷 손실 0% 실측 · 실제 구독자 후기",
+    "trust_sub": "모든 구독은 실제 물리 Mac 하드웨어, 기업용 BGP 백본 및 검증된 엔지니어링 운영으로 뒷받침됩니다.",
+    "faq_more_open": "나머지 {count}개 질문 더 보기",
+    "faq_more_close": "질문 접기"
   }
 }

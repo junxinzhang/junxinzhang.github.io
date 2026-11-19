@@ -917,5 +917,111 @@
         "body_html": "<p>Jika Anda memiliki pertanyaan mengenai suatu tagihan, mohon hubungi kami terlebih dahulu dan kami akan menyelesaikannya dengan cepat. Apabila Anda mengajukan chargeback melalui bank tanpa menghubungi kami lebih dulu, kami dapat menangguhkan layanan terkait selama sengketa masih berlangsung.</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "Dari penyiapan awal hingga operasional harian, dikelola sepenuhnya dan siap langsung dipakai. Mac Studio atau Mac mini spesifikasi tinggi di jaringan broadband ISP lokal asli di Australia, AS, Singapura, Malaysia, Indonesia, Jepang, Kamboja, Selandia Baru, atau Kanada (bukan pusat data cloud bersama yang murahan).",
+    "hero_cta_solo": "Paket Individu →",
+    "hero_cta_ent": "Tim & Perusahaan →",
+    "hero_consult": "Butuh kluster khusus? Email konsultan kami →",
+    "pillars_tag": "Layanan",
+    "pillars_h2": "Serahkan setup, jaringan & operasional pada kami — fokuslah berkarya",
+    "pillars_sub": "Dari penyiapan awal hingga operasional harian, dikelola sepenuhnya dan siap langsung dipakai.",
+    "pillars": [
+      {
+        "h3": "Mac Studio & mini spek tinggi",
+        "p": "Mac Studio atau Mac mini spesifikasi tinggi di jaringan broadband ISP lokal asli di Australia, AS, Singapura, Malaysia, Indonesia, Jepang, Kamboja, Selandia Baru, atau Kanada (bukan pusat data cloud bersama yang murahan). Isolasi tingkat akun (mesin khusus di 20x), stabil untuk jangka panjang.",
+        "chips": [
+          "Mac Fisik Asli",
+          "Ruang Terisolasi"
+        ]
+      },
+      {
+        "h3": "Backbone BGP enterprise",
+        "p": "Kami terus berinvestasi pada perangkat keras dan rute premium: broadband ISP asli di 9 negara dengan kecepatan simetris 200Mbps–500Mbps+, dipadukan dengan relay mandiri dan backbone BGP enterprise yang menekan packet loss—musuh utama remote desktop—hingga nol.",
+        "chips": [
+          "Simetris 200–500Mbps+",
+          "Dual-leg BBR"
+        ]
+      },
+      {
+        "h3": "Concierge 1-on-1 Kelas Atas",
+        "p": "Pendampingan AI engineering khusus untuk kreator, developer, founder, dan tim. Mulai dari alur kerja Claude Code, konfigurasi MCP dan Skills hingga peluncuran proyek nyata, dapatkan dukungan langsung 1-on-1 7×8j / 7×16j / 7×24j.",
+        "chips": [
+          "Penagihan terkelola",
+          "Layanan Terbaik"
+        ]
+      }
+    ],
+    "finder_label": "Panduan 3 Detik · Pilih skenario Anda:",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "Individu & Kreator",
+    "tab_solo_sub": "1 pengguna · 3 pilihan jelas",
+    "tab_ent_title": "Tim & Perusahaan",
+    "tab_ent_sub": "5–100+ kursi · Mac khusus · Faktur terpadu",
+    "solo_fit": [
+      "Untuk percakapan harian, penulisan, dan coding ringan dengan Claude yang stabil.",
+      "Untuk developer dan kreator yang menggunakan Claude Code secara intensif setiap hari.",
+      "Untuk builder produktif, founder, dan power user yang menjalankan banyak agent sepanjang waktu."
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "5 Kursi",
+    "ent_fit_biz": "10 Kursi",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "Kustom",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "Hubungi Konsultan Enterprise →",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "Jalur Khusus Enterprise ClaudeOps · Akselerasi Lintas Negara",
+    "drawer_line_hint": "Add-on opsional untuk pelanggan 1x & 5x: arahkan trafik melalui backbone lintas negara BGP enterprise kami dengan akselerasi dual-leg BBR 0% packet-loss demi Screen Sharing & Claude Code yang super responsif (tagihan tahunan gratis 2 bulan).",
+    "drawer_line_cta": "Lihat opsi",
+    "drawer_upg_title": "Add-on Upgrade Per Kursi",
+    "drawer_upg_hint": "Padu padankan tingkatan pada paket dasar Team atau Business yang aktif — upgrade anggota tertentu sesuai kebutuhan (add-on tahunan juga gratis 2 bulan).",
+    "drawer_upg_cta": "Lihat opsi",
+    "drawer_storage_title": "Penyimpanan Cloud Terkelola untuk Aset Digital",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "Lihat opsi",
+    "drawer_close_cta": "Tutup",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "Isolasi dua tingkat: akun terpisah dan mesin khusus",
+    "trust_sub": "Demi melindungi privasi klien, seluruh ulasan menampilkan avatar kartun dan identitas yang disamarkan, dengan tetap mempertahankan masukan asli serta tingkatan paket langganan.",
+    "faq_more_open": "Tampilkan {count} pertanyaan lainnya",
+    "faq_more_close": "Sembunyikan"
   }
 }

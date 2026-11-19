@@ -459,16 +459,263 @@ INDEX_EXTRA_I18N_CSS = """
     .map-hud-row b { white-space: normal; min-width: 0; line-height: 1.35 }
     @media (max-width: 1180px) {
       .nav-links { gap: 2px }
-      .nav-links a { padding: 6px 7px; font-size: .81rem }
+      .nav-links a { padding: 6px 9px; font-size: .84rem }
     }
-    @media (max-width: 1030px) {
+    @media (max-width: 920px) {
       .nav-links { display: none }
     }
+
+    /* ===== Streamlined 6-Floor UX & Focused Pricing Architecture ===== */
+    .hero { padding: 54px 0 58px }
+    .hero p.lead { max-width: 44em; margin: 0 auto 24px; font-size: clamp(.98rem, 1.65vw, 1.12rem); line-height: 1.68 }
+    .btn-ent-hero {
+      background: rgba(217, 119, 87, .10); color: var(--cream);
+      border: 1px solid rgba(232, 144, 111, .42);
+    }
+    .btn-ent-hero:hover {
+      background: rgba(217, 119, 87, .20); border-color: rgba(242, 180, 143, .75);
+      color: #fff; transform: translateY(-1px);
+    }
+    .hero-sub-link { margin-top: 14px; font-size: .84rem; color: var(--muted) }
+    .hero-sub-link a {
+      color: var(--muted); border-bottom: 1px dashed rgba(255, 255, 255, .22);
+      padding-bottom: 1px; transition: color .2s, border-color .2s;
+    }
+    .hero-sub-link a:hover { color: var(--primary-strong); border-color: var(--primary-strong) }
+    .hero-map-wrap { margin-top: 30px }
+
+    /* Floor 2: 3 Merged Core Capability Pillars */
+    .pillar-card { display: flex; flex-direction: column; padding: 26px 26px 22px }
+    .pillar-card p { flex: 1; line-height: 1.65 }
+    .pillar-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .06) }
+    .pillar-chip {
+      font-size: .75rem; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+      color: var(--primary-strong); background: rgba(217, 119, 87, .12); border: 1px solid rgba(217, 119, 87, .26);
+    }
+
+    /* Floor 3: Pricing Quick-Finder + Audience Segmented Tabs + Clean Cards */
+    #pricing { padding: 72px 0 76px }
+    #pricing > .container > .section-head { margin-bottom: 22px }
+    #pricing > .container > .section-head h2 { font-size: clamp(1.65rem, 3.2vw, 2.25rem) }
+    #pricing > .container > .section-head p { font-size: .95rem; margin-top: 8px }
+
+    .quick-finder {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 10px;
+      max-width: 980px; margin: 0 auto 20px; padding: 11px 16px; border-radius: 16px;
+      background: rgba(255, 255, 255, .025); border: 1px solid rgba(255, 255, 255, .07);
+    }
+    .qf-label { font-size: .82rem; font-weight: 600; color: var(--cream); margin-right: 4px }
+    .qf-btn {
+      font: inherit; font-size: .80rem; font-weight: 500; color: var(--text);
+      padding: 6px 13px; border-radius: 999px; cursor: pointer;
+      background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .10);
+      transition: .2s; white-space: nowrap;
+    }
+    .qf-btn:hover { color: #fff; border-color: rgba(232, 144, 111, .5); background: rgba(217, 119, 87, .12) }
+    .qf-btn.active {
+      color: #fff; font-weight: 600; background: rgba(217, 119, 87, .24);
+      border-color: var(--primary-strong); box-shadow: 0 4px 16px rgba(217, 119, 87, .25);
+    }
+    .finder-tip {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      max-width: 880px; margin: -6px auto 20px; padding: 11px 18px; border-radius: 13px;
+      background: linear-gradient(90deg, rgba(217, 119, 87, .18), rgba(242, 180, 143, .08));
+      border: 1px solid rgba(232, 144, 111, .42); color: var(--cream); font-size: .86rem; line-height: 1.5;
+    }
+    .finder-tip[hidden] { display: none !important }
+    .finder-tip-close {
+      background: transparent; border: 0; color: var(--muted); font-size: 1.15rem;
+      line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px; flex-shrink: 0;
+    }
+    .finder-tip-close:hover { color: #fff; background: rgba(255, 255, 255, .08) }
+
+    .audience-tabs {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+      max-width: 680px; margin: 0 auto 20px; padding: 6px; border-radius: 20px;
+      background: rgba(255, 255, 255, .03); border: 1px solid rgba(255, 255, 255, .09);
+    }
+    .aud-tab {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 12px 18px; border-radius: 14px; border: 1px solid transparent;
+      background: transparent; color: var(--muted); cursor: pointer; font-family: inherit;
+      text-align: left; transition: .22s;
+    }
+    .aud-tab:hover { color: var(--cream); background: rgba(255, 255, 255, .035) }
+    .aud-tab[aria-selected="true"] {
+      background: linear-gradient(135deg, rgba(217, 119, 87, .24), rgba(217, 119, 87, .10));
+      border-color: rgba(232, 144, 111, .58); color: #fff;
+      box-shadow: 0 10px 28px -10px rgba(217, 119, 87, .45);
+    }
+    .aud-icon {
+      width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0;
+      background: rgba(255, 255, 255, .05); color: var(--muted); transition: .22s;
+    }
+    .aud-tab[aria-selected="true"] .aud-icon { background: var(--primary); color: #fff }
+    .aud-txt strong { display: block; font-size: .96rem; font-weight: 700; color: inherit; line-height: 1.25 }
+    .aud-txt span { display: block; font-size: .76rem; color: var(--muted); margin-top: 2px; line-height: 1.3 }
+    .aud-tab[aria-selected="true"] .aud-txt span { color: #f2d5be }
+    @media (max-width: 600px) {
+      .audience-tabs { grid-template-columns: 1fr }
+      .qf-btn { white-space: normal; text-align: center }
+    }
+
+    .pricing-panel[hidden] { display: none !important }
+    .pricing-controls { margin: 0 auto 26px; gap: 12px }
+
+    /* Comfortable, breathable plan cards */
+    #pricing .pricing-solo .plan,
+    #pricing .pricing-enterprise .plan { padding: 28px 25px 24px }
+    #pricing .pricing-solo .plan-tier b,
+    #pricing .pricing-enterprise .plan-tier b { font-size: 2rem }
+    #pricing .pricing-solo .price,
+    #pricing .pricing-enterprise .price { font-size: 2.3rem }
+    #pricing .pricing-solo .features li { padding: 5px 0; font-size: .89rem; line-height: 1.45 }
+    #pricing .pricing-solo .plan .btn,
+    #pricing .pricing-enterprise .plan .btn { padding: 12px 20px; font-size: .95rem }
+
+    .plan-fit {
+      margin: 10px 0 12px; padding: 6px 11px; border-radius: 9px;
+      background: rgba(217, 119, 87, .10); border-left: 3px solid var(--primary);
+      color: #f5dcc8; font-size: .80rem; font-weight: 600; line-height: 1.4;
+    }
+    .plan.plan-recommended {
+      outline: 2px solid #ffd7b3; outline-offset: 2px;
+      box-shadow: 0 0 0 6px rgba(217, 119, 87, .20), 0 26px 60px -16px rgba(217, 119, 87, .42) !important;
+    }
+
+    /* Enterprise 2-step clarity + 3rd Custom Cluster Card */
+    .enterprise-wrap { margin-top: 0 }
+    .ent-step-bar {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      margin: 0 auto 22px; padding: 16px 20px; border-radius: 16px;
+      background: rgba(255, 255, 255, .025); border: 1px solid rgba(232, 144, 111, .20);
+      text-align: center;
+    }
+    .ent-step-title { font-size: .85rem; font-weight: 700; color: var(--cream); letter-spacing: .02em }
+    .ent-step2-label {
+      text-align: center; font-size: .84rem; font-weight: 700; color: var(--muted);
+      margin: 0 0 20px; letter-spacing: .02em;
+    }
+    .plan.plan-custom {
+      border-style: dashed; border-color: rgba(242, 180, 143, .38);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .01));
+    }
+    .badge-custom {
+      background: #1f1b18; color: #e5d5c5; border: 1px solid rgba(255, 255, 255, .20);
+    }
+    .price-custom {
+      font-family: var(--serif); font-size: 1.95rem !important; font-weight: 700; color: var(--cream);
+      line-height: 1.15; letter-spacing: -.01em;
+    }
+
+    /* Collapsible Optional Add-on Drawers (Dedicated Line, Seat Upgrades, Cloud Storage) */
+    .addon-drawer {
+      margin-top: 22px; border-radius: 18px; overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .012));
+      border: 1px solid rgba(232, 144, 111, .24); transition: border-color .2s;
+    }
+    .addon-drawer:hover { border-color: rgba(232, 144, 111, .45) }
+    .addon-drawer[open] { border-color: rgba(232, 144, 111, .48); background: rgba(255, 255, 255, .025) }
+    .addon-drawer > summary {
+      list-style: none; cursor: pointer; padding: 16px 22px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      user-select: none;
+    }
+    .addon-drawer > summary::-webkit-details-marker { display: none }
+    .drawer-sum-left { display: flex; align-items: flex-start; gap: 12px; min-width: 0 }
+    .drawer-ic {
+      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0;
+      background: rgba(217, 119, 87, .15); color: var(--primary-strong); margin-top: 2px;
+    }
+    .drawer-titles { min-width: 0 }
+    .drawer-title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px }
+    .drawer-title-row strong { color: var(--cream); font-size: .95rem; font-weight: 700 }
+    .drawer-pill {
+      font-size: .71rem; font-weight: 700; padding: 2px 9px; border-radius: 999px;
+      background: rgba(91, 209, 139, .14); color: #7ce6a6; border: 1px solid rgba(91, 209, 139, .30);
+      white-space: nowrap;
+    }
+    .drawer-hint { display: block; margin-top: 3px; font-size: .81rem; color: var(--muted); line-height: 1.45 }
+    .drawer-toggle-pill {
+      display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;
+      padding: 7px 14px; border-radius: 999px; font-size: .80rem; font-weight: 600;
+      color: var(--primary-strong); background: rgba(217, 119, 87, .12);
+      border: 1px solid rgba(217, 119, 87, .32); transition: .2s; white-space: nowrap;
+    }
+    .addon-drawer > summary:hover .drawer-toggle-pill { background: var(--primary); color: #fff; border-color: var(--primary) }
+    .drawer-toggle-pill i { font-style: normal; transition: transform .22s ease; display: inline-block }
+    .addon-drawer .when-open { display: none }
+    .addon-drawer[open] .when-closed { display: none }
+    .addon-drawer[open] .when-open { display: inline }
+    .addon-drawer[open] .drawer-toggle-pill i { transform: rotate(180deg) }
+    .drawer-body { padding: 4px 22px 22px; border-top: 1px solid rgba(255, 255, 255, .06) }
+    .drawer-body-lead { margin: 14px 0 16px; font-size: .84rem; color: var(--muted); line-height: 1.55 }
+    .storage-drawer { margin-top: 16px; border-color: rgba(255, 255, 255, .12) }
+    @media (max-width: 680px) {
+      .addon-drawer > summary { flex-direction: column; align-items: flex-start; gap: 10px }
+      .drawer-toggle-pill { align-self: flex-start }
+    }
+
+    /* Floor 4: Merged Security + Network Proof + Curated 3 Reviews */
+    .trust-split {
+      display: grid; grid-template-columns: 1.08fr .92fr; gap: 24px; align-items: stretch;
+    }
+    .sec-stack { display: grid; gap: 14px }
+    .sec-compact-card {
+      display: flex; align-items: flex-start; gap: 16px; padding: 20px 22px;
+    }
+    .sec-compact-card .icon { flex-shrink: 0; width: 40px; height: 40px; margin-top: 2px }
+    .sec-compact-card h3 { margin: 0 0 5px; font-size: 1.02rem }
+    .sec-compact-card p { font-size: .88rem; line-height: 1.58 }
+    .net-proof-box { display: flex; flex-direction: column; justify-content: space-between; padding: 24px 26px }
+    .net-proof-head h3 { margin: 0 0 6px; color: var(--cream); font-size: 1.08rem }
+    .net-proof-head p { margin: 0 0 14px; font-size: .86rem; color: var(--muted); line-height: 1.55 }
+    .net-proof-box .net-chips { margin-bottom: 16px }
+    .trust-reviews { margin-top: 36px; padding-top: 34px; border-top: 1px solid var(--border) }
+    .trust-reviews-title {
+      text-align: center; font-size: .82rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--primary-strong); margin: 0 0 20px;
+    }
+    @media (max-width: 960px) { .trust-split { grid-template-columns: 1fr } }
+
+    /* Floor 5: Focused Top-6 FAQ + Expand More */
+    .faq-more {
+      background: transparent !important; border: 0 !important; padding: 0 !important; margin-top: 6px !important;
+    }
+    .faq-more > summary {
+      justify-content: center !important; width: fit-content; margin: 10px auto 0;
+      padding: 9px 20px; border-radius: 999px; font-size: .85rem; font-weight: 600;
+      color: var(--primary-strong) !important; background: rgba(217, 119, 87, .10);
+      border: 1px solid rgba(217, 119, 87, .30); transition: .2s;
+    }
+    .faq-more > summary:hover { background: rgba(217, 119, 87, .20); color: #fff !important }
+    .faq-more > summary::after { content: "▾" !important; font-size: .9rem !important; margin-left: 6px }
+    .faq-more[open] > summary::after { content: "▴" !important }
+    .faq-more .when-open { display: none }
+    .faq-more[open] .when-closed { display: none }
+    .faq-more[open] .when-open { display: inline }
+    .faq-more-list { margin-top: 14px }
+
+    /* Floor 6: Buyer CTA First, Compact Secondary Partner Strip Below */
+    .partner-banner.partner-compact {
+      margin: 26px 0 0; padding: 28px 30px; text-align: left;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .partner-compact-copy { flex: 1 1 480px; min-width: 0 }
+    .partner-compact h3 {
+      font-family: var(--serif); color: var(--cream); font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+      line-height: 1.35; margin: 10px 0 8px;
+    }
+    .partner-compact p { margin: 0 0 14px; font-size: .88rem; line-height: 1.6; max-width: none }
+    .partner-compact .partner-chips { justify-content: flex-start; margin: 0 }
+
     /* RTL Directional Overrides */
     [dir="rtl"] .hero-map-wrap { text-align: right }
     [dir="rtl"] .map-stage { direction: ltr; text-align: left }
     [dir="rtl"] .map-hud { direction: rtl; text-align: right }
     [dir="rtl"] .map-hud-row b { text-align: left }
+    [dir="rtl"] .aud-tab { text-align: right }
+    [dir="rtl"] .plan-fit { border-left: 0; border-right: 3px solid var(--primary) }
     [dir="rtl"] .enterprise-jump { margin-left: 0; margin-right: 6px }
     [dir="rtl"] .price small { margin-left: 0; margin-right: 4px }
     [dir="rtl"] .price sup { margin-right: 0; margin-left: 2px }
@@ -482,6 +729,7 @@ INDEX_EXTRA_I18N_CSS = """
     [dir="rtl"] .nb-fill { inset: 0 0 0 auto }
     [dir="rtl"] .nb em { padding-left: 0; padding-right: 8px }
     [dir="rtl"] .contact-tg { text-align: right }
+    [dir="rtl"] .partner-banner.partner-compact { text-align: right }
     [dir="rtl"] .foot-right { margin-left: 0; margin-right: auto; text-align: left }
     [dir="rtl"] .social { justify-content: flex-start }
     [dir="rtl"] #scroll-progress { transform-origin: 100% 50% }
@@ -684,52 +932,26 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         for st in d["hero"]["stats"]
     )
 
-    # Pain cards (4 icons)
-    why_icons = [
-        '<circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/>',
-        '<path d="M2 8.5a15 15 0 0120 0M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0"/><path d="M3 3l18 18"/>',
-        '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>',
-        '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
-    ]
-    why_cards_html = "\n".join(
-        f'          <div class="card">\n'
-        f'            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{why_icons[i]}</svg></div>\n'
-        f'            <h3>{esc(c["h3"])}</h3>\n'
-        f'            <p>{esc(c["p"])}</p>\n'
-        f'          </div>'
-        for i, c in enumerate(d["why"]["cards"])
-    )
+    ux = d["ux"]
 
-    # Service cards (4 icons)
-    svc_icons = [
-        '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/>',
-        '<path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/>',
-        '<path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/>',
+    # Floor 2: 3 Merged Core Capability Pillars
+    pil_icons = [
+        '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
+        '<path d="M13 2L3 14h9l-1 8 10-12h-9z"/>',
         '<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>',
     ]
-    svc_cards_html = "\n".join(
-        f'          <div class="card">\n'
-        f'            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{svc_icons[i]}</svg></div>\n'
-        f'            <h3>{esc(c["h3"])}</h3>\n'
-        f'            <p>{esc(c["p"])}</p>\n'
-        f'          </div>'
-        for i, c in enumerate(d["service"]["cards"])
-    )
-
-    # Value cards (3 icons)
-    val_icons = [
-        '<path d="M13 2L3 14h9l-1 8 10-12h-9z"/>',
-        '<path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>',
-        '<path d="M4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/>',
-    ]
-    val_cards_html = "\n".join(
-        f'          <div class="card value-card">\n'
-        f'            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{val_icons[i]}</svg></div>\n'
-        f'            <h3>{esc(c["h3"])}</h3>\n'
-        f'            <p>{esc(c["p"])}</p>\n'
-        f'          </div>'
-        for i, c in enumerate(d["value"]["cards"])
-    )
+    pillar_cards_parts = []
+    for i, pc in enumerate(ux["pillars"]):
+        p_chips = "".join(f'<span class="pillar-chip">{esc(ch)}</span>' for ch in pc["chips"])
+        pillar_cards_parts.append(
+            f'          <div class="card value-card pillar-card">\n'
+            f'            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{pil_icons[i]}</svg></div>\n'
+            f'            <h3>{esc(pc["h3"])}</h3>\n'
+            f'            <p>{esc(pc["p"])}</p>\n'
+            f'            <div class="pillar-chips">{p_chips}</div>\n'
+            f'          </div>'
+        )
+    pillar_cards_html = "\n".join(pillar_cards_parts)
 
     # Network chips & rows
     net_chips_html = "".join(f"<li>{esc(ch)}</li>" for ch in d["network"]["chips"])
@@ -749,45 +971,48 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         )
     net_rows_html = "\n".join(net_rows_parts)
 
-    # Security cards
+    # Compact Security stack (Floor 4 left column)
     sec_icons = [
         '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
         '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>',
         '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>',
     ]
     sec_cards_html = "\n".join(
-        f'          <div class="card">\n'
-        f'            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{sec_icons[i]}</svg></div>\n'
-        f'            <h3>{esc(c["h3"])}</h3>\n'
-        f'            <p>{esc(c["p"])}</p>\n'
-        f'          </div>'
+        f'            <div class="card sec-compact-card">\n'
+        f'              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{sec_icons[i]}</svg></div>\n'
+        f'              <div>\n'
+        f'                <h3>{esc(c["h3"])}</h3>\n'
+        f'                <p>{esc(c["p"])}</p>\n'
+        f'              </div>\n'
+        f'            </div>'
         for i, c in enumerate(d["security"]["cards"])
     )
 
-    # Reviews (6 cards)
+    # Curated Top 3 Reviews (1x Standard, 5x Pro, 20x Ultimate)
     rev_cards_parts = []
-    for i, rv in enumerate(d["reviews"]["items"]):
+    for i in (1, 0, 2):
+        rv = d["reviews"]["items"][i]
         rev_cards_parts.append(
-            f'          <article class="card review-card">\n'
-            f'            <div class="review-head">\n'
-            f'              <div class="review-avatar" aria-hidden="true">\n'
-            f'                {shared["review_avatars"][i]}\n'
-            f'              </div>\n'
-            f'              <div class="review-author">\n'
-            f'                <div class="review-name-row">\n'
-            f'                  <span class="review-name">{esc(rv["name"])}</span>\n'
-            f'                  <span class="review-badge">{esc(d["reviews"]["badge"])}</span>\n'
+            f'            <article class="card review-card">\n'
+            f'              <div class="review-head">\n'
+            f'                <div class="review-avatar" aria-hidden="true">\n'
+            f'                  {shared["review_avatars"][i]}\n'
             f'                </div>\n'
-            f'                <div class="review-role">{esc(rv["role"])}</div>\n'
+            f'                <div class="review-author">\n'
+            f'                  <div class="review-name-row">\n'
+            f'                    <span class="review-name">{esc(rv["name"])}</span>\n'
+            f'                    <span class="review-badge">{esc(d["reviews"]["badge"])}</span>\n'
+            f'                  </div>\n'
+            f'                  <div class="review-role">{esc(rv["role"])}</div>\n'
+            f'                </div>\n'
             f'              </div>\n'
-            f'            </div>\n'
-            f'            <div class="review-stars" aria-label="{esc(d["reviews"]["stars_aria"])}">★★★★★</div>\n'
-            f'            <p class="review-quote">{esc(rv["quote"])}</p>\n'
-            f'            <div class="review-foot">\n'
-            f'              <span>{esc(rv["source"])}</span>\n'
-            f'              <span class="review-plan">{esc(rv["plan"])}</span>\n'
-            f'            </div>\n'
-            f'          </article>'
+            f'              <div class="review-stars" aria-label="{esc(d["reviews"]["stars_aria"])}">★★★★★</div>\n'
+            f'              <p class="review-quote">{esc(rv["quote"])}</p>\n'
+            f'              <div class="review-foot">\n'
+            f'                <span>{esc(rv["source"])}</span>\n'
+            f'                <span class="review-plan">{esc(rv["plan"])}</span>\n'
+            f'              </div>\n'
+            f'            </article>'
         )
     reviews_html = "\n\n".join(rev_cards_parts)
 
@@ -804,6 +1029,13 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
             out = out.replace("{" + k + "}", str(v))
         return out
 
+    # Quick-Finder scenario buttons
+    finder_btns_html = "\n".join(
+        f'            <button type="button" class="qf-btn" data-scenario="{esc(fi["id"])}">{esc(fi["btn"])}</button>'
+        for fi in ux["finder_items"]
+    )
+    finder_tips_map = {fi["id"]: fi["tip"] for fi in ux["finder_items"]}
+
     # Solo plans (1x, 5x, 20x)
     solo_tiers = ["1x", "5x", "20x"]
     solo_mult = [1, 5, 20]
@@ -815,9 +1047,9 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         btn_cls = "btn btn-primary" if is_feat else "btn btn-ghost"
         badge_html = ""
         if "badge" in sp:
-            badge_html = f'\n            <span class="badge">{esc(sp["badge"])}</span>'
+            badge_html = f'\n              <span class="badge">{esc(sp["badge"])}</span>'
         elif "badge_promo" in sp:
-            badge_html = f'\n            <span class="badge badge-promo">{esc(sp["badge_promo"])}</span>'
+            badge_html = f'\n              <span class="badge badge-promo">{esc(sp["badge_promo"])}</span>'
 
         if i == 2:
             orig_html = (
@@ -841,27 +1073,28 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         feats_li = []
         for fi, fh in enumerate(sp["features_html"]):
             if i == 2 and fi >= 6:
-                feats_li.append(f'              <li style="color: var(--primary-strong); font-weight: 600;">{fh}</li>')
+                feats_li.append(f'                <li style="color: var(--primary-strong); font-weight: 600;">{fh}</li>')
             else:
-                feats_li.append(f"              <li>{fh}</li>")
+                feats_li.append(f"                <li>{fh}</li>")
         feats_block = "\n".join(feats_li)
         s_href = stripe.get(f"{tkey}_{def_cur}", stripe[f"{tkey}_AUD"])
         m_href = f"mailto:jason2023zhang@gmail.com?subject={quote(sp['mailto_subject'])}"
         solo_parts.append(
-            f'          <article class="{card_cls}">{badge_html}\n'
-            f'            <div class="plan-tier"><b>{esc(sp["tier_b"])}</b><span>{esc(sp["tier_span"])}</span></div>\n'
-            f'            <p class="plan-desc">{esc(sp["desc"])}</p>\n'
-            f'            <div class="price" data-plan-idx="{i}"><sup>{esc(sym)}</sup><span class="amount">{fmt_num(cur_data["p"][i])}</span>'
+            f'            <article class="{card_cls}" data-plan-card="{tkey}">{badge_html}\n'
+            f'              <div class="plan-tier"><b>{esc(sp["tier_b"])}</b><span>{esc(sp["tier_span"])}</span></div>\n'
+            f'              <div class="plan-fit">{esc(ux["solo_fit"][i])}</div>\n'
+            f'              <p class="plan-desc">{esc(sp["desc"])}</p>\n'
+            f'              <div class="price" data-plan-idx="{i}"><sup>{esc(sym)}</sup><span class="amount">{fmt_num(cur_data["p"][i])}</span>'
             f'<small data-period>{esc(d["js"]["per_month"])}</small>{orig_html}</div>\n'
-            f'            <p class="price-note" data-note-idx="{i}">{esc(init_solo_note)}</p>\n'
-            f'            <ul class="features">\n{feats_block}\n            </ul>\n'
-            f'            <a class="{btn_cls}" data-stripe-tier="{tkey}" href="{esc(s_href)}" target="_blank" rel="noopener">{esc(d["pricing"]["solo_subscribe"])}</a>\n'
-            f'            <a class="plan-consult" href="{esc(m_href)}">{esc(d["pricing"]["solo_consult"])}</a>\n'
-            f'          </article>'
+            f'              <p class="price-note" data-note-idx="{i}">{esc(init_solo_note)}</p>\n'
+            f'              <ul class="features">\n{feats_block}\n              </ul>\n'
+            f'              <a class="{btn_cls}" data-stripe-tier="{tkey}" href="{esc(s_href)}" target="_blank" rel="noopener">{esc(d["pricing"]["solo_subscribe"])}</a>\n'
+            f'              <a class="plan-consult" href="{esc(m_href)}">{esc(d["pricing"]["solo_consult"])}</a>\n'
+            f'            </article>'
         )
     solo_html = "\n\n".join(solo_parts)
 
-    # Dedicated Line cards
+    # Dedicated Line cards (inside collapsible drawer under Solo tab)
     dl = d["pricing"]["dedicated_line"]
     dl_cards = []
     for i, lc in enumerate(dl["cards"]):
@@ -872,24 +1105,24 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         l_href = stripe.get(f"{lkey}_{def_cur}", stripe[f"{lkey}_AUD"])
         init_line_note = d["js"]["line_0_mo"] if i == 0 else d["js"]["line_1_mo"]
         dl_cards.append(
-            f'            <div class="{c_cls}">\n'
-            f'              <div>\n'
-            f'                <div class="addon-route"><code{code_cls}>{esc(lc["code"])}</code> <span>{esc(lc["span"])}</span></div>\n'
-            f'                <p class="addon-desc">{esc(lc["desc"])}</p>\n'
-            f'              </div>\n'
-            f'              <div class="addon-foot">\n'
-            f'                <div class="line-price-wrap">\n'
-            f'                  <div class="addon-price" data-line-idx="{i}">+<sup>{esc(sym)}</sup><span class="amount">{fmt_num(cur_data["line"][i])}</span>'
+            f'                <div class="{c_cls}">\n'
+            f'                  <div>\n'
+            f'                    <div class="addon-route"><code{code_cls}>{esc(lc["code"])}</code> <span>{esc(lc["span"])}</span></div>\n'
+            f'                    <p class="addon-desc">{esc(lc["desc"])}</p>\n'
+            f'                  </div>\n'
+            f'                  <div class="addon-foot">\n'
+            f'                    <div class="line-price-wrap">\n'
+            f'                      <div class="addon-price" data-line-idx="{i}">+<sup>{esc(sym)}</sup><span class="amount">{fmt_num(cur_data["line"][i])}</span>'
             f'<small data-line-period>{esc(d["js"]["per_mo_short"])}</small><del class="line-orig" data-line-orig="{i}" style="display:none"></del></div>\n'
-            f'                  <span class="line-subnote" data-line-note="{i}">{esc(init_line_note)}</span>\n'
-            f'                </div>\n'
-            f'                <a class="{b_cls}" data-line-tier="{lkey}" href="{esc(l_href)}" target="_blank" rel="noopener">{esc(lc["btn"])}</a>\n'
-            f'              </div>\n'
-            f'            </div>'
+            f'                      <span class="line-subnote" data-line-note="{i}">{esc(init_line_note)}</span>\n'
+            f'                    </div>\n'
+            f'                    <a class="{b_cls}" data-line-tier="{lkey}" href="{esc(l_href)}" target="_blank" rel="noopener">{esc(lc["btn"])}</a>\n'
+            f'                  </div>\n'
+            f'                </div>'
         )
     dl_cards_html = "\n".join(dl_cards)
 
-    # Enterprise Team & Business
+    # Enterprise Team, Business + 3rd Custom Cluster Card
     ent = d["pricing"]["enterprise"]
     ec_max = d["js"]["ent_copy"]["max"]
     ent_parts = []
@@ -906,34 +1139,53 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         init_ent_seat_li = ec_max["bizSeatLi"] if is_biz else ec_max["teamSeatLi"]
         init_ent_storage = ec_max["bizStorage"] if is_biz else ec_max["teamStorage"]
         init_ent_note = py_tpl(d["js"]["ent_biz_mo"] if is_biz else d["js"]["ent_team_mo"], label=ec_max["label"])
+        fit_txt = ux["ent_fit_biz"] if is_biz else ux["ent_fit_team"]
 
         mid_lis = []
         for idx_f, fh in enumerate(ek["features_html"]):
             if idx_f == len(ek["features_html"]) - 1:
-                mid_lis.append(f'                <li style="color: var(--primary-strong); font-weight: 600;">{fh}</li>')
+                mid_lis.append(f'                  <li style="color: var(--primary-strong); font-weight: 600;">{fh}</li>')
             else:
-                mid_lis.append(f"                <li>{fh}</li>")
+                mid_lis.append(f"                  <li>{fh}</li>")
         mid_lis_str = "\n".join(mid_lis)
         ent_parts.append(
-            f'            <article class="{p_cls}">\n'
-            f'              <span class="{b_cls}" data-ent-badge="{kind}">{esc(init_ent_badge)}</span>\n'
-            f'              <div class="plan-tier"><b>{"Business" if is_biz else "Team"}</b><span data-ent-sub="{kind}">{esc(ek["sub"])}</span></div>\n'
-            f'              <p class="plan-desc">{esc(ek["desc"])}</p>\n'
-            f'              <div class="price" data-ent-price="{kind}"><sup>{esc(sym)}</sup><span class="amount">{fmt_num(init_amt)}</span>'
+            f'              <article class="{p_cls}" data-plan-card="{kind}">\n'
+            f'                <span class="{b_cls}" data-ent-badge="{kind}">{esc(init_ent_badge)}</span>\n'
+            f'                <div class="plan-tier"><b>{"Business" if is_biz else "Team"}</b><span data-ent-sub="{kind}">{esc(ek["sub"])}</span></div>\n'
+            f'                <div class="plan-fit">{esc(fit_txt)}</div>\n'
+            f'                <p class="plan-desc">{esc(ek["desc"])}</p>\n'
+            f'                <div class="price" data-ent-price="{kind}"><sup>{esc(sym)}</sup><span class="amount">{fmt_num(init_amt)}</span>'
             f'<small data-period>{esc(d["js"]["per_month"])}</small><del class="price-orig" data-ent-orig="{kind}" style="display:none"></del></div>\n'
-            f'              <p class="price-note" data-ent-note="{kind}">{esc(init_ent_note)}</p>\n'
-            f'              <ul class="features">\n'
-            f'                <li data-ent-seat-li="{kind}">{init_ent_seat_li}</li>\n'
+            f'                <p class="price-note" data-ent-note="{kind}">{esc(init_ent_note)}</p>\n'
+            f'                <ul class="features">\n'
+            f'                  <li data-ent-seat-li="{kind}">{init_ent_seat_li}</li>\n'
             f'{mid_lis_str}\n'
-            f'                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="{kind}">{esc(init_ent_storage)}</li>\n'
-            f'              </ul>\n'
-            f'              <a class="{btn_cls}" data-ent-btn="{kind}" href="{esc(e_href)}" target="_blank" rel="noopener">{esc(ek["btn"])}</a>\n'
-            f'              <a class="plan-consult" href="{esc(em_href)}">{esc(ek["consult"])}</a>\n'
-            f'            </article>'
+            f'                  <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="{kind}">{esc(init_ent_storage)}</li>\n'
+            f'                </ul>\n'
+            f'                <a class="{btn_cls}" data-ent-btn="{kind}" href="{esc(e_href)}" target="_blank" rel="noopener">{esc(ek["btn"])}</a>\n'
+            f'                <a class="plan-consult" href="{esc(em_href)}">{esc(ek["consult"])}</a>\n'
+            f'              </article>'
         )
+
+    cc = ux["custom_card"]
+    cc_mailto = f"mailto:jason2023zhang@gmail.com?subject={quote(cc['mailto_subject'])}"
+    cc_lis = "\n".join(f"                  <li>{esc(fl)}</li>" for fl in cc["features"])
+    ent_parts.append(
+        f'              <article class="card plan plan-custom" data-plan-card="custom">\n'
+        f'                <span class="badge badge-custom">{esc(cc["badge"])}</span>\n'
+        f'                <div class="plan-tier"><b>{esc(cc["tier_b"])}</b><span>{esc(cc["tier_span"])}</span></div>\n'
+        f'                <div class="plan-fit">{esc(cc["fit"])}</div>\n'
+        f'                <p class="plan-desc">{esc(cc["desc"])}</p>\n'
+        f'                <div class="price price-custom">{esc(cc["price_text"])}</div>\n'
+        f'                <p class="price-note">{esc(cc["price_sub"])}</p>\n'
+        f'                <ul class="features">\n{cc_lis}\n                </ul>\n'
+        f'                <a class="btn btn-ghost" href="{esc(cc_mailto)}">{esc(cc["btn"])}</a>\n'
+        f'                <span class="plan-consult">{esc(cc["consult"])}</span>\n'
+        f'              </article>'
+    )
     ent_cards_html = "\n\n".join(ent_parts)
 
-    # Seat add-ons
+    # Seat add-ons (inside collapsible drawer under Enterprise tab)
     sa = d["pricing"]["seat_addons"]
     upg_keys = ["upg_pm", "upg_mu", "upg_pu"]
     sa_cards = []
@@ -941,21 +1193,21 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         ukey = upg_keys[i]
         u_href = stripe.get(f"{ukey}_{def_cur}", stripe[f"{ukey}_AUD"])
         sa_cards.append(
-            f'              <div class="addon-card">\n'
-            f'                <div>\n'
-            f'                  <div class="addon-route"><code>{esc(uc["from"])}</code> <span>→</span> <code class="to">{esc(uc["to"])}</code> <span>{esc(uc["tag"])}</span></div>\n'
-            f'                  <p class="addon-desc">{esc(uc["desc"])}</p>\n'
-            f'                </div>\n'
-            f'                <div class="addon-foot">\n'
-            f'                  <div class="addon-price" data-upg-idx="{i}">+<sup>{esc(sym)}</sup><span class="amount">{fmt_num(cur_data["upg"][i])}</span>'
+            f'                  <div class="addon-card">\n'
+            f'                    <div>\n'
+            f'                      <div class="addon-route"><code>{esc(uc["from"])}</code> <span>→</span> <code class="to">{esc(uc["to"])}</code> <span>{esc(uc["tag"])}</span></div>\n'
+            f'                      <p class="addon-desc">{esc(uc["desc"])}</p>\n'
+            f'                    </div>\n'
+            f'                    <div class="addon-foot">\n'
+            f'                      <div class="addon-price" data-upg-idx="{i}">+<sup>{esc(sym)}</sup><span class="amount">{fmt_num(cur_data["upg"][i])}</span>'
             f'<small data-upg-period>{esc(d["js"]["per_seat_mo"])}</small></div>\n'
-            f'                  <a class="addon-btn" data-upg-tier="{ukey}" href="{esc(u_href)}" target="_blank" rel="noopener">{esc(uc["btn"])}</a>\n'
-            f'                </div>\n'
-            f'              </div>'
+            f'                      <a class="addon-btn" data-upg-tier="{ukey}" href="{esc(u_href)}" target="_blank" rel="noopener">{esc(uc["btn"])}</a>\n'
+            f'                    </div>\n'
+            f'                  </div>'
         )
     sa_cards_html = "\n".join(sa_cards)
 
-    # Cloud Storage (4 cards)
+    # Cloud Storage (4 cards inside collapsible drawer)
     st = d["pricing"]["storage"]
     st_keys = ["2t", "6t", "12t", "30t"]
     st_cards = []
@@ -964,19 +1216,19 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         is_feat = i == 1
         c_cls = "card plan featured" if is_feat else "card plan"
         b_cls = "btn btn-primary" if is_feat else "btn btn-ghost"
-        b_html = f'\n              <span class="badge">{esc(sc["badge"])}</span>' if "badge" in sc else ""
+        b_html = f'\n                <span class="badge">{esc(sc["badge"])}</span>' if "badge" in sc else ""
         st_href = stripe.get(f"{skey}_{def_cur}", stripe[f"{skey}_AUD"])
-        st_lis = "\n".join(f"                <li>{esc(fl)}</li>" for fl in sc["features"])
+        st_lis = "\n".join(f"                  <li>{esc(fl)}</li>" for fl in sc["features"])
         st_cards.append(
-            f'            <article class="{c_cls}" style="padding: 26px 22px;">{b_html}\n'
-            f'              <div class="plan-tier"><b>{esc(sc["tier_b"])}</b><span>{esc(sc["tier_span"])}</span></div>\n'
-            f'              <p class="plan-desc" style="min-height: 2.6em;">{esc(sc["desc"])}</p>\n'
-            f'              <div class="price" data-storage-idx="{i}" style="font-size: 1.95rem; white-space: nowrap;">'
+            f'              <article class="{c_cls}" style="padding: 24px 20px;">{b_html}\n'
+            f'                <div class="plan-tier"><b>{esc(sc["tier_b"])}</b><span>{esc(sc["tier_span"])}</span></div>\n'
+            f'                <p class="plan-desc" style="min-height: 2.6em;">{esc(sc["desc"])}</p>\n'
+            f'                <div class="price" data-storage-idx="{i}" style="font-size: 1.9rem; white-space: nowrap;">'
             f'<sup>{esc(sym)}</sup><span class="amount">{fmt_num(cur_data["s"][i])}</span><small>{esc(st["per_mo"])}</small></div>\n'
-            f'              <p class="price-note">{esc(sc["note"])}</p>\n'
-            f'              <ul class="features" style="font-size: .88rem;">\n{st_lis}\n              </ul>\n'
-            f'              <a class="{b_cls}" data-stripe-tier="{skey}" href="{esc(st_href)}" target="_blank" rel="noopener">{esc(sc["btn"])}</a>\n'
-            f'            </article>'
+            f'                <p class="price-note">{esc(sc["note"])}</p>\n'
+            f'                <ul class="features" style="font-size: .86rem;">\n{st_lis}\n                </ul>\n'
+            f'                <a class="{b_cls}" data-stripe-tier="{skey}" href="{esc(st_href)}" target="_blank" rel="noopener">{esc(sc["btn"])}</a>\n'
+            f'              </article>'
         )
     st_cards_html = "\n\n".join(st_cards)
 
@@ -989,17 +1241,37 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         for step in d["process"]["steps"]
     )
 
-    # FAQ items
-    faq_html = "\n".join(
+    # Focused Top-6 FAQs + Collapsible Remaining FAQs
+    all_faqs = d["faq"]["items"]
+    primary_faq_idxs = [idx for idx in (5, 1, 2, 4, 7, 13) if idx < len(all_faqs)]
+    primary_set = set(primary_faq_idxs)
+    extra_faq_idxs = [idx for idx in range(len(all_faqs)) if idx not in primary_set]
+
+    faq_top_html = "\n".join(
         f'          <details>\n'
-        f'            <summary>{esc(item["q"])}</summary>\n'
-        f'            <p>{item["a_html"]}</p>\n'
+        f'            <summary>{esc(all_faqs[idx]["q"])}</summary>\n'
+        f'            <p>{all_faqs[idx]["a_html"]}</p>\n'
         f'          </details>'
-        for item in d["faq"]["items"]
+        for idx in primary_faq_idxs
+    )
+    faq_extra_items = "\n".join(
+        f'              <details>\n'
+        f'                <summary>{esc(all_faqs[idx]["q"])}</summary>\n'
+        f'                <p>{all_faqs[idx]["a_html"]}</p>\n'
+        f'              </details>'
+        for idx in extra_faq_idxs
+    )
+    faq_more_label = py_tpl(ux["faq_more_open"], count=len(extra_faq_idxs))
+    faq_html = (
+        f'{faq_top_html}\n'
+        f'          <details class="faq-more">\n'
+        f'            <summary><span class="when-closed">{esc(faq_more_label)}</span><span class="when-open">{esc(ux["faq_more_close"])}</span></summary>\n'
+        f'            <div class="faq-more-list">\n{faq_extra_items}\n            </div>\n'
+        f'          </details>'
     )
 
     # Partner chips
-    p_chips_html = "\n".join(f"            <li>{esc(ch)}</li>" for ch in d["partner"]["chips"])
+    p_chips_html = "\n".join(f"              <li>{esc(ch)}</li>" for ch in d["partner"]["chips"])
 
     # JS PRICES object with localized currency names
     js_prices = {}
@@ -1101,13 +1373,9 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         {esc(d["nav"]["brand"])}
       </a>
       <ul class="nav-links">
-        <li><a href="#why">{esc(d["nav"]["why"])}</a></li>
         <li><a href="#service">{esc(d["nav"]["service"])}</a></li>
-        <li><a href="#value">{esc(d["nav"]["value"])}</a></li>
-        <li><a href="#security">{esc(d["nav"]["security"])}</a></li>
-        <li><a href="#reviews">{esc(d["nav"]["reviews"])}</a></li>
         <li><a href="#pricing">{esc(d["nav"]["pricing"])}</a></li>
-        <li><a href="#storage">{esc(d["nav"]["storage"])}</a></li>
+        <li><a href="#security">{esc(d["nav"]["security"])}</a></li>
         <li><a href="#process">{esc(d["nav"]["process"])}</a></li>
         <li><a href="#faq">{esc(d["nav"]["faq"])}</a></li>
       </ul>
@@ -1118,18 +1386,25 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Floor 1: Hero & Global Compute Topology -->
     <section class="hero">
       <div class="container">
         <span class="eyebrow"><span class="dot"></span>{esc(d["hero"]["eyebrow"])}</span>
         <h1>{esc(d["hero"]["h1_main"])}<span class="h1-sub"><em>{esc(d["hero"]["h1_sub"])}</em></span></h1>
         <p class="lead">
-          {esc(d["hero"]["lead"])}
+          {esc(ux["hero_lead"])}
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#pricing">{esc(d["hero"]["cta_primary"])}</a>
-          <a class="btn btn-ghost" href="{esc(enq_mailto)}">{esc(d["hero"]["cta_secondary"])}</a>
+          <a class="btn btn-primary" href="#pricing" data-goto-audience="solo">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0114 0"/></svg>
+            {esc(ux["hero_cta_solo"])}
+          </a>
+          <a class="btn btn-ent-hero" href="#pricing-enterprise" data-goto-audience="enterprise">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h2m4 0h2M8 13h2m4 0h2M10 20v-3h4v3"/></svg>
+            {esc(ux["hero_cta_ent"])}
+          </a>
         </div>
+        <div class="hero-sub-link"><a href="{esc(enq_mailto)}">{esc(ux["hero_consult"])}</a></div>
 
         <div class="hero-map-wrap">
           <div class="hero-map-card" id="global-map">
@@ -1143,13 +1418,6 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
             <div class="map-pills" role="tablist" aria-label="{esc(d["map"]["pills_aria"])}">
               {map_pills_html}
             </div>
-            <div class="map-partner-bar">
-              <div class="map-partner-copy">
-                <span class="partner-pill">{esc(d["map"]["partner_pill"])}</span>
-                <span>{d["map"]["partner_copy_html"]}</span>
-              </div>
-              <a class="partner-cta-btn" href="{esc(partner_mailto)}">{esc(d["map"]["partner_cta"])}</a>
-            </div>
           </div>
         </div>
         <div class="hero-stats">
@@ -1158,103 +1426,62 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
       </div>
     </section>
 
-    <!-- Pain points -->
-    <section class="section section-alt" id="why">
+    <!-- Floor 2: 3 Merged Core Capability Pillars -->
+    <section class="section section-alt" id="service">
       <div class="container">
         <div class="section-head">
-          <p class="section-tag">{esc(d["why"]["tag"])}</p>
-          <h2>{esc(d["why"]["h2"])}</h2>
-          <p>{esc(d["why"]["sub"])}</p>
-        </div>
-        <div class="grid grid-4 pain">
-{why_cards_html}
-        </div>
-      </div>
-    </section>
-
-    <!-- Service -->
-    <section class="section" id="service">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">{esc(d["service"]["tag"])}</p>
-          <h2>{esc(d["service"]["h2"])}</h2>
-          <p>{esc(d["service"]["sub"])}</p>
-        </div>
-        <div class="grid grid-4">
-{svc_cards_html}
-        </div>
-      </div>
-    </section>
-
-    <!-- Value: beyond compute -->
-    <section class="section section-alt" id="value">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">{esc(d["value"]["tag"])}</p>
-          <h2>{d["value"]["h2_html"]}</h2>
-          <p>{esc(d["value"]["sub"])}</p>
+          <p class="section-tag">{esc(ux["pillars_tag"])}</p>
+          <h2>{esc(ux["pillars_h2"])}</h2>
+          <p>{esc(ux["pillars_sub"])}</p>
         </div>
         <div class="grid grid-3">
-{val_cards_html}
+{pillar_cards_html}
         </div>
       </div>
     </section>
 
-    <!-- Network optimisation -->
-    <section class="section net-section" id="network">
-      <div class="container net-grid">
-        <div class="net-copy">
-          <p class="section-tag">{esc(d["network"]["tag"])}</p>
-          <h2>{d["network"]["h2_html"]}</h2>
-          <p>{esc(d["network"]["p"])}</p>
-          <ul class="net-chips">{net_chips_html}</ul>
-          <p style="margin: 14px 0 0; font-size: .86rem; color: var(--muted);">{esc(d["network"]["addon_note_prefix"])}<a href="#dedicated-line" style="color: var(--primary-strong); font-weight: 600; border-bottom: 1px dashed rgba(232, 144, 111, .5);">{esc(d["network"]["addon_note_link"])}</a>{esc(d["network"]["addon_note_suffix"])}</p>
-        </div>
-        <div class="card net-card" aria-label="{esc(d["network"]["card_aria"])}">
-          <div class="net-legend"><span class="lg before">{esc(d["network"]["legend_before"])}</span><span class="lg after">{esc(d["network"]["legend_after"])}</span></div>
-{net_rows_html}
-          <p class="net-foot">{esc(d["network"]["foot"])}</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Security & Privacy -->
-    <section class="section" id="security">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">{esc(d["security"]["tag"])}</p>
-          <h2>{esc(d["security"]["h2"])}</h2>
-          <p>{esc(d["security"]["sub"])}</p>
-        </div>
-        <div class="grid grid-3">
-{sec_cards_html}
-        </div>
-      </div>
-    </section>
-
-    <!-- User Reviews -->
-    <section class="section section-alt" id="reviews">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">{esc(d["reviews"]["tag"])}</p>
-          <h2>{esc(d["reviews"]["h2"])}</h2>
-          <p>{esc(d["reviews"]["sub"])}</p>
-        </div>
-        <div class="grid grid-3">
-{reviews_html}
-        </div>
-        <p class="reviews-note">{esc(d["reviews"]["note"])}</p>
-      </div>
-    </section>
-
-    <!-- Pricing -->
+    <!-- Floor 3: Focused Pricing & Decision Center -->
     <section class="section" id="pricing">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">{esc(d["pricing"]["tag"])}</p>
           <h2>{esc(d["pricing"]["h2"])}</h2>
-          <p>{d["pricing"]["sub_html"]}<a class="enterprise-jump" href="#dedicated-line">{esc(d["pricing"]["jump_line"])}</a><a class="enterprise-jump" href="#pricing-enterprise">{esc(d["pricing"]["jump_ent"])}</a></p>
+          <p>{d["pricing"]["sub_html"]}</p>
         </div>
+
+        <!-- 3-Second Scenario Quick-Finder -->
+        <div class="quick-finder" role="group" aria-label="{esc(ux["finder_label"])}">
+          <span class="qf-label">✦ {esc(ux["finder_label"])}</span>
+{finder_btns_html}
+        </div>
+        <div class="finder-tip" id="finder-tip" role="status" aria-live="polite" hidden>
+          <span id="finder-tip-text"></span>
+          <button type="button" class="finder-tip-close" id="finder-tip-close" aria-label="Close">×</button>
+        </div>
+
+        <!-- Primary Audience Segmented Tabs: Individual vs Team/Enterprise -->
+        <div class="audience-tabs" role="tablist">
+          <button type="button" class="aud-tab" role="tab" id="tab-btn-solo" data-audience-tab="solo" aria-selected="true" aria-controls="panel-solo">
+            <span class="aud-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0114 0"/></svg>
+            </span>
+            <span class="aud-txt">
+              <strong>{esc(ux["tab_solo_title"])}</strong>
+              <span>{esc(ux["tab_solo_sub"])}</span>
+            </span>
+          </button>
+          <button type="button" class="aud-tab" role="tab" id="tab-btn-ent" data-audience-tab="enterprise" aria-selected="false" aria-controls="pricing-enterprise">
+            <span class="aud-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h2m4 0h2M8 13h2m4 0h2M10 20v-3h4v3"/></svg>
+            </span>
+            <span class="aud-txt">
+              <strong>{esc(ux["tab_ent_title"])}</strong>
+              <span>{esc(ux["tab_ent_sub"])}</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Unified Billing Cycle & Currency Switcher -->
         <div class="pricing-controls">
           <div class="billing-switch" role="group" aria-label="{esc(d["pricing"]["billing_aria"])}">
             <button type="button" data-billing="month" aria-pressed="true">{esc(d["pricing"]["billing_month"])}</button>
@@ -1264,62 +1491,103 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
 {cur_btns_html}
           </div>
         </div>
-        <div class="grid grid-3 pricing pricing-solo">
+
+        <!-- Panel 1: Individual Plans (1x / 5x / 20x + Collapsible Dedicated Line) -->
+        <div class="pricing-panel" id="panel-solo" role="tabpanel" aria-labelledby="tab-btn-solo">
+          <div class="grid grid-3 pricing pricing-solo">
 {solo_html}
-        </div>
-
-        <!-- ClaudeOps Enterprise Dedicated Line Value-Added Service -->
-        <div class="seat-addons line-addons" id="dedicated-line">
-          <div class="seat-addons-head">
-            <h3>{esc(dl["h3_main"])} <span class="addon-pill">{esc(dl["h3_pill"])}</span></h3>
-            <p>{esc(dl["sub"])}</p>
           </div>
-          <div class="line-grid">
+
+          <details class="addon-drawer" id="dedicated-line">
+            <summary>
+              <span class="drawer-sum-left">
+                <span class="drawer-ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>
+                </span>
+                <span class="drawer-titles">
+                  <span class="drawer-title-row">
+                    <strong>{esc(ux["drawer_line_title"])}</strong>
+                    <span class="drawer-pill">{esc(dl["h3_pill"])}</span>
+                  </span>
+                  <span class="drawer-hint">{esc(ux["drawer_line_hint"])}</span>
+                </span>
+              </span>
+              <span class="drawer-toggle-pill"><span class="when-closed">{esc(ux["drawer_line_cta"])}</span><span class="when-open">{esc(ux["drawer_close_cta"])}</span> <i>▾</i></span>
+            </summary>
+            <div class="drawer-body">
+              <p class="drawer-body-lead">{esc(dl["sub"])}</p>
+              <div class="line-grid">
 {dl_cards_html}
-          </div>
+              </div>
+            </div>
+          </details>
         </div>
 
-        <!-- Team & Business Plans -->
-        <div class="enterprise-wrap" id="pricing-enterprise">
-          <div class="tier-divider"><span>{esc(ent["divider"])}</span></div>
-          <div class="enterprise-toolbar">
+        <!-- Panel 2: Team & Enterprise Clusters (Team 5 / Business 10 / Custom 15+ + Collapsible Seat Upgrades) -->
+        <div class="pricing-panel enterprise-wrap" id="pricing-enterprise" role="tabpanel" aria-labelledby="tab-btn-ent" hidden>
+          <div class="ent-step-bar">
+            <span class="ent-step-title">{esc(ux["ent_step1"])}</span>
             <div class="seat-tier-switch" role="group" aria-label="{esc(ent["switch_aria"])}">
               <button type="button" data-seat-tier="pro" aria-pressed="false">{esc(ent["tier_pro"])}</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">{esc(ent["tier_max"])} <span class="save-badge">{esc(ent["tier_max_badge"])}</span></button>
               <button type="button" data-seat-tier="ultra" aria-pressed="false">{esc(ent["tier_ultra"])}</button>
             </div>
-            <p>{ent["toolbar_html"]}</p>
           </div>
-          <div class="grid grid-2 pricing pricing-enterprise">
+          <p class="ent-step2-label">{esc(ux["ent_step2"])}</p>
+          <div class="grid grid-3 pricing pricing-enterprise">
 {ent_cards_html}
           </div>
 
-          <!-- Per-Seat Self-Serve Upgrade Add-ons -->
-          <div class="seat-addons">
-            <div class="seat-addons-head">
-              <h3>{esc(sa["h3_main"])} <span class="addon-pill">{esc(sa["h3_pill"])}</span></h3>
-              <p>{esc(sa["sub"])}</p>
-            </div>
-            <div class="addon-grid">
+          <details class="addon-drawer" id="seat-addons-drawer">
+            <summary>
+              <span class="drawer-sum-left">
+                <span class="drawer-ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span class="drawer-titles">
+                  <span class="drawer-title-row">
+                    <strong>{esc(ux["drawer_upg_title"])}</strong>
+                    <span class="drawer-pill">{esc(sa["h3_pill"])}</span>
+                  </span>
+                  <span class="drawer-hint">{esc(ux["drawer_upg_hint"])}</span>
+                </span>
+              </span>
+              <span class="drawer-toggle-pill"><span class="when-closed">{esc(ux["drawer_upg_cta"])}</span><span class="when-open">{esc(ux["drawer_close_cta"])}</span> <i>▾</i></span>
+            </summary>
+            <div class="drawer-body">
+              <p class="drawer-body-lead">{esc(sa["sub"])}</p>
+              <div class="addon-grid">
 {sa_cards_html}
+              </div>
             </div>
-          </div>
+          </details>
         </div>
 
-        <!-- Cloud Storage (Google Drive & iCloud) -->
-        <div id="storage" style="margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--border);">
-          <div class="section-head" style="margin-bottom: 32px;">
-            <p class="section-tag">{esc(st["tag"])}</p>
-            <h2>{esc(st["h2"])}</h2>
-            <p>{st["sub_html"]}</p>
-          </div>
-          <div class="currency-switch" role="group" aria-label="{esc(st["currency_aria"])}" style="margin: 0 auto 32px">
-{cur_btns_html}
-          </div>
-          <div class="grid grid-4 pricing">
+        <!-- Shared Optional Collapsible Add-on: Cloud Storage (2TB - 30TB) -->
+        <details class="addon-drawer storage-drawer" id="storage">
+          <summary>
+            <span class="drawer-sum-left">
+              <span class="drawer-ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 116.71-9h1.79a4.5 4.5 0 110 9z"/></svg>
+              </span>
+              <span class="drawer-titles">
+                <span class="drawer-title-row">
+                  <strong>{esc(ux["drawer_storage_title"])}</strong>
+                  <span class="drawer-pill">{esc(ux["drawer_storage_pill"])}</span>
+                </span>
+                <span class="drawer-hint">{esc(ux["drawer_storage_hint"])}</span>
+              </span>
+            </span>
+            <span class="drawer-toggle-pill"><span class="when-closed">{esc(ux["drawer_storage_cta"])}</span><span class="when-open">{esc(ux["drawer_close_cta"])}</span> <i>▾</i></span>
+          </summary>
+          <div class="drawer-body">
+            <p class="drawer-body-lead">{st["sub_html"]}</p>
+            <div class="grid grid-4 pricing">
 {st_cards_html}
+            </div>
           </div>
-        </div>
+        </details>
+
         <div class="stripe-trust">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
           <span>{d["pricing"]["stripe_trust_html"]}</span>
@@ -1328,8 +1596,44 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
       </div>
     </section>
 
-    <!-- Process -->
-    <section class="section section-alt" id="process">
+    <!-- Floor 4: Security Isolation + Network Proof + Curated 3 User Stories -->
+    <section class="section section-alt" id="security">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">{esc(ux["trust_tag"])}</p>
+          <h2>{esc(ux["trust_h2"])}</h2>
+          <p>{esc(ux["trust_sub"])}</p>
+        </div>
+        <div class="trust-split">
+          <div class="sec-stack">
+{sec_cards_html}
+          </div>
+          <div class="card net-card net-proof-box" id="network" aria-label="{esc(d["network"]["card_aria"])}">
+            <div class="net-proof-head">
+              <h3>{d["network"]["h2_html"].replace("<br>", " · ")}</h3>
+              <p>{esc(d["network"]["p"])}</p>
+              <ul class="net-chips">{net_chips_html}</ul>
+            </div>
+            <div>
+              <div class="net-legend"><span class="lg before">{esc(d["network"]["legend_before"])}</span><span class="lg after">{esc(d["network"]["legend_after"])}</span></div>
+{net_rows_html}
+              <p class="net-foot">{esc(d["network"]["foot"])}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-reviews" id="reviews">
+          <p class="trust-reviews-title">★ {esc(d["reviews"]["h2"])}</p>
+          <div class="grid grid-3">
+{reviews_html}
+          </div>
+          <p class="reviews-note">{esc(d["reviews"]["note"])}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floor 5: 4-Step Same-Day Onboarding & Focused Top-6 FAQ -->
+    <section class="section" id="process">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">{esc(d["process"]["tag"])}</p>
@@ -1341,8 +1645,7 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
+    <section class="section section-alt" id="faq">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">{esc(d["faq"]["tag"])}</p>
@@ -1354,28 +1657,15 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
       </div>
     </section>
 
-    <!-- Global Partner & CTA -->
+    <!-- Floor 6: Buyer CTA First + Secondary Global Compute Partner Strip -->
     <section class="section">
       <div class="container">
-        <div class="partner-banner" id="partner">
-          <span class="eyebrow"><span class="dot"></span>{esc(d["partner"]["eyebrow"])}</span>
-          <h2>{d["partner"]["h2_html"]}</h2>
-          <p>
-            {d["partner"]["p_html"]}
-          </p>
-          <ul class="partner-chips">
-{p_chips_html}
-          </ul>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="{esc(partner_mailto)}">{esc(d["partner"]["btn"])}</a>
-          </div>
-        </div>
-
         <div class="cta">
           <h2>{esc(d["cta"]["h2"])}</h2>
           <p>{esc(d["cta"]["p"])}</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pricing">{esc(d["cta"]["btn_primary"])}</a>
+            <a class="btn btn-primary" href="#pricing" data-goto-audience="solo">{esc(ux["hero_cta_solo"])}</a>
+            <a class="btn btn-ent-hero" href="#pricing-enterprise" data-goto-audience="enterprise">{esc(ux["hero_cta_ent"])}</a>
             <a class="btn btn-ghost" href="{esc(enq_mailto)}">{esc(d["cta"]["btn_secondary"])}</a>
           </div>
           <div class="contact-tg">
@@ -1390,6 +1680,20 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
                 @letcode2020
               </a>
             </div>
+          </div>
+        </div>
+
+        <div class="partner-banner partner-compact" id="partner">
+          <div class="partner-compact-copy">
+            <span class="eyebrow"><span class="dot"></span>{esc(d["partner"]["eyebrow"])}</span>
+            <h3>{d["partner"]["h2_html"].replace("<br>", " ")}</h3>
+            <p>{d["partner"]["p_html"]}</p>
+            <ul class="partner-chips">
+{p_chips_html}
+            </ul>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-ghost" href="{esc(partner_mailto)}">{esc(d["partner"]["btn"])}</a>
           </div>
         </div>
       </div>
@@ -1909,6 +2213,91 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
       }});
     }}
 
+    var FINDER_TIPS = {json.dumps(finder_tips_map, ensure_ascii=False)};
+    var panelSolo = document.getElementById('panel-solo');
+    var panelEnt = document.getElementById('pricing-enterprise');
+    var finderTip = document.getElementById('finder-tip');
+    var finderTipText = document.getElementById('finder-tip-text');
+    var finderTipClose = document.getElementById('finder-tip-close');
+
+    function setAudience(aud) {{
+      var isEnt = aud === 'enterprise';
+      if (panelSolo) {{
+        panelSolo.hidden = isEnt;
+        if (!isEnt) clearReveal(panelSolo);
+      }}
+      if (panelEnt) {{
+        panelEnt.hidden = !isEnt;
+        if (isEnt) clearReveal(panelEnt);
+      }}
+      document.querySelectorAll('[data-audience-tab]').forEach(function (btn) {{
+        btn.setAttribute('aria-selected', btn.getAttribute('data-audience-tab') === (isEnt ? 'enterprise' : 'solo') ? 'true' : 'false');
+      }});
+    }}
+
+    function clearScenarioHighlight() {{
+      document.querySelectorAll('.qf-btn').forEach(function (b) {{ b.classList.remove('active'); }});
+      document.querySelectorAll('.plan-recommended').forEach(function (p) {{ p.classList.remove('plan-recommended'); }});
+      if (finderTip) finderTip.hidden = true;
+    }}
+
+    function applyScenario(sid) {{
+      document.querySelectorAll('.qf-btn').forEach(function (b) {{
+        b.classList.toggle('active', b.getAttribute('data-scenario') === sid);
+      }});
+      document.querySelectorAll('.plan-recommended').forEach(function (p) {{ p.classList.remove('plan-recommended'); }});
+      var targetCards = [];
+      if (sid === 'solo-dev') {{
+        setAudience('solo');
+        targetCards = ['5x'];
+      }} else if (sid === 'solo-max') {{
+        setAudience('solo');
+        targetCards = ['20x'];
+      }} else if (sid === 'team-rd') {{
+        setAudience('enterprise');
+        targetCards = ['biz', 'team'];
+      }} else if (sid === 'ent-custom') {{
+        setAudience('enterprise');
+        targetCards = ['custom'];
+      }}
+      targetCards.forEach(function (ck) {{
+        var el = document.querySelector('[data-plan-card="' + ck + '"]');
+        if (el) el.classList.add('plan-recommended');
+      }});
+      if (finderTip && finderTipText && FINDER_TIPS[sid]) {{
+        finderTipText.textContent = '💡 ' + FINDER_TIPS[sid];
+        finderTip.hidden = false;
+      }}
+    }}
+
+    document.querySelectorAll('[data-audience-tab]').forEach(function (btn) {{
+      btn.addEventListener('click', function () {{
+        clearScenarioHighlight();
+        setAudience(btn.getAttribute('data-audience-tab'));
+      }});
+    }});
+
+    document.querySelectorAll('[data-scenario]').forEach(function (btn) {{
+      btn.addEventListener('click', function () {{
+        var sid = btn.getAttribute('data-scenario');
+        if (btn.classList.contains('active')) {{
+          clearScenarioHighlight();
+        }} else {{
+          applyScenario(sid);
+        }}
+      }});
+    }});
+
+    if (finderTipClose) {{
+      finderTipClose.addEventListener('click', clearScenarioHighlight);
+    }}
+
+    document.querySelectorAll('details').forEach(function (det) {{
+      det.addEventListener('toggle', function () {{
+        if (det.open) clearReveal(det);
+      }});
+    }});
+
     document.querySelectorAll('a[href="#top"]').forEach(function (el) {{
       el.addEventListener('click', function (e) {{
         e.preventDefault();
@@ -1924,30 +2313,9 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
       clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
       var headEl = sec.querySelector('.section-head') || sec;
-      var gridEl = sec.querySelector('.pricing-solo') || sec.querySelector('.pricing');
       var idealTop = docTop(headEl) - headerH - 12;
-      var targetY = idealTop;
-      if (gridEl) {{
-        var plans = Array.prototype.slice.call(gridEl.querySelectorAll('.plan'));
-        if (plans.length) {{
-          var checkPlans = innerWidth <= 960
-            ? [plans.reduce(function (a, b) {{ return docTop(a) <= docTop(b) ? a : b; }})]
-            : plans;
-          var maxBtnBottom = 0;
-          checkPlans.forEach(function (p) {{
-            var btn = p.querySelector('.btn');
-            if (btn) maxBtnBottom = Math.max(maxBtnBottom, docTop(btn) + btn.offsetHeight);
-          }});
-          if (maxBtnBottom > 0) {{
-            var neededBottom = maxBtnBottom + 16;
-            if (neededBottom - idealTop > innerHeight) {{
-              targetY = neededBottom - innerHeight;
-            }}
-          }}
-        }}
-      }}
       var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
-      var destY = Math.max(0, Math.min(targetY, maxScroll));
+      var destY = Math.max(0, Math.min(idealTop, maxScroll));
       window.scrollTo({{
         top: destY,
         behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant'
@@ -1957,19 +2325,28 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
 
     function scrollToSection(id, smooth) {{
       if (id === 'pricing') return scrollToPricing(smooth);
+      if (id === 'pricing-enterprise') {{
+        setAudience('enterprise');
+        return scrollToPricing(smooth);
+      }}
+      if (id === 'dedicated-line') {{
+        setAudience('solo');
+        var dlDet = document.getElementById('dedicated-line');
+        if (dlDet) {{ dlDet.open = true; clearReveal(dlDet); }}
+      }} else if (id === 'seat-addons-drawer') {{
+        setAudience('enterprise');
+        var saDet = document.getElementById('seat-addons-drawer');
+        if (saDet) {{ saDet.open = true; clearReveal(saDet); }}
+      }} else if (id === 'storage') {{
+        var stDet = document.getElementById('storage');
+        if (stDet) {{ stDet.open = true; clearReveal(stDet); }}
+      }}
       var sec = document.getElementById(id);
       if (!sec) return null;
       clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
-      var rawY;
-      if (id === 'storage') {{
-        rawY = docTop(sec) - headerH - 4;
-      }} else if (id === 'pricing-enterprise' || id === 'dedicated-line') {{
-        rawY = docTop(sec) - headerH - 16;
-      }} else {{
-        var headEl = sec.querySelector('.section-head');
-        rawY = headEl ? (docTop(headEl) - headerH - 28) : (docTop(sec) - headerH - 16);
-      }}
+      var headEl = sec.querySelector('.section-head');
+      var rawY = headEl ? (docTop(headEl) - headerH - 24) : (docTop(sec) - headerH - 16);
       var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
       var destY = Math.max(0, Math.min(rawY, maxScroll));
       window.scrollTo({{
@@ -1986,9 +2363,14 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
       if (!document.getElementById(id)) return;
       el.addEventListener('click', function (e) {{
         e.preventDefault();
+        var gotoAud = el.getAttribute('data-goto-audience');
+        if (gotoAud) {{
+          clearScenarioHighlight();
+          setAudience(gotoAud);
+        }}
         history.replaceState(null, '', '#' + id);
         var destY = scrollToSection(id, true);
-        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line') && navById.pricing ? 'pricing' : null);
+        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line' || id === 'storage') && navById.pricing ? 'pricing' : null);
         if (spyId && destY !== null) {{
           lockedNavId = spyId;
           lockTargetY = destY;
@@ -1997,6 +2379,14 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         }}
       }});
     }});
+
+    (function initAudienceFromUrl() {{
+      var sp = new URLSearchParams(location.search);
+      var tabQ = (sp.get('tab') || '').toLowerCase();
+      if (tabQ === 'enterprise' || tabQ === 'team' || location.hash === '#pricing-enterprise') {{
+        setAudience('enterprise');
+      }}
+    }})();
 
     if (location.hash && location.hash.length > 1) {{
       var initId = decodeURIComponent(location.hash.slice(1));
@@ -2026,7 +2416,7 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
     }});
 
     if (!root.classList.contains('motion') || !('IntersectionObserver' in window)) return;
-    var targets = document.querySelectorAll('main .section-head, main .card, main .faq details, main .cta, main .stripe-trust, main .currency-switch, main .pricing-controls, main .tier-divider, main .enterprise-toolbar, main .seat-addons');
+    var targets = document.querySelectorAll('main .section-head, #service .card, #panel-solo > .pricing > .card, #security .card, #process .card, main .faq > details, main .cta, main .stripe-trust, main .audience-tabs, main .quick-finder, main .pricing-controls');
     targets.forEach(function (el) {{
       var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
       el.classList.add('mo-reveal');

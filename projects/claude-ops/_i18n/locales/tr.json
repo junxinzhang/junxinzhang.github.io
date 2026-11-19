@@ -917,5 +917,111 @@
         "body_html": "<p>Bir tahsilatla ilgili sorunuz varsa lütfen önce bizimle iletişime geçin; hızla çözüme kavuşturalım. Bizimle iletişime geçmeden bankanız nezdinde ters ibraz (chargeback) başlatırsanız, uyuşmazlık sonuçlanana kadar ilgili hizmeti askıya alabiliriz.</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "Kurulumdan günlük operasyonlara kadar tamamen yönetilen, anında kullanıma hazır altyapı. Avustralya, ABD, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda veya Kanada'daki yerel yerleşik geniş bant ağları üzerinde (asla ucuz paylaşımlı bulut veri merkezlerinde değil) kendi yüksek donanımlı Mac Studio veya Mac mini ortamınız.",
+    "hero_cta_solo": "Bireysel Planlar →",
+    "hero_cta_ent": "Ekip ve Kurumsal →",
+    "hero_consult": "Özel küme mi gerekiyor? Mühendisimize yazın →",
+    "pillars_tag": "Hizmet",
+    "pillars_h2": "Kurulum, ağ ve operasyonu bize bırakın — siz yalnızca üretmeye odaklanın",
+    "pillars_sub": "Kurulumdan günlük operasyonlara kadar tamamen yönetilen, anında kullanıma hazır altyapı.",
+    "pillars": [
+      {
+        "h3": "Yüksek donanımlı Mac Studio ve mini",
+        "p": "Avustralya, ABD, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda veya Kanada'daki yerel yerleşik geniş bant ağları üzerinde (asla ucuz paylaşımlı bulut veri merkezlerinde değil) kendi yüksek donanımlı Mac Studio veya Mac mini ortamınız. Uzun vadeli kararlılık için hesap düzeyinde izolasyon (20x'te özel tahsisli cihaz).",
+        "chips": [
+          "Fiziksel Mac'ler",
+          "İzole Alan"
+        ]
+      },
+      {
+        "h3": "Kurumsal BGP omurgası",
+        "p": "Donanıma ve birinci sınıf rotalara yatırım yapmaya devam ediyoruz: 200Mbps–500Mbps+ simetrik hızlara sahip 9 ülkeli yerel İSS geniş bant altyapısı, kendi barındırdığımız aktarım sunucuları (relay) ve uzak masaüstünün asıl düşmanı olan paket kaybını sıfıra indiren kurumsal BGP omurgasıyla birleşiyor.",
+        "chips": [
+          "200–500Mbps+ Simetrik",
+          "Çift bacaklı BBR"
+        ]
+      },
+      {
+        "h3": "Üst Düzey 1'e 1 Konsiyerj",
+        "p": "Üreticiler, geliştiriciler, kurucular ve ekipler için tasarlanmış özel yapay zeka mühendislik rehberliği. Claude Code iş akışları, MCP ve Skills kurulumundan gerçek projeleri canlıya almaya kadar 7×8s / 7×16s / 7×24s doğrudan 1'e 1 destek alın.",
+        "chips": [
+          "Yönetilen faturalandırma",
+          "Üst Düzey Deneyim"
+        ]
+      }
+    ],
+    "finder_label": "3 Saniyede Plan Bulucu · Senaryonuzu seçin:",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "Bireysel Geliştirici",
+    "tab_solo_sub": "1 kullanıcı · 3 net seçenek",
+    "tab_ent_title": "Ekip ve Kurumsal",
+    "tab_ent_sub": "5–100+ koltuk · Adanmış Mac · Tek fatura",
+    "solo_fit": [
+      "Kararlı bir Claude ortamıyla günlük sohbet, içerik yazımı ve hafif kodlama için.",
+      "Claude Code'u her gün yoğun biçimde kullanan geliştiriciler ve üreticiler için.",
+      "Günün her saati birden fazla ajan çalıştıran üretken geliştiriciler, kurucular ve ileri düzey kullanıcılar için."
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "5 Koltuk",
+    "ent_fit_biz": "10 Koltuk",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "Özel Teklif",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "Kurumsal Danışmanla İletişime Geçin →",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "ClaudeOps Kurumsal Özel Hat · Sınır Ötesi Hızlandırma",
+    "drawer_line_hint": "1x ve 5x aboneleri için isteğe bağlı eklenti: ultra tepkisel Screen Sharing ve Claude Code deneyimi için trafiğinizi çift bacaklı BBR %0 paket kaybı hızlandırmasına sahip kurumsal BGP sınır ötesi omurgamız üzerinden yönlendirin (yıllık ödemede 2 ay ücretsiz).",
+    "drawer_line_cta": "Seçenekleri gör",
+    "drawer_upg_title": "Koltuk Başı Yükseltme Eklentileri",
+    "drawer_upg_hint": "Aktif herhangi bir Team veya Business temel planında kademeleri dilediğiniz gibi karıştırın — belirli ekip üyelerini anında yükseltin (yıllık eklentilerde de 2 ay ücretsiz).",
+    "drawer_upg_cta": "Seçenekleri gör",
+    "drawer_storage_title": "Dijital Varlıklar İçin Yönetilen Bulut Depolama",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "Seçenekleri gör",
+    "drawer_close_cta": "Gizle",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "İki kademeli izolasyon: ayrı hesaplar ve özel tahsisli cihazlar",
+    "trust_sub": "Müşteri gizliliğini korumak amacıyla tüm yorumlarda karikatür avatarlar ve maskelenmiş isimler kullanılırken gerçek geri bildirimler ve abonelik kademeleri korunmuştur.",
+    "faq_more_open": "Diğer {count} soruyu göster",
+    "faq_more_close": "Daha az göster"
   }
 }

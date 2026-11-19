@@ -917,5 +917,111 @@
         "body_html": "<p>إذا كان لديك أي استفسار حول عملية خصم، يرجى التواصل معنا أولاً وسنعمل على حلّها سريعاً. وفي حال تقديم طلب استرداد قسري (Chargeback) لدى البنك دون التواصل معنا، يحق لنا تعليق الخدمة المرتبطة ريثما يُحسم النزاع.</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "من التهيئة الأولية إلى التشغيل اليومي، خدمة مدارة بالكامل وجاهزة للعمل فوراً. جهاز Mac Studio أو Mac mini عالي المواصفات متصل بشبكات نطاق عريض محلية أصلية في أستراليا أو الولايات المتحدة أو سنغافورة أو ماليزيا أو إندونيسيا أو اليابان أو كمبوديا أو نيوزيلندا أو كندا (وليس مراكز بيانات سحابية مشتركة رخيصة).",
+    "hero_cta_solo": "خطط الأفراد ←",
+    "hero_cta_ent": "الفرق والشركات ←",
+    "hero_consult": "هل تحتاج إلى مجموعة مخصصة؟ راسلنا ←",
+    "pillars_tag": "الخدمة",
+    "pillars_h2": "اترك الإعداد والشبكة والتشغيل لنا — وركّز فقط على الإبداع",
+    "pillars_sub": "من التهيئة الأولية إلى التشغيل اليومي، خدمة مدارة بالكامل وجاهزة للعمل فوراً.",
+    "pillars": [
+      {
+        "h3": "أجهزة Mac Studio وMac mini عالية المواصفات",
+        "p": "جهاز Mac Studio أو Mac mini عالي المواصفات متصل بشبكات نطاق عريض محلية أصلية في أستراليا أو الولايات المتحدة أو سنغافورة أو ماليزيا أو إندونيسيا أو اليابان أو كمبوديا أو نيوزيلندا أو كندا (وليس مراكز بيانات سحابية مشتركة رخيصة). عزل على مستوى الحساب (وجهاز كامل مخصّص في 20x) لاستقرار طويل الأمد.",
+        "chips": [
+          "أجهزة Mac فعلية",
+          "مساحة معزولة"
+        ]
+      },
+      {
+        "h3": "عمود فقري BGP مؤسسي",
+        "p": "نواصل الاستثمار في العتاد والمسارات المتميزة: إنترنت محلي أصلي في 9 دول بسرعات متماثلة تتراوح بين 200Mbps و500Mbps+، مقترناً بنقاط ترحيل ذاتية الاستضافة وعمود فقري BGP مؤسسي يخفض فقدان الحزم — العدو الحقيقي لسطح المكتب البعيد — إلى الصفر.",
+        "chips": [
+          "سرعات متماثلة 200–500Mbps+",
+          "تسريع BBR ثنائي المسار"
+        ]
+      },
+      {
+        "h3": "إرشاد هندسي فردي رفيع المستوى",
+        "p": "توجيه هندسي مخصّص للمبدعين والمطوّرين والمؤسسين والفرق. من سير عمل Claude Code وإعداد MCP وSkills إلى إطلاق المشاريع الفعلية، احصل على دعم مباشر 7×8 / 7×16 / 7×24 ساعة.",
+        "chips": [
+          "فوترة واشتراكات مدارة",
+          "تجربة فائقة"
+        ]
+      }
+    ],
+    "finder_label": "اختيار سريع في 3 ثوانٍ · اختر حالتك:",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "للأفراد والمطورين",
+    "tab_solo_sub": "مستخدم واحد · 3 خطط واضحة",
+    "tab_ent_title": "الفرق والمؤسسات",
+    "tab_ent_sub": "5–100+ مقعد · أجهزة Mac مخصصة · فاتورة موحدة",
+    "solo_fit": [
+      "للمحادثات اليومية والكتابة والبرمجة الخفيفة ببيئة Claude مستقرة.",
+      "للمطوّرين وصنّاع المحتوى الذين يعتمدون بكثافة على Claude Code يومياً.",
+      "للمبتكرين والمؤسسين والمحترفين الذين يشغّلون وكلاء متعددين على مدار الساعة."
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "5 مقاعد",
+    "ent_fit_biz": "10 مقاعد",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "حسب الطلب",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "تواصل مع مستشار المؤسسات ←",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "خط ClaudeOps المؤسسي المخصّص · تسريع عابر للحدود",
+    "drawer_line_hint": "إضافة اختيارية لمشتركي 1x و5x: وجّه حركة بياناتك عبر عمودنا الفقري المؤسسي BGP العابر للحدود مع تسريع BBR ثنائي المسار و0% فقدان حزم لتجربة Screen Sharing وClaude Code فائقة الاستجابة (الفوترة السنوية تمنحك شهرين مجاناً).",
+    "drawer_line_cta": "عرض الخيارات",
+    "drawer_upg_title": "إضافات ترقية المقاعد الفردية",
+    "drawer_upg_hint": "امزج بين الفئات على أي باقة أساسية نشطة من Team أو Business — ورقِّ أعضاء محدّدين عند الحاجة (الإضافات السنوية تحصل أيضاً على شهرين مجاناً).",
+    "drawer_upg_cta": "عرض الخيارات",
+    "drawer_storage_title": "تخزين سحابي مدار لأصولك الرقمية",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "عرض الخيارات",
+    "drawer_close_cta": "إخفاء",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "طبقتان من العزل: حسابات مستقلة وأجهزة مخصّصة بالكامل",
+    "trust_sub": "حفاظاً على خصوصية عملائنا، تُعرض جميع التقييمات بصور رمزية وأسماء مموّهة مع الإبقاء على نص التجربة الحقيقية وفئة الاشتراك.",
+    "faq_more_open": "عرض {count} أسئلة إضافية",
+    "faq_more_close": "إخفاء الأسئلة الإضافية"
   }
 }

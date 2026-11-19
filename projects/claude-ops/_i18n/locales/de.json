@@ -917,5 +917,111 @@
         "body_html": "<p>Bei Fragen zu einer Abbuchung kontaktieren Sie bitte zuerst uns — wir klären das Anliegen schnell und unkompliziert. Reichen Sie ohne vorherige Kontaktaufnahme eine Rückbuchung bei Ihrer Bank ein, können wir den betreffenden Service für die Dauer des Verfahrens sperren.</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "Von der Ersteinrichtung bis zum laufenden Betrieb — vollständig verwaltet und sofort einsatzbereit. Ihr eigener leistungsstarker Mac Studio oder Mac mini an lokalen nativen Breitbandanschlüssen in Australien, den USA, Singapur, Malaysia, Indonesien, Japan, Kambodscha, Neuseeland oder Kanada (niemals billige geteilte Cloud-Rechenzentren).",
+    "hero_cta_solo": "Einzelpläne →",
+    "hero_cta_ent": "Teams & Unternehmen →",
+    "hero_consult": "Individueller Cluster gewünscht? Schreiben Sie uns →",
+    "pillars_tag": "Service",
+    "pillars_h2": "Überlassen Sie Setup, Netzwerk & Betrieb uns — konzentrieren Sie sich aufs Bauen",
+    "pillars_sub": "Von der Ersteinrichtung bis zum laufenden Betrieb — vollständig verwaltet und sofort einsatzbereit.",
+    "pillars": [
+      {
+        "h3": "High-Spec Mac Studio & mini",
+        "p": "Ihr eigener leistungsstarker Mac Studio oder Mac mini an lokalen nativen Breitbandanschlüssen in Australien, den USA, Singapur, Malaysia, Indonesien, Japan, Kambodscha, Neuseeland oder Kanada (niemals billige geteilte Cloud-Rechenzentren). Konto-Isolierung (dedizierte Maschine bei 20x), dauerhaft stabil.",
+        "chips": [
+          "Physische Macs",
+          "Isolierter Raum"
+        ]
+      },
+      {
+        "h3": "Enterprise-BGP-Backbone",
+        "p": "Wir investieren laufend in Hardware und Premium-Routen: natives ISP-Breitband in 9 Ländern mit symmetrischen 200 Mbit/s bis 500 Mbit/s+, kombiniert mit eigenen Relays und einem Enterprise-BGP-Backbone, das Paketverlust — den größten Feind jedes Remote-Desktops — auf null senkt.",
+        "chips": [
+          "200–500 Mbit/s+ symmetrisch",
+          "Dual-Leg-BBR"
+        ]
+      },
+      {
+        "h3": "Erstklassiger 1:1-Concierge",
+        "p": "Persönliche KI-Engineering-Begleitung für Kreative, Entwickler, Gründer und Teams. Von Claude-Code-Workflows sowie MCP- und Skills-Setup bis zum Livegang realer Projekte — mit direktem 1:1-Support über 7×8h / 7×16h / 7×24h.",
+        "chips": [
+          "Verwaltete Abrechnung",
+          "Top-Betreuung"
+        ]
+      }
+    ],
+    "finder_label": "Schnellauswahl · Wählen Sie Ihr Szenario:",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "Einzelentwickler & Creator",
+    "tab_solo_sub": "1 Nutzer · 3 klare Stufen",
+    "tab_ent_title": "Teams & Enterprise",
+    "tab_ent_sub": "5–100+ Plätze · Dedizierte Macs · Sammelrechnung",
+    "solo_fit": [
+      "Für tägliche Chats, Texte und leichtes Coding mit einem zuverlässig stabilen Claude.",
+      "Für Entwickler und Kreative, die Claude Code täglich intensiv im Produktiveinsatz nutzen.",
+      "Für produktive Builder, Gründer und Power-User, die mehrere Agenten rund um die Uhr betreiben."
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "5 Plätze",
+    "ent_fit_biz": "10 Plätze",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "Auf Anfrage",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "Enterprise-Berater kontaktieren →",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "ClaudeOps Enterprise-Standleitung · Grenzüberschreitende Beschleunigung",
+    "drawer_line_hint": "Optionales Add-on für 1x- & 5x-Abonnenten: Leiten Sie Ihren Datenverkehr über unser grenzüberschreitendes Enterprise-BGP-Backbone mit Dual-Leg-BBR und 0 % Paketverlust für verzögerungsfreie Bildschirmfreigabe & Claude Code (2 Monate gratis bei Jahreszahlung).",
+    "drawer_line_cta": "Optionen anzeigen",
+    "drawer_upg_title": "Einzelplatz-Upgrade-Add-ons",
+    "drawer_upg_hint": "Kombinieren Sie Stufen flexibel auf jedem aktiven Team- oder Business-Basistarif — stufen Sie einzelne Teammitglieder bei Bedarf hoch (auch Jahres-Add-ons erhalten 2 Monate gratis).",
+    "drawer_upg_cta": "Optionen anzeigen",
+    "drawer_storage_title": "Verwalteter Cloud-Speicher für digitale Assets",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "Optionen anzeigen",
+    "drawer_close_cta": "Ausblenden",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "Zweistufige Isolierung: getrennte Konten und dedizierte Maschinen",
+    "trust_sub": "Zum Schutz der Privatsphäre unserer Kunden verwenden alle Rezensionen illustrierte Avatare und anonymisierte Kürzel bei unverfälschtem Feedback und realen Tarifstufen.",
+    "faq_more_open": "Weitere {count} Fragen anzeigen",
+    "faq_more_close": "Weniger anzeigen"
   }
 }

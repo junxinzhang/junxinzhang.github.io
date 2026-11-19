@@ -917,5 +917,111 @@
         "body_html": "<p>หากคุณมีข้อสงสัยเกี่ยวกับยอดเรียกเก็บเงิน โปรดติดต่อเราก่อนและเราจะรีบตรวจสอบแก้ไขให้อย่างรวดเร็ว หากคุณยื่นปฏิเสธรายการชำระเงินกับธนาคารโดยไม่ติดต่อเราก่อน เราอาจระงับบริการที่เกี่ยวข้องไว้ชั่วคราวระหว่างที่ข้อพิพาทกำลังอยู่ในขั้นตอนการพิจารณา</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "ตั้งแต่การติดตั้งตั้งค่าไปจนถึงการดูแลระบบรายวัน เราจัดการให้ครบวงจร พร้อมใช้งานทันที ทำงานบนเครื่องจริง Mac Studio หรือ Mac mini สเปกสูง เชื่อมต่อผ่านบรอดแบนด์ ISP ท้องถิ่นแท้ในออสเตรเลีย สหรัฐฯ สิงคโปร์ มาเลเซีย อินโดนีเซีย ญี่ปุ่น กัมพูชา นิวซีแลนด์ หรือแคนาดา (ไม่ใช่คลาวด์ดาต้าเซ็นเตอร์ราคาถูกที่ใช้ร่วมกันแออัด) แยกอิสระระดับบัญชี (และเหมาทั้งเครื่องใน 20x) เสถียรสำหรับการทำงานระยะยาว.",
+    "hero_cta_solo": "แพ็กเกจบุคคลทั่วไป →",
+    "hero_cta_ent": "ทีมและองค์กร →",
+    "hero_consult": "ต้องการคลัสเตอร์เฉพาะองค์กร? อีเมลปรึกษาเรา →",
+    "pillars_tag": "บริการ",
+    "pillars_h2": "ปล่อยเรื่องตั้งค่า เครือข่าย และดูแลระบบให้เรา — คุณโฟกัสแค่การสร้างสรรค์",
+    "pillars_sub": "ตั้งแต่การติดตั้งตั้งค่าไปจนถึงการดูแลระบบรายวัน เราจัดการให้ครบวงจร พร้อมใช้งานทันที",
+    "pillars": [
+      {
+        "h3": "Mac Studio และ mini สเปกสูง",
+        "p": "ทำงานบนเครื่องจริง Mac Studio หรือ Mac mini สเปกสูง เชื่อมต่อผ่านบรอดแบนด์ ISP ท้องถิ่นแท้ในออสเตรเลีย สหรัฐฯ สิงคโปร์ มาเลเซีย อินโดนีเซีย ญี่ปุ่น กัมพูชา นิวซีแลนด์ หรือแคนาดา (ไม่ใช่คลาวด์ดาต้าเซ็นเตอร์ราคาถูกที่ใช้ร่วมกันแออัด) แยกอิสระระดับบัญชี (และเหมาทั้งเครื่องใน 20x) เสถียรสำหรับการทำงานระยะยาว",
+        "chips": [
+          "เครื่อง Mac จริง",
+          "พื้นที่แยกอิสระ"
+        ]
+      },
+      {
+        "h3": "แกนหลัก BGP ระดับองค์กร",
+        "p": "เราลงทุนทั้งฮาร์ดแวร์และเส้นทางเครือข่ายระดับพรีเมียมอย่างต่อเนื่อง: บรอดแบนด์ ISP ท้องถิ่นแท้ใน 9 ประเทศ ความเร็วอัปโหลด/ดาวน์โหลดสมมาตร 200Mbps–500Mbps+ ผสานรีเลย์ความเร็วสูงที่เราดูแลเองและแกนหลัก BGP ระดับองค์กร เพื่อกดค่า Packet Loss ซึ่งเป็นศัตรูตัวจริงของรีโมตเดสก์ท็อปให้เหลือศูนย์",
+        "chips": [
+          "ความเร็วสมมาตร 200–500Mbps+",
+          "Dual-leg BBR ลดการสูญเสียข้อมูล"
+        ]
+      },
+      {
+        "h3": "ที่ปรึกษาวิศวกรรม AI แบบ 1 ต่อ 1",
+        "p": "คำแนะนำเชิงลึกที่ออกแบบมาเพื่อครีเอเตอร์ นักพัฒนา ผู้ก่อตั้ง และทีมงาน ตั้งแต่เวิร์กโฟลว์ Claude Code การตั้งค่า MCP และ Skills ไปจนถึงการส่งมอบโปรเจกต์ใช้งานจริง พร้อมการดูแลตัวต่อตัวแบบ 7×8 / 7×16 / 7×24 ชม.",
+        "chips": [
+          "ดูแลการชำระเงินและต่ออายุครบวงจร",
+          "ประสบการณ์ระดับท็อป"
+        ]
+      }
+    ],
+    "finder_label": "ช่วยเลือกใน 3 วินาที · เลือกรูปแบบการใช้งาน:",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "นักพัฒนา / ครีเอเตอร์เดี่ยว",
+    "tab_solo_sub": "1 ผู้ใช้ · 3 แพ็กเกจชัดเจน",
+    "tab_ent_title": "ทีมและองค์กร",
+    "tab_ent_sub": "5–100+ ที่นั่ง · เครื่อง Mac เฉพาะ · ใบแจ้งหนี้รวม",
+    "solo_fit": [
+      "เหมาะสำหรับการสนทนา งานเขียน และการเขียนโค้ดเบื้องต้นในชีวิตประจำวันอย่างเสถียร",
+      "สำหรับนักพัฒนาและครีเอเตอร์ที่ใช้งาน Claude Code อย่างจริงจังทุกวัน",
+      "สำหรับนักสร้างสรรค์ ผู้ก่อตั้ง และผู้ใช้งานหนักที่รันหลายเอเจนต์ตลอด 24 ชั่วโมง"
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "5 ที่นั่ง",
+    "ent_fit_biz": "10 ที่นั่ง",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "ปรับแต่งเฉพาะ",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "ติดต่อที่ปรึกษาองค์กร →",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "สายตรงองค์กร ClaudeOps · เร่งความเร็วข้ามประเทศ",
+    "drawer_line_hint": "แพ็กเกจเสริมสำหรับผู้ใช้งาน 1x และ 5x: ส่งทราฟฟิกผ่านแกนหลัก BGP ข้ามประเทศระดับองค์กร พร้อมระบบเร่งความเร็ว Dual-leg BBR ลด Packet Loss เป็น 0% เพื่อให้ Screen Sharing และ Claude Code ตอบสนองฉับไวถึงขีดสุด (ชำระรายปีรับสิทธิ์ฟรี 2 เดือน)",
+    "drawer_line_cta": "ดูตัวเลือกเสริม",
+    "drawer_upg_title": "แพ็กเกจเสริมอัปเกรดรายที่นั่ง",
+    "drawer_upg_hint": "ผสมผสานระดับที่นั่งบนแพ็กเกจหลัก Team หรือ Business ที่ใช้งานอยู่ — เลือกอัปเกรดเฉพาะสมาชิกสำคัญได้ตามต้องการ (แพ็กเกจเสริมรายปีรับสิทธิ์ฟรี 2 เดือนเช่นกัน)",
+    "drawer_upg_cta": "ดูตัวเลือกเสริม",
+    "drawer_storage_title": "บริการพื้นที่คลาวด์พร้อมดูแลครบวงจรสำหรับสินทรัพย์ดิจิทัล",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "ดูตัวเลือกเสริม",
+    "drawer_close_cta": "ย่อเก็บ",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "ระบบแยกอิสระ 2 ระดับ: แยกบัญชีผู้ใช้และเหมาเครื่องส่วนตัว",
+    "trust_sub": "เพื่อปกป้องความเป็นส่วนตัวของลูกค้า รีวิวทั้งหมดจึงใช้ภาพอวตารการ์ตูนและนามแฝง โดยคงเนื้อหาคำติชมจริงและระดับแพ็กเกจที่ใช้งานจริงไว้ครบถ้วน",
+    "faq_more_open": "ดูคำถามเพิ่มเติมอีก {count} ข้อ",
+    "faq_more_close": "ย่อคำถาม"
   }
 }

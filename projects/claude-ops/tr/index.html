@@ -995,16 +995,263 @@
     .map-hud-row b { white-space: normal; min-width: 0; line-height: 1.35 }
     @media (max-width: 1180px) {
       .nav-links { gap: 2px }
-      .nav-links a { padding: 6px 7px; font-size: .81rem }
+      .nav-links a { padding: 6px 9px; font-size: .84rem }
     }
-    @media (max-width: 1030px) {
+    @media (max-width: 920px) {
       .nav-links { display: none }
     }
+
+    /* ===== Streamlined 6-Floor UX & Focused Pricing Architecture ===== */
+    .hero { padding: 54px 0 58px }
+    .hero p.lead { max-width: 44em; margin: 0 auto 24px; font-size: clamp(.98rem, 1.65vw, 1.12rem); line-height: 1.68 }
+    .btn-ent-hero {
+      background: rgba(217, 119, 87, .10); color: var(--cream);
+      border: 1px solid rgba(232, 144, 111, .42);
+    }
+    .btn-ent-hero:hover {
+      background: rgba(217, 119, 87, .20); border-color: rgba(242, 180, 143, .75);
+      color: #fff; transform: translateY(-1px);
+    }
+    .hero-sub-link { margin-top: 14px; font-size: .84rem; color: var(--muted) }
+    .hero-sub-link a {
+      color: var(--muted); border-bottom: 1px dashed rgba(255, 255, 255, .22);
+      padding-bottom: 1px; transition: color .2s, border-color .2s;
+    }
+    .hero-sub-link a:hover { color: var(--primary-strong); border-color: var(--primary-strong) }
+    .hero-map-wrap { margin-top: 30px }
+
+    /* Floor 2: 3 Merged Core Capability Pillars */
+    .pillar-card { display: flex; flex-direction: column; padding: 26px 26px 22px }
+    .pillar-card p { flex: 1; line-height: 1.65 }
+    .pillar-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .06) }
+    .pillar-chip {
+      font-size: .75rem; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+      color: var(--primary-strong); background: rgba(217, 119, 87, .12); border: 1px solid rgba(217, 119, 87, .26);
+    }
+
+    /* Floor 3: Pricing Quick-Finder + Audience Segmented Tabs + Clean Cards */
+    #pricing { padding: 72px 0 76px }
+    #pricing > .container > .section-head { margin-bottom: 22px }
+    #pricing > .container > .section-head h2 { font-size: clamp(1.65rem, 3.2vw, 2.25rem) }
+    #pricing > .container > .section-head p { font-size: .95rem; margin-top: 8px }
+
+    .quick-finder {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 10px;
+      max-width: 980px; margin: 0 auto 20px; padding: 11px 16px; border-radius: 16px;
+      background: rgba(255, 255, 255, .025); border: 1px solid rgba(255, 255, 255, .07);
+    }
+    .qf-label { font-size: .82rem; font-weight: 600; color: var(--cream); margin-right: 4px }
+    .qf-btn {
+      font: inherit; font-size: .80rem; font-weight: 500; color: var(--text);
+      padding: 6px 13px; border-radius: 999px; cursor: pointer;
+      background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .10);
+      transition: .2s; white-space: nowrap;
+    }
+    .qf-btn:hover { color: #fff; border-color: rgba(232, 144, 111, .5); background: rgba(217, 119, 87, .12) }
+    .qf-btn.active {
+      color: #fff; font-weight: 600; background: rgba(217, 119, 87, .24);
+      border-color: var(--primary-strong); box-shadow: 0 4px 16px rgba(217, 119, 87, .25);
+    }
+    .finder-tip {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      max-width: 880px; margin: -6px auto 20px; padding: 11px 18px; border-radius: 13px;
+      background: linear-gradient(90deg, rgba(217, 119, 87, .18), rgba(242, 180, 143, .08));
+      border: 1px solid rgba(232, 144, 111, .42); color: var(--cream); font-size: .86rem; line-height: 1.5;
+    }
+    .finder-tip[hidden] { display: none !important }
+    .finder-tip-close {
+      background: transparent; border: 0; color: var(--muted); font-size: 1.15rem;
+      line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px; flex-shrink: 0;
+    }
+    .finder-tip-close:hover { color: #fff; background: rgba(255, 255, 255, .08) }
+
+    .audience-tabs {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+      max-width: 680px; margin: 0 auto 20px; padding: 6px; border-radius: 20px;
+      background: rgba(255, 255, 255, .03); border: 1px solid rgba(255, 255, 255, .09);
+    }
+    .aud-tab {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 12px 18px; border-radius: 14px; border: 1px solid transparent;
+      background: transparent; color: var(--muted); cursor: pointer; font-family: inherit;
+      text-align: left; transition: .22s;
+    }
+    .aud-tab:hover { color: var(--cream); background: rgba(255, 255, 255, .035) }
+    .aud-tab[aria-selected="true"] {
+      background: linear-gradient(135deg, rgba(217, 119, 87, .24), rgba(217, 119, 87, .10));
+      border-color: rgba(232, 144, 111, .58); color: #fff;
+      box-shadow: 0 10px 28px -10px rgba(217, 119, 87, .45);
+    }
+    .aud-icon {
+      width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0;
+      background: rgba(255, 255, 255, .05); color: var(--muted); transition: .22s;
+    }
+    .aud-tab[aria-selected="true"] .aud-icon { background: var(--primary); color: #fff }
+    .aud-txt strong { display: block; font-size: .96rem; font-weight: 700; color: inherit; line-height: 1.25 }
+    .aud-txt span { display: block; font-size: .76rem; color: var(--muted); margin-top: 2px; line-height: 1.3 }
+    .aud-tab[aria-selected="true"] .aud-txt span { color: #f2d5be }
+    @media (max-width: 600px) {
+      .audience-tabs { grid-template-columns: 1fr }
+      .qf-btn { white-space: normal; text-align: center }
+    }
+
+    .pricing-panel[hidden] { display: none !important }
+    .pricing-controls { margin: 0 auto 26px; gap: 12px }
+
+    /* Comfortable, breathable plan cards */
+    #pricing .pricing-solo .plan,
+    #pricing .pricing-enterprise .plan { padding: 28px 25px 24px }
+    #pricing .pricing-solo .plan-tier b,
+    #pricing .pricing-enterprise .plan-tier b { font-size: 2rem }
+    #pricing .pricing-solo .price,
+    #pricing .pricing-enterprise .price { font-size: 2.3rem }
+    #pricing .pricing-solo .features li { padding: 5px 0; font-size: .89rem; line-height: 1.45 }
+    #pricing .pricing-solo .plan .btn,
+    #pricing .pricing-enterprise .plan .btn { padding: 12px 20px; font-size: .95rem }
+
+    .plan-fit {
+      margin: 10px 0 12px; padding: 6px 11px; border-radius: 9px;
+      background: rgba(217, 119, 87, .10); border-left: 3px solid var(--primary);
+      color: #f5dcc8; font-size: .80rem; font-weight: 600; line-height: 1.4;
+    }
+    .plan.plan-recommended {
+      outline: 2px solid #ffd7b3; outline-offset: 2px;
+      box-shadow: 0 0 0 6px rgba(217, 119, 87, .20), 0 26px 60px -16px rgba(217, 119, 87, .42) !important;
+    }
+
+    /* Enterprise 2-step clarity + 3rd Custom Cluster Card */
+    .enterprise-wrap { margin-top: 0 }
+    .ent-step-bar {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      margin: 0 auto 22px; padding: 16px 20px; border-radius: 16px;
+      background: rgba(255, 255, 255, .025); border: 1px solid rgba(232, 144, 111, .20);
+      text-align: center;
+    }
+    .ent-step-title { font-size: .85rem; font-weight: 700; color: var(--cream); letter-spacing: .02em }
+    .ent-step2-label {
+      text-align: center; font-size: .84rem; font-weight: 700; color: var(--muted);
+      margin: 0 0 20px; letter-spacing: .02em;
+    }
+    .plan.plan-custom {
+      border-style: dashed; border-color: rgba(242, 180, 143, .38);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .01));
+    }
+    .badge-custom {
+      background: #1f1b18; color: #e5d5c5; border: 1px solid rgba(255, 255, 255, .20);
+    }
+    .price-custom {
+      font-family: var(--serif); font-size: 1.95rem !important; font-weight: 700; color: var(--cream);
+      line-height: 1.15; letter-spacing: -.01em;
+    }
+
+    /* Collapsible Optional Add-on Drawers (Dedicated Line, Seat Upgrades, Cloud Storage) */
+    .addon-drawer {
+      margin-top: 22px; border-radius: 18px; overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .012));
+      border: 1px solid rgba(232, 144, 111, .24); transition: border-color .2s;
+    }
+    .addon-drawer:hover { border-color: rgba(232, 144, 111, .45) }
+    .addon-drawer[open] { border-color: rgba(232, 144, 111, .48); background: rgba(255, 255, 255, .025) }
+    .addon-drawer > summary {
+      list-style: none; cursor: pointer; padding: 16px 22px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      user-select: none;
+    }
+    .addon-drawer > summary::-webkit-details-marker { display: none }
+    .drawer-sum-left { display: flex; align-items: flex-start; gap: 12px; min-width: 0 }
+    .drawer-ic {
+      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0;
+      background: rgba(217, 119, 87, .15); color: var(--primary-strong); margin-top: 2px;
+    }
+    .drawer-titles { min-width: 0 }
+    .drawer-title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px }
+    .drawer-title-row strong { color: var(--cream); font-size: .95rem; font-weight: 700 }
+    .drawer-pill {
+      font-size: .71rem; font-weight: 700; padding: 2px 9px; border-radius: 999px;
+      background: rgba(91, 209, 139, .14); color: #7ce6a6; border: 1px solid rgba(91, 209, 139, .30);
+      white-space: nowrap;
+    }
+    .drawer-hint { display: block; margin-top: 3px; font-size: .81rem; color: var(--muted); line-height: 1.45 }
+    .drawer-toggle-pill {
+      display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;
+      padding: 7px 14px; border-radius: 999px; font-size: .80rem; font-weight: 600;
+      color: var(--primary-strong); background: rgba(217, 119, 87, .12);
+      border: 1px solid rgba(217, 119, 87, .32); transition: .2s; white-space: nowrap;
+    }
+    .addon-drawer > summary:hover .drawer-toggle-pill { background: var(--primary); color: #fff; border-color: var(--primary) }
+    .drawer-toggle-pill i { font-style: normal; transition: transform .22s ease; display: inline-block }
+    .addon-drawer .when-open { display: none }
+    .addon-drawer[open] .when-closed { display: none }
+    .addon-drawer[open] .when-open { display: inline }
+    .addon-drawer[open] .drawer-toggle-pill i { transform: rotate(180deg) }
+    .drawer-body { padding: 4px 22px 22px; border-top: 1px solid rgba(255, 255, 255, .06) }
+    .drawer-body-lead { margin: 14px 0 16px; font-size: .84rem; color: var(--muted); line-height: 1.55 }
+    .storage-drawer { margin-top: 16px; border-color: rgba(255, 255, 255, .12) }
+    @media (max-width: 680px) {
+      .addon-drawer > summary { flex-direction: column; align-items: flex-start; gap: 10px }
+      .drawer-toggle-pill { align-self: flex-start }
+    }
+
+    /* Floor 4: Merged Security + Network Proof + Curated 3 Reviews */
+    .trust-split {
+      display: grid; grid-template-columns: 1.08fr .92fr; gap: 24px; align-items: stretch;
+    }
+    .sec-stack { display: grid; gap: 14px }
+    .sec-compact-card {
+      display: flex; align-items: flex-start; gap: 16px; padding: 20px 22px;
+    }
+    .sec-compact-card .icon { flex-shrink: 0; width: 40px; height: 40px; margin-top: 2px }
+    .sec-compact-card h3 { margin: 0 0 5px; font-size: 1.02rem }
+    .sec-compact-card p { font-size: .88rem; line-height: 1.58 }
+    .net-proof-box { display: flex; flex-direction: column; justify-content: space-between; padding: 24px 26px }
+    .net-proof-head h3 { margin: 0 0 6px; color: var(--cream); font-size: 1.08rem }
+    .net-proof-head p { margin: 0 0 14px; font-size: .86rem; color: var(--muted); line-height: 1.55 }
+    .net-proof-box .net-chips { margin-bottom: 16px }
+    .trust-reviews { margin-top: 36px; padding-top: 34px; border-top: 1px solid var(--border) }
+    .trust-reviews-title {
+      text-align: center; font-size: .82rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--primary-strong); margin: 0 0 20px;
+    }
+    @media (max-width: 960px) { .trust-split { grid-template-columns: 1fr } }
+
+    /* Floor 5: Focused Top-6 FAQ + Expand More */
+    .faq-more {
+      background: transparent !important; border: 0 !important; padding: 0 !important; margin-top: 6px !important;
+    }
+    .faq-more > summary {
+      justify-content: center !important; width: fit-content; margin: 10px auto 0;
+      padding: 9px 20px; border-radius: 999px; font-size: .85rem; font-weight: 600;
+      color: var(--primary-strong) !important; background: rgba(217, 119, 87, .10);
+      border: 1px solid rgba(217, 119, 87, .30); transition: .2s;
+    }
+    .faq-more > summary:hover { background: rgba(217, 119, 87, .20); color: #fff !important }
+    .faq-more > summary::after { content: "▾" !important; font-size: .9rem !important; margin-left: 6px }
+    .faq-more[open] > summary::after { content: "▴" !important }
+    .faq-more .when-open { display: none }
+    .faq-more[open] .when-closed { display: none }
+    .faq-more[open] .when-open { display: inline }
+    .faq-more-list { margin-top: 14px }
+
+    /* Floor 6: Buyer CTA First, Compact Secondary Partner Strip Below */
+    .partner-banner.partner-compact {
+      margin: 26px 0 0; padding: 28px 30px; text-align: left;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .partner-compact-copy { flex: 1 1 480px; min-width: 0 }
+    .partner-compact h3 {
+      font-family: var(--serif); color: var(--cream); font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+      line-height: 1.35; margin: 10px 0 8px;
+    }
+    .partner-compact p { margin: 0 0 14px; font-size: .88rem; line-height: 1.6; max-width: none }
+    .partner-compact .partner-chips { justify-content: flex-start; margin: 0 }
+
     /* RTL Directional Overrides */
     [dir="rtl"] .hero-map-wrap { text-align: right }
     [dir="rtl"] .map-stage { direction: ltr; text-align: left }
     [dir="rtl"] .map-hud { direction: rtl; text-align: right }
     [dir="rtl"] .map-hud-row b { text-align: left }
+    [dir="rtl"] .aud-tab { text-align: right }
+    [dir="rtl"] .plan-fit { border-left: 0; border-right: 3px solid var(--primary) }
     [dir="rtl"] .enterprise-jump { margin-left: 0; margin-right: 6px }
     [dir="rtl"] .price small { margin-left: 0; margin-right: 4px }
     [dir="rtl"] .price sup { margin-right: 0; margin-left: 2px }
@@ -1018,6 +1265,7 @@
     [dir="rtl"] .nb-fill { inset: 0 0 0 auto }
     [dir="rtl"] .nb em { padding-left: 0; padding-right: 8px }
     [dir="rtl"] .contact-tg { text-align: right }
+    [dir="rtl"] .partner-banner.partner-compact { text-align: right }
     [dir="rtl"] .foot-right { margin-left: 0; margin-right: auto; text-align: left }
     [dir="rtl"] .social { justify-content: flex-start }
     [dir="rtl"] #scroll-progress { transform-origin: 100% 50% }
@@ -1051,13 +1299,9 @@
         Zaokit ClaudeOps
       </a>
       <ul class="nav-links">
-        <li><a href="#why">Neden</a></li>
         <li><a href="#service">Hizmet</a></li>
-        <li><a href="#value">Artı Değer</a></li>
-        <li><a href="#security">Güvenlik</a></li>
-        <li><a href="#reviews">Yorumlar</a></li>
         <li><a href="#pricing">Fiyatlar</a></li>
-        <li><a href="#storage">Depolama</a></li>
+        <li><a href="#security">Güvenlik</a></li>
         <li><a href="#process">Süreç</a></li>
         <li><a href="#faq">SSS</a></li>
       </ul>
@@ -1068,18 +1312,25 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Floor 1: Hero & Global Compute Topology -->
     <section class="hero">
       <div class="container">
         <span class="eyebrow"><span class="dot"></span>KÜRESEL VİZYON · Yapay Zeka Her Şehri ve Her Bireyi Aydınlatsın</span>
         <h1>Yapay Zeka Dünyayı Sınırsız Kılar<span class="h1-sub"><em>En gelişmiş üretkenliği ve en üst düzey deneyimi herkesle buluşturuyoruz</em></span></h1>
         <p class="lead">
-          Öncü yapay zeka üretkenliği asla küçük bir azınlığın ayrıcalığı olmamalı. Sidney, Silikon Vadisi, Tokyo ve Singapur&#x27;dan Cakarta&#x27;ya kadar dünya genelinde yerel bilgi işlem merkezlerini şehir şehir aydınlatıyor; her üreticinin, geliştiricinin ve ekibin sınır tanımadan inşa edebilmesi için izole fiziksel Mac iş istasyonlarını, kurumsal BGP özel hatlarını ve 7×24&#x27;e varan 1&#x27;e 1 mühendislik desteğini bir araya getiriyoruz.
+          Kurulumdan günlük operasyonlara kadar tamamen yönetilen, anında kullanıma hazır altyapı. Avustralya, ABD, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda veya Kanada&#x27;daki yerel yerleşik geniş bant ağları üzerinde (asla ucuz paylaşımlı bulut veri merkezlerinde değil) kendi yüksek donanımlı Mac Studio veya Mac mini ortamınız.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#pricing">Fiyatları incele</a>
-          <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi">Bize yazın</a>
+          <a class="btn btn-primary" href="#pricing" data-goto-audience="solo">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0114 0"/></svg>
+            Bireysel Planlar →
+          </a>
+          <a class="btn btn-ent-hero" href="#pricing-enterprise" data-goto-audience="enterprise">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h2m4 0h2M8 13h2m4 0h2M10 20v-3h4v3"/></svg>
+            Ekip ve Kurumsal →
+          </a>
         </div>
+        <div class="hero-sub-link"><a href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi">Özel küme mi gerekiyor? Mühendisimize yazın →</a></div>
 
         <div class="hero-map-wrap">
           <div class="hero-map-card" id="global-map">
@@ -1126,13 +1377,6 @@
             <div class="map-pills" role="tablist" aria-label="Bölge seçin">
               <button type="button" class="map-pill active" data-pick-node="AU"><i></i><span>Avustralya</span><code>AU</code></button><button type="button" class="map-pill" data-pick-node="US"><i></i><span>ABD</span><code>US</code></button><button type="button" class="map-pill" data-pick-node="SG"><i></i><span>Singapur</span><code>SG</code></button><button type="button" class="map-pill" data-pick-node="MY"><i></i><span>Malezya</span><code>MY</code></button><button type="button" class="map-pill" data-pick-node="ID"><i></i><span>Endonezya</span><code>ID</code></button><button type="button" class="map-pill" data-pick-node="JP"><i></i><span>Japonya</span><code>JP</code></button><button type="button" class="map-pill" data-pick-node="KH"><i></i><span>Kamboçya</span><code>KH</code></button><button type="button" class="map-pill" data-pick-node="NZ"><i></i><span>Yeni Zelanda</span><code>NZ</code></button><button type="button" class="map-pill" data-pick-node="CA"><i></i><span>Kanada</span><code>CA</code></button>
             </div>
-            <div class="map-partner-bar">
-              <div class="map-partner-copy">
-                <span class="partner-pill">✦ Küresel Ortak İnşa · 8 Milyar İnsanın Tamamına Hizmet</span>
-                <span><strong>Kendi cihazınızı getirin ve kaynaklarınızı paylaşın — gelir elde ederken başkalarının hayallerini gerçeğe dönüştürmesine ışık tutun!</strong></span>
-              </div>
-              <a class="partner-cta-btn" href="mailto:jason2023zhang@gmail.com?subject=Mac%27imi%20Getiriyorum%20/%20Zaokit%20K%C3%BCresel%20Bilgi%20%C4%B0%C5%9Flem%20A%C4%9F%C4%B1na%20Kat%C4%B1l%C4%B1m&amp;body=Merhaba%20Jason%2C%20kaynaklar%C4%B1m%C4%B1%20payla%C5%9Fmak%20ve%20Zaokit%20K%C3%BCresel%20Bilgi%20%C4%B0%C5%9Flem%20A%C4%9F%C4%B1na%20kat%C4%B1lmak%20istiyorum%3A%0A%0A1.%20%C3%9Clke%20/%20%C5%9Eehir%3A%0A2.%20%C4%B0%C5%9F%20birli%C4%9Fi%20modeli%20%28Kendi%20Mac%27imi%20getirme%20/%20Yerel%20geni%C5%9F%20bant%20d%C3%BC%C4%9F%C3%BCm%C3%BC%20/%20B%C3%B6lgesel%20i%C5%9F%20orta%C4%9F%C4%B1%29%3A%0A3.%20Mac%20donan%C4%B1m%20%C3%B6zellikleri%20ve%20yerel%20%C4%B0SS%20bilgileri%3A%0A4.%20%C4%B0leti%C5%9Fim%20bilgileri%3A">Cihaz Getir / Bize Katıl →</a>
-            </div>
           </div>
         </div>
         <div class="hero-stats">
@@ -1145,364 +1389,82 @@
       </div>
     </section>
 
-    <!-- Pain points -->
-    <section class="section section-alt" id="why">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Neden</p>
-          <h2>Claude&#x27;un zor kısmı hiçbir zaman modelin kendisi değildi</h2>
-          <p>Enerjinizi asıl tüketen şey, asıl işinizle hiçbir ilgisi olmayan belirsizliklerdir.</p>
-        </div>
-        <div class="grid grid-4 pain">
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
-            <h3>Zahmetli kurulum</h3>
-            <p>Hesap açılışından ortam yapılandırmasına kadar her adımı tek başınıza, danışacak kimse olmadan çözmek zorunda kalırsınız.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8.5a15 15 0 0120 0M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0"/><path d="M3 3l18 18"/></svg></div>
-            <h3>Kararsız çalışma</h3>
-            <p>Her yerel bilgisayar farklıdır ve uzun süreli Claude Code görevleri yarı yolda kesintiye uğrar.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-            <h3>Ödeme ve fatura pürüzleri</h3>
-            <p>Başarısız ödemeler, plan değişiklikleri ve yenilemeler her ay değerli vaktinizi çalar.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-            <h3>Kaybedilen zaman</h3>
-            <p>Araç araştırmak ve sorun gidermek için harcanan saatler doğrudan gerçek projelerinize gitmelidir.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service -->
-    <section class="section" id="service">
+    <!-- Floor 2: 3 Merged Core Capability Pillars -->
+    <section class="section section-alt" id="service">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">Hizmet</p>
-          <h2>Belirsizliği bize bırakın. Netliği siz koruyun.</h2>
+          <h2>Kurulum, ağ ve operasyonu bize bırakın — siz yalnızca üretmeye odaklanın</h2>
           <p>Kurulumdan günlük operasyonlara kadar tamamen yönetilen, anında kullanıma hazır altyapı.</p>
         </div>
-        <div class="grid grid-4">
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div>
-            <h3>İzole çalışma alanı</h3>
-            <p>İzole dosya ve izinlere sahip size özel macOS hesabı ve çalışma alanı; ayrıca 20x planında tüm cihazı tek başınıza kullanma seçeneği. Sohbetleriniz ve proje verileriniz tamamen sizin kontrolünüzde kalır.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="grid grid-3">
+          <div class="card value-card pillar-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
             <h3>Yüksek donanımlı Mac Studio ve mini</h3>
             <p>Avustralya, ABD, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda veya Kanada&#x27;daki yerel yerleşik geniş bant ağları üzerinde (asla ucuz paylaşımlı bulut veri merkezlerinde değil) kendi yüksek donanımlı Mac Studio veya Mac mini ortamınız. Uzun vadeli kararlılık için hesap düzeyinde izolasyon (20x&#x27;te özel tahsisli cihaz).</p>
+            <div class="pillar-chips"><span class="pillar-chip">Fiziksel Mac&#x27;ler</span><span class="pillar-chip">İzole Alan</span></div>
           </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
-            <h3>Yönetilen faturalandırma</h3>
-            <p>Abonelikler, yenilemeler ve plan değişiklikleri tamamen bizim tarafımızdan yönetilir; takip etmeniz gereken hiçbir pürüz kalmaz.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-            <h3>Kademeli 1&#x27;e 1 Konsiyerj</h3>
-            <p>Planınıza göre ölçeklenen doğrudan 1&#x27;e 1 mühendislik desteği: 7×8 saat (1x), 7×16 saat (5x) ve kesintisiz 7×24 özel konsiyerj (20x).</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Value: beyond compute -->
-    <section class="section section-alt" id="value">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Artı Değer</p>
-          <h2>Aldığınız şey <em class="grad">salt işlem gücünden çok daha fazlası</em></h2>
-          <p>Hesap ve cihaz yalnızca başlangıçtır. Asıl rekabet avantajı, yapay zekayı doğru şekilde, daha derinlemesine ve herkesten önce kullanmanıza yardımcı olan uzmanların yanınızda olmasıdır.</p>
-        </div>
-        <div class="grid grid-3">
-          <div class="card value-card">
+          <div class="card value-card pillar-card">
             <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div>
-            <h3>Üst düzey işlem gücü ve iş istasyonu</h3>
-            <p>Uzun süreli Claude Code görevlerinin kesintisiz devam etmesi için yüksek donanımlı fiziksel Mac Studio veya Mac mini üzerinde çalışan, sizin için yapılandırılıp yönetilen özel yapay zeka mühendislik alanı.</p>
+            <h3>Kurumsal BGP omurgası</h3>
+            <p>Donanıma ve birinci sınıf rotalara yatırım yapmaya devam ediyoruz: 200Mbps–500Mbps+ simetrik hızlara sahip 9 ülkeli yerel İSS geniş bant altyapısı, kendi barındırdığımız aktarım sunucuları (relay) ve uzak masaüstünün asıl düşmanı olan paket kaybını sıfıra indiren kurumsal BGP omurgasıyla birleşiyor.</p>
+            <div class="pillar-chips"><span class="pillar-chip">200–500Mbps+ Simetrik</span><span class="pillar-chip">Çift bacaklı BBR</span></div>
           </div>
-          <div class="card value-card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+          <div class="card value-card pillar-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
             <h3>Üst Düzey 1&#x27;e 1 Konsiyerj</h3>
             <p>Üreticiler, geliştiriciler, kurucular ve ekipler için tasarlanmış özel yapay zeka mühendislik rehberliği. Claude Code iş akışları, MCP ve Skills kurulumundan gerçek projeleri canlıya almaya kadar 7×8s / 7×16s / 7×24s doğrudan 1&#x27;e 1 destek alın.</p>
-          </div>
-          <div class="card value-card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></div>
-            <h3>İlk elden yapay zeka içgörüleri</h3>
-            <p>Claude ve önde gelen diğer yapay zeka araçlarına dair yeni özellikler, en iyi pratikler ve sektör gelişmeleri hakkında düzenli güncellemelerle yeni yetenekleri ilk benimseyen siz olun.</p>
+            <div class="pillar-chips"><span class="pillar-chip">Yönetilen faturalandırma</span><span class="pillar-chip">Üst Düzey Deneyim</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Network optimisation -->
-    <section class="section net-section" id="network">
-      <div class="container net-grid">
-        <div class="net-copy">
-          <p class="section-tag">Ağ Altyapısı</p>
-          <h2>Akıcı bir uzak masaüstü için<br>sürekli ağ yatırımı</h2>
-          <p>Donanıma ve birinci sınıf rotalara yatırım yapmaya devam ediyoruz: 200Mbps–500Mbps+ simetrik hızlara sahip 9 ülkeli yerel İSS geniş bant altyapısı, kendi barındırdığımız aktarım sunucuları (relay) ve uzak masaüstünün asıl düşmanı olan paket kaybını sıfıra indiren kurumsal BGP omurgasıyla birleşiyor.</p>
-          <ul class="net-chips"><li>200–500Mbps+ Simetrik</li><li>Kurumsal BGP omurgası</li><li>Özel barındırılan röleler</li><li>Çift bacaklı BBR</li><li>Apple Silicon donanım kodlama</li><li>İzin listesi sıkılaştırması</li></ul>
-          <p style="margin: 14px 0 0; font-size: .86rem; color: var(--muted);">20x, Team ve Business planlarına ücretsiz dahildir; 1x / 5x aboneleri <a href="#dedicated-line" style="color: var(--primary-strong); font-weight: 600; border-bottom: 1px dashed rgba(232, 144, 111, .5);">ClaudeOps Kurumsal Özel Hat (ayda $5&#x27;dan başlayan) ↓</a> ekleyebilir.</p>
-        </div>
-        <div class="card net-card" aria-label="Optimizasyon öncesi ve sonrası ölçülen gecikme ve paket kaybı">
-          <div class="net-legend"><span class="lg before">Önce</span><span class="lg after">Sonra</span></div>
-              <div class="net-row">
-                <div class="net-node"><strong>Japonya</strong><span>HK omurgası üzerinden</span></div>
-                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:39.0%"></span><em>128–184ms · %10 kayıp</em></div><div class="nb after"><span class="nb-fill" style="--w:23.0%"></span><em>~92ms · %0 kayıp</em></div></div>
-              </div>
-              <div class="net-row">
-                <div class="net-node"><strong>Avustralya</strong><span>HK omurgası üzerinden</span></div>
-                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:91.2%"></span><em>343–386ms · %25–33 kayıp</em></div><div class="nb after"><span class="nb-fill" style="--w:60.0%"></span><em>~240ms · %0 kayıp</em></div></div>
-              </div>
-              <div class="net-row">
-                <div class="net-node"><strong>Kamboçya</strong><span>Doğrudan kara kablosu</span></div>
-                <div class="net-bars"><div class="nb after"><span class="nb-fill" style="--w:20.2%"></span><em>~81ms · %0 kayıp</em></div></div>
-              </div>
-          <p class="net-foot">Kasım 2026&#x27;da Doğu Asya&#x27;daki bir istemciden ölçülmüştür. Kendi ağınıza bağlı olarak deneyiminiz değişiklik gösterebilir.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Security & Privacy -->
-    <section class="section" id="security">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Güvenlik ve Gizlilik</p>
-          <h2>İki kademeli izolasyon: ayrı hesaplar ve özel tahsisli cihazlar</h2>
-          <p>Terminaliniz özel kaynak kodlarını, ortam değişkenlerindeki API anahtarlarını, veritabanı ayarlarını ve iş mantığını taşır. Zaokit ClaudeOps iki kademeli izolasyon uygular: 1x / 5x planlarında her kullanıcı yalnızca Apple Screen Sharing üzerinden erişilen ayrı bir macOS hesabı alır; 20x planında ise donanım seviyesine kadar tamamen izole, size özel bir cihazı etkinleştirebilirsiniz.</p>
-        </div>
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-            <h3>20x özel cihaz: donanım düzeyinde izolasyon</h3>
-            <p>Özel cihaz modu etkinleştirildiğinde yüksek donanımlı Mac Studio veya Mac mini&#x27;nin tamamı yalnızca size hizmet eder. İstediğiniz yazılımı kurabilir, sistem düzeyi ayarları değiştirebilir ve RustDesk ile üçüncü taraf VNC dahil her türlü uzak masaüstü aracını kullanabilirsiniz.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-            <h3>1x / 5x ayrı hesap izolasyonu</h3>
-            <p>Her kullanıcının kendine ait dosya ve izinlere sahip ayrı bir macOS hesabı vardır; böylece geçmiş ve proje dosyaları gizli kalır. Erişim yalnızca her hesaba kimsenin göremediği izole bir masaüstü oturumu sunan Apple Screen Sharing ile sağlanır.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
-            <h3>Erişim ve şifreleme sizin kontrolünüzde</h3>
-            <p>Kendi erişim parolalarınızı ve şifreleme politikalarınızı kendiniz belirlersiniz. Ekibimiz yalnızca bağlantı sürekliliği ve faturalandırmayla ilgilenir; bakım, güvenlik olayları veya sizin yetkilendirdiğiniz sorun giderme işlemleri dışında hesabınızdaki verilere aktif olarak erişmez.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- User Reviews -->
-    <section class="section section-alt" id="reviews">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Müşteri Yorumları</p>
-          <h2>Gerçek abonelerimiz ne diyor</h2>
-          <p>Müşteri gizliliğini korumak amacıyla tüm yorumlarda karikatür avatarlar ve maskelenmiş isimler kullanılırken gerçek geri bildirimler ve abonelik kademeleri korunmuştur.</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#2b211c"/>
-                  <circle cx="32" cy="30" r="17" fill="#5c3627"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#d97757"/>
-                  <circle cx="32" cy="31" r="12" fill="#f7d5be"/>
-                  <path d="M19 29c0-9 6-14 13-14s13 5 13 14c-3-4-7-6-13-6s-10 2-13 6z" fill="#5c3627"/>
-                  <circle cx="27" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
-                  <circle cx="37" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
-                  <path d="M30.4 31h3.2" stroke="#3c2b24" stroke-width="1.4"/>
-                  <circle cx="27" cy="31" r="1.1" fill="#2b1e19"/>
-                  <circle cx="37" cy="31" r="1.1" fill="#2b1e19"/>
-                  <path d="M29 36.5c1.8 1.5 4.2 1.5 6 0" fill="none" stroke="#b85d43" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">M***</span>
-                  <span class="review-badge">Anonimleştirilmiş · Doğrulanmış</span>
-                </div>
-                <div class="review-role">Sınır Ötesi Yapay Zeka Ürün Lideri</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
-            <p class="review-quote">&quot;Kurumsal tünel jilet gibi net ve ultra akıcı — yerel ToDesk bağlantım bile bu kadar net değildi. Kod yazmak ve pencereler arasında geçiş yapmak neredeyse kendi bilgisayarımda çalışmak gibi. Hızlı, güvenilir ve ödediğiniz her kuruşa değer; gerçekten üst düzey bir deneyim.&quot;</p>
-            <div class="review-foot">
-              <span>Doğrulanmış Sohbet Geri Bildirimi</span>
-              <span class="review-plan">5x Pro</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#1b232c"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#3d6b8e"/>
-                  <circle cx="32" cy="31" r="12" fill="#f4cfb6"/>
-                  <path d="M19 28c1-9 6-14 13-14 8 0 13 5 13 14-2-4-6-6-11-6-5 0-10 2-15 6z" fill="#232830"/>
-                  <path d="M18 30v-3a14 14 0 0128 0v3" fill="none" stroke="#e8906f" stroke-width="2.2"/>
-                  <rect x="16" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
-                  <rect x="44" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
-                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1e2228"/>
-                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1e2228"/>
-                  <path d="M29 36.8c2 1.3 4 1.3 6 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">C***</span>
-                  <span class="review-badge">Anonimleştirilmiş · Doğrulanmış</span>
-                </div>
-                <div class="review-role">Kıdemli Full-Stack Mühendisi</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
-            <p class="review-quote">&quot;Yerel ağ ortamım oturumun ortasında sürekli kopuyordu. İzole çalışma alanı ve 7/24 çalışan Claude Code ile ClaudeOps 1x Standard&#x27;a geçtikten sonra gerçekten &#x27;dahi programcı geri döndü&#x27; gibi hissediyorum 😂. Artık sıfır fatura veya ağ baş ağrısı.&quot;</p>
-            <div class="review-foot">
-              <span>Doğrulanmış Sohbet Geri Bildirimi</span>
-              <span class="review-plan">1x Standard</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#21261e"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#4f6d54"/>
-                  <circle cx="32" cy="31" r="12" fill="#efd0ba"/>
-                  <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-3-3-7-4-12-4s-9 1-12 4z" fill="#2d2622"/>
-                  <rect x="23" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
-                  <rect x="33.5" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
-                  <path d="M30.5 31h3" stroke="#2d2622" stroke-width="1.4"/>
-                  <circle cx="26.8" cy="31" r="1.1" fill="#231d19"/>
-                  <circle cx="37.2" cy="31" r="1.1" fill="#231d19"/>
-                  <path d="M29 37c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#9e5e4a" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">Kyle W.</span>
-                  <span class="review-badge">Anonimleştirilmiş · Doğrulanmış</span>
-                </div>
-                <div class="review-role">Kantitatif Ar-Ge Lideri</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
-            <p class="review-quote">&quot;9 ülkedeki yerel İSS ağları ve donanım düzeyinde izolasyon beni ikna etti. Özel algoritmalarımız ve API anahtarlarımız tamamen bize ait bir Mac Studio&#x27;da duruyor — sıfır kesintiyle aylardır aralıksız çalışıyor.&quot;</p>
-            <div class="review-foot">
-              <span>Avustralya Düğümü · Maskelenmiş</span>
-              <span class="review-plan">20x Flagship</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#292118"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#c98a4b"/>
-                  <circle cx="32" cy="32" r="12" fill="#f5d3bc"/>
-                  <path d="M19 27c0-8 6-14 13-14s13 6 13 14z" fill="#e8906f"/>
-                  <rect x="18" y="25" width="28" height="4.5" rx="2.2" fill="#d97757"/>
-                  <circle cx="27.5" cy="32.5" r="1.3" fill="#231d19"/>
-                  <circle cx="36.5" cy="32.5" r="1.3" fill="#231d19"/>
-                  <path d="M29.5 37.5c1.7 1.2 3.3 1.2 5 0" fill="none" stroke="#a65f48" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">L***</span>
-                  <span class="review-badge">Anonimleştirilmiş · Doğrulanmış</span>
-                </div>
-                <div class="review-role">Bağımsız Geliştirici</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
-            <p class="review-quote">&quot;Stripe ödemesinin hemen ardından aynı gün teslimat yapıldı. İzole macOS hesabım Claude Code ve geliştirici araçları önceden kurulmuş halde geldi. Ortam kurulumuyla veya yurt dışı ödeme sorunlarıyla uğraşmak istemeyenler için muazzam bir zaman tasarrufu.&quot;</p>
-            <div class="review-foot">
-              <span>Tokyo Düğümü · Maskelenmiş</span>
-              <span class="review-plan">1x Standard</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#271e26"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#8b5e83"/>
-                  <circle cx="32" cy="31" r="15" fill="#3a2835"/>
-                  <circle cx="32" cy="31" r="11.5" fill="#f7d6c1"/>
-                  <path d="M20 29c1-8 6-13 12-13s11 5 12 13c-3-4-7-5-12-5s-9 1-12 5z" fill="#3a2835"/>
-                  <circle cx="27.5" cy="31.5" r="1.2" fill="#281d25"/>
-                  <circle cx="36.5" cy="31.5" r="1.2" fill="#281d25"/>
-                  <path d="M29 36.5c1.8 1.4 4.2 1.4 6 0" fill="none" stroke="#b55d52" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">Sarah C.</span>
-                  <span class="review-badge">Anonimleştirilmiş · Doğrulanmış</span>
-                </div>
-                <div class="review-role">Danışmanlık Ortağı</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
-            <p class="review-quote">&quot;Altyapı uzmanı değilim ve CLI kurulumlarıyla uğraşmak istemiyordum. 7×16s 1&#x27;e 1 destek ve yönetilen Google Drive senkronizasyonu sayesinde seyahat ederken her yerden bağlanıp kaldığım yerden devam edebiliyorum.&quot;</p>
-            <div class="review-foot">
-              <span>Singapur Düğümü · Maskelenmiş</span>
-              <span class="review-plan">5x Pro</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#1e222a"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#5e6b85"/>
-                  <circle cx="32" cy="31" r="12" fill="#f2ccb2"/>
-                  <path d="M20 27c2-7 6-11 12-11s10 4 12 11c-4-2-8-3-12-3s-8 1-12 3z" fill="#1f232b"/>
-                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1f232b"/>
-                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1f232b"/>
-                  <path d="M28.5 36.2c2.2 1.8 4.8 1.8 7 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">A***</span>
-                  <span class="review-badge">Anonimleştirilmiş · Doğrulanmış</span>
-                </div>
-                <div class="review-role">E-ticaret Teknoloji Direktörü</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
-            <p class="review-quote">&quot;Çekirdek mühendislerimiz gece boyunca çoklu ajan refaktörleri ve test paketleri çalıştırıp her sabah tertemiz PR&#x27;ları inceliyor. Yerleşik Ekran Paylaşımı kristal netliğinde ve Jason&#x27;ın Telegram desteği neredeyse anında yanıt veriyor.&quot;</p>
-            <div class="review-foot">
-              <span>Telegram Geri Bildirimi</span>
-              <span class="review-plan">20x Flagship</span>
-            </div>
-          </article>
-        </div>
-        <p class="reviews-note">* Müşteri gizliliğini ve veri güvenliğini titizlikle korumak adına tüm yorumlar karikatür avatarlar ve anonimleştirilmiş/maskelenmiş isimlerle gösterilmektedir.</p>
-      </div>
-    </section>
-
-    <!-- Pricing -->
+    <!-- Floor 3: Focused Pricing & Decision Center -->
     <section class="section" id="pricing">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">Fiyatlandırma</p>
           <h2>Bireyselden kurumsala uzanan planlar.</h2>
-          <p>Bireysel çalışma alanlarından özel çoklu Mac kümelerine kadar kolayca ölçeklendirin. <strong>Yıllık ödemede 10 ay ödeyin, 2 ay ücretsiz kazanın</strong>.<a class="enterprise-jump" href="#dedicated-line">Özel Hat ↓</a><a class="enterprise-jump" href="#pricing-enterprise">Ekip ve Kurumsal ↓</a></p>
+          <p>Bireysel çalışma alanlarından özel çoklu Mac kümelerine kadar kolayca ölçeklendirin. <strong>Yıllık ödemede 10 ay ödeyin, 2 ay ücretsiz kazanın</strong>.</p>
         </div>
+
+        <!-- 3-Second Scenario Quick-Finder -->
+        <div class="quick-finder" role="group" aria-label="3 Saniyede Plan Bulucu · Senaryonuzu seçin:">
+          <span class="qf-label">✦ 3 Saniyede Plan Bulucu · Senaryonuzu seçin:</span>
+            <button type="button" class="qf-btn" data-scenario="solo-dev">Solo daily coding &amp; shipping</button>
+            <button type="button" class="qf-btn" data-scenario="solo-max">24/7 multi-agent / Dedicated Mac</button>
+            <button type="button" class="qf-btn" data-scenario="team-rd">3–10 person engineering team</button>
+            <button type="button" class="qf-btn" data-scenario="ent-custom">15+ seat custom enterprise cluster</button>
+        </div>
+        <div class="finder-tip" id="finder-tip" role="status" aria-live="polite" hidden>
+          <span id="finder-tip-text"></span>
+          <button type="button" class="finder-tip-close" id="finder-tip-close" aria-label="Close">×</button>
+        </div>
+
+        <!-- Primary Audience Segmented Tabs: Individual vs Team/Enterprise -->
+        <div class="audience-tabs" role="tablist">
+          <button type="button" class="aud-tab" role="tab" id="tab-btn-solo" data-audience-tab="solo" aria-selected="true" aria-controls="panel-solo">
+            <span class="aud-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0114 0"/></svg>
+            </span>
+            <span class="aud-txt">
+              <strong>Bireysel Geliştirici</strong>
+              <span>1 kullanıcı · 3 net seçenek</span>
+            </span>
+          </button>
+          <button type="button" class="aud-tab" role="tab" id="tab-btn-ent" data-audience-tab="enterprise" aria-selected="false" aria-controls="pricing-enterprise">
+            <span class="aud-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h2m4 0h2M8 13h2m4 0h2M10 20v-3h4v3"/></svg>
+            </span>
+            <span class="aud-txt">
+              <strong>Ekip ve Kurumsal</strong>
+              <span>5–100+ koltuk · Adanmış Mac · Tek fatura</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Unified Billing Cycle & Currency Switcher -->
         <div class="pricing-controls">
           <div class="billing-switch" role="group" aria-label="Faturalandırma dönemini seçin">
             <button type="button" data-billing="month" aria-pressed="true">Aylık</button>
@@ -1518,264 +1480,322 @@
             <button type="button" data-currency="CNY" aria-pressed="false">¥ CNY</button>
           </div>
         </div>
-        <div class="grid grid-3 pricing pricing-solo">
-          <article class="card plan">
-            <div class="plan-tier"><b>1x</b><span>Standard</span></div>
-            <p class="plan-desc">Kararlı bir Claude ortamıyla günlük sohbet, içerik yazımı ve hafif kodlama için.</p>
-            <div class="price" data-plan-idx="0"><sup>$</sup><span class="amount">99</span><small data-period>/ ay</small><del class="price-orig" data-orig-idx="0" style="display:none"></del></div>
-            <p class="price-note" data-note-idx="0">Claude ortamı dahil · günde yaklaşık $3.3</p>
-            <ul class="features">
-              <li>Temel kullanım kotası</li>
-              <li>Özel çalışma alanı yapılandırması</li>
-              <li>Fiziksel Mac mini ortamı</li>
-              <li>Tam yönetilen abonelik faturalandırması ve operasyon</li>
-              <li>Claude Code kullanıma hazır</li>
-              <li><strong>7×8s</strong> 1'e 1 özel destek</li>
-              <li>Ayrı macOS hesabı · Apple Screen Sharing erişimi</li>
-            </ul>
-            <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i" target="_blank" rel="noopener">Abone Ol</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi%20-%201x%20Standard">Sorunuz mu var? Bize yazın →</a>
-          </article>
 
-          <article class="card plan featured">
-            <span class="badge">En popüler</span>
-            <div class="plan-tier"><b>5x</b><span>Pro</span></div>
-            <p class="plan-desc">Claude Code&#x27;u her gün yoğun biçimde kullanan geliştiriciler ve üreticiler için.</p>
-            <div class="price" data-plan-idx="1"><sup>$</sup><span class="amount">399</span><small data-period>/ ay</small><del class="price-orig" data-orig-idx="1" style="display:none"></del></div>
-            <p class="price-note" data-note-idx="1">Claude ortamı dahil · 5x kullanım, birim maliyet 1x&#x27;in yaklaşık %81&#x27;i</p>
-            <ul class="features">
-              <li>Standard planın 5 katı kullanım kotası</li>
-              <li>Özel çalışma alanı yapılandırması</li>
-              <li>Yüksek donanımlı fiziksel Mac mini ortamı</li>
-              <li>Tam yönetilen abonelik faturalandırması ve operasyon</li>
-              <li>Uzun süreli Claude Code görevleri için geniş kapasite</li>
-              <li><strong>7×16s</strong> öncelikli 1'e 1 destek</li>
-              <li>Ayrı macOS hesabı · Apple Screen Sharing erişimi</li>
-            </ul>
-            <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/dRmcN7cqt5IO7PE3FA9Zm0o" target="_blank" rel="noopener">Abone Ol</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi%20-%205x%20Pro">Sorunuz mu var? Bize yazın →</a>
-          </article>
+        <!-- Panel 1: Individual Plans (1x / 5x / 20x + Collapsible Dedicated Line) -->
+        <div class="pricing-panel" id="panel-solo" role="tabpanel" aria-labelledby="tab-btn-solo">
+          <div class="grid grid-3 pricing pricing-solo">
+            <article class="card plan" data-plan-card="1x">
+              <div class="plan-tier"><b>1x</b><span>Standard</span></div>
+              <div class="plan-fit">Kararlı bir Claude ortamıyla günlük sohbet, içerik yazımı ve hafif kodlama için.</div>
+              <p class="plan-desc">Kararlı bir Claude ortamıyla günlük sohbet, içerik yazımı ve hafif kodlama için.</p>
+              <div class="price" data-plan-idx="0"><sup>$</sup><span class="amount">99</span><small data-period>/ ay</small><del class="price-orig" data-orig-idx="0" style="display:none"></del></div>
+              <p class="price-note" data-note-idx="0">Claude ortamı dahil · günde yaklaşık $3.3</p>
+              <ul class="features">
+                <li>Temel kullanım kotası</li>
+                <li>Özel çalışma alanı yapılandırması</li>
+                <li>Fiziksel Mac mini ortamı</li>
+                <li>Tam yönetilen abonelik faturalandırması ve operasyon</li>
+                <li>Claude Code kullanıma hazır</li>
+                <li><strong>7×8s</strong> 1'e 1 özel destek</li>
+                <li>Ayrı macOS hesabı · Apple Screen Sharing erişimi</li>
+              </ul>
+              <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/fZudRb8adgnsb1Q3FA9Zm0i" target="_blank" rel="noopener">Abone Ol</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi%20-%201x%20Standard">Sorunuz mu var? Bize yazın →</a>
+            </article>
 
-          <article class="card plan">
-            <span class="badge badge-promo">Yıl Sonu Kampanyası · 31 Aralık 2026&#x27;ya Kadar</span>
-            <div class="plan-tier"><b>20x</b><span>Ultimate</span></div>
-            <p class="plan-desc">Günün her saati birden fazla ajan çalıştıran üretken geliştiriciler, kurucular ve ileri düzey kullanıcılar için.</p>
-            <div class="price" data-plan-idx="2"><sup>$</sup><span class="amount">699</span><small data-period>/ ay</small><del class="price-orig" data-orig-idx="2" data-orig-20x title="Normal aylık fiyat">$999</del></div>
-            <p class="price-note" data-note-idx="2">Kampanya fiyatı yenilemede korunur · birim maliyet 1x&#x27;in yaklaşık %35&#x27;i</p>
-            <ul class="features">
-              <li>Standard planın 20 katı kullanım kotası</li>
-              <li>Özel çalışma alanı yapılandırması</li>
-              <li>Yüksek donanımlı Mac Studio / Mac mini · Özel cihaz seçeneği</li>
-              <li>Tam yönetilen abonelik faturalandırması ve operasyon</li>
-              <li>Çoklu ajan ve paralel görev desteği</li>
-              <li><strong>Üst düzey 7×24s</strong> özel konsiyerj kanalı</li>
-              <li style="color: var(--primary-strong); font-weight: 600;">Ücretsiz yüksek hızlı RustDesk kanalı</li>
-              <li style="color: var(--primary-strong); font-weight: 600;">Ücretsiz 6 TB Google Drive depolama alanı dahil</li>
-            </ul>
-            <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/7sYcN71LP1sy6LAeke9Zm1m" target="_blank" rel="noopener">Abone Ol</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi%20-%2020x%20Ultimate">Sorunuz mu var? Bize yazın →</a>
-          </article>
-        </div>
+            <article class="card plan featured" data-plan-card="5x">
+              <span class="badge">En popüler</span>
+              <div class="plan-tier"><b>5x</b><span>Pro</span></div>
+              <div class="plan-fit">Claude Code&#x27;u her gün yoğun biçimde kullanan geliştiriciler ve üreticiler için.</div>
+              <p class="plan-desc">Claude Code&#x27;u her gün yoğun biçimde kullanan geliştiriciler ve üreticiler için.</p>
+              <div class="price" data-plan-idx="1"><sup>$</sup><span class="amount">399</span><small data-period>/ ay</small><del class="price-orig" data-orig-idx="1" style="display:none"></del></div>
+              <p class="price-note" data-note-idx="1">Claude ortamı dahil · 5x kullanım, birim maliyet 1x&#x27;in yaklaşık %81&#x27;i</p>
+              <ul class="features">
+                <li>Standard planın 5 katı kullanım kotası</li>
+                <li>Özel çalışma alanı yapılandırması</li>
+                <li>Yüksek donanımlı fiziksel Mac mini ortamı</li>
+                <li>Tam yönetilen abonelik faturalandırması ve operasyon</li>
+                <li>Uzun süreli Claude Code görevleri için geniş kapasite</li>
+                <li><strong>7×16s</strong> öncelikli 1'e 1 destek</li>
+                <li>Ayrı macOS hesabı · Apple Screen Sharing erişimi</li>
+              </ul>
+              <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/dRmcN7cqt5IO7PE3FA9Zm0o" target="_blank" rel="noopener">Abone Ol</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi%20-%205x%20Pro">Sorunuz mu var? Bize yazın →</a>
+            </article>
 
-        <!-- ClaudeOps Enterprise Dedicated Line Value-Added Service -->
-        <div class="seat-addons line-addons" id="dedicated-line">
-          <div class="seat-addons-head">
-            <h3>ClaudeOps Kurumsal Özel Hat · Sınır Ötesi Hızlandırma <span class="addon-pill">20x / Team / Business planlarında ücretsiz</span></h3>
-            <p>1x ve 5x aboneleri için isteğe bağlı eklenti: ultra tepkisel Screen Sharing ve Claude Code deneyimi için trafiğinizi çift bacaklı BBR %0 paket kaybı hızlandırmasına sahip kurumsal BGP sınır ötesi omurgamız üzerinden yönlendirin (yıllık ödemede 2 ay ücretsiz).</p>
+            <article class="card plan" data-plan-card="20x">
+              <span class="badge badge-promo">Yıl Sonu Kampanyası · 31 Aralık 2026&#x27;ya Kadar</span>
+              <div class="plan-tier"><b>20x</b><span>Ultimate</span></div>
+              <div class="plan-fit">Günün her saati birden fazla ajan çalıştıran üretken geliştiriciler, kurucular ve ileri düzey kullanıcılar için.</div>
+              <p class="plan-desc">Günün her saati birden fazla ajan çalıştıran üretken geliştiriciler, kurucular ve ileri düzey kullanıcılar için.</p>
+              <div class="price" data-plan-idx="2"><sup>$</sup><span class="amount">699</span><small data-period>/ ay</small><del class="price-orig" data-orig-idx="2" data-orig-20x title="Normal aylık fiyat">$999</del></div>
+              <p class="price-note" data-note-idx="2">Kampanya fiyatı yenilemede korunur · birim maliyet 1x&#x27;in yaklaşık %35&#x27;i</p>
+              <ul class="features">
+                <li>Standard planın 20 katı kullanım kotası</li>
+                <li>Özel çalışma alanı yapılandırması</li>
+                <li>Yüksek donanımlı Mac Studio / Mac mini · Özel cihaz seçeneği</li>
+                <li>Tam yönetilen abonelik faturalandırması ve operasyon</li>
+                <li>Çoklu ajan ve paralel görev desteği</li>
+                <li><strong>Üst düzey 7×24s</strong> özel konsiyerj kanalı</li>
+                <li style="color: var(--primary-strong); font-weight: 600;">Ücretsiz yüksek hızlı RustDesk kanalı</li>
+                <li style="color: var(--primary-strong); font-weight: 600;">Ücretsiz 6 TB Google Drive depolama alanı dahil</li>
+              </ul>
+              <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/7sYcN71LP1sy6LAeke9Zm1m" target="_blank" rel="noopener">Abone Ol</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi%20-%2020x%20Ultimate">Sorunuz mu var? Bize yazın →</a>
+            </article>
           </div>
-          <div class="line-grid">
-            <div class="addon-card">
-              <div>
-                <div class="addon-route"><code>1x Özel Hat</code> <span>Standart Hızlandırma · 1x Standard İçin</span></div>
-                <p class="addon-desc">Kurumsal BGP sınır ötesi omurga + özel barındırılan şifreli düşük gecikmeli röle + çift bacaklı BBR optimizasyonu; yoğun saatlerde bile günlük Apple Screen Sharing, SSH ve hafif Claude Code oturumlarını takılmasız tutar.</p>
-              </div>
-              <div class="addon-foot">
-                <div class="line-price-wrap">
-                  <div class="addon-price" data-line-idx="0">+<sup>$</sup><span class="amount">5</span><small data-line-period>/ ay</small><del class="line-orig" data-line-orig="0" style="display:none"></del></div>
-                  <span class="line-subnote" data-line-note="0">7/24 BGP sıfır kayıplı hızlandırma · Planla birlikte yönetilir</span>
+
+          <details class="addon-drawer" id="dedicated-line">
+            <summary>
+              <span class="drawer-sum-left">
+                <span class="drawer-ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>
+                </span>
+                <span class="drawer-titles">
+                  <span class="drawer-title-row">
+                    <strong>ClaudeOps Kurumsal Özel Hat · Sınır Ötesi Hızlandırma</strong>
+                    <span class="drawer-pill">20x / Team / Business planlarında ücretsiz</span>
+                  </span>
+                  <span class="drawer-hint">1x ve 5x aboneleri için isteğe bağlı eklenti: ultra tepkisel Screen Sharing ve Claude Code deneyimi için trafiğinizi çift bacaklı BBR %0 paket kaybı hızlandırmasına sahip kurumsal BGP sınır ötesi omurgamız üzerinden yönlendirin (yıllık ödemede 2 ay ücretsiz).</span>
+                </span>
+              </span>
+              <span class="drawer-toggle-pill"><span class="when-closed">Seçenekleri gör</span><span class="when-open">Gizle</span> <i>▾</i></span>
+            </summary>
+            <div class="drawer-body">
+              <p class="drawer-body-lead">1x ve 5x aboneleri için isteğe bağlı eklenti: ultra tepkisel Screen Sharing ve Claude Code deneyimi için trafiğinizi çift bacaklı BBR %0 paket kaybı hızlandırmasına sahip kurumsal BGP sınır ötesi omurgamız üzerinden yönlendirin (yıllık ödemede 2 ay ücretsiz).</p>
+              <div class="line-grid">
+                <div class="addon-card">
+                  <div>
+                    <div class="addon-route"><code>1x Özel Hat</code> <span>Standart Hızlandırma · 1x Standard İçin</span></div>
+                    <p class="addon-desc">Kurumsal BGP sınır ötesi omurga + özel barındırılan şifreli düşük gecikmeli röle + çift bacaklı BBR optimizasyonu; yoğun saatlerde bile günlük Apple Screen Sharing, SSH ve hafif Claude Code oturumlarını takılmasız tutar.</p>
+                  </div>
+                  <div class="addon-foot">
+                    <div class="line-price-wrap">
+                      <div class="addon-price" data-line-idx="0">+<sup>$</sup><span class="amount">5</span><small data-line-period>/ ay</small><del class="line-orig" data-line-orig="0" style="display:none"></del></div>
+                      <span class="line-subnote" data-line-note="0">7/24 BGP sıfır kayıplı hızlandırma · Planla birlikte yönetilir</span>
+                    </div>
+                    <a class="addon-btn" data-line-tier="line_1x" href="https://buy.stripe.com/dRm4gBfCFc7c2vk2Bw9Zn0i" target="_blank" rel="noopener">1x Hat Ekle →</a>
+                  </div>
                 </div>
-                <a class="addon-btn" data-line-tier="line_1x" href="https://buy.stripe.com/dRm4gBfCFc7c2vk2Bw9Zn0i" target="_blank" rel="noopener">1x Hat Ekle →</a>
+                <div class="addon-card addon-card-featured">
+                  <div>
+                    <div class="addon-route"><code class="to">5x Özel Hat</code> <span>Pro Hızlandırma · 5x Pro İçin (%20 daha düşük birim maliyet)</span></div>
+                    <p class="addon-desc">5× öncelikli bant genişliği kotası + yüksek öncelikli kurumsal BGP QoS kuyruğu + çift bacaklı BBR %0 paket kaybı garantisi; yoğun gerçek zamanlı Claude Code oturumları, büyük repo senkronizasyonları ve yüksek FPS uzak masaüstü için tasarlandı.</p>
+                  </div>
+                  <div class="addon-foot">
+                    <div class="line-price-wrap">
+                      <div class="addon-price" data-line-idx="1">+<sup>$</sup><span class="amount">20</span><small data-line-period>/ ay</small><del class="line-orig" data-line-orig="1" style="display:none"></del></div>
+                      <span class="line-subnote" data-line-note="1">5× öncelikli kapasite · Yüksek öncelikli BGP QoS</span>
+                    </div>
+                    <a class="addon-btn addon-btn-primary" data-line-tier="line_5x" href="https://buy.stripe.com/4gMcN7769dbg4Ds6RM9Zn0v" target="_blank" rel="noopener">5x Hat Ekle →</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="addon-card addon-card-featured">
-              <div>
-                <div class="addon-route"><code class="to">5x Özel Hat</code> <span>Pro Hızlandırma · 5x Pro İçin (%20 daha düşük birim maliyet)</span></div>
-                <p class="addon-desc">5× öncelikli bant genişliği kotası + yüksek öncelikli kurumsal BGP QoS kuyruğu + çift bacaklı BBR %0 paket kaybı garantisi; yoğun gerçek zamanlı Claude Code oturumları, büyük repo senkronizasyonları ve yüksek FPS uzak masaüstü için tasarlandı.</p>
-              </div>
-              <div class="addon-foot">
-                <div class="line-price-wrap">
-                  <div class="addon-price" data-line-idx="1">+<sup>$</sup><span class="amount">20</span><small data-line-period>/ ay</small><del class="line-orig" data-line-orig="1" style="display:none"></del></div>
-                  <span class="line-subnote" data-line-note="1">5× öncelikli kapasite · Yüksek öncelikli BGP QoS</span>
-                </div>
-                <a class="addon-btn addon-btn-primary" data-line-tier="line_5x" href="https://buy.stripe.com/4gMcN7769dbg4Ds6RM9Zn0v" target="_blank" rel="noopener">5x Hat Ekle →</a>
-              </div>
-            </div>
-          </div>
+          </details>
         </div>
 
-        <!-- Team & Business Plans -->
-        <div class="enterprise-wrap" id="pricing-enterprise">
-          <div class="tier-divider"><span>Team ve Business · Özel Çok Koltuklu Kümeler</span></div>
-          <div class="enterprise-toolbar">
+        <!-- Panel 2: Team & Enterprise Clusters (Team 5 / Business 10 / Custom 15+ + Collapsible Seat Upgrades) -->
+        <div class="pricing-panel enterprise-wrap" id="pricing-enterprise" role="tabpanel" aria-labelledby="tab-btn-ent" hidden>
+          <div class="ent-step-bar">
+            <span class="ent-step-title">Step 1: Choose default per-seat compute tier</span>
             <div class="seat-tier-switch" role="group" aria-label="Ekip koltuk kademesini seçin">
               <button type="button" data-seat-tier="pro" aria-pressed="false">Tümü Pro Koltuklar (1x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">Tümü Max Koltuklar (5x) <span class="save-badge">Önerilen</span></button>
               <button type="button" data-seat-tier="ultra" aria-pressed="false">Tümü Ultra Koltuklar (20x)</button>
             </div>
-            <p>Tek tip Pro, Max veya Ultra koltuklarla başlayın — ya da aşağıdaki self-servis <strong>koltuk başı yükseltme eklentileriyle</strong> dilediğiniz zaman karma yapı oluşturun.</p>
           </div>
-          <div class="grid grid-2 pricing pricing-enterprise">
-            <article class="card plan">
-              <span class="badge badge-team" data-ent-badge="team">5 × Max (5x) Koltuk · Özel Ana Bilgisayar</span>
-              <div class="plan-tier"><b>Team</b><span data-ent-sub="team">5 Koltuk</span></div>
-              <p class="plan-desc">Girişim ekipleri, yapay zeka stüdyoları ve araştırma grupları için tasarlandı — tek fatura ve merkezi yönetim kontrolüyle ekibinize tahsis edilmiş fiziksel Mac ana bilgisayarı.</p>
-              <div class="price" data-ent-price="team"><sup>$</sup><span class="amount">2,199</span><small data-period>/ ay</small><del class="price-orig" data-ent-orig="team" style="display:none"></del></div>
-              <p class="price-note" data-ent-note="team">5 adet Max (5x) izole koltuk dahil · Özel Mac sunucusu ve tek fatura</p>
-              <ul class="features">
-                <li data-ent-seat-li="team"><strong>5 adet Max (5x) mühendislik koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)</li>
-                <li>Yalnızca ekibinize tahsis edilmiş <strong>yüksek donanımlı fiziksel Mac Studio / Mac mini ana bilgisayar</strong></li>
-                <li>İşe giriş/çıkışlarda kurum mülkiyetinde koltuk devri ve <strong>tek konsolide fatura</strong></li>
-                <li>Bireysel koltukları dilediğiniz an isteğe bağlı olarak Max (5x) veya Ultra (20x) kademesine yükseltme</li>
-                <li><strong>7×24s</strong> özel ekip konsiyerj grup kanalı</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">Ücretsiz özel yüksek hızlı RustDesk ekip kanalı</li>
-                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Ücretsiz 12 TB ekip bulut depolama alanı (Google Drive / iCloud+)</li>
-              </ul>
-              <a class="btn btn-ghost" data-ent-btn="team" href="https://buy.stripe.com/5kQ7sN2PT1sy7PE0to9Zm2A" target="_blank" rel="noopener">Team Planına Abone Ol</a>
-              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi%20-%20Team%20Plan%C4%B1">Ek koltuk veya özel donanım mı gerekiyor? Bizimle konuşun →</a>
-            </article>
+          <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
+          <div class="grid grid-3 pricing pricing-enterprise">
+              <article class="card plan" data-plan-card="team">
+                <span class="badge badge-team" data-ent-badge="team">5 × Max (5x) Koltuk · Özel Ana Bilgisayar</span>
+                <div class="plan-tier"><b>Team</b><span data-ent-sub="team">5 Koltuk</span></div>
+                <div class="plan-fit">5 Koltuk</div>
+                <p class="plan-desc">Girişim ekipleri, yapay zeka stüdyoları ve araştırma grupları için tasarlandı — tek fatura ve merkezi yönetim kontrolüyle ekibinize tahsis edilmiş fiziksel Mac ana bilgisayarı.</p>
+                <div class="price" data-ent-price="team"><sup>$</sup><span class="amount">2,199</span><small data-period>/ ay</small><del class="price-orig" data-ent-orig="team" style="display:none"></del></div>
+                <p class="price-note" data-ent-note="team">5 adet Max (5x) izole koltuk dahil · Özel Mac sunucusu ve tek fatura</p>
+                <ul class="features">
+                  <li data-ent-seat-li="team"><strong>5 adet Max (5x) mühendislik koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)</li>
+                  <li>Yalnızca ekibinize tahsis edilmiş <strong>yüksek donanımlı fiziksel Mac Studio / Mac mini ana bilgisayar</strong></li>
+                  <li>İşe giriş/çıkışlarda kurum mülkiyetinde koltuk devri ve <strong>tek konsolide fatura</strong></li>
+                  <li>Bireysel koltukları dilediğiniz an isteğe bağlı olarak Max (5x) veya Ultra (20x) kademesine yükseltme</li>
+                  <li><strong>7×24s</strong> özel ekip konsiyerj grup kanalı</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;">Ücretsiz özel yüksek hızlı RustDesk ekip kanalı</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Ücretsiz 12 TB ekip bulut depolama alanı (Google Drive / iCloud+)</li>
+                </ul>
+                <a class="btn btn-ghost" data-ent-btn="team" href="https://buy.stripe.com/5kQ7sN2PT1sy7PE0to9Zm2A" target="_blank" rel="noopener">Team Planına Abone Ol</a>
+                <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi%20-%20Team%20Plan%C4%B1">Ek koltuk veya özel donanım mı gerekiyor? Bizimle konuşun →</a>
+              </article>
 
-            <article class="card plan plan-business">
-              <span class="badge" data-ent-badge="biz">Kurumsal · 10 × Max (5x) Küme</span>
-              <div class="plan-tier"><b>Business</b><span data-ent-sub="biz">10 Koltuk</span></div>
-              <p class="plan-desc">Ölçeklenen teknoloji şirketleri, kantitatif finans ve mühendislik organizasyonları için — 9 ülkede çift bölgeli kurulum destekli özel çoklu Mac fiziksel kümeleri.</p>
-              <div class="price" data-ent-price="biz"><sup>$</sup><span class="amount">4,499</span><small data-period>/ ay</small><del class="price-orig" data-ent-orig="biz" style="display:none"></del></div>
-              <p class="price-note" data-ent-note="biz">10 adet Max (5x) izole koltuk dahil · Özel çoklu Mac kümesi ve VIP SLA</p>
-              <ul class="features">
-                <li data-ent-seat-li="biz"><strong>10 adet Max (5x) mühendislik koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)</li>
-                <li><strong>Çok üniteli özel fiziksel Mac Studio / Mac mini kümesi</strong></li>
-                <li><strong>9 ülkede çift bölgeli kurulum ve hızlı taşıma</strong> + özel statik yerel İSS desteği</li>
-                <li>Konsolide ticari faturalandırma ve özel Müşteri Başarı Yöneticisi</li>
-                <li><strong>Üst düzey 7×24s VIP kurumsal SLA kanalı</strong> (öncelikli operasyon ve mimari danışmanlık)</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">Ücretsiz özel kurumsal RustDesk röle hattı</li>
-                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">Ücretsiz 30 TB kurumsal bulut depolama alanı (Google Drive / iCloud+)</li>
-              </ul>
-              <a class="btn btn-primary" data-ent-btn="biz" href="https://buy.stripe.com/4gM8wR8ad4EKgma3FA9Zm3h" target="_blank" rel="noopener">Business Planına Abone Ol</a>
-              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi%20-%20Business%20Plan%C4%B1">20+ koltuk veya özel küme mi arıyorsunuz? Kurumsal satışla iletişime geçin →</a>
-            </article>
+              <article class="card plan plan-business" data-plan-card="biz">
+                <span class="badge" data-ent-badge="biz">Kurumsal · 10 × Max (5x) Küme</span>
+                <div class="plan-tier"><b>Business</b><span data-ent-sub="biz">10 Koltuk</span></div>
+                <div class="plan-fit">10 Koltuk</div>
+                <p class="plan-desc">Ölçeklenen teknoloji şirketleri, kantitatif finans ve mühendislik organizasyonları için — 9 ülkede çift bölgeli kurulum destekli özel çoklu Mac fiziksel kümeleri.</p>
+                <div class="price" data-ent-price="biz"><sup>$</sup><span class="amount">4,499</span><small data-period>/ ay</small><del class="price-orig" data-ent-orig="biz" style="display:none"></del></div>
+                <p class="price-note" data-ent-note="biz">10 adet Max (5x) izole koltuk dahil · Özel çoklu Mac kümesi ve VIP SLA</p>
+                <ul class="features">
+                  <li data-ent-seat-li="biz"><strong>10 adet Max (5x) mühendislik koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)</li>
+                  <li><strong>Çok üniteli özel fiziksel Mac Studio / Mac mini kümesi</strong></li>
+                  <li><strong>9 ülkede çift bölgeli kurulum ve hızlı taşıma</strong> + özel statik yerel İSS desteği</li>
+                  <li>Konsolide ticari faturalandırma ve özel Müşteri Başarı Yöneticisi</li>
+                  <li><strong>Üst düzey 7×24s VIP kurumsal SLA kanalı</strong> (öncelikli operasyon ve mimari danışmanlık)</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;">Ücretsiz özel kurumsal RustDesk röle hattı</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">Ücretsiz 30 TB kurumsal bulut depolama alanı (Google Drive / iCloud+)</li>
+                </ul>
+                <a class="btn btn-primary" data-ent-btn="biz" href="https://buy.stripe.com/4gM8wR8ad4EKgma3FA9Zm3h" target="_blank" rel="noopener">Business Planına Abone Ol</a>
+                <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi%20-%20Business%20Plan%C4%B1">20+ koltuk veya özel küme mi arıyorsunuz? Kurumsal satışla iletişime geçin →</a>
+              </article>
+
+              <article class="card plan plan-custom" data-plan-card="custom">
+                <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
+                <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
+                <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <div class="price price-custom">Özel Teklif</div>
+                <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
+                <ul class="features">
+                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
+                  <li>Dedicated static native business ISP &amp; private relay gateway</li>
+                  <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
+                  <li>7×24h dedicated enterprise engineering concierge channel</li>
+                </ul>
+                <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20Custom%20Enterprise%20Cluster%20Enquiry%20%2815%2B%20Seats%29">Kurumsal Danışmanla İletişime Geçin →</a>
+                <span class="plan-consult">Same-day response · Free cluster sizing &amp; quote</span>
+              </article>
           </div>
 
-          <!-- Per-Seat Self-Serve Upgrade Add-ons -->
-          <div class="seat-addons">
-            <div class="seat-addons-head">
-              <h3>Koltuk Başı Yükseltme Eklentileri <span class="addon-pill">Ödeme adımında 1–50 koltuk arası ayarlanabilir</span></h3>
-              <p>Aktif herhangi bir Team veya Business temel planında kademeleri dilediğiniz gibi karıştırın — belirli ekip üyelerini anında yükseltin (yıllık eklentilerde de 2 ay ücretsiz).</p>
+          <details class="addon-drawer" id="seat-addons-drawer">
+            <summary>
+              <span class="drawer-sum-left">
+                <span class="drawer-ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span class="drawer-titles">
+                  <span class="drawer-title-row">
+                    <strong>Koltuk Başı Yükseltme Eklentileri</strong>
+                    <span class="drawer-pill">Ödeme adımında 1–50 koltuk arası ayarlanabilir</span>
+                  </span>
+                  <span class="drawer-hint">Aktif herhangi bir Team veya Business temel planında kademeleri dilediğiniz gibi karıştırın — belirli ekip üyelerini anında yükseltin (yıllık eklentilerde de 2 ay ücretsiz).</span>
+                </span>
+              </span>
+              <span class="drawer-toggle-pill"><span class="when-closed">Seçenekleri gör</span><span class="when-open">Gizle</span> <i>▾</i></span>
+            </summary>
+            <div class="drawer-body">
+              <p class="drawer-body-lead">Aktif herhangi bir Team veya Business temel planında kademeleri dilediğiniz gibi karıştırın — belirli ekip üyelerini anında yükseltin (yıllık eklentilerde de 2 ay ücretsiz).</p>
+              <div class="addon-grid">
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Max 5x</code> <span>Yükseltme</span></div>
+                      <p class="addon-desc">Yoğun günlük Claude Code mühendisliği için herhangi bir Pro (1x) ekip koltuğunu Max (5x) seviyesine yükseltin.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ koltuk / ay</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_pm" href="https://buy.stripe.com/dRmeVfeyB2wCee2cc69Zm3P" target="_blank" rel="noopener">Koltuğu yükselt →</a>
+                    </div>
+                  </div>
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Max 5x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Yükseltme</span></div>
+                      <p class="addon-desc">Tümü-Max planındaki kurucuları, CTO&#x27;ları veya baş mimarları 20x Ultra çoklu ajan kapasitesine taşıyın.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ koltuk / ay</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_mu" href="https://buy.stripe.com/9B6aEZail2wCee23FA9Zm3W" target="_blank" rel="noopener">Koltuğu yükselt →</a>
+                    </div>
+                  </div>
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Doğrudan</span></div>
+                      <p class="addon-desc">Tümü-Pro temel planındaki herhangi bir koltuğu doğrudan tam 20x Ultra amiral gemisi kotasına çıkarın.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ koltuk / ay</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_pu" href="https://buy.stripe.com/dRm14pailc7c9XM4JE9Zn03" target="_blank" rel="noopener">Koltuğu yükselt →</a>
+                    </div>
+                  </div>
+              </div>
             </div>
-            <div class="addon-grid">
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Max 5x</code> <span>Yükseltme</span></div>
-                  <p class="addon-desc">Yoğun günlük Claude Code mühendisliği için herhangi bir Pro (1x) ekip koltuğunu Max (5x) seviyesine yükseltin.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ koltuk / ay</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_pm" href="https://buy.stripe.com/dRmeVfeyB2wCee2cc69Zm3P" target="_blank" rel="noopener">Koltuğu yükselt →</a>
-                </div>
-              </div>
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Max 5x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Yükseltme</span></div>
-                  <p class="addon-desc">Tümü-Max planındaki kurucuları, CTO&#x27;ları veya baş mimarları 20x Ultra çoklu ajan kapasitesine taşıyın.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ koltuk / ay</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_mu" href="https://buy.stripe.com/9B6aEZail2wCee23FA9Zm3W" target="_blank" rel="noopener">Koltuğu yükselt →</a>
-                </div>
-              </div>
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Doğrudan</span></div>
-                  <p class="addon-desc">Tümü-Pro temel planındaki herhangi bir koltuğu doğrudan tam 20x Ultra amiral gemisi kotasına çıkarın.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ koltuk / ay</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_pu" href="https://buy.stripe.com/dRm14pailc7c9XM4JE9Zn03" target="_blank" rel="noopener">Koltuğu yükselt →</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          </details>
         </div>
 
-        <!-- Cloud Storage (Google Drive & iCloud) -->
-        <div id="storage" style="margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--border);">
-          <div class="section-head" style="margin-bottom: 32px;">
-            <p class="section-tag">Bulut Depolama · Google Drive ve iCloud+</p>
-            <h2>Dijital Varlıklar İçin Yönetilen Bulut Depolama</h2>
-            <p>Yönetilen yenilemeler ve aynı 7×16s 1'e 1 konsiyerj desteğiyle 2 TB'tan 30 TB'a uzanan kademelerde <strong>Google Drive (Google One)</strong> veya <strong>Apple iCloud+</strong> seçin.</p>
-          </div>
-          <div class="currency-switch" role="group" aria-label="Para birimi seçin (bulut depolama)" style="margin: 0 auto 32px">
-            <button type="button" data-currency="AUD" aria-pressed="false">A$ AUD</button>
-            <button type="button" data-currency="USD" aria-pressed="true">$ USD</button>
-            <button type="button" data-currency="EUR" aria-pressed="false">€ EUR</button>
-            <button type="button" data-currency="NZD" aria-pressed="false">NZ$ NZD</button>
-            <button type="button" data-currency="CAD" aria-pressed="false">C$ CAD</button>
-            <button type="button" data-currency="SGD" aria-pressed="false">S$ SGD</button>
-            <button type="button" data-currency="CNY" aria-pressed="false">¥ CNY</button>
-          </div>
-          <div class="grid grid-4 pricing">
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>2 TB</b><span>Depolama</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">Günlük fotoğraflar, videolar ve cihazlar arası yedeklemeler için geniş depolama alanı.</p>
-              <div class="price" data-storage-idx="0" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">8.99</span><small>/ ay</small></div>
-              <p class="price-note">Google Drive veya iCloud+ · Yönetilen faturalandırma</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive veya Apple iCloud+</li>
-                <li>İzole erişimli özel alan</li>
-                <li>Yönetilen faturalandırma · 7×16s 1&#x27;e 1 destek</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="2t" href="https://buy.stripe.com/4gM28tduxfjo9XMdga9Zm0Y" target="_blank" rel="noopener">2 TB Abone Ol</a>
-            </article>
+        <!-- Shared Optional Collapsible Add-on: Cloud Storage (2TB - 30TB) -->
+        <details class="addon-drawer storage-drawer" id="storage">
+          <summary>
+            <span class="drawer-sum-left">
+              <span class="drawer-ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 116.71-9h1.79a4.5 4.5 0 110 9z"/></svg>
+              </span>
+              <span class="drawer-titles">
+                <span class="drawer-title-row">
+                  <strong>Dijital Varlıklar İçin Yönetilen Bulut Depolama</strong>
+                  <span class="drawer-pill">6TB free on 20x · 6–30TB free on Team/Biz</span>
+                </span>
+                <span class="drawer-hint">Private isolated space · Cross-device auto-sync &amp; managed renewals</span>
+              </span>
+            </span>
+            <span class="drawer-toggle-pill"><span class="when-closed">Seçenekleri gör</span><span class="when-open">Gizle</span> <i>▾</i></span>
+          </summary>
+          <div class="drawer-body">
+            <p class="drawer-body-lead">Yönetilen yenilemeler ve aynı 7×16s 1'e 1 konsiyerj desteğiyle 2 TB'tan 30 TB'a uzanan kademelerde <strong>Google Drive (Google One)</strong> veya <strong>Apple iCloud+</strong> seçin.</p>
+            <div class="grid grid-4 pricing">
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>2 TB</b><span>Depolama</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">Günlük fotoğraflar, videolar ve cihazlar arası yedeklemeler için geniş depolama alanı.</p>
+                <div class="price" data-storage-idx="0" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">8.99</span><small>/ ay</small></div>
+                <p class="price-note">Google Drive veya iCloud+ · Yönetilen faturalandırma</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive veya Apple iCloud+</li>
+                  <li>İzole erişimli özel alan</li>
+                  <li>Yönetilen faturalandırma · 7×16s 1&#x27;e 1 destek</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="2t" href="https://buy.stripe.com/4gM28tduxfjo9XMdga9Zm0Y" target="_blank" rel="noopener">2 TB Abone Ol</a>
+              </article>
 
-            <article class="card plan featured" style="padding: 26px 22px;">
-              <span class="badge">Üretici seçimi</span>
-              <div class="plan-tier"><b>6 TB</b><span>Depolama</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">Fotoğrafçılar, içerik üreticileri ve kişisel arşiv kasaları için ideal.</p>
-              <div class="price" data-storage-idx="1" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">28.99</span><small>/ ay</small></div>
-              <p class="price-note">Google Drive veya iCloud+ · Yönetilen faturalandırma</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive veya Apple iCloud+</li>
-                <li>Tam çözünürlüklü fotoğraf ve 4K medya senkronizasyonu</li>
-                <li>Yönetilen faturalandırma · 7×16s 1&#x27;e 1 destek</li>
-              </ul>
-              <a class="btn btn-primary" data-stripe-tier="6t" href="https://buy.stripe.com/6oU9AV0HL4EKgmaeke9Zm14" target="_blank" rel="noopener">6 TB Abone Ol</a>
-            </article>
+              <article class="card plan featured" style="padding: 24px 20px;">
+                <span class="badge">Üretici seçimi</span>
+                <div class="plan-tier"><b>6 TB</b><span>Depolama</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">Fotoğrafçılar, içerik üreticileri ve kişisel arşiv kasaları için ideal.</p>
+                <div class="price" data-storage-idx="1" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">28.99</span><small>/ ay</small></div>
+                <p class="price-note">Google Drive veya iCloud+ · Yönetilen faturalandırma</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive veya Apple iCloud+</li>
+                  <li>Tam çözünürlüklü fotoğraf ve 4K medya senkronizasyonu</li>
+                  <li>Yönetilen faturalandırma · 7×16s 1&#x27;e 1 destek</li>
+                </ul>
+                <a class="btn btn-primary" data-stripe-tier="6t" href="https://buy.stripe.com/6oU9AV0HL4EKgmaeke9Zm14" target="_blank" rel="noopener">6 TB Abone Ol</a>
+              </article>
 
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>12 TB</b><span>Depolama</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">İleri düzey kullanıcılar ve çoklu cihaz yedeklemeleri için yüksek kapasiteli kasa.</p>
-              <div class="price" data-storage-idx="2" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">58.99</span><small>/ ay</small></div>
-              <p class="price-note">Google Drive veya iCloud+ · Yönetilen faturalandırma</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive veya Apple iCloud+</li>
-                <li>Büyük proje arşivleri ve cihaz yansımaları</li>
-                <li>Yönetilen faturalandırma · 7×16s 1&#x27;e 1 destek</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="12t" href="https://buy.stripe.com/14A8wRail2wC3zo5NI9Zm1a" target="_blank" rel="noopener">12 TB Abone Ol</a>
-            </article>
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>12 TB</b><span>Depolama</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">İleri düzey kullanıcılar ve çoklu cihaz yedeklemeleri için yüksek kapasiteli kasa.</p>
+                <div class="price" data-storage-idx="2" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">58.99</span><small>/ ay</small></div>
+                <p class="price-note">Google Drive veya iCloud+ · Yönetilen faturalandırma</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive veya Apple iCloud+</li>
+                  <li>Büyük proje arşivleri ve cihaz yansımaları</li>
+                  <li>Yönetilen faturalandırma · 7×16s 1&#x27;e 1 destek</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="12t" href="https://buy.stripe.com/14A8wRail2wC3zo5NI9Zm1a" target="_blank" rel="noopener">12 TB Abone Ol</a>
+              </article>
 
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>30 TB</b><span>Amiral Gemisi</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">RAW çekimler, yapay zeka veri setleri ve uzun vadeli arşivler için stüdyo sınıfı bulut kasası.</p>
-              <div class="price" data-storage-idx="3" style="font-size: 1.95rem; white-space: nowrap;"><sup>$</sup><span class="amount">148.99</span><small>/ ay</small></div>
-              <p class="price-note">Google Drive veya iCloud+ · Konsiyerj operasyon</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive 30TB veya çift bulut kombinasyonu</li>
-                <li>Yüksek hızlı küresel ekip iş birliği</li>
-                <li>Üst düzey 7×24s özel konsiyerj</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="30t" href="https://buy.stripe.com/dRm14pbmp9Z4ee22Bw9Zm1g" target="_blank" rel="noopener">30 TB Abone Ol</a>
-            </article>
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>30 TB</b><span>Amiral Gemisi</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">RAW çekimler, yapay zeka veri setleri ve uzun vadeli arşivler için stüdyo sınıfı bulut kasası.</p>
+                <div class="price" data-storage-idx="3" style="font-size: 1.9rem; white-space: nowrap;"><sup>$</sup><span class="amount">148.99</span><small>/ ay</small></div>
+                <p class="price-note">Google Drive veya iCloud+ · Konsiyerj operasyon</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive 30TB veya çift bulut kombinasyonu</li>
+                  <li>Yüksek hızlı küresel ekip iş birliği</li>
+                  <li>Üst düzey 7×24s özel konsiyerj</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="30t" href="https://buy.stripe.com/dRm14pbmp9Z4ee22Bw9Zm1g" target="_blank" rel="noopener">30 TB Abone Ol</a>
+              </article>
+            </div>
           </div>
-        </div>
+        </details>
+
         <div class="stripe-trust">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
           <span><strong>Stripe</strong> ile güvenli ödeme · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · Aylık veya yıllık (2 ay ücretsiz), istediğiniz zaman iptal edin</span>
@@ -1784,8 +1804,170 @@
       </div>
     </section>
 
-    <!-- Process -->
-    <section class="section section-alt" id="process">
+    <!-- Floor 4: Security Isolation + Network Proof + Curated 3 User Stories -->
+    <section class="section section-alt" id="security">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Security, Network &amp; Proof</p>
+          <h2>İki kademeli izolasyon: ayrı hesaplar ve özel tahsisli cihazlar</h2>
+          <p>Müşteri gizliliğini korumak amacıyla tüm yorumlarda karikatür avatarlar ve maskelenmiş isimler kullanılırken gerçek geri bildirimler ve abonelik kademeleri korunmuştur.</p>
+        </div>
+        <div class="trust-split">
+          <div class="sec-stack">
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <div>
+                <h3>20x özel cihaz: donanım düzeyinde izolasyon</h3>
+                <p>Özel cihaz modu etkinleştirildiğinde yüksek donanımlı Mac Studio veya Mac mini&#x27;nin tamamı yalnızca size hizmet eder. İstediğiniz yazılımı kurabilir, sistem düzeyi ayarları değiştirebilir ve RustDesk ile üçüncü taraf VNC dahil her türlü uzak masaüstü aracını kullanabilirsiniz.</p>
+              </div>
+            </div>
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+              <div>
+                <h3>1x / 5x ayrı hesap izolasyonu</h3>
+                <p>Her kullanıcının kendine ait dosya ve izinlere sahip ayrı bir macOS hesabı vardır; böylece geçmiş ve proje dosyaları gizli kalır. Erişim yalnızca her hesaba kimsenin göremediği izole bir masaüstü oturumu sunan Apple Screen Sharing ile sağlanır.</p>
+              </div>
+            </div>
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+              <div>
+                <h3>Erişim ve şifreleme sizin kontrolünüzde</h3>
+                <p>Kendi erişim parolalarınızı ve şifreleme politikalarınızı kendiniz belirlersiniz. Ekibimiz yalnızca bağlantı sürekliliği ve faturalandırmayla ilgilenir; bakım, güvenlik olayları veya sizin yetkilendirdiğiniz sorun giderme işlemleri dışında hesabınızdaki verilere aktif olarak erişmez.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card net-card net-proof-box" id="network" aria-label="Optimizasyon öncesi ve sonrası ölçülen gecikme ve paket kaybı">
+            <div class="net-proof-head">
+              <h3>Akıcı bir uzak masaüstü için · sürekli ağ yatırımı</h3>
+              <p>Donanıma ve birinci sınıf rotalara yatırım yapmaya devam ediyoruz: 200Mbps–500Mbps+ simetrik hızlara sahip 9 ülkeli yerel İSS geniş bant altyapısı, kendi barındırdığımız aktarım sunucuları (relay) ve uzak masaüstünün asıl düşmanı olan paket kaybını sıfıra indiren kurumsal BGP omurgasıyla birleşiyor.</p>
+              <ul class="net-chips"><li>200–500Mbps+ Simetrik</li><li>Kurumsal BGP omurgası</li><li>Özel barındırılan röleler</li><li>Çift bacaklı BBR</li><li>Apple Silicon donanım kodlama</li><li>İzin listesi sıkılaştırması</li></ul>
+            </div>
+            <div>
+              <div class="net-legend"><span class="lg before">Önce</span><span class="lg after">Sonra</span></div>
+              <div class="net-row">
+                <div class="net-node"><strong>Japonya</strong><span>HK omurgası üzerinden</span></div>
+                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:39.0%"></span><em>128–184ms · %10 kayıp</em></div><div class="nb after"><span class="nb-fill" style="--w:23.0%"></span><em>~92ms · %0 kayıp</em></div></div>
+              </div>
+              <div class="net-row">
+                <div class="net-node"><strong>Avustralya</strong><span>HK omurgası üzerinden</span></div>
+                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:91.2%"></span><em>343–386ms · %25–33 kayıp</em></div><div class="nb after"><span class="nb-fill" style="--w:60.0%"></span><em>~240ms · %0 kayıp</em></div></div>
+              </div>
+              <div class="net-row">
+                <div class="net-node"><strong>Kamboçya</strong><span>Doğrudan kara kablosu</span></div>
+                <div class="net-bars"><div class="nb after"><span class="nb-fill" style="--w:20.2%"></span><em>~81ms · %0 kayıp</em></div></div>
+              </div>
+              <p class="net-foot">Kasım 2026&#x27;da Doğu Asya&#x27;daki bir istemciden ölçülmüştür. Kendi ağınıza bağlı olarak deneyiminiz değişiklik gösterebilir.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-reviews" id="reviews">
+          <p class="trust-reviews-title">★ Gerçek abonelerimiz ne diyor</p>
+          <div class="grid grid-3">
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#1b232c"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#3d6b8e"/>
+                  <circle cx="32" cy="31" r="12" fill="#f4cfb6"/>
+                  <path d="M19 28c1-9 6-14 13-14 8 0 13 5 13 14-2-4-6-6-11-6-5 0-10 2-15 6z" fill="#232830"/>
+                  <path d="M18 30v-3a14 14 0 0128 0v3" fill="none" stroke="#e8906f" stroke-width="2.2"/>
+                  <rect x="16" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <rect x="44" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <path d="M29 36.8c2 1.3 4 1.3 6 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">C***</span>
+                    <span class="review-badge">Anonimleştirilmiş · Doğrulanmış</span>
+                  </div>
+                  <div class="review-role">Kıdemli Full-Stack Mühendisi</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
+              <p class="review-quote">&quot;Yerel ağ ortamım oturumun ortasında sürekli kopuyordu. İzole çalışma alanı ve 7/24 çalışan Claude Code ile ClaudeOps 1x Standard&#x27;a geçtikten sonra gerçekten &#x27;dahi programcı geri döndü&#x27; gibi hissediyorum 😂. Artık sıfır fatura veya ağ baş ağrısı.&quot;</p>
+              <div class="review-foot">
+                <span>Doğrulanmış Sohbet Geri Bildirimi</span>
+                <span class="review-plan">1x Standard</span>
+              </div>
+            </article>
+
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#2b211c"/>
+                  <circle cx="32" cy="30" r="17" fill="#5c3627"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#d97757"/>
+                  <circle cx="32" cy="31" r="12" fill="#f7d5be"/>
+                  <path d="M19 29c0-9 6-14 13-14s13 5 13 14c-3-4-7-6-13-6s-10 2-13 6z" fill="#5c3627"/>
+                  <circle cx="27" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <circle cx="37" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <path d="M30.4 31h3.2" stroke="#3c2b24" stroke-width="1.4"/>
+                  <circle cx="27" cy="31" r="1.1" fill="#2b1e19"/>
+                  <circle cx="37" cy="31" r="1.1" fill="#2b1e19"/>
+                  <path d="M29 36.5c1.8 1.5 4.2 1.5 6 0" fill="none" stroke="#b85d43" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">M***</span>
+                    <span class="review-badge">Anonimleştirilmiş · Doğrulanmış</span>
+                  </div>
+                  <div class="review-role">Sınır Ötesi Yapay Zeka Ürün Lideri</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
+              <p class="review-quote">&quot;Kurumsal tünel jilet gibi net ve ultra akıcı — yerel ToDesk bağlantım bile bu kadar net değildi. Kod yazmak ve pencereler arasında geçiş yapmak neredeyse kendi bilgisayarımda çalışmak gibi. Hızlı, güvenilir ve ödediğiniz her kuruşa değer; gerçekten üst düzey bir deneyim.&quot;</p>
+              <div class="review-foot">
+                <span>Doğrulanmış Sohbet Geri Bildirimi</span>
+                <span class="review-plan">5x Pro</span>
+              </div>
+            </article>
+
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#21261e"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#4f6d54"/>
+                  <circle cx="32" cy="31" r="12" fill="#efd0ba"/>
+                  <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-3-3-7-4-12-4s-9 1-12 4z" fill="#2d2622"/>
+                  <rect x="23" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <rect x="33.5" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <path d="M30.5 31h3" stroke="#2d2622" stroke-width="1.4"/>
+                  <circle cx="26.8" cy="31" r="1.1" fill="#231d19"/>
+                  <circle cx="37.2" cy="31" r="1.1" fill="#231d19"/>
+                  <path d="M29 37c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#9e5e4a" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">Kyle W.</span>
+                    <span class="review-badge">Anonimleştirilmiş · Doğrulanmış</span>
+                  </div>
+                  <div class="review-role">Kantitatif Ar-Ge Lideri</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="5 üzerinden 5 yıldız">★★★★★</div>
+              <p class="review-quote">&quot;9 ülkedeki yerel İSS ağları ve donanım düzeyinde izolasyon beni ikna etti. Özel algoritmalarımız ve API anahtarlarımız tamamen bize ait bir Mac Studio&#x27;da duruyor — sıfır kesintiyle aylardır aralıksız çalışıyor.&quot;</p>
+              <div class="review-foot">
+                <span>Avustralya Düğümü · Maskelenmiş</span>
+                <span class="review-plan">20x Flagship</span>
+              </div>
+            </article>
+          </div>
+          <p class="reviews-note">* Müşteri gizliliğini ve veri güvenliğini titizlikle korumak adına tüm yorumlar karikatür avatarlar ve anonimleştirilmiş/maskelenmiş isimlerle gösterilmektedir.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floor 5: 4-Step Same-Day Onboarding & Focused Top-6 FAQ -->
+    <section class="section" id="process">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">Süreç</p>
@@ -1812,8 +1994,7 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
+    <section class="section section-alt" id="faq">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">SSS</p>
@@ -1821,8 +2002,8 @@
         </div>
         <div class="faq">
           <details>
-            <summary>Zaokit ClaudeOps kimin tarafından işletiliyor?</summary>
-            <p>Zaokit ClaudeOps, Avustralya'da tescilli bir şirket tarafından işletilmektedir. Ödemeler Stripe üzerinden güvenle işlenir ve her ödemede resmi makbuz ve fatura düzenlenir.</p>
+            <summary>Hangi planı seçmeliyim?</summary>
+            <p>Günlük sohbet ve yazım işleri için 1x'i, her gün Claude Code ile kod geliştiriyorsanız 5x'i; çoklu ajanlar, yoğun 7/24 kullanım veya RustDesk ve tüm uzak masaüstü araçlarını destekleyen özel bir cihaz istiyorsanız 20x'i seçin. Kararsız mısınız? Alt kademeden başlayıp dilediğiniz an yükseltebilirsiniz.</p>
           </details>
           <details>
             <summary>1x, 5x, 20x, Team ve Business planları nasıl karşılaştırılır? Yıllık indirim var mı?</summary>
@@ -1833,81 +2014,71 @@
             <p><strong>ClaudeOps Kurumsal Özel Hat</strong>, uzak masaüstü ve terminal trafiğinizi özel barındırılan röleler ve çift bacaklı BBR tıkanıklık kontrolüyle birinci sınıf kurumsal BGP sınır ötesi omurgamız üzerinden yönlendirerek yoğun saatlerdeki genel internet dalgalanmasını ve paket kaybını ortadan kaldırır:<br>• <strong>1x Özel Hat ($5/ay · $50/yıl)</strong>: Günlük Apple Screen Sharing, SSH ve hafif kodlama yapan 1x Standard bireysel aboneleri için tasarlanmıştır;<br>• <strong>5x Özel Hat ($20/ay · $200/yıl)</strong>: 5× öncelikli bant genişliği kotası ve yüksek öncelikli BGP QoS ile 5x Pro mühendislik iş yükleri için tasarlanmıştır (1x'e kıyasla %20 daha düşük birim maliyet);<br>• <strong>Amiral Gemisi ve Ekip Planlarında Ücretsiz</strong>: <strong>20x Ultimate, Team ve Business planları özel kurumsal hızlandırmayı ek ücret olmaksızın içerir</strong>.</p>
           </details>
           <details>
-            <summary>Zaokit ClaudeOps neden standart bulut masaüstlerinden veya paylaşımlı hesaplardan daha yüksek fiyatlı?</summary>
-            <p>Çünkü düşük maliyetli paylaşımlı VPS örnekleri veya ortak havuz hesapları için değil, <strong>deterministik fiziksel altyapı ve birinci sınıf mühendislik operasyonları</strong> için ödeme yapıyorsunuz. Her abonelik dört gerçek altyapı maliyetini kapsar:<br>• <strong>Yüksek Donanımlı Fiziksel Mac Donanımı</strong>: Kesintisiz yerel işlem gücü ve 7/24 güvenilirlik sunan gerçek Mac Studio ve Mac mini makineler (asla sanallaştırılmış bulut VM'leri değil) — 20x+ planlarda tam özel cihaz izolasyonuyla;<br>• <strong>200Mbps–500Mbps+ Simetrik Yerel Bant Genişliği</strong>: 9 ülkede yüksek simetrik yükleme/indirme hızlarına sahip yerel İSS geniş bant hatları; 10–30Mbps paylaşımlı hatlarda takılmak yerine Ekran Paylaşımını net ve akıcı tutar;<br>• <strong>Kurumsal BGP Omurgası</strong>: Çift bacaklı BBR optimizasyonuyla birinci sınıf HK/APAC kurumsal BGP omurgası üzerinde çalışan özel yüksek hızlı röleler sınır ötesi paket kaybını sıfıra indirir;<br>• <strong>Tam Resmi Kota + 7×16 / 7×24 Konsiyerj Operasyonu</strong>: Tam resmi abonelik kotaları, yönetilen faturalandırma, iCloud/Google Drive senkronizasyonu ve 1'e 1 mühendislik desteği.</p>
-          </details>
-          <details>
             <summary>Ayrı hesap ile özel cihaz arasındaki fark nedir: 1x / 5x neden yalnızca Apple Screen Sharing ile sınırlı?</summary>
             <p>• <strong>Ayrı hesap izolasyonu (1x / 5x)</strong>: Birkaç kullanıcı yüksek donanımlı bir Mac'i paylaşır, ancak her kullanıcının kendine ait macOS hesabı, dosyaları ve izinleri vardır; kimse başkasının verilerini göremez. Her kullanıcının gizliliğini korumak amacıyla erişim, her hesap için izole bir masaüstü oturumu oluşturan <strong>Apple Screen Sharing</strong> ile sınırlandırılmıştır; böylece ekranınız ve etkinliğiniz gizli kalır.<br>• <strong>Özel tahsisli cihaz (20x'te sunulur)</strong>: Fiziksel Mac'in tamamı yalnızca size hizmet eder. Donanım, sistem ve ağ tamamen sizindir. İstediğiniz yazılımı kurabilir, sistem ayarlarını değiştirebilir ve <strong>istediğiniz uzak masaüstü aracını</strong> kullanabilirsiniz: Apple Screen Sharing, RealVNC / TigerVNC gibi üçüncü taraf VNC araçları veya özel yüksek hızlı RustDesk kanalımız (20x'te ücretsiz).<br><strong>Paylaşımlı makinelerde neden üçüncü taraf uzak erişim araçları yok?</strong> RustDesk ve çoğu üçüncü taraf VNC aracı Mac'in ana ekran oturumunu yakalar; bu da çok kullanıcılı bir makinede başkalarının masaüstünüzü görmesine veya kontrol etmesine yol açabilir. Bu araçları yalnızca özel cihaz modunda etkinleştirmemiz bilinçli bir gizlilik güvencesidir.</p>
-          </details>
-          <details>
-            <summary>Hangi planı seçmeliyim?</summary>
-            <p>Günlük sohbet ve yazım işleri için 1x'i, her gün Claude Code ile kod geliştiriyorsanız 5x'i; çoklu ajanlar, yoğun 7/24 kullanım veya RustDesk ve tüm uzak masaüstü araçlarını destekleyen özel bir cihaz istiyorsanız 20x'i seçin. Kararsız mısınız? Alt kademeden başlayıp dilediğiniz an yükseltebilirsiniz.</p>
-          </details>
-          <details>
-            <summary>&quot;Deterministik ve kararlı ortam&quot; pratikte ne anlama geliyor?</summary>
-            <p>Kendinize ait izole çalışma alanı + sabit yüksek donanımlı fiziksel Mac iş istasyonu + özel faturalandırma, yenileme ve günlük mühendislik operasyonu anlamına gelir. Standartlaştırılmış mühendislik süreçleri beklenmedik kopmaları, yapılandırma çakışmalarını ve başarısız yenilemeleri ortadan kaldırarak iş akışınızı öngörülebilir tutar.</p>
           </details>
           <details>
             <summary>Nasıl kullanacağım? Uzak Mac üzerinden mi yoksa yerelden mi?</summary>
             <p><strong>Her ikisi de çalışır; size en uygun olanı kullanabilirsiniz:</strong><br>1. <strong>Uzak masaüstü</strong>: 1x / 5x planlarında izole, güvenli ve kullanıma hazır macOS Screen Sharing ile ayrı hesabınıza giriş yapın. Özel modu etkinleştirilmiş 20x planında ise daha akıcı ve düşük gecikmeli oturumlar için RealVNC / TigerVNC gibi üçüncü taraf VNC araçlarını veya <strong>özel barındırılan yüksek hızlı RustDesk kanalımızı (20x'te ücretsiz)</strong> da kullanabilirsiniz. Her iki durumda da tam macOS masaüstüne ve terminale sahip olursunuz ve uzun görevler kesintisiz çalışmaya devam eder.<br>2. <strong>Yerel iş akışıyla kusursuz entegrasyon</strong>: Yerel ortam kurulumu veya bakım yükü olmadan doğrudan kendi yerel geliştirme araçlarınızdan uzak geliştirme ortamıyla çalışın. Uzak Mac, size özel arka uç işlem motorunuz haline gelir.</p>
           </details>
           <details>
-            <summary>Kodum ve verilerim nasıl güvende ve gizli tutuluyor?</summary>
-            <p>1x / 5x planlarında her kullanıcı, başka kimsenin ekranınızı görememesi için yalnızca Apple Screen Sharing ile erişilen izole dosya, izin ve masaüstü oturumlarına sahip ayrı bir macOS hesabı alır. 20x planında ise özel bir cihaz etkinleştirebilirsiniz: yüksek donanımlı Mac Studio veya Mac mini'nin tamamı donanım seviyesine kadar izole biçimde yalnızca size hizmet eder. Oturum geçmişiniz, kaynak kodlarınız ve ortam değişkenleriniz kendi hesabınızda veya cihazınızda kalır. Erişim parolalarınızı ve şifrelemenizi kendiniz belirlersiniz; ekibimiz bakım, güvenlik olayları veya sizin yetkilendirdiğiniz sorun giderme durumları dışında verilerinize erişmez.</p>
-          </details>
-          <details>
-            <summary>Cihazlar ve ağlar nerede bulunuyor?</summary>
-            <p>Yüksek donanımlı fiziksel Mac Studio ve Mac mini cihazlarımız <strong>Avustralya, Amerika Birleşik Devletleri, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda ve Kanada'da</strong> yer almakta olup maksimum güvenilirlik için <strong>yerel yerleşik İSS geniş bant ağları (paylaşımlı genel bulut veri merkezleri değil)</strong> üzerinden bağlanmaktadır. Ödeme adımında tercih ettiğiniz bölgeyi seçin; uzun vadeli kullanım için size sabit bir cihaz ve hesap atayalım (20x'te tüm cihaz size özeldir).</p>
-          </details>
-          <details>
-            <summary>Google Drive ve iCloud+ bulut depolama nasıl çalışır?</summary>
-            <p>2 TB ($8.99/ay), 6 TB ($28.99/ay), 12 TB ($58.99/ay) ve 30 TB ($148.99/ay) planları sunuyoruz. Stripe ödeme ekranında <strong>Apple iCloud+</strong> veya <strong>Google Drive (Google One)</strong> seçeneğini işaretleyip hesap e-postanızı not olarak ekleyin; 7×16s 1'e 1 konsiyerj ekibimiz aktivasyonu ve düzenli yenilemeleri yönetir.</p>
-          </details>
-          <details>
-            <summary>Planımı yükseltebilir veya düşürebilir miyim?</summary>
-            <p>Evet. Değişiklikler bir sonraki faturalandırma döneminizden itibaren geçerli olur. Hemen yükseltmeye ihtiyacınız varsa bizimle iletişime geçin; yalnızca fiyat farkını yansıtalım.</p>
-          </details>
-          <details>
-            <summary>Bir sorun çıkarsa ne olur?</summary>
-            <p>Hemen bizimle iletişime geçin. Sorun gidermeye öncelik veriyor ve sizi mümkün olan en kısa sürede tekrar çalışır duruma getiriyoruz.</p>
-          </details>
-          <details>
             <summary>Hangi ödeme yöntemlerini kabul ediyorsunuz? Fatura alabilir miyim?</summary>
             <p>Stripe üzerinden Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay ve Link dahil çevrimiçi abonelikleri AUD, USD, EUR, NZD, CAD, SGD veya CNY cinsinden kabul ediyoruz. UnionPay kart sahipleri daha sorunsuz ödeme için CNY seçebilir. Stripe her ödemede otomatik olarak resmi makbuz ve fatura düzenler. Çok hesaplı kurumsal planlar için bize e-posta gönderin.</p>
           </details>
-          <details>
-            <summary>Daha fazla şehri aydınlatırken gelir elde etmek için kendi cihazımı nasıl getirebilir veya küresel bilgi işlem ağınıza nasıl katılabilirim?</summary>
-            <p>8 milyar insanın tamamına gerçekten hizmet etme hedefimize doğru ilerlerken dünyanın dört bir yanındaki iş ortaklarını yerel bilgi işlem ağımıza katılmaya içtenlikle davet ediyoruz! <strong>Kendi cihazınızı getirebilir ve kaynaklarınızı paylaşabilirsiniz — böylece gelir elde ederken başkalarının hayallerini gerçeğe dönüştürmesine ışık tutarsınız!</strong> İster boşta duran veya yüksek donanımlı fiziksel Mac donanımınız, ister şehrinizde kaliteli yerel geniş bant internetiniz ya da bölgesel geliştirici ve üretici topluluklarına erişiminiz olsun; şehrinizi ve donanım/İSS detaylarınızı belirterek dilediğiniz zaman <a href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network" style="color:var(--primary-strong);font-weight:600">jason2023zhang@gmail.com</a> adresinden bize yazın — aramıza hoş geldiniz!</p>
+          <details class="faq-more">
+            <summary><span class="when-closed">Diğer 9 soruyu göster</span><span class="when-open">Daha az göster</span></summary>
+            <div class="faq-more-list">
+              <details>
+                <summary>Zaokit ClaudeOps kimin tarafından işletiliyor?</summary>
+                <p>Zaokit ClaudeOps, Avustralya'da tescilli bir şirket tarafından işletilmektedir. Ödemeler Stripe üzerinden güvenle işlenir ve her ödemede resmi makbuz ve fatura düzenlenir.</p>
+              </details>
+              <details>
+                <summary>Zaokit ClaudeOps neden standart bulut masaüstlerinden veya paylaşımlı hesaplardan daha yüksek fiyatlı?</summary>
+                <p>Çünkü düşük maliyetli paylaşımlı VPS örnekleri veya ortak havuz hesapları için değil, <strong>deterministik fiziksel altyapı ve birinci sınıf mühendislik operasyonları</strong> için ödeme yapıyorsunuz. Her abonelik dört gerçek altyapı maliyetini kapsar:<br>• <strong>Yüksek Donanımlı Fiziksel Mac Donanımı</strong>: Kesintisiz yerel işlem gücü ve 7/24 güvenilirlik sunan gerçek Mac Studio ve Mac mini makineler (asla sanallaştırılmış bulut VM'leri değil) — 20x+ planlarda tam özel cihaz izolasyonuyla;<br>• <strong>200Mbps–500Mbps+ Simetrik Yerel Bant Genişliği</strong>: 9 ülkede yüksek simetrik yükleme/indirme hızlarına sahip yerel İSS geniş bant hatları; 10–30Mbps paylaşımlı hatlarda takılmak yerine Ekran Paylaşımını net ve akıcı tutar;<br>• <strong>Kurumsal BGP Omurgası</strong>: Çift bacaklı BBR optimizasyonuyla birinci sınıf HK/APAC kurumsal BGP omurgası üzerinde çalışan özel yüksek hızlı röleler sınır ötesi paket kaybını sıfıra indirir;<br>• <strong>Tam Resmi Kota + 7×16 / 7×24 Konsiyerj Operasyonu</strong>: Tam resmi abonelik kotaları, yönetilen faturalandırma, iCloud/Google Drive senkronizasyonu ve 1'e 1 mühendislik desteği.</p>
+              </details>
+              <details>
+                <summary>&quot;Deterministik ve kararlı ortam&quot; pratikte ne anlama geliyor?</summary>
+                <p>Kendinize ait izole çalışma alanı + sabit yüksek donanımlı fiziksel Mac iş istasyonu + özel faturalandırma, yenileme ve günlük mühendislik operasyonu anlamına gelir. Standartlaştırılmış mühendislik süreçleri beklenmedik kopmaları, yapılandırma çakışmalarını ve başarısız yenilemeleri ortadan kaldırarak iş akışınızı öngörülebilir tutar.</p>
+              </details>
+              <details>
+                <summary>Kodum ve verilerim nasıl güvende ve gizli tutuluyor?</summary>
+                <p>1x / 5x planlarında her kullanıcı, başka kimsenin ekranınızı görememesi için yalnızca Apple Screen Sharing ile erişilen izole dosya, izin ve masaüstü oturumlarına sahip ayrı bir macOS hesabı alır. 20x planında ise özel bir cihaz etkinleştirebilirsiniz: yüksek donanımlı Mac Studio veya Mac mini'nin tamamı donanım seviyesine kadar izole biçimde yalnızca size hizmet eder. Oturum geçmişiniz, kaynak kodlarınız ve ortam değişkenleriniz kendi hesabınızda veya cihazınızda kalır. Erişim parolalarınızı ve şifrelemenizi kendiniz belirlersiniz; ekibimiz bakım, güvenlik olayları veya sizin yetkilendirdiğiniz sorun giderme durumları dışında verilerinize erişmez.</p>
+              </details>
+              <details>
+                <summary>Cihazlar ve ağlar nerede bulunuyor?</summary>
+                <p>Yüksek donanımlı fiziksel Mac Studio ve Mac mini cihazlarımız <strong>Avustralya, Amerika Birleşik Devletleri, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda ve Kanada'da</strong> yer almakta olup maksimum güvenilirlik için <strong>yerel yerleşik İSS geniş bant ağları (paylaşımlı genel bulut veri merkezleri değil)</strong> üzerinden bağlanmaktadır. Ödeme adımında tercih ettiğiniz bölgeyi seçin; uzun vadeli kullanım için size sabit bir cihaz ve hesap atayalım (20x'te tüm cihaz size özeldir).</p>
+              </details>
+              <details>
+                <summary>Google Drive ve iCloud+ bulut depolama nasıl çalışır?</summary>
+                <p>2 TB ($8.99/ay), 6 TB ($28.99/ay), 12 TB ($58.99/ay) ve 30 TB ($148.99/ay) planları sunuyoruz. Stripe ödeme ekranında <strong>Apple iCloud+</strong> veya <strong>Google Drive (Google One)</strong> seçeneğini işaretleyip hesap e-postanızı not olarak ekleyin; 7×16s 1'e 1 konsiyerj ekibimiz aktivasyonu ve düzenli yenilemeleri yönetir.</p>
+              </details>
+              <details>
+                <summary>Planımı yükseltebilir veya düşürebilir miyim?</summary>
+                <p>Evet. Değişiklikler bir sonraki faturalandırma döneminizden itibaren geçerli olur. Hemen yükseltmeye ihtiyacınız varsa bizimle iletişime geçin; yalnızca fiyat farkını yansıtalım.</p>
+              </details>
+              <details>
+                <summary>Bir sorun çıkarsa ne olur?</summary>
+                <p>Hemen bizimle iletişime geçin. Sorun gidermeye öncelik veriyor ve sizi mümkün olan en kısa sürede tekrar çalışır duruma getiriyoruz.</p>
+              </details>
+              <details>
+                <summary>Daha fazla şehri aydınlatırken gelir elde etmek için kendi cihazımı nasıl getirebilir veya küresel bilgi işlem ağınıza nasıl katılabilirim?</summary>
+                <p>8 milyar insanın tamamına gerçekten hizmet etme hedefimize doğru ilerlerken dünyanın dört bir yanındaki iş ortaklarını yerel bilgi işlem ağımıza katılmaya içtenlikle davet ediyoruz! <strong>Kendi cihazınızı getirebilir ve kaynaklarınızı paylaşabilirsiniz — böylece gelir elde ederken başkalarının hayallerini gerçeğe dönüştürmesine ışık tutarsınız!</strong> İster boşta duran veya yüksek donanımlı fiziksel Mac donanımınız, ister şehrinizde kaliteli yerel geniş bant internetiniz ya da bölgesel geliştirici ve üretici topluluklarına erişiminiz olsun; şehrinizi ve donanım/İSS detaylarınızı belirterek dilediğiniz zaman <a href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network" style="color:var(--primary-strong);font-weight:600">jason2023zhang@gmail.com</a> adresinden bize yazın — aramıza hoş geldiniz!</p>
+              </details>
+            </div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Global Partner & CTA -->
+    <!-- Floor 6: Buyer CTA First + Secondary Global Compute Partner Strip -->
     <section class="section">
       <div class="container">
-        <div class="partner-banner" id="partner">
-          <span class="eyebrow"><span class="dot"></span>KÜRESEL BİLGİ İŞLEM ORTAĞI · Dünyanın Bilgi İşlem Ağını Birlikte Kuruyoruz</span>
-          <h2>Küresel Bilgi İşlem Ağımıza Katılın —<br><em class="grad">8 Milyar İnsanın Tamamına Gerçekten Hizmet Edelim!</em></h2>
-          <p>
-            9 ülkede aydınlatılmış 13+ şehirden yola çıkarak saf yerel işlem gücünü ve öncü yapay zeka üretkenliğini dünyanın her köşesine taşıyoruz. <strong>Kendi cihazınızı getirebilir ve kaynaklarınızı paylaşabilirsiniz — böylece gelir elde ederken başkalarının hayallerini gerçeğe dönüştürmesine ışık tutarsınız!</strong> Nerede olursanız olun aramıza hoş geldiniz — bir sonraki şehri birlikte aydınlatmak için doğrudan bize e-posta gönderin.
-          </p>
-          <ul class="partner-chips">
-            <li>✦ Kendi Mac&#x27;ini Getir · Paylaş ve Kazan</li>
-            <li>✦ Yerel Yerleşik Geniş Bant Kaynak Paylaşımı</li>
-            <li>✦ Küme Barındırma ve Bölgesel İş Ortakları</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:jason2023zhang@gmail.com?subject=Mac%27imi%20Getiriyorum%20/%20Zaokit%20K%C3%BCresel%20Bilgi%20%C4%B0%C5%9Flem%20A%C4%9F%C4%B1na%20Kat%C4%B1l%C4%B1m&amp;body=Merhaba%20Jason%2C%20kaynaklar%C4%B1m%C4%B1%20payla%C5%9Fmak%20ve%20Zaokit%20K%C3%BCresel%20Bilgi%20%C4%B0%C5%9Flem%20A%C4%9F%C4%B1na%20kat%C4%B1lmak%20istiyorum%3A%0A%0A1.%20%C3%9Clke%20/%20%C5%9Eehir%3A%0A2.%20%C4%B0%C5%9F%20birli%C4%9Fi%20modeli%20%28Kendi%20Mac%27imi%20getirme%20/%20Yerel%20geni%C5%9F%20bant%20d%C3%BC%C4%9F%C3%BCm%C3%BC%20/%20B%C3%B6lgesel%20i%C5%9F%20orta%C4%9F%C4%B1%29%3A%0A3.%20Mac%20donan%C4%B1m%20%C3%B6zellikleri%20ve%20yerel%20%C4%B0SS%20bilgileri%3A%0A4.%20%C4%B0leti%C5%9Fim%20bilgileri%3A">Mac&#x27;ini Getir / Bize Yazın: jason2023zhang@gmail.com →</a>
-          </div>
-        </div>
-
         <div class="cta">
           <h2>Yapay Zeka Dünyayı Sınırsız Kılar. Bugün Başlayın.</h2>
           <p>Aydınlatılmış küresel şehirlerimizdeki geliştiricilere katılın — en gelişmiş yapay zeka üretkenliği ve üst düzey deneyimin aynı gün teslimatı için Stripe üzerinden abone olun.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pricing">Plan seçin</a>
+            <a class="btn btn-primary" href="#pricing" data-goto-audience="solo">Bireysel Planlar →</a>
+            <a class="btn btn-ent-hero" href="#pricing-enterprise" data-goto-audience="enterprise">Ekip ve Kurumsal →</a>
             <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20bilgi%20talebi">E-posta: jason2023zhang@gmail.com</a>
           </div>
           <div class="contact-tg">
@@ -1922,6 +2093,22 @@
                 @letcode2020
               </a>
             </div>
+          </div>
+        </div>
+
+        <div class="partner-banner partner-compact" id="partner">
+          <div class="partner-compact-copy">
+            <span class="eyebrow"><span class="dot"></span>KÜRESEL BİLGİ İŞLEM ORTAĞI · Dünyanın Bilgi İşlem Ağını Birlikte Kuruyoruz</span>
+            <h3>Küresel Bilgi İşlem Ağımıza Katılın — <em class="grad">8 Milyar İnsanın Tamamına Gerçekten Hizmet Edelim!</em></h3>
+            <p>9 ülkede aydınlatılmış 13+ şehirden yola çıkarak saf yerel işlem gücünü ve öncü yapay zeka üretkenliğini dünyanın her köşesine taşıyoruz. <strong>Kendi cihazınızı getirebilir ve kaynaklarınızı paylaşabilirsiniz — böylece gelir elde ederken başkalarının hayallerini gerçeğe dönüştürmesine ışık tutarsınız!</strong> Nerede olursanız olun aramıza hoş geldiniz — bir sonraki şehri birlikte aydınlatmak için doğrudan bize e-posta gönderin.</p>
+            <ul class="partner-chips">
+              <li>✦ Kendi Mac&#x27;ini Getir · Paylaş ve Kazan</li>
+              <li>✦ Yerel Yerleşik Geniş Bant Kaynak Paylaşımı</li>
+              <li>✦ Küme Barındırma ve Bölgesel İş Ortakları</li>
+            </ul>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Mac%27imi%20Getiriyorum%20/%20Zaokit%20K%C3%BCresel%20Bilgi%20%C4%B0%C5%9Flem%20A%C4%9F%C4%B1na%20Kat%C4%B1l%C4%B1m&amp;body=Merhaba%20Jason%2C%20kaynaklar%C4%B1m%C4%B1%20payla%C5%9Fmak%20ve%20Zaokit%20K%C3%BCresel%20Bilgi%20%C4%B0%C5%9Flem%20A%C4%9F%C4%B1na%20kat%C4%B1lmak%20istiyorum%3A%0A%0A1.%20%C3%9Clke%20/%20%C5%9Eehir%3A%0A2.%20%C4%B0%C5%9F%20birli%C4%9Fi%20modeli%20%28Kendi%20Mac%27imi%20getirme%20/%20Yerel%20geni%C5%9F%20bant%20d%C3%BC%C4%9F%C3%BCm%C3%BC%20/%20B%C3%B6lgesel%20i%C5%9F%20orta%C4%9F%C4%B1%29%3A%0A3.%20Mac%20donan%C4%B1m%20%C3%B6zellikleri%20ve%20yerel%20%C4%B0SS%20bilgileri%3A%0A4.%20%C4%B0leti%C5%9Fim%20bilgileri%3A">Mac&#x27;ini Getir / Bize Yazın: jason2023zhang@gmail.com →</a>
           </div>
         </div>
       </div>
@@ -2493,6 +2680,91 @@
       });
     }
 
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var panelSolo = document.getElementById('panel-solo');
+    var panelEnt = document.getElementById('pricing-enterprise');
+    var finderTip = document.getElementById('finder-tip');
+    var finderTipText = document.getElementById('finder-tip-text');
+    var finderTipClose = document.getElementById('finder-tip-close');
+
+    function setAudience(aud) {
+      var isEnt = aud === 'enterprise';
+      if (panelSolo) {
+        panelSolo.hidden = isEnt;
+        if (!isEnt) clearReveal(panelSolo);
+      }
+      if (panelEnt) {
+        panelEnt.hidden = !isEnt;
+        if (isEnt) clearReveal(panelEnt);
+      }
+      document.querySelectorAll('[data-audience-tab]').forEach(function (btn) {
+        btn.setAttribute('aria-selected', btn.getAttribute('data-audience-tab') === (isEnt ? 'enterprise' : 'solo') ? 'true' : 'false');
+      });
+    }
+
+    function clearScenarioHighlight() {
+      document.querySelectorAll('.qf-btn').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.plan-recommended').forEach(function (p) { p.classList.remove('plan-recommended'); });
+      if (finderTip) finderTip.hidden = true;
+    }
+
+    function applyScenario(sid) {
+      document.querySelectorAll('.qf-btn').forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-scenario') === sid);
+      });
+      document.querySelectorAll('.plan-recommended').forEach(function (p) { p.classList.remove('plan-recommended'); });
+      var targetCards = [];
+      if (sid === 'solo-dev') {
+        setAudience('solo');
+        targetCards = ['5x'];
+      } else if (sid === 'solo-max') {
+        setAudience('solo');
+        targetCards = ['20x'];
+      } else if (sid === 'team-rd') {
+        setAudience('enterprise');
+        targetCards = ['biz', 'team'];
+      } else if (sid === 'ent-custom') {
+        setAudience('enterprise');
+        targetCards = ['custom'];
+      }
+      targetCards.forEach(function (ck) {
+        var el = document.querySelector('[data-plan-card="' + ck + '"]');
+        if (el) el.classList.add('plan-recommended');
+      });
+      if (finderTip && finderTipText && FINDER_TIPS[sid]) {
+        finderTipText.textContent = '💡 ' + FINDER_TIPS[sid];
+        finderTip.hidden = false;
+      }
+    }
+
+    document.querySelectorAll('[data-audience-tab]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        clearScenarioHighlight();
+        setAudience(btn.getAttribute('data-audience-tab'));
+      });
+    });
+
+    document.querySelectorAll('[data-scenario]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var sid = btn.getAttribute('data-scenario');
+        if (btn.classList.contains('active')) {
+          clearScenarioHighlight();
+        } else {
+          applyScenario(sid);
+        }
+      });
+    });
+
+    if (finderTipClose) {
+      finderTipClose.addEventListener('click', clearScenarioHighlight);
+    }
+
+    document.querySelectorAll('details').forEach(function (det) {
+      det.addEventListener('toggle', function () {
+        if (det.open) clearReveal(det);
+      });
+    });
+
     document.querySelectorAll('a[href="#top"]').forEach(function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault();
@@ -2508,30 +2780,9 @@
       clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
       var headEl = sec.querySelector('.section-head') || sec;
-      var gridEl = sec.querySelector('.pricing-solo') || sec.querySelector('.pricing');
       var idealTop = docTop(headEl) - headerH - 12;
-      var targetY = idealTop;
-      if (gridEl) {
-        var plans = Array.prototype.slice.call(gridEl.querySelectorAll('.plan'));
-        if (plans.length) {
-          var checkPlans = innerWidth <= 960
-            ? [plans.reduce(function (a, b) { return docTop(a) <= docTop(b) ? a : b; })]
-            : plans;
-          var maxBtnBottom = 0;
-          checkPlans.forEach(function (p) {
-            var btn = p.querySelector('.btn');
-            if (btn) maxBtnBottom = Math.max(maxBtnBottom, docTop(btn) + btn.offsetHeight);
-          });
-          if (maxBtnBottom > 0) {
-            var neededBottom = maxBtnBottom + 16;
-            if (neededBottom - idealTop > innerHeight) {
-              targetY = neededBottom - innerHeight;
-            }
-          }
-        }
-      }
       var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
-      var destY = Math.max(0, Math.min(targetY, maxScroll));
+      var destY = Math.max(0, Math.min(idealTop, maxScroll));
       window.scrollTo({
         top: destY,
         behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant'
@@ -2541,19 +2792,28 @@
 
     function scrollToSection(id, smooth) {
       if (id === 'pricing') return scrollToPricing(smooth);
+      if (id === 'pricing-enterprise') {
+        setAudience('enterprise');
+        return scrollToPricing(smooth);
+      }
+      if (id === 'dedicated-line') {
+        setAudience('solo');
+        var dlDet = document.getElementById('dedicated-line');
+        if (dlDet) { dlDet.open = true; clearReveal(dlDet); }
+      } else if (id === 'seat-addons-drawer') {
+        setAudience('enterprise');
+        var saDet = document.getElementById('seat-addons-drawer');
+        if (saDet) { saDet.open = true; clearReveal(saDet); }
+      } else if (id === 'storage') {
+        var stDet = document.getElementById('storage');
+        if (stDet) { stDet.open = true; clearReveal(stDet); }
+      }
       var sec = document.getElementById(id);
       if (!sec) return null;
       clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
-      var rawY;
-      if (id === 'storage') {
-        rawY = docTop(sec) - headerH - 4;
-      } else if (id === 'pricing-enterprise' || id === 'dedicated-line') {
-        rawY = docTop(sec) - headerH - 16;
-      } else {
-        var headEl = sec.querySelector('.section-head');
-        rawY = headEl ? (docTop(headEl) - headerH - 28) : (docTop(sec) - headerH - 16);
-      }
+      var headEl = sec.querySelector('.section-head');
+      var rawY = headEl ? (docTop(headEl) - headerH - 24) : (docTop(sec) - headerH - 16);
       var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
       var destY = Math.max(0, Math.min(rawY, maxScroll));
       window.scrollTo({
@@ -2570,9 +2830,14 @@
       if (!document.getElementById(id)) return;
       el.addEventListener('click', function (e) {
         e.preventDefault();
+        var gotoAud = el.getAttribute('data-goto-audience');
+        if (gotoAud) {
+          clearScenarioHighlight();
+          setAudience(gotoAud);
+        }
         history.replaceState(null, '', '#' + id);
         var destY = scrollToSection(id, true);
-        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line') && navById.pricing ? 'pricing' : null);
+        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line' || id === 'storage') && navById.pricing ? 'pricing' : null);
         if (spyId && destY !== null) {
           lockedNavId = spyId;
           lockTargetY = destY;
@@ -2581,6 +2846,14 @@
         }
       });
     });
+
+    (function initAudienceFromUrl() {
+      var sp = new URLSearchParams(location.search);
+      var tabQ = (sp.get('tab') || '').toLowerCase();
+      if (tabQ === 'enterprise' || tabQ === 'team' || location.hash === '#pricing-enterprise') {
+        setAudience('enterprise');
+      }
+    })();
 
     if (location.hash && location.hash.length > 1) {
       var initId = decodeURIComponent(location.hash.slice(1));
@@ -2610,7 +2883,7 @@
     });
 
     if (!root.classList.contains('motion') || !('IntersectionObserver' in window)) return;
-    var targets = document.querySelectorAll('main .section-head, main .card, main .faq details, main .cta, main .stripe-trust, main .currency-switch, main .pricing-controls, main .tier-divider, main .enterprise-toolbar, main .seat-addons');
+    var targets = document.querySelectorAll('main .section-head, #service .card, #panel-solo > .pricing > .card, #security .card, #process .card, main .faq > details, main .cta, main .stripe-trust, main .audience-tabs, main .quick-finder, main .pricing-controls');
     targets.forEach(function (el) {
       var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
       el.classList.add('mo-reveal');

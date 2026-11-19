@@ -917,5 +917,111 @@
         "body_html": "<p>If you have a question about a charge, please contact us first and we will sort it out quickly. If you file a chargeback with your bank without contacting us, we may suspend the related service while the dispute is open.</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "Dedicated physical Mac workstations across 9 native ISP countries + enterprise BGP acceleration + up to 7×24h 1-on-1 AI engineering concierge. Pre-configured, billing managed, ready today.",
+    "hero_cta_solo": "Individual Plans →",
+    "hero_cta_ent": "Team & Enterprise →",
+    "hero_consult": "Need tailored sizing or private clusters? Email an engineer →",
+    "pillars_tag": "Core Capabilities",
+    "pillars_h2": "Leave setup, network & ops to us — focus purely on building",
+    "pillars_sub": "Three deterministic guarantees that eliminate environment friction, dropped long-running tasks and billing headaches.",
+    "pillars": [
+      {
+        "h3": "Physical Macs & Two-Tier Isolation",
+        "p": "High-spec Mac Studio & Mac mini hardware on native local ISP broadband across 9 countries—separate macOS accounts on 1x/5x, or full hardware dedication on 20x & Team.",
+        "chips": [
+          "Physical Mac Hardware",
+          "Account / Whole-Mac Isolation"
+        ]
+      },
+      {
+        "h3": "Zero-Loss Cross-Border Backbone",
+        "p": "200–500Mbps+ symmetrical native fiber paired with self-hosted relays and dual-leg BBR over enterprise BGP so remote desktops and long Claude Code runs never drop.",
+        "chips": [
+          "200–500Mbps+ Symmetrical",
+          "Enterprise BGP"
+        ]
+      },
+      {
+        "h3": "Managed Billing + 1-on-1 Concierge",
+        "p": "Environment pre-setup, subscription renewals and upgrades handled end-to-end—backed by 7×8h to 7×24h 1-on-1 guidance on Claude Code, MCP, Skills and production workflows.",
+        "chips": [
+          "Zero Billing Hassle",
+          "Up to 7×24h 1-on-1 Care"
+        ]
+      }
+    ],
+    "finder_label": "3-Second Plan Finder · Pick your scenario:",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "Individual Creator & Dev",
+    "tab_solo_sub": "1 user · 3 clear tiers",
+    "tab_ent_title": "Team & Enterprise Clusters",
+    "tab_ent_sub": "5–100+ seats · Dedicated Macs · Unified Invoice",
+    "solo_fit": [
+      "Best for: Everyday Q&A, writing & light coding",
+      "Best for: Daily heavy Claude Code shipping (Chosen by 80% of solo devs)",
+      "Best for: 24/7 multi-agent runs & whole-machine hardware isolation"
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "Best for: 3–5 person startup squads & AI studios",
+    "ent_fit_biz": "Best for: 6–12 person engineering & quant R&D teams",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "Custom",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "Contact Enterprise Architect →",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "Optional Add-on: ClaudeOps Enterprise BGP Dedicated Line",
+    "drawer_line_hint": "Recommended for 1x / 5x cross-border remote desktop & SSH with 0% packet loss (Included free on 20x Ultimate)",
+    "drawer_line_cta": "View options",
+    "drawer_upg_title": "Need mixed tiers? Per-Seat Flex Upgrade Add-ons",
+    "drawer_upg_hint": "For active Team / Business bases — upgrade specific leads or architects to Max (5x) or Ultra (20x) anytime",
+    "drawer_upg_cta": "View upgrades",
+    "drawer_storage_title": "Optional Add-on: Managed Google Drive / Apple iCloud+ Storage (2 TB – 30 TB)",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "View 4 tiers",
+    "drawer_close_cta": "Hide",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "Hardware-grade isolation · 0% loss measured · Verified user stories",
+    "trust_sub": "Every subscription is backed by physical Mac Silicon, enterprise BGP routing and verifiable engineering support.",
+    "faq_more_open": "Show {count} more questions",
+    "faq_more_close": "Show fewer questions"
   }
 }

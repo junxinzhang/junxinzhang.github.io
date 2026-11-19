@@ -917,5 +917,111 @@
         "body_html": "<p>若您對任何扣款紀錄有疑問，請先與我們聯繫，我們將儘速為您查明處理。若未經溝通即逕向發卡銀行提出爭議款／拒付（Chargeback），我們得於爭議處理期間暫停相關服務。</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "全球 9 國本地原生寬頻上的專屬實體 Mac 工作站 + 企業級跨境加速專線 + 最高 7×24h 一對一 AI 工程顧問。環境預裝、帳單全託管，當天開通即用。",
+    "hero_cta_solo": "個人開發者方案 →",
+    "hero_cta_ent": "團隊與企業方案 →",
+    "hero_consult": "不確定怎麼選或需私有客製？發郵件諮詢顧問 →",
+    "pillars_tag": "Core Capabilities · 核心交付",
+    "pillars_h2": "把環境、網路與維運交給我們，您只管創造",
+    "pillars_sub": "濃縮三項確定性核心交付，徹底告別配置折騰、長任務斷線與跨區續費煩惱。",
+    "pillars": [
+      {
+        "h3": "9 國原生實機算力與兩級隔離",
+        "p": "全系運行於高配置 Mac Studio / Mac mini 實體真機與當地原生寬頻（非公共雲共享機房）；1x/5x 獨立 macOS 帳戶隔離，20x 及團隊版整機硬體獨享。",
+        "chips": [
+          "高配實體 Mac",
+          "獨立帳戶 / 整機獨享"
+        ]
+      },
+      {
+        "h3": "0% 掉包跨境加速網路",
+        "p": "上下對等 200–500Mbps+ 原生大頻寬，配合自建高速中繼與企業精品 BGP 雙段 BBR 加速，遠端桌面與 Claude Code 長任務全天候絲滑不斷線。",
+        "chips": [
+          "200–500Mbps+ 對等頻寬",
+          "企業精品 BGP"
+        ]
+      },
+      {
+        "h3": "帳單全託管 + 1對1 專家陪跑",
+        "p": "環境預裝、訂閱續費與升級全自動代管；從 Claude Code、MCP/Skills 配置到真實專案落地，提供 7×8h 至 7×24h 一對一工程顧問支援。",
+        "chips": [
+          "帳單續費全託管",
+          "最高 7×24h 1對1顧問"
+        ]
+      }
+    ],
+    "finder_label": "3 秒快速選型 · 點擊您的現狀：",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "個人日常 / 主力寫程式",
+        "tip": "為您推薦【個人 5x 專業版】：重度 Claude Code 開發性價比最高；若跨國弱網連接，建議展開下方加購 5x 企業專線。"
+      },
+      {
+        "id": "solo-max",
+        "btn": "24h 多 Agent / 整機獨享",
+        "tip": "為您推薦【個人 20x 旗艦版】：可開啟整台實體 Mac 硬體獨享，且已免費包含企業加速專線與 6 TB 雲端儲存。"
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 人核心研發團隊",
+        "tip": "為您推薦【Team 5 席 / Business 10 席】：整機或多機實體叢集獨享，統一帳單發票，免費內建專線與 12–30 TB 雲端儲存。"
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ 人企業私有叢集",
+        "tip": "為您推薦【Custom 企業私有叢集】：支援 15–100+ 席位跨國雙區部署、任意規格比例混搭與商業合約。"
+      }
+    ],
+    "tab_solo_title": "個人開發者 / 創作者",
+    "tab_solo_sub": "1 人專屬 · 3 檔清晰方案",
+    "tab_ent_title": "團隊與企業叢集",
+    "tab_ent_sub": "5–100+ 人 · 整機/多機獨享 · 統一發票",
+    "solo_fit": [
+      "適合：日常問答 · 寫作 · 輕量程式開發",
+      "適合：每天重度使用 Claude Code 寫程式（80% 個人首選）",
+      "適合：多 Agent 晝夜掛機 · 要求整台實體 Mac 獨享"
+    ],
+    "ent_step1": "第 1 步：選擇團隊成員預設算力規格",
+    "ent_step2": "第 2 步：按團隊人數選擇專屬實體叢集規模",
+    "ent_fit_team": "適合：3–5 人新創核心組、AI 工作室",
+    "ent_fit_biz": "適合：6–12 人科技企業、量化與跨境研發部",
+    "custom_card": {
+      "badge": "15–100+ 席位 · 架構師客製",
+      "tier_b": "Custom",
+      "tier_span": "私有叢集版",
+      "fit": "適合：中大型研發中心 · 混合席位配比 · 專屬合規要求",
+      "desc": "為您量身規劃多國雙活實體 Mac Studio 叢集，支援按部門自由混搭 Pro / Max / Ultra 席位配比。",
+      "price_text": "按需客製",
+      "price_sub": "15 席起訂 · 專屬架構師 1對1 出具方案報價",
+      "features": [
+        "支援 15–100+ 席位任意 Pro / Max / Ultra 比例混搭",
+        "多台高配 Mac Studio 專屬實體叢集與跨國雙區容災",
+        "獨享海外原生商業靜態寬頻與獨立高速中繼閘道",
+        "統一商業形式發票（Commercial Invoice）與客製 SLA",
+        "7×24 小時專屬企業技術專家組即時群組支援"
+      ],
+      "btn": "聯繫企業顧問客製方案 →",
+      "consult": "當天回應 · 免費出具叢集架構與報價單",
+      "mailto_subject": "Zaokit 企業私有叢集客製諮詢（15+ 席位）"
+    },
+    "drawer_line_title": "按需選配：ClaudeOps 企業跨境加速專線",
+    "drawer_line_hint": "1x / 5x 跨國或尖峰弱網用戶推薦加購，0% 掉包絲滑跟手（20x 旗艦版已免費包含）",
+    "drawer_line_cta": "展開加購",
+    "drawer_upg_title": "團隊需要高低規格混搭？單席位補差價彈性升配包",
+    "drawer_upg_hint": "已購 Team / Business 底座的團隊，可單獨為少數核心骨幹補差價升級至 Max 或 Ultra",
+    "drawer_upg_cta": "展開升配包",
+    "drawer_storage_title": "可選增值：Google Drive / Apple iCloud+ 專屬雲端儲存託管（2 TB – 30 TB）",
+    "drawer_storage_pill": "20x 贈 6TB · 團隊版贈 6–30TB",
+    "drawer_storage_hint": "獨立帳號空間隔離 · 跨裝置自動備份與續費全託管",
+    "drawer_storage_cta": "展開 4 檔容量",
+    "drawer_close_cta": "收起",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "硬體級安全隔離 · 0% 掉包實測 · 真實用戶口碑",
+    "trust_sub": "每一份訂閱背後都是真實的實體 Mac 硬體、企業精品跨境骨幹網與可驗證的工程交付。",
+    "faq_more_open": "展開查看其餘 {count} 個常見問答",
+    "faq_more_close": "收起更多問答"
   }
 }

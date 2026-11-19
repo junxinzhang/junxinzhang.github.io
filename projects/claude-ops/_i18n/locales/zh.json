@@ -917,5 +917,111 @@
         "body_html": "<p>如对扣款有疑问，请先联系我们，我们会尽快处理。未经沟通直接向银行发起拒付（Chargeback）的，我们可能在争议处理期间暂停相关服务。</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "全球 9 国本地原生宽带上的专属物理 Mac 工作站 + 企业级跨境加速专线 + 最高 7×24h 一对一 AI 工程顾问。环境预装、账单全托管，当天开通即用。",
+    "hero_cta_solo": "个人开发者方案 →",
+    "hero_cta_ent": "团队与企业方案 →",
+    "hero_consult": "不确定怎么选或需私有定制？发邮件咨询顾问 →",
+    "pillars_tag": "Core Capabilities · 核心交付",
+    "pillars_h2": "把环境、网络与运维交给我们，您只管创造",
+    "pillars_sub": "浓缩三项确定性核心交付，彻底告别配置折腾、长任务断连与跨区续费烦恼。",
+    "pillars": [
+      {
+        "h3": "9 国原生真机算力与两级隔离",
+        "p": "全系运行于高配置 Mac Studio / Mac mini 物理真机与当地原生宽带（非公共云共享机房）；1x/5x 独立 macOS 账户隔离，20x 及团队版整机物理独享。",
+        "chips": [
+          "高配物理 Mac",
+          "独立账户 / 整机独享"
+        ]
+      },
+      {
+        "h3": "0% 丢包跨境加速网络",
+        "p": "上下对等 200–500Mbps+ 原生大带宽，配合自建高速中继与企业精品 BGP 双段 BBR 加速，远程桌面与 Claude Code 昼夜长任务丝滑不断连。",
+        "chips": [
+          "200–500Mbps+ 对等带宽",
+          "企业精品 BGP"
+        ]
+      },
+      {
+        "h3": "账单全托管 + 1对1 专家陪跑",
+        "p": "环境预装、订阅续费与升级全自动代管；从 Claude Code、MCP/Skills 配置到真实项目落地，提供 7×8h 至 7×24h 一对一工程顾问支持。",
+        "chips": [
+          "账单续费全托管",
+          "最高 7×24h 1对1顾问"
+        ]
+      }
+    ],
+    "finder_label": "3 秒快速选型 · 点击您的现状：",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "个人日常 / 主力写代码",
+        "tip": "为您推荐【个人 5x 专业版】：重度 Claude Code 开发性价比最高；若在国内或跨国弱网连接，建议展开下方加购 5x 企业专线。"
+      },
+      {
+        "id": "solo-max",
+        "btn": "24h 多 Agent / 整机独享",
+        "tip": "为您推荐【个人 20x 旗舰版】：可开启整台物理 Mac 硬件独享，且已免费包含企业加速专线与 6 TB 云存储。"
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 人核心研发团队",
+        "tip": "为您推荐【Team 5 席 / Business 10 席】：整机或多机物理集群独享，统一账单发票，免费内置专线与 12–30 TB 云存储。"
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ 人企业私有集群",
+        "tip": "为您推荐【Custom 企业私有集群】：支持 15–100+ 席位跨国双区部署、任意规格比例混搭与对公商务合同。"
+      }
+    ],
+    "tab_solo_title": "个人开发者 / 创作者",
+    "tab_solo_sub": "1 人专属 · 3 档清晰方案",
+    "tab_ent_title": "团队与企业集群",
+    "tab_ent_sub": "5–100+ 人 · 整机/多机独享 · 统一发票",
+    "solo_fit": [
+      "适合：日常问答 · 写作 · 轻度编程",
+      "适合：每天重度使用 Claude Code 写代码（80% 个人首选）",
+      "适合：多 Agent 昼夜挂机 · 要求整台物理 Mac 独享"
+    ],
+    "ent_step1": "第 1 步：选择团队成员默认算力规格",
+    "ent_step2": "第 2 步：按团队人数选择专属物理集群规模",
+    "ent_fit_team": "适合：3–5 人初创核心组、AI 工作室",
+    "ent_fit_biz": "适合：6–12 人科技企业、量化与跨境研发部",
+    "custom_card": {
+      "badge": "15–100+ 席位 · 架构师定制",
+      "tier_b": "Custom",
+      "tier_span": "私有集群版",
+      "fit": "适合：中大型研发中心 · 混合席位配比 · 专属合规要求",
+      "desc": "为您量身规划多国双活物理 Mac Studio 集群，支持按部门自由混搭 Pro / Max / Ultra 席位配比。",
+      "price_text": "按需定制",
+      "price_sub": "15 席起订 · 专属架构师 1对1 出具方案报价",
+      "features": [
+        "支持 15–100+ 席位任意 Pro / Max / Ultra 比例混搭",
+        "多台高配 Mac Studio 专属物理集群与跨国双区容灾",
+        "独享海外原生商业静态宽带与独立高速中继网关",
+        "统一商业形式发票（Commercial Invoice）与定制 SLA",
+        "7×24 小时专属企业技术专家组实时群组支持"
+      ],
+      "btn": "联系企业顾问定制方案 →",
+      "consult": "当天响应 · 免费出具集群架构与报价单",
+      "mailto_subject": "Zaokit 企业私有集群定制咨询（15+ 席位）"
+    },
+    "drawer_line_title": "按需选配：ClaudeOps 企业跨境加速专线",
+    "drawer_line_hint": "1x / 5x 跨国或晚高峰弱网用户推荐加购，0% 丢包丝滑跟手（20x 旗舰版已免费包含）",
+    "drawer_line_cta": "展开加购",
+    "drawer_upg_title": "团队需要高低规格混搭？单席位补差价弹性升配包",
+    "drawer_upg_hint": "已购 Team / Business 底座的团队，可单独为少数核心骨干补差价升级至 Max 或 Ultra",
+    "drawer_upg_cta": "展开升配包",
+    "drawer_storage_title": "可选增值：Google Drive / Apple iCloud+ 专属云存储托管（2 TB – 30 TB）",
+    "drawer_storage_pill": "20x 赠 6TB · 团队版赠 6–30TB",
+    "drawer_storage_hint": "独立账号空间隔离 · 跨设备自动备份与续费全托管",
+    "drawer_storage_cta": "展开 4 档容量",
+    "drawer_close_cta": "收起",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "硬件级安全隔离 · 0% 丢包实测 · 真实用户口碑",
+    "trust_sub": "每一份订阅背后都是真实的物理 Mac 硬件、企业精品跨境骨干网与可验证的工程交付。",
+    "faq_more_open": "展开查看其余 {count} 个常见问答",
+    "faq_more_close": "收起更多问答"
   }
 }

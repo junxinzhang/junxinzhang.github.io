@@ -917,5 +917,111 @@
         "body_html": "<p>ប្រសិនបើអ្នកមានចម្ងល់អំពីការកាត់ប្រាក់ណាមួយ សូមទាក់ទងមកយើងជាមុនសិន ហើយយើងនឹងជួយដោះស្រាយយ៉ាងឆាប់រហ័ស។ ប្រសិនបើអ្នកដាក់សំណើ Chargeback ជាមួយធនាគារដោយមិនបានទាក់ទងមកយើងជាមុន យើងអាចផ្អាកសេវាកម្មពាក់ព័ន្ធក្នុងអំឡុងពេលវិវាទកំពុងដំណើរការ។</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "ចាប់ពីការដំឡើងដំបូង រហូតដល់ប្រតិបត្តិការប្រចាំថ្ងៃ យើងគ្រប់គ្រងជូនទាំងស្រុង និងរួចរាល់សម្រាប់ប្រើប្រាស់ភ្លាមៗ។ ម៉ាស៊ីនពិត Mac Studio ឬ Mac mini សមត្ថភាពខ្ពស់ ភ្ជាប់លើបណ្តាញអ៊ីនធឺណិត ISP ក្នុងស្រុកពិតប្រាកដនៅអូស្ត្រាលី សហរដ្ឋអាមេរិក សិង្ហបុរី ម៉ាឡេស៊ី ឥណ្ឌូនេស៊ី ជប៉ុន កម្ពុជា នូវែលសេឡង់ ឬកាណាដា (មិនមែនមជ្ឈមណ្ឌលទិន្នន័យ Cloud តម្លៃថោកប្រើរួមគ្នាឡើយ)។ បំបែកដាច់តាមគណនី (ម៉ាស៊ីនផ្តាច់មុខលើ 20x) មានស្ថិរភាពសម្រាប់រយៈពេលវែង។.",
+    "hero_cta_solo": "គម្រោងបុគ្គល →",
+    "hero_cta_ent": "ក្រុមការងារ និងស្ថាប័ន →",
+    "hero_consult": "ត្រូវការរៀបចំតាមតម្រូវការពិសេស? អ៊ីមែលមកយើង →",
+    "pillars_tag": "សេវាកម្ម",
+    "pillars_h2": "ទុកការរៀបចំ បណ្តាញ និងការថែទាំឱ្យយើង — អ្នកផ្តោតតែលើការបង្កើតថ្មី",
+    "pillars_sub": "ចាប់ពីការដំឡើងដំបូង រហូតដល់ប្រតិបត្តិការប្រចាំថ្ងៃ យើងគ្រប់គ្រងជូនទាំងស្រុង និងរួចរាល់សម្រាប់ប្រើប្រាស់ភ្លាមៗ។",
+    "pillars": [
+      {
+        "h3": "Mac Studio និង mini សមត្ថភាពខ្ពស់",
+        "p": "ម៉ាស៊ីនពិត Mac Studio ឬ Mac mini សមត្ថភាពខ្ពស់ ភ្ជាប់លើបណ្តាញអ៊ីនធឺណិត ISP ក្នុងស្រុកពិតប្រាកដនៅអូស្ត្រាលី សហរដ្ឋអាមេរិក សិង្ហបុរី ម៉ាឡេស៊ី ឥណ្ឌូនេស៊ី ជប៉ុន កម្ពុជា នូវែលសេឡង់ ឬកាណាដា (មិនមែនមជ្ឈមណ្ឌលទិន្នន័យ Cloud តម្លៃថោកប្រើរួមគ្នាឡើយ)។ បំបែកដាច់តាមគណនី (ម៉ាស៊ីនផ្តាច់មុខលើ 20x) មានស្ថិរភាពសម្រាប់រយៈពេលវែង។",
+        "chips": [
+          "ម៉ាស៊ីន Mac ពិត",
+          "លំហដាច់ដោយឡែក"
+        ]
+      },
+      {
+        "h3": "ឆ្អឹងខ្នង BGP កម្រិតសហគ្រាស",
+        "p": "យើងបន្តវិនិយោគលើផ្នែករឹង និងផ្លូវបណ្តាញលំដាប់ខ្ពស់៖ អ៊ីនធឺណិត ISP ក្នុងស្រុកពិតប្រាកដក្នុង 9 ប្រទេស ដែលមានល្បឿន Upload/Download ស្មើគ្នា 200Mbps–500Mbps+ គួបផ្សំនឹងម៉ាស៊ីន Relay ផ្ទាល់ខ្លួន និងឆ្អឹងខ្នង BGP កម្រិតសហគ្រាស ដែលកាត់បន្ថយការបាត់បង់កញ្ចប់ទិន្នន័យ (Packet Loss) មកនៅត្រឹមសូន្យ។",
+        "chips": [
+          "ល្បឿនស្មើគ្នា 200–500Mbps+",
+          "បច្ចេកវិទ្យា Dual-leg BBR"
+        ]
+      },
+      {
+        "h3": "ទីប្រឹក្សាវិស្វកម្ម 1 ទល់ 1 លំដាប់កំពូល",
+        "p": "ការណែនាំផ្នែកវិស្វកម្ម AI សម្រាប់អ្នកបង្កើតមាតិកា អ្នកអភិវឌ្ឍន៍ ស្ថាបនិក និងក្រុមការងារ។ ចាប់ពីលំហូរការងារ Claude Code ការរៀបចំ MCP និង Skills រហូតដល់ការដាក់ឱ្យដំណើរការគម្រោងពិត ជាមួយជំនួយផ្ទាល់ 1 ទល់ 1 ម៉ោង 7×8 / 7×16 / 7×24។",
+        "chips": [
+          "គ្រប់គ្រងការទូទាត់ និងបន្តសុពលភាពជូន",
+          "បទពិសោធន៍កំពូល"
+        ]
+      }
+    ],
+    "finder_label": "ជ្រើសរើសរហ័សក្នុង 3 វិនាទី · ជ្រើសរើសតម្រូវការ៖",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "Solo daily coding & shipping",
+        "tip": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below."
+      },
+      {
+        "id": "solo-max",
+        "btn": "24/7 multi-agent / Dedicated Mac",
+        "tip": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free."
+      },
+      {
+        "id": "team-rd",
+        "btn": "3–10 person engineering team",
+        "tip": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage."
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15+ seat custom enterprise cluster",
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+      }
+    ],
+    "tab_solo_title": "អ្នកអភិវឌ្ឍន៍ / អ្នកបង្កើតម្នាក់ឯង",
+    "tab_solo_sub": "1 នាក់ · 3 គម្រោងច្បាស់លាស់",
+    "tab_ent_title": "ក្រុមការងារ និងសហគ្រាស",
+    "tab_ent_sub": "5–100+ កៅអី · Mac ផ្តាច់មុខ · វិក្កយបត្ររួម",
+    "solo_fit": [
+      "សម្រាប់ការសន្ទនាប្រចាំថ្ងៃ ការសរសេរអត្ថបទ និងការសរសេរកូដកម្រិតស្រាលប្រកបដោយស្ថិរភាព។",
+      "សម្រាប់អ្នកអភិវឌ្ឍន៍ និងអ្នកបង្កើតមាតិកាដែលប្រើប្រាស់ Claude Code ខ្លាំងក្លាជារៀងរាល់ថ្ងៃ។",
+      "សម្រាប់អ្នកបង្កើតស្នាដៃធំៗ ស្ថាបនិក និងអ្នកប្រើប្រាស់កម្រិតខ្ពស់ដែលដំណើរការ Agent ច្រើនពេញ 24 ម៉ោង។"
+    ],
+    "ent_step1": "Step 1: Choose default per-seat compute tier",
+    "ent_step2": "Step 2: Choose dedicated cluster size for your team",
+    "ent_fit_team": "5 កៅអី",
+    "ent_fit_biz": "10 កៅអី",
+    "custom_card": {
+      "badge": "15–100+ Seats · Architect Tailored",
+      "tier_b": "Custom",
+      "tier_span": "Private Cluster",
+      "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "price_text": "តាមតម្រូវការ",
+      "price_sub": "From 15 seats · 1-on-1 architecture & quote",
+      "features": [
+        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Dedicated multi-Mac Studio hardware & dual-region failover",
+        "Dedicated static native business ISP & private relay gateway",
+        "Commercial Invoice, procurement onboarding & custom SLA",
+        "7×24h dedicated enterprise engineering concierge channel"
+      ],
+      "btn": "ទាក់ទងទីប្រឹក្សាសហគ្រាស →",
+      "consult": "Same-day response · Free cluster sizing & quote",
+      "mailto_subject": "Zaokit Custom Enterprise Cluster Enquiry (15+ Seats)"
+    },
+    "drawer_line_title": "ខ្សែបណ្តាញសហគ្រាស ClaudeOps · បង្កើនល្បឿនឆ្លងដែន",
+    "drawer_line_hint": "កញ្ចប់បន្ថែមសម្រាប់សមាជិក 1x និង 5x៖ បញ្ជូនចរាចរណ៍ទិន្នន័យតាមឆ្អឹងខ្នង BGP ឆ្លងដែនកម្រិតសហគ្រាស ជាមួយបច្ចេកវិទ្យា Dual-leg BBR កាត់បន្ថយការបាត់បង់ទិន្នន័យមក 0% ដើម្បីឱ្យ Screen Sharing និង Claude Code ឆ្លើយតបលឿនរហ័សបំផុត (ទូទាត់ប្រចាំឆ្នាំថែមជូន 2 ខែឥតគិតថ្លៃ)។",
+    "drawer_line_cta": "មើលជម្រើសបន្ថែម",
+    "drawer_upg_title": "កញ្ចប់បន្ថែមដំឡើងកម្រិតតាមកៅអី",
+    "drawer_upg_hint": "លាយបញ្ចូលកម្រិតកៅអីលើកញ្ចប់មូលដ្ឋាន Team ឬ Business ដែលកំពុងដំណើរការ — ដំឡើងកម្រិតសមាជិកជាក់លាក់តាមតម្រូវការ (កញ្ចប់បន្ថែមប្រចាំឆ្នាំក៏ទទួលបាន 2 ខែឥតគិតថ្លៃផងដែរ)។",
+    "drawer_upg_cta": "មើលជម្រើសបន្ថែម",
+    "drawer_storage_title": "សេវាទំហំផ្ទុក Cloud គ្រប់គ្រងពេញលេញសម្រាប់ទ្រព្យសម្បត្តិឌីជីថល",
+    "drawer_storage_pill": "6TB free on 20x · 6–30TB free on Team/Biz",
+    "drawer_storage_hint": "Private isolated space · Cross-device auto-sync & managed renewals",
+    "drawer_storage_cta": "មើលជម្រើសបន្ថែម",
+    "drawer_close_cta": "បង្រួម",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "ការបំបែកដាច់ 2 កម្រិត៖ គណនីដាច់ដោយឡែក និងម៉ាស៊ីនផ្តាច់មុខ",
+    "trust_sub": "ដើម្បីការពារឯកជនភាពអតិថិជន រាល់ការវាយតម្លៃទាំងអស់ប្រើរូបតំណាងគំនូរជីវចល និងឈ្មោះបិទបាំង ដោយរក្សាទុកខ្លឹមសារមតិពិតប្រាកដ និងកម្រិតកញ្ចប់ជាវ។",
+    "faq_more_open": "បង្ហាញសំណួរ {count} បន្ថែមទៀត",
+    "faq_more_close": "បង្រួមសំណួរ"
   }
 }

@@ -25,3 +25,6 @@ assets/images/screenshot-*-video-cover-*.png
 scripts/remotion/
 .baoyu-skills/
 Gemfile.lock
+
+__pycache__/
+*.pyc

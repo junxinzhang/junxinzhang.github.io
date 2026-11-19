@@ -995,16 +995,263 @@
     .map-hud-row b { white-space: normal; min-width: 0; line-height: 1.35 }
     @media (max-width: 1180px) {
       .nav-links { gap: 2px }
-      .nav-links a { padding: 6px 7px; font-size: .81rem }
+      .nav-links a { padding: 6px 9px; font-size: .84rem }
     }
-    @media (max-width: 1030px) {
+    @media (max-width: 920px) {
       .nav-links { display: none }
     }
+
+    /* ===== Streamlined 6-Floor UX & Focused Pricing Architecture ===== */
+    .hero { padding: 54px 0 58px }
+    .hero p.lead { max-width: 44em; margin: 0 auto 24px; font-size: clamp(.98rem, 1.65vw, 1.12rem); line-height: 1.68 }
+    .btn-ent-hero {
+      background: rgba(217, 119, 87, .10); color: var(--cream);
+      border: 1px solid rgba(232, 144, 111, .42);
+    }
+    .btn-ent-hero:hover {
+      background: rgba(217, 119, 87, .20); border-color: rgba(242, 180, 143, .75);
+      color: #fff; transform: translateY(-1px);
+    }
+    .hero-sub-link { margin-top: 14px; font-size: .84rem; color: var(--muted) }
+    .hero-sub-link a {
+      color: var(--muted); border-bottom: 1px dashed rgba(255, 255, 255, .22);
+      padding-bottom: 1px; transition: color .2s, border-color .2s;
+    }
+    .hero-sub-link a:hover { color: var(--primary-strong); border-color: var(--primary-strong) }
+    .hero-map-wrap { margin-top: 30px }
+
+    /* Floor 2: 3 Merged Core Capability Pillars */
+    .pillar-card { display: flex; flex-direction: column; padding: 26px 26px 22px }
+    .pillar-card p { flex: 1; line-height: 1.65 }
+    .pillar-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .06) }
+    .pillar-chip {
+      font-size: .75rem; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+      color: var(--primary-strong); background: rgba(217, 119, 87, .12); border: 1px solid rgba(217, 119, 87, .26);
+    }
+
+    /* Floor 3: Pricing Quick-Finder + Audience Segmented Tabs + Clean Cards */
+    #pricing { padding: 72px 0 76px }
+    #pricing > .container > .section-head { margin-bottom: 22px }
+    #pricing > .container > .section-head h2 { font-size: clamp(1.65rem, 3.2vw, 2.25rem) }
+    #pricing > .container > .section-head p { font-size: .95rem; margin-top: 8px }
+
+    .quick-finder {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 10px;
+      max-width: 980px; margin: 0 auto 20px; padding: 11px 16px; border-radius: 16px;
+      background: rgba(255, 255, 255, .025); border: 1px solid rgba(255, 255, 255, .07);
+    }
+    .qf-label { font-size: .82rem; font-weight: 600; color: var(--cream); margin-right: 4px }
+    .qf-btn {
+      font: inherit; font-size: .80rem; font-weight: 500; color: var(--text);
+      padding: 6px 13px; border-radius: 999px; cursor: pointer;
+      background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .10);
+      transition: .2s; white-space: nowrap;
+    }
+    .qf-btn:hover { color: #fff; border-color: rgba(232, 144, 111, .5); background: rgba(217, 119, 87, .12) }
+    .qf-btn.active {
+      color: #fff; font-weight: 600; background: rgba(217, 119, 87, .24);
+      border-color: var(--primary-strong); box-shadow: 0 4px 16px rgba(217, 119, 87, .25);
+    }
+    .finder-tip {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      max-width: 880px; margin: -6px auto 20px; padding: 11px 18px; border-radius: 13px;
+      background: linear-gradient(90deg, rgba(217, 119, 87, .18), rgba(242, 180, 143, .08));
+      border: 1px solid rgba(232, 144, 111, .42); color: var(--cream); font-size: .86rem; line-height: 1.5;
+    }
+    .finder-tip[hidden] { display: none !important }
+    .finder-tip-close {
+      background: transparent; border: 0; color: var(--muted); font-size: 1.15rem;
+      line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px; flex-shrink: 0;
+    }
+    .finder-tip-close:hover { color: #fff; background: rgba(255, 255, 255, .08) }
+
+    .audience-tabs {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+      max-width: 680px; margin: 0 auto 20px; padding: 6px; border-radius: 20px;
+      background: rgba(255, 255, 255, .03); border: 1px solid rgba(255, 255, 255, .09);
+    }
+    .aud-tab {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 12px 18px; border-radius: 14px; border: 1px solid transparent;
+      background: transparent; color: var(--muted); cursor: pointer; font-family: inherit;
+      text-align: left; transition: .22s;
+    }
+    .aud-tab:hover { color: var(--cream); background: rgba(255, 255, 255, .035) }
+    .aud-tab[aria-selected="true"] {
+      background: linear-gradient(135deg, rgba(217, 119, 87, .24), rgba(217, 119, 87, .10));
+      border-color: rgba(232, 144, 111, .58); color: #fff;
+      box-shadow: 0 10px 28px -10px rgba(217, 119, 87, .45);
+    }
+    .aud-icon {
+      width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0;
+      background: rgba(255, 255, 255, .05); color: var(--muted); transition: .22s;
+    }
+    .aud-tab[aria-selected="true"] .aud-icon { background: var(--primary); color: #fff }
+    .aud-txt strong { display: block; font-size: .96rem; font-weight: 700; color: inherit; line-height: 1.25 }
+    .aud-txt span { display: block; font-size: .76rem; color: var(--muted); margin-top: 2px; line-height: 1.3 }
+    .aud-tab[aria-selected="true"] .aud-txt span { color: #f2d5be }
+    @media (max-width: 600px) {
+      .audience-tabs { grid-template-columns: 1fr }
+      .qf-btn { white-space: normal; text-align: center }
+    }
+
+    .pricing-panel[hidden] { display: none !important }
+    .pricing-controls { margin: 0 auto 26px; gap: 12px }
+
+    /* Comfortable, breathable plan cards */
+    #pricing .pricing-solo .plan,
+    #pricing .pricing-enterprise .plan { padding: 28px 25px 24px }
+    #pricing .pricing-solo .plan-tier b,
+    #pricing .pricing-enterprise .plan-tier b { font-size: 2rem }
+    #pricing .pricing-solo .price,
+    #pricing .pricing-enterprise .price { font-size: 2.3rem }
+    #pricing .pricing-solo .features li { padding: 5px 0; font-size: .89rem; line-height: 1.45 }
+    #pricing .pricing-solo .plan .btn,
+    #pricing .pricing-enterprise .plan .btn { padding: 12px 20px; font-size: .95rem }
+
+    .plan-fit {
+      margin: 10px 0 12px; padding: 6px 11px; border-radius: 9px;
+      background: rgba(217, 119, 87, .10); border-left: 3px solid var(--primary);
+      color: #f5dcc8; font-size: .80rem; font-weight: 600; line-height: 1.4;
+    }
+    .plan.plan-recommended {
+      outline: 2px solid #ffd7b3; outline-offset: 2px;
+      box-shadow: 0 0 0 6px rgba(217, 119, 87, .20), 0 26px 60px -16px rgba(217, 119, 87, .42) !important;
+    }
+
+    /* Enterprise 2-step clarity + 3rd Custom Cluster Card */
+    .enterprise-wrap { margin-top: 0 }
+    .ent-step-bar {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      margin: 0 auto 22px; padding: 16px 20px; border-radius: 16px;
+      background: rgba(255, 255, 255, .025); border: 1px solid rgba(232, 144, 111, .20);
+      text-align: center;
+    }
+    .ent-step-title { font-size: .85rem; font-weight: 700; color: var(--cream); letter-spacing: .02em }
+    .ent-step2-label {
+      text-align: center; font-size: .84rem; font-weight: 700; color: var(--muted);
+      margin: 0 0 20px; letter-spacing: .02em;
+    }
+    .plan.plan-custom {
+      border-style: dashed; border-color: rgba(242, 180, 143, .38);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .01));
+    }
+    .badge-custom {
+      background: #1f1b18; color: #e5d5c5; border: 1px solid rgba(255, 255, 255, .20);
+    }
+    .price-custom {
+      font-family: var(--serif); font-size: 1.95rem !important; font-weight: 700; color: var(--cream);
+      line-height: 1.15; letter-spacing: -.01em;
+    }
+
+    /* Collapsible Optional Add-on Drawers (Dedicated Line, Seat Upgrades, Cloud Storage) */
+    .addon-drawer {
+      margin-top: 22px; border-radius: 18px; overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .012));
+      border: 1px solid rgba(232, 144, 111, .24); transition: border-color .2s;
+    }
+    .addon-drawer:hover { border-color: rgba(232, 144, 111, .45) }
+    .addon-drawer[open] { border-color: rgba(232, 144, 111, .48); background: rgba(255, 255, 255, .025) }
+    .addon-drawer > summary {
+      list-style: none; cursor: pointer; padding: 16px 22px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      user-select: none;
+    }
+    .addon-drawer > summary::-webkit-details-marker { display: none }
+    .drawer-sum-left { display: flex; align-items: flex-start; gap: 12px; min-width: 0 }
+    .drawer-ic {
+      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0;
+      background: rgba(217, 119, 87, .15); color: var(--primary-strong); margin-top: 2px;
+    }
+    .drawer-titles { min-width: 0 }
+    .drawer-title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px }
+    .drawer-title-row strong { color: var(--cream); font-size: .95rem; font-weight: 700 }
+    .drawer-pill {
+      font-size: .71rem; font-weight: 700; padding: 2px 9px; border-radius: 999px;
+      background: rgba(91, 209, 139, .14); color: #7ce6a6; border: 1px solid rgba(91, 209, 139, .30);
+      white-space: nowrap;
+    }
+    .drawer-hint { display: block; margin-top: 3px; font-size: .81rem; color: var(--muted); line-height: 1.45 }
+    .drawer-toggle-pill {
+      display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;
+      padding: 7px 14px; border-radius: 999px; font-size: .80rem; font-weight: 600;
+      color: var(--primary-strong); background: rgba(217, 119, 87, .12);
+      border: 1px solid rgba(217, 119, 87, .32); transition: .2s; white-space: nowrap;
+    }
+    .addon-drawer > summary:hover .drawer-toggle-pill { background: var(--primary); color: #fff; border-color: var(--primary) }
+    .drawer-toggle-pill i { font-style: normal; transition: transform .22s ease; display: inline-block }
+    .addon-drawer .when-open { display: none }
+    .addon-drawer[open] .when-closed { display: none }
+    .addon-drawer[open] .when-open { display: inline }
+    .addon-drawer[open] .drawer-toggle-pill i { transform: rotate(180deg) }
+    .drawer-body { padding: 4px 22px 22px; border-top: 1px solid rgba(255, 255, 255, .06) }
+    .drawer-body-lead { margin: 14px 0 16px; font-size: .84rem; color: var(--muted); line-height: 1.55 }
+    .storage-drawer { margin-top: 16px; border-color: rgba(255, 255, 255, .12) }
+    @media (max-width: 680px) {
+      .addon-drawer > summary { flex-direction: column; align-items: flex-start; gap: 10px }
+      .drawer-toggle-pill { align-self: flex-start }
+    }
+
+    /* Floor 4: Merged Security + Network Proof + Curated 3 Reviews */
+    .trust-split {
+      display: grid; grid-template-columns: 1.08fr .92fr; gap: 24px; align-items: stretch;
+    }
+    .sec-stack { display: grid; gap: 14px }
+    .sec-compact-card {
+      display: flex; align-items: flex-start; gap: 16px; padding: 20px 22px;
+    }
+    .sec-compact-card .icon { flex-shrink: 0; width: 40px; height: 40px; margin-top: 2px }
+    .sec-compact-card h3 { margin: 0 0 5px; font-size: 1.02rem }
+    .sec-compact-card p { font-size: .88rem; line-height: 1.58 }
+    .net-proof-box { display: flex; flex-direction: column; justify-content: space-between; padding: 24px 26px }
+    .net-proof-head h3 { margin: 0 0 6px; color: var(--cream); font-size: 1.08rem }
+    .net-proof-head p { margin: 0 0 14px; font-size: .86rem; color: var(--muted); line-height: 1.55 }
+    .net-proof-box .net-chips { margin-bottom: 16px }
+    .trust-reviews { margin-top: 36px; padding-top: 34px; border-top: 1px solid var(--border) }
+    .trust-reviews-title {
+      text-align: center; font-size: .82rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--primary-strong); margin: 0 0 20px;
+    }
+    @media (max-width: 960px) { .trust-split { grid-template-columns: 1fr } }
+
+    /* Floor 5: Focused Top-6 FAQ + Expand More */
+    .faq-more {
+      background: transparent !important; border: 0 !important; padding: 0 !important; margin-top: 6px !important;
+    }
+    .faq-more > summary {
+      justify-content: center !important; width: fit-content; margin: 10px auto 0;
+      padding: 9px 20px; border-radius: 999px; font-size: .85rem; font-weight: 600;
+      color: var(--primary-strong) !important; background: rgba(217, 119, 87, .10);
+      border: 1px solid rgba(217, 119, 87, .30); transition: .2s;
+    }
+    .faq-more > summary:hover { background: rgba(217, 119, 87, .20); color: #fff !important }
+    .faq-more > summary::after { content: "▾" !important; font-size: .9rem !important; margin-left: 6px }
+    .faq-more[open] > summary::after { content: "▴" !important }
+    .faq-more .when-open { display: none }
+    .faq-more[open] .when-closed { display: none }
+    .faq-more[open] .when-open { display: inline }
+    .faq-more-list { margin-top: 14px }
+
+    /* Floor 6: Buyer CTA First, Compact Secondary Partner Strip Below */
+    .partner-banner.partner-compact {
+      margin: 26px 0 0; padding: 28px 30px; text-align: left;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .partner-compact-copy { flex: 1 1 480px; min-width: 0 }
+    .partner-compact h3 {
+      font-family: var(--serif); color: var(--cream); font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+      line-height: 1.35; margin: 10px 0 8px;
+    }
+    .partner-compact p { margin: 0 0 14px; font-size: .88rem; line-height: 1.6; max-width: none }
+    .partner-compact .partner-chips { justify-content: flex-start; margin: 0 }
+
     /* RTL Directional Overrides */
     [dir="rtl"] .hero-map-wrap { text-align: right }
     [dir="rtl"] .map-stage { direction: ltr; text-align: left }
     [dir="rtl"] .map-hud { direction: rtl; text-align: right }
     [dir="rtl"] .map-hud-row b { text-align: left }
+    [dir="rtl"] .aud-tab { text-align: right }
+    [dir="rtl"] .plan-fit { border-left: 0; border-right: 3px solid var(--primary) }
     [dir="rtl"] .enterprise-jump { margin-left: 0; margin-right: 6px }
     [dir="rtl"] .price small { margin-left: 0; margin-right: 4px }
     [dir="rtl"] .price sup { margin-right: 0; margin-left: 2px }
@@ -1018,6 +1265,7 @@
     [dir="rtl"] .nb-fill { inset: 0 0 0 auto }
     [dir="rtl"] .nb em { padding-left: 0; padding-right: 8px }
     [dir="rtl"] .contact-tg { text-align: right }
+    [dir="rtl"] .partner-banner.partner-compact { text-align: right }
     [dir="rtl"] .foot-right { margin-left: 0; margin-right: auto; text-align: left }
     [dir="rtl"] .social { justify-content: flex-start }
     [dir="rtl"] #scroll-progress { transform-origin: 100% 50% }
@@ -1051,13 +1299,9 @@
         Zaokit ClaudeOps
       </a>
       <ul class="nav-links">
-        <li><a href="#why">Why</a></li>
         <li><a href="#service">Service</a></li>
-        <li><a href="#value">Beyond Compute</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#reviews">Reviews</a></li>
         <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#storage">Cloud Storage</a></li>
+        <li><a href="#security">Security</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -1068,18 +1312,25 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Floor 1: Hero & Global Compute Topology -->
     <section class="hero">
       <div class="container">
         <span class="eyebrow"><span class="dot"></span>GLOBAL VISION · Let AI Light Up Every City, Every Individual</span>
         <h1>AI Makes the World Borderless<span class="h1-sub"><em>We bring the most advanced productivity &amp; top-tier experience to everyone</em></span></h1>
         <p class="lead">
-          Frontier AI productivity should never be the privilege of a few. From Sydney, Silicon Valley, Tokyo and Singapore to Jakarta—we are lighting up native compute hubs city by city across the globe, pairing isolated physical Mac workstations, enterprise BGP dedicated lines and up to 7×24h 1-on-1 engineering care so every creator, developer and team can build without borders.
+          Dedicated physical Mac workstations across 9 native ISP countries + enterprise BGP acceleration + up to 7×24h 1-on-1 AI engineering concierge. Pre-configured, billing managed, ready today.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#pricing">View pricing</a>
-          <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry">Email us</a>
+          <a class="btn btn-primary" href="#pricing" data-goto-audience="solo">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0114 0"/></svg>
+            Individual Plans →
+          </a>
+          <a class="btn btn-ent-hero" href="#pricing-enterprise" data-goto-audience="enterprise">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h2m4 0h2M8 13h2m4 0h2M10 20v-3h4v3"/></svg>
+            Team &amp; Enterprise →
+          </a>
         </div>
+        <div class="hero-sub-link"><a href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry">Need tailored sizing or private clusters? Email an engineer →</a></div>
 
         <div class="hero-map-wrap">
           <div class="hero-map-card" id="global-map">
@@ -1126,13 +1377,6 @@
             <div class="map-pills" role="tablist" aria-label="Select region">
               <button type="button" class="map-pill active" data-pick-node="AU"><i></i><span>Australia</span><code>AU</code></button><button type="button" class="map-pill" data-pick-node="US"><i></i><span>United States</span><code>US</code></button><button type="button" class="map-pill" data-pick-node="SG"><i></i><span>Singapore</span><code>SG</code></button><button type="button" class="map-pill" data-pick-node="MY"><i></i><span>Malaysia</span><code>MY</code></button><button type="button" class="map-pill" data-pick-node="ID"><i></i><span>Indonesia</span><code>ID</code></button><button type="button" class="map-pill" data-pick-node="JP"><i></i><span>Japan</span><code>JP</code></button><button type="button" class="map-pill" data-pick-node="KH"><i></i><span>Cambodia</span><code>KH</code></button><button type="button" class="map-pill" data-pick-node="NZ"><i></i><span>New Zealand</span><code>NZ</code></button><button type="button" class="map-pill" data-pick-node="CA"><i></i><span>Canada</span><code>CA</code></button>
             </div>
-            <div class="map-partner-bar">
-              <div class="map-partner-copy">
-                <span class="partner-pill">✦ Global Co-Building · Serving All 8 Billion People</span>
-                <span><strong>Bring your own machine &amp; share your resources — earn revenue while lighting up the possibility of dreams for others!</strong></span>
-              </div>
-              <a class="partner-cta-btn" href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20/%20Join%20Zaokit%20Global%20Compute%20Network&amp;body=Hi%20Jason%2C%20I%27d%20love%20to%20share%20my%20resources%20and%20join%20the%20Zaokit%20Global%20Compute%20Network%3A%0A%0A1.%20Country%20/%20City%3A%0A2.%20Collaboration%20mode%20%28Bring%20my%20own%20Mac%20/%20Native%20broadband%20node%20/%20Regional%20partner%29%3A%0A3.%20Mac%20specs%20%26%20local%20ISP%20details%3A%0A4.%20Contact%20details%3A">Bring Machine / Join Us →</a>
-            </div>
           </div>
         </div>
         <div class="hero-stats">
@@ -1145,364 +1389,82 @@
       </div>
     </section>
 
-    <!-- Pain points -->
-    <section class="section section-alt" id="why">
+    <!-- Floor 2: 3 Merged Core Capability Pillars -->
+    <section class="section section-alt" id="service">
       <div class="container">
         <div class="section-head">
-          <p class="section-tag">Why</p>
-          <h2>The hard part of Claude was never the model</h2>
-          <p>What really drains your energy is the uncertainty that has nothing to do with your work.</p>
-        </div>
-        <div class="grid grid-4 pain">
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
-            <h3>Painful set-up</h3>
-            <p>From account sign-up to environment configuration, you figure out every step alone, with no one to fall back on.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8.5a15 15 0 0120 0M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0"/><path d="M3 3l18 18"/></svg></div>
-            <h3>Unstable runs</h3>
-            <p>Every local machine is different, and long Claude Code tasks get cut off halfway through.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-            <h3>Billing hassles</h3>
-            <p>Failed payments, plan changes and renewals eat into your time every month.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-            <h3>Lost time</h3>
-            <p>Hours spent researching tools and troubleshooting should go into your real work.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service -->
-    <section class="section" id="service">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Service</p>
-          <h2>Hand us the uncertainty. Keep the certainty.</h2>
-          <p>From set-up to day-to-day operations, fully managed and ready to use.</p>
-        </div>
-        <div class="grid grid-4">
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></div>
-            <h3>Isolated workspace</h3>
-            <p>Your own macOS account and workspace with isolated files and permissions, plus a dedicated whole-machine option on 20x. Your conversations and project data stay under your control.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
-            <h3>High-spec Mac Studio &amp; mini</h3>
-            <p>Your own high-spec Mac Studio or high-spec Mac mini on local native broadband networks in Australia, the US, Singapore, Malaysia, Indonesia, Japan, Cambodia, New Zealand or Canada (never cheap shared cloud data centers). Account-level isolation (dedicated machine on 20x), stable for the long run.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
-            <h3>Managed billing</h3>
-            <p>Subscriptions, renewals and plan changes are all handled by us. Nothing for you to chase.</p>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-            <h3>Tiered 1-on-1 Concierge</h3>
-            <p>Direct 1-on-1 engineering support scaled to your plan: 7×8h (1x), 7×16h (5x), up to 7×24h round-the-clock private concierge (20x).</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Value: beyond compute -->
-    <section class="section section-alt" id="value">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Beyond Compute</p>
-          <h2>What you get is <em class="grad">more than compute</em></h2>
-          <p>The account and the machine are just the start. The real edge is having experts help you use AI the right way, more deeply and earlier than others.</p>
+          <p class="section-tag">Core Capabilities</p>
+          <h2>Leave setup, network &amp; ops to us — focus purely on building</h2>
+          <p>Three deterministic guarantees that eliminate environment friction, dropped long-running tasks and billing headaches.</p>
         </div>
         <div class="grid grid-3">
-          <div class="card value-card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div>
-            <h3>Top-tier compute &amp; workstation</h3>
-            <p>A dedicated AI engineering workspace configured and managed for you, running on a physical high-spec Mac Studio or Mac mini so long Claude Code tasks keep going.</p>
-          </div>
-          <div class="card value-card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
-            <h3>Top-Tier 1-on-1 Concierge</h3>
-            <p>Dedicated AI engineering guidance built for creators, developers, founders and teams alike. From Claude Code workflows, MCP and Skills set-up to shipping real projects, get 7×8h / 7×16h / 7×24h direct 1-on-1 support.</p>
-          </div>
-          <div class="card value-card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 019 9M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></div>
-            <h3>First-hand AI insights</h3>
-            <p>Regular updates on new features, best practices and industry news for Claude and other leading AI tools, so you adopt new capabilities first.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Network optimisation -->
-    <section class="section net-section" id="network">
-      <div class="container net-grid">
-        <div class="net-copy">
-          <p class="section-tag">Network</p>
-          <h2>Ongoing network investment<br>for a responsive remote desktop</h2>
-          <p>We keep investing in hardware and premium routes: 9-country native ISP broadband with 200Mbps–500Mbps+ symmetrical speeds, paired with self-hosted relays and an enterprise BGP backbone that cut packet loss—the real enemy of remote desktops—to zero.</p>
-          <ul class="net-chips"><li>200–500Mbps+ Symmetrical</li><li>Enterprise BGP backbone</li><li>Self-hosted relays</li><li>Dual-leg BBR</li><li>Apple Silicon hardware encoding</li><li>Allow-list hardening</li></ul>
-          <p style="margin: 14px 0 0; font-size: .86rem; color: var(--muted);">Included free on 20x, Team &amp; Business; 1x / 5x subscribers can add the <a href="#dedicated-line" style="color: var(--primary-strong); font-weight: 600; border-bottom: 1px dashed rgba(232, 144, 111, .5);">ClaudeOps Enterprise Dedicated Line (from $5/mo) ↓</a></p>
-        </div>
-        <div class="card net-card" aria-label="Measured latency and packet loss before and after optimisation">
-          <div class="net-legend"><span class="lg before">Before</span><span class="lg after">After</span></div>
-              <div class="net-row">
-                <div class="net-node"><strong>Japan</strong><span>Via HK backbone</span></div>
-                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:39.0%"></span><em>128–184ms · 10% loss</em></div><div class="nb after"><span class="nb-fill" style="--w:23.0%"></span><em>~92ms · 0% loss</em></div></div>
-              </div>
-              <div class="net-row">
-                <div class="net-node"><strong>Australia</strong><span>Via HK backbone</span></div>
-                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:91.2%"></span><em>343–386ms · 25–33% loss</em></div><div class="nb after"><span class="nb-fill" style="--w:60.0%"></span><em>~240ms · 0% loss</em></div></div>
-              </div>
-              <div class="net-row">
-                <div class="net-node"><strong>Cambodia</strong><span>Direct land cable</span></div>
-                <div class="net-bars"><div class="nb after"><span class="nb-fill" style="--w:20.2%"></span><em>~81ms · 0% loss</em></div></div>
-              </div>
-          <p class="net-foot">Measured from an East Asian client, November 2026. Your experience may vary with your network.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Security & Privacy -->
-    <section class="section" id="security">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Security &amp; Privacy</p>
-          <h2>Two-tier isolation: separate accounts and dedicated machines</h2>
-          <p>Your terminal carries private source code, API keys in environment variables, database settings and business logic. Zaokit ClaudeOps uses two tiers of isolation: on 1x / 5x every user gets a separate macOS account accessed only via Apple Screen Sharing; on 20x you can enable a whole dedicated machine, isolated right down to the hardware.</p>
-        </div>
-        <div class="grid grid-3">
-          <div class="card">
+          <div class="card value-card pillar-card">
             <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-            <h3>20x dedicated machine: hardware-level isolation</h3>
-            <p>With dedicated mode enabled, the entire high-spec Mac Studio or Mac mini serves only you. Install any software, change system-level settings, and use any remote desktop tool, including RustDesk and third-party VNC.</p>
+            <h3>Physical Macs &amp; Two-Tier Isolation</h3>
+            <p>High-spec Mac Studio &amp; Mac mini hardware on native local ISP broadband across 9 countries—separate macOS accounts on 1x/5x, or full hardware dedication on 20x &amp; Team.</p>
+            <div class="pillar-chips"><span class="pillar-chip">Physical Mac Hardware</span><span class="pillar-chip">Account / Whole-Mac Isolation</span></div>
           </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-            <h3>1x / 5x separate account isolation</h3>
-            <p>Every user has a separate macOS account with its own files and permissions, so history and project files stay private. Access is via Apple Screen Sharing only, which gives each account its own isolated desktop session that no one else can see.</p>
+          <div class="card value-card pillar-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div>
+            <h3>Zero-Loss Cross-Border Backbone</h3>
+            <p>200–500Mbps+ symmetrical native fiber paired with self-hosted relays and dual-leg BBR over enterprise BGP so remote desktops and long Claude Code runs never drop.</p>
+            <div class="pillar-chips"><span class="pillar-chip">200–500Mbps+ Symmetrical</span><span class="pillar-chip">Enterprise BGP</span></div>
           </div>
-          <div class="card">
-            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
-            <h3>You control access and encryption</h3>
-            <p>Set your own access passwords and encryption policies. Our team handles connectivity and billing and does not actively access data in your account, except for maintenance, security incidents or troubleshooting you authorise.</p>
+          <div class="card value-card pillar-card">
+            <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+            <h3>Managed Billing + 1-on-1 Concierge</h3>
+            <p>Environment pre-setup, subscription renewals and upgrades handled end-to-end—backed by 7×8h to 7×24h 1-on-1 guidance on Claude Code, MCP, Skills and production workflows.</p>
+            <div class="pillar-chips"><span class="pillar-chip">Zero Billing Hassle</span><span class="pillar-chip">Up to 7×24h 1-on-1 Care</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- User Reviews -->
-    <section class="section section-alt" id="reviews">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-tag">Testimonials</p>
-          <h2>What real subscribers say</h2>
-          <p>To protect client privacy, all reviews use cartoon avatars and anonymized handles while preserving real feedback and subscription tiers.</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#2b211c"/>
-                  <circle cx="32" cy="30" r="17" fill="#5c3627"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#d97757"/>
-                  <circle cx="32" cy="31" r="12" fill="#f7d5be"/>
-                  <path d="M19 29c0-9 6-14 13-14s13 5 13 14c-3-4-7-6-13-6s-10 2-13 6z" fill="#5c3627"/>
-                  <circle cx="27" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
-                  <circle cx="37" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
-                  <path d="M30.4 31h3.2" stroke="#3c2b24" stroke-width="1.4"/>
-                  <circle cx="27" cy="31" r="1.1" fill="#2b1e19"/>
-                  <circle cx="37" cy="31" r="1.1" fill="#2b1e19"/>
-                  <path d="M29 36.5c1.8 1.5 4.2 1.5 6 0" fill="none" stroke="#b85d43" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">M***</span>
-                  <span class="review-badge">Anonymized · Verified</span>
-                </div>
-                <div class="review-role">Cross-border AI Product Lead</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="review-quote">&quot;The enterprise tunnel is razor-sharp and ultra-smooth—even clearer than my local ToDesk. Coding and switching windows feel practically local. Fast, reliable, worth every penny—a top-tier experience.&quot;</p>
-            <div class="review-foot">
-              <span>Verified Chat Feedback</span>
-              <span class="review-plan">5x Pro</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#1b232c"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#3d6b8e"/>
-                  <circle cx="32" cy="31" r="12" fill="#f4cfb6"/>
-                  <path d="M19 28c1-9 6-14 13-14 8 0 13 5 13 14-2-4-6-6-11-6-5 0-10 2-15 6z" fill="#232830"/>
-                  <path d="M18 30v-3a14 14 0 0128 0v3" fill="none" stroke="#e8906f" stroke-width="2.2"/>
-                  <rect x="16" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
-                  <rect x="44" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
-                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1e2228"/>
-                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1e2228"/>
-                  <path d="M29 36.8c2 1.3 4 1.3 6 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">C***</span>
-                  <span class="review-badge">Anonymized · Verified</span>
-                </div>
-                <div class="review-role">Senior Full-Stack Engineer</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="review-quote">&quot;My local network environment used to drop mid-session all the time. After moving to ClaudeOps 1x Standard with an isolated workspace and Claude Code running 24/7, it genuinely feels like &#x27;the genius programmer is back&#x27; 😂. Zero billing or network headaches now.&quot;</p>
-            <div class="review-foot">
-              <span>Verified Chat Feedback</span>
-              <span class="review-plan">1x Standard</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#21261e"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#4f6d54"/>
-                  <circle cx="32" cy="31" r="12" fill="#efd0ba"/>
-                  <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-3-3-7-4-12-4s-9 1-12 4z" fill="#2d2622"/>
-                  <rect x="23" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
-                  <rect x="33.5" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
-                  <path d="M30.5 31h3" stroke="#2d2622" stroke-width="1.4"/>
-                  <circle cx="26.8" cy="31" r="1.1" fill="#231d19"/>
-                  <circle cx="37.2" cy="31" r="1.1" fill="#231d19"/>
-                  <path d="M29 37c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#9e5e4a" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">Kyle W.</span>
-                  <span class="review-badge">Anonymized · Verified</span>
-                </div>
-                <div class="review-role">Quant R&amp;D Lead</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="review-quote">&quot;Native ISP networks across 9 countries plus hardware-level isolation sold me. Our proprietary code and API keys stay on a dedicated Mac Studio—months of continuous uptime with zero interruptions.&quot;</p>
-            <div class="review-foot">
-              <span>Australia Node · Masked</span>
-              <span class="review-plan">20x Flagship</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#292118"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#c98a4b"/>
-                  <circle cx="32" cy="32" r="12" fill="#f5d3bc"/>
-                  <path d="M19 27c0-8 6-14 13-14s13 6 13 14z" fill="#e8906f"/>
-                  <rect x="18" y="25" width="28" height="4.5" rx="2.2" fill="#d97757"/>
-                  <circle cx="27.5" cy="32.5" r="1.3" fill="#231d19"/>
-                  <circle cx="36.5" cy="32.5" r="1.3" fill="#231d19"/>
-                  <path d="M29.5 37.5c1.7 1.2 3.3 1.2 5 0" fill="none" stroke="#a65f48" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">L***</span>
-                  <span class="review-badge">Anonymized · Verified</span>
-                </div>
-                <div class="review-role">Indie Developer</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="review-quote">&quot;Same-day delivery right after Stripe checkout. My isolated macOS account came pre-configured with Claude Code and dev tools. Huge time-saver if you don&#x27;t want to fight environment setup or cross-border billing.&quot;</p>
-            <div class="review-foot">
-              <span>Tokyo Node · Masked</span>
-              <span class="review-plan">1x Standard</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#271e26"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#8b5e83"/>
-                  <circle cx="32" cy="31" r="15" fill="#3a2835"/>
-                  <circle cx="32" cy="31" r="11.5" fill="#f7d6c1"/>
-                  <path d="M20 29c1-8 6-13 12-13s11 5 12 13c-3-4-7-5-12-5s-9 1-12 5z" fill="#3a2835"/>
-                  <circle cx="27.5" cy="31.5" r="1.2" fill="#281d25"/>
-                  <circle cx="36.5" cy="31.5" r="1.2" fill="#281d25"/>
-                  <path d="M29 36.5c1.8 1.4 4.2 1.4 6 0" fill="none" stroke="#b55d52" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">Sarah C.</span>
-                  <span class="review-badge">Anonymized · Verified</span>
-                </div>
-                <div class="review-role">Consulting Partner</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="review-quote">&quot;I&#x27;m not an ops person and didn&#x27;t want to touch CLI setups. Having 7×16h 1-on-1 support plus managed Google Drive sync means I can connect from anywhere while travelling and pick up right where I left off.&quot;</p>
-            <div class="review-foot">
-              <span>Singapore Node · Masked</span>
-              <span class="review-plan">5x Pro</span>
-            </div>
-          </article>
-
-          <article class="card review-card">
-            <div class="review-head">
-              <div class="review-avatar" aria-hidden="true">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="64" height="64" fill="#1e222a"/>
-                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#5e6b85"/>
-                  <circle cx="32" cy="31" r="12" fill="#f2ccb2"/>
-                  <path d="M20 27c2-7 6-11 12-11s10 4 12 11c-4-2-8-3-12-3s-8 1-12 3z" fill="#1f232b"/>
-                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1f232b"/>
-                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1f232b"/>
-                  <path d="M28.5 36.2c2.2 1.8 4.8 1.8 7 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="review-author">
-                <div class="review-name-row">
-                  <span class="review-name">A***</span>
-                  <span class="review-badge">Anonymized · Verified</span>
-                </div>
-                <div class="review-role">E-commerce Tech Director</div>
-              </div>
-            </div>
-            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="review-quote">&quot;Our core engineers run multi-agent refactors and test suites overnight and review clean PRs every morning. Native Screen Sharing is crystal clear, and Jason&#x27;s Telegram support replies almost instantly.&quot;</p>
-            <div class="review-foot">
-              <span>Telegram Feedback</span>
-              <span class="review-plan">20x Flagship</span>
-            </div>
-          </article>
-        </div>
-        <p class="reviews-note">* To strictly protect client privacy and data security, all reviews are displayed with cartoon avatars and anonymized/masked names.</p>
-      </div>
-    </section>
-
-    <!-- Pricing -->
+    <!-- Floor 3: Focused Pricing & Decision Center -->
     <section class="section" id="pricing">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">Pricing</p>
           <h2>Plans from solo to enterprise.</h2>
-          <p>Scale from individual workspaces to dedicated multi-Mac clusters. <strong>Pay annually for 10 months and get 2 months free</strong>.<a class="enterprise-jump" href="#dedicated-line">Dedicated Line ↓</a><a class="enterprise-jump" href="#pricing-enterprise">Team &amp; Business ↓</a></p>
+          <p>Scale from individual workspaces to dedicated multi-Mac clusters. <strong>Pay annually for 10 months and get 2 months free</strong>.</p>
         </div>
+
+        <!-- 3-Second Scenario Quick-Finder -->
+        <div class="quick-finder" role="group" aria-label="3-Second Plan Finder · Pick your scenario:">
+          <span class="qf-label">✦ 3-Second Plan Finder · Pick your scenario:</span>
+            <button type="button" class="qf-btn" data-scenario="solo-dev">Solo daily coding &amp; shipping</button>
+            <button type="button" class="qf-btn" data-scenario="solo-max">24/7 multi-agent / Dedicated Mac</button>
+            <button type="button" class="qf-btn" data-scenario="team-rd">3–10 person engineering team</button>
+            <button type="button" class="qf-btn" data-scenario="ent-custom">15+ seat custom enterprise cluster</button>
+        </div>
+        <div class="finder-tip" id="finder-tip" role="status" aria-live="polite" hidden>
+          <span id="finder-tip-text"></span>
+          <button type="button" class="finder-tip-close" id="finder-tip-close" aria-label="Close">×</button>
+        </div>
+
+        <!-- Primary Audience Segmented Tabs: Individual vs Team/Enterprise -->
+        <div class="audience-tabs" role="tablist">
+          <button type="button" class="aud-tab" role="tab" id="tab-btn-solo" data-audience-tab="solo" aria-selected="true" aria-controls="panel-solo">
+            <span class="aud-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0114 0"/></svg>
+            </span>
+            <span class="aud-txt">
+              <strong>Individual Creator &amp; Dev</strong>
+              <span>1 user · 3 clear tiers</span>
+            </span>
+          </button>
+          <button type="button" class="aud-tab" role="tab" id="tab-btn-ent" data-audience-tab="enterprise" aria-selected="false" aria-controls="pricing-enterprise">
+            <span class="aud-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h2m4 0h2M8 13h2m4 0h2M10 20v-3h4v3"/></svg>
+            </span>
+            <span class="aud-txt">
+              <strong>Team &amp; Enterprise Clusters</strong>
+              <span>5–100+ seats · Dedicated Macs · Unified Invoice</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Unified Billing Cycle & Currency Switcher -->
         <div class="pricing-controls">
           <div class="billing-switch" role="group" aria-label="Choose billing cycle">
             <button type="button" data-billing="month" aria-pressed="true">Monthly</button>
@@ -1518,264 +1480,322 @@
             <button type="button" data-currency="CNY" aria-pressed="false">¥ CNY</button>
           </div>
         </div>
-        <div class="grid grid-3 pricing pricing-solo">
-          <article class="card plan">
-            <div class="plan-tier"><b>1x</b><span>Standard</span></div>
-            <p class="plan-desc">For everyday chat, writing and light coding with a stable Claude.</p>
-            <div class="price" data-plan-idx="0"><sup>A$</sup><span class="amount">149</span><small data-period>/ month</small><del class="price-orig" data-orig-idx="0" style="display:none"></del></div>
-            <p class="price-note" data-note-idx="0">Includes Claude environment · about A$5 / day</p>
-            <ul class="features">
-              <li>Base usage allowance</li>
-              <li>Dedicated workspace configuration</li>
-              <li>Mac mini physical environment</li>
-              <li>Fully managed subscription billing &amp; ops</li>
-              <li>Claude Code ready</li>
-              <li><strong>7×8h</strong> 1-on-1 dedicated support</li>
-              <li>Separate macOS account · Apple Screen Sharing access</li>
-            </ul>
-            <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/aFa28teyB0ou4Dsdga9Zm0k" target="_blank" rel="noopener">Subscribe</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%201x%20Standard">Questions? Email us →</a>
-          </article>
 
-          <article class="card plan featured">
-            <span class="badge">Most popular</span>
-            <div class="plan-tier"><b>5x</b><span>Pro</span></div>
-            <p class="plan-desc">For developers and creators who use Claude Code heavily every day.</p>
-            <div class="price" data-plan-idx="1"><sup>A$</sup><span class="amount">579</span><small data-period>/ month</small><del class="price-orig" data-orig-idx="1" style="display:none"></del></div>
-            <p class="price-note" data-note-idx="1">Includes Claude environment · 5x usage, unit cost about 78% of 1x</p>
-            <ul class="features">
-              <li>5x the Standard usage allowance</li>
-              <li>Dedicated workspace configuration</li>
-              <li>High-spec Mac mini physical environment</li>
-              <li>Fully managed subscription billing &amp; ops</li>
-              <li>Room for long Claude Code tasks</li>
-              <li><strong>7×16h</strong> priority 1-on-1 support</li>
-              <li>Separate macOS account · Apple Screen Sharing access</li>
-            </ul>
-            <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/28E28teyBdbg3zocc69Zm0q" target="_blank" rel="noopener">Subscribe</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%205x%20Pro">Questions? Email us →</a>
-          </article>
+        <!-- Panel 1: Individual Plans (1x / 5x / 20x + Collapsible Dedicated Line) -->
+        <div class="pricing-panel" id="panel-solo" role="tabpanel" aria-labelledby="tab-btn-solo">
+          <div class="grid grid-3 pricing pricing-solo">
+            <article class="card plan" data-plan-card="1x">
+              <div class="plan-tier"><b>1x</b><span>Standard</span></div>
+              <div class="plan-fit">Best for: Everyday Q&amp;A, writing &amp; light coding</div>
+              <p class="plan-desc">For everyday chat, writing and light coding with a stable Claude.</p>
+              <div class="price" data-plan-idx="0"><sup>A$</sup><span class="amount">149</span><small data-period>/ month</small><del class="price-orig" data-orig-idx="0" style="display:none"></del></div>
+              <p class="price-note" data-note-idx="0">Includes Claude environment · about A$5 / day</p>
+              <ul class="features">
+                <li>Base usage allowance</li>
+                <li>Dedicated workspace configuration</li>
+                <li>Mac mini physical environment</li>
+                <li>Fully managed subscription billing &amp; ops</li>
+                <li>Claude Code ready</li>
+                <li><strong>7×8h</strong> 1-on-1 dedicated support</li>
+                <li>Separate macOS account · Apple Screen Sharing access</li>
+              </ul>
+              <a class="btn btn-ghost" data-stripe-tier="1x" href="https://buy.stripe.com/aFa28teyB0ou4Dsdga9Zm0k" target="_blank" rel="noopener">Subscribe</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%201x%20Standard">Questions? Email us →</a>
+            </article>
 
-          <article class="card plan">
-            <span class="badge badge-promo">Year-End Promo · Until Dec 31, 2026</span>
-            <div class="plan-tier"><b>20x</b><span>Ultimate</span></div>
-            <p class="plan-desc">For prolific builders, founders and power users running multiple agents around the clock.</p>
-            <div class="price" data-plan-idx="2"><sup>A$</sup><span class="amount">1,049</span><small data-period>/ month</small><del class="price-orig" data-orig-idx="2" data-orig-20x title="Regular monthly price">A$1,499</del></div>
-            <p class="price-note" data-note-idx="2">Promo price stays on renewal · unit cost about 35% of 1x</p>
-            <ul class="features">
-              <li>20x the Standard usage allowance</li>
-              <li>Dedicated workspace configuration</li>
-              <li>High-spec Mac Studio / Mac mini · Dedicated machine option</li>
-              <li>Fully managed subscription billing &amp; ops</li>
-              <li>Multi-agent and parallel tasks</li>
-              <li><strong>Top-tier 7×24h</strong> private concierge channel</li>
-              <li style="color: var(--primary-strong); font-weight: 600;">Complimentary high-speed RustDesk channel</li>
-              <li style="color: var(--primary-strong); font-weight: 600;">Complimentary Google Drive 6 TB storage included</li>
-            </ul>
-            <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/6oU00lail6MSgma6RM9Zm1n" target="_blank" rel="noopener">Subscribe</a>
-            <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%2020x%20Ultimate">Questions? Email us →</a>
-          </article>
-        </div>
+            <article class="card plan featured" data-plan-card="5x">
+              <span class="badge">Most popular</span>
+              <div class="plan-tier"><b>5x</b><span>Pro</span></div>
+              <div class="plan-fit">Best for: Daily heavy Claude Code shipping (Chosen by 80% of solo devs)</div>
+              <p class="plan-desc">For developers and creators who use Claude Code heavily every day.</p>
+              <div class="price" data-plan-idx="1"><sup>A$</sup><span class="amount">579</span><small data-period>/ month</small><del class="price-orig" data-orig-idx="1" style="display:none"></del></div>
+              <p class="price-note" data-note-idx="1">Includes Claude environment · 5x usage, unit cost about 78% of 1x</p>
+              <ul class="features">
+                <li>5x the Standard usage allowance</li>
+                <li>Dedicated workspace configuration</li>
+                <li>High-spec Mac mini physical environment</li>
+                <li>Fully managed subscription billing &amp; ops</li>
+                <li>Room for long Claude Code tasks</li>
+                <li><strong>7×16h</strong> priority 1-on-1 support</li>
+                <li>Separate macOS account · Apple Screen Sharing access</li>
+              </ul>
+              <a class="btn btn-primary" data-stripe-tier="5x" href="https://buy.stripe.com/28E28teyBdbg3zocc69Zm0q" target="_blank" rel="noopener">Subscribe</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%205x%20Pro">Questions? Email us →</a>
+            </article>
 
-        <!-- ClaudeOps Enterprise Dedicated Line Value-Added Service -->
-        <div class="seat-addons line-addons" id="dedicated-line">
-          <div class="seat-addons-head">
-            <h3>ClaudeOps Enterprise Dedicated Line · Cross-Border Acceleration <span class="addon-pill">Complimentary on 20x / Team / Business</span></h3>
-            <p>Optional add-on for 1x &amp; 5x subscribers: route traffic over our enterprise BGP cross-border backbone with dual-leg BBR 0% packet-loss acceleration for ultra-responsive Screen Sharing &amp; Claude Code (annual billing gets 2 months free).</p>
+            <article class="card plan" data-plan-card="20x">
+              <span class="badge badge-promo">Year-End Promo · Until Dec 31, 2026</span>
+              <div class="plan-tier"><b>20x</b><span>Ultimate</span></div>
+              <div class="plan-fit">Best for: 24/7 multi-agent runs &amp; whole-machine hardware isolation</div>
+              <p class="plan-desc">For prolific builders, founders and power users running multiple agents around the clock.</p>
+              <div class="price" data-plan-idx="2"><sup>A$</sup><span class="amount">1,049</span><small data-period>/ month</small><del class="price-orig" data-orig-idx="2" data-orig-20x title="Regular monthly price">A$1,499</del></div>
+              <p class="price-note" data-note-idx="2">Promo price stays on renewal · unit cost about 35% of 1x</p>
+              <ul class="features">
+                <li>20x the Standard usage allowance</li>
+                <li>Dedicated workspace configuration</li>
+                <li>High-spec Mac Studio / Mac mini · Dedicated machine option</li>
+                <li>Fully managed subscription billing &amp; ops</li>
+                <li>Multi-agent and parallel tasks</li>
+                <li><strong>Top-tier 7×24h</strong> private concierge channel</li>
+                <li style="color: var(--primary-strong); font-weight: 600;">Complimentary high-speed RustDesk channel</li>
+                <li style="color: var(--primary-strong); font-weight: 600;">Complimentary Google Drive 6 TB storage included</li>
+              </ul>
+              <a class="btn btn-ghost" data-stripe-tier="20x" href="https://buy.stripe.com/6oU00lail6MSgma6RM9Zm1n" target="_blank" rel="noopener">Subscribe</a>
+              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%2020x%20Ultimate">Questions? Email us →</a>
+            </article>
           </div>
-          <div class="line-grid">
-            <div class="addon-card">
-              <div>
-                <div class="addon-route"><code>1x Dedicated Line</code> <span>Standard Acceleration · For 1x Standard</span></div>
-                <p class="addon-desc">Enterprise BGP cross-border backbone + self-hosted encrypted low-latency relay + dual-leg BBR optimization, keeping daily Apple Screen Sharing, SSH &amp; light Claude Code sessions jitter-free at peak hours.</p>
-              </div>
-              <div class="addon-foot">
-                <div class="line-price-wrap">
-                  <div class="addon-price" data-line-idx="0">+<sup>A$</sup><span class="amount">8</span><small data-line-period>/ mo</small><del class="line-orig" data-line-orig="0" style="display:none"></del></div>
-                  <span class="line-subnote" data-line-note="0">24/7 BGP zero-loss acceleration · Managed with plan</span>
+
+          <details class="addon-drawer" id="dedicated-line">
+            <summary>
+              <span class="drawer-sum-left">
+                <span class="drawer-ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>
+                </span>
+                <span class="drawer-titles">
+                  <span class="drawer-title-row">
+                    <strong>Optional Add-on: ClaudeOps Enterprise BGP Dedicated Line</strong>
+                    <span class="drawer-pill">Complimentary on 20x / Team / Business</span>
+                  </span>
+                  <span class="drawer-hint">Recommended for 1x / 5x cross-border remote desktop &amp; SSH with 0% packet loss (Included free on 20x Ultimate)</span>
+                </span>
+              </span>
+              <span class="drawer-toggle-pill"><span class="when-closed">View options</span><span class="when-open">Hide</span> <i>▾</i></span>
+            </summary>
+            <div class="drawer-body">
+              <p class="drawer-body-lead">Optional add-on for 1x &amp; 5x subscribers: route traffic over our enterprise BGP cross-border backbone with dual-leg BBR 0% packet-loss acceleration for ultra-responsive Screen Sharing &amp; Claude Code (annual billing gets 2 months free).</p>
+              <div class="line-grid">
+                <div class="addon-card">
+                  <div>
+                    <div class="addon-route"><code>1x Dedicated Line</code> <span>Standard Acceleration · For 1x Standard</span></div>
+                    <p class="addon-desc">Enterprise BGP cross-border backbone + self-hosted encrypted low-latency relay + dual-leg BBR optimization, keeping daily Apple Screen Sharing, SSH &amp; light Claude Code sessions jitter-free at peak hours.</p>
+                  </div>
+                  <div class="addon-foot">
+                    <div class="line-price-wrap">
+                      <div class="addon-price" data-line-idx="0">+<sup>A$</sup><span class="amount">8</span><small data-line-period>/ mo</small><del class="line-orig" data-line-orig="0" style="display:none"></del></div>
+                      <span class="line-subnote" data-line-note="0">24/7 BGP zero-loss acceleration · Managed with plan</span>
+                    </div>
+                    <a class="addon-btn" data-line-tier="line_1x" href="https://buy.stripe.com/28E3cx2PTfjo4Ds5NI9Zn0j" target="_blank" rel="noopener">Add 1x Line →</a>
+                  </div>
                 </div>
-                <a class="addon-btn" data-line-tier="line_1x" href="https://buy.stripe.com/28E3cx2PTfjo4Ds5NI9Zn0j" target="_blank" rel="noopener">Add 1x Line →</a>
+                <div class="addon-card addon-card-featured">
+                  <div>
+                    <div class="addon-route"><code class="to">5x Dedicated Line</code> <span>Pro Acceleration · For 5x Pro (20% lower unit cost)</span></div>
+                    <p class="addon-desc">5× priority bandwidth quota + high-priority enterprise BGP QoS queue + dual-leg BBR 0% packet-loss guarantee, built for heavy real-time Claude Code sessions, large repo syncs &amp; high-FPS remote desktops.</p>
+                  </div>
+                  <div class="addon-foot">
+                    <div class="line-price-wrap">
+                      <div class="addon-price" data-line-idx="1">+<sup>A$</sup><span class="amount">30</span><small data-line-period>/ mo</small><del class="line-orig" data-line-orig="1" style="display:none"></del></div>
+                      <span class="line-subnote" data-line-note="1">5× priority throughput · High-priority BGP QoS</span>
+                    </div>
+                    <a class="addon-btn addon-btn-primary" data-line-tier="line_5x" href="https://buy.stripe.com/00wcN71LP6MS8TI2Bw9Zn0w" target="_blank" rel="noopener">Add 5x Line →</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="addon-card addon-card-featured">
-              <div>
-                <div class="addon-route"><code class="to">5x Dedicated Line</code> <span>Pro Acceleration · For 5x Pro (20% lower unit cost)</span></div>
-                <p class="addon-desc">5× priority bandwidth quota + high-priority enterprise BGP QoS queue + dual-leg BBR 0% packet-loss guarantee, built for heavy real-time Claude Code sessions, large repo syncs &amp; high-FPS remote desktops.</p>
-              </div>
-              <div class="addon-foot">
-                <div class="line-price-wrap">
-                  <div class="addon-price" data-line-idx="1">+<sup>A$</sup><span class="amount">30</span><small data-line-period>/ mo</small><del class="line-orig" data-line-orig="1" style="display:none"></del></div>
-                  <span class="line-subnote" data-line-note="1">5× priority throughput · High-priority BGP QoS</span>
-                </div>
-                <a class="addon-btn addon-btn-primary" data-line-tier="line_5x" href="https://buy.stripe.com/00wcN71LP6MS8TI2Bw9Zn0w" target="_blank" rel="noopener">Add 5x Line →</a>
-              </div>
-            </div>
-          </div>
+          </details>
         </div>
 
-        <!-- Team & Business Plans -->
-        <div class="enterprise-wrap" id="pricing-enterprise">
-          <div class="tier-divider"><span>Team &amp; Business · Dedicated Multi-Seat Clusters</span></div>
-          <div class="enterprise-toolbar">
+        <!-- Panel 2: Team & Enterprise Clusters (Team 5 / Business 10 / Custom 15+ + Collapsible Seat Upgrades) -->
+        <div class="pricing-panel enterprise-wrap" id="pricing-enterprise" role="tabpanel" aria-labelledby="tab-btn-ent" hidden>
+          <div class="ent-step-bar">
+            <span class="ent-step-title">Step 1: Choose default per-seat compute tier</span>
             <div class="seat-tier-switch" role="group" aria-label="Choose team seat tier">
               <button type="button" data-seat-tier="pro" aria-pressed="false">All-Pro Seats (1x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">All-Max Seats (5x) <span class="save-badge">Recommended</span></button>
               <button type="button" data-seat-tier="ultra" aria-pressed="false">All-Ultra Seats (20x)</button>
             </div>
-            <p>Start with uniform Pro, Max or Ultra seats — or mix &amp; match any time with self-serve <strong>per-seat upgrade add-ons</strong> below.</p>
           </div>
-          <div class="grid grid-2 pricing pricing-enterprise">
-            <article class="card plan">
-              <span class="badge badge-team" data-ent-badge="team">5 × Max (5x) Seats · Dedicated Host</span>
-              <div class="plan-tier"><b>Team</b><span data-ent-sub="team">5 Seats</span></div>
-              <p class="plan-desc">Built for startup pods, AI studios and research teams — a dedicated physical Mac host for your team with unified billing &amp; admin control.</p>
-              <div class="price" data-ent-price="team"><sup>A$</sup><span class="amount">3,199</span><small data-period>/ month</small><del class="price-orig" data-ent-orig="team" style="display:none"></del></div>
-              <p class="price-note" data-ent-note="team">Includes 5 Max (5x) isolated seats · Dedicated Mac host &amp; consolidated billing</p>
-              <ul class="features">
-                <li data-ent-seat-li="team">Includes <strong>5 Max (5x) engineering seats</strong> (separate Claude workspace &amp; macOS account per member)</li>
-                <li><strong>Dedicated high-spec Mac Studio / Mac mini host</strong> exclusively for your team</li>
-                <li>Organisation-owned seat reassignment for onboarding/offboarding &amp; <strong>single consolidated invoice</strong></li>
-                <li>Upgrade individual seats to Max (5x) or Ultra (20x) on demand at any time</li>
-                <li><strong>7×24h</strong> dedicated team concierge group channel</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">Complimentary private high-speed RustDesk team channel</li>
-                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Complimentary 12 TB team cloud storage (Google Drive / iCloud+)</li>
-              </ul>
-              <a class="btn btn-ghost" data-ent-btn="team" href="https://buy.stripe.com/28E4gB769efk6LAgsm9Zm2C" target="_blank" rel="noopener">Subscribe Team</a>
-              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%20Team%20Plan">Need extra seats or custom specs? Talk to us →</a>
-            </article>
+          <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
+          <div class="grid grid-3 pricing pricing-enterprise">
+              <article class="card plan" data-plan-card="team">
+                <span class="badge badge-team" data-ent-badge="team">5 × Max (5x) Seats · Dedicated Host</span>
+                <div class="plan-tier"><b>Team</b><span data-ent-sub="team">5 Seats</span></div>
+                <div class="plan-fit">Best for: 3–5 person startup squads &amp; AI studios</div>
+                <p class="plan-desc">Built for startup pods, AI studios and research teams — a dedicated physical Mac host for your team with unified billing &amp; admin control.</p>
+                <div class="price" data-ent-price="team"><sup>A$</sup><span class="amount">3,199</span><small data-period>/ month</small><del class="price-orig" data-ent-orig="team" style="display:none"></del></div>
+                <p class="price-note" data-ent-note="team">Includes 5 Max (5x) isolated seats · Dedicated Mac host &amp; consolidated billing</p>
+                <ul class="features">
+                  <li data-ent-seat-li="team">Includes <strong>5 Max (5x) engineering seats</strong> (separate Claude workspace &amp; macOS account per member)</li>
+                  <li><strong>Dedicated high-spec Mac Studio / Mac mini host</strong> exclusively for your team</li>
+                  <li>Organisation-owned seat reassignment for onboarding/offboarding &amp; <strong>single consolidated invoice</strong></li>
+                  <li>Upgrade individual seats to Max (5x) or Ultra (20x) on demand at any time</li>
+                  <li><strong>7×24h</strong> dedicated team concierge group channel</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;">Complimentary private high-speed RustDesk team channel</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Complimentary 12 TB team cloud storage (Google Drive / iCloud+)</li>
+                </ul>
+                <a class="btn btn-ghost" data-ent-btn="team" href="https://buy.stripe.com/28E4gB769efk6LAgsm9Zm2C" target="_blank" rel="noopener">Subscribe Team</a>
+                <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%20Team%20Plan">Need extra seats or custom specs? Talk to us →</a>
+              </article>
 
-            <article class="card plan plan-business">
-              <span class="badge" data-ent-badge="biz">Enterprise · 10 × Max (5x) Cluster</span>
-              <div class="plan-tier"><b>Business</b><span data-ent-sub="biz">10 Seats</span></div>
-              <p class="plan-desc">For scaling tech companies, quant &amp; engineering orgs — dedicated multi-Mac physical clusters with 9-country dual-region deployment.</p>
-              <div class="price" data-ent-price="biz"><sup>A$</sup><span class="amount">6,599</span><small data-period>/ month</small><del class="price-orig" data-ent-orig="biz" style="display:none"></del></div>
-              <p class="price-note" data-ent-note="biz">Includes 10 Max (5x) isolated seats · Dedicated multi-Mac cluster &amp; VIP SLA</p>
-              <ul class="features">
-                <li data-ent-seat-li="biz">Includes <strong>10 Max (5x) engineering seats</strong> (expandable to 50+ seats on demand)</li>
-                <li><strong>Dedicated multi-unit Mac Studio / Mac mini physical cluster</strong></li>
-                <li>Supports <strong>dual-region deployment &amp; rapid migration across 9 countries</strong> + dedicated static native ISP</li>
-                <li>Consolidated commercial invoicing &amp; dedicated Customer Success Manager</li>
-                <li><strong>Top-tier 7×24h VIP enterprise SLA channel</strong> (priority ops &amp; architecture advisory)</li>
-                <li style="color: var(--primary-strong); font-weight: 600;">Complimentary dedicated enterprise RustDesk relay line</li>
-                <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">Complimentary 30 TB enterprise cloud storage (Google Drive / iCloud+)</li>
-              </ul>
-              <a class="btn btn-primary" data-ent-btn="biz" href="https://buy.stripe.com/bJe5kFgGJ7QWb1Q2Bw9Zm3i" target="_blank" rel="noopener">Subscribe Business</a>
-              <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%20Business%20Plan">20+ seats or custom private cluster? Contact enterprise sales →</a>
-            </article>
+              <article class="card plan plan-business" data-plan-card="biz">
+                <span class="badge" data-ent-badge="biz">Enterprise · 10 × Max (5x) Cluster</span>
+                <div class="plan-tier"><b>Business</b><span data-ent-sub="biz">10 Seats</span></div>
+                <div class="plan-fit">Best for: 6–12 person engineering &amp; quant R&amp;D teams</div>
+                <p class="plan-desc">For scaling tech companies, quant &amp; engineering orgs — dedicated multi-Mac physical clusters with 9-country dual-region deployment.</p>
+                <div class="price" data-ent-price="biz"><sup>A$</sup><span class="amount">6,599</span><small data-period>/ month</small><del class="price-orig" data-ent-orig="biz" style="display:none"></del></div>
+                <p class="price-note" data-ent-note="biz">Includes 10 Max (5x) isolated seats · Dedicated multi-Mac cluster &amp; VIP SLA</p>
+                <ul class="features">
+                  <li data-ent-seat-li="biz">Includes <strong>10 Max (5x) engineering seats</strong> (expandable to 50+ seats on demand)</li>
+                  <li><strong>Dedicated multi-unit Mac Studio / Mac mini physical cluster</strong></li>
+                  <li>Supports <strong>dual-region deployment &amp; rapid migration across 9 countries</strong> + dedicated static native ISP</li>
+                  <li>Consolidated commercial invoicing &amp; dedicated Customer Success Manager</li>
+                  <li><strong>Top-tier 7×24h VIP enterprise SLA channel</strong> (priority ops &amp; architecture advisory)</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;">Complimentary dedicated enterprise RustDesk relay line</li>
+                  <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">Complimentary 30 TB enterprise cloud storage (Google Drive / iCloud+)</li>
+                </ul>
+                <a class="btn btn-primary" data-ent-btn="biz" href="https://buy.stripe.com/bJe5kFgGJ7QWb1Q2Bw9Zm3i" target="_blank" rel="noopener">Subscribe Business</a>
+                <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry%20-%20Business%20Plan">20+ seats or custom private cluster? Contact enterprise sales →</a>
+              </article>
+
+              <article class="card plan plan-custom" data-plan-card="custom">
+                <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
+                <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
+                <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <div class="price price-custom">Custom</div>
+                <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
+                <ul class="features">
+                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
+                  <li>Dedicated static native business ISP &amp; private relay gateway</li>
+                  <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
+                  <li>7×24h dedicated enterprise engineering concierge channel</li>
+                </ul>
+                <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20Custom%20Enterprise%20Cluster%20Enquiry%20%2815%2B%20Seats%29">Contact Enterprise Architect →</a>
+                <span class="plan-consult">Same-day response · Free cluster sizing &amp; quote</span>
+              </article>
           </div>
 
-          <!-- Per-Seat Self-Serve Upgrade Add-ons -->
-          <div class="seat-addons">
-            <div class="seat-addons-head">
-              <h3>Per-Seat Upgrade Add-ons <span class="addon-pill">1–50 seats adjustable at checkout</span></h3>
-              <p>Mix &amp; match tiers on any active Team or Business base plan — upgrade specific members on demand (annual add-ons also get 2 months free).</p>
+          <details class="addon-drawer" id="seat-addons-drawer">
+            <summary>
+              <span class="drawer-sum-left">
+                <span class="drawer-ic" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span class="drawer-titles">
+                  <span class="drawer-title-row">
+                    <strong>Need mixed tiers? Per-Seat Flex Upgrade Add-ons</strong>
+                    <span class="drawer-pill">1–50 seats adjustable at checkout</span>
+                  </span>
+                  <span class="drawer-hint">For active Team / Business bases — upgrade specific leads or architects to Max (5x) or Ultra (20x) anytime</span>
+                </span>
+              </span>
+              <span class="drawer-toggle-pill"><span class="when-closed">View upgrades</span><span class="when-open">Hide</span> <i>▾</i></span>
+            </summary>
+            <div class="drawer-body">
+              <p class="drawer-body-lead">Mix &amp; match tiers on any active Team or Business base plan — upgrade specific members on demand (annual add-ons also get 2 months free).</p>
+              <div class="addon-grid">
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Max 5x</code> <span>Upgrade</span></div>
+                      <p class="addon-desc">Upgrade any Pro (1x) team seat to Max (5x) for heavy daily Claude Code engineering.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="0">+<sup>A$</sup><span class="amount">479</span><small data-upg-period>/ seat / mo</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_pm" href="https://buy.stripe.com/bJe5kFfCF6MSc5U3FA9Zm3I" target="_blank" rel="noopener">Upgrade seat →</a>
+                    </div>
+                  </div>
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Max 5x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Upgrade</span></div>
+                      <p class="addon-desc">Upgrade founders, CTOs or lead architects on an All-Max plan to 20x Ultra multi-agent capacity.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="1">+<sup>A$</sup><span class="amount">539</span><small data-upg-period>/ seat / mo</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_mu" href="https://buy.stripe.com/7sY3cxfCFc7c8TIcc69Zm3Y" target="_blank" rel="noopener">Upgrade seat →</a>
+                    </div>
+                  </div>
+                  <div class="addon-card">
+                    <div>
+                      <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Direct</span></div>
+                      <p class="addon-desc">Jump any seat on an All-Pro base plan straight to full 20x Ultra flagship allowance.</p>
+                    </div>
+                    <div class="addon-foot">
+                      <div class="addon-price" data-upg-idx="2">+<sup>A$</sup><span class="amount">999</span><small data-upg-period>/ seat / mo</small></div>
+                      <a class="addon-btn" data-upg-tier="upg_pu" href="https://buy.stripe.com/cNidRbailefk9XM7VQ9Zn05" target="_blank" rel="noopener">Upgrade seat →</a>
+                    </div>
+                  </div>
+              </div>
             </div>
-            <div class="addon-grid">
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Max 5x</code> <span>Upgrade</span></div>
-                  <p class="addon-desc">Upgrade any Pro (1x) team seat to Max (5x) for heavy daily Claude Code engineering.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="0">+<sup>A$</sup><span class="amount">479</span><small data-upg-period>/ seat / mo</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_pm" href="https://buy.stripe.com/bJe5kFfCF6MSc5U3FA9Zm3I" target="_blank" rel="noopener">Upgrade seat →</a>
-                </div>
-              </div>
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Max 5x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Upgrade</span></div>
-                  <p class="addon-desc">Upgrade founders, CTOs or lead architects on an All-Max plan to 20x Ultra multi-agent capacity.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="1">+<sup>A$</sup><span class="amount">539</span><small data-upg-period>/ seat / mo</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_mu" href="https://buy.stripe.com/7sY3cxfCFc7c8TIcc69Zm3Y" target="_blank" rel="noopener">Upgrade seat →</a>
-                </div>
-              </div>
-              <div class="addon-card">
-                <div>
-                  <div class="addon-route"><code>Pro 1x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Direct</span></div>
-                  <p class="addon-desc">Jump any seat on an All-Pro base plan straight to full 20x Ultra flagship allowance.</p>
-                </div>
-                <div class="addon-foot">
-                  <div class="addon-price" data-upg-idx="2">+<sup>A$</sup><span class="amount">999</span><small data-upg-period>/ seat / mo</small></div>
-                  <a class="addon-btn" data-upg-tier="upg_pu" href="https://buy.stripe.com/cNidRbailefk9XM7VQ9Zn05" target="_blank" rel="noopener">Upgrade seat →</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          </details>
         </div>
 
-        <!-- Cloud Storage (Google Drive & iCloud) -->
-        <div id="storage" style="margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--border);">
-          <div class="section-head" style="margin-bottom: 32px;">
-            <p class="section-tag">Cloud Storage · Google Drive &amp; iCloud+</p>
-            <h2>Managed Cloud Storage for Digital Assets</h2>
-            <p>Choose <strong>Google Drive (Google One)</strong> or <strong>Apple iCloud+</strong> across 2 TB to 30 TB tiers, with managed renewals and the same 7×16h 1-on-1 concierge support.</p>
-          </div>
-          <div class="currency-switch" role="group" aria-label="Choose currency (cloud storage)" style="margin: 0 auto 32px">
-            <button type="button" data-currency="AUD" aria-pressed="true">A$ AUD</button>
-            <button type="button" data-currency="USD" aria-pressed="false">$ USD</button>
-            <button type="button" data-currency="EUR" aria-pressed="false">€ EUR</button>
-            <button type="button" data-currency="NZD" aria-pressed="false">NZ$ NZD</button>
-            <button type="button" data-currency="CAD" aria-pressed="false">C$ CAD</button>
-            <button type="button" data-currency="SGD" aria-pressed="false">S$ SGD</button>
-            <button type="button" data-currency="CNY" aria-pressed="false">¥ CNY</button>
-          </div>
-          <div class="grid grid-4 pricing">
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>2 TB</b><span>Storage</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">Generous storage for everyday photos, videos and cross-device backups.</p>
-              <div class="price" data-storage-idx="0" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">13.99</span><small>/ mo</small></div>
-              <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive or Apple iCloud+</li>
-                <li>Private space with isolated access</li>
-                <li>Managed billing · 7×16h 1-on-1 support</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="2t" href="https://buy.stripe.com/eVq3cx4Y1c7c4Ds2Bw9Zm0Z" target="_blank" rel="noopener">Subscribe 2 TB</a>
-            </article>
+        <!-- Shared Optional Collapsible Add-on: Cloud Storage (2TB - 30TB) -->
+        <details class="addon-drawer storage-drawer" id="storage">
+          <summary>
+            <span class="drawer-sum-left">
+              <span class="drawer-ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 116.71-9h1.79a4.5 4.5 0 110 9z"/></svg>
+              </span>
+              <span class="drawer-titles">
+                <span class="drawer-title-row">
+                  <strong>Optional Add-on: Managed Google Drive / Apple iCloud+ Storage (2 TB – 30 TB)</strong>
+                  <span class="drawer-pill">6TB free on 20x · 6–30TB free on Team/Biz</span>
+                </span>
+                <span class="drawer-hint">Private isolated space · Cross-device auto-sync &amp; managed renewals</span>
+              </span>
+            </span>
+            <span class="drawer-toggle-pill"><span class="when-closed">View 4 tiers</span><span class="when-open">Hide</span> <i>▾</i></span>
+          </summary>
+          <div class="drawer-body">
+            <p class="drawer-body-lead">Choose <strong>Google Drive (Google One)</strong> or <strong>Apple iCloud+</strong> across 2 TB to 30 TB tiers, with managed renewals and the same 7×16h 1-on-1 concierge support.</p>
+            <div class="grid grid-4 pricing">
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>2 TB</b><span>Storage</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">Generous storage for everyday photos, videos and cross-device backups.</p>
+                <div class="price" data-storage-idx="0" style="font-size: 1.9rem; white-space: nowrap;"><sup>A$</sup><span class="amount">13.99</span><small>/ mo</small></div>
+                <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive or Apple iCloud+</li>
+                  <li>Private space with isolated access</li>
+                  <li>Managed billing · 7×16h 1-on-1 support</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="2t" href="https://buy.stripe.com/eVq3cx4Y1c7c4Ds2Bw9Zm0Z" target="_blank" rel="noopener">Subscribe 2 TB</a>
+              </article>
 
-            <article class="card plan featured" style="padding: 26px 22px;">
-              <span class="badge">Creator pick</span>
-              <div class="plan-tier"><b>6 TB</b><span>Storage</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">Ideal for photographers, creators and personal archive vaults.</p>
-              <div class="price" data-storage-idx="1" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">43.99</span><small>/ mo</small></div>
-              <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive or Apple iCloud+</li>
-                <li>Full-res photos and 4K media sync</li>
-                <li>Managed billing · 7×16h 1-on-1 support</li>
-              </ul>
-              <a class="btn btn-primary" data-stripe-tier="6t" href="https://buy.stripe.com/6oU3cx2PTb38ee28ZU9Zm15" target="_blank" rel="noopener">Subscribe 6 TB</a>
-            </article>
+              <article class="card plan featured" style="padding: 24px 20px;">
+                <span class="badge">Creator pick</span>
+                <div class="plan-tier"><b>6 TB</b><span>Storage</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">Ideal for photographers, creators and personal archive vaults.</p>
+                <div class="price" data-storage-idx="1" style="font-size: 1.9rem; white-space: nowrap;"><sup>A$</sup><span class="amount">43.99</span><small>/ mo</small></div>
+                <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive or Apple iCloud+</li>
+                  <li>Full-res photos and 4K media sync</li>
+                  <li>Managed billing · 7×16h 1-on-1 support</li>
+                </ul>
+                <a class="btn btn-primary" data-stripe-tier="6t" href="https://buy.stripe.com/6oU3cx2PTb38ee28ZU9Zm15" target="_blank" rel="noopener">Subscribe 6 TB</a>
+              </article>
 
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>12 TB</b><span>Storage</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">High-capacity vault for power users and multi-device backups.</p>
-              <div class="price" data-storage-idx="2" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">88.99</span><small>/ mo</small></div>
-              <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive or Apple iCloud+</li>
-                <li>Large project archives &amp; device mirrors</li>
-                <li>Managed billing · 7×16h 1-on-1 support</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="12t" href="https://buy.stripe.com/eVqfZj1LPc7cd9Y1xs9Zm1b" target="_blank" rel="noopener">Subscribe 12 TB</a>
-            </article>
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>12 TB</b><span>Storage</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">High-capacity vault for power users and multi-device backups.</p>
+                <div class="price" data-storage-idx="2" style="font-size: 1.9rem; white-space: nowrap;"><sup>A$</sup><span class="amount">88.99</span><small>/ mo</small></div>
+                <p class="price-note">Google Drive or iCloud+ · Managed billing</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive or Apple iCloud+</li>
+                  <li>Large project archives &amp; device mirrors</li>
+                  <li>Managed billing · 7×16h 1-on-1 support</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="12t" href="https://buy.stripe.com/eVqfZj1LPc7cd9Y1xs9Zm1b" target="_blank" rel="noopener">Subscribe 12 TB</a>
+              </article>
 
-            <article class="card plan" style="padding: 26px 22px;">
-              <div class="plan-tier"><b>30 TB</b><span>Flagship</span></div>
-              <p class="plan-desc" style="min-height: 2.6em;">Studio-grade cloud vault for RAW footage, AI datasets and long-term archives.</p>
-              <div class="price" data-storage-idx="3" style="font-size: 1.95rem; white-space: nowrap;"><sup>A$</sup><span class="amount">224.99</span><small>/ mo</small></div>
-              <p class="price-note">Google Drive or iCloud+ · Concierge ops</p>
-              <ul class="features" style="font-size: .88rem;">
-                <li>Google Drive 30TB or dual-cloud combo</li>
-                <li>High-speed global team collaboration</li>
-                <li>Top-tier 7×24h private concierge</li>
-              </ul>
-              <a class="btn btn-ghost" data-stripe-tier="30t" href="https://buy.stripe.com/9B600ldux4EK6LAb829Zm1h" target="_blank" rel="noopener">Subscribe 30 TB</a>
-            </article>
+              <article class="card plan" style="padding: 24px 20px;">
+                <div class="plan-tier"><b>30 TB</b><span>Flagship</span></div>
+                <p class="plan-desc" style="min-height: 2.6em;">Studio-grade cloud vault for RAW footage, AI datasets and long-term archives.</p>
+                <div class="price" data-storage-idx="3" style="font-size: 1.9rem; white-space: nowrap;"><sup>A$</sup><span class="amount">224.99</span><small>/ mo</small></div>
+                <p class="price-note">Google Drive or iCloud+ · Concierge ops</p>
+                <ul class="features" style="font-size: .86rem;">
+                  <li>Google Drive 30TB or dual-cloud combo</li>
+                  <li>High-speed global team collaboration</li>
+                  <li>Top-tier 7×24h private concierge</li>
+                </ul>
+                <a class="btn btn-ghost" data-stripe-tier="30t" href="https://buy.stripe.com/9B600ldux4EK6LAb829Zm1h" target="_blank" rel="noopener">Subscribe 30 TB</a>
+              </article>
+            </div>
           </div>
-        </div>
+        </details>
+
         <div class="stripe-trust">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
           <span>Secure checkout by <strong>Stripe</strong> · Visa / Mastercard / Amex / UnionPay / Apple Pay / Google Pay · Monthly or annual (2 months free), cancel any time</span>
@@ -1784,8 +1804,170 @@
       </div>
     </section>
 
-    <!-- Process -->
-    <section class="section section-alt" id="process">
+    <!-- Floor 4: Security Isolation + Network Proof + Curated 3 User Stories -->
+    <section class="section section-alt" id="security">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-tag">Security, Network &amp; Proof</p>
+          <h2>Hardware-grade isolation · 0% loss measured · Verified user stories</h2>
+          <p>Every subscription is backed by physical Mac Silicon, enterprise BGP routing and verifiable engineering support.</p>
+        </div>
+        <div class="trust-split">
+          <div class="sec-stack">
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <div>
+                <h3>20x dedicated machine: hardware-level isolation</h3>
+                <p>With dedicated mode enabled, the entire high-spec Mac Studio or Mac mini serves only you. Install any software, change system-level settings, and use any remote desktop tool, including RustDesk and third-party VNC.</p>
+              </div>
+            </div>
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+              <div>
+                <h3>1x / 5x separate account isolation</h3>
+                <p>Every user has a separate macOS account with its own files and permissions, so history and project files stay private. Access is via Apple Screen Sharing only, which gives each account its own isolated desktop session that no one else can see.</p>
+              </div>
+            </div>
+            <div class="card sec-compact-card">
+              <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+              <div>
+                <h3>You control access and encryption</h3>
+                <p>Set your own access passwords and encryption policies. Our team handles connectivity and billing and does not actively access data in your account, except for maintenance, security incidents or troubleshooting you authorise.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card net-card net-proof-box" id="network" aria-label="Measured latency and packet loss before and after optimisation">
+            <div class="net-proof-head">
+              <h3>Ongoing network investment · for a responsive remote desktop</h3>
+              <p>We keep investing in hardware and premium routes: 9-country native ISP broadband with 200Mbps–500Mbps+ symmetrical speeds, paired with self-hosted relays and an enterprise BGP backbone that cut packet loss—the real enemy of remote desktops—to zero.</p>
+              <ul class="net-chips"><li>200–500Mbps+ Symmetrical</li><li>Enterprise BGP backbone</li><li>Self-hosted relays</li><li>Dual-leg BBR</li><li>Apple Silicon hardware encoding</li><li>Allow-list hardening</li></ul>
+            </div>
+            <div>
+              <div class="net-legend"><span class="lg before">Before</span><span class="lg after">After</span></div>
+              <div class="net-row">
+                <div class="net-node"><strong>Japan</strong><span>Via HK backbone</span></div>
+                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:39.0%"></span><em>128–184ms · 10% loss</em></div><div class="nb after"><span class="nb-fill" style="--w:23.0%"></span><em>~92ms · 0% loss</em></div></div>
+              </div>
+              <div class="net-row">
+                <div class="net-node"><strong>Australia</strong><span>Via HK backbone</span></div>
+                <div class="net-bars"><div class="nb before"><span class="nb-fill" style="--w:91.2%"></span><em>343–386ms · 25–33% loss</em></div><div class="nb after"><span class="nb-fill" style="--w:60.0%"></span><em>~240ms · 0% loss</em></div></div>
+              </div>
+              <div class="net-row">
+                <div class="net-node"><strong>Cambodia</strong><span>Direct land cable</span></div>
+                <div class="net-bars"><div class="nb after"><span class="nb-fill" style="--w:20.2%"></span><em>~81ms · 0% loss</em></div></div>
+              </div>
+              <p class="net-foot">Measured from an East Asian client, November 2026. Your experience may vary with your network.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-reviews" id="reviews">
+          <p class="trust-reviews-title">★ What real subscribers say</p>
+          <div class="grid grid-3">
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#1b232c"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#3d6b8e"/>
+                  <circle cx="32" cy="31" r="12" fill="#f4cfb6"/>
+                  <path d="M19 28c1-9 6-14 13-14 8 0 13 5 13 14-2-4-6-6-11-6-5 0-10 2-15 6z" fill="#232830"/>
+                  <path d="M18 30v-3a14 14 0 0128 0v3" fill="none" stroke="#e8906f" stroke-width="2.2"/>
+                  <rect x="16" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <rect x="44" y="29" width="4" height="7" rx="2" fill="#e8906f"/>
+                  <circle cx="27.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <circle cx="36.5" cy="31.5" r="1.3" fill="#1e2228"/>
+                  <path d="M29 36.8c2 1.3 4 1.3 6 0" fill="none" stroke="#9e5a44" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">C***</span>
+                    <span class="review-badge">Anonymized · Verified</span>
+                  </div>
+                  <div class="review-role">Senior Full-Stack Engineer</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="review-quote">&quot;My local network environment used to drop mid-session all the time. After moving to ClaudeOps 1x Standard with an isolated workspace and Claude Code running 24/7, it genuinely feels like &#x27;the genius programmer is back&#x27; 😂. Zero billing or network headaches now.&quot;</p>
+              <div class="review-foot">
+                <span>Verified Chat Feedback</span>
+                <span class="review-plan">1x Standard</span>
+              </div>
+            </article>
+
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#2b211c"/>
+                  <circle cx="32" cy="30" r="17" fill="#5c3627"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#d97757"/>
+                  <circle cx="32" cy="31" r="12" fill="#f7d5be"/>
+                  <path d="M19 29c0-9 6-14 13-14s13 5 13 14c-3-4-7-6-13-6s-10 2-13 6z" fill="#5c3627"/>
+                  <circle cx="27" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <circle cx="37" cy="31" r="3.4" fill="none" stroke="#3c2b24" stroke-width="1.5"/>
+                  <path d="M30.4 31h3.2" stroke="#3c2b24" stroke-width="1.4"/>
+                  <circle cx="27" cy="31" r="1.1" fill="#2b1e19"/>
+                  <circle cx="37" cy="31" r="1.1" fill="#2b1e19"/>
+                  <path d="M29 36.5c1.8 1.5 4.2 1.5 6 0" fill="none" stroke="#b85d43" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">M***</span>
+                    <span class="review-badge">Anonymized · Verified</span>
+                  </div>
+                  <div class="review-role">Cross-border AI Product Lead</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="review-quote">&quot;The enterprise tunnel is razor-sharp and ultra-smooth—even clearer than my local ToDesk. Coding and switching windows feel practically local. Fast, reliable, worth every penny—a top-tier experience.&quot;</p>
+              <div class="review-foot">
+                <span>Verified Chat Feedback</span>
+                <span class="review-plan">5x Pro</span>
+              </div>
+            </article>
+
+            <article class="card review-card">
+              <div class="review-head">
+                <div class="review-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="64" height="64" fill="#21261e"/>
+                  <path d="M16 62c2-11 9-16 16-16s14 5 16 16" fill="#4f6d54"/>
+                  <circle cx="32" cy="31" r="12" fill="#efd0ba"/>
+                  <path d="M20 27c1-8 6-12 12-12s11 4 12 12c-3-3-7-4-12-4s-9 1-12 4z" fill="#2d2622"/>
+                  <rect x="23" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <rect x="33.5" y="28.5" width="7.5" height="5" rx="1.4" fill="none" stroke="#2d2622" stroke-width="1.5"/>
+                  <path d="M30.5 31h3" stroke="#2d2622" stroke-width="1.4"/>
+                  <circle cx="26.8" cy="31" r="1.1" fill="#231d19"/>
+                  <circle cx="37.2" cy="31" r="1.1" fill="#231d19"/>
+                  <path d="M29 37c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#9e5e4a" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                </div>
+                <div class="review-author">
+                  <div class="review-name-row">
+                    <span class="review-name">Kyle W.</span>
+                    <span class="review-badge">Anonymized · Verified</span>
+                  </div>
+                  <div class="review-role">Quant R&amp;D Lead</div>
+                </div>
+              </div>
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="review-quote">&quot;Native ISP networks across 9 countries plus hardware-level isolation sold me. Our proprietary code and API keys stay on a dedicated Mac Studio—months of continuous uptime with zero interruptions.&quot;</p>
+              <div class="review-foot">
+                <span>Australia Node · Masked</span>
+                <span class="review-plan">20x Flagship</span>
+              </div>
+            </article>
+          </div>
+          <p class="reviews-note">* To strictly protect client privacy and data security, all reviews are displayed with cartoon avatars and anonymized/masked names.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floor 5: 4-Step Same-Day Onboarding & Focused Top-6 FAQ -->
+    <section class="section" id="process">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">Process</p>
@@ -1812,8 +1994,7 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
+    <section class="section section-alt" id="faq">
       <div class="container">
         <div class="section-head">
           <p class="section-tag">FAQ</p>
@@ -1821,8 +2002,8 @@
         </div>
         <div class="faq">
           <details>
-            <summary>Who operates Zaokit ClaudeOps?</summary>
-            <p>Zaokit ClaudeOps is operated by an Australian registered company. Payments are processed securely by Stripe, and every payment comes with an official receipt and invoice.</p>
+            <summary>Which plan should I choose?</summary>
+            <p>Choose 1x for everyday chat and writing, 5x if you code with Claude Code every day, and 20x for multiple agents, heavy round-the-clock use, or a dedicated machine with RustDesk and any remote desktop tool. Not sure? Start lower and upgrade any time.</p>
           </details>
           <details>
             <summary>How do 1x, 5x, 20x, Team and Business compare? Is there an annual discount?</summary>
@@ -1833,81 +2014,71 @@
             <p>The <strong>ClaudeOps Enterprise Dedicated Line</strong> routes your remote desktop and terminal traffic over our premium enterprise BGP cross-border backbone with self-hosted relays and dual-leg BBR congestion control, eliminating peak-hour public internet jitter and packet loss:<br>• <strong>1x Dedicated Line ($5/mo · $50/yr)</strong>: Designed for 1x Standard solo subscribers running daily Apple Screen Sharing, SSH and light coding;<br>• <strong>5x Dedicated Line ($20/mo · $200/yr)</strong>: Designed for 5x Pro engineering workloads with 5× priority bandwidth quota and high-priority BGP QoS (20% lower unit cost vs 1x);<br>• <strong>Included Free on Flagship &amp; Team Tiers</strong>: <strong>20x Ultimate, Team and Business plans already include dedicated enterprise acceleration at no extra charge</strong>.</p>
           </details>
           <details>
-            <summary>Why is Zaokit ClaudeOps priced higher than standard cloud desktops or shared accounts?</summary>
-            <p>Because you are paying for <strong>deterministic physical infrastructure and white-glove engineering operations</strong>—not low-cost shared VPS instances or pooled logins. Every subscription covers four real infrastructure costs:<br>• <strong>High-Spec Physical Mac Hardware</strong>: Real Mac Studio and Mac mini machines (never virtualized cloud VMs), delivering sustained local compute and 24/7 reliability—with full dedicated machine isolation on 20x+;<br>• <strong>200Mbps–500Mbps+ Symmetrical Native Bandwidth</strong>: Local native ISP broadband across 9 countries with generous symmetrical upload/download speeds, keeping Screen Sharing crisp and responsive instead of lagging on 10–30Mbps shared pipes;<br>• <strong>Enterprise BGP Backbone</strong>: Self-hosted high-speed relays over a premium HK/APAC enterprise BGP backbone with dual-leg BBR optimization, driving cross-border packet loss to zero;<br>• <strong>Full Official Allowance + 7×16 / 7×24 Concierge Ops</strong>: Full official subscription allowances, managed billing, iCloud/Google Drive sync, and 1-on-1 engineering support.</p>
-          </details>
-          <details>
             <summary>Separate account vs dedicated machine: why is 1x / 5x limited to Apple Screen Sharing?</summary>
             <p>• <strong>Separate account isolation (1x / 5x)</strong>: several users share one high-spec Mac, but each has their own macOS account, files and permissions, and no one can see anyone else's data. To protect every user's privacy, access is limited to <strong>Apple Screen Sharing</strong>, which creates an isolated desktop session for each account so your screen and activity stay private.<br>• <strong>Dedicated machine (available on 20x)</strong>: the entire physical Mac serves only you. Hardware, system and network are fully yours. Install any software, change system-level settings and use <strong>any remote desktop tool</strong>: Apple Screen Sharing, third-party VNC such as RealVNC / TigerVNC, or our self-hosted high-speed RustDesk channel (complimentary on 20x).<br><strong>Why no third-party remote tools on shared machines?</strong> RustDesk and most third-party VNC tools capture the Mac's main screen session, which on a multi-user machine could let others see or even control your desktop. We only enable them in dedicated mode. It is a deliberate privacy safeguard.</p>
-          </details>
-          <details>
-            <summary>Which plan should I choose?</summary>
-            <p>Choose 1x for everyday chat and writing, 5x if you code with Claude Code every day, and 20x for multiple agents, heavy round-the-clock use, or a dedicated machine with RustDesk and any remote desktop tool. Not sure? Start lower and upgrade any time.</p>
-          </details>
-          <details>
-            <summary>What does a &quot;deterministic, stable environment&quot; mean in practice?</summary>
-            <p>It means your own isolated workspace + a fixed physical high-spec Mac workstation + dedicated billing, renewal and day-to-day engineering ops. Standardized engineering operations eliminate unexpected drops, configuration conflicts and failed renewals so your workflow stays predictable.</p>
           </details>
           <details>
             <summary>How do I actually use it? Remote Mac or local?</summary>
             <p><strong>Both work. Use whichever suits you:</strong><br>1. <strong>Remote desktop</strong>: on 1x / 5x, sign in to your separate account with macOS Screen Sharing, which is isolated, secure and ready to go. On 20x with dedicated mode enabled, you can also use third-party VNC such as RealVNC / TigerVNC, or our <strong>self-hosted high-speed RustDesk channel (complimentary on 20x)</strong> for smoother, lower-latency sessions. Either way you get the full macOS desktop and terminal, and long tasks keep running.<br>2. <strong>Seamless local workflow integration</strong>: collaborate with the remote development environment directly from your local workflow and dev tools, with no local environment set-up or maintenance overhead. The remote Mac becomes your dedicated compute back end.</p>
           </details>
           <details>
-            <summary>How are my code and data kept secure and private?</summary>
-            <p>On 1x / 5x, every user gets a separate macOS account with isolated files, permissions and desktop sessions, accessed only via Apple Screen Sharing so no one else can see your screen. On 20x you can enable a dedicated machine: the entire high-spec Mac Studio or Mac mini serves only you, isolated right down to the hardware. Your session history, source code and environment variables stay in your own account or machine. You set your own access passwords and encryption, and our team does not actively access your data except for maintenance, security incidents or troubleshooting you authorise.</p>
-          </details>
-          <details>
-            <summary>Where are the machines and networks located?</summary>
-            <p>Our physical high-spec Mac Studio and Mac mini machines are located in <strong>Australia, the United States, Singapore, Malaysia, Indonesia, Japan, Cambodia, New Zealand and Canada</strong>, connected via <strong>local native ISP broadband networks (not shared public cloud data centers)</strong> for maximum reliability. Pick your preferred region at checkout, and we assign you a fixed machine and account for the long term (whole machine dedicated on 20x).</p>
-          </details>
-          <details>
-            <summary>How does Google Drive &amp; iCloud+ cloud storage work?</summary>
-            <p>We offer 2 TB ($8.99/mo), 6 TB ($28.99/mo), 12 TB ($58.99/mo) and 30 TB ($148.99/mo) plans. At Stripe checkout, choose <strong>Apple iCloud+</strong> or <strong>Google Drive (Google One)</strong> and note your account email; our 7×16h 1-on-1 concierge team handles activation and ongoing renewals.</p>
-          </details>
-          <details>
-            <summary>Can I upgrade or downgrade?</summary>
-            <p>Yes. Changes apply from your next billing cycle. If you need an upgrade straight away, contact us and we will charge the difference.</p>
-          </details>
-          <details>
-            <summary>What if something goes wrong?</summary>
-            <p>Contact us straight away. We prioritise troubleshooting and get you back up and running as fast as possible.</p>
-          </details>
-          <details>
             <summary>Which payment methods do you accept? Can I get an invoice?</summary>
             <p>We accept online subscriptions via Stripe, including Visa, Mastercard, Amex, UnionPay, Apple Pay, Google Pay and Link, billed in AUD, USD, EUR, NZD, CAD, SGD or CNY. UnionPay cardholders can choose CNY for a smoother payment. Stripe issues an official receipt and invoice automatically. For multi-account business plans, email us.</p>
           </details>
-          <details>
-            <summary>How can I bring my own machine or join your global compute network to earn while lighting up more cities?</summary>
-            <p>We warmly invite partners around the world to join our native compute network as we work toward truly serving all 8 billion people! <strong>You can bring your own machine and share your resources — helping you earn revenue while lighting up the possibility of dreams for others!</strong> Whether you have idle or high-spec physical Mac hardware, quality local native broadband in your city, or regional builder &amp; creator community reach, email us any time at <a href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network" style="color:var(--primary-strong);font-weight:600">jason2023zhang@gmail.com</a> with your city and hardware/ISP details—welcome aboard!</p>
+          <details class="faq-more">
+            <summary><span class="when-closed">Show 9 more questions</span><span class="when-open">Show fewer questions</span></summary>
+            <div class="faq-more-list">
+              <details>
+                <summary>Who operates Zaokit ClaudeOps?</summary>
+                <p>Zaokit ClaudeOps is operated by an Australian registered company. Payments are processed securely by Stripe, and every payment comes with an official receipt and invoice.</p>
+              </details>
+              <details>
+                <summary>Why is Zaokit ClaudeOps priced higher than standard cloud desktops or shared accounts?</summary>
+                <p>Because you are paying for <strong>deterministic physical infrastructure and white-glove engineering operations</strong>—not low-cost shared VPS instances or pooled logins. Every subscription covers four real infrastructure costs:<br>• <strong>High-Spec Physical Mac Hardware</strong>: Real Mac Studio and Mac mini machines (never virtualized cloud VMs), delivering sustained local compute and 24/7 reliability—with full dedicated machine isolation on 20x+;<br>• <strong>200Mbps–500Mbps+ Symmetrical Native Bandwidth</strong>: Local native ISP broadband across 9 countries with generous symmetrical upload/download speeds, keeping Screen Sharing crisp and responsive instead of lagging on 10–30Mbps shared pipes;<br>• <strong>Enterprise BGP Backbone</strong>: Self-hosted high-speed relays over a premium HK/APAC enterprise BGP backbone with dual-leg BBR optimization, driving cross-border packet loss to zero;<br>• <strong>Full Official Allowance + 7×16 / 7×24 Concierge Ops</strong>: Full official subscription allowances, managed billing, iCloud/Google Drive sync, and 1-on-1 engineering support.</p>
+              </details>
+              <details>
+                <summary>What does a &quot;deterministic, stable environment&quot; mean in practice?</summary>
+                <p>It means your own isolated workspace + a fixed physical high-spec Mac workstation + dedicated billing, renewal and day-to-day engineering ops. Standardized engineering operations eliminate unexpected drops, configuration conflicts and failed renewals so your workflow stays predictable.</p>
+              </details>
+              <details>
+                <summary>How are my code and data kept secure and private?</summary>
+                <p>On 1x / 5x, every user gets a separate macOS account with isolated files, permissions and desktop sessions, accessed only via Apple Screen Sharing so no one else can see your screen. On 20x you can enable a dedicated machine: the entire high-spec Mac Studio or Mac mini serves only you, isolated right down to the hardware. Your session history, source code and environment variables stay in your own account or machine. You set your own access passwords and encryption, and our team does not actively access your data except for maintenance, security incidents or troubleshooting you authorise.</p>
+              </details>
+              <details>
+                <summary>Where are the machines and networks located?</summary>
+                <p>Our physical high-spec Mac Studio and Mac mini machines are located in <strong>Australia, the United States, Singapore, Malaysia, Indonesia, Japan, Cambodia, New Zealand and Canada</strong>, connected via <strong>local native ISP broadband networks (not shared public cloud data centers)</strong> for maximum reliability. Pick your preferred region at checkout, and we assign you a fixed machine and account for the long term (whole machine dedicated on 20x).</p>
+              </details>
+              <details>
+                <summary>How does Google Drive &amp; iCloud+ cloud storage work?</summary>
+                <p>We offer 2 TB ($8.99/mo), 6 TB ($28.99/mo), 12 TB ($58.99/mo) and 30 TB ($148.99/mo) plans. At Stripe checkout, choose <strong>Apple iCloud+</strong> or <strong>Google Drive (Google One)</strong> and note your account email; our 7×16h 1-on-1 concierge team handles activation and ongoing renewals.</p>
+              </details>
+              <details>
+                <summary>Can I upgrade or downgrade?</summary>
+                <p>Yes. Changes apply from your next billing cycle. If you need an upgrade straight away, contact us and we will charge the difference.</p>
+              </details>
+              <details>
+                <summary>What if something goes wrong?</summary>
+                <p>Contact us straight away. We prioritise troubleshooting and get you back up and running as fast as possible.</p>
+              </details>
+              <details>
+                <summary>How can I bring my own machine or join your global compute network to earn while lighting up more cities?</summary>
+                <p>We warmly invite partners around the world to join our native compute network as we work toward truly serving all 8 billion people! <strong>You can bring your own machine and share your resources — helping you earn revenue while lighting up the possibility of dreams for others!</strong> Whether you have idle or high-spec physical Mac hardware, quality local native broadband in your city, or regional builder &amp; creator community reach, email us any time at <a href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20%2F%20Join%20Zaokit%20Global%20Compute%20Network" style="color:var(--primary-strong);font-weight:600">jason2023zhang@gmail.com</a> with your city and hardware/ISP details—welcome aboard!</p>
+              </details>
+            </div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Global Partner & CTA -->
+    <!-- Floor 6: Buyer CTA First + Secondary Global Compute Partner Strip -->
     <section class="section">
       <div class="container">
-        <div class="partner-banner" id="partner">
-          <span class="eyebrow"><span class="dot"></span>GLOBAL COMPUTE PARTNER · Co-Building the World&#x27;s Compute Mesh</span>
-          <h2>Join Our Global Compute Network —<br><em class="grad">Truly Serving All 8 Billion People!</em></h2>
-          <p>
-            Starting from 13+ lit cities across 9 countries, we are bringing pure native compute and frontier AI productivity to every corner of the world. <strong>You can bring your own machine and share your resources — helping you earn revenue while lighting up the possibility of dreams for others!</strong> Wherever you are, welcome aboard — email us directly to light up the next city together.
-          </p>
-          <ul class="partner-chips">
-            <li>✦ Bring Your Own Mac · Share &amp; Earn</li>
-            <li>✦ Local Native Broadband Resource Sharing</li>
-            <li>✦ Cluster Hosting &amp; Regional Partners</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20/%20Join%20Zaokit%20Global%20Compute%20Network&amp;body=Hi%20Jason%2C%20I%27d%20love%20to%20share%20my%20resources%20and%20join%20the%20Zaokit%20Global%20Compute%20Network%3A%0A%0A1.%20Country%20/%20City%3A%0A2.%20Collaboration%20mode%20%28Bring%20my%20own%20Mac%20/%20Native%20broadband%20node%20/%20Regional%20partner%29%3A%0A3.%20Mac%20specs%20%26%20local%20ISP%20details%3A%0A4.%20Contact%20details%3A">Bring Your Mac / Email Us: jason2023zhang@gmail.com →</a>
-          </div>
-        </div>
-
         <div class="cta">
           <h2>AI Makes the World Borderless. Start Today.</h2>
           <p>Join builders across our lit global cities — subscribe via Stripe for same-day delivery of the most advanced AI productivity and top-tier experience.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pricing">Choose a plan</a>
+            <a class="btn btn-primary" href="#pricing" data-goto-audience="solo">Individual Plans →</a>
+            <a class="btn btn-ent-hero" href="#pricing-enterprise" data-goto-audience="enterprise">Team &amp; Enterprise →</a>
             <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20enquiry">Email: jason2023zhang@gmail.com</a>
           </div>
           <div class="contact-tg">
@@ -1922,6 +2093,22 @@
                 @letcode2020
               </a>
             </div>
+          </div>
+        </div>
+
+        <div class="partner-banner partner-compact" id="partner">
+          <div class="partner-compact-copy">
+            <span class="eyebrow"><span class="dot"></span>GLOBAL COMPUTE PARTNER · Co-Building the World&#x27;s Compute Mesh</span>
+            <h3>Join Our Global Compute Network — <em class="grad">Truly Serving All 8 Billion People!</em></h3>
+            <p>Starting from 13+ lit cities across 9 countries, we are bringing pure native compute and frontier AI productivity to every corner of the world. <strong>You can bring your own machine and share your resources — helping you earn revenue while lighting up the possibility of dreams for others!</strong> Wherever you are, welcome aboard — email us directly to light up the next city together.</p>
+            <ul class="partner-chips">
+              <li>✦ Bring Your Own Mac · Share &amp; Earn</li>
+              <li>✦ Local Native Broadband Resource Sharing</li>
+              <li>✦ Cluster Hosting &amp; Regional Partners</li>
+            </ul>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-ghost" href="mailto:jason2023zhang@gmail.com?subject=Bring%20My%20Mac%20/%20Join%20Zaokit%20Global%20Compute%20Network&amp;body=Hi%20Jason%2C%20I%27d%20love%20to%20share%20my%20resources%20and%20join%20the%20Zaokit%20Global%20Compute%20Network%3A%0A%0A1.%20Country%20/%20City%3A%0A2.%20Collaboration%20mode%20%28Bring%20my%20own%20Mac%20/%20Native%20broadband%20node%20/%20Regional%20partner%29%3A%0A3.%20Mac%20specs%20%26%20local%20ISP%20details%3A%0A4.%20Contact%20details%3A">Bring Your Mac / Email Us: jason2023zhang@gmail.com →</a>
           </div>
         </div>
       </div>
@@ -2493,6 +2680,91 @@
       });
     }
 
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var panelSolo = document.getElementById('panel-solo');
+    var panelEnt = document.getElementById('pricing-enterprise');
+    var finderTip = document.getElementById('finder-tip');
+    var finderTipText = document.getElementById('finder-tip-text');
+    var finderTipClose = document.getElementById('finder-tip-close');
+
+    function setAudience(aud) {
+      var isEnt = aud === 'enterprise';
+      if (panelSolo) {
+        panelSolo.hidden = isEnt;
+        if (!isEnt) clearReveal(panelSolo);
+      }
+      if (panelEnt) {
+        panelEnt.hidden = !isEnt;
+        if (isEnt) clearReveal(panelEnt);
+      }
+      document.querySelectorAll('[data-audience-tab]').forEach(function (btn) {
+        btn.setAttribute('aria-selected', btn.getAttribute('data-audience-tab') === (isEnt ? 'enterprise' : 'solo') ? 'true' : 'false');
+      });
+    }
+
+    function clearScenarioHighlight() {
+      document.querySelectorAll('.qf-btn').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.plan-recommended').forEach(function (p) { p.classList.remove('plan-recommended'); });
+      if (finderTip) finderTip.hidden = true;
+    }
+
+    function applyScenario(sid) {
+      document.querySelectorAll('.qf-btn').forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-scenario') === sid);
+      });
+      document.querySelectorAll('.plan-recommended').forEach(function (p) { p.classList.remove('plan-recommended'); });
+      var targetCards = [];
+      if (sid === 'solo-dev') {
+        setAudience('solo');
+        targetCards = ['5x'];
+      } else if (sid === 'solo-max') {
+        setAudience('solo');
+        targetCards = ['20x'];
+      } else if (sid === 'team-rd') {
+        setAudience('enterprise');
+        targetCards = ['biz', 'team'];
+      } else if (sid === 'ent-custom') {
+        setAudience('enterprise');
+        targetCards = ['custom'];
+      }
+      targetCards.forEach(function (ck) {
+        var el = document.querySelector('[data-plan-card="' + ck + '"]');
+        if (el) el.classList.add('plan-recommended');
+      });
+      if (finderTip && finderTipText && FINDER_TIPS[sid]) {
+        finderTipText.textContent = '💡 ' + FINDER_TIPS[sid];
+        finderTip.hidden = false;
+      }
+    }
+
+    document.querySelectorAll('[data-audience-tab]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        clearScenarioHighlight();
+        setAudience(btn.getAttribute('data-audience-tab'));
+      });
+    });
+
+    document.querySelectorAll('[data-scenario]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var sid = btn.getAttribute('data-scenario');
+        if (btn.classList.contains('active')) {
+          clearScenarioHighlight();
+        } else {
+          applyScenario(sid);
+        }
+      });
+    });
+
+    if (finderTipClose) {
+      finderTipClose.addEventListener('click', clearScenarioHighlight);
+    }
+
+    document.querySelectorAll('details').forEach(function (det) {
+      det.addEventListener('toggle', function () {
+        if (det.open) clearReveal(det);
+      });
+    });
+
     document.querySelectorAll('a[href="#top"]').forEach(function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault();
@@ -2508,30 +2780,9 @@
       clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
       var headEl = sec.querySelector('.section-head') || sec;
-      var gridEl = sec.querySelector('.pricing-solo') || sec.querySelector('.pricing');
       var idealTop = docTop(headEl) - headerH - 12;
-      var targetY = idealTop;
-      if (gridEl) {
-        var plans = Array.prototype.slice.call(gridEl.querySelectorAll('.plan'));
-        if (plans.length) {
-          var checkPlans = innerWidth <= 960
-            ? [plans.reduce(function (a, b) { return docTop(a) <= docTop(b) ? a : b; })]
-            : plans;
-          var maxBtnBottom = 0;
-          checkPlans.forEach(function (p) {
-            var btn = p.querySelector('.btn');
-            if (btn) maxBtnBottom = Math.max(maxBtnBottom, docTop(btn) + btn.offsetHeight);
-          });
-          if (maxBtnBottom > 0) {
-            var neededBottom = maxBtnBottom + 16;
-            if (neededBottom - idealTop > innerHeight) {
-              targetY = neededBottom - innerHeight;
-            }
-          }
-        }
-      }
       var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
-      var destY = Math.max(0, Math.min(targetY, maxScroll));
+      var destY = Math.max(0, Math.min(idealTop, maxScroll));
       window.scrollTo({
         top: destY,
         behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant'
@@ -2541,19 +2792,28 @@
 
     function scrollToSection(id, smooth) {
       if (id === 'pricing') return scrollToPricing(smooth);
+      if (id === 'pricing-enterprise') {
+        setAudience('enterprise');
+        return scrollToPricing(smooth);
+      }
+      if (id === 'dedicated-line') {
+        setAudience('solo');
+        var dlDet = document.getElementById('dedicated-line');
+        if (dlDet) { dlDet.open = true; clearReveal(dlDet); }
+      } else if (id === 'seat-addons-drawer') {
+        setAudience('enterprise');
+        var saDet = document.getElementById('seat-addons-drawer');
+        if (saDet) { saDet.open = true; clearReveal(saDet); }
+      } else if (id === 'storage') {
+        var stDet = document.getElementById('storage');
+        if (stDet) { stDet.open = true; clearReveal(stDet); }
+      }
       var sec = document.getElementById(id);
       if (!sec) return null;
       clearReveal(sec);
       var headerH = header ? header.offsetHeight : 68;
-      var rawY;
-      if (id === 'storage') {
-        rawY = docTop(sec) - headerH - 4;
-      } else if (id === 'pricing-enterprise' || id === 'dedicated-line') {
-        rawY = docTop(sec) - headerH - 16;
-      } else {
-        var headEl = sec.querySelector('.section-head');
-        rawY = headEl ? (docTop(headEl) - headerH - 28) : (docTop(sec) - headerH - 16);
-      }
+      var headEl = sec.querySelector('.section-head');
+      var rawY = headEl ? (docTop(headEl) - headerH - 24) : (docTop(sec) - headerH - 16);
       var maxScroll = Math.max(0, root.scrollHeight - root.clientHeight);
       var destY = Math.max(0, Math.min(rawY, maxScroll));
       window.scrollTo({
@@ -2570,9 +2830,14 @@
       if (!document.getElementById(id)) return;
       el.addEventListener('click', function (e) {
         e.preventDefault();
+        var gotoAud = el.getAttribute('data-goto-audience');
+        if (gotoAud) {
+          clearScenarioHighlight();
+          setAudience(gotoAud);
+        }
         history.replaceState(null, '', '#' + id);
         var destY = scrollToSection(id, true);
-        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line') && navById.pricing ? 'pricing' : null);
+        var spyId = navById[id] ? id : ((id === 'pricing-enterprise' || id === 'dedicated-line' || id === 'storage') && navById.pricing ? 'pricing' : null);
         if (spyId && destY !== null) {
           lockedNavId = spyId;
           lockTargetY = destY;
@@ -2581,6 +2846,14 @@
         }
       });
     });
+
+    (function initAudienceFromUrl() {
+      var sp = new URLSearchParams(location.search);
+      var tabQ = (sp.get('tab') || '').toLowerCase();
+      if (tabQ === 'enterprise' || tabQ === 'team' || location.hash === '#pricing-enterprise') {
+        setAudience('enterprise');
+      }
+    })();
 
     if (location.hash && location.hash.length > 1) {
       var initId = decodeURIComponent(location.hash.slice(1));
@@ -2610,7 +2883,7 @@
     });
 
     if (!root.classList.contains('motion') || !('IntersectionObserver' in window)) return;
-    var targets = document.querySelectorAll('main .section-head, main .card, main .faq details, main .cta, main .stripe-trust, main .currency-switch, main .pricing-controls, main .tier-divider, main .enterprise-toolbar, main .seat-addons');
+    var targets = document.querySelectorAll('main .section-head, #service .card, #panel-solo > .pricing > .card, #security .card, #process .card, main .faq > details, main .cta, main .stripe-trust, main .audience-tabs, main .quick-finder, main .pricing-controls');
     targets.forEach(function (el) {
       var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
       el.classList.add('mo-reveal');

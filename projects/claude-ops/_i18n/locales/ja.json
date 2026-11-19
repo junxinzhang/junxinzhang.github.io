@@ -917,5 +917,111 @@
         "body_html": "<p>ご請求内容にご不明な点がある場合は、まず当社までご連絡ください。迅速に確認・対応いたします。事前のご連絡なくカード会社へチャージバック（支払異議申立）を行われた場合、調査期間中は該当サービスを一時停止することがあります。</p>"
       }
     ]
+  },
+  "ux": {
+    "hero_lead": "世界9カ国の現地ネイティブ回線上の専有物理Macワークステーション＋法人向けBGP高速専用線＋最大7×24hの1対1 AIエンジニアサポート。即日利用可能。",
+    "hero_cta_solo": "個人向けプラン →",
+    "hero_cta_ent": "チーム・法人向け →",
+    "hero_consult": "プラン選びやカスタム構成のご相談（メール） →",
+    "pillars_tag": "Core Capabilities",
+    "pillars_h2": "環境構築・回線・運用はすべて任せ、開発と創造だけに集中",
+    "pillars_sub": "環境トラブル、長時間タスクの切断、決済・更新の手間をゼロにする3つのコア価値。",
+    "pillars": [
+      {
+        "h3": "9カ国物理Mac実機＆2段階分離",
+        "p": "高性能Mac Studio / Mac mini実機を現地ネイティブISP回線に配備。1x/5xは独立macOSアカウント分離、20x・法人版はハードウェア丸ごと専有に対応。",
+        "chips": [
+          "高仕様物理Mac",
+          "アカウント/筐体専有"
+        ]
+      },
+      {
+        "h3": "パケットロス0%の高速専用線",
+        "p": "上下対称200–500Mbps+回線と自社中継・法人BGP＋二段BBR最適化により、リモート画面共有もClaude Code長時間実行も途切れません。",
+        "chips": [
+          "200–500Mbps+ 対称",
+          "法人BGP専用線"
+        ]
+      },
+      {
+        "h3": "請求代行＋1対1技術コンシェルジュ",
+        "p": "初期構築から毎月の更新管理まで一括代行。Claude Code・MCP/Skills設定から実案件導入まで7×8h〜7×24hで1対1サポートします。",
+        "chips": [
+          "更新・請求フル管理",
+          "最大7×24h 1対1支援"
+        ]
+      }
+    ],
+    "finder_label": "3秒プラン診断 · 利用シーンを選択：",
+    "finder_items": [
+      {
+        "id": "solo-dev",
+        "btn": "個人の本格コーディング",
+        "tip": "おすすめ：【個人 5x Pro】毎日のClaude Code開発に最適。越境接続時は下の専用線オプション追加がおすすめです。"
+      },
+      {
+        "id": "solo-max",
+        "btn": "24hマルチAgent / 1台専有",
+        "tip": "おすすめ：【個人 20x Ultimate】物理Mac 1台丸ごと専有が可能。専用線と6TBクラウドストレージも無料付帯。"
+      },
+      {
+        "id": "team-rd",
+        "btn": "3〜10名の開発チーム",
+        "tip": "おすすめ：【Team 5席 / Business 10席】専用Macクラスタ・請求書一括管理・専用線＆12〜30TBストレージ無料付帯。"
+      },
+      {
+        "id": "ent-custom",
+        "btn": "15名以上の大規模専用構成",
+        "tip": "おすすめ：【Custom 専用クラスタ】15〜100+席の柔軟な席種組み合わせ・複数国冗長構成・法人契約に対応。"
+      }
+    ],
+    "tab_solo_title": "個人開発者・クリエイター",
+    "tab_solo_sub": "1名利用 · シンプルな3プラン",
+    "tab_ent_title": "チーム・法人クラスタ",
+    "tab_ent_sub": "5〜100+名 · 筐体専有 · 請求書一括",
+    "solo_fit": [
+      "対象：日常の質問・執筆・ライトな開発",
+      "対象：毎日Claude Codeを本格活用する開発者（個人の80%が選択）",
+      "対象：24hマルチAgent並列稼働・物理Mac 1台専有"
+    ],
+    "ent_step1": "Step 1：チームの標準シート仕様を選択",
+    "ent_step2": "Step 2：チーム規模に合わせて専用クラスタを選択",
+    "ent_fit_team": "対象：3〜5名のスタートアップ・AIスタジオ",
+    "ent_fit_biz": "対象：6〜12名の開発部門・クオンツ研究開発",
+    "custom_card": {
+      "badge": "15〜100+席 · 個別設計",
+      "tier_b": "Custom",
+      "tier_span": "プライベートクラスタ",
+      "fit": "対象：大規模開発組織 · Pro/Max/Ultra混在 · 独自要件",
+      "desc": "複数リージョンの専有Mac Studioクラスタと自由なシート配分をアーキテクトが個別設計します。",
+      "price_text": "個別見積",
+      "price_sub": "15席〜 · 専任アーキテクトが即日提案",
+      "features": [
+        "15〜100+席でPro / Max / Ultraを自由な比率で混在可能",
+        "複数台の専有Mac Studioクラスタ＆2リージョン冗長化",
+        "専有固定ビジネス回線IP＆専用高速リレーゲートウェイ",
+        "法人請求書（Commercial Invoice）・個別SLA契約に対応",
+        "7×24h 法人専任エンジニアチームによる優先サポート"
+      ],
+      "btn": "法人担当にカスタム相談 →",
+      "consult": "当日回答 · 構成案とお見積りを無料作成",
+      "mailto_subject": "Zaokit 法人カスタムクラスタ相談（15席以上）"
+    },
+    "drawer_line_title": "オプション：ClaudeOps 法人BGP高速専用線",
+    "drawer_line_hint": "1x / 5xの越境リモート接続をロス0%で高速化（20x Ultimateは無料付帯）",
+    "drawer_line_cta": "詳細を見る",
+    "drawer_upg_title": "一部メンバーだけ上位枠が必要ですか？1席単位の差額アップグレード",
+    "drawer_upg_hint": "Team / Business契約チーム向け：特定メンバーのみMax / Ultraへ柔軟に昇格",
+    "drawer_upg_cta": "昇格パックを見る",
+    "drawer_storage_title": "オプション：Google Drive / Apple iCloud+ 大容量ストレージ管理（2TB–30TB）",
+    "drawer_storage_pill": "20xは6TB無料 · 法人版は6–30TB無料",
+    "drawer_storage_hint": "独立スペース分離・自動同期・更新フル管理",
+    "drawer_storage_cta": "4プランを見る",
+    "drawer_close_cta": "閉じる",
+    "trust_tag": "Security, Network & Proof",
+    "trust_h2": "ハードウェア分離 · パケットロス0%実測 · 利用者の声",
+    "trust_sub": "物理Mac実機・法人BGPバックボーン・実績ある運用体制がすべてのプランを支えています。",
+    "faq_more_open": "残り {count} 件の質問をすべて表示",
+    "faq_more_close": "質問を折りたたむ"
   }
 }
