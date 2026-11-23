@@ -450,7 +450,7 @@
       "tier_max": "Toàn bộ ghế Premium Seat (6.25x)",
       "tier_max_badge": "Khuyên dùng",
       "tier_ultra": "Toàn bộ ghế Ultra (20x)",
-      "toolbar_html": "Bắt đầu với các ghế đồng nhất Pro, Max hoặc Ultra — hoặc linh hoạt kết hợp bất cứ lúc nào nhờ <strong>gói nâng cấp từng ghế</strong> tự phục vụ bên dưới.",
+      "toolbar_html": "Bắt đầu với các ghế đồng nhất Pro, Premium — hoặc linh hoạt kết hợp bất cứ lúc nào nhờ <strong>gói nâng cấp từng ghế</strong> tự phục vụ bên dưới.",
       "team": {
         "init_badge": "5 × Ghế Premium Seat (6.25x) · Máy Chủ Riêng",
         "sub": "5 Thành viên",
@@ -460,7 +460,7 @@
         "features_html": [
           "<strong>Máy chủ Mac Studio / Mac mini cấu hình cao chuyên dụng</strong> dành riêng cho nhóm của bạn",
           "Linh hoạt cấp phát lại ghế thuộc sở hữu tổ chức khi thay đổi nhân sự &amp; <strong>một hóa đơn tổng hợp duy nhất</strong>",
-          "Nâng cấp từng ghế lẻ lên Premium Seat (6.25x) hoặc Ultra (20x) theo nhu cầu bất kỳ lúc nào",
+          "Nâng cấp từng ghế lẻ lên Premium Seat (6.25x) theo nhu cầu bất kỳ lúc nào",
           "Kênh nhóm cố vấn riêng cho đội ngũ <strong>7×24h</strong>",
           "Tặng kèm kênh RustDesk tốc độ cao riêng cho nhóm"
         ],
@@ -616,7 +616,7 @@
       },
       {
         "q": "Các gói 1x, 5x, 20x, Team và Business khác nhau như thế nào? Có ưu đãi thanh toán theo năm không?",
-        "a_html": "Cả năm cấp độ đều mở rộng linh hoạt theo số lượng chỗ ngồi, mức độ cách ly phần cứng, khung giờ hỗ trợ cố vấn và quyền lợi đi kèm — đồng thời <strong>thanh toán theo năm chỉ tính phí 10 tháng/năm (tặng 2 tháng miễn phí) cho tất cả các gói</strong>:<br>• <strong>1x Tiêu chuẩn</strong>: Hạn mức cá nhân cơ bản + môi trường Mac mini (tài khoản macOS riêng) + hỗ trợ 1-kèm-1 <strong>7×8h</strong>;<br>• <strong>5x Pro</strong>: Hạn mức cá nhân 5× + Mac mini cấu hình cao (tài khoản macOS riêng) + hỗ trợ ưu tiên 1-kèm-1 <strong>7×16h</strong>;<br>• <strong>20x Ultimate</strong>: Hạn mức cá nhân 20× + Mac Studio / Mac mini cấu hình cao (tùy chọn nguyên máy riêng) + cố vấn riêng tư <strong>7×24h</strong> + <strong>kênh RustDesk riêng</strong> + <strong>6 TB lưu trữ đám mây</strong>;<br>• <strong>Team (5 Thành viên · Máy Chủ Riêng)</strong>: Có các tùy chọn Toàn bộ Pro (1x), Toàn bộ Max (5x) hoặc Toàn bộ Ultra (20x) — máy vật lý Mac dành riêng cho nhóm, linh hoạt chuyển đổi người dùng, hóa đơn gộp, kênh RustDesk riêng, 6–12 TB lưu trữ đám mây &amp; cố vấn nhóm 7×24h;<br>• <strong>Business (10 Thành viên · Cụm Nhiều Máy Mac)</strong>: Có các tùy chọn Toàn bộ Pro (1x), Toàn bộ Max (5x) hoặc Toàn bộ Ultra (20x) — cụm nhiều máy Mac riêng (triển khai hai khu vực &amp; di chuyển nhanh tại 9 quốc gia), hóa đơn thương mại, relay RustDesk doanh nghiệp, 12–30 TB lưu trữ đám mây &amp; SLA VIP 7×24h;<br>• <strong>Tiện ích Nâng cấp Từng ghế</strong>: Khởi đầu với gói nền tảng All-Pro hoặc All-Max và tự nâng cấp các ghế cụ thể lên Max (5x) hoặc Ultra (20x) bất cứ lúc nào (điều chỉnh từ 1–50 ghế);<br>• <strong>Tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps</strong>: Tăng tốc xuyên biên giới qua BGP doanh nghiệp tùy chọn cho thuê bao 1x (+$5/tháng) và 5x (+$20/tháng) (đã miễn phí đi kèm ở gói 20x, Team &amp; Business)."
+        "a_html": "Cả năm cấp độ đều mở rộng linh hoạt theo số lượng chỗ ngồi, mức độ cách ly phần cứng, khung giờ hỗ trợ cố vấn và quyền lợi đi kèm — đồng thời <strong>thanh toán theo năm chỉ tính phí 10 tháng/năm (tặng 2 tháng miễn phí) cho tất cả các gói</strong>:<br>• <strong>1x Tiêu chuẩn</strong>: Hạn mức cá nhân cơ bản + môi trường Mac mini (tài khoản macOS riêng) + hỗ trợ 1-kèm-1 <strong>7×8h</strong>;<br>• <strong>5x Pro</strong>: Hạn mức cá nhân 5× + Mac mini cấu hình cao (tài khoản macOS riêng) + hỗ trợ ưu tiên 1-kèm-1 <strong>7×16h</strong>;<br>• <strong>20x Ultimate</strong>: Hạn mức cá nhân 20× + Mac Studio / Mac mini cấu hình cao (tùy chọn nguyên máy riêng) + cố vấn riêng tư <strong>7×24h</strong> + <strong>kênh RustDesk riêng</strong> + <strong>6 TB lưu trữ đám mây</strong>;<br>• <strong>Team (5 Thành viên · Máy Chủ Riêng)</strong>: Có các tùy chọn Toàn bộ Pro (1x), Toàn bộ Premium Seat (6.25x) hoặc Toàn bộ Ultra (20x) — máy vật lý Mac dành riêng cho nhóm, linh hoạt chuyển đổi người dùng, hóa đơn gộp, kênh RustDesk riêng, 6–12 TB lưu trữ đám mây &amp; cố vấn nhóm 7×24h;<br>• <strong>Business (10 Thành viên · Cụm Nhiều Máy Mac)</strong>: Có các tùy chọn Toàn bộ Pro (1x), Toàn bộ Premium Seat (6.25x) hoặc Toàn bộ Ultra (20x) — cụm nhiều máy Mac riêng (triển khai hai khu vực &amp; di chuyển nhanh tại 9 quốc gia), hóa đơn thương mại, relay RustDesk doanh nghiệp, 12–30 TB lưu trữ đám mây &amp; SLA VIP 7×24h;<br>• <strong>Tiện ích Nâng cấp Từng ghế</strong>: Khởi đầu với gói nền tảng All-Pro hoặc All-Premium và tự nâng cấp các ghế cụ thể lên Premium Seat (6.25x) bất cứ lúc nào (điều chỉnh từ 1–50 ghế);<br>• <strong>Tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps</strong>: Tăng tốc xuyên biên giới qua BGP doanh nghiệp tùy chọn cho thuê bao 1x (+$5/tháng) và 5x (+$20/tháng) (đã miễn phí đi kèm ở gói 20x, Team &amp; Business)."
       },
       {
         "q": "Tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps là gì? Ai nên sử dụng?",
@@ -972,7 +972,7 @@
       {
         "id": "ent-custom",
         "btn": "15+ seat custom enterprise cluster",
-        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."
       }
     ],
     "tab_solo_title": "Cá nhân / Nhà phát triển",
@@ -993,11 +993,11 @@
       "tier_b": "Custom",
       "tier_span": "Private Cluster",
       "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
-      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) & Premium (6.25x) seats across departments.",
       "price_text": "Tùy chỉnh",
       "price_sub": "From 15 seats · 1-on-1 architecture & quote",
       "features": [
-        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Flexible mix of 15–100+ Standard (1.25x) & Premium (6.25x) seats",
         "Dedicated multi-Mac Studio hardware & dual-region failover",
         "Dedicated static native business ISP & private relay gateway",
         "Commercial Invoice, procurement onboarding & custom SLA",

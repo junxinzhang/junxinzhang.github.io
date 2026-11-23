@@ -450,7 +450,7 @@
       "tier_max": "Semua Kursi Premium Seat (6.25x)",
       "tier_max_badge": "Direkomendasikan",
       "tier_ultra": "Semua Kursi Ultra (20x)",
-      "toolbar_html": "Mulai dengan kursi seragam Pro, Max, atau Ultra — atau padu padankan kapan saja lewat <strong>add-on upgrade per kursi</strong> mandiri di bawah.",
+      "toolbar_html": "Mulai dengan kursi seragam Pro, Premium, — atau padu padankan kapan saja lewat <strong>add-on upgrade per kursi</strong> mandiri di bawah.",
       "team": {
         "init_badge": "5 × Kursi Premium Seat (6.25x) · Host Khusus",
         "sub": "5 Kursi",
@@ -460,7 +460,7 @@
         "features_html": [
           "<strong>Host Mac Studio / Mac mini spek tinggi khusus</strong> eksklusif untuk tim Anda",
           "Pengalihan kursi milik organisasi untuk onboarding/offboarding &amp; <strong>satu faktur gabungan</strong>",
-          "Upgrade kursi tertentu ke Premium Seat (6.25x) atau Ultra (20x) sesuai kebutuhan kapan saja",
+          "Upgrade kursi tertentu ke Premium Seat (6.25x) sesuai kebutuhan kapan saja",
           "Kanal grup concierge khusus tim <strong>7×24 jam</strong>",
           "Gratis kanal privat RustDesk berkecepatan tinggi untuk tim"
         ],
@@ -616,7 +616,7 @@
       },
       {
         "q": "Bagaimana perbandingan paket 1x, 5x, 20x, Team, dan Business? Apakah ada diskon tahunan?",
-        "a_html": "Kelima tingkatan paket menyesuaikan jumlah kursi, tingkat isolasi perangkat keras, jam layanan concierge, serta fasilitas tambahan — dan <strong>penagihan tahunan cukup membayar 10 bulan per tahun (gratis 2 bulan) di semua tingkatan</strong>:<br>• <strong>1x Standar</strong>: Kuota dasar individu + environment Mac mini (akun macOS terpisah) + dukungan 1-on-1 <strong>7×8 jam</strong>;<br>• <strong>5x Pro</strong>: Kuota individu 5× + Mac mini spek tinggi (akun macOS terpisah) + dukungan prioritas 1-on-1 <strong>7×16 jam</strong>;<br>• <strong>20x Ultimate</strong>: Kuota individu 20× + Mac Studio / Mac mini spek tinggi (opsi mesin khusus) + concierge privat <strong>7×24 jam</strong> + <strong>kanal privat RustDesk</strong> + <strong>penyimpanan cloud 6 TB</strong>;<br>• <strong>Team (5 Kursi · Host Khusus)</strong>: Tersedia dalam tingkatan Semua-Pro (1x), Semua-Max (5x), atau Semua-Ultra (20x) — host fisik Mac khusus untuk tim Anda, pengalihan kursi anggota, penagihan terpadu, kanal privat RustDesk, penyimpanan cloud 6–12 TB &amp; concierge tim 7×24 jam;<br>• <strong>Business (10 Kursi · Klaster Multi-Mac)</strong>: Tersedia dalam tingkatan Semua-Pro (1x), Semua-Max (5x), atau Semua-Ultra (20x) — klaster multi-Mac khusus (deployment dua wilayah &amp; migrasi cepat di 9 negara), faktur komersial, relay RustDesk enterprise, penyimpanan cloud 12–30 TB &amp; SLA VIP 7×24 jam;<br>• <strong>Add-on Upgrade Per Kursi</strong>: Mulai dari paket dasar Semua-Pro atau Semua-Max lalu upgrade kursi tertentu ke Max (5x) atau Ultra (20x) kapan saja melalui checkout mandiri (jumlah 1–50 kursi dapat disesuaikan);<br>• <strong>Add-on Jalur Khusus Enterprise ClaudeOps</strong>: Akselerasi lintas negara BGP enterprise opsional bagi pelanggan 1x (+$5/bln) dan 5x (+$20/bln) (sudah termasuk gratis pada 20x, Team &amp; Business)."
+        "a_html": "Kelima tingkatan paket menyesuaikan jumlah kursi, tingkat isolasi perangkat keras, jam layanan concierge, serta fasilitas tambahan — dan <strong>penagihan tahunan cukup membayar 10 bulan per tahun (gratis 2 bulan) di semua tingkatan</strong>:<br>• <strong>1x Standar</strong>: Kuota dasar individu + environment Mac mini (akun macOS terpisah) + dukungan 1-on-1 <strong>7×8 jam</strong>;<br>• <strong>5x Pro</strong>: Kuota individu 5× + Mac mini spek tinggi (akun macOS terpisah) + dukungan prioritas 1-on-1 <strong>7×16 jam</strong>;<br>• <strong>20x Ultimate</strong>: Kuota individu 20× + Mac Studio / Mac mini spek tinggi (opsi mesin khusus) + concierge privat <strong>7×24 jam</strong> + <strong>kanal privat RustDesk</strong> + <strong>penyimpanan cloud 6 TB</strong>;<br>• <strong>Team (5 Kursi · Host Khusus)</strong>: Tersedia dalam tingkatan Semua-Pro (1x), Semua-Premium Seat (6.25x), atau Semua-Ultra (20x) — host fisik Mac khusus untuk tim Anda, pengalihan kursi anggota, penagihan terpadu, kanal privat RustDesk, penyimpanan cloud 6–12 TB &amp; concierge tim 7×24 jam;<br>• <strong>Business (10 Kursi · Klaster Multi-Mac)</strong>: Tersedia dalam tingkatan Semua-Pro (1x), Semua-Premium Seat (6.25x), atau Semua-Ultra (20x) — klaster multi-Mac khusus (deployment dua wilayah &amp; migrasi cepat di 9 negara), faktur komersial, relay RustDesk enterprise, penyimpanan cloud 12–30 TB &amp; SLA VIP 7×24 jam;<br>• <strong>Add-on Upgrade Per Kursi</strong>: Mulai dari paket dasar Semua-Pro atau Semua-Premium lalu upgrade kursi tertentu ke Premium Seat (6.25x) kapan saja melalui checkout mandiri (jumlah 1–50 kursi dapat disesuaikan);<br>• <strong>Add-on Jalur Khusus Enterprise ClaudeOps</strong>: Akselerasi lintas negara BGP enterprise opsional bagi pelanggan 1x (+$5/bln) dan 5x (+$20/bln) (sudah termasuk gratis pada 20x, Team &amp; Business)."
       },
       {
         "q": "Apa itu add-on Jalur Khusus Enterprise ClaudeOps? Siapa yang membutuhkannya?",
@@ -972,7 +972,7 @@
       {
         "id": "ent-custom",
         "btn": "15+ seat custom enterprise cluster",
-        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."
       }
     ],
     "tab_solo_title": "Individu & Kreator",
@@ -993,11 +993,11 @@
       "tier_b": "Custom",
       "tier_span": "Private Cluster",
       "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
-      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) & Premium (6.25x) seats across departments.",
       "price_text": "Kustom",
       "price_sub": "From 15 seats · 1-on-1 architecture & quote",
       "features": [
-        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Flexible mix of 15–100+ Standard (1.25x) & Premium (6.25x) seats",
         "Dedicated multi-Mac Studio hardware & dual-region failover",
         "Dedicated static native business ISP & private relay gateway",
         "Commercial Invoice, procurement onboarding & custom SLA",

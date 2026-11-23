@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="เลือกระดับที่นั่งของทีม">
               <button type="button" data-seat-tier="pro" aria-pressed="false">ที่นั่ง Pro ทั้งหมด (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">ที่นั่ง Max ทั้งหมด (6.25x) <span class="save-badge">แนะนำ</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">ที่นั่ง Ultra ทั้งหมด (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
@@ -1643,7 +1643,7 @@
                   <li data-ent-seat-li="team">รวม <strong>5 ที่นั่งวิศวกรรมระดับ Premium Seat (6.25x)</strong> (แยกพื้นที่ทำงาน Claude &amp; บัญชี macOS อิสระรายบุคคล)</li>
                   <li><strong>โฮสต์เครื่องจริง Mac Studio / Mac mini สเปกสูง</strong> สำหรับทีมของคุณโดยเฉพาะ</li>
                   <li>โอนย้ายสิทธิ์ที่นั่งเมื่อรับหรือเปลี่ยนพนักงานได้สะดวก &amp; <strong>ออกใบแจ้งหนี้รวมใบเดียว</strong></li>
-                  <li>อัปเกรดที่นั่งรายบุคคลเป็น Premium Seat (6.25x) หรือ Ultra (20x) ได้ตลอดเวลาตามต้องการ</li>
+                  <li>อัปเกรดที่นั่งรายบุคคลเป็น Premium Seat (6.25x) ได้ตลอดเวลาตามต้องการ</li>
                   <li>กลุ่มดูแลเฉพาะทีมโดยทีมวิศวกรตลอด <strong>7×24 ชม.</strong></li>
                   <li style="color: var(--primary-strong); font-weight: 600;">ฟรี ช่องทาง RustDesk ความเร็วสูงส่วนตัวสำหรับทีม</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">ฟรี พื้นที่คลาวด์สำหรับทีมขนาด 12 TB (Google Drive / iCloud+)</li>
@@ -1676,11 +1676,11 @@
                 <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
                 <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
                 <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
-                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) &amp; Premium (6.25x) seats across departments.</p>
                 <div class="price price-custom">ปรับแต่งเฉพาะ</div>
                 <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
                 <ul class="features">
-                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Flexible mix of 15–100+ Standard (1.25x) &amp; Premium (6.25x) seats</li>
                   <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
                   <li>Dedicated static native business ISP &amp; private relay gateway</li>
                   <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">เลือกได้ 1–50 ที่นั่ง คิดเงินตามจำนวนที่นั่งตอนชำระ</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>อัปเกรด</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ ที่นั่ง / เดือน</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_USD&amp;locale=th" target="_blank" rel="noopener nofollow">อัปเกรดที่นั่ง →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>อัปเกรด</span></div>
-                      <p class="addon-desc">อัปเกรดผู้ก่อตั้ง CTO หรือหัวหน้าสถาปนิกซอฟต์แวร์บนแพ็กเกจ All-Premium สู่ความจุหลายเอเจนต์ระดับ 20x Ultra</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ ที่นั่ง / เดือน</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_USD&amp;locale=th" target="_blank" rel="noopener nofollow">อัปเกรดที่นั่ง →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>ข้ามขั้น</span></div>
-                      <p class="addon-desc">ยกระดับที่นั่งใดก็ได้บนแพ็กเกจพื้นฐาน All-Standard ก้าวสู่โควตาเรือธง 20x Ultra เต็มรูปแบบทันที</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ ที่นั่ง / เดือน</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_USD&amp;locale=th" target="_blank" rel="noopener nofollow">อัปเกรดที่นั่ง →</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>แพ็กเกจ 1x, 5x, 20x, Team และ Business ต่างกันอย่างไร? มีส่วนลดรายปีหรือไม่?</summary>
-            <p>ทั้ง 5 แพ็กเกจออกแบบให้รองรับจำนวนที่นั่ง ระดับการแยกฮาร์ดแวร์ ชั่วโมงดูแลของทีมวิศวกร และสิทธิพิเศษที่เพิ่มขึ้นตามลำดับ — และ <strong>การชำระรายปีจะคิดค่าบริการเพียง 10 เดือนต่อปี (ฟรี 2 เดือน) ทุกแพ็กเกจ</strong>:<br>• <strong>1x มาตรฐาน</strong>: โควตาพื้นฐานสำหรับผู้ใช้เดี่ยว + เครื่อง Mac mini (แยกบัญชี macOS) + ซัพพอร์ต 1 ต่อ 1 <strong>7×8 ชม.</strong>;<br>• <strong>5x โปร</strong>: โควตา 5 เท่าสำหรับผู้ใช้เดี่ยว + เครื่อง Mac mini สเปกสูง (แยกบัญชี macOS) + ซัพพอร์ตลำดับสำคัญ 1 ต่อ 1 <strong>7×16 ชม.</strong>;<br>• <strong>20x อัลติเมท</strong>: โควตา 20 เท่าสำหรับผู้ใช้เดี่ยว + Mac Studio / Mac mini สเปกสูง (เลือกเหมาเครื่องได้) + ผู้ช่วยส่วนตัว <strong>7×24 ชม.</strong> + <strong>ช่องทาง RustDesk ส่วนตัว</strong> + <strong>พื้นที่คลาวด์ 6 TB</strong>;<br>• <strong>Team (5 ที่นั่ง · โฮสต์เฉพาะทีม)</strong>: เลือกได้ทั้งแบบ All-Pro (1x), All-Max (5x) หรือ All-Ultra (20x) — เครื่องโฮสต์ Mac จริงเฉพาะทีม โอนย้ายที่นั่งได้ ใบแจ้งหนี้รวม ช่องทาง RustDesk ส่วนตัว พื้นที่คลาวด์ 6–12 TB และทีมดูแล 7×24 ชม.;<br>• <strong>Business (10 ที่นั่ง · คลัสเตอร์หลายเครื่อง)</strong>: เลือกได้ทั้งแบบ All-Pro (1x), All-Max (5x) หรือ All-Ultra (20x) — คลัสเตอร์เครื่องจริง Mac หลายเครื่อง (วางระบบ 2 ภูมิภาคและย้ายโหนดไวใน 9 ประเทศ) ใบแจ้งหนี้การค้า รีเลย์ RustDesk ระดับองค์กร พื้นที่คลาวด์ 12–30 TB และบริการ 7×24 ชม. VIP SLA;<br>• <strong>แพ็กเกจเสริมอัปเกรดรายที่นั่ง</strong>: เริ่มต้นด้วยแผนพื้นฐาน All-Pro หรือ All-Max แล้วเลือกอัปเกรดเฉพาะบางที่นั่งเป็น Max (5x) หรือ Ultra (20x) ได้ทุกเมื่อผ่านหน้าชำระเงินด้วยตนเอง (ปรับจำนวนได้ 1–50 ที่นั่ง);<br>• <strong>แพ็กเกจเสริมสายตรงองค์กร ClaudeOps</strong>: ตัวเลือกเร่งความเร็ว BGP ข้ามประเทศระดับองค์กรสำหรับผู้สมัคร 1x (+$5/เดือน) และ 5x (+$20/เดือน) (รวมให้ฟรีแล้วใน 20x, Team &amp; Business)</p>
+            <p>ทั้ง 5 แพ็กเกจออกแบบให้รองรับจำนวนที่นั่ง ระดับการแยกฮาร์ดแวร์ ชั่วโมงดูแลของทีมวิศวกร และสิทธิพิเศษที่เพิ่มขึ้นตามลำดับ — และ <strong>การชำระรายปีจะคิดค่าบริการเพียง 10 เดือนต่อปี (ฟรี 2 เดือน) ทุกแพ็กเกจ</strong>:<br>• <strong>1x มาตรฐาน</strong>: โควตาพื้นฐานสำหรับผู้ใช้เดี่ยว + เครื่อง Mac mini (แยกบัญชี macOS) + ซัพพอร์ต 1 ต่อ 1 <strong>7×8 ชม.</strong>;<br>• <strong>5x โปร</strong>: โควตา 5 เท่าสำหรับผู้ใช้เดี่ยว + เครื่อง Mac mini สเปกสูง (แยกบัญชี macOS) + ซัพพอร์ตลำดับสำคัญ 1 ต่อ 1 <strong>7×16 ชม.</strong>;<br>• <strong>20x อัลติเมท</strong>: โควตา 20 เท่าสำหรับผู้ใช้เดี่ยว + Mac Studio / Mac mini สเปกสูง (เลือกเหมาเครื่องได้) + ผู้ช่วยส่วนตัว <strong>7×24 ชม.</strong> + <strong>ช่องทาง RustDesk ส่วนตัว</strong> + <strong>พื้นที่คลาวด์ 6 TB</strong>;<br>• <strong>Team (5 ที่นั่ง · โฮสต์เฉพาะทีม)</strong>: เลือกได้ทั้งแบบ All-Pro (1x), All-Premium Seat (6.25x) หรือ All-Ultra (20x) — เครื่องโฮสต์ Mac จริงเฉพาะทีม โอนย้ายที่นั่งได้ ใบแจ้งหนี้รวม ช่องทาง RustDesk ส่วนตัว พื้นที่คลาวด์ 6–12 TB และทีมดูแล 7×24 ชม.;<br>• <strong>Business (10 ที่นั่ง · คลัสเตอร์หลายเครื่อง)</strong>: เลือกได้ทั้งแบบ All-Pro (1x), All-Premium Seat (6.25x) หรือ All-Ultra (20x) — คลัสเตอร์เครื่องจริง Mac หลายเครื่อง (วางระบบ 2 ภูมิภาคและย้ายโหนดไวใน 9 ประเทศ) ใบแจ้งหนี้การค้า รีเลย์ RustDesk ระดับองค์กร พื้นที่คลาวด์ 12–30 TB และบริการ 7×24 ชม. VIP SLA;<br>• <strong>แพ็กเกจเสริมอัปเกรดรายที่นั่ง</strong>: เริ่มต้นด้วยแผนพื้นฐาน All-Pro หรือ All-Premium แล้วเลือกอัปเกรดเฉพาะบางที่นั่งเป็น Premium Seat (6.25x) ได้ทุกเมื่อผ่านหน้าชำระเงินด้วยตนเอง (ปรับจำนวนได้ 1–50 ที่นั่ง);<br>• <strong>แพ็กเกจเสริมสายตรงองค์กร ClaudeOps</strong>: ตัวเลือกเร่งความเร็ว BGP ข้ามประเทศระดับองค์กรสำหรับผู้สมัคร 1x (+$5/เดือน) และ 5x (+$20/เดือน) (รวมให้ฟรีแล้วใน 20x, Team &amp; Business)</p>
           </details>
           <details>
             <summary>แพ็กเกจเสริมสายตรงองค์กร ClaudeOps คืออะไร? เหมาะกับใคร?</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ เดือน", "perYear": "/ ปี", "perSeatMo": "/ ที่นั่ง / เดือน", "perSeatYr": "/ ที่นั่ง / ปี", "perMoShort": "/ เดือน", "perYrShort": "/ ปี", "title12mo": "ยอดรวม 12 เดือนหากชำระรายเดือน", "titleRegMo": "ราคารายเดือนปกติ", "noteAnnual": "รายปีจ่ายเพียง 10 เดือน · เฉลี่ย ~{sym}{eq}/เดือน ประหยัด {sym}{save}", "note1xMo": "รวมสภาพแวดล้อม Claude · เฉลี่ยประมาณ {sym}{day} / วัน", "note20xPromo": "ล็อกราคาโปรเมื่อต่ออายุ · ต้นทุนต่อหน่วยประมาณ {ratio}% ของ 1x", "noteMultMo": "รวมสภาพแวดล้อม Claude · โควตา {mult}x ต้นทุนต่อหน่วยประมาณ {ratio}% ของ 1x", "entTeamMo": "รวม 5 ที่นั่งแยกอิสระระดับ {label} · โฮสต์ Mac เฉพาะทีมและบิลรวม", "entBizMo": "รวม 10 ที่นั่งแยกอิสระระดับ {label} · คลัสเตอร์หลายเครื่องและ VIP SLA", "line0Mo": "เร่งความเร็ว BGP ไร้ Packet Loss 24/7 · ดูแลพร้อมแพ็กเกจหลัก", "line1Mo": "ทรูพุตลำดับสำคัญ 5 เท่า · คิว BGP QoS พิเศษ"};
       var DEFAULT_CURRENCY = "USD";
       var CUR_LOCALE_SLUG = "th";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
@@ -2774,7 +2754,7 @@
       });
     }
 
-    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."};
     var panelSolo = document.getElementById('panel-solo');
     var panelEnt = document.getElementById('pricing-enterprise');
     var finderTip = document.getElementById('finder-tip');

@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="ជ្រើសរើសកម្រិតកៅអីក្រុមការងារ">
               <button type="button" data-seat-tier="pro" aria-pressed="false">កៅអី Pro ទាំងអស់ (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">កៅអី Max ទាំងអស់ (6.25x) <span class="save-badge">ណែនាំ</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">កៅអី Ultra ទាំងអស់ (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
@@ -1676,11 +1676,11 @@
                 <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
                 <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
                 <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
-                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) &amp; Premium (6.25x) seats across departments.</p>
                 <div class="price price-custom">តាមតម្រូវការ</div>
                 <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
                 <ul class="features">
-                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Flexible mix of 15–100+ Standard (1.25x) &amp; Premium (6.25x) seats</li>
                   <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
                   <li>Dedicated static native business ISP &amp; private relay gateway</li>
                   <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">ជ្រើសរើស 1–50 កៅអី; គិតថ្លៃតាមកៅអីពេលទូទាត់</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>ដំឡើងកម្រិត</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ កៅអី / ខែ</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_USD&amp;locale=km" target="_blank" rel="noopener nofollow">ដំឡើងកម្រិតកៅអី →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>ដំឡើងកម្រិត</span></div>
-                      <p class="addon-desc">ដំឡើងកៅអីស្ថាបនិក CTO ឬប្រធានស្ថាបត្យករលើកញ្ចប់ All-Premium ទៅកាន់សមត្ថភាព Multi-agent កម្រិត 20x Ultra។</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ កៅអី / ខែ</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_USD&amp;locale=km" target="_blank" rel="noopener nofollow">ដំឡើងកម្រិតកៅអី →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>ផ្លោះកម្រិតផ្ទាល់</span></div>
-                      <p class="addon-desc">ដំឡើងកៅអីណាមួយលើកញ្ចប់មូលដ្ឋាន All-Standard ឆ្ពោះទៅកាន់កូតាកំពូល 20x Ultra ពេញលេញភ្លាមៗ។</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ កៅអី / ខែ</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_USD&amp;locale=km" target="_blank" rel="noopener nofollow">ដំឡើងកម្រិតកៅអី →</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>តើកញ្ចប់ 1x, 5x, 20x, Team និង Business ខុសគ្នាដូចម្តេច? តើមានការបញ្ចុះតម្លៃប្រចាំឆ្នាំទេ?</summary>
-            <p>កញ្ចប់ទាំងប្រាំត្រូវបានរៀបចំទៅតាមចំនួនកៅអី កម្រិតបំបែកផ្នែករឹង ម៉ោងថែទាំរបស់ទីប្រឹក្សា និងអត្ថប្រយោជន៍បន្ថែម — ហើយ <strong>ការទូទាត់ប្រចាំឆ្នាំគិតថ្លៃត្រឹមតែ 10 ខែក្នុងមួយឆ្នាំប៉ុណ្ណោះ (ថែមជូន 2 ខែឥតគិតថ្លៃ) សម្រាប់គ្រប់កញ្ចប់ទាំងអស់</strong>៖<br>• <strong>1x ស្តង់ដារ</strong>៖ កូតាមូលដ្ឋានសម្រាប់បុគ្គល + បរិស្ថាន Mac mini (គណនី macOS ដាច់ដោយឡែក) + ជំនួយ 1 ទល់ 1 ម៉ោង <strong>7×8h</strong>;<br>• <strong>5x ប្រូ</strong>៖ កូតា 5 ដងសម្រាប់បុគ្គល + Mac mini សមត្ថភាពខ្ពស់ (គណនី macOS ដាច់ដោយឡែក) + ជំនួយអាទិភាព 1 ទល់ 1 ម៉ោង <strong>7×16h</strong>;<br>• <strong>20x កំពូល</strong>៖ កូតា 20 ដងសម្រាប់បុគ្គល + Mac Studio / Mac mini សមត្ថភាពខ្ពស់ (ជម្រើសម៉ាស៊ីនផ្តាច់មុខ) + ទីប្រឹក្សាឯកជន <strong>7×24h</strong> + <strong>បណ្តាញ RustDesk ឯកជន</strong> + <strong>ទំហំផ្ទុក Cloud 6 TB</strong>;<br>• <strong>Team (5 កៅអី · ម៉ាស៊ីនមេផ្តាច់មុខ)</strong>៖ មានជាជម្រើស All-Pro (1x), All-Max (5x) ឬ All-Ultra (20x) — ម៉ាស៊ីនពិត Mac ផ្តាច់មុខសម្រាប់ក្រុម ការផ្ទេរកៅអី វិក្កយបត្ររួម បណ្តាញ RustDesk ឯកជន ទំហំផ្ទុក Cloud 6–12 TB &amp; ជំនួយក្រុម 7×24h;<br>• <strong>Business (10 កៅអី · ប្រព័ន្ធ Mac ច្រើនគ្រឿង)</strong>៖ មានជាជម្រើស All-Pro (1x), All-Max (5x) ឬ All-Ultra (20x) — ប្រព័ន្ធ Cluster ម៉ាស៊ីន Mac ច្រើនគ្រឿងផ្តាច់មុខ (ដាក់ពង្រាយ 2 តំបន់ &amp; ផ្លាស់ទីរហ័សក្នុង 9 ប្រទេស) វិក្កយបត្រពាណិជ្ជកម្ម Relay RustDesk សហគ្រាស ទំហំផ្ទុក Cloud 12–30 TB &amp; VIP SLA 7×24h;<br>• <strong>កញ្ចប់បន្ថែមដំឡើងកម្រិតតាមកៅអី</strong>៖ ចាប់ផ្តើមលើកញ្ចប់មូលដ្ឋាន All-Pro ឬ All-Max រួចដំឡើងកៅអីជាក់លាក់ទៅ Max (5x) ឬ Ultra (20x) បានគ្រប់ពេលតាមរយៈទំព័រទូទាត់ដោយខ្លួនឯង (កែតម្រូវបរិមាណ 1–50 កៅអី);<br>• <strong>កញ្ចប់បន្ថែមខ្សែបណ្តាញសហគ្រាស ClaudeOps</strong>៖ ជម្រើសបង្កើនល្បឿន BGP ឆ្លងដែនកម្រិតសហគ្រាសសម្រាប់សមាជិក 1x (+$5/ខែ) និង 5x (+$20/ខែ) (មានផ្តល់ជូនឥតគិតថ្លៃរួចហើយនៅលើកញ្ចប់ 20x, Team &amp; Business)។</p>
+            <p>កញ្ចប់ទាំងប្រាំត្រូវបានរៀបចំទៅតាមចំនួនកៅអី កម្រិតបំបែកផ្នែករឹង ម៉ោងថែទាំរបស់ទីប្រឹក្សា និងអត្ថប្រយោជន៍បន្ថែម — ហើយ <strong>ការទូទាត់ប្រចាំឆ្នាំគិតថ្លៃត្រឹមតែ 10 ខែក្នុងមួយឆ្នាំប៉ុណ្ណោះ (ថែមជូន 2 ខែឥតគិតថ្លៃ) សម្រាប់គ្រប់កញ្ចប់ទាំងអស់</strong>៖<br>• <strong>1x ស្តង់ដារ</strong>៖ កូតាមូលដ្ឋានសម្រាប់បុគ្គល + បរិស្ថាន Mac mini (គណនី macOS ដាច់ដោយឡែក) + ជំនួយ 1 ទល់ 1 ម៉ោង <strong>7×8h</strong>;<br>• <strong>5x ប្រូ</strong>៖ កូតា 5 ដងសម្រាប់បុគ្គល + Mac mini សមត្ថភាពខ្ពស់ (គណនី macOS ដាច់ដោយឡែក) + ជំនួយអាទិភាព 1 ទល់ 1 ម៉ោង <strong>7×16h</strong>;<br>• <strong>20x កំពូល</strong>៖ កូតា 20 ដងសម្រាប់បុគ្គល + Mac Studio / Mac mini សមត្ថភាពខ្ពស់ (ជម្រើសម៉ាស៊ីនផ្តាច់មុខ) + ទីប្រឹក្សាឯកជន <strong>7×24h</strong> + <strong>បណ្តាញ RustDesk ឯកជន</strong> + <strong>ទំហំផ្ទុក Cloud 6 TB</strong>;<br>• <strong>Team (5 កៅអី · ម៉ាស៊ីនមេផ្តាច់មុខ)</strong>៖ មានជាជម្រើស All-Pro (1x), All-Premium Seat (6.25x) ឬ All-Ultra (20x) — ម៉ាស៊ីនពិត Mac ផ្តាច់មុខសម្រាប់ក្រុម ការផ្ទេរកៅអី វិក្កយបត្ររួម បណ្តាញ RustDesk ឯកជន ទំហំផ្ទុក Cloud 6–12 TB &amp; ជំនួយក្រុម 7×24h;<br>• <strong>Business (10 កៅអី · ប្រព័ន្ធ Mac ច្រើនគ្រឿង)</strong>៖ មានជាជម្រើស All-Pro (1x), All-Premium Seat (6.25x) ឬ All-Ultra (20x) — ប្រព័ន្ធ Cluster ម៉ាស៊ីន Mac ច្រើនគ្រឿងផ្តាច់មុខ (ដាក់ពង្រាយ 2 តំបន់ &amp; ផ្លាស់ទីរហ័សក្នុង 9 ប្រទេស) វិក្កយបត្រពាណិជ្ជកម្ម Relay RustDesk សហគ្រាស ទំហំផ្ទុក Cloud 12–30 TB &amp; VIP SLA 7×24h;<br>• <strong>កញ្ចប់បន្ថែមដំឡើងកម្រិតតាមកៅអី</strong>៖ ចាប់ផ្តើមលើកញ្ចប់មូលដ្ឋាន All-Pro ឬ All-Premium រួចដំឡើងកៅអីជាក់លាក់ទៅ Premium Seat (6.25x) ឬ Ultra (20x) បានគ្រប់ពេលតាមរយៈទំព័រទូទាត់ដោយខ្លួនឯង (កែតម្រូវបរិមាណ 1–50 កៅអី);<br>• <strong>កញ្ចប់បន្ថែមខ្សែបណ្តាញសហគ្រាស ClaudeOps</strong>៖ ជម្រើសបង្កើនល្បឿន BGP ឆ្លងដែនកម្រិតសហគ្រាសសម្រាប់សមាជិក 1x (+$5/ខែ) និង 5x (+$20/ខែ) (មានផ្តល់ជូនឥតគិតថ្លៃរួចហើយនៅលើកញ្ចប់ 20x, Team &amp; Business)។</p>
           </details>
           <details>
             <summary>តើកញ្ចប់បន្ថែមខ្សែបណ្តាញសហគ្រាស ClaudeOps គឺជាអ្វី? តើអ្នកណាគួរប្រើវា?</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ ខែ", "perYear": "/ ឆ្នាំ", "perSeatMo": "/ កៅអី / ខែ", "perSeatYr": "/ កៅអី / ឆ្នាំ", "perMoShort": "/ ខែ", "perYrShort": "/ ឆ្នាំ", "title12mo": "តម្លៃសរុប 12 ខែបើបង់ប្រចាំខែ", "titleRegMo": "តម្លៃប្រចាំខែធម្មតា", "noteAnnual": "បង់ប្រចាំឆ្នាំត្រឹម 10 ខែ · ~{sym}{eq}/ខែ, សន្សំបាន {sym}{save}", "note1xMo": "រួមបញ្ចូលបរិស្ថាន Claude · ប្រហែល {sym}{day} / ថ្ងៃ", "note20xPromo": "រក្សាតម្លៃប្រូម៉ូសិនពេលបន្តសុពលភាព · ថ្លៃឯកតាប្រហែល {ratio}% នៃ 1x", "noteMultMo": "រួមបញ្ចូលបរិស្ថាន Claude · កូតា {mult}x, ថ្លៃឯកតាប្រហែល {ratio}% នៃ 1x", "entTeamMo": "រួមបញ្ចូលកៅអីដាច់ដោយឡែក 5 {label} · ម៉ាស៊ីន Mac ផ្តាច់មុខ & វិក្កយបត្ររួម", "entBizMo": "រួមបញ្ចូលកៅអីដាច់ដោយឡែក 10 {label} · ប្រព័ន្ធ Mac ច្រើនគ្រឿង & VIP SLA", "line0Mo": "បណ្តាញ BGP 24/7 គ្មានការបាត់បង់ទិន្នន័យ · គ្រប់គ្រងរួមជាមួយកញ្ចប់មេ", "line1Mo": "ល្បឿនបញ្ជូនអាទិភាព 5 ដង · BGP QoS អាទិភាពខ្ពស់"};
       var DEFAULT_CURRENCY = "USD";
       var CUR_LOCALE_SLUG = "km";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
@@ -2774,7 +2754,7 @@
       });
     }
 
-    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."};
     var panelSolo = document.getElementById('panel-solo');
     var panelEnt = document.getElementById('pricing-enterprise');
     var finderTip = document.getElementById('finder-tip');

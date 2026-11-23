@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="Choisir le niveau des sièges d’équipe">
               <button type="button" data-seat-tier="pro" aria-pressed="false">Tous sièges Standard Seat (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">Tous sièges Premium Seat (6.25x) <span class="save-badge">Recommandé</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">Tous sièges Ultra (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
@@ -1643,7 +1643,7 @@
                   <li data-ent-seat-li="team">Inclut <strong>5 sièges d’ingénierie Premium Seat (6.25x)</strong> (espace Claude et compte macOS distincts par membre)</li>
                   <li><strong>Hôte Mac Studio / Mac mini haute performance dédié</strong> exclusivement à votre équipe</li>
                   <li>Réattribution des sièges lors des arrivées/départs et <strong>facture consolidée unique</strong></li>
-                  <li>Passez des sièges individuels en Premium Seat (6.25x) ou Ultra (20x) à la demande à tout moment</li>
+                  <li>Passez des sièges individuels en Premium Seat (6.25x) à la demande à tout moment</li>
                   <li>Canal de groupe dédié conciergerie d’équipe <strong>7×24h</strong></li>
                   <li style="color: var(--primary-strong); font-weight: 600;">Canal privé RustDesk haut débit d’équipe inclus sans surcoût</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">12 To de stockage cloud d’équipe inclus (Google Drive / iCloud+)</li>
@@ -1676,11 +1676,11 @@
                 <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
                 <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
                 <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
-                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) &amp; Premium (6.25x) seats across departments.</p>
                 <div class="price price-custom">Sur devis</div>
                 <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
                 <ul class="features">
-                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Flexible mix of 15–100+ Standard (1.25x) &amp; Premium (6.25x) seats</li>
                   <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
                   <li>Dedicated static native business ISP &amp; private relay gateway</li>
                   <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">Choisissez 1 à 50 postes ; facturé par poste au paiement</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>Upgrade</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>€</sup><span class="amount">289</span><small data-upg-period>/ siège / mois</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_EUR&amp;locale=fr" target="_blank" rel="noopener nofollow">Mettre à niveau →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Upgrade</span></div>
-                      <p class="addon-desc">Passez les fondateurs, CTO ou architectes principaux d’un plan All-Premium vers la capacité multi-agents 20x Ultra.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>€</sup><span class="amount">329</span><small data-upg-period>/ siège / mois</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_EUR&amp;locale=fr" target="_blank" rel="noopener nofollow">Mettre à niveau →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Direct</span></div>
-                      <p class="addon-desc">Faites passer directement tout siège d’une base All-Standard vers le quota intégral 20x Ultra.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>€</sup><span class="amount">609</span><small data-upg-period>/ siège / mois</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_EUR&amp;locale=fr" target="_blank" rel="noopener nofollow">Mettre à niveau →</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>Quelle est la différence entre 1x, 5x, 20x, Team et Business ? Y a-t-il une remise annuelle ?</summary>
-            <p>Les cinq formules font évoluer le nombre de sièges, l’isolation matérielle, les horaires de conciergerie et les avantages inclus — et <strong>la facturation annuelle ne facture que 10 mois par an (2 mois offerts) sur toutes les offres</strong> :<br>• <strong>1x Standard</strong> : Quota solo de base + environnement Mac mini (compte macOS séparé) + support 1-à-1 <strong>7×8h</strong> ;<br>• <strong>5x Pro</strong> : Quota solo 5× + Mac mini haute performance (compte macOS séparé) + support prioritaire 1-à-1 <strong>7×16h</strong> ;<br>• <strong>20x Ultimate</strong> : Quota solo 20× + Mac Studio / Mac mini haute performance (option machine dédiée) + conciergerie privée <strong>7×24h</strong> + <strong>canal privé RustDesk</strong> + <strong>6 To de stockage cloud</strong> ;<br>• <strong>Team (5 sièges · Hôte dédié)</strong> : Disponible en paliers All-Pro (1x), All-Max (5x) ou All-Ultra (20x) — hôte Mac physique dédié à votre équipe, réattribution des sièges, facturation consolidée, canal privé RustDesk, 6 à 12 To de stockage cloud et conciergerie d’équipe 7×24h ;<br>• <strong>Business (10 sièges · Cluster multi-Mac)</strong> : Disponible en paliers All-Pro (1x), All-Max (5x) ou All-Ultra (20x) — cluster multi-Mac dédié (déploiement bi-région dans 9 pays et migration rapide), facturation commerciale, relais RustDesk entreprise, 12 à 30 To de stockage cloud et SLA VIP 7×24h ;<br>• <strong>Options de mise à niveau par siège</strong> : Démarrez sur une base All-Pro ou All-Max et passez certains sièges en Max (5x) ou Ultra (20x) à tout moment en libre-service (quantité ajustable de 1 à 50 sièges) ;<br>• <strong>Option Ligne Dédiée Entreprise ClaudeOps</strong> : Accélération transfrontalière BGP entreprise en option pour les abonnés 1x (+5 $/mois) et 5x (+20 $/mois) (déjà incluse sans frais supplémentaires sur 20x, Team et Business).</p>
+            <p>Les cinq formules font évoluer le nombre de sièges, l’isolation matérielle, les horaires de conciergerie et les avantages inclus — et <strong>la facturation annuelle ne facture que 10 mois par an (2 mois offerts) sur toutes les offres</strong> :<br>• <strong>1x Standard</strong> : Quota solo de base + environnement Mac mini (compte macOS séparé) + support 1-à-1 <strong>7×8h</strong> ;<br>• <strong>5x Pro</strong> : Quota solo 5× + Mac mini haute performance (compte macOS séparé) + support prioritaire 1-à-1 <strong>7×16h</strong> ;<br>• <strong>20x Ultimate</strong> : Quota solo 20× + Mac Studio / Mac mini haute performance (option machine dédiée) + conciergerie privée <strong>7×24h</strong> + <strong>canal privé RustDesk</strong> + <strong>6 To de stockage cloud</strong> ;<br>• <strong>Team (5 sièges · Hôte dédié)</strong> : Disponible en paliers All-Pro (1x), All-Premium Seat (6.25x) ou All-Ultra (20x) — hôte Mac physique dédié à votre équipe, réattribution des sièges, facturation consolidée, canal privé RustDesk, 6 à 12 To de stockage cloud et conciergerie d’équipe 7×24h ;<br>• <strong>Business (10 sièges · Cluster multi-Mac)</strong> : Disponible en paliers All-Pro (1x), All-Premium Seat (6.25x) ou All-Ultra (20x) — cluster multi-Mac dédié (déploiement bi-région dans 9 pays et migration rapide), facturation commerciale, relais RustDesk entreprise, 12 à 30 To de stockage cloud et SLA VIP 7×24h ;<br>• <strong>Options de mise à niveau par siège</strong> : Démarrez sur une base All-Pro ou All-Premium et passez certains sièges en Premium Seat (6.25x) à tout moment en libre-service (quantité ajustable de 1 à 50 sièges) ;<br>• <strong>Option Ligne Dédiée Entreprise ClaudeOps</strong> : Accélération transfrontalière BGP entreprise en option pour les abonnés 1x (+5 $/mois) et 5x (+20 $/mois) (déjà incluse sans frais supplémentaires sur 20x, Team et Business).</p>
           </details>
           <details>
             <summary>Qu’est-ce que l’option Ligne Dédiée Entreprise ClaudeOps et à qui s’adresse-t-elle ?</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ mois", "perYear": "/ an", "perSeatMo": "/ siège / mois", "perSeatYr": "/ siège / an", "perMoShort": "/ mois", "perYrShort": "/ an", "title12mo": "12 mois facturés mensuellement", "titleRegMo": "Tarif mensuel normal", "noteAnnual": "10 mois en paiement annuel · ~{sym}{eq}/mois, économisez {sym}{save}", "note1xMo": "Environnement Claude inclus · env. {sym}{day} / jour", "note20xPromo": "Tarif promo maintenu au renouvellement · coût unitaire ~{ratio} % de 1x", "noteMultMo": "Environnement Claude inclus · quota {mult}x, coût unitaire ~{ratio} % de 1x", "entTeamMo": "Inclut 5 sièges isolés {label} · Hôte Mac dédié et facture unique", "entBizMo": "Inclut 10 sièges isolés {label} · Cluster multi-Mac dédié et SLA VIP", "line0Mo": "Accélération BGP 24/7 zéro perte · Gérée avec votre offre", "line1Mo": "Débit prioritaire 5× · QoS BGP haute priorité"};
       var DEFAULT_CURRENCY = "EUR";
       var CUR_LOCALE_SLUG = "fr";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
@@ -2774,7 +2754,7 @@
       });
     }
 
-    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."};
     var panelSolo = document.getElementById('panel-solo');
     var panelEnt = document.getElementById('pricing-enterprise');
     var finderTip = document.getElementById('finder-tip');

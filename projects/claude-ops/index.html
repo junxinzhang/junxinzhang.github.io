@@ -1252,6 +1252,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1674,7 +1675,6 @@
             <div class="seat-tier-switch" role="group" aria-label="选择团队席位规格">
               <button type="button" data-seat-tier="pro" aria-pressed="false">全员 Standard Seat (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">全员 Premium Seat (6.25x) <span class="save-badge">主力推荐</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">全员 Ultra 旗舰版 (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">第 2 步：按团队人数选择专属物理集群规模</p>
@@ -1690,7 +1690,7 @@
                   <li data-ent-seat-li="team">包含 <strong>5 个 Premium Seat (6.25x) 高级研发席位</strong>（每人独立 Claude 空间与 macOS 账户）</li>
                   <li><strong>高配置 Mac Studio / Mac mini 整机团队独享</strong>，硬件级安全隔离</li>
                   <li>公司持有席位调配权，支持成员入离职交接与<strong>统一团队账单发票托管</strong></li>
-                  <li>支持后期随时按单席位补差价升配至更高额度（Premium 6.25x / Ultra 20x）</li>
+                  <li>支持后期随时按单席位补差价升配至更高额度（Premium Seat 6.25x）</li>
                   <li><strong>7×24 小时</strong>专属团队技术顾问群一对多实时支持</li>
                   <li style="color: var(--primary-strong); font-weight: 600;">免费赠送团队自建高速 RustDesk 加密专属通道</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">免费赠送 12 TB 团队云存储权益（Google Drive / iCloud+）</li>
@@ -1723,11 +1723,11 @@
                 <span class="badge badge-custom">15–100+ 席位 · 架构师定制</span>
                 <div class="plan-tier"><b>Custom</b><span>私有集群版</span></div>
                 <div class="plan-fit">适合：中大型研发中心 · 混合席位配比 · 专属合规要求</div>
-                <p class="plan-desc">为您量身规划多国双活物理 Mac Studio 集群，支持按部门自由混搭 Pro / Max / Ultra 席位配比。</p>
+                <p class="plan-desc">为您量身规划多国双活物理 Mac Studio 集群，支持按部门自由混搭 Standard (1.25x) / Premium (6.25x) 及更高企业定制配额，一对一私聊出方案。</p>
                 <div class="price price-custom">按需定制</div>
                 <p class="price-note">15 席起订 · 专属架构师 1对1 出具方案报价</p>
                 <ul class="features">
-                  <li>支持 15–100+ 席位任意 Pro / Max / Ultra 比例混搭</li>
+                  <li>支持 15–100+ 席位 Standard (1.25x) / Premium (6.25x) 自由混搭与定制</li>
                   <li>多台高配 Mac Studio 专属物理集群与跨国双区容灾</li>
                   <li>独享海外原生商业静态宽带与独立高速中继网关</li>
                   <li>统一商业形式发票（Commercial Invoice）与定制 SLA</li>
@@ -1749,7 +1749,7 @@
                     <strong>团队需要高低规格混搭？单席位补差价弹性升配包</strong>
                     <span class="drawer-pill">支持 1–50 席自选数量</span>
                   </span>
-                  <span class="drawer-hint">已购 Team / Business 底座的团队，可单独为少数核心骨干补差价升级至 Max 或 Ultra</span>
+                  <span class="drawer-hint">已购 Standard Seat (1.25x) 底座的团队，可单独为核心研发成员补差价升级至 Premium Seat (6.25x)</span>
                 </span>
               </span>
               <span class="drawer-toggle-pill"><span class="when-closed">展开升配包</span><span class="when-open">收起</span> <i>▾</i></span>
@@ -1765,7 +1765,7 @@
                 </div>
                 <span class="seat-qty-hint">可选 1–50 席，结账时按席位数计费</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>席位升配</span></div>
@@ -1774,26 +1774,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>A$</sup><span class="amount">479</span><small data-upg-period>/ 席 / 月</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_AUD&amp;locale=zh" target="_blank" rel="noopener nofollow">下单升配 →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>席位升配</span></div>
-                      <p class="addon-desc">在全员 Premium Seat (6.25x) 研发底座上，为创始人、CTO 或核心架构师升级至 20x 顶配多 Agent 额度。</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>A$</sup><span class="amount">539</span><small data-upg-period>/ 席 / 月</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_AUD&amp;locale=zh" target="_blank" rel="noopener nofollow">下单升配 →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>跨级升配</span></div>
-                      <p class="addon-desc">在全员 Standard Seat (1.25x) 办公底座上，将指定核心技术负责人的席位一步到位直接升配至 20x 顶配额度。</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>A$</sup><span class="amount">999</span><small data-upg-period>/ 席 / 月</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_AUD&amp;locale=zh" target="_blank" rel="noopener nofollow">下单升配 →</a>
                     </div>
                   </div>
               </div>
@@ -2088,7 +2068,7 @@
           </details>
           <details>
             <summary>1x / 5x / 20x 与 Team / Business 方案有什么区别？按年付费有什么优惠？</summary>
-            <p>全系五档方案在席位规模、物理机隔离级别、响应时段与附加权益上逐级进阶，且<strong>全系选择按年付费均仅收 10 个月费用（立省 2 个月）</strong>：<br>• <strong>1x 标准版</strong>：单人基础用量额度 + Mac mini 物理环境（独立 macOS 账户隔离）+ <strong>7×8 小时</strong>一对一专属支持；<br>• <strong>5x 专业版</strong>：单人 5 倍用量额度 + 高配置 Mac mini 物理环境（独立 macOS 账户隔离）+ <strong>7×16 小时</strong>一对一优先支持；<br>• <strong>20x 旗舰版</strong>：单人 20 倍用量额度 + 高配置 Mac Studio / Mac mini（可开启整机独享）+ <strong>7×24 小时</strong>私人顾问通道 + <strong>自建高速 RustDesk 专线</strong> + <strong>6 TB 云存储</strong>；<br>• <strong>Team 团队版（5 席 · 整机独享）</strong>：可选全员 Pro (1x)、Max (5x) 或 Ultra (20x) 规格，配备高配物理 Mac 整机团队独享、公司级席位流转管理、自建 RustDesk 团队专线、6–12 TB 云存储与 7×24h 团队顾问群；<br>• <strong>Business 企业版（10 席 · 多机集群）</strong>：可选全员 Pro (1x)、Max (5x) 或 Ultra (20x) 规格，配备多台物理 Mac 专属集群（支持 9 国双区域混合部署与快速迁移）、商业形式发票、企业级 RustDesk 独立中继、12–30 TB 云存储与 7×24h VIP 响应群；<br>• <strong>单席位弹性升配包</strong>：支持先订阅 Pro 或 Max 团队底座，再通过单席位升配包（可在结账页自选席位数量）将指定成员随时升级至 Max (5x) 或 Ultra (20x)，灵活实现任意席位混搭；<br>• <strong>ClaudeOps 企业专线增值包</strong>：面向 1x（+$5/月）与 5x（+$20/月）用户提供企业精品 BGP 跨境加速与 0% 丢包保障（20x / Team / Business 已免费内置，无需重复购买）。</p>
+            <p>全系五档方案在席位规模、物理机隔离级别、响应时段与附加权益上逐级进阶，且<strong>全系选择按年付费均仅收 10 个月费用（立省 2 个月）</strong>：<br>• <strong>1x 标准版</strong>：单人基础用量额度 + Mac mini 物理环境（独立 macOS 账户隔离）+ <strong>7×8 小时</strong>一对一专属支持；<br>• <strong>5x 专业版</strong>：单人 5 倍用量额度 + 高配置 Mac mini 物理环境（独立 macOS 账户隔离）+ <strong>7×16 小时</strong>一对一优先支持；<br>• <strong>20x 旗舰版</strong>：单人 20 倍用量额度 + 高配置 Mac Studio / Mac mini（可开启整机独享）+ <strong>7×24 小时</strong>私人顾问通道 + <strong>自建高速 RustDesk 专线</strong> + <strong>6 TB 云存储</strong>；<br>• <strong>Team 团队版（5 席 · 整机独享）</strong>：可选全员 Standard Seat (1.25x) 或 Premium Seat (6.25x) 规格，配备高配物理 Mac 整机团队独享、公司级席位流转管理、自建 RustDesk 团队专线、6–12 TB 云存储与 7×24h 团队顾问群；<br>• <strong>Business 企业版（10 席 · 多机集群）</strong>：可选全员 Standard Seat (1.25x) 或 Premium Seat (6.25x) 规格，配备多台物理 Mac 专属集群（支持 9 国双区域混合部署与快速迁移）、商业形式发票、企业级 RustDesk 独立中继、12–30 TB 云存储与 7×24h VIP 响应群；<br>• <strong>单席位弹性升配包</strong>：支持先订阅 Pro 或 Max 团队底座，再通过单席位升配包（可在结账页自选席位数量）将指定成员随时升级至 Premium Seat (6.25x)，灵活实现任意席位混搭；<br>• <strong>ClaudeOps 企业专线增值包</strong>：面向 1x（+$5/月）与 5x（+$20/月）用户提供企业精品 BGP 跨境加速与 0% 丢包保障（20x / Team / Business 已免费内置，无需重复购买）。</p>
           </details>
           <details>
             <summary>什么是 ClaudeOps 企业专线增值服务？哪些用户需要加购？</summary>
@@ -2296,7 +2276,7 @@
       var I18N = {"perMonth": "/ 月", "perYear": "/ 年", "perSeatMo": "/ 席 / 月", "perSeatYr": "/ 席 / 年", "perMoShort": "/ 月", "perYrShort": "/ 年", "title12mo": "按月付 12 个月总价", "titleRegMo": "常规月付价", "noteAnnual": "年付仅收 10 个月 · 折合 {sym}{eq} / 月，立省 {sym}{save}", "note1xMo": "含 Claude 运行环境 · 约 {sym}{day} / 天", "note20xPromo": "活动期内订阅，续费延续特惠价 · 单位成本约为 1x 的 {ratio}%", "noteMultMo": "含 Claude 运行环境 · {mult} 倍额度，单位成本约为 1x 的 {ratio}%", "entTeamMo": "含 5 个 {label} 独立席位 · 整机物理独享 + 统一账单与运维", "entBizMo": "含 10 个 {label} 独立席位 · 多机物理集群独享 + VIP 专属群", "line0Mo": "全天候 BGP 抗丢包直连 · 随主套餐托管", "line1Mo": "5 倍优先带宽吞吐 · 高优先级 QoS 队列"};
       var DEFAULT_CURRENCY = "AUD";
       var CUR_LOCALE_SLUG = "zh";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
@@ -2821,7 +2801,7 @@
       });
     }
 
-    var FINDER_TIPS = {"solo-dev": "为您推荐【个人 5x 专业版】：重度 Claude Code 开发性价比最高；若在国内或跨国弱网连接，建议展开下方加购 5x 企业专线。", "solo-max": "为您推荐【个人 20x 旗舰版】：可开启整台物理 Mac 硬件独享，且已免费包含企业加速专线与 6 TB 云存储。", "team-rd": "为您推荐【Team 5 席 / Business 10 席】：整机或多机物理集群独享，统一账单发票，免费内置专线与 12–30 TB 云存储。", "ent-custom": "为您推荐【Custom 企业私有集群】：支持 15–100+ 席位跨国双区部署、任意规格比例混搭与对公商务合同。"};
+    var FINDER_TIPS = {"solo-dev": "为您推荐【个人 5x 专业版】：重度 Claude Code 开发性价比最高；若在国内或跨国弱网连接，建议展开下方加购 5x 企业专线。", "solo-max": "为您推荐【个人 20x 旗舰版】：可开启整台物理 Mac 硬件独享，且已免费包含企业加速专线与 6 TB 云存储。", "team-rd": "为您推荐【Team 5 席 / Business 10 席】：整机或多机物理集群独享，统一账单发票，免费内置专线与 12–30 TB 云存储。", "ent-custom": "为您推荐【Custom 企业私有集群】：支持 15–100+ 席位跨国双区部署、Standard/Premium 混搭及更高定制需求，私聊顾问一对一报价。"};
     var panelSolo = document.getElementById('panel-solo');
     var panelEnt = document.getElementById('pricing-enterprise');
     var finderTip = document.getElementById('finder-tip');

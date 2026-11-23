@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="팀 좌석 등급 선택">
               <button type="button" data-seat-tier="pro" aria-pressed="false">전원 Pro 좌석 (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">전원 Max 좌석 (6.25x) <span class="save-badge">추천</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">전원 Ultra 좌석 (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2: 팀 인원에 맞는 전용 클러스터 규모 선택</p>
@@ -1643,7 +1643,7 @@
                   <li data-ent-seat-li="team"><strong>Premium Seat (6.25x) 엔지니어링 좌석 5개</strong> 포함 (구성원별 독립 Claude 워크스페이스 &amp; macOS 계정 부여)</li>
                   <li>팀만을 위한 <strong>전용 고사양 물리 Mac Studio / Mac mini 호스트 독점</strong></li>
                   <li>입·퇴사 시 조직 소유 좌석 재배정 지원 및 <strong>단일 통합 인보이스 발행</strong></li>
-                  <li>필요 시 개별 좌석을 언제든 Premium Seat (6.25x) 또는 Ultra (20x)로 온디맨드 업그레이드 가능</li>
+                  <li>필요 시 개별 좌석을 언제든 Premium Seat (6.25x)로 온디맨드 업그레이드 가능</li>
                   <li><strong>7×24시간</strong> 팀 전용 컨시어지 그룹 채널 지원</li>
                   <li style="color: var(--primary-strong); font-weight: 600;">프라이빗 고속 RustDesk 팀 전용 채널 무료 제공</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">팀용 12 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)</li>
@@ -1676,11 +1676,11 @@
                 <span class="badge badge-custom">15–100+석 · 아키텍트 맞춤 설계</span>
                 <div class="plan-tier"><b>Custom</b><span>프라이빗 클러스터</span></div>
                 <div class="plan-fit">추천 대상: 중대형 R&amp;D 센터 · 혼합 좌석 배분 · 맞춤형 보안 규정</div>
-                <p class="plan-desc">부서별 Pro / Max / Ultra 자유 혼합 구성과 다국가 이중화 Mac Studio 전용 클러스터를 설계해 드립니다.</p>
+                <p class="plan-desc">부서별 Standard (1.25x) / Premium (6.25x) 자유 혼합 구성과 다국가 이중화 Mac Studio 전용 클러스터를 설계해 드립니다.</p>
                 <div class="price price-custom">맞춤 견적</div>
                 <p class="price-note">15석 이상 · 전담 아키텍트 1:1 견적</p>
                 <ul class="features">
-                  <li>15–100+석 Pro / Max / Ultra 비율 자유 혼합 구성</li>
+                  <li>15–100+석 Standard (1.25x) / Premium (6.25x) 비율 자유 혼합 구성</li>
                   <li>다중 고사양 Mac Studio 전용 클러스터 및 멀티리전 재해복구</li>
                   <li>전용 비즈니스 고정 회선 IP 및 독립 고속 릴레이 게이트웨이</li>
                   <li>통합 상업 인보이스(Commercial Invoice) 및 맞춤 SLA</li>
@@ -1702,7 +1702,7 @@
                     <strong>일부 팀원만 상위 사양이 필요한가요? 좌석별 차액 업그레이드</strong>
                     <span class="drawer-pill">결제 페이지에서 1–50좌석 수량 조절</span>
                   </span>
-                  <span class="drawer-hint">Team / Business 구독 팀에서 특정 핵심 인원만 Max 또는 Ultra로 개별 업그레이드</span>
+                  <span class="drawer-hint">Team / Business 구독 팀에서 특정 핵심 인원만 Premium 또는 Ultra로 개별 업그레이드</span>
                 </span>
               </span>
               <span class="drawer-toggle-pill"><span class="when-closed">업그레이드 보기</span><span class="when-open">접기</span> <i>▾</i></span>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">1–50석 선택, 결제 시 좌석 수만큼 청구</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>업그레이드</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ 좌석 / 월</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_USD&amp;locale=ko" target="_blank" rel="noopener nofollow">좌석 업그레이드 →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>업그레이드</span></div>
-                      <p class="addon-desc">전원 Max 플랜에서 창업자, CTO 또는 리드 아키텍트 좌석을 20x Ultra 멀티 에이전트 용량으로 격상합니다.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ 좌석 / 월</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_USD&amp;locale=ko" target="_blank" rel="noopener nofollow">좌석 업그레이드 →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>다이렉트</span></div>
-                      <p class="addon-desc">전원 Pro 기본 플랜의 특정 좌석을 한 번에 최상위 20x Ultra 플래그십 한도로 직행 업그레이드합니다.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ 좌석 / 월</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_USD&amp;locale=ko" target="_blank" rel="noopener nofollow">좌석 업그레이드 →</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>1x, 5x, 20x, Team, Business 플랜의 차이점은 무엇인가요? 연간 할인 혜택이 있나요?</summary>
-            <p>다섯 가지 플랜은 좌석 규모, 하드웨어 격리 수준, 컨시어지 지원 시간 및 포함 혜택에 따라 단계별로 구성되며, <strong>모든 플랜에서 연간 결제 시 연 10개월분만 청구(2개월 무료)</strong>됩니다:<br>• <strong>1x 스탠다드</strong>: 개인 기본 사용량 + 물리 Mac mini 환경(개별 macOS 계정) + <strong>7×8시간</strong> 1:1 지원;<br>• <strong>5x 프로</strong>: 개인 5배 사용량 + 고사양 물리 Mac mini(개별 macOS 계정) + <strong>7×16시간</strong> 우선 1:1 지원;<br>• <strong>20x 얼티밋</strong>: 개인 20배 사용량 + 고사양 Mac Studio / Mac mini(단독 장비 옵션) + <strong>7×24시간</strong> 프라이빗 컨시어지 + <strong>전용 RustDesk 채널</strong> + <strong>6 TB 클라우드 스토리지</strong>;<br>• <strong>Team (5좌석 · 전용 호스트)</strong>: 전원 Pro (1x), Max (5x), Ultra (20x) 중 선택 가능 — 팀 전용 물리 Mac 호스트, 좌석 재배정, 통합 청구, 전용 RustDesk 채널, 6–12 TB 클라우드 스토리지 &amp; 7×24h 팀 컨시어지;<br>• <strong>Business (10좌석 · 멀티 Mac 클러스터)</strong>: 전원 Pro (1x), Max (5x), Ultra (20x) 중 선택 가능 — 전용 멀티 Mac 클러스터(9개국 듀얼 리전 배포 &amp; 신속 마이그레이션), 상업 인보이스, 엔터프라이즈 RustDesk 릴레이, 12–30 TB 클라우드 스토리지 &amp; 7×24h VIP SLA;<br>• <strong>좌석별 업그레이드 애드온</strong>: 전원 Pro 또는 전원 Max 기본 플랜으로 시작한 뒤 셀프서비스 결제를 통해 원하는 좌석(1–50좌석 조절 가능)만 언제든 Max (5x)나 Ultra (20x)로 업그레이드 가능;<br>• <strong>ClaudeOps 엔터프라이즈 전용선 애드온</strong>: 1x(+월 $5) 및 5x(+월 $20) 구독자를 위한 선택형 엔터프라이즈 BGP 글로벌 가속 옵션(20x, Team &amp; Business 플랜에는 무료 기본 포함).</p>
+            <p>다섯 가지 플랜은 좌석 규모, 하드웨어 격리 수준, 컨시어지 지원 시간 및 포함 혜택에 따라 단계별로 구성되며, <strong>모든 플랜에서 연간 결제 시 연 10개월분만 청구(2개월 무료)</strong>됩니다:<br>• <strong>1x 스탠다드</strong>: 개인 기본 사용량 + 물리 Mac mini 환경(개별 macOS 계정) + <strong>7×8시간</strong> 1:1 지원;<br>• <strong>5x 프로</strong>: 개인 5배 사용량 + 고사양 물리 Mac mini(개별 macOS 계정) + <strong>7×16시간</strong> 우선 1:1 지원;<br>• <strong>20x 얼티밋</strong>: 개인 20배 사용량 + 고사양 Mac Studio / Mac mini(단독 장비 옵션) + <strong>7×24시간</strong> 프라이빗 컨시어지 + <strong>전용 RustDesk 채널</strong> + <strong>6 TB 클라우드 스토리지</strong>;<br>• <strong>Team (5좌석 · 전용 호스트)</strong>: 전원 Pro (1x), Premium Seat (6.25x), Ultra (20x) 중 선택 가능 — 팀 전용 물리 Mac 호스트, 좌석 재배정, 통합 청구, 전용 RustDesk 채널, 6–12 TB 클라우드 스토리지 &amp; 7×24h 팀 컨시어지;<br>• <strong>Business (10좌석 · 멀티 Mac 클러스터)</strong>: 전원 Pro (1x), Premium Seat (6.25x), Ultra (20x) 중 선택 가능 — 전용 멀티 Mac 클러스터(9개국 듀얼 리전 배포 &amp; 신속 마이그레이션), 상업 인보이스, 엔터프라이즈 RustDesk 릴레이, 12–30 TB 클라우드 스토리지 &amp; 7×24h VIP SLA;<br>• <strong>좌석별 업그레이드 애드온</strong>: 전원 Pro 또는 전원 Premium 기본 플랜으로 시작한 뒤 셀프서비스 결제를 통해 원하는 좌석(1–50좌석 조절 가능)만 언제든 Premium Seat (6.25x)나 Ultra (20x)로 업그레이드 가능;<br>• <strong>ClaudeOps 엔터프라이즈 전용선 애드온</strong>: 1x(+월 $5) 및 5x(+월 $20) 구독자를 위한 선택형 엔터프라이즈 BGP 글로벌 가속 옵션(20x, Team &amp; Business 플랜에는 무료 기본 포함).</p>
           </details>
           <details>
             <summary>ClaudeOps 엔터프라이즈 전용선 애드온이란 무엇이며 누구에게 필요한가요?</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ 월", "perYear": "/ 년", "perSeatMo": "/ 좌석 / 월", "perSeatYr": "/ 좌석 / 년", "perMoShort": "/ 월", "perYrShort": "/ 년", "title12mo": "월간 결제 12개월 합계", "titleRegMo": "정상 월간 요금", "noteAnnual": "연간 결제 시 10개월분만 청구 · 월 약 {sym}{eq}, 총 {sym}{save} 절약", "note1xMo": "Claude 실행 환경 포함 · 하루 약 {sym}{day}", "note20xPromo": "갱신 시에도 프로모션 가격 유지 · 단위 비용은 1x의 약 {ratio}%", "noteMultMo": "Claude 실행 환경 포함 · {mult}배 사용량, 단위 비용은 1x의 약 {ratio}%", "entTeamMo": "격리된 {label} 좌석 5개 포함 · 전용 Mac 호스트 및 통합 청구", "entBizMo": "격리된 {label} 좌석 10개 포함 · 전용 멀티 Mac 클러스터 및 VIP SLA", "line0Mo": "24시간 BGP 무손실 가속 · 기본 플랜과 통합 관리", "line1Mo": "5배 우선 처리량 · 고우선순위 BGP QoS"};
       var DEFAULT_CURRENCY = "USD";
       var CUR_LOCALE_SLUG = "ko";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');

@@ -450,7 +450,7 @@
       "tier_max": "전원 Max 좌석 (6.25x)",
       "tier_max_badge": "추천",
       "tier_ultra": "전원 Ultra 좌석 (20x)",
-      "toolbar_html": "전원 동일한 Pro, Max 또는 Ultra 좌석으로 시작하거나, 아래의 셀프서비스 <strong>좌석별 업그레이드 애드온</strong>으로 언제든 팀원별 맞춤 조합을 구성할 수 있습니다.",
+      "toolbar_html": "전원 동일한 Pro, Premium 좌석으로 시작하거나, 아래의 셀프서비스 <strong>좌석별 업그레이드 애드온</strong>으로 언제든 팀원별 맞춤 조합을 구성할 수 있습니다.",
       "team": {
         "init_badge": "Premium Seat (6.25x) 5좌석 · 전용 호스트",
         "sub": "5 좌석",
@@ -460,7 +460,7 @@
         "features_html": [
           "팀만을 위한 <strong>전용 고사양 물리 Mac Studio / Mac mini 호스트 독점</strong>",
           "입·퇴사 시 조직 소유 좌석 재배정 지원 및 <strong>단일 통합 인보이스 발행</strong>",
-          "필요 시 개별 좌석을 언제든 Premium Seat (6.25x) 또는 Ultra (20x)로 온디맨드 업그레이드 가능",
+          "필요 시 개별 좌석을 언제든 Premium Seat (6.25x)로 온디맨드 업그레이드 가능",
           "<strong>7×24시간</strong> 팀 전용 컨시어지 그룹 채널 지원",
           "프라이빗 고속 RustDesk 팀 전용 채널 무료 제공"
         ],
@@ -616,7 +616,7 @@
       },
       {
         "q": "1x, 5x, 20x, Team, Business 플랜의 차이점은 무엇인가요? 연간 할인 혜택이 있나요?",
-        "a_html": "다섯 가지 플랜은 좌석 규모, 하드웨어 격리 수준, 컨시어지 지원 시간 및 포함 혜택에 따라 단계별로 구성되며, <strong>모든 플랜에서 연간 결제 시 연 10개월분만 청구(2개월 무료)</strong>됩니다:<br>• <strong>1x 스탠다드</strong>: 개인 기본 사용량 + 물리 Mac mini 환경(개별 macOS 계정) + <strong>7×8시간</strong> 1:1 지원;<br>• <strong>5x 프로</strong>: 개인 5배 사용량 + 고사양 물리 Mac mini(개별 macOS 계정) + <strong>7×16시간</strong> 우선 1:1 지원;<br>• <strong>20x 얼티밋</strong>: 개인 20배 사용량 + 고사양 Mac Studio / Mac mini(단독 장비 옵션) + <strong>7×24시간</strong> 프라이빗 컨시어지 + <strong>전용 RustDesk 채널</strong> + <strong>6 TB 클라우드 스토리지</strong>;<br>• <strong>Team (5좌석 · 전용 호스트)</strong>: 전원 Pro (1x), Max (5x), Ultra (20x) 중 선택 가능 — 팀 전용 물리 Mac 호스트, 좌석 재배정, 통합 청구, 전용 RustDesk 채널, 6–12 TB 클라우드 스토리지 &amp; 7×24h 팀 컨시어지;<br>• <strong>Business (10좌석 · 멀티 Mac 클러스터)</strong>: 전원 Pro (1x), Max (5x), Ultra (20x) 중 선택 가능 — 전용 멀티 Mac 클러스터(9개국 듀얼 리전 배포 &amp; 신속 마이그레이션), 상업 인보이스, 엔터프라이즈 RustDesk 릴레이, 12–30 TB 클라우드 스토리지 &amp; 7×24h VIP SLA;<br>• <strong>좌석별 업그레이드 애드온</strong>: 전원 Pro 또는 전원 Max 기본 플랜으로 시작한 뒤 셀프서비스 결제를 통해 원하는 좌석(1–50좌석 조절 가능)만 언제든 Max (5x)나 Ultra (20x)로 업그레이드 가능;<br>• <strong>ClaudeOps 엔터프라이즈 전용선 애드온</strong>: 1x(+월 $5) 및 5x(+월 $20) 구독자를 위한 선택형 엔터프라이즈 BGP 글로벌 가속 옵션(20x, Team &amp; Business 플랜에는 무료 기본 포함)."
+        "a_html": "다섯 가지 플랜은 좌석 규모, 하드웨어 격리 수준, 컨시어지 지원 시간 및 포함 혜택에 따라 단계별로 구성되며, <strong>모든 플랜에서 연간 결제 시 연 10개월분만 청구(2개월 무료)</strong>됩니다:<br>• <strong>1x 스탠다드</strong>: 개인 기본 사용량 + 물리 Mac mini 환경(개별 macOS 계정) + <strong>7×8시간</strong> 1:1 지원;<br>• <strong>5x 프로</strong>: 개인 5배 사용량 + 고사양 물리 Mac mini(개별 macOS 계정) + <strong>7×16시간</strong> 우선 1:1 지원;<br>• <strong>20x 얼티밋</strong>: 개인 20배 사용량 + 고사양 Mac Studio / Mac mini(단독 장비 옵션) + <strong>7×24시간</strong> 프라이빗 컨시어지 + <strong>전용 RustDesk 채널</strong> + <strong>6 TB 클라우드 스토리지</strong>;<br>• <strong>Team (5좌석 · 전용 호스트)</strong>: 전원 Pro (1x), Premium Seat (6.25x), Ultra (20x) 중 선택 가능 — 팀 전용 물리 Mac 호스트, 좌석 재배정, 통합 청구, 전용 RustDesk 채널, 6–12 TB 클라우드 스토리지 &amp; 7×24h 팀 컨시어지;<br>• <strong>Business (10좌석 · 멀티 Mac 클러스터)</strong>: 전원 Pro (1x), Premium Seat (6.25x), Ultra (20x) 중 선택 가능 — 전용 멀티 Mac 클러스터(9개국 듀얼 리전 배포 &amp; 신속 마이그레이션), 상업 인보이스, 엔터프라이즈 RustDesk 릴레이, 12–30 TB 클라우드 스토리지 &amp; 7×24h VIP SLA;<br>• <strong>좌석별 업그레이드 애드온</strong>: 전원 Pro 또는 전원 Premium 기본 플랜으로 시작한 뒤 셀프서비스 결제를 통해 원하는 좌석(1–50좌석 조절 가능)만 언제든 Premium Seat (6.25x)나 Ultra (20x)로 업그레이드 가능;<br>• <strong>ClaudeOps 엔터프라이즈 전용선 애드온</strong>: 1x(+월 $5) 및 5x(+월 $20) 구독자를 위한 선택형 엔터프라이즈 BGP 글로벌 가속 옵션(20x, Team &amp; Business 플랜에는 무료 기본 포함)."
       },
       {
         "q": "ClaudeOps 엔터프라이즈 전용선 애드온이란 무엇이며 누구에게 필요한가요?",
@@ -993,11 +993,11 @@
       "tier_b": "Custom",
       "tier_span": "프라이빗 클러스터",
       "fit": "추천 대상: 중대형 R&D 센터 · 혼합 좌석 배분 · 맞춤형 보안 규정",
-      "desc": "부서별 Pro / Max / Ultra 자유 혼합 구성과 다국가 이중화 Mac Studio 전용 클러스터를 설계해 드립니다.",
+      "desc": "부서별 Standard (1.25x) / Premium (6.25x) 자유 혼합 구성과 다국가 이중화 Mac Studio 전용 클러스터를 설계해 드립니다.",
       "price_text": "맞춤 견적",
       "price_sub": "15석 이상 · 전담 아키텍트 1:1 견적",
       "features": [
-        "15–100+석 Pro / Max / Ultra 비율 자유 혼합 구성",
+        "15–100+석 Standard (1.25x) / Premium (6.25x) 비율 자유 혼합 구성",
         "다중 고사양 Mac Studio 전용 클러스터 및 멀티리전 재해복구",
         "전용 비즈니스 고정 회선 IP 및 독립 고속 릴레이 게이트웨이",
         "통합 상업 인보이스(Commercial Invoice) 및 맞춤 SLA",
@@ -1011,7 +1011,7 @@
     "drawer_line_hint": "1x / 5x 사용자의 해외 원격 화면 공유 및 SSH 패킷 손실 0% 보장 (20x 플랜 무료 포함)",
     "drawer_line_cta": "옵션 보기",
     "drawer_upg_title": "일부 팀원만 상위 사양이 필요한가요? 좌석별 차액 업그레이드",
-    "drawer_upg_hint": "Team / Business 구독 팀에서 특정 핵심 인원만 Max 또는 Ultra로 개별 업그레이드",
+    "drawer_upg_hint": "Team / Business 구독 팀에서 특정 핵심 인원만 Premium 또는 Ultra로 개별 업그레이드",
     "drawer_upg_cta": "업그레이드 보기",
     "drawer_storage_title": "선택 부가서비스: Google Drive / Apple iCloud+ 전용 스토리지 관리 (2TB–30TB)",
     "drawer_storage_pill": "20x 6TB 무료 · 팀/기업 6–30TB 무료",

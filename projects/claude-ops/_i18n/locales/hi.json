@@ -450,7 +450,7 @@
       "tier_max": "ऑल-Max सीटें (6.25x)",
       "tier_max_badge": "अनुशंसित",
       "tier_ultra": "ऑल-Ultra सीटें (20x)",
-      "toolbar_html": "एकसमान Pro, Max या Ultra सीटों के साथ शुरुआत करें — या नीचे दिए गए सेल्फ़-सर्व <strong>प्रति-सीट अपग्रेड ऐड-ऑन</strong> के साथ कभी भी मिक्स एंड मैच करें।",
+      "toolbar_html": "एकसमान Pro, Premium सीटों के साथ शुरुआत करें — या नीचे दिए गए सेल्फ़-सर्व <strong>प्रति-सीट अपग्रेड ऐड-ऑन</strong> के साथ कभी भी मिक्स एंड मैच करें।",
       "team": {
         "init_badge": "5 × Premium Seat (6.25x) सीटें · डेडिकेटेड होस्ट",
         "sub": "5 सीटें",
@@ -460,7 +460,7 @@
         "features_html": [
           "केवल आपकी टीम के लिए <strong>समर्पित हाई-स्पेक Mac Studio / Mac mini होस्ट</strong>",
           "सदस्यों के जुड़ने/हटने पर संगठन-स्वामित्व वाली सीट रीअसाइनमेंट और <strong>एकल समेकित इनवॉइस</strong>",
-          "किसी भी समय मांग के अनुसार व्यक्तिगत सीटों को Premium Seat (6.25x) या Ultra (20x) में अपग्रेड करें",
+          "किसी भी समय मांग के अनुसार व्यक्तिगत सीटों को Premium Seat (6.25x) में अपग्रेड करें",
           "<strong>7×24h</strong> समर्पित टीम कंसीयज ग्रुप चैनल",
           "निःशुल्क प्राइवेट हाई-स्पीड RustDesk टीम चैनल"
         ],
@@ -616,7 +616,7 @@
       },
       {
         "q": "1x, 5x, 20x, Team और Business की तुलना कैसे करें? क्या वार्षिक छूट उपलब्ध है?",
-        "a_html": "ये पाँचों टियर सीट संख्या, हार्डवेयर आइसोलेशन, कंसीयज घंटों और शामिल लाभों को स्केल करते हैं — और <strong>वार्षिक बिलिंग पर हर टियर में साल में केवल 10 महीनों का शुल्क लगता है (2 महीने मुफ़्त)</strong>:<br>• <strong>1x Standard</strong>: सोलो बेस कोटा + Mac mini वातावरण (अलग macOS अकाउंट) + <strong>7×8h</strong> 1-ऑन-1 सपोर्ट;<br>• <strong>5x Pro</strong>: सोलो 5× कोटा + हाई-स्पेक Mac mini (अलग macOS अकाउंट) + <strong>7×16h</strong> प्राथमिकता 1-ऑन-1 सपोर्ट;<br>• <strong>20x Ultimate</strong>: सोलो 20× कोटा + हाई-स्पेक Mac Studio / Mac mini (डेडिकेटेड मशीन विकल्प) + <strong>7×24h</strong> प्राइवेट कंसीयज + <strong>प्राइवेट RustDesk चैनल</strong> + <strong>6 TB क्लाउड स्टोरेज</strong>;<br>• <strong>Team (5 सीटें · डेडिकेटेड होस्ट)</strong>: All-Pro (1x), All-Max (5x) या All-Ultra (20x) टियर्स में उपलब्ध — आपकी टीम के लिए डेडिकेटेड फ़िज़िकल Mac होस्ट, सीट रीअसाइनमेंट, समेकित बिलिंग, प्राइवेट RustDesk चैनल, 6–12 TB क्लाउड स्टोरेज और 7×24h टीम कंसीयज;<br>• <strong>Business (10 सीटें · मल्टी-Mac क्लस्टर)</strong>: All-Pro (1x), All-Max (5x) या All-Ultra (20x) टियर्स में उपलब्ध — डेडिकेटेड मल्टी-Mac क्लस्टर (9 देशों में डुअल-रीजन डिप्लॉयमेंट और तेज़ माइग्रेशन), कमर्शियल इनवॉइसिंग, एंटरप्राइज़ RustDesk रिले, 12–30 TB क्लाउड स्टोरेज और 7×24h VIP SLA;<br>• <strong>प्रति-सीट अपग्रेड ऐड-ऑन</strong>: All-Pro या All-Max बेस प्लान से शुरू करें और सेल्फ़-सर्व चेकआउट के माध्यम से कभी भी विशिष्ट सीटों को Max (5x) या Ultra (20x) में अपग्रेड करें (1–50 सीटों की समायोज्य मात्रा);<br>• <strong>ClaudeOps एंटरप्राइज़ डेडिकेटेड लाइन ऐड-ऑन</strong>: 1x (+$5/माह) और 5x (+$20/माह) सब्सक्राइबर्स के लिए वैकल्पिक एंटरप्राइज़ BGP क्रॉस-बॉर्डर एक्सेलेरेशन (20x, Team और Business प्लान में पहले से निःशुल्क शामिल)।"
+        "a_html": "ये पाँचों टियर सीट संख्या, हार्डवेयर आइसोलेशन, कंसीयज घंटों और शामिल लाभों को स्केल करते हैं — और <strong>वार्षिक बिलिंग पर हर टियर में साल में केवल 10 महीनों का शुल्क लगता है (2 महीने मुफ़्त)</strong>:<br>• <strong>1x Standard</strong>: सोलो बेस कोटा + Mac mini वातावरण (अलग macOS अकाउंट) + <strong>7×8h</strong> 1-ऑन-1 सपोर्ट;<br>• <strong>5x Pro</strong>: सोलो 5× कोटा + हाई-स्पेक Mac mini (अलग macOS अकाउंट) + <strong>7×16h</strong> प्राथमिकता 1-ऑन-1 सपोर्ट;<br>• <strong>20x Ultimate</strong>: सोलो 20× कोटा + हाई-स्पेक Mac Studio / Mac mini (डेडिकेटेड मशीन विकल्प) + <strong>7×24h</strong> प्राइवेट कंसीयज + <strong>प्राइवेट RustDesk चैनल</strong> + <strong>6 TB क्लाउड स्टोरेज</strong>;<br>• <strong>Team (5 सीटें · डेडिकेटेड होस्ट)</strong>: All-Pro (1x), All-Premium Seat (6.25x) या All-Ultra (20x) टियर्स में उपलब्ध — आपकी टीम के लिए डेडिकेटेड फ़िज़िकल Mac होस्ट, सीट रीअसाइनमेंट, समेकित बिलिंग, प्राइवेट RustDesk चैनल, 6–12 TB क्लाउड स्टोरेज और 7×24h टीम कंसीयज;<br>• <strong>Business (10 सीटें · मल्टी-Mac क्लस्टर)</strong>: All-Pro (1x), All-Premium Seat (6.25x) या All-Ultra (20x) टियर्स में उपलब्ध — डेडिकेटेड मल्टी-Mac क्लस्टर (9 देशों में डुअल-रीजन डिप्लॉयमेंट और तेज़ माइग्रेशन), कमर्शियल इनवॉइसिंग, एंटरप्राइज़ RustDesk रिले, 12–30 TB क्लाउड स्टोरेज और 7×24h VIP SLA;<br>• <strong>प्रति-सीट अपग्रेड ऐड-ऑन</strong>: All-Pro या All-Premium बेस प्लान से शुरू करें और सेल्फ़-सर्व चेकआउट के माध्यम से कभी भी विशिष्ट सीटों को Premium Seat (6.25x) में अपग्रेड करें (1–50 सीटों की समायोज्य मात्रा);<br>• <strong>ClaudeOps एंटरप्राइज़ डेडिकेटेड लाइन ऐड-ऑन</strong>: 1x (+$5/माह) और 5x (+$20/माह) सब्सक्राइबर्स के लिए वैकल्पिक एंटरप्राइज़ BGP क्रॉस-बॉर्डर एक्सेलेरेशन (20x, Team और Business प्लान में पहले से निःशुल्क शामिल)।"
       },
       {
         "q": "ClaudeOps एंटरप्राइज़ डेडिकेटेड लाइन ऐड-ऑन क्या है? इसकी आवश्यकता किसे है?",
@@ -972,7 +972,7 @@
       {
         "id": "ent-custom",
         "btn": "15+ seat custom enterprise cluster",
-        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."
       }
     ],
     "tab_solo_title": "व्यक्तिगत डेवलपर / क्रिएटर",
@@ -993,11 +993,11 @@
       "tier_b": "Custom",
       "tier_span": "Private Cluster",
       "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
-      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) & Premium (6.25x) seats across departments.",
       "price_text": "कस्टम",
       "price_sub": "From 15 seats · 1-on-1 architecture & quote",
       "features": [
-        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Flexible mix of 15–100+ Standard (1.25x) & Premium (6.25x) seats",
         "Dedicated multi-Mac Studio hardware & dual-region failover",
         "Dedicated static native business ISP & private relay gateway",
         "Commercial Invoice, procurement onboarding & custom SLA",

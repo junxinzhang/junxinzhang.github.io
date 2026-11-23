@@ -450,7 +450,7 @@
       "tier_max": "Alle Plätze Premium Seat (6.25x)",
       "tier_max_badge": "Empfohlen",
       "tier_ultra": "Alle Plätze Ultra (20x)",
-      "toolbar_html": "Starten Sie mit einheitlichen Pro-, Max- oder Ultra-Plätzen — oder kombinieren Sie jederzeit flexibel über die <strong>Self-Service-Platz-Upgrades</strong> weiter unten.",
+      "toolbar_html": "Starten Sie mit einheitlichen Pro-, Premium--Plätzen — oder kombinieren Sie jederzeit flexibel über die <strong>Self-Service-Platz-Upgrades</strong> weiter unten.",
       "team": {
         "init_badge": "5 × Premium Seat (6.25x)-Plätze · Dedizierter Host",
         "sub": "5 Plätze",
@@ -460,7 +460,7 @@
         "features_html": [
           "<strong>Dedizierter High-Spec Mac Studio / Mac mini Host</strong> exklusiv für Ihr Team",
           "Flexible Platz-Neuzuweisung beim Onboarding/Offboarding &amp; <strong>eine konsolidierte Sammelrechnung</strong>",
-          "Einzelne Plätze jederzeit bei Bedarf auf Premium Seat (6.25x) oder Ultra (20x) hochstufen",
+          "Einzelne Plätze jederzeit bei Bedarf auf Premium Seat (6.25x) hochstufen",
           "<strong>7×24h</strong> dedizierter Team-Concierge-Gruppenkanal",
           "Kostenloser privater Highspeed-RustDesk-Teamkanal"
         ],
@@ -616,7 +616,7 @@
       },
       {
         "q": "Wie unterscheiden sich 1x, 5x, 20x, Team und Business? Gibt es einen Jahresrabatt?",
-        "a_html": "Alle fünf Stufen skalieren Plätze, Hardware-Isolierung, Concierge-Zeiten und enthaltene Zusatzleistungen — und <strong>bei jährlicher Abrechnung werden in jedem Tarif nur 10 Monate pro Jahr berechnet (2 Monate gratis)</strong>:<br>• <strong>1x Standard</strong>: Solo-Basiskontingent + Mac-mini-Umgebung (separates macOS-Konto) + <strong>7×8h</strong> 1:1-Support;<br>• <strong>5x Pro</strong>: Solo-5×-Kontingent + High-Spec Mac mini (separates macOS-Konto) + <strong>7×16h</strong> prioritärer 1:1-Support;<br>• <strong>20x Ultimate</strong>: Solo-20×-Kontingent + High-Spec Mac Studio / Mac mini (Option auf dedizierte Maschine) + <strong>7×24h</strong> privater Concierge + <strong>privater RustDesk-Kanal</strong> + <strong>6 TB Cloud-Speicher</strong>;<br>• <strong>Team (5 Plätze · Dedizierter Host)</strong>: Verfügbar als All-Pro (1x), All-Max (5x) oder All-Ultra (20x) — dedizierter physischer Mac-Host für Ihr Team, Platz-Neuzuweisung, Sammelrechnung, privater RustDesk-Kanal, 6–12 TB Cloud-Speicher &amp; 7×24h Team-Concierge;<br>• <strong>Business (10 Plätze · Multi-Mac-Cluster)</strong>: Verfügbar als All-Pro (1x), All-Max (5x) oder All-Ultra (20x) — dedizierter Multi-Mac-Cluster (Dual-Region-Bereitstellung &amp; schnelle Migration in 9 Ländern), Unternehmensrechnung, Enterprise-RustDesk-Relay, 12–30 TB Cloud-Speicher &amp; 7×24h VIP-SLA;<br>• <strong>Einzelplatz-Upgrade-Add-ons</strong>: Starten Sie mit einem All-Pro- oder All-Max-Basistarif und stufen Sie einzelne Plätze jederzeit per Self-Service-Checkout auf Max (5x) oder Ultra (20x) hoch (1–50 Plätze wählbar);<br>• <strong>ClaudeOps Enterprise-Standleitungs-Add-on</strong>: Optionale grenzüberschreitende Enterprise-BGP-Beschleunigung für 1x (+$5/Mon.) und 5x (+$20/Mon.) (bei 20x, Team &amp; Business bereits kostenlos enthalten)."
+        "a_html": "Alle fünf Stufen skalieren Plätze, Hardware-Isolierung, Concierge-Zeiten und enthaltene Zusatzleistungen — und <strong>bei jährlicher Abrechnung werden in jedem Tarif nur 10 Monate pro Jahr berechnet (2 Monate gratis)</strong>:<br>• <strong>1x Standard</strong>: Solo-Basiskontingent + Mac-mini-Umgebung (separates macOS-Konto) + <strong>7×8h</strong> 1:1-Support;<br>• <strong>5x Pro</strong>: Solo-5×-Kontingent + High-Spec Mac mini (separates macOS-Konto) + <strong>7×16h</strong> prioritärer 1:1-Support;<br>• <strong>20x Ultimate</strong>: Solo-20×-Kontingent + High-Spec Mac Studio / Mac mini (Option auf dedizierte Maschine) + <strong>7×24h</strong> privater Concierge + <strong>privater RustDesk-Kanal</strong> + <strong>6 TB Cloud-Speicher</strong>;<br>• <strong>Team (5 Plätze · Dedizierter Host)</strong>: Verfügbar als All-Pro (1x), All-Premium Seat (6.25x) oder All-Ultra (20x) — dedizierter physischer Mac-Host für Ihr Team, Platz-Neuzuweisung, Sammelrechnung, privater RustDesk-Kanal, 6–12 TB Cloud-Speicher &amp; 7×24h Team-Concierge;<br>• <strong>Business (10 Plätze · Multi-Mac-Cluster)</strong>: Verfügbar als All-Pro (1x), All-Premium Seat (6.25x) oder All-Ultra (20x) — dedizierter Multi-Mac-Cluster (Dual-Region-Bereitstellung &amp; schnelle Migration in 9 Ländern), Unternehmensrechnung, Enterprise-RustDesk-Relay, 12–30 TB Cloud-Speicher &amp; 7×24h VIP-SLA;<br>• <strong>Einzelplatz-Upgrade-Add-ons</strong>: Starten Sie mit einem All-Pro- oder All-Premium-Basistarif und stufen Sie einzelne Plätze jederzeit per Self-Service-Checkout auf Premium Seat (6.25x) hoch (1–50 Plätze wählbar);<br>• <strong>ClaudeOps Enterprise-Standleitungs-Add-on</strong>: Optionale grenzüberschreitende Enterprise-BGP-Beschleunigung für 1x (+$5/Mon.) und 5x (+$20/Mon.) (bei 20x, Team &amp; Business bereits kostenlos enthalten)."
       },
       {
         "q": "Was ist das ClaudeOps Enterprise-Standleitungs-Add-on und wer benötigt es?",
@@ -972,7 +972,7 @@
       {
         "id": "ent-custom",
         "btn": "15+ seat custom enterprise cluster",
-        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."
       }
     ],
     "tab_solo_title": "Einzelentwickler & Creator",
@@ -993,11 +993,11 @@
       "tier_b": "Custom",
       "tier_span": "Private Cluster",
       "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
-      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) & Premium (6.25x) seats across departments.",
       "price_text": "Auf Anfrage",
       "price_sub": "From 15 seats · 1-on-1 architecture & quote",
       "features": [
-        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Flexible mix of 15–100+ Standard (1.25x) & Premium (6.25x) seats",
         "Dedicated multi-Mac Studio hardware & dual-region failover",
         "Dedicated static native business ISP & private relay gateway",
         "Commercial Invoice, procurement onboarding & custom SLA",

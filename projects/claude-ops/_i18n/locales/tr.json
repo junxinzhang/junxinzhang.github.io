@@ -450,7 +450,7 @@
       "tier_max": "Tümü Max Koltuklar (6.25x)",
       "tier_max_badge": "Önerilen",
       "tier_ultra": "Tümü Ultra Koltuklar (20x)",
-      "toolbar_html": "Tek tip Pro, Max veya Ultra koltuklarla başlayın — ya da aşağıdaki self-servis <strong>koltuk başı yükseltme eklentileriyle</strong> dilediğiniz zaman karma yapı oluşturun.",
+      "toolbar_html": "Tek tip Pro, Premium koltuklarla başlayın — ya da aşağıdaki self-servis <strong>koltuk başı yükseltme eklentileriyle</strong> dilediğiniz zaman karma yapı oluşturun.",
       "team": {
         "init_badge": "5 × Premium Seat (6.25x) Koltuk · Özel Ana Bilgisayar",
         "sub": "5 Koltuk",
@@ -460,7 +460,7 @@
         "features_html": [
           "Yalnızca ekibinize tahsis edilmiş <strong>yüksek donanımlı fiziksel Mac Studio / Mac mini ana bilgisayar</strong>",
           "İşe giriş/çıkışlarda kurum mülkiyetinde koltuk devri ve <strong>tek konsolide fatura</strong>",
-          "Bireysel koltukları dilediğiniz an isteğe bağlı olarak Premium Seat (6.25x) veya Ultra (20x) kademesine yükseltme",
+          "Bireysel koltukları dilediğiniz an isteğe bağlı olarak Premium Seat (6.25x) kademesine yükseltme",
           "<strong>7×24s</strong> özel ekip konsiyerj grup kanalı",
           "Ücretsiz özel yüksek hızlı RustDesk ekip kanalı"
         ],
@@ -616,7 +616,7 @@
       },
       {
         "q": "1x, 5x, 20x, Team ve Business planları nasıl karşılaştırılır? Yıllık indirim var mı?",
-        "a_html": "Beş kademenin tamamı koltuk sayısını, donanım izolasyonunu, konsiyerj saatlerini ve dahil olan ayrıcalıkları ölçeklendirir — üstelik <strong>yıllık faturalandırmada her kademede yılda yalnızca 10 ay ücret alınır (2 ay ücretsiz)</strong>:<br>• <strong>1x Standard</strong>: Bireysel temel kota + Mac mini ortamı (ayrı macOS hesabı) + <strong>7×8s</strong> 1'e 1 destek;<br>• <strong>5x Pro</strong>: Bireysel 5× kota + yüksek donanımlı Mac mini (ayrı macOS hesabı) + <strong>7×16s</strong> öncelikli 1'e 1 destek;<br>• <strong>20x Ultimate</strong>: Bireysel 20× kota + yüksek donanımlı Mac Studio / Mac mini (özel cihaz seçeneği) + <strong>7×24s</strong> özel konsiyerj + <strong>özel RustDesk kanalı</strong> + <strong>6 TB bulut depolama</strong>;<br>• <strong>Team (5 Koltuk · Özel Ana Bilgisayar)</strong>: Tümü-Pro (1x), Tümü-Max (5x) veya Tümü-Ultra (20x) kademelerinde sunulur — ekibinize özel fiziksel Mac sunucusu, koltuk devri, konsolide fatura, özel RustDesk kanalı, 6–12 TB bulut depolama ve 7×24s ekip konsiyerji;<br>• <strong>Business (10 Koltuk · Çoklu Mac Kümesi)</strong>: Tümü-Pro (1x), Tümü-Max (5x) veya Tümü-Ultra (20x) kademelerinde sunulur — özel çoklu Mac kümesi (9 ülkede çift bölgeli kurulum ve hızlı taşıma), ticari faturalandırma, kurumsal RustDesk rölesi, 12–30 TB bulut depolama ve 7×24s VIP SLA;<br>• <strong>Koltuk Başı Yükseltme Eklentileri</strong>: Tümü-Pro veya Tümü-Max temel planıyla başlayıp dilediğiniz zaman self-servis ödeme üzerinden belirli koltukları Max (5x) veya Ultra (20x) seviyesine yükseltin (1–50 koltuk arası ayarlanabilir miktar);<br>• <strong>ClaudeOps Kurumsal Özel Hat Eklentisi</strong>: 1x (+$5/ay) ve 5x (+$20/ay) aboneleri için isteğe bağlı kurumsal BGP sınır ötesi hızlandırma (20x, Team ve Business planlarında halihazırda ücretsizdir)."
+        "a_html": "Beş kademenin tamamı koltuk sayısını, donanım izolasyonunu, konsiyerj saatlerini ve dahil olan ayrıcalıkları ölçeklendirir — üstelik <strong>yıllık faturalandırmada her kademede yılda yalnızca 10 ay ücret alınır (2 ay ücretsiz)</strong>:<br>• <strong>1x Standard</strong>: Bireysel temel kota + Mac mini ortamı (ayrı macOS hesabı) + <strong>7×8s</strong> 1'e 1 destek;<br>• <strong>5x Pro</strong>: Bireysel 5× kota + yüksek donanımlı Mac mini (ayrı macOS hesabı) + <strong>7×16s</strong> öncelikli 1'e 1 destek;<br>• <strong>20x Ultimate</strong>: Bireysel 20× kota + yüksek donanımlı Mac Studio / Mac mini (özel cihaz seçeneği) + <strong>7×24s</strong> özel konsiyerj + <strong>özel RustDesk kanalı</strong> + <strong>6 TB bulut depolama</strong>;<br>• <strong>Team (5 Koltuk · Özel Ana Bilgisayar)</strong>: Tümü-Pro (1x), Tümü-Premium Seat (6.25x) veya Tümü-Ultra (20x) kademelerinde sunulur — ekibinize özel fiziksel Mac sunucusu, koltuk devri, konsolide fatura, özel RustDesk kanalı, 6–12 TB bulut depolama ve 7×24s ekip konsiyerji;<br>• <strong>Business (10 Koltuk · Çoklu Mac Kümesi)</strong>: Tümü-Pro (1x), Tümü-Premium Seat (6.25x) veya Tümü-Ultra (20x) kademelerinde sunulur — özel çoklu Mac kümesi (9 ülkede çift bölgeli kurulum ve hızlı taşıma), ticari faturalandırma, kurumsal RustDesk rölesi, 12–30 TB bulut depolama ve 7×24s VIP SLA;<br>• <strong>Koltuk Başı Yükseltme Eklentileri</strong>: Tümü-Pro veya Tümü-Premium temel planıyla başlayıp dilediğiniz zaman self-servis ödeme üzerinden belirli koltukları Premium Seat (6.25x) seviyesine yükseltin (1–50 koltuk arası ayarlanabilir miktar);<br>• <strong>ClaudeOps Kurumsal Özel Hat Eklentisi</strong>: 1x (+$5/ay) ve 5x (+$20/ay) aboneleri için isteğe bağlı kurumsal BGP sınır ötesi hızlandırma (20x, Team ve Business planlarında halihazırda ücretsizdir)."
       },
       {
         "q": "ClaudeOps Kurumsal Özel Hat eklentisi nedir? Kimler ihtiyaç duyar?",
@@ -972,7 +972,7 @@
       {
         "id": "ent-custom",
         "btn": "15+ seat custom enterprise cluster",
-        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."
       }
     ],
     "tab_solo_title": "Bireysel Geliştirici",
@@ -993,11 +993,11 @@
       "tier_b": "Custom",
       "tier_span": "Private Cluster",
       "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
-      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) & Premium (6.25x) seats across departments.",
       "price_text": "Özel Teklif",
       "price_sub": "From 15 seats · 1-on-1 architecture & quote",
       "features": [
-        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Flexible mix of 15–100+ Standard (1.25x) & Premium (6.25x) seats",
         "Dedicated multi-Mac Studio hardware & dual-region failover",
         "Dedicated static native business ISP & private relay gateway",
         "Commercial Invoice, procurement onboarding & custom SLA",

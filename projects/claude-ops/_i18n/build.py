@@ -669,6 +669,7 @@ INDEX_EXTRA_I18N_CSS = """
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1210,12 +1211,12 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
     )
     ent_cards_html = "\n\n".join(ent_parts)
 
-    # Seat add-ons (inside collapsible drawer under Enterprise tab)
+    # Seat add-ons (only Standard 1.25x -> Premium 6.25x; higher enterprise specs via private consult)
     sa = d["pricing"]["seat_addons"]
-    upg_keys = ["upg_pm", "upg_mu", "upg_pu"]
+    upg_keys = ["upg_pm"]
     sa_cards = []
-    for i, uc in enumerate(sa["cards"]):
-        ukey = upg_keys[i]
+    for i, ukey in enumerate(upg_keys):
+        uc = sa["cards"][i]
         u_href = f"/api/airwallex/checkout?plan={ukey}_{def_cur}&locale={loc['slug']}"
         sa_cards.append(
             f'                  <div class="addon-card">\n'
@@ -1555,7 +1556,6 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
             <div class="seat-tier-switch" role="group" aria-label="{esc(ent["switch_aria"])}">
               <button type="button" data-seat-tier="pro" aria-pressed="false">{esc(ent["tier_pro"])}</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">{esc(ent["tier_max"])} <span class="save-badge">{esc(ent["tier_max_badge"])}</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">{esc(ent["tier_ultra"])}</button>
             </div>
           </div>
           <p class="ent-step2-label">{esc(ux["ent_step2"])}</p>
@@ -1590,7 +1590,7 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
                 </div>
                 <span class="seat-qty-hint">{esc(ux["upg_qty_hint"])}</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
 {sa_cards_html}
               </div>
             </div>
@@ -1782,7 +1782,7 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
       var I18N = {json.dumps(js_i18n, ensure_ascii=False)};
       var DEFAULT_CURRENCY = {json.dumps(def_cur)};
       var CUR_LOCALE_SLUG = {json.dumps(loc["slug"])};
-      var TIER_IDX = {{ pro: 0, max: 1, ultra: 2 }};
+      var TIER_IDX = {{ pro: 0, max: 1 }};
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = {{ '1x': true, '5x': true, '20x': true }};
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');

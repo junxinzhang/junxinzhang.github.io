@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="チームのシートグレードを選択">
               <button type="button" data-seat-tier="pro" aria-pressed="false">全員 Pro シート (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">全員 Max シート (6.25x) <span class="save-badge">おすすめ</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">全員 Ultra シート (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2：チーム規模に合わせて専用クラスタを選択</p>
@@ -1643,7 +1643,7 @@
                   <li data-ent-seat-li="team"><strong>Premium Seat (6.25x) エンジニアリングシート×5枠</strong>込み（メンバーごとに独立したClaudeワークスペース＆macOSアカウント）</li>
                   <li>チーム専用の<strong>ハイスペック物理Mac Studio / Mac mini専有ホスト</strong></li>
                   <li>入退社に伴う企業側でのシート再割り当てと<strong>単一の一括請求書（インボイス）発行</strong></li>
-                  <li>必要なメンバーのシートだけを後からオンデマンドでMax (6.25x) / Ultra (20x) へアップグレード可能</li>
+                  <li>必要なメンバーのシートだけを後からオンデマンドでPremium (6.25x) へアップグレード可能</li>
                   <li><strong>7×24時間</strong> チーム専用コンシェルジュグループ窓口</li>
                   <li style="color: var(--primary-strong); font-weight: 600;">チーム専用の高速プライベートRustDeskチャネル無料付帯</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">チーム用 12 TB クラウドストレージ無料付帯（Google Drive / iCloud+）</li>
@@ -1680,7 +1680,7 @@
                 <div class="price price-custom">個別見積</div>
                 <p class="price-note">15席〜 · 専任アーキテクトが即日提案</p>
                 <ul class="features">
-                  <li>15〜100+席でPro / Max / Ultraを自由な比率で混在可能</li>
+                  <li>15〜100+席でStandard (1.25x) / Premium (6.25x)を自由な比率で混在可能</li>
                   <li>複数台の専有Mac Studioクラスタ＆2リージョン冗長化</li>
                   <li>専有固定ビジネス回線IP＆専用高速リレーゲートウェイ</li>
                   <li>法人請求書（Commercial Invoice）・個別SLA契約に対応</li>
@@ -1702,7 +1702,7 @@
                     <strong>一部メンバーだけ上位枠が必要ですか？1席単位の差額アップグレード</strong>
                     <span class="drawer-pill">決済画面で1〜50シートまで調整可能</span>
                   </span>
-                  <span class="drawer-hint">Team / Business契約チーム向け：特定メンバーのみMax / Ultraへ柔軟に昇格</span>
+                  <span class="drawer-hint">Team / Business契約チーム向け：特定メンバーのみPremium / Ultraへ柔軟に昇格</span>
                 </span>
               </span>
               <span class="drawer-toggle-pill"><span class="when-closed">昇格パックを見る</span><span class="when-open">閉じる</span> <i>▾</i></span>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">1〜50席から選択、決済時に席数分を請求</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>アップグレード</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ シート / 月</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_USD&amp;locale=ja" target="_blank" rel="noopener nofollow">シートをアップグレード →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>アップグレード</span></div>
-                      <p class="addon-desc">全員Maxプラン上の創業者・CTO・リードアーキテクトを20x Ultraマルチエージェント枠へ強化します。</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ シート / 月</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_USD&amp;locale=ja" target="_blank" rel="noopener nofollow">シートをアップグレード →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>2段階アップ</span></div>
-                      <p class="addon-desc">全員Proベースプラン上の特定シートを、一気に最上位の20x Ultraフラッグシップ枠へ引き上げます。</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ シート / 月</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_USD&amp;locale=ja" target="_blank" rel="noopener nofollow">シートをアップグレード →</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>1x・5x・20x・Team・Businessの違いは何ですか？年額割引はありますか？</summary>
-            <p>5つのプランはシート数、ハードウェア分離レベル、サポート時間帯、付帯特典に応じて段階的に設計されており、<strong>すべてのプランで年額払いは10ヶ月分の料金（2ヶ月分無料）</strong>となります：<br>• <strong>1x スタンダード</strong>：個人向け基本枠 ＋ 物理Mac mini環境（個別macOSアカウント）＋ <strong>7×8時間</strong> 1対1サポート；<br>• <strong>5x プロ</strong>：個人向け5倍枠 ＋ ハイスペック物理Mac mini（個別macOSアカウント）＋ <strong>7×16時間</strong> 優先1対1サポート；<br>• <strong>20x アルティメット</strong>：個人向け20倍枠 ＋ ハイスペックMac Studio / Mac mini（1台専有オプション）＋ <strong>7×24時間</strong> プライベートコンシェルジュ ＋ <strong>専用RustDeskチャネル</strong> ＋ <strong>6 TBクラウドストレージ</strong>；<br>• <strong>Team（5シート・専有ホスト）</strong>：全員Pro (1x)・Max (5x)・Ultra (20x) から選択可能 — チーム専用の物理Macホスト、シート再割り当て、一括請求、専用RustDeskチャネル、6〜12 TBクラウドストレージ、7×24hチームコンシェルジュ付き；<br>• <strong>Business（10シート・マルチMacクラスター）</strong>：全員Pro (1x)・Max (5x)・Ultra (20x) から選択可能 — 専有マルチMacクラスター（9カ国デュアルリージョン展開＆迅速移行）、法人請求書対応、エンタープライズRustDeskリレー、12〜30 TBクラウドストレージ、7×24h VIP SLA付き；<br>• <strong>シート単位アップグレードアドオン</strong>：全員Proまたは全員Maxのベースプランで開始し、必要なシート（1〜50枠まで調整可）だけをセルフサービス決済でいつでもMax (5x) やUltra (20x) へ引き上げ可能；<br>• <strong>ClaudeOps エンタープライズ専用線アドオン</strong>：1x（+$5/月）および5x（+$20/月）向けのエンタープライズBGP国際高速化オプション（20x、Team、Businessには標準で無料付帯）。</p>
+            <p>5つのプランはシート数、ハードウェア分離レベル、サポート時間帯、付帯特典に応じて段階的に設計されており、<strong>すべてのプランで年額払いは10ヶ月分の料金（2ヶ月分無料）</strong>となります：<br>• <strong>1x スタンダード</strong>：個人向け基本枠 ＋ 物理Mac mini環境（個別macOSアカウント）＋ <strong>7×8時間</strong> 1対1サポート；<br>• <strong>5x プロ</strong>：個人向け5倍枠 ＋ ハイスペック物理Mac mini（個別macOSアカウント）＋ <strong>7×16時間</strong> 優先1対1サポート；<br>• <strong>20x アルティメット</strong>：個人向け20倍枠 ＋ ハイスペックMac Studio / Mac mini（1台専有オプション）＋ <strong>7×24時間</strong> プライベートコンシェルジュ ＋ <strong>専用RustDeskチャネル</strong> ＋ <strong>6 TBクラウドストレージ</strong>；<br>• <strong>Team（5シート・専有ホスト）</strong>：全員Pro (1x)・Premium Seat (6.25x)・Ultra (20x) から選択可能 — チーム専用の物理Macホスト、シート再割り当て、一括請求、専用RustDeskチャネル、6〜12 TBクラウドストレージ、7×24hチームコンシェルジュ付き；<br>• <strong>Business（10シート・マルチMacクラスター）</strong>：全員Pro (1x)・Premium Seat (6.25x)・Ultra (20x) から選択可能 — 専有マルチMacクラスター（9カ国デュアルリージョン展開＆迅速移行）、法人請求書対応、エンタープライズRustDeskリレー、12〜30 TBクラウドストレージ、7×24h VIP SLA付き；<br>• <strong>シート単位アップグレードアドオン</strong>：全員Proまたは全員Premiumのベースプランで開始し、必要なシート（1〜50枠まで調整可）だけをセルフサービス決済でいつでもPremium Seat (6.25x) やUltra (20x) へ引き上げ可能；<br>• <strong>ClaudeOps エンタープライズ専用線アドオン</strong>：1x（+$5/月）および5x（+$20/月）向けのエンタープライズBGP国際高速化オプション（20x、Team、Businessには標準で無料付帯）。</p>
           </details>
           <details>
             <summary>ClaudeOps エンタープライズ専用線アドオンとは何ですか？どのような方に必要ですか？</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ 月", "perYear": "/ 年", "perSeatMo": "/ シート / 月", "perSeatYr": "/ シート / 年", "perMoShort": "/ 月", "perYrShort": "/ 年", "title12mo": "月額払い12ヶ月分の合計", "titleRegMo": "通常の月額料金", "noteAnnual": "年額払いは10ヶ月分のみ請求 · 月あたり約{sym}{eq}（{sym}{save}お得）", "note1xMo": "Claude実行環境込み · 1日あたり約{sym}{day}", "note20xPromo": "更新時も特別価格を継続 · 単位コストは1xの約{ratio}%", "noteMultMo": "Claude実行環境込み · {mult}倍の利用枠、単位コストは1xの約{ratio}%", "entTeamMo": "分離された{label}シート×5枠込み · 専有Macホスト＆一括請求", "entBizMo": "分離された{label}シート×10枠込み · 専有マルチMacクラスター＆VIP SLA", "line0Mo": "24時間365日 BGPゼロロス高速化 · メインプランと一括管理", "line1Mo": "5倍の優先スループット · 高優先度BGP QoS"};
       var DEFAULT_CURRENCY = "USD";
       var CUR_LOCALE_SLUG = "ja";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');

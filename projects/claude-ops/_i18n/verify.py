@@ -221,8 +221,6 @@ def verify_html_files(slugs: list, errs: list):
                         ("data-ent-btn", "team", f"/api/airwallex/checkout?plan=team_max_{def_cur}&amp;locale={slug}"),
                         ("data-ent-btn", "biz", f"/api/airwallex/checkout?plan=biz_max_{def_cur}&amp;locale={slug}"),
                         ("data-upg-tier", "upg_pm", f"/api/airwallex/checkout?plan=upg_pm_{def_cur}&amp;locale={slug}"),
-                        ("data-upg-tier", "upg_mu", f"/api/airwallex/checkout?plan=upg_mu_{def_cur}&amp;locale={slug}"),
-                        ("data-upg-tier", "upg_pu", f"/api/airwallex/checkout?plan=upg_pu_{def_cur}&amp;locale={slug}"),
                         ("data-stripe-tier", "2t", head_links[f"2t_{def_cur}"]),
                         ("data-stripe-tier", "6t", head_links[f"6t_{def_cur}"]),
                         ("data-stripe-tier", "12t", head_links[f"12t_{def_cur}"]),

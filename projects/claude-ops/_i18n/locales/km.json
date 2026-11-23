@@ -450,7 +450,7 @@
       "tier_max": "កៅអី Max ទាំងអស់ (6.25x)",
       "tier_max_badge": "ណែនាំ",
       "tier_ultra": "កៅអី Ultra ទាំងអស់ (20x)",
-      "toolbar_html": "ចាប់ផ្តើមជាមួយកៅអីកម្រិត Pro, Max ឬ Ultra ដូចគ្នាទាំងក្រុម — ឬលាយបញ្ចូលគ្នាគ្រប់ពេលតាមរយៈ <strong>កញ្ចប់បន្ថែមដំឡើងកម្រិតតាមកៅអី</strong> ខាងក្រោម។",
+      "toolbar_html": "ចាប់ផ្តើមជាមួយកៅអីកម្រិត Pro, Premium ឬ Ultra ដូចគ្នាទាំងក្រុម — ឬលាយបញ្ចូលគ្នាគ្រប់ពេលតាមរយៈ <strong>កញ្ចប់បន្ថែមដំឡើងកម្រិតតាមកៅអី</strong> ខាងក្រោម។",
       "team": {
         "init_badge": "5 × កៅអី Premium Seat (6.25x) · ម៉ាស៊ីនមេផ្តាច់មុខ",
         "sub": "5 កៅអី",
@@ -616,7 +616,7 @@
       },
       {
         "q": "តើកញ្ចប់ 1x, 5x, 20x, Team និង Business ខុសគ្នាដូចម្តេច? តើមានការបញ្ចុះតម្លៃប្រចាំឆ្នាំទេ?",
-        "a_html": "កញ្ចប់ទាំងប្រាំត្រូវបានរៀបចំទៅតាមចំនួនកៅអី កម្រិតបំបែកផ្នែករឹង ម៉ោងថែទាំរបស់ទីប្រឹក្សា និងអត្ថប្រយោជន៍បន្ថែម — ហើយ <strong>ការទូទាត់ប្រចាំឆ្នាំគិតថ្លៃត្រឹមតែ 10 ខែក្នុងមួយឆ្នាំប៉ុណ្ណោះ (ថែមជូន 2 ខែឥតគិតថ្លៃ) សម្រាប់គ្រប់កញ្ចប់ទាំងអស់</strong>៖<br>• <strong>1x ស្តង់ដារ</strong>៖ កូតាមូលដ្ឋានសម្រាប់បុគ្គល + បរិស្ថាន Mac mini (គណនី macOS ដាច់ដោយឡែក) + ជំនួយ 1 ទល់ 1 ម៉ោង <strong>7×8h</strong>;<br>• <strong>5x ប្រូ</strong>៖ កូតា 5 ដងសម្រាប់បុគ្គល + Mac mini សមត្ថភាពខ្ពស់ (គណនី macOS ដាច់ដោយឡែក) + ជំនួយអាទិភាព 1 ទល់ 1 ម៉ោង <strong>7×16h</strong>;<br>• <strong>20x កំពូល</strong>៖ កូតា 20 ដងសម្រាប់បុគ្គល + Mac Studio / Mac mini សមត្ថភាពខ្ពស់ (ជម្រើសម៉ាស៊ីនផ្តាច់មុខ) + ទីប្រឹក្សាឯកជន <strong>7×24h</strong> + <strong>បណ្តាញ RustDesk ឯកជន</strong> + <strong>ទំហំផ្ទុក Cloud 6 TB</strong>;<br>• <strong>Team (5 កៅអី · ម៉ាស៊ីនមេផ្តាច់មុខ)</strong>៖ មានជាជម្រើស All-Pro (1x), All-Max (5x) ឬ All-Ultra (20x) — ម៉ាស៊ីនពិត Mac ផ្តាច់មុខសម្រាប់ក្រុម ការផ្ទេរកៅអី វិក្កយបត្ររួម បណ្តាញ RustDesk ឯកជន ទំហំផ្ទុក Cloud 6–12 TB &amp; ជំនួយក្រុម 7×24h;<br>• <strong>Business (10 កៅអី · ប្រព័ន្ធ Mac ច្រើនគ្រឿង)</strong>៖ មានជាជម្រើស All-Pro (1x), All-Max (5x) ឬ All-Ultra (20x) — ប្រព័ន្ធ Cluster ម៉ាស៊ីន Mac ច្រើនគ្រឿងផ្តាច់មុខ (ដាក់ពង្រាយ 2 តំបន់ &amp; ផ្លាស់ទីរហ័សក្នុង 9 ប្រទេស) វិក្កយបត្រពាណិជ្ជកម្ម Relay RustDesk សហគ្រាស ទំហំផ្ទុក Cloud 12–30 TB &amp; VIP SLA 7×24h;<br>• <strong>កញ្ចប់បន្ថែមដំឡើងកម្រិតតាមកៅអី</strong>៖ ចាប់ផ្តើមលើកញ្ចប់មូលដ្ឋាន All-Pro ឬ All-Max រួចដំឡើងកៅអីជាក់លាក់ទៅ Max (5x) ឬ Ultra (20x) បានគ្រប់ពេលតាមរយៈទំព័រទូទាត់ដោយខ្លួនឯង (កែតម្រូវបរិមាណ 1–50 កៅអី);<br>• <strong>កញ្ចប់បន្ថែមខ្សែបណ្តាញសហគ្រាស ClaudeOps</strong>៖ ជម្រើសបង្កើនល្បឿន BGP ឆ្លងដែនកម្រិតសហគ្រាសសម្រាប់សមាជិក 1x (+$5/ខែ) និង 5x (+$20/ខែ) (មានផ្តល់ជូនឥតគិតថ្លៃរួចហើយនៅលើកញ្ចប់ 20x, Team &amp; Business)។"
+        "a_html": "កញ្ចប់ទាំងប្រាំត្រូវបានរៀបចំទៅតាមចំនួនកៅអី កម្រិតបំបែកផ្នែករឹង ម៉ោងថែទាំរបស់ទីប្រឹក្សា និងអត្ថប្រយោជន៍បន្ថែម — ហើយ <strong>ការទូទាត់ប្រចាំឆ្នាំគិតថ្លៃត្រឹមតែ 10 ខែក្នុងមួយឆ្នាំប៉ុណ្ណោះ (ថែមជូន 2 ខែឥតគិតថ្លៃ) សម្រាប់គ្រប់កញ្ចប់ទាំងអស់</strong>៖<br>• <strong>1x ស្តង់ដារ</strong>៖ កូតាមូលដ្ឋានសម្រាប់បុគ្គល + បរិស្ថាន Mac mini (គណនី macOS ដាច់ដោយឡែក) + ជំនួយ 1 ទល់ 1 ម៉ោង <strong>7×8h</strong>;<br>• <strong>5x ប្រូ</strong>៖ កូតា 5 ដងសម្រាប់បុគ្គល + Mac mini សមត្ថភាពខ្ពស់ (គណនី macOS ដាច់ដោយឡែក) + ជំនួយអាទិភាព 1 ទល់ 1 ម៉ោង <strong>7×16h</strong>;<br>• <strong>20x កំពូល</strong>៖ កូតា 20 ដងសម្រាប់បុគ្គល + Mac Studio / Mac mini សមត្ថភាពខ្ពស់ (ជម្រើសម៉ាស៊ីនផ្តាច់មុខ) + ទីប្រឹក្សាឯកជន <strong>7×24h</strong> + <strong>បណ្តាញ RustDesk ឯកជន</strong> + <strong>ទំហំផ្ទុក Cloud 6 TB</strong>;<br>• <strong>Team (5 កៅអី · ម៉ាស៊ីនមេផ្តាច់មុខ)</strong>៖ មានជាជម្រើស All-Pro (1x), All-Premium Seat (6.25x) ឬ All-Ultra (20x) — ម៉ាស៊ីនពិត Mac ផ្តាច់មុខសម្រាប់ក្រុម ការផ្ទេរកៅអី វិក្កយបត្ររួម បណ្តាញ RustDesk ឯកជន ទំហំផ្ទុក Cloud 6–12 TB &amp; ជំនួយក្រុម 7×24h;<br>• <strong>Business (10 កៅអី · ប្រព័ន្ធ Mac ច្រើនគ្រឿង)</strong>៖ មានជាជម្រើស All-Pro (1x), All-Premium Seat (6.25x) ឬ All-Ultra (20x) — ប្រព័ន្ធ Cluster ម៉ាស៊ីន Mac ច្រើនគ្រឿងផ្តាច់មុខ (ដាក់ពង្រាយ 2 តំបន់ &amp; ផ្លាស់ទីរហ័សក្នុង 9 ប្រទេស) វិក្កយបត្រពាណិជ្ជកម្ម Relay RustDesk សហគ្រាស ទំហំផ្ទុក Cloud 12–30 TB &amp; VIP SLA 7×24h;<br>• <strong>កញ្ចប់បន្ថែមដំឡើងកម្រិតតាមកៅអី</strong>៖ ចាប់ផ្តើមលើកញ្ចប់មូលដ្ឋាន All-Pro ឬ All-Premium រួចដំឡើងកៅអីជាក់លាក់ទៅ Premium Seat (6.25x) ឬ Ultra (20x) បានគ្រប់ពេលតាមរយៈទំព័រទូទាត់ដោយខ្លួនឯង (កែតម្រូវបរិមាណ 1–50 កៅអី);<br>• <strong>កញ្ចប់បន្ថែមខ្សែបណ្តាញសហគ្រាស ClaudeOps</strong>៖ ជម្រើសបង្កើនល្បឿន BGP ឆ្លងដែនកម្រិតសហគ្រាសសម្រាប់សមាជិក 1x (+$5/ខែ) និង 5x (+$20/ខែ) (មានផ្តល់ជូនឥតគិតថ្លៃរួចហើយនៅលើកញ្ចប់ 20x, Team &amp; Business)។"
       },
       {
         "q": "តើកញ្ចប់បន្ថែមខ្សែបណ្តាញសហគ្រាស ClaudeOps គឺជាអ្វី? តើអ្នកណាគួរប្រើវា?",
@@ -972,7 +972,7 @@
       {
         "id": "ent-custom",
         "btn": "15+ seat custom enterprise cluster",
-        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."
       }
     ],
     "tab_solo_title": "អ្នកអភិវឌ្ឍន៍ / អ្នកបង្កើតម្នាក់ឯង",
@@ -993,11 +993,11 @@
       "tier_b": "Custom",
       "tier_span": "Private Cluster",
       "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
-      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) & Premium (6.25x) seats across departments.",
       "price_text": "តាមតម្រូវការ",
       "price_sub": "From 15 seats · 1-on-1 architecture & quote",
       "features": [
-        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Flexible mix of 15–100+ Standard (1.25x) & Premium (6.25x) seats",
         "Dedicated multi-Mac Studio hardware & dual-region failover",
         "Dedicated static native business ISP & private relay gateway",
         "Commercial Invoice, procurement onboarding & custom SLA",

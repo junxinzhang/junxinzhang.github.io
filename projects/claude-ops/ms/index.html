@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="Pilih peringkat kerusi pasukan">
               <button type="button" data-seat-tier="pro" aria-pressed="false">Semua Kerusi Standard Seat (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">Semua Kerusi Premium Seat (6.25x) <span class="save-badge">Disyorkan</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">Semua Kerusi Ultra (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
@@ -1643,7 +1643,7 @@
                   <li data-ent-seat-li="team">Termasuk <strong>5 kerusi kejuruteraan Premium Seat (6.25x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)</li>
                   <li><strong>Hos Mac Studio / Mac mini spek tinggi khas</strong> eksklusif untuk pasukan anda</li>
                   <li>Penugasan semula kerusi milik organisasi untuk kemasukan/keluar ahli &amp; <strong>satu invois disatukan</strong></li>
-                  <li>Naik taraf kerusi individu ke Premium Seat (6.25x) atau Ultra (20x) mengikut keperluan pada bila-bila masa</li>
+                  <li>Naik taraf kerusi individu ke Premium Seat (6.25x) mengikut keperluan pada bila-bila masa</li>
                   <li>Saluran kumpulan concierge khas pasukan <strong>7×24 jam</strong></li>
                   <li style="color: var(--primary-strong); font-weight: 600;">Saluran pasukan peribadi RustDesk berkelajuan tinggi percuma</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Storan awan pasukan 12 TB percuma (Google Drive / iCloud+)</li>
@@ -1676,11 +1676,11 @@
                 <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
                 <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
                 <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
-                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) &amp; Premium (6.25x) seats across departments.</p>
                 <div class="price price-custom">Tersuai</div>
                 <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
                 <ul class="features">
-                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Flexible mix of 15–100+ Standard (1.25x) &amp; Premium (6.25x) seats</li>
                   <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
                   <li>Dedicated static native business ISP &amp; private relay gateway</li>
                   <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">Pilih 1–50 kerusi; dicaj setiap kerusi semasa pembayaran</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>Naik taraf</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>S$</sup><span class="amount">409</span><small data-upg-period>/ kerusi / bln</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_SGD&amp;locale=ms" target="_blank" rel="noopener nofollow">Naik taraf kerusi →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Naik taraf</span></div>
-                      <p class="addon-desc">Naik taraf pengasas, CTO atau ketua arkitek pada pelan Semua-Max kepada kapasiti berbilang ejen Ultra 20x.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>S$</sup><span class="amount">469</span><small data-upg-period>/ kerusi / bln</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_SGD&amp;locale=ms" target="_blank" rel="noopener nofollow">Naik taraf kerusi →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Terus</span></div>
-                      <p class="addon-desc">Lonjakkan mana-mana kerusi pada pelan asas Semua-Pro terus kepada kuota penuh flagship Ultra 20x.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>S$</sup><span class="amount">869</span><small data-upg-period>/ kerusi / bln</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_SGD&amp;locale=ms" target="_blank" rel="noopener nofollow">Naik taraf kerusi →</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>Apakah perbandingan antara pelan 1x, 5x, 20x, Team dan Business? Adakah terdapat diskaun tahunan?</summary>
-            <p>Kelima-lima peringkat ini melaraskan bilangan kerusi, pengasingan perkakasan, waktu sokongan concierge dan manfaat tambahan — dan <strong>pengebilan tahunan hanya mengenakan caj 10 bulan setahun (2 bulan percuma) merentasi semua pelan</strong>:<br>• <strong>1x Standard</strong>: Kuota asas individu + persekitaran Mac mini (akaun macOS berasingan) + sokongan 1-ke-1 <strong>7×8 jam</strong>;<br>• <strong>5x Pro</strong>: Kuota individu 5× + Mac mini spek tinggi (akaun macOS berasingan) + sokongan keutamaan 1-ke-1 <strong>7×16 jam</strong>;<br>• <strong>20x Ultimate</strong>: Kuota individu 20× + Mac Studio / Mac mini spek tinggi (pilihan mesin khas) + concierge peribadi <strong>7×24 jam</strong> + <strong>saluran peribadi RustDesk</strong> + <strong>storan awan 6 TB</strong>;<br>• <strong>Team (5 Kerusi · Hos Khas)</strong>: Tersedia dalam peringkat Semua-Pro (1x), Semua-Max (5x) atau Semua-Ultra (20x) — hos fizikal Mac khas untuk pasukan anda, penugasan semula kerusi, pengebilan disatukan, saluran peribadi RustDesk, storan awan 6–12 TB &amp; concierge pasukan 7×24 jam;<br>• <strong>Business (10 Kerusi · Kluster Berbilang Mac)</strong>: Tersedia dalam peringkat Semua-Pro (1x), Semua-Max (5x) atau Semua-Ultra (20x) — kluster berbilang Mac khas (penempatan dwi-rantau &amp; migrasi pantas di 9 negara), invois komersial, geganti RustDesk perusahaan, storan awan 12–30 TB &amp; SLA VIP 7×24 jam;<br>• <strong>Tambahan Naik Taraf Setiap Kerusi</strong>: Mulakan pada pelan asas Semua-Pro atau Semua-Max dan naik taraf kerusi tertentu ke Max (5x) atau Ultra (20x) pada bila-bila masa melalui pembayaran layan diri (kuantiti boleh laras 1–50 kerusi);<br>• <strong>Tambahan Talian Khas Perusahaan ClaudeOps</strong>: Pecutan rentas sempadan BGP perusahaan pilihan untuk pelanggan 1x (+$5/bln) dan 5x (+$20/bln) (sudah disertakan percuma pada 20x, Team &amp; Business).</p>
+            <p>Kelima-lima peringkat ini melaraskan bilangan kerusi, pengasingan perkakasan, waktu sokongan concierge dan manfaat tambahan — dan <strong>pengebilan tahunan hanya mengenakan caj 10 bulan setahun (2 bulan percuma) merentasi semua pelan</strong>:<br>• <strong>1x Standard</strong>: Kuota asas individu + persekitaran Mac mini (akaun macOS berasingan) + sokongan 1-ke-1 <strong>7×8 jam</strong>;<br>• <strong>5x Pro</strong>: Kuota individu 5× + Mac mini spek tinggi (akaun macOS berasingan) + sokongan keutamaan 1-ke-1 <strong>7×16 jam</strong>;<br>• <strong>20x Ultimate</strong>: Kuota individu 20× + Mac Studio / Mac mini spek tinggi (pilihan mesin khas) + concierge peribadi <strong>7×24 jam</strong> + <strong>saluran peribadi RustDesk</strong> + <strong>storan awan 6 TB</strong>;<br>• <strong>Team (5 Kerusi · Hos Khas)</strong>: Tersedia dalam peringkat Semua-Pro (1x), Semua-Premium Seat (6.25x) atau Semua-Ultra (20x) — hos fizikal Mac khas untuk pasukan anda, penugasan semula kerusi, pengebilan disatukan, saluran peribadi RustDesk, storan awan 6–12 TB &amp; concierge pasukan 7×24 jam;<br>• <strong>Business (10 Kerusi · Kluster Berbilang Mac)</strong>: Tersedia dalam peringkat Semua-Pro (1x), Semua-Premium Seat (6.25x) atau Semua-Ultra (20x) — kluster berbilang Mac khas (penempatan dwi-rantau &amp; migrasi pantas di 9 negara), invois komersial, geganti RustDesk perusahaan, storan awan 12–30 TB &amp; SLA VIP 7×24 jam;<br>• <strong>Tambahan Naik Taraf Setiap Kerusi</strong>: Mulakan pada pelan asas Semua-Pro atau Semua-Premium dan naik taraf kerusi tertentu ke Premium Seat (6.25x) pada bila-bila masa melalui pembayaran layan diri (kuantiti boleh laras 1–50 kerusi);<br>• <strong>Tambahan Talian Khas Perusahaan ClaudeOps</strong>: Pecutan rentas sempadan BGP perusahaan pilihan untuk pelanggan 1x (+$5/bln) dan 5x (+$20/bln) (sudah disertakan percuma pada 20x, Team &amp; Business).</p>
           </details>
           <details>
             <summary>Apakah tambahan Talian Khas Perusahaan ClaudeOps? Siapakah yang memerlukannya?</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ bulan", "perYear": "/ tahun", "perSeatMo": "/ kerusi / bln", "perSeatYr": "/ kerusi / thn", "perMoShort": "/ bln", "perYrShort": "/ thn", "title12mo": "12 bulan dibilkan secara bulanan", "titleRegMo": "Harga bulanan biasa", "noteAnnual": "10 bulan dibilkan tahunan · ~{sym}{eq}/bln, jimat {sym}{save}", "note1xMo": "Termasuk persekitaran Claude · sekitar {sym}{day} / hari", "note20xPromo": "Harga promosi kekal semasa pembaharuan · kos seunit ~{ratio}% daripada 1x", "noteMultMo": "Termasuk persekitaran Claude · kuota {mult}x, kos seunit ~{ratio}% daripada 1x", "entTeamMo": "Termasuk 5 kerusi terasing {label} · Hos Mac khas & pengebilan disatukan", "entBizMo": "Termasuk 10 kerusi terasing {label} · Kluster berbilang Mac khas & SLA VIP", "line0Mo": "Pecutan BGP sifar kehilangan 24/7 · Diurus bersama pelan", "line1Mo": "Daya pemprosesan keutamaan 5× · QoS BGP keutamaan tinggi"};
       var DEFAULT_CURRENCY = "SGD";
       var CUR_LOCALE_SLUG = "ms";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
@@ -2774,7 +2754,7 @@
       });
     }
 
-    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."};
     var panelSolo = document.getElementById('panel-solo');
     var panelEnt = document.getElementById('pricing-enterprise');
     var finderTip = document.getElementById('finder-tip');

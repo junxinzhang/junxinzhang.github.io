@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="टीम सीट टियर चुनें">
               <button type="button" data-seat-tier="pro" aria-pressed="false">ऑल-Pro सीटें (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">ऑल-Max सीटें (6.25x) <span class="save-badge">अनुशंसित</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">ऑल-Ultra सीटें (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
@@ -1643,7 +1643,7 @@
                   <li data-ent-seat-li="team">इसमें <strong>5 Premium Seat (6.25x) इंजीनियरिंग सीटें</strong> शामिल हैं (प्रत्येक सदस्य के लिए अलग Claude वर्कस्पेस और macOS अकाउंट)</li>
                   <li>केवल आपकी टीम के लिए <strong>समर्पित हाई-स्पेक Mac Studio / Mac mini होस्ट</strong></li>
                   <li>सदस्यों के जुड़ने/हटने पर संगठन-स्वामित्व वाली सीट रीअसाइनमेंट और <strong>एकल समेकित इनवॉइस</strong></li>
-                  <li>किसी भी समय मांग के अनुसार व्यक्तिगत सीटों को Premium Seat (6.25x) या Ultra (20x) में अपग्रेड करें</li>
+                  <li>किसी भी समय मांग के अनुसार व्यक्तिगत सीटों को Premium Seat (6.25x) में अपग्रेड करें</li>
                   <li><strong>7×24h</strong> समर्पित टीम कंसीयज ग्रुप चैनल</li>
                   <li style="color: var(--primary-strong); font-weight: 600;">निःशुल्क प्राइवेट हाई-स्पीड RustDesk टीम चैनल</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">निःशुल्क 12 TB टीम क्लाउड स्टोरेज (Google Drive / iCloud+)</li>
@@ -1676,11 +1676,11 @@
                 <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
                 <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
                 <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
-                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) &amp; Premium (6.25x) seats across departments.</p>
                 <div class="price price-custom">कस्टम</div>
                 <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
                 <ul class="features">
-                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Flexible mix of 15–100+ Standard (1.25x) &amp; Premium (6.25x) seats</li>
                   <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
                   <li>Dedicated static native business ISP &amp; private relay gateway</li>
                   <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">1–50 सीटें चुनें; चेकआउट पर प्रति सीट शुल्क</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>अपग्रेड</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ सीट / माह</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_USD&amp;locale=hi" target="_blank" rel="noopener nofollow">सीट अपग्रेड करें →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>अपग्रेड</span></div>
-                      <p class="addon-desc">All-Premium प्लान पर फ़ाउंडर्स, CTOs या लीड आर्किटेक्ट्स को 20x Ultra मल्टी-एजेंट क्षमता में अपग्रेड करें।</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ सीट / माह</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_USD&amp;locale=hi" target="_blank" rel="noopener nofollow">सीट अपग्रेड करें →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>डायरेक्ट</span></div>
-                      <p class="addon-desc">All-Standard बेस प्लान की किसी भी सीट को सीधे पूर्ण 20x Ultra फ़्लैगशिप कोटा पर ले जाएँ।</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ सीट / माह</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_USD&amp;locale=hi" target="_blank" rel="noopener nofollow">सीट अपग्रेड करें →</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>1x, 5x, 20x, Team और Business की तुलना कैसे करें? क्या वार्षिक छूट उपलब्ध है?</summary>
-            <p>ये पाँचों टियर सीट संख्या, हार्डवेयर आइसोलेशन, कंसीयज घंटों और शामिल लाभों को स्केल करते हैं — और <strong>वार्षिक बिलिंग पर हर टियर में साल में केवल 10 महीनों का शुल्क लगता है (2 महीने मुफ़्त)</strong>:<br>• <strong>1x Standard</strong>: सोलो बेस कोटा + Mac mini वातावरण (अलग macOS अकाउंट) + <strong>7×8h</strong> 1-ऑन-1 सपोर्ट;<br>• <strong>5x Pro</strong>: सोलो 5× कोटा + हाई-स्पेक Mac mini (अलग macOS अकाउंट) + <strong>7×16h</strong> प्राथमिकता 1-ऑन-1 सपोर्ट;<br>• <strong>20x Ultimate</strong>: सोलो 20× कोटा + हाई-स्पेक Mac Studio / Mac mini (डेडिकेटेड मशीन विकल्प) + <strong>7×24h</strong> प्राइवेट कंसीयज + <strong>प्राइवेट RustDesk चैनल</strong> + <strong>6 TB क्लाउड स्टोरेज</strong>;<br>• <strong>Team (5 सीटें · डेडिकेटेड होस्ट)</strong>: All-Pro (1x), All-Max (5x) या All-Ultra (20x) टियर्स में उपलब्ध — आपकी टीम के लिए डेडिकेटेड फ़िज़िकल Mac होस्ट, सीट रीअसाइनमेंट, समेकित बिलिंग, प्राइवेट RustDesk चैनल, 6–12 TB क्लाउड स्टोरेज और 7×24h टीम कंसीयज;<br>• <strong>Business (10 सीटें · मल्टी-Mac क्लस्टर)</strong>: All-Pro (1x), All-Max (5x) या All-Ultra (20x) टियर्स में उपलब्ध — डेडिकेटेड मल्टी-Mac क्लस्टर (9 देशों में डुअल-रीजन डिप्लॉयमेंट और तेज़ माइग्रेशन), कमर्शियल इनवॉइसिंग, एंटरप्राइज़ RustDesk रिले, 12–30 TB क्लाउड स्टोरेज और 7×24h VIP SLA;<br>• <strong>प्रति-सीट अपग्रेड ऐड-ऑन</strong>: All-Pro या All-Max बेस प्लान से शुरू करें और सेल्फ़-सर्व चेकआउट के माध्यम से कभी भी विशिष्ट सीटों को Max (5x) या Ultra (20x) में अपग्रेड करें (1–50 सीटों की समायोज्य मात्रा);<br>• <strong>ClaudeOps एंटरप्राइज़ डेडिकेटेड लाइन ऐड-ऑन</strong>: 1x (+$5/माह) और 5x (+$20/माह) सब्सक्राइबर्स के लिए वैकल्पिक एंटरप्राइज़ BGP क्रॉस-बॉर्डर एक्सेलेरेशन (20x, Team और Business प्लान में पहले से निःशुल्क शामिल)।</p>
+            <p>ये पाँचों टियर सीट संख्या, हार्डवेयर आइसोलेशन, कंसीयज घंटों और शामिल लाभों को स्केल करते हैं — और <strong>वार्षिक बिलिंग पर हर टियर में साल में केवल 10 महीनों का शुल्क लगता है (2 महीने मुफ़्त)</strong>:<br>• <strong>1x Standard</strong>: सोलो बेस कोटा + Mac mini वातावरण (अलग macOS अकाउंट) + <strong>7×8h</strong> 1-ऑन-1 सपोर्ट;<br>• <strong>5x Pro</strong>: सोलो 5× कोटा + हाई-स्पेक Mac mini (अलग macOS अकाउंट) + <strong>7×16h</strong> प्राथमिकता 1-ऑन-1 सपोर्ट;<br>• <strong>20x Ultimate</strong>: सोलो 20× कोटा + हाई-स्पेक Mac Studio / Mac mini (डेडिकेटेड मशीन विकल्प) + <strong>7×24h</strong> प्राइवेट कंसीयज + <strong>प्राइवेट RustDesk चैनल</strong> + <strong>6 TB क्लाउड स्टोरेज</strong>;<br>• <strong>Team (5 सीटें · डेडिकेटेड होस्ट)</strong>: All-Pro (1x), All-Premium Seat (6.25x) या All-Ultra (20x) टियर्स में उपलब्ध — आपकी टीम के लिए डेडिकेटेड फ़िज़िकल Mac होस्ट, सीट रीअसाइनमेंट, समेकित बिलिंग, प्राइवेट RustDesk चैनल, 6–12 TB क्लाउड स्टोरेज और 7×24h टीम कंसीयज;<br>• <strong>Business (10 सीटें · मल्टी-Mac क्लस्टर)</strong>: All-Pro (1x), All-Premium Seat (6.25x) या All-Ultra (20x) टियर्स में उपलब्ध — डेडिकेटेड मल्टी-Mac क्लस्टर (9 देशों में डुअल-रीजन डिप्लॉयमेंट और तेज़ माइग्रेशन), कमर्शियल इनवॉइसिंग, एंटरप्राइज़ RustDesk रिले, 12–30 TB क्लाउड स्टोरेज और 7×24h VIP SLA;<br>• <strong>प्रति-सीट अपग्रेड ऐड-ऑन</strong>: All-Pro या All-Premium बेस प्लान से शुरू करें और सेल्फ़-सर्व चेकआउट के माध्यम से कभी भी विशिष्ट सीटों को Premium Seat (6.25x) में अपग्रेड करें (1–50 सीटों की समायोज्य मात्रा);<br>• <strong>ClaudeOps एंटरप्राइज़ डेडिकेटेड लाइन ऐड-ऑन</strong>: 1x (+$5/माह) और 5x (+$20/माह) सब्सक्राइबर्स के लिए वैकल्पिक एंटरप्राइज़ BGP क्रॉस-बॉर्डर एक्सेलेरेशन (20x, Team और Business प्लान में पहले से निःशुल्क शामिल)।</p>
           </details>
           <details>
             <summary>ClaudeOps एंटरप्राइज़ डेडिकेटेड लाइन ऐड-ऑन क्या है? इसकी आवश्यकता किसे है?</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ माह", "perYear": "/ वर्ष", "perSeatMo": "/ सीट / माह", "perSeatYr": "/ सीट / वर्ष", "perMoShort": "/ माह", "perYrShort": "/ वर्ष", "title12mo": "मासिक बिलिंग पर 12 महीने", "titleRegMo": "सामान्य मासिक कीमत", "noteAnnual": "वार्षिक बिलिंग पर 10 माह का शुल्क · ~{sym}{eq}/माह, बचत {sym}{save}", "note1xMo": "Claude वातावरण शामिल · लगभग {sym}{day} / दिन", "note20xPromo": "रिन्यूअल पर ऑफ़र कीमत लागू रहेगी · प्रति यूनिट लागत 1x का लगभग {ratio}%", "noteMultMo": "Claude वातावरण शामिल · {mult}x उपयोग, प्रति यूनिट लागत 1x का लगभग {ratio}%", "entTeamMo": "5 {label} आइसोलेटेड सीटें शामिल · डेडिकेटेड Mac होस्ट और समेकित बिलिंग", "entBizMo": "10 {label} आइसोलेटेड सीटें शामिल · डेडिकेटेड मल्टी-Mac क्लस्टर और VIP SLA", "line0Mo": "24/7 BGP ज़ीरो-लॉस एक्सेलेरेशन · प्लान के साथ मैनेज्ड", "line1Mo": "5× प्राथमिकता थ्रूपुट · उच्च-प्राथमिकता BGP QoS"};
       var DEFAULT_CURRENCY = "USD";
       var CUR_LOCALE_SLUG = "hi";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
@@ -2774,7 +2754,7 @@
       });
     }
 
-    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."};
     var panelSolo = document.getElementById('panel-solo');
     var panelEnt = document.getElementById('pricing-enterprise');
     var finderTip = document.getElementById('finder-tip');

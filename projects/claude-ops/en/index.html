@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="Choose team seat tier">
               <button type="button" data-seat-tier="pro" aria-pressed="false">All-Standard Seats (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">All-Premium Seats (6.25x) <span class="save-badge">Recommended</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">All-Ultra Seats (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
@@ -1643,7 +1643,7 @@
                   <li data-ent-seat-li="team">Includes <strong>5 Premium Seat (6.25x) engineering seats</strong> (separate Claude workspace &amp; macOS account per member)</li>
                   <li><strong>Dedicated high-spec Mac Studio / Mac mini host</strong> exclusively for your team</li>
                   <li>Organisation-owned seat reassignment for onboarding/offboarding &amp; <strong>single consolidated invoice</strong></li>
-                  <li>Upgrade individual seats to Premium Seat (6.25x) or Ultra (20x) on demand at any time</li>
+                  <li>Upgrade individual seats to Premium Seat (6.25x) on demand at any time</li>
                   <li><strong>7×24h</strong> dedicated team concierge group channel</li>
                   <li style="color: var(--primary-strong); font-weight: 600;">Complimentary private high-speed RustDesk team channel</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Complimentary 12 TB team cloud storage (Google Drive / iCloud+)</li>
@@ -1676,11 +1676,11 @@
                 <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
                 <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
                 <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
-                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) &amp; Premium (6.25x) seats across departments.</p>
                 <div class="price price-custom">Custom</div>
                 <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
                 <ul class="features">
-                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Flexible mix of 15–100+ Standard (1.25x) &amp; Premium (6.25x) seats</li>
                   <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
                   <li>Dedicated static native business ISP &amp; private relay gateway</li>
                   <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
@@ -1702,7 +1702,7 @@
                     <strong>Need mixed tiers? Per-Seat Flex Upgrade Add-ons</strong>
                     <span class="drawer-pill">1–50 seats adjustable at checkout</span>
                   </span>
-                  <span class="drawer-hint">For active Team / Business bases — upgrade specific leads or architects to Max (5x) or Ultra (20x) anytime</span>
+                  <span class="drawer-hint">For active Team / Business bases — upgrade specific leads or architects to Premium Seat (6.25x) anytime</span>
                 </span>
               </span>
               <span class="drawer-toggle-pill"><span class="when-closed">View upgrades</span><span class="when-open">Hide</span> <i>▾</i></span>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">Choose 1–50 seats; billed per seat at checkout</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>Upgrade</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>A$</sup><span class="amount">479</span><small data-upg-period>/ seat / mo</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_AUD&amp;locale=en" target="_blank" rel="noopener nofollow">Upgrade seat →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Upgrade</span></div>
-                      <p class="addon-desc">Upgrade founders, CTOs or lead architects on an All-Premium plan to 20x Ultra multi-agent capacity.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>A$</sup><span class="amount">539</span><small data-upg-period>/ seat / mo</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_AUD&amp;locale=en" target="_blank" rel="noopener nofollow">Upgrade seat →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Direct</span></div>
-                      <p class="addon-desc">Jump any seat on an All-Standard base plan straight to full 20x Ultra flagship allowance.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>A$</sup><span class="amount">999</span><small data-upg-period>/ seat / mo</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_AUD&amp;locale=en" target="_blank" rel="noopener nofollow">Upgrade seat →</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>How do 1x, 5x, 20x, Team and Business compare? Is there an annual discount?</summary>
-            <p>All five tiers scale seats, hardware isolation, concierge hours and included perks — and <strong>annual billing charges only 10 months per year (2 months free) across every tier</strong>:<br>• <strong>1x Standard</strong>: Solo base allowance + Mac mini environment (separate macOS account) + <strong>7×8h</strong> 1-on-1 support;<br>• <strong>5x Pro</strong>: Solo 5× allowance + high-spec Mac mini (separate macOS account) + <strong>7×16h</strong> priority 1-on-1 support;<br>• <strong>20x Ultimate</strong>: Solo 20× allowance + high-spec Mac Studio / Mac mini (dedicated machine option) + <strong>7×24h</strong> private concierge + <strong>private RustDesk channel</strong> + <strong>6 TB cloud storage</strong>;<br>• <strong>Team (5 Seats · Dedicated Host)</strong>: Available in All-Pro (1x), All-Max (5x) or All-Ultra (20x) tiers — dedicated physical Mac host for your team, seat reassignment, consolidated billing, private RustDesk channel, 6–12 TB cloud storage &amp; 7×24h team concierge;<br>• <strong>Business (10 Seats · Multi-Mac Cluster)</strong>: Available in All-Pro (1x), All-Max (5x) or All-Ultra (20x) tiers — dedicated multi-Mac cluster (9-country dual-region deployment &amp; rapid migration), commercial invoicing, enterprise RustDesk relay, 12–30 TB cloud storage &amp; 7×24h VIP SLA;<br>• <strong>Per-Seat Upgrade Add-ons</strong>: Start on an All-Pro or All-Max base plan and upgrade specific seats to Max (5x) or Ultra (20x) at any time via self-serve checkout (adjustable quantity 1–50 seats);<br>• <strong>ClaudeOps Enterprise Dedicated Line Add-on</strong>: Optional enterprise BGP cross-border acceleration for 1x (+$5/mo) and 5x (+$20/mo) subscribers (already complimentary on 20x, Team &amp; Business).</p>
+            <p>All five tiers scale seats, hardware isolation, concierge hours and included perks — and <strong>annual billing charges only 10 months per year (2 months free) across every tier</strong>:<br>• <strong>1x Standard</strong>: Solo base allowance + Mac mini environment (separate macOS account) + <strong>7×8h</strong> 1-on-1 support;<br>• <strong>5x Pro</strong>: Solo 5× allowance + high-spec Mac mini (separate macOS account) + <strong>7×16h</strong> priority 1-on-1 support;<br>• <strong>20x Ultimate</strong>: Solo 20× allowance + high-spec Mac Studio / Mac mini (dedicated machine option) + <strong>7×24h</strong> private concierge + <strong>private RustDesk channel</strong> + <strong>6 TB cloud storage</strong>;<br>• <strong>Team (5 Seats · Dedicated Host)</strong>: Available in All-Pro (1x), All-Premium Seat (6.25x) or All-Ultra (20x) tiers — dedicated physical Mac host for your team, seat reassignment, consolidated billing, private RustDesk channel, 6–12 TB cloud storage &amp; 7×24h team concierge;<br>• <strong>Business (10 Seats · Multi-Mac Cluster)</strong>: Available in All-Pro (1x), All-Premium Seat (6.25x) or All-Ultra (20x) tiers — dedicated multi-Mac cluster (9-country dual-region deployment &amp; rapid migration), commercial invoicing, enterprise RustDesk relay, 12–30 TB cloud storage &amp; 7×24h VIP SLA;<br>• <strong>Per-Seat Upgrade Add-ons</strong>: Start on an All-Pro or All-Premium base plan and upgrade specific seats to Premium Seat (6.25x) at any time via self-serve checkout (adjustable quantity 1–50 seats);<br>• <strong>ClaudeOps Enterprise Dedicated Line Add-on</strong>: Optional enterprise BGP cross-border acceleration for 1x (+$5/mo) and 5x (+$20/mo) subscribers (already complimentary on 20x, Team &amp; Business).</p>
           </details>
           <details>
             <summary>What is the ClaudeOps Enterprise Dedicated Line add-on? Who needs it?</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ month", "perYear": "/ year", "perSeatMo": "/ seat / mo", "perSeatYr": "/ seat / yr", "perMoShort": "/ mo", "perYrShort": "/ yr", "title12mo": "12 months billed monthly", "titleRegMo": "Regular monthly price", "noteAnnual": "10 months billed annually · ~{sym}{eq}/mo, save {sym}{save}", "note1xMo": "Includes Claude environment · about {sym}{day} / day", "note20xPromo": "Promo price stays on renewal · unit cost about {ratio}% of 1x", "noteMultMo": "Includes Claude environment · {mult}x usage, unit cost about {ratio}% of 1x", "entTeamMo": "Includes 5 {label} isolated seats · Dedicated Mac host & consolidated billing", "entBizMo": "Includes 10 {label} isolated seats · Dedicated multi-Mac cluster & VIP SLA", "line0Mo": "24/7 BGP zero-loss acceleration · Managed with plan", "line1Mo": "5× priority throughput · High-priority BGP QoS"};
       var DEFAULT_CURRENCY = "AUD";
       var CUR_LOCALE_SLUG = "en";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
@@ -2774,7 +2754,7 @@
       });
     }
 
-    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."};
     var panelSolo = document.getElementById('panel-solo');
     var panelEnt = document.getElementById('pricing-enterprise');
     var finderTip = document.getElementById('finder-tip');

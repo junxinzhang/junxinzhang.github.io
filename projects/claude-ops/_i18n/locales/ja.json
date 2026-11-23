@@ -450,7 +450,7 @@
       "tier_max": "全員 Max シート (6.25x)",
       "tier_max_badge": "おすすめ",
       "tier_ultra": "全員 Ultra シート (20x)",
-      "toolbar_html": "全員同一のPro・Max・Ultra構成で開始できるほか、下部のセルフサービス<strong>シート単位アップグレード</strong>でメンバーごとに柔軟な組み合わせも可能です。",
+      "toolbar_html": "全員同一のPro・Premium・Ultra構成で開始できるほか、下部のセルフサービス<strong>シート単位アップグレード</strong>でメンバーごとに柔軟な組み合わせも可能です。",
       "team": {
         "init_badge": "Premium Seat (6.25x) × 5シート · 専有ホスト",
         "sub": "5シート",
@@ -460,7 +460,7 @@
         "features_html": [
           "チーム専用の<strong>ハイスペック物理Mac Studio / Mac mini専有ホスト</strong>",
           "入退社に伴う企業側でのシート再割り当てと<strong>単一の一括請求書（インボイス）発行</strong>",
-          "必要なメンバーのシートだけを後からオンデマンドでMax (6.25x) / Ultra (20x) へアップグレード可能",
+          "必要なメンバーのシートだけを後からオンデマンドでPremium (6.25x) へアップグレード可能",
           "<strong>7×24時間</strong> チーム専用コンシェルジュグループ窓口",
           "チーム専用の高速プライベートRustDeskチャネル無料付帯"
         ],
@@ -616,7 +616,7 @@
       },
       {
         "q": "1x・5x・20x・Team・Businessの違いは何ですか？年額割引はありますか？",
-        "a_html": "5つのプランはシート数、ハードウェア分離レベル、サポート時間帯、付帯特典に応じて段階的に設計されており、<strong>すべてのプランで年額払いは10ヶ月分の料金（2ヶ月分無料）</strong>となります：<br>• <strong>1x スタンダード</strong>：個人向け基本枠 ＋ 物理Mac mini環境（個別macOSアカウント）＋ <strong>7×8時間</strong> 1対1サポート；<br>• <strong>5x プロ</strong>：個人向け5倍枠 ＋ ハイスペック物理Mac mini（個別macOSアカウント）＋ <strong>7×16時間</strong> 優先1対1サポート；<br>• <strong>20x アルティメット</strong>：個人向け20倍枠 ＋ ハイスペックMac Studio / Mac mini（1台専有オプション）＋ <strong>7×24時間</strong> プライベートコンシェルジュ ＋ <strong>専用RustDeskチャネル</strong> ＋ <strong>6 TBクラウドストレージ</strong>；<br>• <strong>Team（5シート・専有ホスト）</strong>：全員Pro (1x)・Max (5x)・Ultra (20x) から選択可能 — チーム専用の物理Macホスト、シート再割り当て、一括請求、専用RustDeskチャネル、6〜12 TBクラウドストレージ、7×24hチームコンシェルジュ付き；<br>• <strong>Business（10シート・マルチMacクラスター）</strong>：全員Pro (1x)・Max (5x)・Ultra (20x) から選択可能 — 専有マルチMacクラスター（9カ国デュアルリージョン展開＆迅速移行）、法人請求書対応、エンタープライズRustDeskリレー、12〜30 TBクラウドストレージ、7×24h VIP SLA付き；<br>• <strong>シート単位アップグレードアドオン</strong>：全員Proまたは全員Maxのベースプランで開始し、必要なシート（1〜50枠まで調整可）だけをセルフサービス決済でいつでもMax (5x) やUltra (20x) へ引き上げ可能；<br>• <strong>ClaudeOps エンタープライズ専用線アドオン</strong>：1x（+$5/月）および5x（+$20/月）向けのエンタープライズBGP国際高速化オプション（20x、Team、Businessには標準で無料付帯）。"
+        "a_html": "5つのプランはシート数、ハードウェア分離レベル、サポート時間帯、付帯特典に応じて段階的に設計されており、<strong>すべてのプランで年額払いは10ヶ月分の料金（2ヶ月分無料）</strong>となります：<br>• <strong>1x スタンダード</strong>：個人向け基本枠 ＋ 物理Mac mini環境（個別macOSアカウント）＋ <strong>7×8時間</strong> 1対1サポート；<br>• <strong>5x プロ</strong>：個人向け5倍枠 ＋ ハイスペック物理Mac mini（個別macOSアカウント）＋ <strong>7×16時間</strong> 優先1対1サポート；<br>• <strong>20x アルティメット</strong>：個人向け20倍枠 ＋ ハイスペックMac Studio / Mac mini（1台専有オプション）＋ <strong>7×24時間</strong> プライベートコンシェルジュ ＋ <strong>専用RustDeskチャネル</strong> ＋ <strong>6 TBクラウドストレージ</strong>；<br>• <strong>Team（5シート・専有ホスト）</strong>：全員Pro (1x)・Premium Seat (6.25x)・Ultra (20x) から選択可能 — チーム専用の物理Macホスト、シート再割り当て、一括請求、専用RustDeskチャネル、6〜12 TBクラウドストレージ、7×24hチームコンシェルジュ付き；<br>• <strong>Business（10シート・マルチMacクラスター）</strong>：全員Pro (1x)・Premium Seat (6.25x)・Ultra (20x) から選択可能 — 専有マルチMacクラスター（9カ国デュアルリージョン展開＆迅速移行）、法人請求書対応、エンタープライズRustDeskリレー、12〜30 TBクラウドストレージ、7×24h VIP SLA付き；<br>• <strong>シート単位アップグレードアドオン</strong>：全員Proまたは全員Premiumのベースプランで開始し、必要なシート（1〜50枠まで調整可）だけをセルフサービス決済でいつでもPremium Seat (6.25x) やUltra (20x) へ引き上げ可能；<br>• <strong>ClaudeOps エンタープライズ専用線アドオン</strong>：1x（+$5/月）および5x（+$20/月）向けのエンタープライズBGP国際高速化オプション（20x、Team、Businessには標準で無料付帯）。"
       },
       {
         "q": "ClaudeOps エンタープライズ専用線アドオンとは何ですか？どのような方に必要ですか？",
@@ -997,7 +997,7 @@
       "price_text": "個別見積",
       "price_sub": "15席〜 · 専任アーキテクトが即日提案",
       "features": [
-        "15〜100+席でPro / Max / Ultraを自由な比率で混在可能",
+        "15〜100+席でStandard (1.25x) / Premium (6.25x)を自由な比率で混在可能",
         "複数台の専有Mac Studioクラスタ＆2リージョン冗長化",
         "専有固定ビジネス回線IP＆専用高速リレーゲートウェイ",
         "法人請求書（Commercial Invoice）・個別SLA契約に対応",
@@ -1011,7 +1011,7 @@
     "drawer_line_hint": "1x / 5xの越境リモート接続をロス0%で高速化（20x Ultimateは無料付帯）",
     "drawer_line_cta": "詳細を見る",
     "drawer_upg_title": "一部メンバーだけ上位枠が必要ですか？1席単位の差額アップグレード",
-    "drawer_upg_hint": "Team / Business契約チーム向け：特定メンバーのみMax / Ultraへ柔軟に昇格",
+    "drawer_upg_hint": "Team / Business契約チーム向け：特定メンバーのみPremium / Ultraへ柔軟に昇格",
     "drawer_upg_cta": "昇格パックを見る",
     "drawer_storage_title": "オプション：Google Drive / Apple iCloud+ 大容量ストレージ管理（2TB–30TB）",
     "drawer_storage_pill": "20xは6TB無料 · 法人版は6–30TB無料",

@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="Chọn hạng chỗ ngồi cho nhóm">
               <button type="button" data-seat-tier="pro" aria-pressed="false">Toàn bộ ghế Standard Seat (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">Toàn bộ ghế Premium Seat (6.25x) <span class="save-badge">Khuyên dùng</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">Toàn bộ ghế Ultra (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
@@ -1643,7 +1643,7 @@
                   <li data-ent-seat-li="team">Bao gồm <strong>5 ghế kỹ thuật Premium Seat (6.25x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)</li>
                   <li><strong>Máy chủ Mac Studio / Mac mini cấu hình cao chuyên dụng</strong> dành riêng cho nhóm của bạn</li>
                   <li>Linh hoạt cấp phát lại ghế thuộc sở hữu tổ chức khi thay đổi nhân sự &amp; <strong>một hóa đơn tổng hợp duy nhất</strong></li>
-                  <li>Nâng cấp từng ghế lẻ lên Premium Seat (6.25x) hoặc Ultra (20x) theo nhu cầu bất kỳ lúc nào</li>
+                  <li>Nâng cấp từng ghế lẻ lên Premium Seat (6.25x) theo nhu cầu bất kỳ lúc nào</li>
                   <li>Kênh nhóm cố vấn riêng cho đội ngũ <strong>7×24h</strong></li>
                   <li style="color: var(--primary-strong); font-weight: 600;">Tặng kèm kênh RustDesk tốc độ cao riêng cho nhóm</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Tặng kèm 12 TB lưu trữ đám mây nhóm (Google Drive / iCloud+)</li>
@@ -1676,11 +1676,11 @@
                 <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
                 <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
                 <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
-                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) &amp; Premium (6.25x) seats across departments.</p>
                 <div class="price price-custom">Tùy chỉnh</div>
                 <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
                 <ul class="features">
-                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Flexible mix of 15–100+ Standard (1.25x) &amp; Premium (6.25x) seats</li>
                   <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
                   <li>Dedicated static native business ISP &amp; private relay gateway</li>
                   <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">Chọn 1–50 chỗ; tính phí theo số chỗ khi thanh toán</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>Nâng cấp</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ ghế / tháng</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_USD&amp;locale=vi" target="_blank" rel="noopener nofollow">Nâng cấp ghế →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Nâng cấp</span></div>
-                      <p class="addon-desc">Nâng cấp ghế của founder, CTO hoặc kiến trúc sư trưởng trên gói All-Premium lên công suất đa tác tử Ultra 20x.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ ghế / tháng</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_USD&amp;locale=vi" target="_blank" rel="noopener nofollow">Nâng cấp ghế →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Trực tiếp</span></div>
-                      <p class="addon-desc">Nâng thẳng bất kỳ ghế nào thuộc gói nền tảng All-Standard lên toàn bộ hạn mức flagship Ultra 20x.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ ghế / tháng</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_USD&amp;locale=vi" target="_blank" rel="noopener nofollow">Nâng cấp ghế →</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>Các gói 1x, 5x, 20x, Team và Business khác nhau như thế nào? Có ưu đãi thanh toán theo năm không?</summary>
-            <p>Cả năm cấp độ đều mở rộng linh hoạt theo số lượng chỗ ngồi, mức độ cách ly phần cứng, khung giờ hỗ trợ cố vấn và quyền lợi đi kèm — đồng thời <strong>thanh toán theo năm chỉ tính phí 10 tháng/năm (tặng 2 tháng miễn phí) cho tất cả các gói</strong>:<br>• <strong>1x Tiêu chuẩn</strong>: Hạn mức cá nhân cơ bản + môi trường Mac mini (tài khoản macOS riêng) + hỗ trợ 1-kèm-1 <strong>7×8h</strong>;<br>• <strong>5x Pro</strong>: Hạn mức cá nhân 5× + Mac mini cấu hình cao (tài khoản macOS riêng) + hỗ trợ ưu tiên 1-kèm-1 <strong>7×16h</strong>;<br>• <strong>20x Ultimate</strong>: Hạn mức cá nhân 20× + Mac Studio / Mac mini cấu hình cao (tùy chọn nguyên máy riêng) + cố vấn riêng tư <strong>7×24h</strong> + <strong>kênh RustDesk riêng</strong> + <strong>6 TB lưu trữ đám mây</strong>;<br>• <strong>Team (5 Thành viên · Máy Chủ Riêng)</strong>: Có các tùy chọn Toàn bộ Pro (1x), Toàn bộ Max (5x) hoặc Toàn bộ Ultra (20x) — máy vật lý Mac dành riêng cho nhóm, linh hoạt chuyển đổi người dùng, hóa đơn gộp, kênh RustDesk riêng, 6–12 TB lưu trữ đám mây &amp; cố vấn nhóm 7×24h;<br>• <strong>Business (10 Thành viên · Cụm Nhiều Máy Mac)</strong>: Có các tùy chọn Toàn bộ Pro (1x), Toàn bộ Max (5x) hoặc Toàn bộ Ultra (20x) — cụm nhiều máy Mac riêng (triển khai hai khu vực &amp; di chuyển nhanh tại 9 quốc gia), hóa đơn thương mại, relay RustDesk doanh nghiệp, 12–30 TB lưu trữ đám mây &amp; SLA VIP 7×24h;<br>• <strong>Tiện ích Nâng cấp Từng ghế</strong>: Khởi đầu với gói nền tảng All-Pro hoặc All-Max và tự nâng cấp các ghế cụ thể lên Max (5x) hoặc Ultra (20x) bất cứ lúc nào (điều chỉnh từ 1–50 ghế);<br>• <strong>Tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps</strong>: Tăng tốc xuyên biên giới qua BGP doanh nghiệp tùy chọn cho thuê bao 1x (+$5/tháng) và 5x (+$20/tháng) (đã miễn phí đi kèm ở gói 20x, Team &amp; Business).</p>
+            <p>Cả năm cấp độ đều mở rộng linh hoạt theo số lượng chỗ ngồi, mức độ cách ly phần cứng, khung giờ hỗ trợ cố vấn và quyền lợi đi kèm — đồng thời <strong>thanh toán theo năm chỉ tính phí 10 tháng/năm (tặng 2 tháng miễn phí) cho tất cả các gói</strong>:<br>• <strong>1x Tiêu chuẩn</strong>: Hạn mức cá nhân cơ bản + môi trường Mac mini (tài khoản macOS riêng) + hỗ trợ 1-kèm-1 <strong>7×8h</strong>;<br>• <strong>5x Pro</strong>: Hạn mức cá nhân 5× + Mac mini cấu hình cao (tài khoản macOS riêng) + hỗ trợ ưu tiên 1-kèm-1 <strong>7×16h</strong>;<br>• <strong>20x Ultimate</strong>: Hạn mức cá nhân 20× + Mac Studio / Mac mini cấu hình cao (tùy chọn nguyên máy riêng) + cố vấn riêng tư <strong>7×24h</strong> + <strong>kênh RustDesk riêng</strong> + <strong>6 TB lưu trữ đám mây</strong>;<br>• <strong>Team (5 Thành viên · Máy Chủ Riêng)</strong>: Có các tùy chọn Toàn bộ Pro (1x), Toàn bộ Premium Seat (6.25x) hoặc Toàn bộ Ultra (20x) — máy vật lý Mac dành riêng cho nhóm, linh hoạt chuyển đổi người dùng, hóa đơn gộp, kênh RustDesk riêng, 6–12 TB lưu trữ đám mây &amp; cố vấn nhóm 7×24h;<br>• <strong>Business (10 Thành viên · Cụm Nhiều Máy Mac)</strong>: Có các tùy chọn Toàn bộ Pro (1x), Toàn bộ Premium Seat (6.25x) hoặc Toàn bộ Ultra (20x) — cụm nhiều máy Mac riêng (triển khai hai khu vực &amp; di chuyển nhanh tại 9 quốc gia), hóa đơn thương mại, relay RustDesk doanh nghiệp, 12–30 TB lưu trữ đám mây &amp; SLA VIP 7×24h;<br>• <strong>Tiện ích Nâng cấp Từng ghế</strong>: Khởi đầu với gói nền tảng All-Pro hoặc All-Premium và tự nâng cấp các ghế cụ thể lên Premium Seat (6.25x) bất cứ lúc nào (điều chỉnh từ 1–50 ghế);<br>• <strong>Tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps</strong>: Tăng tốc xuyên biên giới qua BGP doanh nghiệp tùy chọn cho thuê bao 1x (+$5/tháng) và 5x (+$20/tháng) (đã miễn phí đi kèm ở gói 20x, Team &amp; Business).</p>
           </details>
           <details>
             <summary>Tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps là gì? Ai nên sử dụng?</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ tháng", "perYear": "/ năm", "perSeatMo": "/ ghế / tháng", "perSeatYr": "/ ghế / năm", "perMoShort": "/ tháng", "perYrShort": "/ năm", "title12mo": "12 tháng thanh toán theo từng tháng", "titleRegMo": "Giá hàng tháng thông thường", "noteAnnual": "Thanh toán năm chỉ tính 10 tháng · ~{sym}{eq}/tháng, tiết kiệm {sym}{save}", "note1xMo": "Bao gồm môi trường Claude · khoảng {sym}{day} / ngày", "note20xPromo": "Giữ nguyên giá ưu đãi khi gia hạn · đơn giá ~{ratio}% so với 1x", "noteMultMo": "Bao gồm môi trường Claude · hạn mức {mult}x, đơn giá ~{ratio}% so với 1x", "entTeamMo": "Bao gồm 5 ghế {label} biệt lập · Máy chủ Mac riêng & hóa đơn gộp", "entBizMo": "Bao gồm 10 ghế {label} biệt lập · Cụm nhiều máy Mac riêng & SLA VIP", "line0Mo": "Tăng tốc BGP 24/7 không mất gói · Quản lý theo gói chính", "line1Mo": "Băng thông ưu tiên 5× · Hàng đợi QoS BGP cao cấp"};
       var DEFAULT_CURRENCY = "USD";
       var CUR_LOCALE_SLUG = "vi";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
@@ -2774,7 +2754,7 @@
       });
     }
 
-    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."};
     var panelSolo = document.getElementById('panel-solo');
     var panelEnt = document.getElementById('pricing-enterprise');
     var finderTip = document.getElementById('finder-tip');

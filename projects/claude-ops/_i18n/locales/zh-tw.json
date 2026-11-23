@@ -450,7 +450,7 @@
       "tier_max": "全員 Premium Seat (6.25x)",
       "tier_max_badge": "主力推薦",
       "tier_ultra": "全員 Ultra 旗艦席次 (20x)",
-      "toolbar_html": "支援全員統一規格；如需客製混搭（如主創用 Ultra 20x、研發用 Premium 6.25x、營運用 Standard 1.25x），可先訂低檔底座再透過下方<strong>單席位升配包</strong>按需升級。",
+      "toolbar_html": "支援全員統一規格；如需混搭（如研發用 Premium 6.25x、營運用 Standard 1.25x），可先訂 Standard 底座再透過下方<strong>單席位升配包</strong>按需升級；更高客製配額請私訊企業顧問。",
       "team": {
         "init_badge": "含 5 席 Premium Seat (6.25x) · 團隊整機獨享",
         "sub": "5 席次",
@@ -460,7 +460,7 @@
         "features_html": [
           "<strong>高規格 Mac Studio / Mac mini 整機團隊獨享</strong>，硬體級安全隔離",
           "企業持有席次調配權，支援人員到職／離職交接與<strong>單一整合帳單發票代管</strong>",
-          "支援日後隨時依單一席次補差額升級至更高額度（Max / Ultra）",
+          "支援後期隨時按單席位補差價升配至更高額度（Premium Seat 6.25x）",
           "<strong>7×24 小時</strong>專屬團隊技術顧問群組即時支援",
           "免費贈送團隊自建高速 RustDesk 加密專屬通道"
         ],
@@ -616,7 +616,7 @@
       },
       {
         "q": "1x / 5x / 20x 與 Team / Business 方案有何差異？年繳有優惠嗎？",
-        "a_html": "全系列五種方案在席次規模、實體工作站隔離層級、顧問支援時段與附贈權益上逐級提升，且<strong>全系列選擇年繳皆僅收 10 個月費用（現省 2 個月）</strong>：<br>• <strong>1x 標準版</strong>：單人基礎用量額度 + Mac mini 實體環境（獨立 macOS 帳號隔離）+ <strong>7×8 小時</strong>一對一專屬支援；<br>• <strong>5x 專業版</strong>：單人 5 倍用量額度 + 高規格 Mac mini 實體環境（獨立 macOS 帳號隔離）+ <strong>7×16 小時</strong>一對一優先支援；<br>• <strong>20x 旗艦版</strong>：單人 20 倍用量額度 + 高規格 Mac Studio / Mac mini（可開啟整機獨享）+ <strong>7×24 小時</strong>私人顧問通道 + <strong>自建高速 RustDesk 專屬通道</strong> + <strong>6 TB 雲端儲存</strong>；<br>• <strong>Team 團隊方案（5 席次 · 整機獨享）</strong>：可選全員 Pro (1x)、Max (5x) 或 Ultra (20x) 規格，配備高規格實體 Mac 主機團隊獨享、席次交接調配、整合帳單、私有 RustDesk 團隊通道、6–12 TB 雲端儲存與 7×24h 團隊顧問群組；<br>• <strong>Business 企業方案（10 席次 · 多機叢集）</strong>：可選全員 Pro (1x)、Max (5x) 或 Ultra (20x) 規格，配備多台實體 Mac 專屬叢集（支援 9 國雙區域部署與快速遷移）、商業發票、企業級 RustDesk 獨立中繼、12–30 TB 雲端儲存與 7×24h VIP SLA 專屬通道；<br>• <strong>單席次彈性升級加購包</strong>：可先訂閱全員 Pro 或 Max 基礎方案，再透過結帳頁自選 1–50 席升級包，隨時將特定成員升級至 Max (5x) 或 Ultra (20x)；<br>• <strong>ClaudeOps 企業專線加購包</strong>：供 1x（+$5/月）與 5x（+$20/月）用戶選配企業級 BGP 跨境加速（20x、Team 與 Business 方案已免費內建）。"
+        "a_html": "全系列五種方案在席次規模、實體工作站隔離層級、顧問支援時段與附贈權益上逐級提升，且<strong>全系列選擇年繳皆僅收 10 個月費用（現省 2 個月）</strong>：<br>• <strong>1x 標準版</strong>：單人基礎用量額度 + Mac mini 實體環境（獨立 macOS 帳號隔離）+ <strong>7×8 小時</strong>一對一專屬支援；<br>• <strong>5x 專業版</strong>：單人 5 倍用量額度 + 高規格 Mac mini 實體環境（獨立 macOS 帳號隔離）+ <strong>7×16 小時</strong>一對一優先支援；<br>• <strong>20x 旗艦版</strong>：單人 20 倍用量額度 + 高規格 Mac Studio / Mac mini（可開啟整機獨享）+ <strong>7×24 小時</strong>私人顧問通道 + <strong>自建高速 RustDesk 專屬通道</strong> + <strong>6 TB 雲端儲存</strong>；<br>• <strong>Team 團隊方案（5 席次 · 整機獨享）</strong>：可選全員 Standard Seat (1.25x)、Premium Seat (6.25x) 或 Custom 客製 規格，配備高規格實體 Mac 主機團隊獨享、席次交接調配、整合帳單、私有 RustDesk 團隊通道、6–12 TB 雲端儲存與 7×24h 團隊顧問群組；<br>• <strong>Business 企業方案（10 席次 · 多機叢集）</strong>：可選全員 Standard Seat (1.25x)、Premium Seat (6.25x) 或 Custom 客製 規格，配備多台實體 Mac 專屬叢集（支援 9 國雙區域部署與快速遷移）、商業發票、企業級 RustDesk 獨立中繼、12–30 TB 雲端儲存與 7×24h VIP SLA 專屬通道；<br>• <strong>單席次彈性升級加購包</strong>：可先訂閱全員 Pro 或 Max 基礎方案，再透過結帳頁自選 1–50 席升級包，隨時將特定成員升級至 Premium Seat (6.25x) 或 Custom 客製；<br>• <strong>ClaudeOps 企業專線加購包</strong>：供 1x（+$5/月）與 5x（+$20/月）用戶選配企業級 BGP 跨境加速（20x、Team 與 Business 方案已免費內建）。"
       },
       {
         "q": "什麼是 ClaudeOps 企業專線加購服務？哪些用戶需要加購？",
@@ -972,7 +972,7 @@
       {
         "id": "ent-custom",
         "btn": "15+ 人企業私有叢集",
-        "tip": "為您推薦【Custom 企業私有叢集】：支援 15–100+ 席位跨國雙區部署、任意規格比例混搭與商業合約。"
+        "tip": "為您推薦【Custom 企業私有叢集】：支援 15–100+ 席位跨國雙區部署與客製化商業合約。"
       }
     ],
     "tab_solo_title": "個人開發者 / 創作者",
@@ -993,11 +993,11 @@
       "tier_b": "Custom",
       "tier_span": "私有叢集版",
       "fit": "適合：中大型研發中心 · 混合席位配比 · 專屬合規要求",
-      "desc": "為您量身規劃多國雙活實體 Mac Studio 叢集，支援按部門自由混搭 Pro / Max / Ultra 席位配比。",
+      "desc": "為您量身規劃多國雙活實體 Mac Studio 叢集，支援按部門自由混搭 Standard (1.25x) / Premium (6.25x) 及更高企業客製配額。",
       "price_text": "按需客製",
       "price_sub": "15 席起訂 · 專屬架構師 1對1 出具方案報價",
       "features": [
-        "支援 15–100+ 席位任意 Pro / Max / Ultra 比例混搭",
+        "支援 15–100+ 席位 Standard (1.25x) / Premium (6.25x) 自由混搭與客製",
         "多台高配 Mac Studio 專屬實體叢集與跨國雙區容災",
         "獨享海外原生商業靜態寬頻與獨立高速中繼閘道",
         "統一商業形式發票（Commercial Invoice）與客製 SLA",
@@ -1011,7 +1011,7 @@
     "drawer_line_hint": "1x / 5x 跨國或尖峰弱網用戶推薦加購，0% 掉包絲滑跟手（20x 旗艦版已免費包含）",
     "drawer_line_cta": "展開加購",
     "drawer_upg_title": "團隊需要高低規格混搭？單席位補差價彈性升配包",
-    "drawer_upg_hint": "已購 Team / Business 底座的團隊，可單獨為少數核心骨幹補差價升級至 Max 或 Ultra",
+    "drawer_upg_hint": "已購 Standard Seat (1.25x) 底座的團隊，可單獨為核心研發成員補差價升級至 Premium Seat (6.25x)",
     "drawer_upg_cta": "展開升配包",
     "drawer_storage_title": "可選增值：Google Drive / Apple iCloud+ 專屬雲端儲存託管（2 TB – 30 TB）",
     "drawer_storage_pill": "20x 贈 6TB · 團隊版贈 6–30TB",

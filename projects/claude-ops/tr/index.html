@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="Ekip koltuk kademesini seçin">
               <button type="button" data-seat-tier="pro" aria-pressed="false">Tümü Pro Koltuklar (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">Tümü Max Koltuklar (6.25x) <span class="save-badge">Önerilen</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">Tümü Ultra Koltuklar (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
@@ -1643,7 +1643,7 @@
                   <li data-ent-seat-li="team"><strong>5 adet Premium Seat (6.25x) mühendislik koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)</li>
                   <li>Yalnızca ekibinize tahsis edilmiş <strong>yüksek donanımlı fiziksel Mac Studio / Mac mini ana bilgisayar</strong></li>
                   <li>İşe giriş/çıkışlarda kurum mülkiyetinde koltuk devri ve <strong>tek konsolide fatura</strong></li>
-                  <li>Bireysel koltukları dilediğiniz an isteğe bağlı olarak Premium Seat (6.25x) veya Ultra (20x) kademesine yükseltme</li>
+                  <li>Bireysel koltukları dilediğiniz an isteğe bağlı olarak Premium Seat (6.25x) kademesine yükseltme</li>
                   <li><strong>7×24s</strong> özel ekip konsiyerj grup kanalı</li>
                   <li style="color: var(--primary-strong); font-weight: 600;">Ücretsiz özel yüksek hızlı RustDesk ekip kanalı</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">Ücretsiz 12 TB ekip bulut depolama alanı (Google Drive / iCloud+)</li>
@@ -1676,11 +1676,11 @@
                 <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
                 <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
                 <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
-                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) &amp; Premium (6.25x) seats across departments.</p>
                 <div class="price price-custom">Özel Teklif</div>
                 <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
                 <ul class="features">
-                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Flexible mix of 15–100+ Standard (1.25x) &amp; Premium (6.25x) seats</li>
                   <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
                   <li>Dedicated static native business ISP &amp; private relay gateway</li>
                   <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">1–50 koltuk seçin; ödemede koltuk başına ücretlendirilir</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>Yükseltme</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ koltuk / ay</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_USD&amp;locale=tr" target="_blank" rel="noopener nofollow">Koltuğu yükselt →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Yükseltme</span></div>
-                      <p class="addon-desc">Tümü-Max planındaki kurucuları, CTO&#x27;ları veya baş mimarları 20x Ultra çoklu ajan kapasitesine taşıyın.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ koltuk / ay</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_USD&amp;locale=tr" target="_blank" rel="noopener nofollow">Koltuğu yükselt →</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>Doğrudan</span></div>
-                      <p class="addon-desc">Tümü-Pro temel planındaki herhangi bir koltuğu doğrudan tam 20x Ultra amiral gemisi kotasına çıkarın.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ koltuk / ay</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_USD&amp;locale=tr" target="_blank" rel="noopener nofollow">Koltuğu yükselt →</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>1x, 5x, 20x, Team ve Business planları nasıl karşılaştırılır? Yıllık indirim var mı?</summary>
-            <p>Beş kademenin tamamı koltuk sayısını, donanım izolasyonunu, konsiyerj saatlerini ve dahil olan ayrıcalıkları ölçeklendirir — üstelik <strong>yıllık faturalandırmada her kademede yılda yalnızca 10 ay ücret alınır (2 ay ücretsiz)</strong>:<br>• <strong>1x Standard</strong>: Bireysel temel kota + Mac mini ortamı (ayrı macOS hesabı) + <strong>7×8s</strong> 1'e 1 destek;<br>• <strong>5x Pro</strong>: Bireysel 5× kota + yüksek donanımlı Mac mini (ayrı macOS hesabı) + <strong>7×16s</strong> öncelikli 1'e 1 destek;<br>• <strong>20x Ultimate</strong>: Bireysel 20× kota + yüksek donanımlı Mac Studio / Mac mini (özel cihaz seçeneği) + <strong>7×24s</strong> özel konsiyerj + <strong>özel RustDesk kanalı</strong> + <strong>6 TB bulut depolama</strong>;<br>• <strong>Team (5 Koltuk · Özel Ana Bilgisayar)</strong>: Tümü-Pro (1x), Tümü-Max (5x) veya Tümü-Ultra (20x) kademelerinde sunulur — ekibinize özel fiziksel Mac sunucusu, koltuk devri, konsolide fatura, özel RustDesk kanalı, 6–12 TB bulut depolama ve 7×24s ekip konsiyerji;<br>• <strong>Business (10 Koltuk · Çoklu Mac Kümesi)</strong>: Tümü-Pro (1x), Tümü-Max (5x) veya Tümü-Ultra (20x) kademelerinde sunulur — özel çoklu Mac kümesi (9 ülkede çift bölgeli kurulum ve hızlı taşıma), ticari faturalandırma, kurumsal RustDesk rölesi, 12–30 TB bulut depolama ve 7×24s VIP SLA;<br>• <strong>Koltuk Başı Yükseltme Eklentileri</strong>: Tümü-Pro veya Tümü-Max temel planıyla başlayıp dilediğiniz zaman self-servis ödeme üzerinden belirli koltukları Max (5x) veya Ultra (20x) seviyesine yükseltin (1–50 koltuk arası ayarlanabilir miktar);<br>• <strong>ClaudeOps Kurumsal Özel Hat Eklentisi</strong>: 1x (+$5/ay) ve 5x (+$20/ay) aboneleri için isteğe bağlı kurumsal BGP sınır ötesi hızlandırma (20x, Team ve Business planlarında halihazırda ücretsizdir).</p>
+            <p>Beş kademenin tamamı koltuk sayısını, donanım izolasyonunu, konsiyerj saatlerini ve dahil olan ayrıcalıkları ölçeklendirir — üstelik <strong>yıllık faturalandırmada her kademede yılda yalnızca 10 ay ücret alınır (2 ay ücretsiz)</strong>:<br>• <strong>1x Standard</strong>: Bireysel temel kota + Mac mini ortamı (ayrı macOS hesabı) + <strong>7×8s</strong> 1'e 1 destek;<br>• <strong>5x Pro</strong>: Bireysel 5× kota + yüksek donanımlı Mac mini (ayrı macOS hesabı) + <strong>7×16s</strong> öncelikli 1'e 1 destek;<br>• <strong>20x Ultimate</strong>: Bireysel 20× kota + yüksek donanımlı Mac Studio / Mac mini (özel cihaz seçeneği) + <strong>7×24s</strong> özel konsiyerj + <strong>özel RustDesk kanalı</strong> + <strong>6 TB bulut depolama</strong>;<br>• <strong>Team (5 Koltuk · Özel Ana Bilgisayar)</strong>: Tümü-Pro (1x), Tümü-Premium Seat (6.25x) veya Tümü-Ultra (20x) kademelerinde sunulur — ekibinize özel fiziksel Mac sunucusu, koltuk devri, konsolide fatura, özel RustDesk kanalı, 6–12 TB bulut depolama ve 7×24s ekip konsiyerji;<br>• <strong>Business (10 Koltuk · Çoklu Mac Kümesi)</strong>: Tümü-Pro (1x), Tümü-Premium Seat (6.25x) veya Tümü-Ultra (20x) kademelerinde sunulur — özel çoklu Mac kümesi (9 ülkede çift bölgeli kurulum ve hızlı taşıma), ticari faturalandırma, kurumsal RustDesk rölesi, 12–30 TB bulut depolama ve 7×24s VIP SLA;<br>• <strong>Koltuk Başı Yükseltme Eklentileri</strong>: Tümü-Pro veya Tümü-Premium temel planıyla başlayıp dilediğiniz zaman self-servis ödeme üzerinden belirli koltukları Premium Seat (6.25x) seviyesine yükseltin (1–50 koltuk arası ayarlanabilir miktar);<br>• <strong>ClaudeOps Kurumsal Özel Hat Eklentisi</strong>: 1x (+$5/ay) ve 5x (+$20/ay) aboneleri için isteğe bağlı kurumsal BGP sınır ötesi hızlandırma (20x, Team ve Business planlarında halihazırda ücretsizdir).</p>
           </details>
           <details>
             <summary>ClaudeOps Kurumsal Özel Hat eklentisi nedir? Kimler ihtiyaç duyar?</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ ay", "perYear": "/ yıl", "perSeatMo": "/ koltuk / ay", "perSeatYr": "/ koltuk / yıl", "perMoShort": "/ ay", "perYrShort": "/ yıl", "title12mo": "Aylık faturalandırılan 12 ay", "titleRegMo": "Normal aylık fiyat", "noteAnnual": "Yıllık faturalandırılan 10 ay · ~{sym}{eq}/ay, kazancınız {sym}{save}", "note1xMo": "Claude ortamı dahil · günde yaklaşık {sym}{day}", "note20xPromo": "Kampanya fiyatı yenilemede korunur · birim maliyet 1x'in yaklaşık %{ratio}'i", "noteMultMo": "Claude ortamı dahil · {mult}x kullanım, birim maliyet 1x'in yaklaşık %{ratio}'i", "entTeamMo": "5 adet {label} izole koltuk dahil · Özel Mac sunucusu ve tek fatura", "entBizMo": "10 adet {label} izole koltuk dahil · Özel çoklu Mac kümesi ve VIP SLA", "line0Mo": "7/24 BGP sıfır kayıplı hızlandırma · Planla birlikte yönetilir", "line1Mo": "5× öncelikli kapasite · Yüksek öncelikli BGP QoS"};
       var DEFAULT_CURRENCY = "USD";
       var CUR_LOCALE_SLUG = "tr";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
@@ -2774,7 +2754,7 @@
       });
     }
 
-    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."};
     var panelSolo = document.getElementById('panel-solo');
     var panelEnt = document.getElementById('pricing-enterprise');
     var finderTip = document.getElementById('finder-tip');

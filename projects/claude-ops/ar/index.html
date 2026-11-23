@@ -1205,6 +1205,7 @@
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    .addon-grid.addon-grid-single { grid-template-columns: minmax(0, 520px); justify-content: start }
     a.is-loading { position: relative; pointer-events: none; opacity: .85 }
     a.is-loading::before {
       content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
@@ -1627,7 +1628,6 @@
             <div class="seat-tier-switch" role="group" aria-label="اختر فئة مقاعد الفريق">
               <button type="button" data-seat-tier="pro" aria-pressed="false">جميع المقاعد Standard Seat (1.25x)</button>
               <button type="button" data-seat-tier="max" aria-pressed="true">جميع المقاعد Premium Seat (6.25x) <span class="save-badge">موصى به</span></button>
-              <button type="button" data-seat-tier="ultra" aria-pressed="false">جميع المقاعد Ultra (20x)</button>
             </div>
           </div>
           <p class="ent-step2-label">Step 2: Choose dedicated cluster size for your team</p>
@@ -1643,7 +1643,7 @@
                   <li data-ent-seat-li="team">يشمل <strong>5 مقاعد هندسية Premium Seat (6.25x)</strong> (مساحة عمل Claude وحساب macOS مستقل لكل عضو)</li>
                   <li><strong>مضيف Mac Studio / Mac mini عالي المواصفات مخصّص</strong> حصرياً لفريقك</li>
                   <li>إعادة تعيين المقاعد المملوكة للمؤسسة عند انضمام أو مغادرة الأعضاء مع <strong>فاتورة موحّدة واحدة</strong></li>
-                  <li>ترقية أي مقعد فردي إلى Premium Seat (6.25x) أو Ultra (20x) عند الطلب وفي أي وقت</li>
+                  <li>ترقية أي مقعد فردي إلى Premium Seat (6.25x) عند الطلب وفي أي وقت</li>
                   <li>قناة كونسيرج جماعية مخصّصة للفريق <strong>7×24 ساعة</strong></li>
                   <li style="color: var(--primary-strong); font-weight: 600;">قناة RustDesk جماعية خاصة فائقة السرعة مجاناً</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">تخزين سحابي جماعي سعة 12 TB مجاناً (Google Drive / iCloud+)</li>
@@ -1676,11 +1676,11 @@
                 <span class="badge badge-custom">15–100+ Seats · Architect Tailored</span>
                 <div class="plan-tier"><b>Custom</b><span>Private Cluster</span></div>
                 <div class="plan-fit">Best for: Larger R&amp;D orgs · Mixed seat ratios · Custom compliance</div>
-                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.</p>
+                <p class="plan-desc">Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) &amp; Premium (6.25x) seats across departments.</p>
                 <div class="price price-custom">حسب الطلب</div>
                 <p class="price-note">From 15 seats · 1-on-1 architecture &amp; quote</p>
                 <ul class="features">
-                  <li>Flexible mix of 15–100+ Pro, Max &amp; Ultra seats</li>
+                  <li>Flexible mix of 15–100+ Standard (1.25x) &amp; Premium (6.25x) seats</li>
                   <li>Dedicated multi-Mac Studio hardware &amp; dual-region failover</li>
                   <li>Dedicated static native business ISP &amp; private relay gateway</li>
                   <li>Commercial Invoice, procurement onboarding &amp; custom SLA</li>
@@ -1718,7 +1718,7 @@
                 </div>
                 <span class="seat-qty-hint">اختر من 1 إلى 50 مقعدًا؛ تُحتسب لكل مقعد عند الدفع</span>
               </div>
-              <div class="addon-grid">
+              <div class="addon-grid addon-grid-single">
                   <div class="addon-card">
                     <div>
                       <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Premium 6.25x</code> <span>ترقية</span></div>
@@ -1727,26 +1727,6 @@
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ مقعد / شهرياً</small></div>
                       <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_USD&amp;locale=ar" target="_blank" rel="noopener nofollow">ترقية المقعد ←</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Premium 6.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>ترقية</span></div>
-                      <p class="addon-desc">رقِّ المؤسسين أو المديرين التقنيين أو المعماريين الرئيسيين في باقة All-Premium إلى سعة 20x Ultra متعددة الوكلاء.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ مقعد / شهرياً</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_USD&amp;locale=ar" target="_blank" rel="noopener nofollow">ترقية المقعد ←</a>
-                    </div>
-                  </div>
-                  <div class="addon-card">
-                    <div>
-                      <div class="addon-route"><code>Standard 1.25x</code> <span>→</span> <code class="to">Ultra 20x</code> <span>مباشر</span></div>
-                      <p class="addon-desc">انتقل بأي مقعد على باقة All-Standard الأساسية مباشرةً إلى السعة الرائدة الكاملة 20x Ultra.</p>
-                    </div>
-                    <div class="addon-foot">
-                      <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ مقعد / شهرياً</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_USD&amp;locale=ar" target="_blank" rel="noopener nofollow">ترقية المقعد ←</a>
                     </div>
                   </div>
               </div>
@@ -2041,7 +2021,7 @@
           </details>
           <details>
             <summary>ما الفرق بين باقات 1x و5x و20x وTeam وBusiness؟ وهل يوجد خصم سنوي؟</summary>
-            <p>تتدرج الباقات الخمس في عدد المقاعد ومستوى عزل العتاد وساعات الدعم والمزايا المضمّنة — كما أن <strong>الفوترة السنوية تحتسب 10 أشهر فقط في السنة (شهران مجاناً) في جميع الباقات</strong>:<br>• <strong>1x Standard</strong>: حصة فردية أساسية + بيئة Mac mini (حساب macOS مستقل) + دعم فردي <strong>7×8 ساعات</strong>؛<br>• <strong>5x Pro</strong>: حصة فردية 5× + جهاز Mac mini عالي المواصفات (حساب macOS مستقل) + دعم فردي ذو أولوية <strong>7×16 ساعة</strong>؛<br>• <strong>20x Ultimate</strong>: حصة فردية 20× + جهاز Mac Studio / Mac mini عالي المواصفات (خيار جهاز مخصّص بالكامل) + كونسيرج خاص <strong>7×24 ساعة</strong> + <strong>قناة RustDesk خاصة</strong> + <strong>تخزين سحابي 6 TB</strong>؛<br>• <strong>Team (5 مقاعد · مضيف مخصّص)</strong>: متوفرة بفئات All-Pro (1x) أو All-Max (5x) أو All-Ultra (20x) — مضيف Mac فعلي مخصّص لفريقك، وإعادة تعيين المقاعد، وفوترة موحّدة، وقناة RustDesk خاصة، وتخزين سحابي 6–12 TB، وكونسيرج جماعي 7×24 ساعة؛<br>• <strong>Business (10 مقاعد · عنقود أجهزة Mac متعددة)</strong>: متوفرة بفئات All-Pro (1x) أو All-Max (5x) أو All-Ultra (20x) — عنقود أجهزة Mac مخصّص (نشر مزدوج المناطق وترحيل سريع عبر 9 دول)، وفواتير تجارية، وترحيل RustDesk مؤسسي، وتخزين سحابي 12–30 TB، واتفاقية مستوى خدمة VIP على مدار 7×24 ساعة؛<br>• <strong>إضافات ترقية المقاعد الفردية</strong>: ابدأ بباقة أساسية All-Pro أو All-Max ورقِّ مقاعد محددة إلى Max (5x) أو Ultra (20x) في أي وقت عبر الدفع الذاتي (بكمية قابلة للتعديل من 1 إلى 50 مقعداً)؛<br>• <strong>إضافة خط ClaudeOps المؤسسي المخصّص</strong>: تسريع BGP مؤسسي اختياري عابر للحدود لمشتركي 1x (+$5/شهرياً) و5x (+$20/شهرياً) (مشمول مجاناً بالفعل في باقات 20x وTeam وBusiness).</p>
+            <p>تتدرج الباقات الخمس في عدد المقاعد ومستوى عزل العتاد وساعات الدعم والمزايا المضمّنة — كما أن <strong>الفوترة السنوية تحتسب 10 أشهر فقط في السنة (شهران مجاناً) في جميع الباقات</strong>:<br>• <strong>1x Standard</strong>: حصة فردية أساسية + بيئة Mac mini (حساب macOS مستقل) + دعم فردي <strong>7×8 ساعات</strong>؛<br>• <strong>5x Pro</strong>: حصة فردية 5× + جهاز Mac mini عالي المواصفات (حساب macOS مستقل) + دعم فردي ذو أولوية <strong>7×16 ساعة</strong>؛<br>• <strong>20x Ultimate</strong>: حصة فردية 20× + جهاز Mac Studio / Mac mini عالي المواصفات (خيار جهاز مخصّص بالكامل) + كونسيرج خاص <strong>7×24 ساعة</strong> + <strong>قناة RustDesk خاصة</strong> + <strong>تخزين سحابي 6 TB</strong>؛<br>• <strong>Team (5 مقاعد · مضيف مخصّص)</strong>: متوفرة بفئات All-Pro (1x) أو All-Premium Seat (6.25x) أو All-Ultra (20x) — مضيف Mac فعلي مخصّص لفريقك، وإعادة تعيين المقاعد، وفوترة موحّدة، وقناة RustDesk خاصة، وتخزين سحابي 6–12 TB، وكونسيرج جماعي 7×24 ساعة؛<br>• <strong>Business (10 مقاعد · عنقود أجهزة Mac متعددة)</strong>: متوفرة بفئات All-Pro (1x) أو All-Premium Seat (6.25x) أو All-Ultra (20x) — عنقود أجهزة Mac مخصّص (نشر مزدوج المناطق وترحيل سريع عبر 9 دول)، وفواتير تجارية، وترحيل RustDesk مؤسسي، وتخزين سحابي 12–30 TB، واتفاقية مستوى خدمة VIP على مدار 7×24 ساعة؛<br>• <strong>إضافات ترقية المقاعد الفردية</strong>: ابدأ بباقة أساسية All-Pro أو All-Premium ورقِّ مقاعد محددة إلى Premium Seat (6.25x) في أي وقت عبر الدفع الذاتي (بكمية قابلة للتعديل من 1 إلى 50 مقعداً)؛<br>• <strong>إضافة خط ClaudeOps المؤسسي المخصّص</strong>: تسريع BGP مؤسسي اختياري عابر للحدود لمشتركي 1x (+$5/شهرياً) و5x (+$20/شهرياً) (مشمول مجاناً بالفعل في باقات 20x وTeam وBusiness).</p>
           </details>
           <details>
             <summary>ما هي إضافة خط ClaudeOps المؤسسي المخصّص؟ ومن يحتاجها؟</summary>
@@ -2249,7 +2229,7 @@
       var I18N = {"perMonth": "/ شهرياً", "perYear": "/ سنوياً", "perSeatMo": "/ مقعد / شهرياً", "perSeatYr": "/ مقعد / سنوياً", "perMoShort": "/ ش", "perYrShort": "/ س", "title12mo": "12 شهراً بفوترة شهرية", "titleRegMo": "السعر الشهري الاعتيادي", "noteAnnual": "فوترة سنوية بقيمة 10 أشهر · نحو {sym}{eq}/شهرياً، وفّر {sym}{save}", "note1xMo": "يشمل بيئة Claude · نحو {sym}{day} / يومياً", "note20xPromo": "يستمر سعر العرض عند التجديد · تكلفة الوحدة نحو {ratio}% من 1x", "noteMultMo": "يشمل بيئة Claude · سعة {mult}x، وتكلفة الوحدة نحو {ratio}% من 1x", "entTeamMo": "يشمل 5 مقاعد {label} معزولة · مضيف Mac مخصّص وفوترة موحّدة", "entBizMo": "يشمل 10 مقاعد {label} معزولة · عنقود أجهزة Mac مخصّص واتفاقية VIP SLA", "line0Mo": "تسريع BGP بلا فقدان حزم 24/7 · مدار مع باقتك", "line1Mo": "سعة مرور ذات أولوية 5× · أولوية BGP QoS عالية"};
       var DEFAULT_CURRENCY = "USD";
       var CUR_LOCALE_SLUG = "ar";
-      var TIER_IDX = { pro: 0, max: 1, ultra: 2 };
+      var TIER_IDX = { pro: 0, max: 1 };
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = { '1x': true, '5x': true, '20x': true };
       var PROMO_ACTIVE = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
@@ -2774,7 +2754,7 @@
       });
     }
 
-    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."};
+    var FINDER_TIPS = {"solo-dev": "Recommended: Individual 5x Pro — best value for daily heavy Claude Code work. Connecting cross-border? Expand the Dedicated Line add-on below.", "solo-max": "Recommended: Individual 20x Ultimate — full dedicated physical Mac option, with Enterprise Dedicated Line & 6 TB cloud storage included free.", "team-rd": "Recommended: Team (5 seats) or Business (10 seats) — dedicated Mac cluster, unified invoicing, plus free Dedicated Line & 12–30 TB cloud storage.", "ent-custom": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."};
     var panelSolo = document.getElementById('panel-solo');
     var panelEnt = document.getElementById('pricing-enterprise');
     var finderTip = document.getElementById('finder-tip');

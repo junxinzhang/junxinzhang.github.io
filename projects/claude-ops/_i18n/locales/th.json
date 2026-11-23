@@ -450,7 +450,7 @@
       "tier_max": "ที่นั่ง Max ทั้งหมด (6.25x)",
       "tier_max_badge": "แนะนำ",
       "tier_ultra": "ที่นั่ง Ultra ทั้งหมด (20x)",
-      "toolbar_html": "เริ่มต้นด้วยที่นั่งระดับ Pro, Max หรือ Ultra เหมือนกันทั้งทีม — หรือผสมผสานและปรับเพิ่มได้ทุกเมื่อผ่าน <strong>แพ็กเกจเสริมอัปเกรดรายที่นั่ง</strong> ด้านล่าง",
+      "toolbar_html": "เริ่มต้นด้วยที่นั่งระดับ Pro, Premium เหมือนกันทั้งทีม — หรือผสมผสานและปรับเพิ่มได้ทุกเมื่อผ่าน <strong>แพ็กเกจเสริมอัปเกรดรายที่นั่ง</strong> ด้านล่าง",
       "team": {
         "init_badge": "5 ที่นั่ง Premium Seat (6.25x) · เหมาเครื่องโฮสต์",
         "sub": "5 ที่นั่ง",
@@ -460,7 +460,7 @@
         "features_html": [
           "<strong>โฮสต์เครื่องจริง Mac Studio / Mac mini สเปกสูง</strong> สำหรับทีมของคุณโดยเฉพาะ",
           "โอนย้ายสิทธิ์ที่นั่งเมื่อรับหรือเปลี่ยนพนักงานได้สะดวก &amp; <strong>ออกใบแจ้งหนี้รวมใบเดียว</strong>",
-          "อัปเกรดที่นั่งรายบุคคลเป็น Premium Seat (6.25x) หรือ Ultra (20x) ได้ตลอดเวลาตามต้องการ",
+          "อัปเกรดที่นั่งรายบุคคลเป็น Premium Seat (6.25x) ได้ตลอดเวลาตามต้องการ",
           "กลุ่มดูแลเฉพาะทีมโดยทีมวิศวกรตลอด <strong>7×24 ชม.</strong>",
           "ฟรี ช่องทาง RustDesk ความเร็วสูงส่วนตัวสำหรับทีม"
         ],
@@ -616,7 +616,7 @@
       },
       {
         "q": "แพ็กเกจ 1x, 5x, 20x, Team และ Business ต่างกันอย่างไร? มีส่วนลดรายปีหรือไม่?",
-        "a_html": "ทั้ง 5 แพ็กเกจออกแบบให้รองรับจำนวนที่นั่ง ระดับการแยกฮาร์ดแวร์ ชั่วโมงดูแลของทีมวิศวกร และสิทธิพิเศษที่เพิ่มขึ้นตามลำดับ — และ <strong>การชำระรายปีจะคิดค่าบริการเพียง 10 เดือนต่อปี (ฟรี 2 เดือน) ทุกแพ็กเกจ</strong>:<br>• <strong>1x มาตรฐาน</strong>: โควตาพื้นฐานสำหรับผู้ใช้เดี่ยว + เครื่อง Mac mini (แยกบัญชี macOS) + ซัพพอร์ต 1 ต่อ 1 <strong>7×8 ชม.</strong>;<br>• <strong>5x โปร</strong>: โควตา 5 เท่าสำหรับผู้ใช้เดี่ยว + เครื่อง Mac mini สเปกสูง (แยกบัญชี macOS) + ซัพพอร์ตลำดับสำคัญ 1 ต่อ 1 <strong>7×16 ชม.</strong>;<br>• <strong>20x อัลติเมท</strong>: โควตา 20 เท่าสำหรับผู้ใช้เดี่ยว + Mac Studio / Mac mini สเปกสูง (เลือกเหมาเครื่องได้) + ผู้ช่วยส่วนตัว <strong>7×24 ชม.</strong> + <strong>ช่องทาง RustDesk ส่วนตัว</strong> + <strong>พื้นที่คลาวด์ 6 TB</strong>;<br>• <strong>Team (5 ที่นั่ง · โฮสต์เฉพาะทีม)</strong>: เลือกได้ทั้งแบบ All-Pro (1x), All-Max (5x) หรือ All-Ultra (20x) — เครื่องโฮสต์ Mac จริงเฉพาะทีม โอนย้ายที่นั่งได้ ใบแจ้งหนี้รวม ช่องทาง RustDesk ส่วนตัว พื้นที่คลาวด์ 6–12 TB และทีมดูแล 7×24 ชม.;<br>• <strong>Business (10 ที่นั่ง · คลัสเตอร์หลายเครื่อง)</strong>: เลือกได้ทั้งแบบ All-Pro (1x), All-Max (5x) หรือ All-Ultra (20x) — คลัสเตอร์เครื่องจริง Mac หลายเครื่อง (วางระบบ 2 ภูมิภาคและย้ายโหนดไวใน 9 ประเทศ) ใบแจ้งหนี้การค้า รีเลย์ RustDesk ระดับองค์กร พื้นที่คลาวด์ 12–30 TB และบริการ 7×24 ชม. VIP SLA;<br>• <strong>แพ็กเกจเสริมอัปเกรดรายที่นั่ง</strong>: เริ่มต้นด้วยแผนพื้นฐาน All-Pro หรือ All-Max แล้วเลือกอัปเกรดเฉพาะบางที่นั่งเป็น Max (5x) หรือ Ultra (20x) ได้ทุกเมื่อผ่านหน้าชำระเงินด้วยตนเอง (ปรับจำนวนได้ 1–50 ที่นั่ง);<br>• <strong>แพ็กเกจเสริมสายตรงองค์กร ClaudeOps</strong>: ตัวเลือกเร่งความเร็ว BGP ข้ามประเทศระดับองค์กรสำหรับผู้สมัคร 1x (+$5/เดือน) และ 5x (+$20/เดือน) (รวมให้ฟรีแล้วใน 20x, Team &amp; Business)"
+        "a_html": "ทั้ง 5 แพ็กเกจออกแบบให้รองรับจำนวนที่นั่ง ระดับการแยกฮาร์ดแวร์ ชั่วโมงดูแลของทีมวิศวกร และสิทธิพิเศษที่เพิ่มขึ้นตามลำดับ — และ <strong>การชำระรายปีจะคิดค่าบริการเพียง 10 เดือนต่อปี (ฟรี 2 เดือน) ทุกแพ็กเกจ</strong>:<br>• <strong>1x มาตรฐาน</strong>: โควตาพื้นฐานสำหรับผู้ใช้เดี่ยว + เครื่อง Mac mini (แยกบัญชี macOS) + ซัพพอร์ต 1 ต่อ 1 <strong>7×8 ชม.</strong>;<br>• <strong>5x โปร</strong>: โควตา 5 เท่าสำหรับผู้ใช้เดี่ยว + เครื่อง Mac mini สเปกสูง (แยกบัญชี macOS) + ซัพพอร์ตลำดับสำคัญ 1 ต่อ 1 <strong>7×16 ชม.</strong>;<br>• <strong>20x อัลติเมท</strong>: โควตา 20 เท่าสำหรับผู้ใช้เดี่ยว + Mac Studio / Mac mini สเปกสูง (เลือกเหมาเครื่องได้) + ผู้ช่วยส่วนตัว <strong>7×24 ชม.</strong> + <strong>ช่องทาง RustDesk ส่วนตัว</strong> + <strong>พื้นที่คลาวด์ 6 TB</strong>;<br>• <strong>Team (5 ที่นั่ง · โฮสต์เฉพาะทีม)</strong>: เลือกได้ทั้งแบบ All-Pro (1x), All-Premium Seat (6.25x) หรือ All-Ultra (20x) — เครื่องโฮสต์ Mac จริงเฉพาะทีม โอนย้ายที่นั่งได้ ใบแจ้งหนี้รวม ช่องทาง RustDesk ส่วนตัว พื้นที่คลาวด์ 6–12 TB และทีมดูแล 7×24 ชม.;<br>• <strong>Business (10 ที่นั่ง · คลัสเตอร์หลายเครื่อง)</strong>: เลือกได้ทั้งแบบ All-Pro (1x), All-Premium Seat (6.25x) หรือ All-Ultra (20x) — คลัสเตอร์เครื่องจริง Mac หลายเครื่อง (วางระบบ 2 ภูมิภาคและย้ายโหนดไวใน 9 ประเทศ) ใบแจ้งหนี้การค้า รีเลย์ RustDesk ระดับองค์กร พื้นที่คลาวด์ 12–30 TB และบริการ 7×24 ชม. VIP SLA;<br>• <strong>แพ็กเกจเสริมอัปเกรดรายที่นั่ง</strong>: เริ่มต้นด้วยแผนพื้นฐาน All-Pro หรือ All-Premium แล้วเลือกอัปเกรดเฉพาะบางที่นั่งเป็น Premium Seat (6.25x) ได้ทุกเมื่อผ่านหน้าชำระเงินด้วยตนเอง (ปรับจำนวนได้ 1–50 ที่นั่ง);<br>• <strong>แพ็กเกจเสริมสายตรงองค์กร ClaudeOps</strong>: ตัวเลือกเร่งความเร็ว BGP ข้ามประเทศระดับองค์กรสำหรับผู้สมัคร 1x (+$5/เดือน) และ 5x (+$20/เดือน) (รวมให้ฟรีแล้วใน 20x, Team &amp; Business)"
       },
       {
         "q": "แพ็กเกจเสริมสายตรงองค์กร ClaudeOps คืออะไร? เหมาะกับใคร?",
@@ -972,7 +972,7 @@
       {
         "id": "ent-custom",
         "btn": "15+ seat custom enterprise cluster",
-        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."
       }
     ],
     "tab_solo_title": "นักพัฒนา / ครีเอเตอร์เดี่ยว",
@@ -993,11 +993,11 @@
       "tier_b": "Custom",
       "tier_span": "Private Cluster",
       "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
-      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) & Premium (6.25x) seats across departments.",
       "price_text": "ปรับแต่งเฉพาะ",
       "price_sub": "From 15 seats · 1-on-1 architecture & quote",
       "features": [
-        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Flexible mix of 15–100+ Standard (1.25x) & Premium (6.25x) seats",
         "Dedicated multi-Mac Studio hardware & dual-region failover",
         "Dedicated static native business ISP & private relay gateway",
         "Commercial Invoice, procurement onboarding & custom SLA",

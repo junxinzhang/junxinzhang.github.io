@@ -450,7 +450,7 @@
       "tier_max": "جميع المقاعد Premium Seat (6.25x)",
       "tier_max_badge": "موصى به",
       "tier_ultra": "جميع المقاعد Ultra (20x)",
-      "toolbar_html": "ابدأ بمقاعد موحّدة من فئة Pro أو Max أو Ultra — أو امزج بينها في أي وقت عبر <strong>إضافات ترقية المقاعد الفردية</strong> ذاتية الخدمة أدناه.",
+      "toolbar_html": "ابدأ بمقاعد موحّدة من فئة Pro أو Premium — أو امزج بينها في أي وقت عبر <strong>إضافات ترقية المقاعد الفردية</strong> ذاتية الخدمة أدناه.",
       "team": {
         "init_badge": "5 مقاعد Premium Seat (6.25x) · مضيف مخصّص",
         "sub": "5 مقاعد",
@@ -460,7 +460,7 @@
         "features_html": [
           "<strong>مضيف Mac Studio / Mac mini عالي المواصفات مخصّص</strong> حصرياً لفريقك",
           "إعادة تعيين المقاعد المملوكة للمؤسسة عند انضمام أو مغادرة الأعضاء مع <strong>فاتورة موحّدة واحدة</strong>",
-          "ترقية أي مقعد فردي إلى Premium Seat (6.25x) أو Ultra (20x) عند الطلب وفي أي وقت",
+          "ترقية أي مقعد فردي إلى Premium Seat (6.25x) عند الطلب وفي أي وقت",
           "قناة كونسيرج جماعية مخصّصة للفريق <strong>7×24 ساعة</strong>",
           "قناة RustDesk جماعية خاصة فائقة السرعة مجاناً"
         ],
@@ -616,7 +616,7 @@
       },
       {
         "q": "ما الفرق بين باقات 1x و5x و20x وTeam وBusiness؟ وهل يوجد خصم سنوي؟",
-        "a_html": "تتدرج الباقات الخمس في عدد المقاعد ومستوى عزل العتاد وساعات الدعم والمزايا المضمّنة — كما أن <strong>الفوترة السنوية تحتسب 10 أشهر فقط في السنة (شهران مجاناً) في جميع الباقات</strong>:<br>• <strong>1x Standard</strong>: حصة فردية أساسية + بيئة Mac mini (حساب macOS مستقل) + دعم فردي <strong>7×8 ساعات</strong>؛<br>• <strong>5x Pro</strong>: حصة فردية 5× + جهاز Mac mini عالي المواصفات (حساب macOS مستقل) + دعم فردي ذو أولوية <strong>7×16 ساعة</strong>؛<br>• <strong>20x Ultimate</strong>: حصة فردية 20× + جهاز Mac Studio / Mac mini عالي المواصفات (خيار جهاز مخصّص بالكامل) + كونسيرج خاص <strong>7×24 ساعة</strong> + <strong>قناة RustDesk خاصة</strong> + <strong>تخزين سحابي 6 TB</strong>؛<br>• <strong>Team (5 مقاعد · مضيف مخصّص)</strong>: متوفرة بفئات All-Pro (1x) أو All-Max (5x) أو All-Ultra (20x) — مضيف Mac فعلي مخصّص لفريقك، وإعادة تعيين المقاعد، وفوترة موحّدة، وقناة RustDesk خاصة، وتخزين سحابي 6–12 TB، وكونسيرج جماعي 7×24 ساعة؛<br>• <strong>Business (10 مقاعد · عنقود أجهزة Mac متعددة)</strong>: متوفرة بفئات All-Pro (1x) أو All-Max (5x) أو All-Ultra (20x) — عنقود أجهزة Mac مخصّص (نشر مزدوج المناطق وترحيل سريع عبر 9 دول)، وفواتير تجارية، وترحيل RustDesk مؤسسي، وتخزين سحابي 12–30 TB، واتفاقية مستوى خدمة VIP على مدار 7×24 ساعة؛<br>• <strong>إضافات ترقية المقاعد الفردية</strong>: ابدأ بباقة أساسية All-Pro أو All-Max ورقِّ مقاعد محددة إلى Max (5x) أو Ultra (20x) في أي وقت عبر الدفع الذاتي (بكمية قابلة للتعديل من 1 إلى 50 مقعداً)؛<br>• <strong>إضافة خط ClaudeOps المؤسسي المخصّص</strong>: تسريع BGP مؤسسي اختياري عابر للحدود لمشتركي 1x (+$5/شهرياً) و5x (+$20/شهرياً) (مشمول مجاناً بالفعل في باقات 20x وTeam وBusiness)."
+        "a_html": "تتدرج الباقات الخمس في عدد المقاعد ومستوى عزل العتاد وساعات الدعم والمزايا المضمّنة — كما أن <strong>الفوترة السنوية تحتسب 10 أشهر فقط في السنة (شهران مجاناً) في جميع الباقات</strong>:<br>• <strong>1x Standard</strong>: حصة فردية أساسية + بيئة Mac mini (حساب macOS مستقل) + دعم فردي <strong>7×8 ساعات</strong>؛<br>• <strong>5x Pro</strong>: حصة فردية 5× + جهاز Mac mini عالي المواصفات (حساب macOS مستقل) + دعم فردي ذو أولوية <strong>7×16 ساعة</strong>؛<br>• <strong>20x Ultimate</strong>: حصة فردية 20× + جهاز Mac Studio / Mac mini عالي المواصفات (خيار جهاز مخصّص بالكامل) + كونسيرج خاص <strong>7×24 ساعة</strong> + <strong>قناة RustDesk خاصة</strong> + <strong>تخزين سحابي 6 TB</strong>؛<br>• <strong>Team (5 مقاعد · مضيف مخصّص)</strong>: متوفرة بفئات All-Pro (1x) أو All-Premium Seat (6.25x) أو All-Ultra (20x) — مضيف Mac فعلي مخصّص لفريقك، وإعادة تعيين المقاعد، وفوترة موحّدة، وقناة RustDesk خاصة، وتخزين سحابي 6–12 TB، وكونسيرج جماعي 7×24 ساعة؛<br>• <strong>Business (10 مقاعد · عنقود أجهزة Mac متعددة)</strong>: متوفرة بفئات All-Pro (1x) أو All-Premium Seat (6.25x) أو All-Ultra (20x) — عنقود أجهزة Mac مخصّص (نشر مزدوج المناطق وترحيل سريع عبر 9 دول)، وفواتير تجارية، وترحيل RustDesk مؤسسي، وتخزين سحابي 12–30 TB، واتفاقية مستوى خدمة VIP على مدار 7×24 ساعة؛<br>• <strong>إضافات ترقية المقاعد الفردية</strong>: ابدأ بباقة أساسية All-Pro أو All-Premium ورقِّ مقاعد محددة إلى Premium Seat (6.25x) في أي وقت عبر الدفع الذاتي (بكمية قابلة للتعديل من 1 إلى 50 مقعداً)؛<br>• <strong>إضافة خط ClaudeOps المؤسسي المخصّص</strong>: تسريع BGP مؤسسي اختياري عابر للحدود لمشتركي 1x (+$5/شهرياً) و5x (+$20/شهرياً) (مشمول مجاناً بالفعل في باقات 20x وTeam وBusiness)."
       },
       {
         "q": "ما هي إضافة خط ClaudeOps المؤسسي المخصّص؟ ومن يحتاجها؟",
@@ -972,7 +972,7 @@
       {
         "id": "ent-custom",
         "btn": "15+ seat custom enterprise cluster",
-        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Pro/Max/Ultra seats, multi-region failover and commercial SLA invoicing."
+        "tip": "Recommended: Custom Private Cluster — 15–100+ mixed Standard (1.25x) / Premium (6.25x) seats, multi-region failover and commercial SLA invoicing."
       }
     ],
     "tab_solo_title": "للأفراد والمطورين",
@@ -993,11 +993,11 @@
       "tier_b": "Custom",
       "tier_span": "Private Cluster",
       "fit": "Best for: Larger R&D orgs · Mixed seat ratios · Custom compliance",
-      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Pro, Max and Ultra seats across departments.",
+      "desc": "Bespoke multi-region physical Mac Studio clusters with any mix of Standard (1.25x) & Premium (6.25x) seats across departments.",
       "price_text": "حسب الطلب",
       "price_sub": "From 15 seats · 1-on-1 architecture & quote",
       "features": [
-        "Flexible mix of 15–100+ Pro, Max & Ultra seats",
+        "Flexible mix of 15–100+ Standard (1.25x) & Premium (6.25x) seats",
         "Dedicated multi-Mac Studio hardware & dual-region failover",
         "Dedicated static native business ISP & private relay gateway",
         "Commercial Invoice, procurement onboarding & custom SLA",
