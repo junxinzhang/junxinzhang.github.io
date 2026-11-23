@@ -446,17 +446,17 @@
     "enterprise": {
       "divider": "Team & Business · 團隊與企業專屬實體叢集方案",
       "switch_aria": "選擇團隊席次規格",
-      "tier_pro": "全員 Pro 標準席次 (1x)",
-      "tier_max": "全員 Max 研發席次 (5x)",
+      "tier_pro": "全員 Standard Seat (1.25x)",
+      "tier_max": "全員 Premium Seat (6.25x)",
       "tier_max_badge": "主力推薦",
       "tier_ultra": "全員 Ultra 旗艦席次 (20x)",
-      "toolbar_html": "支援全員統一規格；如需彈性混搭（如創辦人用 Ultra、工程師用 Max、營運人員用 Pro），可先訂閱基礎方案，再透過下方<strong>單席次升級加購包</strong>隨時按需升級。",
+      "toolbar_html": "支援全員統一規格；如需客製混搭（如主創用 Ultra 20x、研發用 Premium 6.25x、營運用 Standard 1.25x），可先訂低檔底座再透過下方<strong>單席位升配包</strong>按需升級。",
       "team": {
-        "init_badge": "含 5 席 Max (5x) · 團隊整機獨享",
+        "init_badge": "含 5 席 Premium Seat (6.25x) · 團隊整機獨享",
         "sub": "5 席次",
         "desc": "專為新創核心團隊、AI 工作室與量化研發小組打造——整台高規格實體 Mac 工作站由團隊獨享，統一帳單與席次權限管理。",
-        "init_note": "含 5 個 Max (5x) 獨立席次 · 專屬實體主機 + 統一帳單代管",
-        "init_seat_li_html": "包含 <strong>5 個 Max (5x) 專業研發席次</strong>（每位成員皆擁有獨立 Claude 工作空間與 macOS 帳號）",
+        "init_note": "含 5 個 Premium Seat (6.25x) 獨立席位 · 整機實體獨享 + 團隊專屬維運",
+        "init_seat_li_html": "包含 <strong>5 個 Premium Seat (6.25x) 高級研發席位</strong>（每人獨立 Claude 空間與 macOS 帳戶）",
         "features_html": [
           "<strong>高規格 Mac Studio / Mac mini 整機團隊獨享</strong>，硬體級安全隔離",
           "企業持有席次調配權，支援人員到職／離職交接與<strong>單一整合帳單發票代管</strong>",
@@ -470,11 +470,11 @@
         "mailto_subject": "Claude 代營運諮詢 - Team 團隊方案"
       },
       "biz": {
-        "init_badge": "企業旗艦 · 10 席 Max (5x) 多機叢集",
+        "init_badge": "企業旗艦 · 10 席 Premium Seat (6.25x) 多機叢集",
         "sub": "10 席次",
         "desc": "面向高速成長的科技企業、量化研發與跨國工程團隊——多台實體 Mac 專屬叢集獨享與 9 國雙區域部署保障。",
-        "init_note": "含 10 個 Max (5x) 獨立席次 · 多機實體叢集獨享 + VIP SLA",
-        "init_seat_li_html": "包含 <strong>10 個 Max (5x) 專業研發席次</strong>（支援依需求彈性擴充至 50+ 席次）",
+        "init_note": "含 10 個 Premium Seat (6.25x) 獨立席位 · 多機實體叢集獨享 + VIP 專屬群",
+        "init_seat_li_html": "包含 <strong>10 個 Premium Seat (6.25x) 高級研發席位</strong>（支援按需彈性擴容至 50+ 席位）",
         "features_html": [
           "<strong>多台高規格 Mac Studio / Mac mini 專屬實體叢集獨享</strong>",
           "支援 <strong>9 國雙區域部署與故障快速遷移</strong> + 獨享純淨原生固定商務寬頻",
@@ -494,21 +494,21 @@
       "sub": "已訂閱 Team 或 Business 基礎方案的團隊，可隨時為特定成員自助下單補差額升級額度（年繳加購同享省 2 個月優惠）。",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "席次升級",
           "desc": "將團隊內任一 Pro (1x) 標準席次升級為 Max (5x) 專業研發席次，滿足日常重度 Claude Code 開發。",
           "btn": "升級席次 →"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "席次升級",
           "desc": "在全員 Max 方案基礎上，為創辦人、CTO 或首席架構師升級至 20x Ultra 多 Agent 旗艦額度。",
           "btn": "升級席次 →"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "跨級升級",
           "desc": "在全員 Pro 基礎方案上，將指定技術核心成員的席次一步到位直接升級至 20x Ultra 頂規額度。",
@@ -725,20 +725,20 @@
     "line_1_mo": "5 倍優先頻寬吞吐 · 高優先權 BGP QoS",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "含 5 席 Pro (1x) · 團隊整機獨享",
-        "bizBadge": "企業旗艦 · 10 席 Pro (1x) 多機叢集",
-        "teamSeatLi": "包含 <strong>5 個 Pro (1x) 標準成員席次</strong>（每位成員獨立 Claude 工作空間與 macOS 帳號）",
-        "bizSeatLi": "包含 <strong>10 個 Pro (1x) 標準成員席次</strong>（支援依需求彈性擴充至 50+ 席次）",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "含 5 席 Standard Seat (1.25x) · 團隊整機獨享",
+        "bizBadge": "企業旗艦 · 10 席 Standard Seat (1.25x) 多機叢集",
+        "teamSeatLi": "包含 <strong>5 個 Standard Seat (1.25x) 標準成員席位</strong>（每人獨立 Claude 空間與 macOS 帳戶）",
+        "bizSeatLi": "包含 <strong>10 個 Standard Seat (1.25x) 標準成員席位</strong>（支援按需彈性擴容至 50+ 席位）",
         "teamStorage": "免費贈送 6 TB 團隊雲端儲存空間（Google Drive / iCloud+）",
         "bizStorage": "免費贈送 12 TB 企業級雲端儲存空間（Google Drive / iCloud+）"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "含 5 席 Max (5x) · 團隊整機獨享",
-        "bizBadge": "企業旗艦 · 10 席 Max (5x) 多機叢集",
-        "teamSeatLi": "包含 <strong>5 個 Max (5x) 專業研發席次</strong>（每位成員獨立 Claude 工作空間與 macOS 帳號）",
-        "bizSeatLi": "包含 <strong>10 個 Max (5x) 專業研發席次</strong>（支援依需求彈性擴充至 50+ 席次）",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "含 5 席 Premium Seat (6.25x) · 團隊整機獨享",
+        "bizBadge": "企業旗艦 · 10 席 Premium Seat (6.25x) 多機叢集",
+        "teamSeatLi": "包含 <strong>5 個 Premium Seat (6.25x) 高級研發席位</strong>（每人獨立 Claude 空間與 macOS 帳戶）",
+        "bizSeatLi": "包含 <strong>10 個 Premium Seat (6.25x) 高級研發席位</strong>（支援按需彈性擴容至 50+ 席位）",
         "teamStorage": "免費贈送 12 TB 團隊雲端儲存空間（Google Drive / iCloud+）",
         "bizStorage": "免費贈送 30 TB 企業級雲端儲存空間（Google Drive / iCloud+）"
       },

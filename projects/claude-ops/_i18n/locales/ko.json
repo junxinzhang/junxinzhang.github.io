@@ -446,21 +446,21 @@
     "enterprise": {
       "divider": "Team & Business · 팀 및 기업 전용 멀티 시트 클러스터",
       "switch_aria": "팀 좌석 등급 선택",
-      "tier_pro": "전원 Pro 좌석 (1x)",
-      "tier_max": "전원 Max 좌석 (5x)",
+      "tier_pro": "전원 Pro 좌석 (1.25x)",
+      "tier_max": "전원 Max 좌석 (6.25x)",
       "tier_max_badge": "추천",
       "tier_ultra": "전원 Ultra 좌석 (20x)",
       "toolbar_html": "전원 동일한 Pro, Max 또는 Ultra 좌석으로 시작하거나, 아래의 셀프서비스 <strong>좌석별 업그레이드 애드온</strong>으로 언제든 팀원별 맞춤 조합을 구성할 수 있습니다.",
       "team": {
-        "init_badge": "Max (5x) 5좌석 · 전용 호스트",
+        "init_badge": "Premium Seat (6.25x) 5좌석 · 전용 호스트",
         "sub": "5 좌석",
         "desc": "스타트업 핵심 조직, AI 스튜디오 및 리서치 팀을 위한 설계 — 통합 청구와 관리자 권한을 갖춘 팀 전용 물리 Mac 호스트를 제공합니다.",
-        "init_note": "격리된 Max (5x) 좌석 5개 포함 · 전용 Mac 호스트 및 통합 청구",
-        "init_seat_li_html": "<strong>Max (5x) 엔지니어링 좌석 5개</strong> 포함 (구성원별 독립 Claude 워크스페이스 &amp; macOS 계정 부여)",
+        "init_note": "격리된 Premium Seat (6.25x) 좌석 5개 포함 · 전용 Mac 호스트 및 통합 청구",
+        "init_seat_li_html": "<strong>Premium Seat (6.25x) 엔지니어링 좌석 5개</strong> 포함 (구성원별 독립 Claude 워크스페이스 &amp; macOS 계정 부여)",
         "features_html": [
           "팀만을 위한 <strong>전용 고사양 물리 Mac Studio / Mac mini 호스트 독점</strong>",
           "입·퇴사 시 조직 소유 좌석 재배정 지원 및 <strong>단일 통합 인보이스 발행</strong>",
-          "필요 시 개별 좌석을 언제든 Max (5x) 또는 Ultra (20x)로 온디맨드 업그레이드 가능",
+          "필요 시 개별 좌석을 언제든 Premium Seat (6.25x) 또는 Ultra (20x)로 온디맨드 업그레이드 가능",
           "<strong>7×24시간</strong> 팀 전용 컨시어지 그룹 채널 지원",
           "프라이빗 고속 RustDesk 팀 전용 채널 무료 제공"
         ],
@@ -470,11 +470,11 @@
         "mailto_subject": "Zaokit ClaudeOps 문의 - Team 플랜"
       },
       "biz": {
-        "init_badge": "엔터프라이즈 · Max (5x) 10좌석 클러스터",
+        "init_badge": "엔터프라이즈 · Premium Seat (6.25x) 10좌석 클러스터",
         "sub": "10 좌석",
         "desc": "빠르게 성장하는 테크 기업, 퀀트 및 대규모 엔지니어링 조직을 위한 플랜 — 9개국 듀얼 리전 배포를 지원하는 전용 멀티 Mac 물리 클러스터.",
-        "init_note": "격리된 Max (5x) 좌석 10개 포함 · 전용 멀티 Mac 클러스터 및 VIP SLA",
-        "init_seat_li_html": "<strong>Max (5x) 엔지니어링 좌석 10개</strong> 포함 (필요 시 50좌석 이상 유연 확장 가능)",
+        "init_note": "격리된 Premium Seat (6.25x) 좌석 10개 포함 · 전용 멀티 Mac 클러스터 및 VIP SLA",
+        "init_seat_li_html": "<strong>Premium Seat (6.25x) 엔지니어링 좌석 10개</strong> 포함 (필요 시 50좌석 이상 유연 확장 가능)",
         "features_html": [
           "<strong>전용 멀티 유닛 Mac Studio / Mac mini 물리 클러스터 독점</strong>",
           "<strong>9개국 듀얼 리전 배포 및 신속한 장애 마이그레이션</strong> + 전용 고정 네이티브 ISP 회선 지원",
@@ -494,21 +494,21 @@
       "sub": "이용 중인 Team 또는 Business 기본 플랜 위에서 특정 구성원의 좌석만 온디맨드로 업그레이드해 자유롭게 조합하세요(연간 애드온 역시 2개월 무료 적용).",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "업그레이드",
-          "desc": "팀 내 Pro (1x) 좌석을 Max (5x)로 업그레이드하여 일일 고강도 Claude Code 엔지니어링을 지원합니다.",
+          "desc": "팀 내 Standard Seat (1.25x) 좌석을 Premium Seat (6.25x)로 업그레이드하여 일일 고강도 Claude Code 엔지니어링을 지원합니다.",
           "btn": "좌석 업그레이드 →"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "업그레이드",
           "desc": "전원 Max 플랜에서 창업자, CTO 또는 리드 아키텍트 좌석을 20x Ultra 멀티 에이전트 용량으로 격상합니다.",
           "btn": "좌석 업그레이드 →"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "다이렉트",
           "desc": "전원 Pro 기본 플랜의 특정 좌석을 한 번에 최상위 20x Ultra 플래그십 한도로 직행 업그레이드합니다.",
@@ -725,20 +725,20 @@
     "line_1_mo": "5배 우선 처리량 · 고우선순위 BGP QoS",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "Pro (1x) 5좌석 · 전용 호스트",
-        "bizBadge": "엔터프라이즈 · Pro (1x) 10좌석 클러스터",
-        "teamSeatLi": "<strong>Pro (1x) 스탠다드 멤버 좌석 5개</strong> 포함 (구성원별 독립 Claude 워크스페이스 &amp; macOS 계정 부여)",
-        "bizSeatLi": "<strong>Pro (1x) 스탠다드 멤버 좌석 10개</strong> 포함 (필요 시 50좌석 이상 유연 확장 가능)",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "Standard Seat (1.25x) 5좌석 · 전용 호스트",
+        "bizBadge": "엔터프라이즈 · Standard Seat (1.25x) 10좌석 클러스터",
+        "teamSeatLi": "<strong>Standard Seat (1.25x) 스탠다드 멤버 좌석 5개</strong> 포함 (구성원별 독립 Claude 워크스페이스 &amp; macOS 계정 부여)",
+        "bizSeatLi": "<strong>Standard Seat (1.25x) 스탠다드 멤버 좌석 10개</strong> 포함 (필요 시 50좌석 이상 유연 확장 가능)",
         "teamStorage": "팀용 6 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)",
         "bizStorage": "엔터프라이즈용 12 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "Max (5x) 5좌석 · 전용 호스트",
-        "bizBadge": "엔터프라이즈 · Max (5x) 10좌석 클러스터",
-        "teamSeatLi": "<strong>Max (5x) 엔지니어링 좌석 5개</strong> 포함 (구성원별 독립 Claude 워크스페이스 &amp; macOS 계정 부여)",
-        "bizSeatLi": "<strong>Max (5x) 엔지니어링 좌석 10개</strong> 포함 (필요 시 50좌석 이상 유연 확장 가능)",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "Premium Seat (6.25x) 5좌석 · 전용 호스트",
+        "bizBadge": "엔터프라이즈 · Premium Seat (6.25x) 10좌석 클러스터",
+        "teamSeatLi": "<strong>Premium Seat (6.25x) 엔지니어링 좌석 5개</strong> 포함 (구성원별 독립 Claude 워크스페이스 &amp; macOS 계정 부여)",
+        "bizSeatLi": "<strong>Premium Seat (6.25x) 엔지니어링 좌석 10개</strong> 포함 (필요 시 50좌석 이상 유연 확장 가능)",
         "teamStorage": "팀용 12 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)",
         "bizStorage": "엔터프라이즈용 30 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)"
       },

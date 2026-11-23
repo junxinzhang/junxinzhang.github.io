@@ -446,21 +446,21 @@
     "enterprise": {
       "divider": "Team & Business · 専有マルチシート物理クラスター",
       "switch_aria": "チームのシートグレードを選択",
-      "tier_pro": "全員 Pro シート (1x)",
-      "tier_max": "全員 Max シート (5x)",
+      "tier_pro": "全員 Pro シート (1.25x)",
+      "tier_max": "全員 Max シート (6.25x)",
       "tier_max_badge": "おすすめ",
       "tier_ultra": "全員 Ultra シート (20x)",
       "toolbar_html": "全員同一のPro・Max・Ultra構成で開始できるほか、下部のセルフサービス<strong>シート単位アップグレード</strong>でメンバーごとに柔軟な組み合わせも可能です。",
       "team": {
-        "init_badge": "Max (5x) × 5シート · 専有ホスト",
+        "init_badge": "Premium Seat (6.25x) × 5シート · 専有ホスト",
         "sub": "5シート",
         "desc": "スタートアップ開発チーム、AIスタジオ、リサーチ部門向け——チーム専用の物理Macホストと一括請求・管理機能を提供します。",
-        "init_note": "分離されたMax (5x) シート×5枠込み · 専有Macホスト＆一括請求",
-        "init_seat_li_html": "<strong>Max (5x) エンジニアリングシート×5枠</strong>込み（メンバーごとに独立したClaudeワークスペースとmacOSアカウント）",
+        "init_note": "分離されたMax (6.25x) シート×5枠込み · 専有Macホスト＆一括請求",
+        "init_seat_li_html": "<strong>Premium Seat (6.25x) エンジニアリングシート×5枠</strong>込み（メンバーごとに独立したClaudeワークスペースとmacOSアカウント）",
         "features_html": [
           "チーム専用の<strong>ハイスペック物理Mac Studio / Mac mini専有ホスト</strong>",
           "入退社に伴う企業側でのシート再割り当てと<strong>単一の一括請求書（インボイス）発行</strong>",
-          "必要なメンバーのシートだけを後からオンデマンドでMax (5x) / Ultra (20x) へアップグレード可能",
+          "必要なメンバーのシートだけを後からオンデマンドでMax (6.25x) / Ultra (20x) へアップグレード可能",
           "<strong>7×24時間</strong> チーム専用コンシェルジュグループ窓口",
           "チーム専用の高速プライベートRustDeskチャネル無料付帯"
         ],
@@ -470,11 +470,11 @@
         "mailto_subject": "Zaokit ClaudeOps お問い合わせ - Teamプラン"
       },
       "biz": {
-        "init_badge": "エンタープライズ · Max (5x) × 10クラスター",
+        "init_badge": "エンタープライズ · Premium Seat (6.25x) × 10クラスター",
         "sub": "10シート",
         "desc": "急成長中のテック企業、クオンツ・研究開発組織向け——9カ国デュアルリージョン構成に対応した専有マルチMac物理クラスター。",
-        "init_note": "分離されたMax (5x) シート×10枠込み · 専有マルチMacクラスター＆VIP SLA",
-        "init_seat_li_html": "<strong>Max (5x) エンジニアリングシート×10枠</strong>込み（オンデマンドで50シート以上へ拡張可能）",
+        "init_note": "分離されたMax (6.25x) シート×10枠込み · 専有マルチMacクラスター＆VIP SLA",
+        "init_seat_li_html": "<strong>Premium Seat (6.25x) エンジニアリングシート×10枠</strong>込み（オンデマンドで50シート以上へ拡張可能）",
         "features_html": [
           "<strong>複数台のハイスペックMac Studio / Mac miniによる専有物理クラスター</strong>",
           "<strong>9カ国でのデュアルリージョン展開および迅速なフェイルオーバー移行</strong>＋専用固定ネイティブISP回線",
@@ -494,21 +494,21 @@
       "sub": "有効なTeamまたはBusinessベースプラン上で、特定のメンバーのみをオンデマンドで上位グレードへアップグレードできます（年額アドオンも2ヶ月分無料）。",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "アップグレード",
-          "desc": "チーム内のPro (1x) シートをMax (5x) に引き上げ、毎日の本格的なClaude Code開発に対応します。",
+          "desc": "チーム内のPro (1.25x) シートをMax (6.25x) に引き上げ、毎日の本格的なClaude Code開発に対応します。",
           "btn": "シートをアップグレード →"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "アップグレード",
           "desc": "全員Maxプラン上の創業者・CTO・リードアーキテクトを20x Ultraマルチエージェント枠へ強化します。",
           "btn": "シートをアップグレード →"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "2段階アップ",
           "desc": "全員Proベースプラン上の特定シートを、一気に最上位の20x Ultraフラッグシップ枠へ引き上げます。",
@@ -725,20 +725,20 @@
     "line_1_mo": "5倍の優先スループット · 高優先度BGP QoS",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "Pro (1x) × 5シート · 専有ホスト",
-        "bizBadge": "エンタープライズ · Pro (1x) × 10クラスター",
-        "teamSeatLi": "<strong>Pro (1x) 標準メンバーシート×5枠</strong>込み（メンバーごとに独立したClaudeワークスペース＆macOSアカウント）",
-        "bizSeatLi": "<strong>Pro (1x) 標準メンバーシート×10枠</strong>込み（オンデマンドで50シート以上へ拡張可能）",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "Standard Seat (1.25x) × 5シート · 専有ホスト",
+        "bizBadge": "エンタープライズ · Standard Seat (1.25x) × 10クラスター",
+        "teamSeatLi": "<strong>Standard Seat (1.25x) 標準メンバーシート×5枠</strong>込み（メンバーごとに独立したClaudeワークスペース＆macOSアカウント）",
+        "bizSeatLi": "<strong>Standard Seat (1.25x) 標準メンバーシート×10枠</strong>込み（オンデマンドで50シート以上へ拡張可能）",
         "teamStorage": "チーム用 6 TB クラウドストレージ無料付帯（Google Drive / iCloud+）",
         "bizStorage": "エンタープライズ用 12 TB クラウドストレージ無料付帯（Google Drive / iCloud+）"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "Max (5x) × 5シート · 専有ホスト",
-        "bizBadge": "エンタープライズ · Max (5x) × 10クラスター",
-        "teamSeatLi": "<strong>Max (5x) エンジニアリングシート×5枠</strong>込み（メンバーごとに独立したClaudeワークスペース＆macOSアカウント）",
-        "bizSeatLi": "<strong>Max (5x) エンジニアリングシート×10枠</strong>込み（オンデマンドで50シート以上へ拡張可能）",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "Premium Seat (6.25x) × 5シート · 専有ホスト",
+        "bizBadge": "エンタープライズ · Premium Seat (6.25x) × 10クラスター",
+        "teamSeatLi": "<strong>Premium Seat (6.25x) エンジニアリングシート×5枠</strong>込み（メンバーごとに独立したClaudeワークスペース＆macOSアカウント）",
+        "bizSeatLi": "<strong>Premium Seat (6.25x) エンジニアリングシート×10枠</strong>込み（オンデマンドで50シート以上へ拡張可能）",
         "teamStorage": "チーム用 12 TB クラウドストレージ無料付帯（Google Drive / iCloud+）",
         "bizStorage": "エンタープライズ用 30 TB クラウドストレージ無料付帯（Google Drive / iCloud+）"
       },

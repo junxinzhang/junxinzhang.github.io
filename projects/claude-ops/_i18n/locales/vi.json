@@ -446,21 +446,21 @@
     "enterprise": {
       "divider": "Team & Business · Cụm Máy Nhiều Chỗ Ngồi Chuyên Dụng",
       "switch_aria": "Chọn hạng chỗ ngồi cho nhóm",
-      "tier_pro": "Toàn bộ ghế Pro (1x)",
-      "tier_max": "Toàn bộ ghế Max (5x)",
+      "tier_pro": "Toàn bộ ghế Standard Seat (1.25x)",
+      "tier_max": "Toàn bộ ghế Premium Seat (6.25x)",
       "tier_max_badge": "Khuyên dùng",
       "tier_ultra": "Toàn bộ ghế Ultra (20x)",
       "toolbar_html": "Bắt đầu với các ghế đồng nhất Pro, Max hoặc Ultra — hoặc linh hoạt kết hợp bất cứ lúc nào nhờ <strong>gói nâng cấp từng ghế</strong> tự phục vụ bên dưới.",
       "team": {
-        "init_badge": "5 × Ghế Max (5x) · Máy Chủ Riêng",
+        "init_badge": "5 × Ghế Premium Seat (6.25x) · Máy Chủ Riêng",
         "sub": "5 Thành viên",
         "desc": "Thiết kế cho nhóm startup, studio AI và nhóm nghiên cứu — một máy chủ vật lý Mac dành riêng cho đội ngũ của bạn với hóa đơn tập trung & quyền quản trị.",
-        "init_note": "Bao gồm 5 ghế Max (5x) biệt lập · Máy chủ Mac riêng & hóa đơn gộp",
-        "init_seat_li_html": "Bao gồm <strong>5 ghế kỹ thuật Max (5x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)",
+        "init_note": "Bao gồm 5 ghế Premium Seat (6.25x) biệt lập · Máy chủ Mac riêng & hóa đơn gộp",
+        "init_seat_li_html": "Bao gồm <strong>5 ghế kỹ thuật Premium Seat (6.25x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)",
         "features_html": [
           "<strong>Máy chủ Mac Studio / Mac mini cấu hình cao chuyên dụng</strong> dành riêng cho nhóm của bạn",
           "Linh hoạt cấp phát lại ghế thuộc sở hữu tổ chức khi thay đổi nhân sự &amp; <strong>một hóa đơn tổng hợp duy nhất</strong>",
-          "Nâng cấp từng ghế lẻ lên Max (5x) hoặc Ultra (20x) theo nhu cầu bất kỳ lúc nào",
+          "Nâng cấp từng ghế lẻ lên Premium Seat (6.25x) hoặc Ultra (20x) theo nhu cầu bất kỳ lúc nào",
           "Kênh nhóm cố vấn riêng cho đội ngũ <strong>7×24h</strong>",
           "Tặng kèm kênh RustDesk tốc độ cao riêng cho nhóm"
         ],
@@ -470,11 +470,11 @@
         "mailto_subject": "Tư vấn Zaokit ClaudeOps - Gói Team"
       },
       "biz": {
-        "init_badge": "Enterprise · Cụm 10 × Ghế Max (5x)",
+        "init_badge": "Enterprise · Cụm 10 × Ghế Premium Seat (6.25x)",
         "sub": "10 Thành viên",
         "desc": "Dành cho công ty công nghệ đang tăng trưởng, quỹ định lượng & khối kỹ thuật — cụm nhiều máy vật lý Mac chuyên dụng hỗ trợ triển khai kép đa vùng tại 9 quốc gia.",
-        "init_note": "Bao gồm 10 ghế Max (5x) biệt lập · Cụm nhiều máy Mac riêng & SLA VIP",
-        "init_seat_li_html": "Bao gồm <strong>10 ghế kỹ thuật Max (5x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)",
+        "init_note": "Bao gồm 10 ghế Premium Seat (6.25x) biệt lập · Cụm nhiều máy Mac riêng & SLA VIP",
+        "init_seat_li_html": "Bao gồm <strong>10 ghế kỹ thuật Premium Seat (6.25x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)",
         "features_html": [
           "<strong>Cụm nhiều máy vật lý Mac Studio / Mac mini chuyên dụng</strong>",
           "Hỗ trợ <strong>triển khai song song hai khu vực &amp; di chuyển nhanh trên 9 quốc gia</strong> + IP ISP bản địa tĩnh riêng",
@@ -494,24 +494,24 @@
       "sub": "Kết hợp linh hoạt các cấp độ trên mọi gói nền tảng Team hoặc Business đang hoạt động — nâng cấp đúng thành viên cần thiết theo nhu cầu (trả theo năm cũng được tặng 2 tháng).",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "Nâng cấp",
-          "desc": "Nâng cấp bất kỳ ghế Pro (1x) nào trong nhóm lên Max (5x) cho nhu cầu lập trình Claude Code chuyên sâu hàng ngày.",
+          "desc": "Nâng cấp bất kỳ ghế Standard Seat (1.25x) nào trong nhóm lên Premium Seat (6.25x) cho nhu cầu lập trình Claude Code chuyên sâu hàng ngày.",
           "btn": "Nâng cấp ghế →"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "Nâng cấp",
-          "desc": "Nâng cấp ghế của founder, CTO hoặc kiến trúc sư trưởng trên gói All-Max lên công suất đa tác tử Ultra 20x.",
+          "desc": "Nâng cấp ghế của founder, CTO hoặc kiến trúc sư trưởng trên gói All-Premium lên công suất đa tác tử Ultra 20x.",
           "btn": "Nâng cấp ghế →"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "Trực tiếp",
-          "desc": "Nâng thẳng bất kỳ ghế nào thuộc gói nền tảng All-Pro lên toàn bộ hạn mức flagship Ultra 20x.",
+          "desc": "Nâng thẳng bất kỳ ghế nào thuộc gói nền tảng All-Standard lên toàn bộ hạn mức flagship Ultra 20x.",
           "btn": "Nâng cấp ghế →"
         }
       ]
@@ -725,20 +725,20 @@
     "line_1_mo": "Băng thông ưu tiên 5× · Hàng đợi QoS BGP cao cấp",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "5 × Ghế Pro (1x) · Máy Chủ Riêng",
-        "bizBadge": "Enterprise · Cụm 10 × Ghế Pro (1x)",
-        "teamSeatLi": "Bao gồm <strong>5 ghế thành viên tiêu chuẩn Pro (1x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)",
-        "bizSeatLi": "Bao gồm <strong>10 ghế thành viên tiêu chuẩn Pro (1x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "5 × Ghế Standard Seat (1.25x) · Máy Chủ Riêng",
+        "bizBadge": "Enterprise · Cụm 10 × Ghế Standard Seat (1.25x)",
+        "teamSeatLi": "Bao gồm <strong>5 ghế thành viên tiêu chuẩn Standard Seat (1.25x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)",
+        "bizSeatLi": "Bao gồm <strong>10 ghế thành viên tiêu chuẩn Standard Seat (1.25x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)",
         "teamStorage": "Tặng kèm 6 TB lưu trữ đám mây nhóm (Google Drive / iCloud+)",
         "bizStorage": "Tặng kèm 12 TB lưu trữ đám mây doanh nghiệp (Google Drive / iCloud+)"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "5 × Ghế Max (5x) · Máy Chủ Riêng",
-        "bizBadge": "Enterprise · Cụm 10 × Ghế Max (5x)",
-        "teamSeatLi": "Bao gồm <strong>5 ghế kỹ thuật Max (5x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)",
-        "bizSeatLi": "Bao gồm <strong>10 ghế kỹ thuật Max (5x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "5 × Ghế Premium Seat (6.25x) · Máy Chủ Riêng",
+        "bizBadge": "Enterprise · Cụm 10 × Ghế Premium Seat (6.25x)",
+        "teamSeatLi": "Bao gồm <strong>5 ghế kỹ thuật Premium Seat (6.25x)</strong> (không gian Claude &amp; tài khoản macOS riêng cho từng thành viên)",
+        "bizSeatLi": "Bao gồm <strong>10 ghế kỹ thuật Premium Seat (6.25x)</strong> (mở rộng linh hoạt lên 50+ ghế theo nhu cầu)",
         "teamStorage": "Tặng kèm 12 TB lưu trữ đám mây nhóm (Google Drive / iCloud+)",
         "bizStorage": "Tặng kèm 30 TB lưu trữ đám mây doanh nghiệp (Google Drive / iCloud+)"
       },

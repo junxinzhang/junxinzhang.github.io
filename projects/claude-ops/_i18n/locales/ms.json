@@ -446,21 +446,21 @@
     "enterprise": {
       "divider": "Team & Business · Kluster Berbilang Kerusi Khas",
       "switch_aria": "Pilih peringkat kerusi pasukan",
-      "tier_pro": "Semua Kerusi Pro (1x)",
-      "tier_max": "Semua Kerusi Max (5x)",
+      "tier_pro": "Semua Kerusi Standard Seat (1.25x)",
+      "tier_max": "Semua Kerusi Premium Seat (6.25x)",
       "tier_max_badge": "Disyorkan",
       "tier_ultra": "Semua Kerusi Ultra (20x)",
       "toolbar_html": "Mulakan dengan kerusi seragam Pro, Max atau Ultra — atau gabung &amp; padankan bila-bila masa melalui <strong>tambahan naik taraf setiap kerusi</strong> layan diri di bawah.",
       "team": {
-        "init_badge": "5 × Kerusi Max (5x) · Hos Khas",
+        "init_badge": "5 × Kerusi Premium Seat (6.25x) · Hos Khas",
         "sub": "5 Kerusi",
         "desc": "Dibina untuk pasukan teras pemula, studio AI dan kumpulan penyelidikan — sebuah hos fizikal Mac khas untuk pasukan anda dengan pengebilan disatukan & kawalan pentadbir.",
-        "init_note": "Termasuk 5 kerusi terasing Max (5x) · Hos Mac khas & pengebilan disatukan",
-        "init_seat_li_html": "Termasuk <strong>5 kerusi kejuruteraan Max (5x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)",
+        "init_note": "Termasuk 5 kerusi terasing Premium Seat (6.25x) · Hos Mac khas & pengebilan disatukan",
+        "init_seat_li_html": "Termasuk <strong>5 kerusi kejuruteraan Premium Seat (6.25x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)",
         "features_html": [
           "<strong>Hos Mac Studio / Mac mini spek tinggi khas</strong> eksklusif untuk pasukan anda",
           "Penugasan semula kerusi milik organisasi untuk kemasukan/keluar ahli &amp; <strong>satu invois disatukan</strong>",
-          "Naik taraf kerusi individu ke Max (5x) atau Ultra (20x) mengikut keperluan pada bila-bila masa",
+          "Naik taraf kerusi individu ke Premium Seat (6.25x) atau Ultra (20x) mengikut keperluan pada bila-bila masa",
           "Saluran kumpulan concierge khas pasukan <strong>7×24 jam</strong>",
           "Saluran pasukan peribadi RustDesk berkelajuan tinggi percuma"
         ],
@@ -470,11 +470,11 @@
         "mailto_subject": "Pertanyaan Zaokit ClaudeOps - Pelan Team"
       },
       "biz": {
-        "init_badge": "Enterprise · Kluster 10 × Max (5x)",
+        "init_badge": "Enterprise · Kluster 10 × Premium Seat (6.25x)",
         "sub": "10 Kerusi",
         "desc": "Untuk syarikat teknologi yang berkembang pesat, firma kuantitatif & organisasi kejuruteraan — kluster fizikal berbilang Mac khas dengan penempatan dwi-rantau merentasi 9 negara.",
-        "init_note": "Termasuk 10 kerusi terasing Max (5x) · Kluster berbilang Mac khas & SLA VIP",
-        "init_seat_li_html": "Termasuk <strong>10 kerusi kejuruteraan Max (5x)</strong> (boleh dikembangkan kepada 50+ kerusi mengikut keperluan)",
+        "init_note": "Termasuk 10 kerusi terasing Premium Seat (6.25x) · Kluster berbilang Mac khas & SLA VIP",
+        "init_seat_li_html": "Termasuk <strong>10 kerusi kejuruteraan Premium Seat (6.25x)</strong> (boleh dikembangkan kepada 50+ kerusi mengikut keperluan)",
         "features_html": [
           "<strong>Kluster fizikal berbilang unit Mac Studio / Mac mini khas</strong>",
           "Menyokong <strong>penempatan dwi-rantau &amp; migrasi pantas merentasi 9 negara</strong> + IP ISP asli statik khas",
@@ -494,21 +494,21 @@
       "sub": "Gabung & padankan peringkat pada mana-mana pelan asas Team atau Business yang aktif — naik taraf ahli tertentu mengikut keperluan (tambahan tahunan juga menikmati 2 bulan percuma).",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "Naik taraf",
-          "desc": "Naik taraf mana-mana kerusi pasukan Pro (1x) kepada Max (5x) untuk kejuruteraan harian Claude Code yang intensif.",
+          "desc": "Naik taraf mana-mana kerusi pasukan Standard Seat (1.25x) kepada Premium Seat (6.25x) untuk kejuruteraan harian Claude Code yang intensif.",
           "btn": "Naik taraf kerusi →"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "Naik taraf",
           "desc": "Naik taraf pengasas, CTO atau ketua arkitek pada pelan Semua-Max kepada kapasiti berbilang ejen Ultra 20x.",
           "btn": "Naik taraf kerusi →"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "Terus",
           "desc": "Lonjakkan mana-mana kerusi pada pelan asas Semua-Pro terus kepada kuota penuh flagship Ultra 20x.",
@@ -725,20 +725,20 @@
     "line_1_mo": "Daya pemprosesan keutamaan 5× · QoS BGP keutamaan tinggi",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "5 × Kerusi Pro (1x) · Hos Khas",
-        "bizBadge": "Enterprise · Kluster 10 × Pro (1x)",
-        "teamSeatLi": "Termasuk <strong>5 kerusi ahli standard Pro (1x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)",
-        "bizSeatLi": "Termasuk <strong>10 kerusi ahli standard Pro (1x)</strong> (boleh dikembangkan kepada 50+ kerusi mengikut keperluan)",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "5 × Kerusi Standard Seat (1.25x) · Hos Khas",
+        "bizBadge": "Enterprise · Kluster 10 × Standard Seat (1.25x)",
+        "teamSeatLi": "Termasuk <strong>5 kerusi ahli standard Standard Seat (1.25x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)",
+        "bizSeatLi": "Termasuk <strong>10 kerusi ahli standard Standard Seat (1.25x)</strong> (boleh dikembangkan kepada 50+ kerusi mengikut keperluan)",
         "teamStorage": "Storan awan pasukan 6 TB percuma (Google Drive / iCloud+)",
         "bizStorage": "Storan awan perusahaan 12 TB percuma (Google Drive / iCloud+)"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "5 × Kerusi Max (5x) · Hos Khas",
-        "bizBadge": "Enterprise · Kluster 10 × Max (5x)",
-        "teamSeatLi": "Termasuk <strong>5 kerusi kejuruteraan Max (5x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)",
-        "bizSeatLi": "Termasuk <strong>10 kerusi kejuruteraan Max (5x)</strong> (boleh dikembangkan kepada 50+ kerusi mengikut keperluan)",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "5 × Kerusi Premium Seat (6.25x) · Hos Khas",
+        "bizBadge": "Enterprise · Kluster 10 × Premium Seat (6.25x)",
+        "teamSeatLi": "Termasuk <strong>5 kerusi kejuruteraan Premium Seat (6.25x)</strong> (ruang kerja Claude &amp; akaun macOS berasingan bagi setiap ahli)",
+        "bizSeatLi": "Termasuk <strong>10 kerusi kejuruteraan Premium Seat (6.25x)</strong> (boleh dikembangkan kepada 50+ kerusi mengikut keperluan)",
         "teamStorage": "Storan awan pasukan 12 TB percuma (Google Drive / iCloud+)",
         "bizStorage": "Storan awan perusahaan 30 TB percuma (Google Drive / iCloud+)"
       },

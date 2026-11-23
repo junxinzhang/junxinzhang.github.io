@@ -446,21 +446,21 @@
     "enterprise": {
       "divider": "Team & Business · 团队与企业专属物理集群方案",
       "switch_aria": "选择团队席位规格",
-      "tier_pro": "全员 Pro 标准版 (1x)",
-      "tier_max": "全员 Max 研发版 (5x)",
+      "tier_pro": "全员 Standard Seat (1.25x)",
+      "tier_max": "全员 Premium Seat (6.25x)",
       "tier_max_badge": "主力推荐",
       "tier_ultra": "全员 Ultra 旗舰版 (20x)",
-      "toolbar_html": "支持全员统一规格；如需定制混搭（如主创用 Ultra、研发用 Max、运营用 Pro），可先订低档底座再通过下方<strong>单席位升配包</strong>按需升级。",
+      "toolbar_html": "支持全员统一规格；如需定制混搭（如主创用 Ultra 20x、研发用 Premium 6.25x、运营用 Standard 1.25x），可先订低档底座再通过下方<strong>单席位升配包</strong>按需升级。",
       "team": {
-        "init_badge": "含 5 席 Max (5x) · 团队整机独享",
+        "init_badge": "含 5 席 Premium Seat (6.25x) · 团队整机独享",
         "sub": "团队版 · 5 席位",
         "desc": "专为初创核心团队、AI 工作室与投研开发小组打造，整台高配物理 Mac 团队独享，统一账单与资产归属管理。",
-        "init_note": "含 5 个 Max (5x) 独立席位 · 整机物理独享 + 团队专属运维",
-        "init_seat_li_html": "包含 <strong>5 个 Max (5x) 专业研发席位</strong>（每人独立 Claude 空间与 macOS 账户）",
+        "init_note": "含 5 个 Premium Seat (6.25x) 独立席位 · 整机物理独享 + 团队专属运维",
+        "init_seat_li_html": "包含 <strong>5 个 Premium Seat (6.25x) 高级研发席位</strong>（每人独立 Claude 空间与 macOS 账户）",
         "features_html": [
           "<strong>高配置 Mac Studio / Mac mini 整机团队独享</strong>，硬件级安全隔离",
           "公司持有席位调配权，支持成员入离职交接与<strong>统一团队账单发票托管</strong>",
-          "支持后期随时按单席位补差价升配至更高额度（Max / Ultra）",
+          "支持后期随时按单席位补差价升配至更高额度（Premium 6.25x / Ultra 20x）",
           "<strong>7×24 小时</strong>专属团队技术顾问群一对多实时支持",
           "免费赠送团队自建高速 RustDesk 加密专属通道"
         ],
@@ -470,11 +470,11 @@
         "mailto_subject": "Claude 代运营咨询 - Team 团队版"
       },
       "biz": {
-        "init_badge": "企业旗舰 · 10 席 Max (5x) 多机集群",
+        "init_badge": "企业旗舰 · 10 席 Premium Seat (6.25x) 多机集群",
         "sub": "企业版 · 10 席位",
         "desc": "面向高速成长的科技企业、量化投研与跨境研发部门，多台物理 Mac 专属集群独享与 9 国跨区双节点保障。",
-        "init_note": "含 10 个 Max (5x) 独立席位 · 多机物理集群独享 + VIP 专属群",
-        "init_seat_li_html": "包含 <strong>10 个 Max (5x) 专业研发席位</strong>（支持按需弹性扩容至 50+ 席位）",
+        "init_note": "含 10 个 Premium Seat (6.25x) 独立席位 · 多机物理集群独享 + VIP 专属群",
+        "init_seat_li_html": "包含 <strong>10 个 Premium Seat (6.25x) 高级研发席位</strong>（支持按需弹性扩容至 50+ 席位）",
         "features_html": [
           "<strong>多台高配置 Mac Studio / Mac mini 专属物理集群独享</strong>",
           "支持 <strong>9 国双区域混合部署与故障快速迁移</strong> + 独享纯净原生静态商宽",
@@ -494,24 +494,24 @@
       "sub": "已订阅 Team / Business 底座的团队，可随时为指定成员自助下单补差价升级额度（跟随上方月付/年付周期同步享年付免 2 个月优惠）。",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "席位升配",
-          "desc": "将团队内任意 1x 标准席位升级为 5x 专业研发席位，满足日常重度 Claude Code 开发。",
+          "desc": "将团队内任意 1.25x Standard Seat 升级为 6.25x Premium Seat 高级研发席位，满足日常重度 Claude Code 开发。",
           "btn": "下单升配 →"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "席位升配",
-          "desc": "在全员 Max 研发底座上，为创始人、CTO 或核心架构师升级至 20x 顶配多 Agent 额度。",
+          "desc": "在全员 Premium Seat (6.25x) 研发底座上，为创始人、CTO 或核心架构师升级至 20x 顶配多 Agent 额度。",
           "btn": "下单升配 →"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "跨级升配",
-          "desc": "在全员 Pro 办公底座上，将指定核心技术负责人的席位一步到位直接升配至 20x 顶配额度。",
+          "desc": "在全员 Standard Seat (1.25x) 办公底座上，将指定核心技术负责人的席位一步到位直接升配至 20x 顶配额度。",
           "btn": "下单升配 →"
         }
       ]
@@ -725,20 +725,20 @@
     "line_1_mo": "5 倍优先带宽吞吐 · 高优先级 QoS 队列",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "含 5 席 Pro (1x) · 团队整机独享",
-        "bizBadge": "企业旗舰 · 10 席 Pro (1x) 多机集群",
-        "teamSeatLi": "包含 <strong>5 个 Pro (1x) 标准成员席位</strong>（每人独立 Claude 空间与 macOS 账户）",
-        "bizSeatLi": "包含 <strong>10 个 Pro (1x) 标准成员席位</strong>（支持按需弹性扩容至 50+ 席位）",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "含 5 席 Standard Seat (1.25x) · 团队整机独享",
+        "bizBadge": "企业旗舰 · 10 席 Standard Seat (1.25x) 多机集群",
+        "teamSeatLi": "包含 <strong>5 个 Standard Seat (1.25x) 标准成员席位</strong>（每人独立 Claude 空间与 macOS 账户）",
+        "bizSeatLi": "包含 <strong>10 个 Standard Seat (1.25x) 标准成员席位</strong>（支持按需弹性扩容至 50+ 席位）",
         "teamStorage": "免费赠送 6 TB 团队云存储权益（Google Drive / iCloud+）",
         "bizStorage": "免费赠送 12 TB 企业级云存储权益（Google Drive / iCloud+）"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "含 5 席 Max (5x) · 团队整机独享",
-        "bizBadge": "企业旗舰 · 10 席 Max (5x) 多机集群",
-        "teamSeatLi": "包含 <strong>5 个 Max (5x) 专业研发席位</strong>（每人独立 Claude 空间与 macOS 账户）",
-        "bizSeatLi": "包含 <strong>10 个 Max (5x) 专业研发席位</strong>（支持按需弹性扩容至 50+ 席位）",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "含 5 席 Premium Seat (6.25x) · 团队整机独享",
+        "bizBadge": "企业旗舰 · 10 席 Premium Seat (6.25x) 多机集群",
+        "teamSeatLi": "包含 <strong>5 个 Premium Seat (6.25x) 高级研发席位</strong>（每人独立 Claude 空间与 macOS 账户）",
+        "bizSeatLi": "包含 <strong>10 个 Premium Seat (6.25x) 高级研发席位</strong>（支持按需弹性扩容至 50+ 席位）",
         "teamStorage": "免费赠送 12 TB 团队云存储权益（Google Drive / iCloud+）",
         "bizStorage": "免费赠送 30 TB 企业级云存储权益（Google Drive / iCloud+）"
       },

@@ -446,21 +446,21 @@
     "enterprise": {
       "divider": "Team e Business · Clusters Dedicados Multiusuário",
       "switch_aria": "Escolher nível das licenças da equipe",
-      "tier_pro": "Licenças All-Pro (1x)",
-      "tier_max": "Licenças All-Max (5x)",
+      "tier_pro": "Licenças All-Standard Seat (1.25x)",
+      "tier_max": "Licenças All-Premium Seat (6.25x)",
       "tier_max_badge": "Recomendado",
       "tier_ultra": "Licenças All-Ultra (20x)",
       "toolbar_html": "Comece com licenças uniformes Pro, Max ou Ultra — ou combine níveis a qualquer momento com os <strong>add-ons de upgrade por licença</strong> abaixo.",
       "team": {
-        "init_badge": "5 × Licenças Max (5x) · Host Dedicado",
+        "init_badge": "5 × Licenças Premium Seat (6.25x) · Host Dedicado",
         "sub": "5 Licenças",
         "desc": "Criado para squads de startups, estúdios de IA e grupos de P&D — um host Mac físico dedicado exclusivamente à sua equipe com faturamento unificado e gestão centralizada.",
-        "init_note": "Inclui 5 licenças isoladas Max (5x) · Host Mac dedicado e faturamento unificado",
-        "init_seat_li_html": "Inclui <strong>5 licenças de engenharia Max (5x)</strong> (workspace Claude e conta macOS separados por membro)",
+        "init_note": "Inclui 5 licenças isoladas Premium Seat (6.25x) · Host Mac dedicado e faturamento unificado",
+        "init_seat_li_html": "Inclui <strong>5 licenças de engenharia Premium Seat (6.25x)</strong> (workspace Claude e conta macOS separados por membro)",
         "features_html": [
           "<strong>Host dedicado Mac Studio / Mac mini de alta configuração</strong> exclusivo para sua equipe",
           "Reatribuição de licenças pela empresa no onboarding/offboarding e <strong>fatura única consolidada</strong>",
-          "Faça upgrade de licenças individuais para Max (5x) ou Ultra (20x) sob demanda a qualquer momento",
+          "Faça upgrade de licenças individuais para Premium Seat (6.25x) ou Ultra (20x) sob demanda a qualquer momento",
           "Canal dedicado de concierge para a equipe <strong>7×24h</strong>",
           "Canal privado RustDesk de alta velocidade gratuito para a equipe"
         ],
@@ -470,11 +470,11 @@
         "mailto_subject": "Consulta Zaokit ClaudeOps - Plano Team"
       },
       "biz": {
-        "init_badge": "Enterprise · Cluster 10 × Max (5x)",
+        "init_badge": "Enterprise · Cluster 10 × Premium Seat (6.25x)",
         "sub": "10 Licenças",
         "desc": "Para empresas de tecnologia em expansão e equipes quantitativas e de engenharia — clusters físicos dedicados com múltiplos Macs e implantação dual-region em 9 países.",
-        "init_note": "Inclui 10 licenças isoladas Max (5x) · Cluster multi-Mac dedicado e SLA VIP",
-        "init_seat_li_html": "Inclui <strong>10 licenças de engenharia Max (5x)</strong> (expansível para 50+ licenças sob demanda)",
+        "init_note": "Inclui 10 licenças isoladas Premium Seat (6.25x) · Cluster multi-Mac dedicado e SLA VIP",
+        "init_seat_li_html": "Inclui <strong>10 licenças de engenharia Premium Seat (6.25x)</strong> (expansível para 50+ licenças sob demanda)",
         "features_html": [
           "<strong>Cluster físico dedicado com múltiplos Mac Studio / Mac mini</strong>",
           "Suporte a <strong>implantação em duas regiões e migração rápida entre 9 países</strong> + ISP nativo estático dedicado",
@@ -494,24 +494,24 @@
       "sub": "Combine níveis em qualquer plano base ativo Team ou Business — faça upgrade de membros específicos sob demanda (add-ons anuais também ganham 2 meses grátis).",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "Upgrade",
-          "desc": "Eleve qualquer licença Pro (1x) da equipe para Max (5x) para engenharia intensa diária com Claude Code.",
+          "desc": "Eleve qualquer licença Standard Seat (1.25x) da equipe para Premium Seat (6.25x) para engenharia intensa diária com Claude Code.",
           "btn": "Fazer upgrade →"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "Upgrade",
-          "desc": "Eleve fundadores, CTOs ou arquitetos principais em um plano All-Max para a capacidade multiagente 20x Ultra.",
+          "desc": "Eleve fundadores, CTOs ou arquitetos principais em um plano All-Premium para a capacidade multiagente 20x Ultra.",
           "btn": "Fazer upgrade →"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "Direto",
-          "desc": "Leve qualquer licença de um plano base All-Pro diretamente para a franquia máxima 20x Ultra.",
+          "desc": "Leve qualquer licença de um plano base All-Standard diretamente para a franquia máxima 20x Ultra.",
           "btn": "Fazer upgrade →"
         }
       ]
@@ -725,20 +725,20 @@
     "line_1_mo": "Taxa prioritária 5× · BGP QoS de alta prioridade",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "5 × Licenças Pro (1x) · Host Dedicado",
-        "bizBadge": "Enterprise · Cluster 10 × Pro (1x)",
-        "teamSeatLi": "Inclui <strong>5 licenças padrão Pro (1x)</strong> (workspace Claude &amp; conta macOS separados por membro)",
-        "bizSeatLi": "Inclui <strong>10 licenças padrão Pro (1x)</strong> (expansível para 50+ licenças sob demanda)",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "5 × Licenças Standard Seat (1.25x) · Host Dedicado",
+        "bizBadge": "Enterprise · Cluster 10 × Standard Seat (1.25x)",
+        "teamSeatLi": "Inclui <strong>5 licenças padrão Standard Seat (1.25x)</strong> (workspace Claude &amp; conta macOS separados por membro)",
+        "bizSeatLi": "Inclui <strong>10 licenças padrão Standard Seat (1.25x)</strong> (expansível para 50+ licenças sob demanda)",
         "teamStorage": "6 TB gratuitos de armazenamento em nuvem para a equipe (Google Drive / iCloud+)",
         "bizStorage": "12 TB gratuitos de armazenamento corporativo em nuvem (Google Drive / iCloud+)"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "5 × Licenças Max (5x) · Host Dedicado",
-        "bizBadge": "Enterprise · Cluster 10 × Max (5x)",
-        "teamSeatLi": "Inclui <strong>5 licenças de engenharia Max (5x)</strong> (workspace Claude &amp; conta macOS separados por membro)",
-        "bizSeatLi": "Inclui <strong>10 licenças de engenharia Max (5x)</strong> (expansível para 50+ licenças sob demanda)",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "5 × Licenças Premium Seat (6.25x) · Host Dedicado",
+        "bizBadge": "Enterprise · Cluster 10 × Premium Seat (6.25x)",
+        "teamSeatLi": "Inclui <strong>5 licenças de engenharia Premium Seat (6.25x)</strong> (workspace Claude &amp; conta macOS separados por membro)",
+        "bizSeatLi": "Inclui <strong>10 licenças de engenharia Premium Seat (6.25x)</strong> (expansível para 50+ licenças sob demanda)",
         "teamStorage": "12 TB gratuitos de armazenamento em nuvem para a equipe (Google Drive / iCloud+)",
         "bizStorage": "30 TB gratuitos de armazenamento corporativo em nuvem (Google Drive / iCloud+)"
       },

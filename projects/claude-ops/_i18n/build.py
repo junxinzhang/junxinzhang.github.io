@@ -1133,7 +1133,7 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         b_cls = "badge" if is_biz else "badge badge-team"
         btn_cls = "btn btn-primary" if is_biz else "btn btn-ghost"
         init_amt = cur_data[kind][1]  # default max (idx 1)
-        e_href = stripe.get(f"{kind}_max_{def_cur}", stripe[f"{kind}_max_AUD"])
+        e_href = f"/api/airwallex/checkout?plan={kind}_max_{def_cur}&locale={loc['slug']}"
         em_href = f"mailto:jason2023zhang@gmail.com?subject={quote(ek['mailto_subject'])}"
         init_ent_badge = ec_max["bizBadge"] if is_biz else ec_max["teamBadge"]
         init_ent_seat_li = ec_max["bizSeatLi"] if is_biz else ec_max["teamSeatLi"]
@@ -1191,7 +1191,7 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
     sa_cards = []
     for i, uc in enumerate(sa["cards"]):
         ukey = upg_keys[i]
-        u_href = stripe.get(f"{ukey}_{def_cur}", stripe[f"{ukey}_AUD"])
+        u_href = f"/api/airwallex/checkout?plan={ukey}_{def_cur}&locale={loc['slug']}"
         sa_cards.append(
             f'                  <div class="addon-card">\n'
             f'                    <div>\n'
@@ -1747,6 +1747,7 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
       var ENT_COPY = {json.dumps(d["js"]["ent_copy"], ensure_ascii=False)};
       var I18N = {json.dumps(js_i18n, ensure_ascii=False)};
       var DEFAULT_CURRENCY = {json.dumps(def_cur)};
+      var CUR_LOCALE_SLUG = {json.dumps(loc["slug"])};
       var TIER_IDX = {{ pro: 0, max: 1, ultra: 2 }};
       var MULT = [1, 5, 20];
       var SOLO_ANNUAL = {{ '1x': true, '5x': true, '20x': true }};
@@ -1859,8 +1860,8 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
           var entBtn = document.querySelector('[data-ent-btn="' + kind + '"]');
           if (entBtn) {{
             var kPref = kind + '_' + curSeatTier + (isYear ? '_yr' : '');
-            var eLink = STRIPE_LINKS[kPref + '_' + curCode] || STRIPE_LINKS[kPref + '_AUD'];
-            if (eLink) entBtn.setAttribute('href', eLink);
+            var awxPlan = kPref + '_' + curCode;
+            entBtn.setAttribute('href', '/api/airwallex/checkout?plan=' + encodeURIComponent(awxPlan) + '&locale=' + encodeURIComponent(CUR_LOCALE_SLUG));
           }}
         }});
 
@@ -1874,8 +1875,8 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         }});
         document.querySelectorAll('[data-upg-tier]').forEach(function (btn) {{
           var ut = btn.getAttribute('data-upg-tier') + (isYear ? '_yr' : '');
-          var uLink = STRIPE_LINKS[ut + '_' + curCode] || STRIPE_LINKS[ut + '_AUD'];
-          if (uLink) btn.setAttribute('href', uLink);
+          var awxUpgPlan = ut + '_' + curCode;
+          btn.setAttribute('href', '/api/airwallex/checkout?plan=' + encodeURIComponent(awxUpgPlan) + '&locale=' + encodeURIComponent(CUR_LOCALE_SLUG));
         }});
 
         document.querySelectorAll('[data-line-idx]').forEach(function (el) {{

@@ -446,21 +446,21 @@
     "enterprise": {
       "divider": "Team y Business · Clústeres Dedicados Multipuesto",
       "switch_aria": "Elegir nivel de puestos del equipo",
-      "tier_pro": "Todos puestos Pro (1x)",
-      "tier_max": "Todos puestos Max (5x)",
+      "tier_pro": "Todos puestos Standard Seat (1.25x)",
+      "tier_max": "Todos puestos Premium Seat (6.25x)",
       "tier_max_badge": "Recomendado",
       "tier_ultra": "Todos puestos Ultra (20x)",
       "toolbar_html": "Empieza con puestos uniformes Pro, Max o Ultra, o combínalos cuando quieras mediante los <strong>complementos de ampliación por puesto</strong> en autoservicio más abajo.",
       "team": {
-        "init_badge": "5 × Puestos Max (5x) · Host Dedicado",
+        "init_badge": "5 × Puestos Premium Seat (6.25x) · Host Dedicado",
         "sub": "5 puestos",
         "desc": "Diseñado para equipos de startups, estudios de IA y grupos de investigación: un host Mac físico dedicado para tu equipo con facturación unificada y control administrativo.",
-        "init_note": "Incluye 5 puestos aislados Max (5x) · Host Mac dedicado y factura unificada",
-        "init_seat_li_html": "Incluye <strong>5 puestos de ingeniería Max (5x)</strong> (espacio Claude y cuenta macOS independientes por miembro)",
+        "init_note": "Incluye 5 puestos aislados Premium Seat (6.25x) · Host Mac dedicado y factura unificada",
+        "init_seat_li_html": "Incluye <strong>5 puestos de ingeniería Premium Seat (6.25x)</strong> (espacio Claude y cuenta macOS independientes por miembro)",
         "features_html": [
           "<strong>Host Mac Studio / Mac mini dedicado de altas prestaciones</strong> en exclusiva para tu equipo",
           "Reasignación de puestos de la organización en altas/bajas y <strong>factura única consolidada</strong>",
-          "Amplía puestos individuales a Max (5x) o Ultra (20x) bajo demanda en cualquier momento",
+          "Amplía puestos individuales a Premium Seat (6.25x) o Ultra (20x) bajo demanda en cualquier momento",
           "Canal grupal dedicado de concierge para el equipo <strong>7×24h</strong>",
           "Canal privado RustDesk de alta velocidad para el equipo incluido sin coste"
         ],
@@ -470,11 +470,11 @@
         "mailto_subject": "Consulta Zaokit ClaudeOps - Plan Team"
       },
       "biz": {
-        "init_badge": "Enterprise · Clúster 10 × Max (5x)",
+        "init_badge": "Enterprise · Clúster 10 × Premium Seat (6.25x)",
         "sub": "10 puestos",
         "desc": "Para empresas tecnológicas en expansión, firmas cuantitativas y organizaciones de ingeniería: clústeres físicos multi-Mac dedicados con despliegue en doble región entre 9 países.",
-        "init_note": "Incluye 10 puestos aislados Max (5x) · Clúster multi-Mac dedicado y SLA VIP",
-        "init_seat_li_html": "Incluye <strong>10 puestos de ingeniería Max (5x)</strong> (ampliables a más de 50 puestos bajo demanda)",
+        "init_note": "Incluye 10 puestos aislados Premium Seat (6.25x) · Clúster multi-Mac dedicado y SLA VIP",
+        "init_seat_li_html": "Incluye <strong>10 puestos de ingeniería Premium Seat (6.25x)</strong> (ampliables a más de 50 puestos bajo demanda)",
         "features_html": [
           "<strong>Clúster físico dedicado de múltiples unidades Mac Studio / Mac mini</strong>",
           "Admite <strong>despliegue en doble región y migración rápida en 9 países</strong> + ISP nativo estático dedicado",
@@ -494,24 +494,24 @@
       "sub": "Combina niveles en cualquier plan base Team o Business activo: amplía miembros concretos bajo demanda (los complementos anuales también incluyen 2 meses gratis).",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "Ampliación",
-          "desc": "Amplía cualquier puesto Pro (1x) del equipo a Max (5x) para ingeniería intensiva diaria con Claude Code.",
+          "desc": "Amplía cualquier puesto Standard Seat (1.25x) del equipo a Premium Seat (6.25x) para ingeniería intensiva diaria con Claude Code.",
           "btn": "Ampliar puesto →"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "Ampliación",
-          "desc": "Amplía a fundadores, CTO o arquitectos principales en un plan All-Max hasta la capacidad multiagente 20x Ultra.",
+          "desc": "Amplía a fundadores, CTO o arquitectos principales en un plan All-Premium hasta la capacidad multiagente 20x Ultra.",
           "btn": "Ampliar puesto →"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "Directo",
-          "desc": "Lleva directamente cualquier puesto de un plan base All-Pro a la cuota insignia completa 20x Ultra.",
+          "desc": "Lleva directamente cualquier puesto de un plan base All-Standard a la cuota insignia completa 20x Ultra.",
           "btn": "Ampliar puesto →"
         }
       ]
@@ -725,20 +725,20 @@
     "line_1_mo": "Caudal prioritario 5× · QoS BGP de alta prioridad",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "5 × Puestos Pro (1x) · Host Dedicado",
-        "bizBadge": "Enterprise · Clúster 10 × Pro (1x)",
-        "teamSeatLi": "Incluye <strong>5 puestos estándar Pro (1x)</strong> (espacio Claude y cuenta macOS independientes por miembro)",
-        "bizSeatLi": "Incluye <strong>10 puestos estándar Pro (1x)</strong> (ampliables a más de 50 puestos bajo demanda)",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "5 × Puestos Standard Seat (1.25x) · Host Dedicado",
+        "bizBadge": "Enterprise · Clúster 10 × Standard Seat (1.25x)",
+        "teamSeatLi": "Incluye <strong>5 puestos estándar Standard Seat (1.25x)</strong> (espacio Claude y cuenta macOS independientes por miembro)",
+        "bizSeatLi": "Incluye <strong>10 puestos estándar Standard Seat (1.25x)</strong> (ampliables a más de 50 puestos bajo demanda)",
         "teamStorage": "6 TB de almacenamiento en la nube para el equipo incluidos (Google Drive / iCloud+)",
         "bizStorage": "12 TB de almacenamiento empresarial en la nube incluidos (Google Drive / iCloud+)"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "5 × Puestos Max (5x) · Host Dedicado",
-        "bizBadge": "Enterprise · Clúster 10 × Max (5x)",
-        "teamSeatLi": "Incluye <strong>5 puestos de ingeniería Max (5x)</strong> (espacio Claude y cuenta macOS independientes por miembro)",
-        "bizSeatLi": "Incluye <strong>10 puestos de ingeniería Max (5x)</strong> (ampliables a más de 50 puestos bajo demanda)",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "5 × Puestos Premium Seat (6.25x) · Host Dedicado",
+        "bizBadge": "Enterprise · Clúster 10 × Premium Seat (6.25x)",
+        "teamSeatLi": "Incluye <strong>5 puestos de ingeniería Premium Seat (6.25x)</strong> (espacio Claude y cuenta macOS independientes por miembro)",
+        "bizSeatLi": "Incluye <strong>10 puestos de ingeniería Premium Seat (6.25x)</strong> (ampliables a más de 50 puestos bajo demanda)",
         "teamStorage": "12 TB de almacenamiento en la nube para el equipo incluidos (Google Drive / iCloud+)",
         "bizStorage": "30 TB de almacenamiento empresarial en la nube incluidos (Google Drive / iCloud+)"
       },

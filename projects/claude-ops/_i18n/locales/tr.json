@@ -446,21 +446,21 @@
     "enterprise": {
       "divider": "Team ve Business · Özel Çok Koltuklu Kümeler",
       "switch_aria": "Ekip koltuk kademesini seçin",
-      "tier_pro": "Tümü Pro Koltuklar (1x)",
-      "tier_max": "Tümü Max Koltuklar (5x)",
+      "tier_pro": "Tümü Pro Koltuklar (1.25x)",
+      "tier_max": "Tümü Max Koltuklar (6.25x)",
       "tier_max_badge": "Önerilen",
       "tier_ultra": "Tümü Ultra Koltuklar (20x)",
       "toolbar_html": "Tek tip Pro, Max veya Ultra koltuklarla başlayın — ya da aşağıdaki self-servis <strong>koltuk başı yükseltme eklentileriyle</strong> dilediğiniz zaman karma yapı oluşturun.",
       "team": {
-        "init_badge": "5 × Max (5x) Koltuk · Özel Ana Bilgisayar",
+        "init_badge": "5 × Premium Seat (6.25x) Koltuk · Özel Ana Bilgisayar",
         "sub": "5 Koltuk",
         "desc": "Girişim ekipleri, yapay zeka stüdyoları ve araştırma grupları için tasarlandı — tek fatura ve merkezi yönetim kontrolüyle ekibinize tahsis edilmiş fiziksel Mac ana bilgisayarı.",
-        "init_note": "5 adet Max (5x) izole koltuk dahil · Özel Mac sunucusu ve tek fatura",
-        "init_seat_li_html": "<strong>5 adet Max (5x) mühendislik koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)",
+        "init_note": "5 adet Premium Seat (6.25x) izole koltuk dahil · Özel Mac sunucusu ve tek fatura",
+        "init_seat_li_html": "<strong>5 adet Premium Seat (6.25x) mühendislik koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)",
         "features_html": [
           "Yalnızca ekibinize tahsis edilmiş <strong>yüksek donanımlı fiziksel Mac Studio / Mac mini ana bilgisayar</strong>",
           "İşe giriş/çıkışlarda kurum mülkiyetinde koltuk devri ve <strong>tek konsolide fatura</strong>",
-          "Bireysel koltukları dilediğiniz an isteğe bağlı olarak Max (5x) veya Ultra (20x) kademesine yükseltme",
+          "Bireysel koltukları dilediğiniz an isteğe bağlı olarak Premium Seat (6.25x) veya Ultra (20x) kademesine yükseltme",
           "<strong>7×24s</strong> özel ekip konsiyerj grup kanalı",
           "Ücretsiz özel yüksek hızlı RustDesk ekip kanalı"
         ],
@@ -470,11 +470,11 @@
         "mailto_subject": "Zaokit ClaudeOps bilgi talebi - Team Planı"
       },
       "biz": {
-        "init_badge": "Kurumsal · 10 × Max (5x) Küme",
+        "init_badge": "Kurumsal · 10 × Premium Seat (6.25x) Küme",
         "sub": "10 Koltuk",
         "desc": "Ölçeklenen teknoloji şirketleri, kantitatif finans ve mühendislik organizasyonları için — 9 ülkede çift bölgeli kurulum destekli özel çoklu Mac fiziksel kümeleri.",
-        "init_note": "10 adet Max (5x) izole koltuk dahil · Özel çoklu Mac kümesi ve VIP SLA",
-        "init_seat_li_html": "<strong>10 adet Max (5x) mühendislik koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)",
+        "init_note": "10 adet Premium Seat (6.25x) izole koltuk dahil · Özel çoklu Mac kümesi ve VIP SLA",
+        "init_seat_li_html": "<strong>10 adet Premium Seat (6.25x) mühendislik koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)",
         "features_html": [
           "<strong>Çok üniteli özel fiziksel Mac Studio / Mac mini kümesi</strong>",
           "<strong>9 ülkede çift bölgeli kurulum ve hızlı taşıma</strong> + özel statik yerel İSS desteği",
@@ -494,21 +494,21 @@
       "sub": "Aktif herhangi bir Team veya Business temel planında kademeleri dilediğiniz gibi karıştırın — belirli ekip üyelerini anında yükseltin (yıllık eklentilerde de 2 ay ücretsiz).",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "Yükseltme",
-          "desc": "Yoğun günlük Claude Code mühendisliği için herhangi bir Pro (1x) ekip koltuğunu Max (5x) seviyesine yükseltin.",
+          "desc": "Yoğun günlük Claude Code mühendisliği için herhangi bir Standard Seat (1.25x) ekip koltuğunu Premium Seat (6.25x) seviyesine yükseltin.",
           "btn": "Koltuğu yükselt →"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "Yükseltme",
           "desc": "Tümü-Max planındaki kurucuları, CTO'ları veya baş mimarları 20x Ultra çoklu ajan kapasitesine taşıyın.",
           "btn": "Koltuğu yükselt →"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "Doğrudan",
           "desc": "Tümü-Pro temel planındaki herhangi bir koltuğu doğrudan tam 20x Ultra amiral gemisi kotasına çıkarın.",
@@ -725,20 +725,20 @@
     "line_1_mo": "5× öncelikli kapasite · Yüksek öncelikli BGP QoS",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "5 × Pro (1x) Koltuk · Özel Ana Bilgisayar",
-        "bizBadge": "Kurumsal · 10 × Pro (1x) Küme",
-        "teamSeatLi": "<strong>5 adet Pro (1x) standart üye koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)",
-        "bizSeatLi": "<strong>10 adet Pro (1x) standart üye koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "5 × Standard Seat (1.25x) Koltuk · Özel Ana Bilgisayar",
+        "bizBadge": "Kurumsal · 10 × Standard Seat (1.25x) Küme",
+        "teamSeatLi": "<strong>5 adet Standard Seat (1.25x) standart üye koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)",
+        "bizSeatLi": "<strong>10 adet Standard Seat (1.25x) standart üye koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)",
         "teamStorage": "Ücretsiz 6 TB ekip bulut depolama alanı (Google Drive / iCloud+)",
         "bizStorage": "Ücretsiz 12 TB kurumsal bulut depolama alanı (Google Drive / iCloud+)"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "5 × Max (5x) Koltuk · Özel Ana Bilgisayar",
-        "bizBadge": "Kurumsal · 10 × Max (5x) Küme",
-        "teamSeatLi": "<strong>5 adet Max (5x) mühendislik koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)",
-        "bizSeatLi": "<strong>10 adet Max (5x) mühendislik koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "5 × Premium Seat (6.25x) Koltuk · Özel Ana Bilgisayar",
+        "bizBadge": "Kurumsal · 10 × Premium Seat (6.25x) Küme",
+        "teamSeatLi": "<strong>5 adet Premium Seat (6.25x) mühendislik koltuğu</strong> dahildir (her üye için ayrı Claude çalışma alanı ve macOS hesabı)",
+        "bizSeatLi": "<strong>10 adet Premium Seat (6.25x) mühendislik koltuğu</strong> dahildir (talebe göre 50+ koltuğa genişletilebilir)",
         "teamStorage": "Ücretsiz 12 TB ekip bulut depolama alanı (Google Drive / iCloud+)",
         "bizStorage": "Ücretsiz 30 TB kurumsal bulut depolama alanı (Google Drive / iCloud+)"
       },

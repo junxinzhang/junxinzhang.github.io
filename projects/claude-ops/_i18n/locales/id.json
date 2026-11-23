@@ -446,21 +446,21 @@
     "enterprise": {
       "divider": "Team & Business · Klaster Multi-Kursi Khusus",
       "switch_aria": "Pilih tingkatan kursi tim",
-      "tier_pro": "Semua Kursi Pro (1x)",
-      "tier_max": "Semua Kursi Max (5x)",
+      "tier_pro": "Semua Kursi Standard Seat (1.25x)",
+      "tier_max": "Semua Kursi Premium Seat (6.25x)",
       "tier_max_badge": "Direkomendasikan",
       "tier_ultra": "Semua Kursi Ultra (20x)",
       "toolbar_html": "Mulai dengan kursi seragam Pro, Max, atau Ultra — atau padu padankan kapan saja lewat <strong>add-on upgrade per kursi</strong> mandiri di bawah.",
       "team": {
-        "init_badge": "5 × Kursi Max (5x) · Host Khusus",
+        "init_badge": "5 × Kursi Premium Seat (6.25x) · Host Khusus",
         "sub": "5 Kursi",
         "desc": "Dirancang untuk tim inti startup, studio AI, dan tim riset — satu host Mac fisik khusus untuk tim Anda dengan penagihan terpadu & kendali admin.",
-        "init_note": "Termasuk 5 kursi terisolasi Max (5x) · Host Mac khusus & penagihan terpadu",
-        "init_seat_li_html": "Termasuk <strong>5 kursi engineering Max (5x)</strong> (ruang kerja Claude &amp; akun macOS terpisah per anggota)",
+        "init_note": "Termasuk 5 kursi terisolasi Premium Seat (6.25x) · Host Mac khusus & penagihan terpadu",
+        "init_seat_li_html": "Termasuk <strong>5 kursi engineering Premium Seat (6.25x)</strong> (ruang kerja Claude &amp; akun macOS terpisah per anggota)",
         "features_html": [
           "<strong>Host Mac Studio / Mac mini spek tinggi khusus</strong> eksklusif untuk tim Anda",
           "Pengalihan kursi milik organisasi untuk onboarding/offboarding &amp; <strong>satu faktur gabungan</strong>",
-          "Upgrade kursi tertentu ke Max (5x) atau Ultra (20x) sesuai kebutuhan kapan saja",
+          "Upgrade kursi tertentu ke Premium Seat (6.25x) atau Ultra (20x) sesuai kebutuhan kapan saja",
           "Kanal grup concierge khusus tim <strong>7×24 jam</strong>",
           "Gratis kanal privat RustDesk berkecepatan tinggi untuk tim"
         ],
@@ -470,11 +470,11 @@
         "mailto_subject": "Pertanyaan Zaokit ClaudeOps - Paket Team"
       },
       "biz": {
-        "init_badge": "Enterprise · Klaster 10 × Max (5x)",
+        "init_badge": "Enterprise · Klaster 10 × Premium Seat (6.25x)",
         "sub": "10 Kursi",
         "desc": "Untuk perusahaan teknologi yang berkembang, firma kuantitatif & organisasi engineering — klaster fisik multi-Mac khusus dengan deployment lintas 2 wilayah di 9 negara.",
-        "init_note": "Termasuk 10 kursi terisolasi Max (5x) · Klaster multi-Mac khusus & SLA VIP",
-        "init_seat_li_html": "Termasuk <strong>10 kursi engineering Max (5x)</strong> (dapat diperluas hingga 50+ kursi sesuai kebutuhan)",
+        "init_note": "Termasuk 10 kursi terisolasi Premium Seat (6.25x) · Klaster multi-Mac khusus & SLA VIP",
+        "init_seat_li_html": "Termasuk <strong>10 kursi engineering Premium Seat (6.25x)</strong> (dapat diperluas hingga 50+ kursi sesuai kebutuhan)",
         "features_html": [
           "<strong>Klaster fisik multi-unit Mac Studio / Mac mini khusus</strong>",
           "Mendukung <strong>deployment dua wilayah &amp; migrasi cepat di 9 negara</strong> + IP ISP asli statis khusus",
@@ -494,21 +494,21 @@
       "sub": "Padu padankan tingkatan pada paket dasar Team atau Business yang aktif — upgrade anggota tertentu sesuai kebutuhan (add-on tahunan juga gratis 2 bulan).",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "Upgrade",
-          "desc": "Upgrade kursi tim Pro (1x) mana pun ke Max (5x) untuk kebutuhan engineering Claude Code harian yang intensif.",
+          "desc": "Upgrade kursi tim Standard Seat (1.25x) mana pun ke Premium Seat (6.25x) untuk kebutuhan engineering Claude Code harian yang intensif.",
           "btn": "Upgrade kursi →"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "Upgrade",
           "desc": "Upgrade founder, CTO, atau lead architect pada paket Semua-Max ke kapasitas multi-agent Ultra 20x.",
           "btn": "Upgrade kursi →"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "Langsung",
           "desc": "Naikkan kursi mana pun pada paket dasar Semua-Pro langsung ke kuota flagship penuh Ultra 20x.",
@@ -725,20 +725,20 @@
     "line_1_mo": "Throughput prioritas 5× · QoS BGP prioritas tinggi",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "5 × Kursi Pro (1x) · Host Khusus",
-        "bizBadge": "Enterprise · Klaster 10 × Pro (1x)",
-        "teamSeatLi": "Termasuk <strong>5 kursi anggota standar Pro (1x)</strong> (ruang kerja Claude &amp; akun macOS terpisah per anggota)",
-        "bizSeatLi": "Termasuk <strong>10 kursi anggota standar Pro (1x)</strong> (dapat diperluas hingga 50+ kursi sesuai kebutuhan)",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "5 × Kursi Standard Seat (1.25x) · Host Khusus",
+        "bizBadge": "Enterprise · Klaster 10 × Standard Seat (1.25x)",
+        "teamSeatLi": "Termasuk <strong>5 kursi anggota standar Standard Seat (1.25x)</strong> (ruang kerja Claude &amp; akun macOS terpisah per anggota)",
+        "bizSeatLi": "Termasuk <strong>10 kursi anggota standar Standard Seat (1.25x)</strong> (dapat diperluas hingga 50+ kursi sesuai kebutuhan)",
         "teamStorage": "Gratis penyimpanan cloud tim 6 TB (Google Drive / iCloud+)",
         "bizStorage": "Gratis penyimpanan cloud enterprise 12 TB (Google Drive / iCloud+)"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "5 × Kursi Max (5x) · Host Khusus",
-        "bizBadge": "Enterprise · Klaster 10 × Max (5x)",
-        "teamSeatLi": "Termasuk <strong>5 kursi engineering Max (5x)</strong> (ruang kerja Claude &amp; akun macOS terpisah per anggota)",
-        "bizSeatLi": "Termasuk <strong>10 kursi engineering Max (5x)</strong> (dapat diperluas hingga 50+ kursi sesuai kebutuhan)",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "5 × Kursi Premium Seat (6.25x) · Host Khusus",
+        "bizBadge": "Enterprise · Klaster 10 × Premium Seat (6.25x)",
+        "teamSeatLi": "Termasuk <strong>5 kursi engineering Premium Seat (6.25x)</strong> (ruang kerja Claude &amp; akun macOS terpisah per anggota)",
+        "bizSeatLi": "Termasuk <strong>10 kursi engineering Premium Seat (6.25x)</strong> (dapat diperluas hingga 50+ kursi sesuai kebutuhan)",
         "teamStorage": "Gratis penyimpanan cloud tim 12 TB (Google Drive / iCloud+)",
         "bizStorage": "Gratis penyimpanan cloud enterprise 30 TB (Google Drive / iCloud+)"
       },

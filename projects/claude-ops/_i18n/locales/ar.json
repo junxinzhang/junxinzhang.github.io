@@ -446,21 +446,21 @@
     "enterprise": {
       "divider": "الفرق والأعمال · عناقيد مخصّصة متعددة المقاعد",
       "switch_aria": "اختر فئة مقاعد الفريق",
-      "tier_pro": "جميع المقاعد Pro (1x)",
-      "tier_max": "جميع المقاعد Max (5x)",
+      "tier_pro": "جميع المقاعد Standard Seat (1.25x)",
+      "tier_max": "جميع المقاعد Premium Seat (6.25x)",
       "tier_max_badge": "موصى به",
       "tier_ultra": "جميع المقاعد Ultra (20x)",
       "toolbar_html": "ابدأ بمقاعد موحّدة من فئة Pro أو Max أو Ultra — أو امزج بينها في أي وقت عبر <strong>إضافات ترقية المقاعد الفردية</strong> ذاتية الخدمة أدناه.",
       "team": {
-        "init_badge": "5 مقاعد Max (5x) · مضيف مخصّص",
+        "init_badge": "5 مقاعد Premium Seat (6.25x) · مضيف مخصّص",
         "sub": "5 مقاعد",
         "desc": "مصمّمة لفرق الشركات الناشئة واستوديوهات الذكاء الاصطناعي وفرق البحث — جهاز Mac فعلي مخصّص لفريقك مع فوترة موحّدة وتحكم إداري كامل.",
-        "init_note": "يشمل 5 مقاعد Max (5x) معزولة · مضيف Mac مخصّص وفوترة موحّدة",
-        "init_seat_li_html": "يشمل <strong>5 مقاعد هندسية Max (5x)</strong> (مساحة عمل Claude وحساب macOS مستقل لكل عضو)",
+        "init_note": "يشمل 5 مقاعد Premium Seat (6.25x) معزولة · مضيف Mac مخصّص وفوترة موحّدة",
+        "init_seat_li_html": "يشمل <strong>5 مقاعد هندسية Premium Seat (6.25x)</strong> (مساحة عمل Claude وحساب macOS مستقل لكل عضو)",
         "features_html": [
           "<strong>مضيف Mac Studio / Mac mini عالي المواصفات مخصّص</strong> حصرياً لفريقك",
           "إعادة تعيين المقاعد المملوكة للمؤسسة عند انضمام أو مغادرة الأعضاء مع <strong>فاتورة موحّدة واحدة</strong>",
-          "ترقية أي مقعد فردي إلى Max (5x) أو Ultra (20x) عند الطلب وفي أي وقت",
+          "ترقية أي مقعد فردي إلى Premium Seat (6.25x) أو Ultra (20x) عند الطلب وفي أي وقت",
           "قناة كونسيرج جماعية مخصّصة للفريق <strong>7×24 ساعة</strong>",
           "قناة RustDesk جماعية خاصة فائقة السرعة مجاناً"
         ],
@@ -470,11 +470,11 @@
         "mailto_subject": "استفسار حول Zaokit ClaudeOps - باقة Team"
       },
       "biz": {
-        "init_badge": "للمؤسسات · عنقود 10 مقاعد Max (5x)",
+        "init_badge": "للمؤسسات · عنقود 10 مقاعد Premium Seat (6.25x)",
         "sub": "10 مقاعد",
         "desc": "لشركات التقنية المتوسعة وفرق التطوير الكمي والمؤسسات الهندسية — عناقيد أجهزة Mac فعلية مخصّصة مع نشر مزدوج المناطق عبر 9 دول.",
-        "init_note": "يشمل 10 مقاعد Max (5x) معزولة · عنقود أجهزة Mac مخصّص واتفاقية مستوى خدمة VIP",
-        "init_seat_li_html": "يشمل <strong>10 مقاعد هندسية Max (5x)</strong> (قابلة للتوسعة إلى 50+ مقعداً عند الطلب)",
+        "init_note": "يشمل 10 مقاعد Premium Seat (6.25x) معزولة · عنقود أجهزة Mac مخصّص واتفاقية مستوى خدمة VIP",
+        "init_seat_li_html": "يشمل <strong>10 مقاعد هندسية Premium Seat (6.25x)</strong> (قابلة للتوسعة إلى 50+ مقعداً عند الطلب)",
         "features_html": [
           "<strong>عنقود فعلي مخصّص متعدد الوحدات من أجهزة Mac Studio / Mac mini</strong>",
           "يدعم <strong>النشر مزدوج المناطق والترحيل السريع عبر 9 دول</strong> + خط إنترنت محلي أصلي ثابت ومخصّص",
@@ -494,24 +494,24 @@
       "sub": "امزج بين الفئات على أي باقة أساسية نشطة من Team أو Business — ورقِّ أعضاء محدّدين عند الحاجة (الإضافات السنوية تحصل أيضاً على شهرين مجاناً).",
       "cards": [
         {
-          "from": "Pro 1x",
-          "to": "Max 5x",
+          "from": "Standard 1.25x",
+          "to": "Premium 6.25x",
           "tag": "ترقية",
-          "desc": "رقِّ أي مقعد جماعي من Pro (1x) إلى Max (5x) لمهام هندسة Claude Code اليومية الكثيفة.",
+          "desc": "رقِّ أي مقعد جماعي من Standard Seat (1.25x) إلى Premium Seat (6.25x) لمهام هندسة Claude Code اليومية الكثيفة.",
           "btn": "ترقية المقعد ←"
         },
         {
-          "from": "Max 5x",
+          "from": "Premium 6.25x",
           "to": "Ultra 20x",
           "tag": "ترقية",
-          "desc": "رقِّ المؤسسين أو المديرين التقنيين أو المعماريين الرئيسيين في باقة All-Max إلى سعة 20x Ultra متعددة الوكلاء.",
+          "desc": "رقِّ المؤسسين أو المديرين التقنيين أو المعماريين الرئيسيين في باقة All-Premium إلى سعة 20x Ultra متعددة الوكلاء.",
           "btn": "ترقية المقعد ←"
         },
         {
-          "from": "Pro 1x",
+          "from": "Standard 1.25x",
           "to": "Ultra 20x",
           "tag": "مباشر",
-          "desc": "انتقل بأي مقعد على باقة All-Pro الأساسية مباشرةً إلى السعة الرائدة الكاملة 20x Ultra.",
+          "desc": "انتقل بأي مقعد على باقة All-Standard الأساسية مباشرةً إلى السعة الرائدة الكاملة 20x Ultra.",
           "btn": "ترقية المقعد ←"
         }
       ]
@@ -725,20 +725,20 @@
     "line_1_mo": "سعة مرور ذات أولوية 5× · أولوية BGP QoS عالية",
     "ent_copy": {
       "pro": {
-        "label": "Pro (1x)",
-        "teamBadge": "5 مقاعد Pro (1x) · مضيف مخصّص",
-        "bizBadge": "للمؤسسات · عنقود 10 مقاعد Pro (1x)",
-        "teamSeatLi": "يشمل <strong>5 مقاعد قياسية Pro (1x)</strong> (مساحة عمل Claude وحساب macOS مستقل لكل عضو)",
-        "bizSeatLi": "يشمل <strong>10 مقاعد قياسية Pro (1x)</strong> (قابلة للتوسعة إلى 50+ مقعداً عند الطلب)",
+        "label": "Standard Seat (1.25x)",
+        "teamBadge": "5 مقاعد Standard Seat (1.25x) · مضيف مخصّص",
+        "bizBadge": "للمؤسسات · عنقود 10 مقاعد Standard Seat (1.25x)",
+        "teamSeatLi": "يشمل <strong>5 مقاعد قياسية Standard Seat (1.25x)</strong> (مساحة عمل Claude وحساب macOS مستقل لكل عضو)",
+        "bizSeatLi": "يشمل <strong>10 مقاعد قياسية Standard Seat (1.25x)</strong> (قابلة للتوسعة إلى 50+ مقعداً عند الطلب)",
         "teamStorage": "تخزين سحابي جماعي سعة 6 TB مجاناً (Google Drive / iCloud+)",
         "bizStorage": "تخزين سحابي مؤسسي سعة 12 TB مجاناً (Google Drive / iCloud+)"
       },
       "max": {
-        "label": "Max (5x)",
-        "teamBadge": "5 مقاعد Max (5x) · مضيف مخصّص",
-        "bizBadge": "للمؤسسات · عنقود 10 مقاعد Max (5x)",
-        "teamSeatLi": "يشمل <strong>5 مقاعد هندسية Max (5x)</strong> (مساحة عمل Claude وحساب macOS مستقل لكل عضو)",
-        "bizSeatLi": "يشمل <strong>10 مقاعد هندسية Max (5x)</strong> (قابلة للتوسعة إلى 50+ مقعداً عند الطلب)",
+        "label": "Premium Seat (6.25x)",
+        "teamBadge": "5 مقاعد Premium Seat (6.25x) · مضيف مخصّص",
+        "bizBadge": "للمؤسسات · عنقود 10 مقاعد Premium Seat (6.25x)",
+        "teamSeatLi": "يشمل <strong>5 مقاعد هندسية Premium Seat (6.25x)</strong> (مساحة عمل Claude وحساب macOS مستقل لكل عضو)",
+        "bizSeatLi": "يشمل <strong>10 مقاعد هندسية Premium Seat (6.25x)</strong> (قابلة للتوسعة إلى 50+ مقعداً عند الطلب)",
         "teamStorage": "تخزين سحابي جماعي سعة 12 TB مجاناً (Google Drive / iCloud+)",
         "bizStorage": "تخزين سحابي مؤسسي سعة 30 TB مجاناً (Google Drive / iCloud+)"
       },
