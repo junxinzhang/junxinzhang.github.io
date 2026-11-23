@@ -768,7 +768,7 @@
     "sections": [
       {
         "h2": "1. Welche Daten wir erheben",
-        "body_html": "<ul><li><strong>Kontakt- und Kontodaten</strong>: Ihr Name, Ihre E-Mail-Adresse und die beim Checkout gewählte Wunschregion.</li><li><strong>Zahlungsdaten</strong>: werden über Stripe abgewickelt. Wir sehen oder speichern niemals Ihre vollständige Kartennummer; wir erhalten lediglich Transaktionsprotokolle, Belege und den Zahlungsstatus.</li><li><strong>Servicedaten</strong>: E-Mail-Adressen von Drittanbieterkonten, die Sie zur Einrichtung des Services angeben (z. B. Claude-, Google- oder Apple-Konten), sowie die von uns bereitgestellten Zugangsdaten.</li><li><strong>Kommunikation</strong>: Nachrichten, die Sie uns per E-Mail, Telegram oder über andere Kanäle senden.</li><li><strong>Website-Daten</strong>: Gerät, Browser, IP-Adresse und besuchte Seiten, erfasst über Analysetools wie Google Analytics und Umami.</li></ul>"
+        "body_html": "<ul><li><strong>Kontakt- und Kontodaten</strong>: Ihr Name, Ihre E-Mail-Adresse und die beim Checkout gewählte Wunschregion.</li><li><strong>Zahlungsdaten</strong>: werden über Stripe / Airwallex abgewickelt. Wir sehen oder speichern niemals Ihre vollständige Kartennummer; wir erhalten lediglich Transaktionsprotokolle, Belege und den Zahlungsstatus.</li><li><strong>Servicedaten</strong>: E-Mail-Adressen von Drittanbieterkonten, die Sie zur Einrichtung des Services angeben (z. B. Claude-, Google- oder Apple-Konten), sowie die von uns bereitgestellten Zugangsdaten.</li><li><strong>Kommunikation</strong>: Nachrichten, die Sie uns per E-Mail, Telegram oder über andere Kanäle senden.</li><li><strong>Website-Daten</strong>: Gerät, Browser, IP-Adresse und besuchte Seiten, erfasst über Analysetools wie Google Analytics und Umami.</li></ul>"
       },
       {
         "h2": "2. Wie wir die Daten verwenden",
@@ -780,11 +780,11 @@
       },
       {
         "h2": "4. Weitergabe von Daten",
-        "body_html": "<p>Wir geben erforderliche Informationen ausschließlich weiter an:</p><ul><li>Dienstleister, die wir zur Erbringung des Services benötigen, etwa Zahlungsabwicklung (Stripe), Webanalyse sowie Netzwerk- und Infrastrukturanbieter;</li><li>Drittanbieter, soweit dies zur Verwaltung von Abonnements in Ihrem Auftrag erforderlich ist;</li><li>Behörden, sofern wir gesetzlich oder aufgrund einer rechtmäßigen behördlichen Anordnung dazu verpflichtet sind.</li></ul>"
+        "body_html": "<p>Wir geben erforderliche Informationen ausschließlich weiter an:</p><ul><li>Dienstleister, die wir zur Erbringung des Services benötigen, etwa Zahlungsabwicklung (Stripe / Airwallex), Webanalyse sowie Netzwerk- und Infrastrukturanbieter;</li><li>Drittanbieter, soweit dies zur Verwaltung von Abonnements in Ihrem Auftrag erforderlich ist;</li><li>Behörden, sofern wir gesetzlich oder aufgrund einer rechtmäßigen behördlichen Anordnung dazu verpflichtet sind.</li></ul>"
       },
       {
         "h2": "5. Grenzüberschreitende Datenverarbeitung",
-        "body_html": "<p>Unsere Umgebungen befinden sich in Australien, den Vereinigten Staaten, Singapur, Malaysia, Indonesien, Japan, Kambodscha, Neuseeland und Kanada; zudem können Dienstleister wie Stripe Daten in weiteren Ländern verarbeiten. Ihre Daten können daher außerhalb Ihres Wohnsitzlandes gespeichert oder verarbeitet werden. Wir treffen angemessene Schutzmaßnahmen.</p>"
+        "body_html": "<p>Unsere Umgebungen befinden sich in Australien, den Vereinigten Staaten, Singapur, Malaysia, Indonesien, Japan, Kambodscha, Neuseeland und Kanada; zudem können Dienstleister wie Stripe / Airwallex Daten in weiteren Ländern verarbeiten. Ihre Daten können daher außerhalb Ihres Wohnsitzlandes gespeichert oder verarbeitet werden. Wir treffen angemessene Schutzmaßnahmen.</p>"
       },
       {
         "h2": "6. Speicherdauer",
@@ -849,7 +849,7 @@
       },
       {
         "h2": "8. Gebühren und Verlängerungen",
-        "body_html": "<ol><li>Der Service kann monatlich oder jährlich abgerechnet werden und verlängert sich automatisch über Stripe zum beim Checkout ausgewiesenen Preis und Abrechnungsintervall. Einzelplatz-Upgrade-Add-ons gelten nur für aktive Team- oder Business-Basisabonnements; ClaudeOps Enterprise-Standleitungs-Add-ons setzen ein aktives Basisabonnement voraus (in den Tarifen 20x, Team und Business ohne Aufpreis enthalten).</li><li>Preisänderungen kündigen wir mindestens 30 Tage im Voraus an. Sie können vor Inkrafttreten des neuen Preises kündigen.</li><li>Aktionspreise gelten ausschließlich für während des Aktionszeitraums abgeschlossene Abonnements. Solange Ihr Abonnement ununterbrochen aktiv bleibt, erfolgen Verlängerungen zum Aktionspreis vorbehaltlich Ziffer 8.2. Nach einer Kündigung und späteren Neubuchung gilt der dann aktuelle Preis.</li><li>Kündigung und Rückerstattungen richten sich nach unserer <a href=\"refund.html\">Rückerstattungsrichtlinie</a>.</li></ol>"
+        "body_html": "<ol><li>Der Service kann monatlich oder jährlich abgerechnet werden und verlängert sich automatisch über Stripe / Airwallex zum beim Checkout ausgewiesenen Preis und Abrechnungsintervall. Einzelplatz-Upgrade-Add-ons gelten nur für aktive Team- oder Business-Basisabonnements; ClaudeOps Enterprise-Standleitungs-Add-ons setzen ein aktives Basisabonnement voraus (in den Tarifen 20x, Team und Business ohne Aufpreis enthalten).</li><li>Preisänderungen kündigen wir mindestens 30 Tage im Voraus an. Sie können vor Inkrafttreten des neuen Preises kündigen.</li><li>Aktionspreise gelten ausschließlich für während des Aktionszeitraums abgeschlossene Abonnements. Solange Ihr Abonnement ununterbrochen aktiv bleibt, erfolgen Verlängerungen zum Aktionspreis vorbehaltlich Ziffer 8.2. Nach einer Kündigung und späteren Neubuchung gilt der dann aktuelle Preis.</li><li>Kündigung und Rückerstattungen richten sich nach unserer <a href=\"refund.html\">Rückerstattungsrichtlinie</a>.</li></ol>"
       },
       {
         "h2": "9. Sperrung und Kündigung",
@@ -910,7 +910,7 @@
       },
       {
         "h2": "8. So beantragen Sie eine Rückerstattung",
-        "body_html": "<ol><li>Senden Sie eine E-Mail an <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> mit Ihrer Abonnement-E-Mail-Adresse, der Stripe-Belegnummer und dem Grund Ihrer Anfrage.</li><li>Wir antworten innerhalb von 5 Werktagen.</li><li>Genehmigte Rückerstattungen erfolgen auf Ihr ursprüngliches Zahlungsmittel. Die Bearbeitungsdauer hängt von Ihrer Bank bzw. Ihrem Zahlungsdienstleister ab.</li></ol>"
+        "body_html": "<ol><li>Senden Sie eine E-Mail an <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> mit Ihrer Abonnement-E-Mail-Adresse, der Stripe / Airwallex-Belegnummer und dem Grund Ihrer Anfrage.</li><li>Wir antworten innerhalb von 5 Werktagen.</li><li>Genehmigte Rückerstattungen erfolgen auf Ihr ursprüngliches Zahlungsmittel. Die Bearbeitungsdauer hängt von Ihrer Bank bzw. Ihrem Zahlungsdienstleister ab.</li></ol>"
       },
       {
         "h2": "9. Rückbuchungen (Chargebacks)",
@@ -1022,6 +1022,9 @@
     "trust_h2": "Zweistufige Isolierung: getrennte Konten und dedizierte Maschinen",
     "trust_sub": "Zum Schutz der Privatsphäre unserer Kunden verwenden alle Rezensionen illustrierte Avatare und anonymisierte Kürzel bei unverfälschtem Feedback und realen Tarifstufen.",
     "faq_more_open": "Weitere {count} Fragen anzeigen",
-    "faq_more_close": "Weniger anzeigen"
+    "faq_more_close": "Weniger anzeigen",
+    "upg_qty_label": "Plätze zum Upgrade",
+    "upg_qty_hint": "1–50 Plätze wählbar; Abrechnung pro Platz beim Checkout",
+    "checkout_success_toast": "✅ Zahlung übermittelt! Wir bestätigen per E-Mail und liefern Ihre Umgebung noch heute."
   }
 }

@@ -768,7 +768,7 @@
     "sections": [
       {
         "h2": "1. Information we collect",
-        "body_html": "<ul><li><strong>Contact and account details</strong>: your name, email address and the preferred region you choose at checkout.</li><li><strong>Payment information</strong>: processed by Stripe. We never see or store your full card number; we can only see transaction records, receipts and payment status.</li><li><strong>Service information</strong>: third-party account emails you provide to set up the Service (such as Claude, Google or Apple accounts) and the access credentials we issue to you.</li><li><strong>Communications</strong>: messages you send us by email, Telegram or other channels.</li><li><strong>Website data</strong>: device, browser, IP address and pages visited, collected through analytics tools such as Google Analytics and Umami.</li></ul>"
+        "body_html": "<ul><li><strong>Contact and account details</strong>: your name, email address and the preferred region you choose at checkout.</li><li><strong>Payment information</strong>: processed by Stripe / Airwallex. We never see or store your full card number; we can only see transaction records, receipts and payment status.</li><li><strong>Service information</strong>: third-party account emails you provide to set up the Service (such as Claude, Google or Apple accounts) and the access credentials we issue to you.</li><li><strong>Communications</strong>: messages you send us by email, Telegram or other channels.</li><li><strong>Website data</strong>: device, browser, IP address and pages visited, collected through analytics tools such as Google Analytics and Umami.</li></ul>"
       },
       {
         "h2": "2. How we use it",
@@ -780,11 +780,11 @@
       },
       {
         "h2": "4. Sharing",
-        "body_html": "<p>We only share necessary information with:</p><ul><li>service providers we need to deliver the Service, such as payment processing (Stripe), website analytics, and network and infrastructure providers;</li><li>third-party providers, where needed to manage subscriptions on your behalf;</li><li>authorities, where required by law or a lawful government request.</li></ul>"
+        "body_html": "<p>We only share necessary information with:</p><ul><li>service providers we need to deliver the Service, such as payment processing (Stripe / Airwallex), website analytics, and network and infrastructure providers;</li><li>third-party providers, where needed to manage subscriptions on your behalf;</li><li>authorities, where required by law or a lawful government request.</li></ul>"
       },
       {
         "h2": "5. Cross-border processing",
-        "body_html": "<p>Our environments are located in Australia, the United States, Singapore, Malaysia, Indonesia, Japan, Cambodia, New Zealand and Canada, and providers such as Stripe may process data in other countries. Your information may therefore be stored or processed outside your country. We take reasonable steps to protect it.</p>"
+        "body_html": "<p>Our environments are located in Australia, the United States, Singapore, Malaysia, Indonesia, Japan, Cambodia, New Zealand and Canada, and providers such as Stripe / Airwallex may process data in other countries. Your information may therefore be stored or processed outside your country. We take reasonable steps to protect it.</p>"
       },
       {
         "h2": "6. Retention",
@@ -849,7 +849,7 @@
       },
       {
         "h2": "8. Fees and renewals",
-        "body_html": "<ol><li>The Service may be billed monthly or annually and renews automatically via Stripe at the price and billing interval shown at checkout. Per-seat upgrade add-ons apply only to active Team or Business base subscriptions; ClaudeOps Enterprise Dedicated Line add-ons require an active base subscription (included at no extra charge on 20x, Team and Business plans).</li><li>We may change prices with at least 30 days' notice. You may cancel before the new price takes effect.</li><li>Promotional prices apply only to subscriptions started during the promotion period. While your subscription remains continuously active, renewals are charged at the promotional price, subject to clause 8.2. If you cancel and later resubscribe, the then-current price applies.</li><li>Cancellation and refunds are covered by our <a href=\"refund.html\">Refund Policy</a>.</li></ol>"
+        "body_html": "<ol><li>The Service may be billed monthly or annually and renews automatically via Stripe / Airwallex at the price and billing interval shown at checkout. Per-seat upgrade add-ons apply only to active Team or Business base subscriptions; ClaudeOps Enterprise Dedicated Line add-ons require an active base subscription (included at no extra charge on 20x, Team and Business plans).</li><li>We may change prices with at least 30 days' notice. You may cancel before the new price takes effect.</li><li>Promotional prices apply only to subscriptions started during the promotion period. While your subscription remains continuously active, renewals are charged at the promotional price, subject to clause 8.2. If you cancel and later resubscribe, the then-current price applies.</li><li>Cancellation and refunds are covered by our <a href=\"refund.html\">Refund Policy</a>.</li></ol>"
       },
       {
         "h2": "9. Suspension and termination",
@@ -910,7 +910,7 @@
       },
       {
         "h2": "8. How to request a refund",
-        "body_html": "<ol><li>Email <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> with your subscription email, Stripe receipt number and the reason for your request.</li><li>We will reply within 5 business days.</li><li>Approved refunds are returned to your original payment method. Processing time depends on your bank or payment provider.</li></ol>"
+        "body_html": "<ol><li>Email <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> with your subscription email, Stripe / Airwallex receipt number and the reason for your request.</li><li>We will reply within 5 business days.</li><li>Approved refunds are returned to your original payment method. Processing time depends on your bank or payment provider.</li></ol>"
       },
       {
         "h2": "9. Chargebacks",
@@ -1022,6 +1022,9 @@
     "trust_h2": "Hardware-grade isolation · 0% loss measured · Verified user stories",
     "trust_sub": "Every subscription is backed by physical Mac Silicon, enterprise BGP routing and verifiable engineering support.",
     "faq_more_open": "Show {count} more questions",
-    "faq_more_close": "Show fewer questions"
+    "faq_more_close": "Show fewer questions",
+    "upg_qty_label": "Seats to upgrade",
+    "upg_qty_hint": "Choose 1–50 seats; billed per seat at checkout",
+    "checkout_success_toast": "✅ Payment submitted! We'll confirm by email and deliver your team environment today."
   }
 }

@@ -768,7 +768,7 @@
     "sections": [
       {
         "h2": "1. Maklumat yang kami kumpul",
-        "body_html": "<ul><li><strong>Butiran perhubungan dan akaun</strong>: nama anda, alamat e-mel dan rantau pilihan yang anda pilih semasa pembayaran.</li><li><strong>Maklumat pembayaran</strong>: diproses oleh Stripe. Kami tidak pernah melihat atau menyimpan nombor kad penuh anda; kami hanya dapat melihat rekod transaksi, resit dan status pembayaran.</li><li><strong>Maklumat perkhidmatan</strong>: alamat e-mel akaun pihak ketiga yang anda berikan untuk menyediakan Perkhidmatan (seperti akaun Claude, Google atau Apple) serta kelayakan akses yang kami keluarkan kepada anda.</li><li><strong>Komunikasi</strong>: mesej yang anda hantarkan kepada kami melalui e-mel, Telegram atau saluran lain.</li><li><strong>Data laman web</strong>: peranti, pelayar, alamat IP dan halaman yang dilawati, yang dikumpulkan melalui alatan analitik seperti Google Analytics dan Umami.</li></ul>"
+        "body_html": "<ul><li><strong>Butiran perhubungan dan akaun</strong>: nama anda, alamat e-mel dan rantau pilihan yang anda pilih semasa pembayaran.</li><li><strong>Maklumat pembayaran</strong>: diproses oleh Stripe / Airwallex. Kami tidak pernah melihat atau menyimpan nombor kad penuh anda; kami hanya dapat melihat rekod transaksi, resit dan status pembayaran.</li><li><strong>Maklumat perkhidmatan</strong>: alamat e-mel akaun pihak ketiga yang anda berikan untuk menyediakan Perkhidmatan (seperti akaun Claude, Google atau Apple) serta kelayakan akses yang kami keluarkan kepada anda.</li><li><strong>Komunikasi</strong>: mesej yang anda hantarkan kepada kami melalui e-mel, Telegram atau saluran lain.</li><li><strong>Data laman web</strong>: peranti, pelayar, alamat IP dan halaman yang dilawati, yang dikumpulkan melalui alatan analitik seperti Google Analytics dan Umami.</li></ul>"
       },
       {
         "h2": "2. Cara kami menggunakannya",
@@ -780,11 +780,11 @@
       },
       {
         "h2": "4. Perkongsian maklumat",
-        "body_html": "<p>Kami hanya berkongsi maklumat yang perlu dengan:</p><ul><li>pembekal perkhidmatan yang diperlukan untuk menyampaikan Perkhidmatan, seperti pemprosesan pembayaran (Stripe), analitik laman web, serta pembekal rangkaian dan infrastruktur;</li><li>pembekal pihak ketiga, setakat yang diperlukan untuk menguruskan langganan bagi pihak anda;</li><li>pihak berkuasa, apabila dikehendaki oleh undang-undang atau permintaan kerajaan yang sah.</li></ul>"
+        "body_html": "<p>Kami hanya berkongsi maklumat yang perlu dengan:</p><ul><li>pembekal perkhidmatan yang diperlukan untuk menyampaikan Perkhidmatan, seperti pemprosesan pembayaran (Stripe / Airwallex), analitik laman web, serta pembekal rangkaian dan infrastruktur;</li><li>pembekal pihak ketiga, setakat yang diperlukan untuk menguruskan langganan bagi pihak anda;</li><li>pihak berkuasa, apabila dikehendaki oleh undang-undang atau permintaan kerajaan yang sah.</li></ul>"
       },
       {
         "h2": "5. Pemprosesan rentas sempadan",
-        "body_html": "<p>Persekitaran kami terletak di Australia, Amerika Syarikat, Singapura, Malaysia, Indonesia, Jepun, Kemboja, New Zealand dan Kanada, dan pembekal seperti Stripe mungkin memproses data di negara lain. Oleh itu, maklumat anda mungkin disimpan atau diproses di luar negara anda. Kami mengambil langkah yang munasabah untuk melindunginya.</p>"
+        "body_html": "<p>Persekitaran kami terletak di Australia, Amerika Syarikat, Singapura, Malaysia, Indonesia, Jepun, Kemboja, New Zealand dan Kanada, dan pembekal seperti Stripe / Airwallex mungkin memproses data di negara lain. Oleh itu, maklumat anda mungkin disimpan atau diproses di luar negara anda. Kami mengambil langkah yang munasabah untuk melindunginya.</p>"
       },
       {
         "h2": "6. Penyimpanan data",
@@ -849,7 +849,7 @@
       },
       {
         "h2": "8. Yuran dan pembaharuan",
-        "body_html": "<ol><li>Perkhidmatan boleh dibilkan secara bulanan atau tahunan dan diperbaharui secara automatik melalui Stripe pada harga serta selang pengebilan yang dipaparkan semasa pembayaran. Tambahan naik taraf setiap kerusi hanya terpakai kepada langganan asas Team atau Business yang aktif; tambahan Talian Khas Perusahaan ClaudeOps memerlukan langganan asas yang aktif (disertakan tanpa caj tambahan pada pelan 20x, Team dan Business).</li><li>Kami boleh mengubah harga dengan memberikan sekurang-kurangnya 30 hari notis awal. Anda boleh membatalkan langganan sebelum harga baharu berkuat kuasa.</li><li>Harga promosi hanya terpakai kepada langganan yang dimulakan sepanjang tempoh promosi. Selagi langganan anda kekal aktif secara berterusan, pembaharuan akan dicaj pada harga promosi, tertakluk kepada klausa 8.2. Jika anda membatalkan dan melanggan semula kemudian hari, harga semasa pada waktu itu akan diguna pakai.</li><li>Pembatalan dan bayaran balik adalah tertakluk kepada <a href=\"refund.html\">Dasar Bayaran Balik</a> kami.</li></ol>"
+        "body_html": "<ol><li>Perkhidmatan boleh dibilkan secara bulanan atau tahunan dan diperbaharui secara automatik melalui Stripe / Airwallex pada harga serta selang pengebilan yang dipaparkan semasa pembayaran. Tambahan naik taraf setiap kerusi hanya terpakai kepada langganan asas Team atau Business yang aktif; tambahan Talian Khas Perusahaan ClaudeOps memerlukan langganan asas yang aktif (disertakan tanpa caj tambahan pada pelan 20x, Team dan Business).</li><li>Kami boleh mengubah harga dengan memberikan sekurang-kurangnya 30 hari notis awal. Anda boleh membatalkan langganan sebelum harga baharu berkuat kuasa.</li><li>Harga promosi hanya terpakai kepada langganan yang dimulakan sepanjang tempoh promosi. Selagi langganan anda kekal aktif secara berterusan, pembaharuan akan dicaj pada harga promosi, tertakluk kepada klausa 8.2. Jika anda membatalkan dan melanggan semula kemudian hari, harga semasa pada waktu itu akan diguna pakai.</li><li>Pembatalan dan bayaran balik adalah tertakluk kepada <a href=\"refund.html\">Dasar Bayaran Balik</a> kami.</li></ol>"
       },
       {
         "h2": "9. Penggantungan dan penamatan",
@@ -910,7 +910,7 @@
       },
       {
         "h2": "8. Cara memohon bayaran balik",
-        "body_html": "<ol><li>E-mel <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> berserta alamat e-mel langganan anda, nombor resit Stripe dan sebab permohonan anda.</li><li>Kami akan memberi maklum balas dalam tempoh 5 hari bekerja.</li><li>Bayaran balik yang diluluskan akan dipulangkan ke kaedah pembayaran asal anda. Tempoh pemprosesan bergantung kepada bank atau penyedia pembayaran anda.</li></ol>"
+        "body_html": "<ol><li>E-mel <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> berserta alamat e-mel langganan anda, nombor resit Stripe / Airwallex dan sebab permohonan anda.</li><li>Kami akan memberi maklum balas dalam tempoh 5 hari bekerja.</li><li>Bayaran balik yang diluluskan akan dipulangkan ke kaedah pembayaran asal anda. Tempoh pemprosesan bergantung kepada bank atau penyedia pembayaran anda.</li></ol>"
       },
       {
         "h2": "9. Caj balik (Chargeback)",
@@ -1022,6 +1022,9 @@
     "trust_h2": "Pengasingan dua peringkat: akaun berasingan dan mesin khas",
     "trust_sub": "Bagi melindungi privasi klien, semua ulasan menggunakan avatar kartun dan nama samaran sambil mengekalkan maklum balas sebenar serta pelan langganan mereka.",
     "faq_more_open": "Lihat {count} lagi soalan",
-    "faq_more_close": "Sembunyikan"
+    "faq_more_close": "Sembunyikan",
+    "upg_qty_label": "Bilangan kerusi naik taraf",
+    "upg_qty_hint": "Pilih 1–50 kerusi; dicaj setiap kerusi semasa pembayaran",
+    "checkout_success_toast": "✅ Pembayaran dihantar! Kami akan sahkan melalui e-mel dan serahkan persekitaran anda hari ini."
   }
 }

@@ -768,7 +768,7 @@
     "sections": [
       {
         "h2": "1. Données collectées",
-        "body_html": "<ul><li><strong>Coordonnées et informations de compte</strong> : votre nom, votre adresse e-mail et la région préférée choisie lors du paiement.</li><li><strong>Informations de paiement</strong> : traitées par Stripe. Nous ne voyons ni ne stockons jamais votre numéro complet de carte bancaire ; nous n’accédons qu’aux relevés de transaction, reçus et statuts de paiement.</li><li><strong>Informations liées au Service</strong> : les adresses e-mail de comptes tiers fournies pour configurer le Service (comptes Claude, Google ou Apple) ainsi que les identifiants d’accès que nous vous délivrons.</li><li><strong>Échanges</strong> : les messages que vous nous adressez par e-mail, Telegram ou d’autres canaux.</li><li><strong>Données de navigation</strong> : appareil, navigateur, adresse IP et pages consultées, recueillis via des outils d’analyse tels que Google Analytics et Umami.</li></ul>"
+        "body_html": "<ul><li><strong>Coordonnées et informations de compte</strong> : votre nom, votre adresse e-mail et la région préférée choisie lors du paiement.</li><li><strong>Informations de paiement</strong> : traitées par Stripe / Airwallex. Nous ne voyons ni ne stockons jamais votre numéro complet de carte bancaire ; nous n’accédons qu’aux relevés de transaction, reçus et statuts de paiement.</li><li><strong>Informations liées au Service</strong> : les adresses e-mail de comptes tiers fournies pour configurer le Service (comptes Claude, Google ou Apple) ainsi que les identifiants d’accès que nous vous délivrons.</li><li><strong>Échanges</strong> : les messages que vous nous adressez par e-mail, Telegram ou d’autres canaux.</li><li><strong>Données de navigation</strong> : appareil, navigateur, adresse IP et pages consultées, recueillis via des outils d’analyse tels que Google Analytics et Umami.</li></ul>"
       },
       {
         "h2": "2. Utilisation des données",
@@ -780,11 +780,11 @@
       },
       {
         "h2": "4. Partage des données",
-        "body_html": "<p>Nous ne partageons les informations strictement nécessaires qu’avec :</p><ul><li>les prestataires indispensables à la fourniture du Service, tels que le traitement des paiements (Stripe), la mesure d’audience et les fournisseurs réseau et d’infrastructure ;</li><li>les fournisseurs tiers, lorsque cela est nécessaire à la gestion des abonnements pour votre compte ;</li><li>les autorités compétentes, lorsque la loi ou une injonction légale l’impose.</li></ul>"
+        "body_html": "<p>Nous ne partageons les informations strictement nécessaires qu’avec :</p><ul><li>les prestataires indispensables à la fourniture du Service, tels que le traitement des paiements (Stripe / Airwallex), la mesure d’audience et les fournisseurs réseau et d’infrastructure ;</li><li>les fournisseurs tiers, lorsque cela est nécessaire à la gestion des abonnements pour votre compte ;</li><li>les autorités compétentes, lorsque la loi ou une injonction légale l’impose.</li></ul>"
       },
       {
         "h2": "5. Traitement transfrontalier",
-        "body_html": "<p>Nos environnements sont hébergés en Australie, aux États-Unis, à Singapour, en Malaisie, en Indonésie, au Japon, au Cambodge, en Nouvelle-Zélande et au Canada, et des prestataires tels que Stripe peuvent traiter des données dans d’autres pays. Vos informations peuvent donc être stockées ou traitées hors de votre pays de résidence. Nous prenons des mesures raisonnables afin d’en assurer la protection.</p>"
+        "body_html": "<p>Nos environnements sont hébergés en Australie, aux États-Unis, à Singapour, en Malaisie, en Indonésie, au Japon, au Cambodge, en Nouvelle-Zélande et au Canada, et des prestataires tels que Stripe / Airwallex peuvent traiter des données dans d’autres pays. Vos informations peuvent donc être stockées ou traitées hors de votre pays de résidence. Nous prenons des mesures raisonnables afin d’en assurer la protection.</p>"
       },
       {
         "h2": "6. Durée de conservation",
@@ -849,7 +849,7 @@
       },
       {
         "h2": "8. Tarifs et renouvellements",
-        "body_html": "<ol><li>Le Service peut être facturé mensuellement ou annuellement et se renouvelle automatiquement via Stripe au tarif et selon la périodicité affichés lors du paiement. Les options de mise à niveau par siège ne s’appliquent qu’aux abonnements de base Team ou Business actifs ; les options Ligne Dédiée Entreprise ClaudeOps requièrent un abonnement de base actif (incluses sans surcoût dans les formules 20x, Team et Business).</li><li>Nous pouvons modifier nos tarifs moyennant un préavis d’au moins 30 jours. Vous pouvez résilier avant l’entrée en vigueur du nouveau tarif.</li><li>Les tarifs promotionnels s’appliquent uniquement aux abonnements souscrits pendant la période promotionnelle. Tant que votre abonnement demeure actif sans interruption, les renouvellements sont facturés au tarif promotionnel, sous réserve de l’article 8.2. En cas de résiliation suivie d’une nouvelle souscription ultérieure, le tarif alors en vigueur s’applique.</li><li>La résiliation et les remboursements sont régis par notre <a href=\"refund.html\">Politique de remboursement</a>.</li></ol>"
+        "body_html": "<ol><li>Le Service peut être facturé mensuellement ou annuellement et se renouvelle automatiquement via Stripe / Airwallex au tarif et selon la périodicité affichés lors du paiement. Les options de mise à niveau par siège ne s’appliquent qu’aux abonnements de base Team ou Business actifs ; les options Ligne Dédiée Entreprise ClaudeOps requièrent un abonnement de base actif (incluses sans surcoût dans les formules 20x, Team et Business).</li><li>Nous pouvons modifier nos tarifs moyennant un préavis d’au moins 30 jours. Vous pouvez résilier avant l’entrée en vigueur du nouveau tarif.</li><li>Les tarifs promotionnels s’appliquent uniquement aux abonnements souscrits pendant la période promotionnelle. Tant que votre abonnement demeure actif sans interruption, les renouvellements sont facturés au tarif promotionnel, sous réserve de l’article 8.2. En cas de résiliation suivie d’une nouvelle souscription ultérieure, le tarif alors en vigueur s’applique.</li><li>La résiliation et les remboursements sont régis par notre <a href=\"refund.html\">Politique de remboursement</a>.</li></ol>"
       },
       {
         "h2": "9. Suspension et résiliation",
@@ -910,7 +910,7 @@
       },
       {
         "h2": "8. Comment demander un remboursement",
-        "body_html": "<ol><li>Envoyez un e-mail à <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> en indiquant l’adresse e-mail de votre abonnement, le numéro de reçu Stripe et le motif de votre demande.</li><li>Nous vous répondrons sous 5 jours ouvrés.</li><li>Les remboursements approuvés sont crédités sur le moyen de paiement d’origine. Le délai de traitement dépend de votre banque ou prestataire de paiement.</li></ol>"
+        "body_html": "<ol><li>Envoyez un e-mail à <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> en indiquant l’adresse e-mail de votre abonnement, le numéro de reçu Stripe / Airwallex et le motif de votre demande.</li><li>Nous vous répondrons sous 5 jours ouvrés.</li><li>Les remboursements approuvés sont crédités sur le moyen de paiement d’origine. Le délai de traitement dépend de votre banque ou prestataire de paiement.</li></ol>"
       },
       {
         "h2": "9. Rétrofacturations (chargebacks)",
@@ -1022,6 +1022,9 @@
     "trust_h2": "Isolation à deux niveaux : comptes séparés et machines dédiées",
     "trust_sub": "Pour protéger la vie privée de nos clients, tous les avis utilisent des avatars illustrés et des identifiants anonymisés tout en conservant des retours et des formules authentiques.",
     "faq_more_open": "Afficher {count} autres questions",
-    "faq_more_close": "Réduire"
+    "faq_more_close": "Réduire",
+    "upg_qty_label": "Postes à surclasser",
+    "upg_qty_hint": "Choisissez 1 à 50 postes ; facturé par poste au paiement",
+    "checkout_success_toast": "✅ Paiement envoyé ! Nous confirmerons par e-mail et livrerons votre environnement aujourd'hui."
   }
 }

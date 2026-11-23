@@ -768,7 +768,7 @@
     "sections": [
       {
         "h2": "1. Topladığımız bilgiler",
-        "body_html": "<ul><li><strong>İletişim ve hesap bilgileri</strong>: adınız, e-posta adresiniz ve ödeme sırasında seçtiğiniz tercih edilen bölge.</li><li><strong>Ödeme bilgileri</strong>: Stripe tarafından işlenir. Tam kart numaranızı asla görmez veya saklamayız; yalnızca işlem kayıtlarını, makbuzları ve ödeme durumunu görebiliriz.</li><li><strong>Hizmet bilgileri</strong>: Hizmeti kurmak için bize ilettiğiniz üçüncü taraf hesap e-postaları (Claude, Google veya Apple hesapları gibi) ve size tanımladığımız erişim bilgileri.</li><li><strong>İletişimler</strong>: e-posta, Telegram veya diğer kanallar aracılığıyla bize gönderdiğiniz mesajlar.</li><li><strong>Web sitesi verileri</strong>: Google Analytics ve Umami gibi analiz araçları vasıtasıyla toplanan cihaz, tarayıcı, IP adresi ve ziyaret edilen sayfa bilgileri.</li></ul>"
+        "body_html": "<ul><li><strong>İletişim ve hesap bilgileri</strong>: adınız, e-posta adresiniz ve ödeme sırasında seçtiğiniz tercih edilen bölge.</li><li><strong>Ödeme bilgileri</strong>: Stripe / Airwallex tarafından işlenir. Tam kart numaranızı asla görmez veya saklamayız; yalnızca işlem kayıtlarını, makbuzları ve ödeme durumunu görebiliriz.</li><li><strong>Hizmet bilgileri</strong>: Hizmeti kurmak için bize ilettiğiniz üçüncü taraf hesap e-postaları (Claude, Google veya Apple hesapları gibi) ve size tanımladığımız erişim bilgileri.</li><li><strong>İletişimler</strong>: e-posta, Telegram veya diğer kanallar aracılığıyla bize gönderdiğiniz mesajlar.</li><li><strong>Web sitesi verileri</strong>: Google Analytics ve Umami gibi analiz araçları vasıtasıyla toplanan cihaz, tarayıcı, IP adresi ve ziyaret edilen sayfa bilgileri.</li></ul>"
       },
       {
         "h2": "2. Bilgileri nasıl kullanıyoruz",
@@ -780,11 +780,11 @@
       },
       {
         "h2": "4. Bilgi paylaşımı",
-        "body_html": "<p>Gerekli bilgileri yalnızca şu taraflarla paylaşırız:</p><ul><li>ödeme işleme (Stripe), web sitesi analitiği ve ağ ile altyapı sağlayıcıları gibi Hizmeti sunmak için ihtiyaç duyduğumuz hizmet sağlayıcılar;</li><li>adınıza abonelikleri yönetmek için gerektiği ölçüde üçüncü taraf sağlayıcılar;</li><li>yasaların zorunlu kıldığı veya hukuka uygun bir resmi talebin bulunduğu durumlarda yetkili makamlar.</li></ul>"
+        "body_html": "<p>Gerekli bilgileri yalnızca şu taraflarla paylaşırız:</p><ul><li>ödeme işleme (Stripe / Airwallex), web sitesi analitiği ve ağ ile altyapı sağlayıcıları gibi Hizmeti sunmak için ihtiyaç duyduğumuz hizmet sağlayıcılar;</li><li>adınıza abonelikleri yönetmek için gerektiği ölçüde üçüncü taraf sağlayıcılar;</li><li>yasaların zorunlu kıldığı veya hukuka uygun bir resmi talebin bulunduğu durumlarda yetkili makamlar.</li></ul>"
       },
       {
         "h2": "5. Sınır ötesi veri işleme",
-        "body_html": "<p>Ortamlarımız Avustralya, Amerika Birleşik Devletleri, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda ve Kanada'da bulunmaktadır; ayrıca Stripe gibi sağlayıcılar verileri başka ülkelerde işleyebilir. Dolayısıyla bilgileriniz ülkeniz dışında saklanabilir veya işlenebilir. Bilgilerinizi korumak için makul önlemleri alıyoruz.</p>"
+        "body_html": "<p>Ortamlarımız Avustralya, Amerika Birleşik Devletleri, Singapur, Malezya, Endonezya, Japonya, Kamboçya, Yeni Zelanda ve Kanada'da bulunmaktadır; ayrıca Stripe / Airwallex gibi sağlayıcılar verileri başka ülkelerde işleyebilir. Dolayısıyla bilgileriniz ülkeniz dışında saklanabilir veya işlenebilir. Bilgilerinizi korumak için makul önlemleri alıyoruz.</p>"
       },
       {
         "h2": "6. Veri saklama süresi",
@@ -849,7 +849,7 @@
       },
       {
         "h2": "8. Ücretler ve yenilemeler",
-        "body_html": "<ol><li>Hizmet aylık veya yıllık olarak faturalandırılabilir ve ödeme adımında gösterilen fiyat ve faturalandırma aralığı üzerinden Stripe aracılığıyla otomatik olarak yenilenir. Koltuk başı yükseltme eklentileri yalnızca aktif Team veya Business temel abonelikleri için geçerlidir; ClaudeOps Kurumsal Özel Hat eklentileri aktif bir temel abonelik gerektirir (20x, Team ve Business planlarına ücretsiz dahildir).</li><li>En az 30 gün önceden bildirimde bulunarak fiyatları değiştirebiliriz. Yeni fiyat yürürlüğe girmeden önce aboneliğinizi iptal edebilirsiniz.</li><li>Kampanya fiyatları yalnızca kampanya süresi içinde başlatılan abonelikler için geçerlidir. Aboneliğiniz kesintisiz aktif kaldığı sürece yenilemeler, madde 8.2 saklı kalmak kaydıyla kampanya fiyatı üzerinden ücretlendirilir. İptal edip daha sonra yeniden abone olursanız o tarihteki güncel fiyat uygulanır.</li><li>İptal ve iadeler <a href=\"refund.html\">İade Politikamız</a> kapsamındadır.</li></ol>"
+        "body_html": "<ol><li>Hizmet aylık veya yıllık olarak faturalandırılabilir ve ödeme adımında gösterilen fiyat ve faturalandırma aralığı üzerinden Stripe / Airwallex aracılığıyla otomatik olarak yenilenir. Koltuk başı yükseltme eklentileri yalnızca aktif Team veya Business temel abonelikleri için geçerlidir; ClaudeOps Kurumsal Özel Hat eklentileri aktif bir temel abonelik gerektirir (20x, Team ve Business planlarına ücretsiz dahildir).</li><li>En az 30 gün önceden bildirimde bulunarak fiyatları değiştirebiliriz. Yeni fiyat yürürlüğe girmeden önce aboneliğinizi iptal edebilirsiniz.</li><li>Kampanya fiyatları yalnızca kampanya süresi içinde başlatılan abonelikler için geçerlidir. Aboneliğiniz kesintisiz aktif kaldığı sürece yenilemeler, madde 8.2 saklı kalmak kaydıyla kampanya fiyatı üzerinden ücretlendirilir. İptal edip daha sonra yeniden abone olursanız o tarihteki güncel fiyat uygulanır.</li><li>İptal ve iadeler <a href=\"refund.html\">İade Politikamız</a> kapsamındadır.</li></ol>"
       },
       {
         "h2": "9. Askıya alma ve fesih",
@@ -910,7 +910,7 @@
       },
       {
         "h2": "8. İade talebi nasıl oluşturulur",
-        "body_html": "<ol><li>Abonelik e-posta adresinizi, Stripe makbuz numaranızı ve talep nedeninizi belirterek <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> adresine e-posta gönderin.</li><li>5 iş günü içinde size yanıt veririz.</li><li>Onaylanan iadeler orijinal ödeme yönteminize geri aktarılır. İşlem süresi bankanıza veya ödeme sağlayıcınıza bağlıdır.</li></ol>"
+        "body_html": "<ol><li>Abonelik e-posta adresinizi, Stripe / Airwallex makbuz numaranızı ve talep nedeninizi belirterek <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> adresine e-posta gönderin.</li><li>5 iş günü içinde size yanıt veririz.</li><li>Onaylanan iadeler orijinal ödeme yönteminize geri aktarılır. İşlem süresi bankanıza veya ödeme sağlayıcınıza bağlıdır.</li></ol>"
       },
       {
         "h2": "9. Ters ibrazlar (Chargeback)",
@@ -1022,6 +1022,9 @@
     "trust_h2": "İki kademeli izolasyon: ayrı hesaplar ve özel tahsisli cihazlar",
     "trust_sub": "Müşteri gizliliğini korumak amacıyla tüm yorumlarda karikatür avatarlar ve maskelenmiş isimler kullanılırken gerçek geri bildirimler ve abonelik kademeleri korunmuştur.",
     "faq_more_open": "Diğer {count} soruyu göster",
-    "faq_more_close": "Daha az göster"
+    "faq_more_close": "Daha az göster",
+    "upg_qty_label": "Yükseltilecek koltuk",
+    "upg_qty_hint": "1–50 koltuk seçin; ödemede koltuk başına ücretlendirilir",
+    "checkout_success_toast": "✅ Ödeme gönderildi! E-postayla onaylayıp ortamınızı bugün teslim edeceğiz."
   }
 }

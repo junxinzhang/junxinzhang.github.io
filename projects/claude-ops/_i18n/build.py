@@ -651,6 +651,24 @@ INDEX_EXTRA_I18N_CSS = """
     .drawer-body { padding: 4px 22px 22px; border-top: 1px solid rgba(255, 255, 255, .06) }
     .drawer-body-lead { margin: 14px 0 16px; font-size: .84rem; color: var(--muted); line-height: 1.55 }
     .storage-drawer { margin-top: 16px; border-color: rgba(255, 255, 255, .12) }
+    .seat-qty-row {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px;
+      margin: 0 0 16px; padding: 12px 16px; border-radius: 12px;
+      background: rgba(217, 119, 87, .08); border: 1px solid rgba(232, 144, 111, .28);
+    }
+    .seat-qty-row label { font-size: .86rem; font-weight: 700; color: var(--cream) }
+    .seat-qty-stepper { display: inline-flex; align-items: center; border: 1px solid rgba(255, 255, 255, .16); border-radius: 10px; overflow: hidden }
+    .seat-qty-stepper button {
+      width: 34px; height: 34px; border: 0; background: rgba(255, 255, 255, .05); color: var(--cream);
+      font-size: 1.05rem; cursor: pointer; font-family: inherit;
+    }
+    .seat-qty-stepper button:hover { background: var(--primary); color: #fff }
+    .seat-qty-stepper input {
+      width: 58px; height: 34px; border: 0; text-align: center; background: transparent;
+      color: #fff; font: inherit; font-weight: 700; -moz-appearance: textfield;
+    }
+    .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
+    .seat-qty-hint { font-size: .78rem; color: var(--muted) }
     @media (max-width: 680px) {
       .addon-drawer > summary { flex-direction: column; align-items: flex-start; gap: 10px }
       .drawer-toggle-pill { align-self: flex-start }
@@ -1162,7 +1180,7 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
             f'{mid_lis_str}\n'
             f'                  <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="{kind}">{esc(init_ent_storage)}</li>\n'
             f'                </ul>\n'
-            f'                <a class="{btn_cls}" data-ent-btn="{kind}" href="{esc(e_href)}" target="_blank" rel="noopener">{esc(ek["btn"])}</a>\n'
+            f'                <a class="{btn_cls}" data-ent-btn="{kind}" href="{esc(e_href)}" target="_blank" rel="noopener nofollow">{esc(ek["btn"])}</a>\n'
             f'                <a class="plan-consult" href="{esc(em_href)}">{esc(ek["consult"])}</a>\n'
             f'              </article>'
         )
@@ -1201,7 +1219,7 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
             f'                    <div class="addon-foot">\n'
             f'                      <div class="addon-price" data-upg-idx="{i}">+<sup>{esc(sym)}</sup><span class="amount">{fmt_num(cur_data["upg"][i])}</span>'
             f'<small data-upg-period>{esc(d["js"]["per_seat_mo"])}</small></div>\n'
-            f'                      <a class="addon-btn" data-upg-tier="{ukey}" href="{esc(u_href)}" target="_blank" rel="noopener">{esc(uc["btn"])}</a>\n'
+            f'                      <a class="addon-btn" data-upg-tier="{ukey}" href="{esc(u_href)}" target="_blank" rel="noopener nofollow">{esc(uc["btn"])}</a>\n'
             f'                    </div>\n'
             f'                  </div>'
         )
@@ -1556,6 +1574,15 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
             </summary>
             <div class="drawer-body">
               <p class="drawer-body-lead">{esc(sa["sub"])}</p>
+              <div class="seat-qty-row">
+                <label for="upg-qty">{esc(ux["upg_qty_label"])}</label>
+                <div class="seat-qty-stepper">
+                  <button type="button" data-qty-step="-1" aria-label="-1">−</button>
+                  <input id="upg-qty" type="number" inputmode="numeric" min="1" max="50" step="1" value="1">
+                  <button type="button" data-qty-step="1" aria-label="+1">+</button>
+                </div>
+                <span class="seat-qty-hint">{esc(ux["upg_qty_hint"])}</span>
+              </div>
               <div class="addon-grid">
 {sa_cards_html}
               </div>
@@ -1760,6 +1787,13 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
       var curSeatTier = 'max';
 
       function fmt(n) {{ return n.toLocaleString('en-AU'); }}
+      function getUpgQty() {{
+        var el = document.getElementById('upg-qty');
+        var n = el ? parseInt(el.value, 10) : 1;
+        if (!isFinite(n) || n < 1) n = 1;
+        if (n > 50) n = 50;
+        return n;
+      }}
       function tpl(s, v) {{
         return String(s).replace(/\\{{(\\w+)\\}}/g, function (_, k) {{ return v[k] != null ? v[k] : ''; }});
       }}
@@ -1876,7 +1910,7 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         document.querySelectorAll('[data-upg-tier]').forEach(function (btn) {{
           var ut = btn.getAttribute('data-upg-tier') + (isYear ? '_yr' : '');
           var awxUpgPlan = ut + '_' + curCode;
-          btn.setAttribute('href', '/api/airwallex/checkout?plan=' + encodeURIComponent(awxUpgPlan) + '&locale=' + encodeURIComponent(CUR_LOCALE_SLUG));
+          btn.setAttribute('href', '/api/airwallex/checkout?plan=' + encodeURIComponent(awxUpgPlan) + '&locale=' + encodeURIComponent(CUR_LOCALE_SLUG) + '&qty=' + getUpgQty());
         }});
 
         document.querySelectorAll('[data-line-idx]').forEach(function (el) {{
@@ -1994,6 +2028,32 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         if (/-sg$/.test(lang)) return setCurrency('SGD');
         if (/^(de|fr|es|it|nl|pt-pt|fi|el|ie)/.test(lang) || /-(de|fr|es|it|nl|at|be|ie|fi|pt|gr)$/.test(lang)) return setCurrency('EUR');
         setCurrency(DEFAULT_CURRENCY);
+      }})();
+      (function initSeatQty() {{
+        var qEl = document.getElementById('upg-qty');
+        if (!qEl) return;
+        function sync() {{ qEl.value = getUpgQty(); renderPricing(); }}
+        qEl.addEventListener('change', sync);
+        qEl.addEventListener('blur', sync);
+        document.querySelectorAll('[data-qty-step]').forEach(function (b) {{
+          b.addEventListener('click', function () {{
+            qEl.value = getUpgQty() + parseInt(b.getAttribute('data-qty-step'), 10);
+            sync();
+          }});
+        }});
+      }})();
+      (function checkoutSuccessToast() {{
+        var sp = new URLSearchParams(location.search);
+        if (sp.get('checkout') !== 'success') return;
+        var t = document.getElementById('toast');
+        if (t) {{
+          t.textContent = {json.dumps(ux["checkout_success_toast"], ensure_ascii=False)};
+          t.classList.add('show');
+          setTimeout(function () {{ t.classList.remove('show'); }}, 9000);
+        }}
+        sp.delete('checkout'); sp.delete('provider');
+        var qs = sp.toString();
+        history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
       }})();
       document.getElementById('year').textContent = new Date().getFullYear();
     }})();

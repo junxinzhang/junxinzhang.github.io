@@ -768,7 +768,7 @@
     "sections": [
       {
         "h2": "1. Informações que coletamos",
-        "body_html": "<ul><li><strong>Dados de contato e conta</strong>: seu nome, endereço de e-mail e a região de preferência escolhida no checkout.</li><li><strong>Informações de pagamento</strong>: processadas pelo Stripe. Nunca vemos nem armazenamos o número completo do seu cartão; temos acesso apenas a registros de transação, recibos e status de pagamento.</li><li><strong>Informações do serviço</strong>: e-mails de contas de terceiros informados para configurar o Serviço (como contas Claude, Google ou Apple) e as credenciais de acesso que emitimos para você.</li><li><strong>Comunicações</strong>: mensagens enviadas por e-mail, Telegram ou outros canais.</li><li><strong>Dados de navegação no site</strong>: dispositivo, navegador, endereço IP e páginas visitadas, coletados por ferramentas analíticas como Google Analytics e Umami.</li></ul>"
+        "body_html": "<ul><li><strong>Dados de contato e conta</strong>: seu nome, endereço de e-mail e a região de preferência escolhida no checkout.</li><li><strong>Informações de pagamento</strong>: processadas pelo Stripe / Airwallex. Nunca vemos nem armazenamos o número completo do seu cartão; temos acesso apenas a registros de transação, recibos e status de pagamento.</li><li><strong>Informações do serviço</strong>: e-mails de contas de terceiros informados para configurar o Serviço (como contas Claude, Google ou Apple) e as credenciais de acesso que emitimos para você.</li><li><strong>Comunicações</strong>: mensagens enviadas por e-mail, Telegram ou outros canais.</li><li><strong>Dados de navegação no site</strong>: dispositivo, navegador, endereço IP e páginas visitadas, coletados por ferramentas analíticas como Google Analytics e Umami.</li></ul>"
       },
       {
         "h2": "2. Como utilizamos as informações",
@@ -780,11 +780,11 @@
       },
       {
         "h2": "4. Compartilhamento",
-        "body_html": "<p>Compartilhamos informações necessárias apenas com:</p><ul><li>prestadores de serviços essenciais para a entrega do Serviço, como processamento de pagamentos (Stripe), análise de tráfego web e provedores de rede e infraestrutura;</li><li>provedores terceirizados, quando necessário para gerenciar assinaturas em seu nome;</li><li>autoridades competentes, quando exigido por lei ou requisição governamental legítima.</li></ul>"
+        "body_html": "<p>Compartilhamos informações necessárias apenas com:</p><ul><li>prestadores de serviços essenciais para a entrega do Serviço, como processamento de pagamentos (Stripe / Airwallex), análise de tráfego web e provedores de rede e infraestrutura;</li><li>provedores terceirizados, quando necessário para gerenciar assinaturas em seu nome;</li><li>autoridades competentes, quando exigido por lei ou requisição governamental legítima.</li></ul>"
       },
       {
         "h2": "5. Processamento internacional",
-        "body_html": "<p>Nossos ambientes estão localizados na Austrália, Estados Unidos, Singapura, Malásia, Indonésia, Japão, Camboja, Nova Zelândia e Canadá, e provedores como o Stripe podem processar dados em outros países. Suas informações podem, portanto, ser armazenadas ou processadas fora do seu país de residência. Adotamos medidas razoáveis para protegê-las.</p>"
+        "body_html": "<p>Nossos ambientes estão localizados na Austrália, Estados Unidos, Singapura, Malásia, Indonésia, Japão, Camboja, Nova Zelândia e Canadá, e provedores como o Stripe / Airwallex podem processar dados em outros países. Suas informações podem, portanto, ser armazenadas ou processadas fora do seu país de residência. Adotamos medidas razoáveis para protegê-las.</p>"
       },
       {
         "h2": "6. Retenção de dados",
@@ -849,7 +849,7 @@
       },
       {
         "h2": "8. Taxas e renovações",
-        "body_html": "<ol><li>O Serviço pode ser cobrado mensal ou anualmente e renova-se automaticamente via Stripe pelo preço e intervalo exibidos no checkout. Os add-ons de upgrade por licença aplicam-se apenas a assinaturas base Team ou Business ativas; os add-ons da Linha Dedicada Empresarial ClaudeOps exigem uma assinatura base ativa (já incluída sem custo extra nos planos 20x, Team e Business).</li><li>Podemos reajustar preços mediante aviso prévio mínimo de 30 dias. Você pode cancelar antes que o novo valor entre em vigor.</li><li>Preços promocionais aplicam-se apenas a assinaturas iniciadas durante o período promocional. Enquanto sua assinatura permanecer continuamente ativa, as renovações manterão o valor promocional, sujeito à cláusula 8.2. Se você cancelar e assinar novamente depois, será aplicado o preço vigente na ocasião.</li><li>Cancelamentos e reembolsos são regidos pela nossa <a href=\"refund.html\">Política de Reembolso</a>.</li></ol>"
+        "body_html": "<ol><li>O Serviço pode ser cobrado mensal ou anualmente e renova-se automaticamente via Stripe / Airwallex pelo preço e intervalo exibidos no checkout. Os add-ons de upgrade por licença aplicam-se apenas a assinaturas base Team ou Business ativas; os add-ons da Linha Dedicada Empresarial ClaudeOps exigem uma assinatura base ativa (já incluída sem custo extra nos planos 20x, Team e Business).</li><li>Podemos reajustar preços mediante aviso prévio mínimo de 30 dias. Você pode cancelar antes que o novo valor entre em vigor.</li><li>Preços promocionais aplicam-se apenas a assinaturas iniciadas durante o período promocional. Enquanto sua assinatura permanecer continuamente ativa, as renovações manterão o valor promocional, sujeito à cláusula 8.2. Se você cancelar e assinar novamente depois, será aplicado o preço vigente na ocasião.</li><li>Cancelamentos e reembolsos são regidos pela nossa <a href=\"refund.html\">Política de Reembolso</a>.</li></ol>"
       },
       {
         "h2": "9. Suspensão e rescisão",
@@ -910,7 +910,7 @@
       },
       {
         "h2": "8. Como solicitar um reembolso",
-        "body_html": "<ol><li>Envie um e-mail para <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> informando o e-mail da assinatura, o número do recibo no Stripe e o motivo da solicitação.</li><li>Responderemos em até 5 dias úteis.</li><li>Reembolsos aprovados são estornados no método de pagamento original. O prazo de compensação depende do seu banco ou operadora.</li></ol>"
+        "body_html": "<ol><li>Envie um e-mail para <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> informando o e-mail da assinatura, o número do recibo no Stripe / Airwallex e o motivo da solicitação.</li><li>Responderemos em até 5 dias úteis.</li><li>Reembolsos aprovados são estornados no método de pagamento original. O prazo de compensação depende do seu banco ou operadora.</li></ol>"
       },
       {
         "h2": "9. Contestação de cobrança (Chargebacks)",
@@ -1022,6 +1022,9 @@
     "trust_h2": "Isolamento em dois níveis: contas separadas e máquinas dedicadas",
     "trust_sub": "Para proteger a privacidade dos clientes, todas as avaliações usam avatares ilustrados e identificadores anonimizados, preservando os relatos reais e os respectivos planos.",
     "faq_more_open": "Ver mais {count} perguntas",
-    "faq_more_close": "Mostrar menos"
+    "faq_more_close": "Mostrar menos",
+    "upg_qty_label": "Assentos para upgrade",
+    "upg_qty_hint": "Escolha de 1 a 50 assentos; cobrado por assento no checkout",
+    "checkout_success_toast": "✅ Pagamento enviado! Confirmaremos por e-mail e entregaremos seu ambiente hoje."
   }
 }

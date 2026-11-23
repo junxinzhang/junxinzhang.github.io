@@ -1187,6 +1187,24 @@
     .drawer-body { padding: 4px 22px 22px; border-top: 1px solid rgba(255, 255, 255, .06) }
     .drawer-body-lead { margin: 14px 0 16px; font-size: .84rem; color: var(--muted); line-height: 1.55 }
     .storage-drawer { margin-top: 16px; border-color: rgba(255, 255, 255, .12) }
+    .seat-qty-row {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px;
+      margin: 0 0 16px; padding: 12px 16px; border-radius: 12px;
+      background: rgba(217, 119, 87, .08); border: 1px solid rgba(232, 144, 111, .28);
+    }
+    .seat-qty-row label { font-size: .86rem; font-weight: 700; color: var(--cream) }
+    .seat-qty-stepper { display: inline-flex; align-items: center; border: 1px solid rgba(255, 255, 255, .16); border-radius: 10px; overflow: hidden }
+    .seat-qty-stepper button {
+      width: 34px; height: 34px; border: 0; background: rgba(255, 255, 255, .05); color: var(--cream);
+      font-size: 1.05rem; cursor: pointer; font-family: inherit;
+    }
+    .seat-qty-stepper button:hover { background: var(--primary); color: #fff }
+    .seat-qty-stepper input {
+      width: 58px; height: 34px; border: 0; text-align: center; background: transparent;
+      color: #fff; font: inherit; font-weight: 700; -moz-appearance: textfield;
+    }
+    .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
+    .seat-qty-hint { font-size: .78rem; color: var(--muted) }
     @media (max-width: 680px) {
       .addon-drawer > summary { flex-direction: column; align-items: flex-start; gap: 10px }
       .drawer-toggle-pill { align-self: flex-start }
@@ -1623,7 +1641,7 @@
                   <li style="color: var(--primary-strong); font-weight: 600;">프라이빗 고속 RustDesk 팀 전용 채널 무료 제공</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="team">팀용 12 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)</li>
                 </ul>
-                <a class="btn btn-ghost" data-ent-btn="team" href="/api/airwallex/checkout?plan=team_max_USD&amp;locale=ko" target="_blank" rel="noopener">Team 플랜 구독</a>
+                <a class="btn btn-ghost" data-ent-btn="team" href="/api/airwallex/checkout?plan=team_max_USD&amp;locale=ko" target="_blank" rel="noopener nofollow">Team 플랜 구독</a>
                 <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%20Team%20%ED%94%8C%EB%9E%9C">추가 좌석이나 맞춤 사양이 필요하신가요? 상담하기 →</a>
               </article>
 
@@ -1643,7 +1661,7 @@
                   <li style="color: var(--primary-strong); font-weight: 600;">엔터프라이즈 전용 고속 RustDesk 독립 릴레이 회선 무료 제공</li>
                   <li style="color: var(--primary-strong); font-weight: 600;" data-ent-storage-li="biz">엔터프라이즈용 30 TB 클라우드 스토리지 무료 포함 (Google Drive / iCloud+)</li>
                 </ul>
-                <a class="btn btn-primary" data-ent-btn="biz" href="/api/airwallex/checkout?plan=biz_max_USD&amp;locale=ko" target="_blank" rel="noopener">Business 플랜 구독</a>
+                <a class="btn btn-primary" data-ent-btn="biz" href="/api/airwallex/checkout?plan=biz_max_USD&amp;locale=ko" target="_blank" rel="noopener nofollow">Business 플랜 구독</a>
                 <a class="plan-consult" href="mailto:jason2023zhang@gmail.com?subject=Zaokit%20ClaudeOps%20%EB%AC%B8%EC%9D%98%20-%20Business%20%ED%94%8C%EB%9E%9C">20좌석 이상 또는 프라이빗 클러스터 구축 문의 →</a>
               </article>
 
@@ -1684,6 +1702,15 @@
             </summary>
             <div class="drawer-body">
               <p class="drawer-body-lead">이용 중인 Team 또는 Business 기본 플랜 위에서 특정 구성원의 좌석만 온디맨드로 업그레이드해 자유롭게 조합하세요(연간 애드온 역시 2개월 무료 적용).</p>
+              <div class="seat-qty-row">
+                <label for="upg-qty">업그레이드 좌석 수</label>
+                <div class="seat-qty-stepper">
+                  <button type="button" data-qty-step="-1" aria-label="-1">−</button>
+                  <input id="upg-qty" type="number" inputmode="numeric" min="1" max="50" step="1" value="1">
+                  <button type="button" data-qty-step="1" aria-label="+1">+</button>
+                </div>
+                <span class="seat-qty-hint">1–50석 선택, 결제 시 좌석 수만큼 청구</span>
+              </div>
               <div class="addon-grid">
                   <div class="addon-card">
                     <div>
@@ -1692,7 +1719,7 @@
                     </div>
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="0">+<sup>$</sup><span class="amount">329</span><small data-upg-period>/ 좌석 / 월</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_USD&amp;locale=ko" target="_blank" rel="noopener">좌석 업그레이드 →</a>
+                      <a class="addon-btn" data-upg-tier="upg_pm" href="/api/airwallex/checkout?plan=upg_pm_USD&amp;locale=ko" target="_blank" rel="noopener nofollow">좌석 업그레이드 →</a>
                     </div>
                   </div>
                   <div class="addon-card">
@@ -1702,7 +1729,7 @@
                     </div>
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="1">+<sup>$</sup><span class="amount">359</span><small data-upg-period>/ 좌석 / 월</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_USD&amp;locale=ko" target="_blank" rel="noopener">좌석 업그레이드 →</a>
+                      <a class="addon-btn" data-upg-tier="upg_mu" href="/api/airwallex/checkout?plan=upg_mu_USD&amp;locale=ko" target="_blank" rel="noopener nofollow">좌석 업그레이드 →</a>
                     </div>
                   </div>
                   <div class="addon-card">
@@ -1712,7 +1739,7 @@
                     </div>
                     <div class="addon-foot">
                       <div class="addon-price" data-upg-idx="2">+<sup>$</sup><span class="amount">679</span><small data-upg-period>/ 좌석 / 월</small></div>
-                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_USD&amp;locale=ko" target="_blank" rel="noopener">좌석 업그레이드 →</a>
+                      <a class="addon-btn" data-upg-tier="upg_pu" href="/api/airwallex/checkout?plan=upg_pu_USD&amp;locale=ko" target="_blank" rel="noopener nofollow">좌석 업그레이드 →</a>
                     </div>
                   </div>
               </div>
@@ -2227,6 +2254,13 @@
       var curSeatTier = 'max';
 
       function fmt(n) { return n.toLocaleString('en-AU'); }
+      function getUpgQty() {
+        var el = document.getElementById('upg-qty');
+        var n = el ? parseInt(el.value, 10) : 1;
+        if (!isFinite(n) || n < 1) n = 1;
+        if (n > 50) n = 50;
+        return n;
+      }
       function tpl(s, v) {
         return String(s).replace(/\{(\w+)\}/g, function (_, k) { return v[k] != null ? v[k] : ''; });
       }
@@ -2343,7 +2377,7 @@
         document.querySelectorAll('[data-upg-tier]').forEach(function (btn) {
           var ut = btn.getAttribute('data-upg-tier') + (isYear ? '_yr' : '');
           var awxUpgPlan = ut + '_' + curCode;
-          btn.setAttribute('href', '/api/airwallex/checkout?plan=' + encodeURIComponent(awxUpgPlan) + '&locale=' + encodeURIComponent(CUR_LOCALE_SLUG));
+          btn.setAttribute('href', '/api/airwallex/checkout?plan=' + encodeURIComponent(awxUpgPlan) + '&locale=' + encodeURIComponent(CUR_LOCALE_SLUG) + '&qty=' + getUpgQty());
         });
 
         document.querySelectorAll('[data-line-idx]').forEach(function (el) {
@@ -2461,6 +2495,32 @@
         if (/-sg$/.test(lang)) return setCurrency('SGD');
         if (/^(de|fr|es|it|nl|pt-pt|fi|el|ie)/.test(lang) || /-(de|fr|es|it|nl|at|be|ie|fi|pt|gr)$/.test(lang)) return setCurrency('EUR');
         setCurrency(DEFAULT_CURRENCY);
+      })();
+      (function initSeatQty() {
+        var qEl = document.getElementById('upg-qty');
+        if (!qEl) return;
+        function sync() { qEl.value = getUpgQty(); renderPricing(); }
+        qEl.addEventListener('change', sync);
+        qEl.addEventListener('blur', sync);
+        document.querySelectorAll('[data-qty-step]').forEach(function (b) {
+          b.addEventListener('click', function () {
+            qEl.value = getUpgQty() + parseInt(b.getAttribute('data-qty-step'), 10);
+            sync();
+          });
+        });
+      })();
+      (function checkoutSuccessToast() {
+        var sp = new URLSearchParams(location.search);
+        if (sp.get('checkout') !== 'success') return;
+        var t = document.getElementById('toast');
+        if (t) {
+          t.textContent = "✅ 결제가 접수되었습니다! 오늘 중 이메일로 확인 후 팀 환경을 제공해 드립니다.";
+          t.classList.add('show');
+          setTimeout(function () { t.classList.remove('show'); }, 9000);
+        }
+        sp.delete('checkout'); sp.delete('provider');
+        var qs = sp.toString();
+        history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
       })();
       document.getElementById('year').textContent = new Date().getFullYear();
     })();

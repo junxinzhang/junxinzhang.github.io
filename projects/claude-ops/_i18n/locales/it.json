@@ -768,7 +768,7 @@
     "sections": [
       {
         "h2": "1. Informazioni che raccogliamo",
-        "body_html": "<ul><li><strong>Dati di contatto e dell'account</strong>: il tuo nome, l'indirizzo email e la regione preferita selezionata in fase di checkout.</li><li><strong>Informazioni di pagamento</strong>: elaborate da Stripe. Non vediamo né memorizziamo mai il numero completo della tua carta; visualizziamo solo i record delle transazioni, le ricevute e lo stato dei pagamenti.</li><li><strong>Informazioni relative al Servizio</strong>: gli indirizzi email di account di terze parti forniti per configurare il Servizio (come account Claude, Google o Apple) e le credenziali di accesso che ti assegniamo.</li><li><strong>Comunicazioni</strong>: i messaggi inviati tramite email, Telegram o altri canali.</li><li><strong>Dati di navigazione sul sito</strong>: dispositivo, browser, indirizzo IP e pagine visitate, raccolti tramite strumenti di analisi come Google Analytics e Umami.</li></ul>"
+        "body_html": "<ul><li><strong>Dati di contatto e dell'account</strong>: il tuo nome, l'indirizzo email e la regione preferita selezionata in fase di checkout.</li><li><strong>Informazioni di pagamento</strong>: elaborate da Stripe / Airwallex. Non vediamo né memorizziamo mai il numero completo della tua carta; visualizziamo solo i record delle transazioni, le ricevute e lo stato dei pagamenti.</li><li><strong>Informazioni relative al Servizio</strong>: gli indirizzi email di account di terze parti forniti per configurare il Servizio (come account Claude, Google o Apple) e le credenziali di accesso che ti assegniamo.</li><li><strong>Comunicazioni</strong>: i messaggi inviati tramite email, Telegram o altri canali.</li><li><strong>Dati di navigazione sul sito</strong>: dispositivo, browser, indirizzo IP e pagine visitate, raccolti tramite strumenti di analisi come Google Analytics e Umami.</li></ul>"
       },
       {
         "h2": "2. Come utilizziamo i dati",
@@ -780,11 +780,11 @@
       },
       {
         "h2": "4. Condivisione dei dati",
-        "body_html": "<p>Condividiamo le informazioni strettamente necessarie solo con:</p><ul><li>fornitori di servizi indispensabili per erogare il Servizio, quali elaborazione dei pagamenti (Stripe), analisi web e fornitori di rete e infrastruttura;</li><li>fornitori di terze parti, ove necessario per gestire abbonamenti per tuo conto;</li><li>autorità competenti, ove richiesto dalla legge o da una legittima richiesta governativa.</li></ul>"
+        "body_html": "<p>Condividiamo le informazioni strettamente necessarie solo con:</p><ul><li>fornitori di servizi indispensabili per erogare il Servizio, quali elaborazione dei pagamenti (Stripe / Airwallex), analisi web e fornitori di rete e infrastruttura;</li><li>fornitori di terze parti, ove necessario per gestire abbonamenti per tuo conto;</li><li>autorità competenti, ove richiesto dalla legge o da una legittima richiesta governativa.</li></ul>"
       },
       {
         "h2": "5. Trattamento transfrontaliero",
-        "body_html": "<p>I nostri ambienti si trovano in Australia, Stati Uniti, Singapore, Malesia, Indonesia, Giappone, Cambogia, Nuova Zelanda e Canada, e fornitori come Stripe possono trattare dati anche in altri paesi. Le tue informazioni potrebbero pertanto essere archiviate o elaborate al di fuori del tuo paese. Adottiamo misure ragionevoli per proteggerle.</p>"
+        "body_html": "<p>I nostri ambienti si trovano in Australia, Stati Uniti, Singapore, Malesia, Indonesia, Giappone, Cambogia, Nuova Zelanda e Canada, e fornitori come Stripe / Airwallex possono trattare dati anche in altri paesi. Le tue informazioni potrebbero pertanto essere archiviate o elaborate al di fuori del tuo paese. Adottiamo misure ragionevoli per proteggerle.</p>"
       },
       {
         "h2": "6. Conservazione dei dati",
@@ -849,7 +849,7 @@
       },
       {
         "h2": "8. Corrispettivi e rinnovi",
-        "body_html": "<ol><li>Il Servizio può avere fatturazione mensile o annuale e si rinnova automaticamente tramite Stripe al prezzo e secondo la periodicità indicati al checkout. Gli add-on di upgrade per postazione si applicano esclusivamente ad abbonamenti base Team o Business attivi; gli add-on Linea Dedicata Enterprise ClaudeOps richiedono un abbonamento base attivo (già inclusi senza costi aggiuntivi nei piani 20x, Team e Business).</li><li>Possiamo modificare i prezzi con un preavviso di almeno 30 giorni. Puoi disdire prima che il nuovo prezzo entri in vigore.</li><li>I prezzi promozionali valgono solo per gli abbonamenti attivati durante il periodo promozionale. Finché l'abbonamento rimane ininterrottamente attivo, i rinnovi vengono addebitati al prezzo promozionale, fermo restando l'articolo 8.2. In caso di disdetta e successiva nuova iscrizione, verrà applicato il prezzo vigente al momento della riattivazione.</li><li>Disdette e rimborsi sono disciplinati dalla nostra <a href=\"refund.html\">Politica di Rimborso</a>.</li></ol>"
+        "body_html": "<ol><li>Il Servizio può avere fatturazione mensile o annuale e si rinnova automaticamente tramite Stripe / Airwallex al prezzo e secondo la periodicità indicati al checkout. Gli add-on di upgrade per postazione si applicano esclusivamente ad abbonamenti base Team o Business attivi; gli add-on Linea Dedicata Enterprise ClaudeOps richiedono un abbonamento base attivo (già inclusi senza costi aggiuntivi nei piani 20x, Team e Business).</li><li>Possiamo modificare i prezzi con un preavviso di almeno 30 giorni. Puoi disdire prima che il nuovo prezzo entri in vigore.</li><li>I prezzi promozionali valgono solo per gli abbonamenti attivati durante il periodo promozionale. Finché l'abbonamento rimane ininterrottamente attivo, i rinnovi vengono addebitati al prezzo promozionale, fermo restando l'articolo 8.2. In caso di disdetta e successiva nuova iscrizione, verrà applicato il prezzo vigente al momento della riattivazione.</li><li>Disdette e rimborsi sono disciplinati dalla nostra <a href=\"refund.html\">Politica di Rimborso</a>.</li></ol>"
       },
       {
         "h2": "9. Sospensione e risoluzione",
@@ -910,7 +910,7 @@
       },
       {
         "h2": "8. Come richiedere un rimborso",
-        "body_html": "<ol><li>Invia un'email a <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> indicando l'email di abbonamento, il numero di ricevuta Stripe e il motivo della richiesta.</li><li>Risponderemo entro 5 giorni lavorativi.</li><li>I rimborsi approvati vengono riaccreditati sul metodo di pagamento originale. Le tempistiche di accredito dipendono dalla tua banca o dal circuito di pagamento.</li></ol>"
+        "body_html": "<ol><li>Invia un'email a <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> indicando l'email di abbonamento, il numero di ricevuta Stripe / Airwallex e il motivo della richiesta.</li><li>Risponderemo entro 5 giorni lavorativi.</li><li>I rimborsi approvati vengono riaccreditati sul metodo di pagamento originale. Le tempistiche di accredito dipendono dalla tua banca o dal circuito di pagamento.</li></ol>"
       },
       {
         "h2": "9. Contestazioni di addebito (Chargeback)",
@@ -1022,6 +1022,9 @@
     "trust_h2": "Isolamento a due livelli: account separati e macchine dedicate",
     "trust_sub": "Per tutelare la privacy dei clienti, tutte le recensioni utilizzano avatar illustrati e profili anonimizzati, mantenendo feedback autentici e piani di abbonamento reali.",
     "faq_more_open": "Mostra altre {count} domande",
-    "faq_more_close": "Mostra meno"
+    "faq_more_close": "Mostra meno",
+    "upg_qty_label": "Postazioni da potenziare",
+    "upg_qty_hint": "Scegli 1–50 postazioni; addebito per postazione al checkout",
+    "checkout_success_toast": "✅ Pagamento inviato! Ti confermeremo via email e consegneremo l'ambiente oggi."
   }
 }

@@ -768,7 +768,7 @@
     "sections": [
       {
         "h2": "1. Informasi yang kami kumpulkan",
-        "body_html": "<ul><li><strong>Detail kontak dan akun</strong>: nama Anda, alamat email, serta wilayah preferensi yang Anda pilih saat checkout.</li><li><strong>Informasi pembayaran</strong>: diproses oleh Stripe. Kami tidak pernah melihat atau menyimpan nomor kartu lengkap Anda; kami hanya dapat melihat catatan transaksi, tanda terima, dan status pembayaran.</li><li><strong>Informasi layanan</strong>: alamat email akun pihak ketiga yang Anda berikan untuk penyiapan Layanan (seperti akun Claude, Google, atau Apple) serta kredensial akses yang kami terbitkan untuk Anda.</li><li><strong>Komunikasi</strong>: pesan yang Anda kirimkan kepada kami melalui email, Telegram, atau kanal lainnya.</li><li><strong>Data situs web</strong>: perangkat, browser, alamat IP, dan halaman yang dikunjungi, yang dikumpulkan melalui alat analitik seperti Google Analytics dan Umami.</li></ul>"
+        "body_html": "<ul><li><strong>Detail kontak dan akun</strong>: nama Anda, alamat email, serta wilayah preferensi yang Anda pilih saat checkout.</li><li><strong>Informasi pembayaran</strong>: diproses oleh Stripe / Airwallex. Kami tidak pernah melihat atau menyimpan nomor kartu lengkap Anda; kami hanya dapat melihat catatan transaksi, tanda terima, dan status pembayaran.</li><li><strong>Informasi layanan</strong>: alamat email akun pihak ketiga yang Anda berikan untuk penyiapan Layanan (seperti akun Claude, Google, atau Apple) serta kredensial akses yang kami terbitkan untuk Anda.</li><li><strong>Komunikasi</strong>: pesan yang Anda kirimkan kepada kami melalui email, Telegram, atau kanal lainnya.</li><li><strong>Data situs web</strong>: perangkat, browser, alamat IP, dan halaman yang dikunjungi, yang dikumpulkan melalui alat analitik seperti Google Analytics dan Umami.</li></ul>"
       },
       {
         "h2": "2. Cara kami menggunakannya",
@@ -780,11 +780,11 @@
       },
       {
         "h2": "4. Pembagian informasi",
-        "body_html": "<p>Kami hanya membagikan informasi yang diperlukan kepada:</p><ul><li>penyedia layanan yang kami perlukan untuk menyelenggarakan Layanan, seperti pemrosesan pembayaran (Stripe), analitik situs web, serta penyedia jaringan dan infrastruktur;</li><li>penyedia pihak ketiga, sejauh diperlukan untuk mengelola langganan atas nama Anda;</li><li>otoritas berwenang, apabila diwajibkan oleh hukum atau permintaan resmi pemerintah yang sah.</li></ul>"
+        "body_html": "<p>Kami hanya membagikan informasi yang diperlukan kepada:</p><ul><li>penyedia layanan yang kami perlukan untuk menyelenggarakan Layanan, seperti pemrosesan pembayaran (Stripe / Airwallex), analitik situs web, serta penyedia jaringan dan infrastruktur;</li><li>penyedia pihak ketiga, sejauh diperlukan untuk mengelola langganan atas nama Anda;</li><li>otoritas berwenang, apabila diwajibkan oleh hukum atau permintaan resmi pemerintah yang sah.</li></ul>"
       },
       {
         "h2": "5. Pemrosesan lintas batas negara",
-        "body_html": "<p>Environment kami berlokasi di Australia, Amerika Serikat, Singapura, Malaysia, Indonesia, Jepang, Kamboja, Selandia Baru, dan Kanada, dan penyedia seperti Stripe dapat memproses data di negara lain. Oleh karena itu, informasi Anda dapat disimpan atau diproses di luar negara tempat tinggal Anda. Kami mengambil langkah-langkah yang wajar untuk melindunginya.</p>"
+        "body_html": "<p>Environment kami berlokasi di Australia, Amerika Serikat, Singapura, Malaysia, Indonesia, Jepang, Kamboja, Selandia Baru, dan Kanada, dan penyedia seperti Stripe / Airwallex dapat memproses data di negara lain. Oleh karena itu, informasi Anda dapat disimpan atau diproses di luar negara tempat tinggal Anda. Kami mengambil langkah-langkah yang wajar untuk melindunginya.</p>"
       },
       {
         "h2": "6. Penyimpanan data",
@@ -849,7 +849,7 @@
       },
       {
         "h2": "8. Biaya dan perpanjangan",
-        "body_html": "<ol><li>Layanan dapat ditagihkan secara bulanan atau tahunan dan diperpanjang secara otomatis melalui Stripe sesuai harga serta interval penagihan yang ditampilkan saat checkout. Add-on upgrade per kursi hanya berlaku untuk langganan dasar Team atau Business yang aktif; add-on Jalur Khusus Enterprise ClaudeOps memerlukan langganan dasar aktif (sudah termasuk tanpa biaya tambahan pada paket 20x, Team, dan Business).</li><li>Kami dapat menyesuaikan harga dengan pemberitahuan minimal 30 hari sebelumnya. Anda dapat membatalkan langganan sebelum harga baru berlaku.</li><li>Harga promosi hanya berlaku bagi langganan yang dimulai selama periode promosi. Selama langganan Anda tetap aktif tanpa terputus, perpanjangan akan dikenakan harga promosi dengan tetap tunduk pada klausul 8.2. Jika Anda membatalkan lalu berlangganan kembali di kemudian hari, harga yang berlaku saat itu akan diterapkan.</li><li>Ketentuan pembatalan dan pengembalian dana diatur dalam <a href=\"refund.html\">Kebijakan Pengembalian Dana</a> kami.</li></ol>"
+        "body_html": "<ol><li>Layanan dapat ditagihkan secara bulanan atau tahunan dan diperpanjang secara otomatis melalui Stripe / Airwallex sesuai harga serta interval penagihan yang ditampilkan saat checkout. Add-on upgrade per kursi hanya berlaku untuk langganan dasar Team atau Business yang aktif; add-on Jalur Khusus Enterprise ClaudeOps memerlukan langganan dasar aktif (sudah termasuk tanpa biaya tambahan pada paket 20x, Team, dan Business).</li><li>Kami dapat menyesuaikan harga dengan pemberitahuan minimal 30 hari sebelumnya. Anda dapat membatalkan langganan sebelum harga baru berlaku.</li><li>Harga promosi hanya berlaku bagi langganan yang dimulai selama periode promosi. Selama langganan Anda tetap aktif tanpa terputus, perpanjangan akan dikenakan harga promosi dengan tetap tunduk pada klausul 8.2. Jika Anda membatalkan lalu berlangganan kembali di kemudian hari, harga yang berlaku saat itu akan diterapkan.</li><li>Ketentuan pembatalan dan pengembalian dana diatur dalam <a href=\"refund.html\">Kebijakan Pengembalian Dana</a> kami.</li></ol>"
       },
       {
         "h2": "9. Penangguhan dan penghentian",
@@ -910,7 +910,7 @@
       },
       {
         "h2": "8. Cara mengajukan pengembalian dana",
-        "body_html": "<ol><li>Kirim email ke <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> dengan menyertakan email langganan Anda, nomor tanda terima Stripe, dan alasan pengajuan.</li><li>Kami akan membalas dalam waktu 5 hari kerja.</li><li>Pengembalian dana yang disetujui akan dikembalikan ke metode pembayaran awal Anda. Waktu pemrosesan bergantung pada bank atau penyedia pembayaran Anda.</li></ol>"
+        "body_html": "<ol><li>Kirim email ke <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> dengan menyertakan email langganan Anda, nomor tanda terima Stripe / Airwallex, dan alasan pengajuan.</li><li>Kami akan membalas dalam waktu 5 hari kerja.</li><li>Pengembalian dana yang disetujui akan dikembalikan ke metode pembayaran awal Anda. Waktu pemrosesan bergantung pada bank atau penyedia pembayaran Anda.</li></ol>"
       },
       {
         "h2": "9. Sanggahan transaksi (Chargeback)",
@@ -1022,6 +1022,9 @@
     "trust_h2": "Isolasi dua tingkat: akun terpisah dan mesin khusus",
     "trust_sub": "Demi melindungi privasi klien, seluruh ulasan menampilkan avatar kartun dan identitas yang disamarkan, dengan tetap mempertahankan masukan asli serta tingkatan paket langganan.",
     "faq_more_open": "Tampilkan {count} pertanyaan lainnya",
-    "faq_more_close": "Sembunyikan"
+    "faq_more_close": "Sembunyikan",
+    "upg_qty_label": "Jumlah kursi upgrade",
+    "upg_qty_hint": "Pilih 1–50 kursi; ditagih per kursi saat checkout",
+    "checkout_success_toast": "✅ Pembayaran terkirim! Kami akan konfirmasi via email dan menyerahkan lingkungan Anda hari ini."
   }
 }

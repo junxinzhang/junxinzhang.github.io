@@ -768,7 +768,7 @@
     "sections": [
       {
         "h2": "1. Thông tin chúng tôi thu thập",
-        "body_html": "<ul><li><strong>Thông tin liên hệ và tài khoản</strong>: họ tên, địa chỉ email và khu vực ưu tiên bạn chọn khi thanh toán.</li><li><strong>Thông tin thanh toán</strong>: được xử lý trực tiếp bởi Stripe. Chúng tôi không bao giờ nhìn thấy hay lưu trữ số thẻ đầy đủ của bạn; chúng tôi chỉ xem được lịch sử giao dịch, biên lai và trạng thái thanh toán.</li><li><strong>Thông tin dịch vụ</strong>: địa chỉ email tài khoản bên thứ ba mà bạn cung cấp để thiết lập Dịch vụ (chẳng hạn tài khoản Claude, Google hoặc Apple) và thông tin đăng nhập chúng tôi cấp cho bạn.</li><li><strong>Nội dung trao đổi</strong>: tin nhắn bạn gửi cho chúng tôi qua email, Telegram hoặc các kênh liên lạc khác.</li><li><strong>Dữ liệu trang web</strong>: thiết bị, trình duyệt, địa chỉ IP và các trang đã truy cập, được thu thập thông qua các công cụ phân tích như Google Analytics và Umami.</li></ul>"
+        "body_html": "<ul><li><strong>Thông tin liên hệ và tài khoản</strong>: họ tên, địa chỉ email và khu vực ưu tiên bạn chọn khi thanh toán.</li><li><strong>Thông tin thanh toán</strong>: được xử lý trực tiếp bởi Stripe / Airwallex. Chúng tôi không bao giờ nhìn thấy hay lưu trữ số thẻ đầy đủ của bạn; chúng tôi chỉ xem được lịch sử giao dịch, biên lai và trạng thái thanh toán.</li><li><strong>Thông tin dịch vụ</strong>: địa chỉ email tài khoản bên thứ ba mà bạn cung cấp để thiết lập Dịch vụ (chẳng hạn tài khoản Claude, Google hoặc Apple) và thông tin đăng nhập chúng tôi cấp cho bạn.</li><li><strong>Nội dung trao đổi</strong>: tin nhắn bạn gửi cho chúng tôi qua email, Telegram hoặc các kênh liên lạc khác.</li><li><strong>Dữ liệu trang web</strong>: thiết bị, trình duyệt, địa chỉ IP và các trang đã truy cập, được thu thập thông qua các công cụ phân tích như Google Analytics và Umami.</li></ul>"
       },
       {
         "h2": "2. Cách chúng tôi sử dụng thông tin",
@@ -780,11 +780,11 @@
       },
       {
         "h2": "4. Chia sẻ thông tin",
-        "body_html": "<p>Chúng tôi chỉ chia sẻ những thông tin cần thiết với:</p><ul><li>các nhà cung cấp dịch vụ hỗ trợ vận hành Dịch vụ như cổng thanh toán (Stripe), công cụ phân tích trang web cùng các đối tác hạ tầng và mạng;</li><li>các nhà cung cấp bên thứ ba trong phạm vi cần thiết để quản lý thuê bao thay mặt bạn;</li><li>cơ quan chức năng có thẩm quyền khi pháp luật yêu cầu hoặc theo yêu cầu hợp pháp của cơ quan nhà nước.</li></ul>"
+        "body_html": "<p>Chúng tôi chỉ chia sẻ những thông tin cần thiết với:</p><ul><li>các nhà cung cấp dịch vụ hỗ trợ vận hành Dịch vụ như cổng thanh toán (Stripe / Airwallex), công cụ phân tích trang web cùng các đối tác hạ tầng và mạng;</li><li>các nhà cung cấp bên thứ ba trong phạm vi cần thiết để quản lý thuê bao thay mặt bạn;</li><li>cơ quan chức năng có thẩm quyền khi pháp luật yêu cầu hoặc theo yêu cầu hợp pháp của cơ quan nhà nước.</li></ul>"
       },
       {
         "h2": "5. Xử lý dữ liệu xuyên biên giới",
-        "body_html": "<p>Hệ thống môi trường của chúng tôi được đặt tại Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand và Canada, đồng thời các đối tác như Stripe có thể xử lý dữ liệu tại những quốc gia khác. Vì vậy, thông tin của bạn có thể được lưu trữ hoặc xử lý bên ngoài quốc gia bạn cư trú. Chúng tôi luôn áp dụng các biện pháp hợp lý để bảo vệ dữ liệu đó.</p>"
+        "body_html": "<p>Hệ thống môi trường của chúng tôi được đặt tại Úc, Hoa Kỳ, Singapore, Malaysia, Indonesia, Nhật Bản, Campuchia, New Zealand và Canada, đồng thời các đối tác như Stripe / Airwallex có thể xử lý dữ liệu tại những quốc gia khác. Vì vậy, thông tin của bạn có thể được lưu trữ hoặc xử lý bên ngoài quốc gia bạn cư trú. Chúng tôi luôn áp dụng các biện pháp hợp lý để bảo vệ dữ liệu đó.</p>"
       },
       {
         "h2": "6. Thời gian lưu trữ",
@@ -849,7 +849,7 @@
       },
       {
         "h2": "8. Phí dịch vụ và gia hạn",
-        "body_html": "<ol><li>Dịch vụ có thể thanh toán theo tháng hoặc theo năm và tự động gia hạn qua Stripe theo mức giá cùng chu kỳ hiển thị lúc thanh toán. Tiện ích nâng cấp từng ghế chỉ áp dụng khi có gói nền tảng Team hoặc Business đang hoạt động; tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps yêu cầu có gói đăng ký cơ sở đang hoạt động (đã miễn phí đi kèm ở các gói 20x, Team và Business).</li><li>Chúng tôi có thể điều chỉnh mức giá khi thông báo trước ít nhất 30 ngày. Bạn có quyền hủy gia hạn trước thời điểm giá mới có hiệu lực.</li><li>Giá khuyến mãi chỉ áp dụng cho các thuê bao đăng ký mới trong thời gian diễn ra chương trình. Miễn là thuê bao của bạn duy trì liên tục không gián đoạn, các kỳ gia hạn tiếp theo vẫn giữ mức giá khuyến mãi (tuân theo mục 8.2). Nếu bạn hủy rồi đăng ký lại sau đó, mức giá hiện hành tại thời điểm đăng ký lại sẽ được áp dụng.</li><li>Việc hủy dịch vụ và hoàn tiền được quy định chi tiết trong <a href=\"refund.html\">Chính sách hoàn tiền</a> của chúng tôi.</li></ol>"
+        "body_html": "<ol><li>Dịch vụ có thể thanh toán theo tháng hoặc theo năm và tự động gia hạn qua Stripe / Airwallex theo mức giá cùng chu kỳ hiển thị lúc thanh toán. Tiện ích nâng cấp từng ghế chỉ áp dụng khi có gói nền tảng Team hoặc Business đang hoạt động; tiện ích Đường truyền riêng Doanh nghiệp ClaudeOps yêu cầu có gói đăng ký cơ sở đang hoạt động (đã miễn phí đi kèm ở các gói 20x, Team và Business).</li><li>Chúng tôi có thể điều chỉnh mức giá khi thông báo trước ít nhất 30 ngày. Bạn có quyền hủy gia hạn trước thời điểm giá mới có hiệu lực.</li><li>Giá khuyến mãi chỉ áp dụng cho các thuê bao đăng ký mới trong thời gian diễn ra chương trình. Miễn là thuê bao của bạn duy trì liên tục không gián đoạn, các kỳ gia hạn tiếp theo vẫn giữ mức giá khuyến mãi (tuân theo mục 8.2). Nếu bạn hủy rồi đăng ký lại sau đó, mức giá hiện hành tại thời điểm đăng ký lại sẽ được áp dụng.</li><li>Việc hủy dịch vụ và hoàn tiền được quy định chi tiết trong <a href=\"refund.html\">Chính sách hoàn tiền</a> của chúng tôi.</li></ol>"
       },
       {
         "h2": "9. Tạm ngưng và chấm dứt",
@@ -910,7 +910,7 @@
       },
       {
         "h2": "8. Cách gửi yêu cầu hoàn tiền",
-        "body_html": "<ol><li>Gửi email tới <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> kèm theo địa chỉ email đăng ký thuê bao, mã biên lai Stripe và lý do yêu cầu hoàn tiền.</li><li>Chúng tôi sẽ phản hồi trong vòng 5 ngày làm việc.</li><li>Khoản tiền hoàn hợp lệ sẽ được trả về phương thức thanh toán ban đầu của bạn. Thời gian tiền về tài khoản phụ thuộc vào ngân hàng hoặc đơn vị trung gian thanh toán của bạn.</li></ol>"
+        "body_html": "<ol><li>Gửi email tới <a href=\"mailto:jason2023zhang@gmail.com\">jason2023zhang@gmail.com</a> kèm theo địa chỉ email đăng ký thuê bao, mã biên lai Stripe / Airwallex và lý do yêu cầu hoàn tiền.</li><li>Chúng tôi sẽ phản hồi trong vòng 5 ngày làm việc.</li><li>Khoản tiền hoàn hợp lệ sẽ được trả về phương thức thanh toán ban đầu của bạn. Thời gian tiền về tài khoản phụ thuộc vào ngân hàng hoặc đơn vị trung gian thanh toán của bạn.</li></ol>"
       },
       {
         "h2": "9. Khiếu nại hoàn trả giao dịch (Chargeback)",
@@ -1022,6 +1022,9 @@
     "trust_h2": "Cách ly hai cấp độ: tài khoản tách biệt và nguyên máy vật lý riêng",
     "trust_sub": "Để bảo vệ quyền riêng tư của khách hàng, tất cả đánh giá đều sử dụng ảnh đại diện minh họa và tên viết tắt ẩn danh, đồng thời giữ nguyên phản hồi thực tế cùng hạng gói đăng ký.",
     "faq_more_open": "Xem thêm {count} câu hỏi khác",
-    "faq_more_close": "Thu gọn câu hỏi"
+    "faq_more_close": "Thu gọn câu hỏi",
+    "upg_qty_label": "Số chỗ nâng cấp",
+    "upg_qty_hint": "Chọn 1–50 chỗ; tính phí theo số chỗ khi thanh toán",
+    "checkout_success_toast": "✅ Đã gửi thanh toán! Chúng tôi sẽ xác nhận qua email và bàn giao môi trường trong hôm nay."
   }
 }
