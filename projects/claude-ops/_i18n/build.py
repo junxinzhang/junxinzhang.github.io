@@ -669,6 +669,13 @@ INDEX_EXTRA_I18N_CSS = """
     }
     .seat-qty-stepper input::-webkit-outer-spin-button, .seat-qty-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0 }
     .seat-qty-hint { font-size: .78rem; color: var(--muted) }
+    a.is-loading { position: relative; pointer-events: none; opacity: .85 }
+    a.is-loading::before {
+      content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
+      border: 2px solid rgba(255, 255, 255, .35); border-top-color: #fff; border-radius: 50%;
+      animation: awx-spin .8s linear infinite;
+    }
+    @keyframes awx-spin { to { transform: rotate(360deg) } }
     @media (max-width: 680px) {
       .addon-drawer > summary { flex-direction: column; align-items: flex-start; gap: 10px }
       .drawer-toggle-pill { align-self: flex-start }
@@ -2028,6 +2035,32 @@ def render_index(loc: dict, d: dict, shared: dict, base_css: str) -> str:
         if (/-sg$/.test(lang)) return setCurrency('SGD');
         if (/^(de|fr|es|it|nl|pt-pt|fi|el|ie)/.test(lang) || /-(de|fr|es|it|nl|at|be|ie|fi|pt|gr)$/.test(lang)) return setCurrency('EUR');
         setCurrency(DEFAULT_CURRENCY);
+      }})();
+      (function fastAirwallexCheckout() {{
+        // One click -> straight to Airwallex in the same tab (no interstitial, no extra tab).
+        // Any failure falls back to the server interstitial page, which retries automatically.
+        document.addEventListener('click', function (e) {{
+          var a = e.target.closest && e.target.closest('a[data-ent-btn], a[data-upg-tier]');
+          if (!a) return;
+          var href = a.getAttribute('href') || '';
+          if (href.indexOf('/api/airwallex/checkout') !== 0) return;
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+          if (a.getAttribute('aria-busy') === 'true') {{ e.preventDefault(); return; }}
+          if (!window.fetch) return;
+          e.preventDefault();
+          a.setAttribute('aria-busy', 'true');
+          a.classList.add('is-loading');
+          var done = false;
+          var fallback = function () {{ if (done) return; done = true; location.href = href; }};
+          var timer = setTimeout(fallback, 8000);
+          fetch(href, {{ method: 'POST', headers: {{ 'Content-Type': 'application/json' }}, credentials: 'same-origin' }})
+            .then(function (r) {{ return r.json().then(function (d) {{ if (!r.ok || !d.url) throw new Error('x'); return d.url; }}); }})
+            .then(function (url) {{ if (done) return; done = true; clearTimeout(timer); location.href = url; }})
+            .catch(function () {{ clearTimeout(timer); fallback(); }});
+        }}, false);
+        window.addEventListener('pageshow', function () {{
+          document.querySelectorAll('a.is-loading').forEach(function (a) {{ a.classList.remove('is-loading'); a.removeAttribute('aria-busy'); }});
+        }});
       }})();
       (function initSeatQty() {{
         var qEl = document.getElementById('upg-qty');
