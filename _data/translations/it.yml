@@ -11,8 +11,10 @@ nav:
   projects: "Soluzioni"
   tags: "Tag"
   about: "Chi sono"
+  contact: "Contatti"
   search: "Cerca"
   more: "Altro"
+  for_agents: "Per Agents"
   search_placeholder: "Digita e premi Invio..."
 
 post:

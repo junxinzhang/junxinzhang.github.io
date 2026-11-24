@@ -11,8 +11,10 @@ nav:
   projects: "솔루션"
   tags: "태그"
   about: "소개"
+  contact: "연락하기"
   search: "검색"
   more: "더보기"
+  for_agents: "Agent용"
   search_placeholder: "검색어 입력 후 Enter..."
 
 post:

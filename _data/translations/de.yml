@@ -11,8 +11,10 @@ nav:
   projects: "Lösungen"
   tags: "Tags"
   about: "Über"
+  contact: "Kontakt"
   search: "Suche"
   more: "Mehr"
+  for_agents: "Für Agents"
   search_placeholder: "Eingeben und Enter drücken..."
 
 post:

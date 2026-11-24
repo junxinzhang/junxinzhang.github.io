@@ -14,6 +14,7 @@ nav:
   contact: "联系我"
   search: "搜索"
   more: "更多"
+  for_agents: "面向 Agent"
   search_placeholder: "输入关键词，按回车搜索..."
 
 post:

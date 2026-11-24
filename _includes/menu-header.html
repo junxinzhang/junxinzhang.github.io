@@ -1,3 +1,4 @@
+{% include i18n.html %}
 <!-- Primary navigation with clearer hierarchy -->
 {% assign posts_count = site.posts | size %}
 <li class="nav-item nav-main-item">
@@ -7,29 +8,29 @@
     </a>
 </li>
 <li class="nav-item nav-main-item">
-    <a class="nav-link" href="{{site.baseurl}}/projects.html"><span data-i18n="nav.projects">解决方案</span></a>
+    <a class="nav-link" href="{{site.baseurl}}/projects.html"><span data-i18n="nav.projects">{{ t.nav.projects | default: "解决方案" }}</span></a>
 </li>
 <li class="nav-item nav-main-item">
-    <a class="nav-link" href="{{site.baseurl}}/about.html"><span data-i18n="nav.about">About</span></a>
+    <a class="nav-link" href="{{site.baseurl}}/about.html"><span data-i18n="nav.about">{{ t.nav.about | default: "关于" }}</span></a>
 </li>
 <li class="nav-item nav-main-item">
-    <a class="nav-link" href="{{site.baseurl}}/contact.html"><span data-i18n="nav.contact">Contact</span></a>
+    <a class="nav-link" href="{{site.baseurl}}/contact.html"><span data-i18n="nav.contact">{{ t.nav.contact | default: "联系我" }}</span></a>
 </li>
 <li class="nav-item dropdown nav-more-dropdown">
     <button class="nav-link dropdown-toggle nav-more-toggle" id="navMoreDropdown" type="button" aria-haspopup="true"
         aria-expanded="false">
-        <span data-i18n="nav.more">More</span>
+        <span data-i18n="nav.more">{{ t.nav.more | default: "更多" }}</span>
     </button>
     <div class="dropdown-menu nav-more-menu" id="navMoreMenu" aria-labelledby="navMoreDropdown">
-        <a class="dropdown-item" href="{{site.baseurl}}/categories.html"><span data-i18n="nav.categories">Categories</span></a>
-        <a class="dropdown-item" href="{{site.baseurl}}/tags.html"><span data-i18n="nav.tags">Tags</span></a>
+        <a class="dropdown-item" href="{{site.baseurl}}/categories.html"><span data-i18n="nav.categories">{{ t.nav.categories | default: "分类" }}</span></a>
+        <a class="dropdown-item" href="{{site.baseurl}}/tags.html"><span data-i18n="nav.tags">{{ t.nav.tags | default: "标签" }}</span></a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" target="_blank" href="{{site.baseurl}}/feed.xml" rel="noopener">RSS</a>
         <a class="dropdown-item" target="_blank" href="https://github.com/junxinzhang" rel="noopener">GitHub</a>
     </div>
 </li>
 <li class="nav-item nav-agent-item highlight">
-    <a class="nav-link nav-agent-link" href="{{site.baseurl}}/for-agents.html"><span>For Agents</span></a>
+    <a class="nav-link nav-agent-link" href="{{site.baseurl}}/for-agents.html"><span data-i18n="nav.for_agents">{{ t.nav.for_agents | default: "面向 Agent" }}</span></a>
 </li>
 
 <script>

@@ -461,7 +461,7 @@
         onSubmit="return initSearchAndRun(document.getElementById('lunrsearch').value);">
         <label for="lunrsearch" class="sr-only">Search</label>
         <input type="search" class="form-control text-small" id="lunrsearch" name="q" value=""
-            placeholder="Type and hit enter..." data-i18n="nav.search_placeholder" aria-label="Search site content"
+            placeholder="{{ site.data.translations[site.default_lang].nav.search_placeholder | default: '输入关键词，按回车搜索...' }}" data-i18n="nav.search_placeholder" aria-label="Search site content"
             autocomplete="off">
     </form>
 </li>

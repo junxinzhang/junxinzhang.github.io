@@ -11,8 +11,10 @@ nav:
   projects: "समाधान"
   tags: "टैग"
   about: "परिचय"
+  contact: "संपर्क"
   search: "खोज"
   more: "अधिक"
+  for_agents: "एजेंट्स के लिए"
   search_placeholder: "टाइप करें और Enter दबाएं..."
 
 post:

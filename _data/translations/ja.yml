@@ -11,8 +11,10 @@ nav:
   projects: "ソリューション"
   tags: "タグ"
   about: "概要"
+  contact: "お問い合わせ"
   search: "検索"
   more: "その他"
+  for_agents: "Agent向け"
   search_placeholder: "キーワードを入力してEnterを押す..."
 
 post:
